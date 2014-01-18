@@ -30,13 +30,30 @@ FaxVF2 = ((3*a)/(4*rho)) * (1 - (2*a^2)/(rho^2));
 FaxVS1 = ((3*a)/(4*rho^2)) * ((16*a^2)/(5*rho^2));
 FaxVS2 = ((3*a)/(4*rho^2)) * (3 - (8*a^2)/(rho^2));
 
-% assemble J^VF (symmetric, so needs only 5 elements)
+% assemble two-body J^VF (symmetry allows for 5 independent elements)
 J_VF(1, 1) = FaxVF2 * hatRho(1) * hatRho(1) + FaxVF1; 
 J_VF(1, 2) = FaxVF2 * hatRho(1) * hatRho(2);
 J_VF(1, 3) = FaxVF2 * hatRho(1) * hatRho(3); 
-J_VF(2, 2) = FaxVF2 * hatRho(1) * hatRho(1) + FaxVF1; 
+J_VF(2, 2) = FaxVF2 * hatRho(2) * hatRho(2) + FaxVF1; 
 J_VF(2, 3) = FaxVF2 * hatRho(2) * hatRho(3); 
 
+% assemble two-body J^SF (symmetry allows for 10 independent elements)
+J_VS(1, 1, 1) = - FaxVS2 * hatRho(1) * hatRho(1) * hatRho(1) - FaxVS1 * hatRho(1);
+J_VS(1, 1, 2) = - FaxVS2 * hatRho(1) * hatRho(1) * hatRho(2) - FaxVS1 * hatRho(2);
+J_VS(1, 1, 3) = - FaxVS2 * hatRho(1) * hatRho(1) * hatRho(3) - FaxVS1 * hatRho(3);
+J_VS(1, 2, 2) = - FaxVS2 * hatRho(1) * hatRho(2) * hatRho(2);
+J_VS(1, 1, 3) = - FaxVS2 * hatRho(1) * hatRho(1) * hatRho(3);
+J_VS(1, 3, 3) = - FaxVS2 * hatRho(1) * hatRho(3) * hatRho(3);
+J_VS(2, 2, 2) = - FaxVS2 * hatRho(2) * hatRho(2) * hatRho(2) - FaxVS1 * hatRho(2);
+J_VS(2, 2, 3) = - FaxVS2 * hatRho(2) * hatRho(2) * hatRho(3) - FaxVS1 * hatRho(3);
+J_VS(2, 3, 3) = - FaxVS2 * hatRho(2) * hatRho(3) * hatRho(3);
+J_VS(3, 3, 3) = - FaxVS2 * hatRho(3) * hatRho(3) * hatRho(3) - FaxVS1 * hatRho(3);
+
+
+
+
+
+ 
 
 % ODE system
 Rdot(1) = - trapFactor*X1 + Fax1*Rdot(4) ...
