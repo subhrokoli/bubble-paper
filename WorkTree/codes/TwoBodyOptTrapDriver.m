@@ -1,55 +1,60 @@
 % ======================================================================= %
 % DRIVER
 
-function Xdot = TwoBodyOptTrapDriver(t, x, a, Force, Stresslet)
+function Rdot = TwoBodyOptTrapDriver(t, R, a, Force, Stresslet)
 
 % initialize LHS
-Xdot = zeros(6,1);
+Rdot = zeros(6,1);
 
-% extract position vector components
-X1 = x(1); Y1 = x(2); Z1 = x(3);
-X2 = x(4); Y2 = x(5); Z2 = x(6);
+% COMPUTE MOBILITY MATRIX ELEMENTS
+
+% % extract position vector components
+% X1 = R(1); Y1 = R(2); Z1 = R(3);
+% X2 = R(4); Y2 = R(5); Z2 = R(6);
 
 % compute separation vector
-rhox = X1 - X2; rhoy = Y1 - Y2; rhoz = Z1 - Z2;
+% Rho(1) = X1 - X2; Rho(2) = Y1 - Y2; Rho(3) = Z1 - Z2;
+Rho = [R(1) - R(4); R(2) - R(5); R(3) - R(6)];
 
 % compute magnitude of separation vector
-rho = sqrt(rhox.*rhox + rhoy.*rhoy + rhoz.*rhoz);
+rho = norm(Rho);
 
 % compute direction cosines
-nrhox = rhox./rho; nrhoy = rhoy./rho; nrhoz = rhoz./rho;
+hatRho = Rho / rho;
 
-% % compute Rn \cdot \hat{\rho} ofr n = 1,2
-% R1dotrho = X1*nrhox + Y1*nrhoy + Z1*nrhoz;
-% R2dotrho = X2*nrhox + Y2*nrhoy + Z2*nrhoz;
+% compute Faxen factors for J^VF (includes the prefactor 3a/4\rho)
+FaxVF1 = ((3*a)/(4*rho)) * (1 + (2*a^2)/(3*rho^2));
+FaxVF2 = ((3*a)/(4*rho)) * (1 - (2*a^2)/(rho^2));
 
-% compute Faxen factors
-switch HI
-    case 'on'
-        preFax = (2*a)/(3*rho);
-        Fax1 = preFax * (1 + (2*a^2)/(3*rho^2));
-        Fax2 = preFax * (1 - (2*a^2)/(rho^2));
-    case 'off'
-        Fax1 = 0; Fax2 = 0;
-end
+% compute Faxen factors for J^VS (includes the prefactor 3a/4\rho^2)
+FaxVS1 = ((3*a)/(4*rho^2)) * ((16*a^2)/(5*rho^2));
+FaxVS2 = ((3*a)/(4*rho^2)) * (3 - (8*a^2)/(rho^2));
+
+% assemble J^VF (symmetric, so needs only 5 elements)
+J_VF(1, 1) = FaxVF2 * hatRho(1) * hatRho(1) + FaxVF1; 
+J_VF(1, 2) = FaxVF2 * hatRho(1) * hatRho(2);
+J_VF(1, 3) = FaxVF2 * hatRho(1) * hatRho(3); 
+J_VF(2, 2) = FaxVF2 * hatRho(1) * hatRho(1) + FaxVF1; 
+J_VF(2, 3) = FaxVF2 * hatRho(2) * hatRho(3); 
+
 
 % ODE system
-Xdot(1) = - trapFactor*X1 + Fax1*Xdot(4) ...
-    + Fax2*(Xdot(4)*nrhox + Xdot(5)*nrhoy + Xdot(6)*nrhoz)*nrhox;
+Rdot(1) = - trapFactor*X1 + Fax1*Rdot(4) ...
+    + Fax2*(Rdot(4)*nrhox + Rdot(5)*nrhoy + Rdot(6)*nrhoz)*nrhox;
 
-Xdot(2) = - trapFactor*Y1 + Fax1*Xdot(5) ...
-    + Fax2*(Xdot(4)*nrhox + Xdot(5)*nrhoy + Xdot(6)*nrhoz)*nrhoy;
+Rdot(2) = - trapFactor*Y1 + Fax1*Rdot(5) ...
+    + Fax2*(Rdot(4)*nrhox + Rdot(5)*nrhoy + Rdot(6)*nrhoz)*nrhoy;
 
-Xdot(3) = - trapFactor*Z1 + Fax1*Xdot(6) ...
-    + Fax2*(Xdot(4)*nrhox + Xdot(5)*nrhoy + Xdot(6)*nrhoz)*nrhoz;
+Rdot(3) = - trapFactor*Z1 + Fax1*Rdot(6) ...
+    + Fax2*(Rdot(4)*nrhox + Rdot(5)*nrhoy + Rdot(6)*nrhoz)*nrhoz;
 
-Xdot(4) = Fax1*Xdot(1) ...
-    + Fax2*(Xdot(1)*nrhox + Xdot(2)*nrhoy + Xdot(3)*nrhoz)*nrhox;
+Rdot(4) = Fax1*Rdot(1) ...
+    + Fax2*(Rdot(1)*nrhox + Rdot(2)*nrhoy + Rdot(3)*nrhoz)*nrhox;
 
-Xdot(5) = Fax1*Xdot(2) ...
-    + Fax2*(Xdot(1)*nrhox + Xdot(2)*nrhoy + Xdot(3)*nrhoz)*nrhoy;
+Rdot(5) = Fax1*Rdot(2) ...
+    + Fax2*(Rdot(1)*nrhox + Rdot(2)*nrhoy + Rdot(3)*nrhoz)*nrhoy;
 
-Xdot(6) = Fax1*Xdot(3) ...
-    + Fax2*(Xdot(1)*nrhox + Xdot(2)*nrhoy + Xdot(3)*nrhoz)*nrhoz;
+Rdot(6) = Fax1*Rdot(3) ...
+    + Fax2*(Rdot(1)*nrhox + Rdot(2)*nrhoy + Rdot(3)*nrhoz)*nrhoz;
 
 end
