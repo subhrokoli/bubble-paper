@@ -1,7 +1,7 @@
 % ======================================================================= %
 % DRIVER
 
-function Rdot = TwoBodyOptTrapDriver(t, R, a, Force, Stresslet)
+function Rdot = TwoBodyOptTrapDriver(t, R, a, F, S)
 
 % initialize LHS
 Rdot = zeros(6,1);
@@ -30,26 +30,62 @@ FaxVF2 = ((3*a)/(4*rho)) * (1 - (2*a^2)/(rho^2));
 FaxVS1 = ((3*a)/(4*rho^2)) * ((16*a^2)/(5*rho^2));
 FaxVS2 = ((3*a)/(4*rho^2)) * (3 - (8*a^2)/(rho^2));
 
-% assemble two-body J^VF (symmetry allows for 5 independent elements)
+% ASSEMBLE TWO-BODY J^VF
+% column major order followed
 J_VF(1, 1) = FaxVF2 * hatRho(1) * hatRho(1) + FaxVF1; 
+J_VF(2, 1) = FaxVF2 * hatRho(2) * hatRho(1);
+J_VF(3, 1) = FaxVF2 * hatRho(3) * hatRho(1);
 J_VF(1, 2) = FaxVF2 * hatRho(1) * hatRho(2);
-J_VF(1, 3) = FaxVF2 * hatRho(1) * hatRho(3); 
 J_VF(2, 2) = FaxVF2 * hatRho(2) * hatRho(2) + FaxVF1; 
-J_VF(2, 3) = FaxVF2 * hatRho(2) * hatRho(3); 
+J_VF(3, 2) = FaxVF2 * hatRho(3) * hatRho(2); 
+J_VF(1, 3) = FaxVF2 * hatRho(1) * hatRho(3); 
+J_VF(2, 3) = FaxVF2 * hatRho(2) * hatRho(3);
+J_VF(3, 3) = FaxVF2 * hatRho(3) * hatRho(3) + FaxVF1; 
 
-% assemble two-body J^SF (symmetry allows for 10 independent elements)
-J_VS(1, 1, 1) = - FaxVS2 * hatRho(1) * hatRho(1) * hatRho(1) - FaxVS1 * hatRho(1);
-J_VS(1, 1, 2) = - FaxVS2 * hatRho(1) * hatRho(1) * hatRho(2) - FaxVS1 * hatRho(2);
-J_VS(1, 1, 3) = - FaxVS2 * hatRho(1) * hatRho(1) * hatRho(3) - FaxVS1 * hatRho(3);
+
+% ASSEMBLE OFF-DIAGONAL ELEMENTS OF TWO-BODY J^SF 
+% (symmetry allows for 10 independent elements)
+J_VS(1, 1, 1) = - FaxVS2 * hatRho(1) * hatRho(1) * hatRho(1);
+J_VS(1, 1, 2) = - FaxVS2 * hatRho(1) * hatRho(1) * hatRho(2);
+J_VS(1, 1, 3) = - FaxVS2 * hatRho(1) * hatRho(1) * hatRho(3);
 J_VS(1, 2, 2) = - FaxVS2 * hatRho(1) * hatRho(2) * hatRho(2);
 J_VS(1, 1, 3) = - FaxVS2 * hatRho(1) * hatRho(1) * hatRho(3);
 J_VS(1, 3, 3) = - FaxVS2 * hatRho(1) * hatRho(3) * hatRho(3);
-J_VS(2, 2, 2) = - FaxVS2 * hatRho(2) * hatRho(2) * hatRho(2) - FaxVS1 * hatRho(2);
-J_VS(2, 2, 3) = - FaxVS2 * hatRho(2) * hatRho(2) * hatRho(3) - FaxVS1 * hatRho(3);
+J_VS(2, 2, 2) = - FaxVS2 * hatRho(2) * hatRho(2) * hatRho(2);
+J_VS(2, 2, 3) = - FaxVS2 * hatRho(2) * hatRho(2) * hatRho(3);
 J_VS(2, 3, 3) = - FaxVS2 * hatRho(2) * hatRho(3) * hatRho(3);
-J_VS(3, 3, 3) = - FaxVS2 * hatRho(3) * hatRho(3) * hatRho(3) - FaxVS1 * hatRho(3);
+J_VS(3, 3, 3) = - FaxVS2 * hatRho(3) * hatRho(3) * hatRho(3);
 
 
+% populate rest of the matrix
+J_VS(1, 2, 1) = J_VS(1, 1, 2);
+J_VS(1, 3, 1) = J_VS(1, 2, 1);
+J_VS(1, 3, 2) = J_VS(1, 2, 1);
+J_VS(1, 2, 1) = J_VS(1, 2, 1);
+J_VS(1, 2, 1) = J_VS(1, 2, 1);
+J_VS(1, 2, 1) = J_VS(1, 2, 1);
+J_VS(1, 2, 1) = J_VS(1, 2, 1);
+J_VS(1, 2, 1) = J_VS(1, 2, 1);
+J_VS(1, 2, 1) = J_VS(1, 2, 1);
+J_VS(1, 2, 1) = J_VS(1, 2, 1);
+J_VS(1, 2, 1) = J_VS(1, 2, 1);
+J_VS(1, 2, 1) = J_VS(1, 2, 1);
+J_VS(1, 2, 1) = J_VS(1, 2, 1);
+J_VS(1, 2, 1) = J_VS(1, 2, 1);
+J_VS(1, 2, 1) = J_VS(1, 2, 1);
+J_VS(1, 2, 1) = J_VS(1, 2, 1);
+J_VS(1, 2, 1) = J_VS(1, 2, 1);
+
+% add diagonal parts [ J^{VS}_{ij\alpha} = \delta_{ij} \hat{\rho}_{\alpha} ]
+J_VS(1, 1, 1) = J_VS(1, 1, 1) - FaxVS1 * hatRho(1);
+J_VS(1, 1, 2) = J_VS(1, 1, 2) - FaxVS1 * hatRho(2);
+J_VS(1, 1, 3) = J_VS(1, 1, 3) - FaxVS1 * hatRho(3);
+J_VS(2, 2, 1) = J_VS(2, 2, 1) - FaxVS1 * hatRho(1);
+J_VS(2, 2, 2) = J_VS(2, 2, 2) - FaxVS1 * hatRho(2);
+J_VS(2, 2, 3) = J_VS(2, 2, 3) - FaxVS1 * hatRho(3);
+J_VS(3, 3, 1) = J_VS(3, 3, 1) - FaxVS1 * hatRho(1);
+J_VS(3, 3, 2) = J_VS(3, 3, 2) - FaxVS1 * hatRho(2);
+J_VS(3, 3, 3) = J_VS(3, 3, 3) - FaxVS1 * hatRho(3);
 
 
 
