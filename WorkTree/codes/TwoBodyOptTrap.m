@@ -1,47 +1,49 @@
+% ======================================================================= %
+% MAIN CODE
 % Code to solve the two-body optical trap Stokes flow problem
 % Collaboration between IISER-K & IMSc
 % 
-% The first particle is trapped optically at the origin 
-% and forced. 
+% The first particle is trapped optically at the origin using a harmonic
+% potential. It is sinusoidally forced.
 % The second particle is free, and interacts with the first particle purely 
 % hydrodynamically. The backreaction affects the first particle.
 % 
-% function [t X] = TwoBodyOptTrap(eta, k, a, d)
+% function [t R] = TwoBodyOptTrap(eta, k, F0, omega, a, R0)
 % 
 % Inputs:
 % 
 % eta   :   fluid viscosity
 % k     :   trap (harmonic) strength
+% F0    :   magnitude of sinusoidal driving force
+% omega :   frequency of sinusoidal driving force
 % a     :   sphere radius
-% d     :   separation of particles
-% HI    :   switch for hydrodynamics. HI = 'on' or 'off'.
+% R0    :   initial position of particles (6 X 1 vector)
 % 
 % Outputs :
 % 
 % t     :   timeseries
-% X     :   combined position vector of the particles. X(1:3) are the
-%           position of the trapped particle, while X(4:6) are those of 
+% R     :   combined position vector of the particles. R(1:3) are the
+%           position of the trapped particle, while R(4:6) are those of 
 %           the free particle
-
-
+% 
+% (c) Somdeb Ghose, IMSc, Chennai, India (2014)
 % ======================================================================= %
-% INTEGRATOR
 
-function [t X] = TwoBodyOptTrap(eta, k, a, d, HI)
+function [t R] = TwoBodyOptTrap(eta, k, F0, omega, a, R0)
 
 % Clock start
 tic;
 
-% compute trap force factor
-trapFactor = k / (6*pi*eta*a);
+% compute mobility factor
+mob_fac = 1 / (6*pi*eta*a);
 
-% initial position of trapped particle
-X10 = 1; Y10 = 0; Z10 = 0;         
+% % set initial position of particles
+% % first three are coordinates of trapped particle
+% % second three are coordinates of free particle
+% R0 = [1, 0, 0, d, 0, 0];
 
-% initial position of free particle
-X20 = X10 + d; Y20 = Y10; Z20 = Z10;    
-
-X0 = [X10 Y10 Z10 X20 Y20 Z20];
+% initialize stresslet and save
+S = zeros(18, 1); save('S.mat', 'S');
 
 % timesteps and range
 dt = 0.01;
@@ -49,11 +51,14 @@ t0 = 0.0; tf = 200.0;
 tspan = t0:dt:tf; %lt = length(tspan);
 
 % INTEGRATE
-[t X] = ode15s(@(t,y)TwoBodyOptTrapDriver(t, x, trapFactor, a, HI), tspan, X0);
+[t R] = ode15s(@(t,r)TwoBodyDriver(t, r, a, mob_fac, k, F0, omega), tspan, R0);
+
+% plot
+h.plot = plot(t, R);
+grid on; 
 
 % Clock end
 toc;
 
 % EoF
 end
-
