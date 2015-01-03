@@ -3,7 +3,8 @@
 \begin_document
 \begin_header
 \textclass revtex4-1
-\use_default_options true
+\options prl, twocolumn, draft
+\use_default_options false
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -90,11 +91,11 @@ The Institute of Mathematical Sciences, CIT Campus, Chennai 600113, India
 \begin_layout Abstract
 The temperature variation of the surface tension at a liquid-gas interface
  generates tangential thermocapillary stresses which produce flows in the
- ambient fluid.
+ ambient liquid.
  Here, we demonstrate that such active stresses can be generated in a controlled
  manner by inducing a microbubble in optical tweezers.
- Mesoscopic particles dispersed in the ambient fluid self-assemble on the
- bubble interface under the action of the resulting flow.
+ Guided by the thermocapillary flow, mesoscopic particles dispersed in the
+ ambient liquid self-assemble at the bubble interface.
  Thermophoretic motion of the bubble, under translation of the optical tweezers,
  provides a mechanism for transporting the interfacially assembled particles.
  We demonstrate the viability of this transport mechanism for a wide variety
@@ -104,6 +105,97 @@ The temperature variation of the surface tension at a liquid-gas interface
  Our results show that active thermocapillary stress offers novel mechanisms
  for manipulating particles that, otherwise, are difficult to manipulate
  solely with optical tweezers.
+\end_layout
+
+\begin_layout Standard
+The thermo-optic bubble system has an illuminating laser beam which is made
+ incident onto an absorbing substrate and heats up the surface locally.
+ The subse- quent hot spot has temperatures ranging from 300 K to 644 K
+ depending upon the power of the laser beam.
+ This results in the vaporization of water and the formation of the bubble.
+ The bubble is an interface between the water phase and a vapor phase.
+ It touches the surface of the absorbing layer at the hot spot.
+ Thus locally, the region of the bubble close to the hot-spot is warmer
+ than the region of the bubble away from the spot.
+ Thus a temper- ature gradient appears across the surface of the bubble
+ due to which a hydrodynamic stress is developed.
+ This initiates Marangoni convection.
+\end_layout
+
+\begin_layout Standard
+Particles can be trapped in these convective flows and adhere to the surface
+ of the bubble.
+ Since the convective flows are symmetric about the z axis of the bubble,
+ it draws particles symmetrically from all sides towards the surface of
+ the bubble and accumulates them on a ring.
+ These however do not go to the base where the bubble meets the bottom surface
+ but rather remains close to the equatorial plane.
+ Such effect can be understood from the flow direction of water in fig.
+ 1 showing attractive flows towards the equatorial plane of the bubble itself.
+ Further, as the bubble is moved by displacing the hot spot, the particles
+ sticking to the surface keep adhering and can be moved together with the
+ bubble.
+ This effect has been shown in a variety of materials ranging from polystyrene
+ beads of 3 μm and 10 μm size to gold and silver clusters and even 3 μm
+ polystyrene beads having a core of iron oxide.
+ The metallic particles are difficult to be trapped directly in optical
+ tweezers particularly close to the plasmon resonance.
+ Bubble mediated trapping and transport provides the perfect solution even
+ when the trapping laser is at plasmon resonance since it does not rely
+ on the gradient force at all.
+ This has been shown in Fig.
+ 2.
+\end_layout
+
+\begin_layout Standard
+We have moved iron-core particles on bubbles at a speed of 34 μm/sec which
+ amounts to a force of 0.9 pN oneach individual particle.
+ This is compensated for by the surface tension of the air-water interface
+ which amounts to 2 × 10−7 N for a sphere of radius 1.5 μm.
+ The flow field due to a single bubble is directed radially towards the
+ center in a plane close to the glass slide.
+ If two such bubbles are placed close to each other - as long as the bubbles
+ are far apart from each other so that one does not influence the micro-
+ flow due to the other, the resul- tant flow can be obtained by adding the
+ individual flows.
+ Thus, a saddle-like configuration is obtained, and a sep- aratrix appears
+ in between the two bubbles.
+ If a particle starts from one side of the separatrix, it converges into
+ the bubble closer to it.
+ If it starts from the other side of the separatrix, it converges to the
+ other bubble.
+ We observe this kind of motion in our set-up too, as shown in the cartoon
+ Fig.
+ ??.
+ Thus using bubbles, the micro- hydrodynamic flow fields can be manipulated.
+ The Fig.
+ ??(b) shows a typical trajectory of a 3 μm particle coming towards the
+ bubbles close to the separa- trix.
+ All points have been measured at equal time inter- vals of 60 ms, so that
+ it is apparent that the velocity of the particle increases as it nears
+ the bubble.
+ The particle approaches the saddle point and then deviates towards one
+ of the bubbles.
+ The position closest to the origin is where the particle hits the bubble
+ and moves no fur- ther.
+ The sizes of the two bubbles may not be exactly the same so that the separatrix
+ may not be a straight line equidistant from the two bubbles.
+\end_layout
+
+\begin_layout Enumerate
+Theory of flows around a heated bubble
+\end_layout
+
+\begin_layout Enumerate
+Demonstrate self-assembly of particles in flow (ring formation)
+\end_layout
+
+\begin_layout Enumerate
+Demonstrate transport of particles on bubble that is loaded
+\end_layout
+
+\begin_layout Enumerate
+Demonstrate manipulation of pairs of bubbles
 \end_layout
 
 \end_body
