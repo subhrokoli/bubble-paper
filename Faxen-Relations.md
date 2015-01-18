@@ -1,0 +1,6 @@
+> Since the paper of P. Mazur and D. Bedeaux [(Physica 76, 235- 246 (1974)], now ten years old, there is a flux of papers concerning Faxén theorems. However the main idea of generalization of the original version of these theorems remain the same and, accordingly, also the limitation of these generalizations related to the type of linearization of the problem. In the present paper the derivation of Faxén theorems for an unsteady, non-uniform Stokes flow is based (as in the paper cited above) on Fourier transformation. However, in contrast to that paper, the concept of so called induced forces is not used. The results are, of course, the same. It is a question of taste which type of proof is simpler and more elegant. 
+
+
+The above abstract is from the paper by Gatignol. There are to crucial improvements to the calculation of Mazur and Bedeux. First, the fluid equations of motion are transformed to a frame in which the particle is stationary. This allows for a more systematic analysis of the non-linearites. Second, a reciprocal identity is used to obtain expressions for the drag and torque in terms of other known flows. 
+
+An useful calculation is to use the boundary integral equation for the unsteady Stokes equation (Williams - JFM 1969) and integrate both sides to obtain the desired result.

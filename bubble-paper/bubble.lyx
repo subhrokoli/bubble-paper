@@ -3,7 +3,7 @@
 \begin_document
 \begin_header
 \textclass revtex4-1
-\options prl, twocolumn, draft
+\options prl, twocolumn
 \use_default_options false
 \maintain_unincluded_children false
 \language english
@@ -32,14 +32,14 @@
 \use_geometry false
 \use_package amsmath 1
 \use_package amssymb 1
-\use_package cancel 1
+\use_package cancel 0
 \use_package esint 1
 \use_package mathdots 1
-\use_package mathtools 1
+\use_package mathtools 0
 \use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
 \biblio_style plain
@@ -48,7 +48,7 @@
 \paperorientation portrait
 \suppress_date false
 \justification true
-\use_refstyle 1
+\use_refstyle 0
 \index Index
 \shortcut idx
 \color #008000
@@ -70,132 +70,243 @@
 
 \begin_body
 
+\begin_layout Preprint
+%This line only printed with preprint option
+\end_layout
+
 \begin_layout Title
-Self-assembly and transportation of mesoscopic particles by active thermocapilla
-ry stress
+Self-assembly and manipulation of mesoscopic particles driven by active
+ thermocapillary stress
 \end_layout
 
 \begin_layout Author
-Basudev Roy, Rajesh Singh, R.
- Adhikari, Ayan Banerjee
+Basudev Roy
 \end_layout
 
 \begin_layout Affiliation
-Indian Institute of Science Education and Research, Kolkata, India
+Indian Institute of Science Education and Research, Kolkata 
+\end_layout
+
+\begin_layout Author
+Rajesh Singh
 \end_layout
 
 \begin_layout Affiliation
-The Institute of Mathematical Sciences, CIT Campus, Chennai 600113, India
+Institute of Mathematical Sciences, Chennai
+\end_layout
+
+\begin_layout Author
+Ronojoy Adhikari
+\end_layout
+
+\begin_layout Author Email
+
+ronojoy.adhikari@gmail.com
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Make sure to put any Email, URL, and Thanks layouts IN
+\end_layout
+
+\begin_layout Plain Layout
+BETWEEN the Author layout and the corresponding Address
+\end_layout
+
+\begin_layout Plain Layout
+layout for that author.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Affiliation
+Institute of Mathematical Sciences, Chennai
+\end_layout
+
+\begin_layout Author
+Ayan Banerjee
+\end_layout
+
+\begin_layout Author Email
+
+ayan@iiserkol.ac.in
+\end_layout
+
+\begin_layout Affiliation
+Indian Institute of Science Education and Research, Kolkata 
 \end_layout
 
 \begin_layout Abstract
 The temperature variation of the surface tension at a liquid-gas interface
  generates tangential thermocapillary stresses which produce flows in the
- ambient liquid.
- Here, we demonstrate that such active stresses can be generated in a controlled
+ ambient fluid.
+ Here, we demonstrate that such active stresses can be produced in a controlled
  manner by inducing a microbubble in optical tweezers.
- Guided by the thermocapillary flow, mesoscopic particles dispersed in the
- ambient liquid self-assemble at the bubble interface.
- Thermophoretic motion of the bubble, under translation of the optical tweezers,
- provides a mechanism for transporting the interfacially assembled particles.
- We demonstrate the viability of this transport mechanism for a wide variety
- of particles, ranging from gold nanoparticles to polystyrene microspheres.
- Multiple microbubbles allow for additional control of particle self-assembly
- and manipulation, as we demonstrate with a pair of microbubbles.
- Our results show that active thermocapillary stress offers novel mechanisms
- for manipulating particles that, otherwise, are difficult to manipulate
- solely with optical tweezers.
+ Mesoscopic particles dispersed in the ambient fluid self-assemble in preferenti
+al ring patterns on on the bubble interface under the action of the resulting
+ flow, and may even be released from the interface by modulating the bubble
+ diameter controllably.
+ We experimentally demonstrate capture, release, and transport of a wide
+ range of particles ranging from gold nanoparticles to polystyrene microspheres
+ using thermophoretic motion of the bubble under translation of the optical
+ tweezers.
+ Multiple microbubbles allow for additional control on particle self-assembly
+ and manipulation, as we demonstrate for a pair of microbubbles.
+ The theoretically calculated flow profile around single or multiple bubbles
+ adequately explains the experimental findings.
+ Active thermocapillary stress offers a mechanism for trapping and manipulating
+ particles that are, otherwise, difficult to trap in optical tweezers.
+ 
+\end_layout
+
+\begin_layout Section
+introduction
 \end_layout
 
 \begin_layout Standard
-The thermo-optic bubble system has an illuminating laser beam which is made
- incident onto an absorbing substrate and heats up the surface locally.
- The subse- quent hot spot has temperatures ranging from 300 K to 644 K
- depending upon the power of the laser beam.
- This results in the vaporization of water and the formation of the bubble.
- The bubble is an interface between the water phase and a vapor phase.
- It touches the surface of the absorbing layer at the hot spot.
- Thus locally, the region of the bubble close to the hot-spot is warmer
- than the region of the bubble away from the spot.
- Thus a temper- ature gradient appears across the surface of the bubble
- due to which a hydrodynamic stress is developed.
- This initiates Marangoni convection.
+The study of active stress on mesoscopic particles in fluidic environments
+ has evoked widespread scientific interest in recent times since it enables
+ the understanding and ultimate control of fundamental processes involving
+ fluid-particle interactions at a microscopic level, and leads to a variety
+ of applications.
+ The fundamental processes range from transport of organelles inside the
+ fluidic environment in a cell [1], to the motion of cilia and flagella
+ of swimming bacteria [2].
+ The analysis of the active stress involved in many such processes has led
+ to the design of 
+\begin_inset Quotes eld
+\end_inset
+
+active
+\begin_inset Quotes erd
+\end_inset
+
+ particles [3], that often mimic natural microswimmers.
+ These active particles move in pre-designed paths by interacting with their
+ environment and exchanging energy by diverse processes including thermophoresis
+ [4], electrophoresis [5], diffusiophoresis [6], etc.
+ Such controlled motion of mesoscopic particles under different active stress
+ has very significant implications in different areas including cell biology
+ [7], nanomedicine [8], and micro-patterning [8].
+ Active stress can also be induced on microparticles in a fluid by manipulating
+ the flow environment using different techniques of actuation [9] in microfluidi
+c channels, and by generating surface stresses by controlled modulation
+ of fluid-fluid or fluid-solid boundaries.
+ The latter can be achieved by a number of processes such as electrowetting
+ [10], thermocapillary action [11], and Marangoni stresses [12].
+ Recently, the manipulation of polystyrene microspheres [13] and carbon
+ nanoparticles [14] has been demonstrated using the thermocapillary stress
+ generated due to a micro-bubble which was produced thermally in optical
+ tweezers.
+ 
 \end_layout
 
 \begin_layout Standard
-Particles can be trapped in these convective flows and adhere to the surface
- of the bubble.
- Since the convective flows are symmetric about the z axis of the bubble,
- it draws particles symmetrically from all sides towards the surface of
- the bubble and accumulates them on a ring.
- These however do not go to the base where the bubble meets the bottom surface
- but rather remains close to the equatorial plane.
- Such effect can be understood from the flow direction of water in fig.
- 1 showing attractive flows towards the equatorial plane of the bubble itself.
- Further, as the bubble is moved by displacing the hot spot, the particles
- sticking to the surface keep adhering and can be moved together with the
- bubble.
- This effect has been shown in a variety of materials ranging from polystyrene
- beads of 3 μm and 10 μm size to gold and silver clusters and even 3 μm
- polystyrene beads having a core of iron oxide.
- The metallic particles are difficult to be trapped directly in optical
- tweezers particularly close to the plasmon resonance.
- Bubble mediated trapping and transport provides the perfect solution even
- when the trapping laser is at plasmon resonance since it does not rely
- on the gradient force at all.
- This has been shown in Fig.
- 2.
+Optical tweezers have the ability to trap and manipulate mesoscopic particles
+ by applying controlled forces ranging from fN- to few hundreds of pN.
+ They have a few limitations in their applicability - namely: 1) in the
+ manipulation or transport of multiple particles over large distances simultaneo
+usly, and 2) in the stable and robust trapping of nanoparticles.
+ The latter is due to the fact that very small nanoparticles (of a few nm
+ in size) are difficult to trap individually since the optical gradient
+ force reduces proportionally with the particle volume [15], and also due
+ to heating issues which cause metallic nanoparticles to become unstably
+ confined in a strong optical trap [16].
+ Given this situation, thermophoretic trapping with the aid of laser induced
+ microbubbles have proved an excellent solution for both transporting microparti
+cles over long distances [13], and in trapping nanoparticles in a stable
+ manner without heating effects [14].
+ Thermophoretic traps are much stronger than all-optical traps, with the
+ trapping force in the range of nN [17], so that the microbubbles thus trapped
+ can be manipulated with high speed over large distances [18].
+ These bubbles are mostly generated by focusing the trapping laser on an
+ absorbing substrate in the trapping chamber (filled generally by water),
+ which causes the water in the vicinity of the laser 
+\begin_inset Quotes eld
+\end_inset
+
+hot spot
+\begin_inset Quotes erd
+\end_inset
+
+ to vaporize, thus causing a bubble, which is trapped at the hot spot.
+ Active Marangoni stress is immediately developed due to the difference
+ in temperature on the two poles of the bubble (the higher temperture being
+ on the pole in touch with the hot spot), generating convective flow of
+ water around the bubble.
+ Particles are drawn towards the bubble due to this convective flow and
+ attach to the bubble surface [13,14,17].
+ The bubble can be manipulated by translating the laser hot spot.
+ 
 \end_layout
 
 \begin_layout Standard
-We have moved iron-core particles on bubbles at a speed of 34 μm/sec which
- amounts to a force of 0.9 pN oneach individual particle.
- This is compensated for by the surface tension of the air-water interface
- which amounts to 2 × 10−7 N for a sphere of radius 1.5 μm.
- The flow field due to a single bubble is directed radially towards the
- center in a plane close to the glass slide.
- If two such bubbles are placed close to each other - as long as the bubbles
- are far apart from each other so that one does not influence the micro-
- flow due to the other, the resul- tant flow can be obtained by adding the
- individual flows.
- Thus, a saddle-like configuration is obtained, and a sep- aratrix appears
- in between the two bubbles.
- If a particle starts from one side of the separatrix, it converges into
- the bubble closer to it.
- If it starts from the other side of the separatrix, it converges to the
- other bubble.
- We observe this kind of motion in our set-up too, as shown in the cartoon
- Fig.
- ??.
- Thus using bubbles, the micro- hydrodynamic flow fields can be manipulated.
- The Fig.
- ??(b) shows a typical trajectory of a 3 μm particle coming towards the
- bubbles close to the separa- trix.
- All points have been measured at equal time inter- vals of 60 ms, so that
- it is apparent that the velocity of the particle increases as it nears
- the bubble.
- The particle approaches the saddle point and then deviates towards one
- of the bubbles.
- The position closest to the origin is where the particle hits the bubble
- and moves no fur- ther.
- The sizes of the two bubbles may not be exactly the same so that the separatrix
- may not be a straight line equidistant from the two bubbles.
+While such trapping by attaching particles of the air-water interace (bubble
+ surface) has been experimentally demonstrated, there exists a considerable
+ lacuna in the exact theoretical understanding of the flow pattern of the
+ liquid around the bubble.
+ In addition, while experiments have demonstrated attachment of particles
+ to the bubble surface and the subsequent translation of the bubble with
+ the particles, a controllable and consistent method for detaching the particles
+ from the bubble surface without destroying the bubble is yet to be shown.
+ This renders this otherwise robust particle transportation technique somewhat
+ incomplete.
+ In this paper, we address both these issues.
+ By solving the Navier Stokes and heat equations, we calculate the exact
+ flow pattern of liquid around a laser induced microbubble.
+ We go on to show how the flow pattern may be modified by having two bubbles
+ adjacent to each other, and the implications on particle motion.
+ Experimentally, we demonstrate interesting and reproducible self assembly
+ of polystyrene beads of different sizes on the bubble surface - a phenomenon
+ that is easily explained by our theoretical simulations.
+ We also develop a technique for controllable release and attachment of
+ particles to a bubble by modulating the bubble size, and proceed to demonstrate
+ capture, transport, and release of gold and silver nanoparticles using
+ a single microbubble.
+ Finally, we provide a glimpse of the fascinating possibilities of manipulating
+ the trajectories of micro-particles by trapping two micro-bubbles adjacent
+ to each other, and observing particle trajectories in their vicinity.
+ We believe that with proper choice of micro-bubble sizes and separations,
+ this method can be eventually used as a tunable particle sorter - having
+ the capability of sorting particles of different sizes continuously, since
+ the bubble sizes and separations can be continuously tuned.
 \end_layout
 
-\begin_layout Enumerate
-Theory of flows around a heated bubble
+\begin_layout Section
+Theory
 \end_layout
 
-\begin_layout Enumerate
-Demonstrate self-assembly of particles in flow (ring formation)
+\begin_layout Section
+experiment
 \end_layout
 
-\begin_layout Enumerate
-Demonstrate transport of particles on bubble that is loaded
+\begin_layout Acknowledgments
+Thank you so much!
 \end_layout
 
-\begin_layout Enumerate
-Demonstrate manipulation of pairs of bubbles
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "mycitation"
+
+\end_inset
+
+Author, 
+\begin_inset Quotes eld
+\end_inset
+
+Title
+\begin_inset Quotes erd
+\end_inset
+
+, Journal 
+\series bold
+Volume
+\series default
+, page--numbers (year).
 \end_layout
 
 \end_body
