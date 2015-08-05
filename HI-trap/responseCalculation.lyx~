@@ -1,0 +1,225 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass revtex4-1
+\begin_preamble
+\usepackage{fullpage}
+\end_preamble
+\options aps,reprint
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine natbib
+\cite_engine_type numerical
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Hydrodynamic Synchronization of optically trapped micro-beads
+\end_layout
+
+\begin_layout Section
+introduction
+\end_layout
+
+\begin_layout Standard
+Hydrodynamic interaction plays an important role in the dynamics of microscopic
+ particles.
+ In a simple experimental setup using two optical traps, trapping a microbead
+ each, we study the response of the second bead when first bead is driven
+ with periodic force.
+ We have further develop a theory to study and analyse the experimental
+ results.
+ 
+\end_layout
+
+\begin_layout Standard
+The force balance equation of the optically trapped bead is, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{alignat}{1}
+\dot{\mathbf{R}_{i}}(t) & =\mathbf{v}_{i}(t)\\
+m\dot{\mathbf{v}}_{i}(t) & =-\bm{\gamma}_{ij}\mathbf{v}_{j}(t)-\bm{\nabla}_{i}U+\bm{\eta}_{i}
+\end{alignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the above Eq.
+ 
+\begin_inset Formula $\mathbf{R}_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}_{i}$
+\end_inset
+
+ are position and velocity of the 
+\begin_inset Formula $i$
+\end_inset
+
+-th particle of mass 
+\begin_inset Formula $m$
+\end_inset
+
+, 
+\begin_inset Formula $\bm{\gamma}_{ij}$
+\end_inset
+
+ is manybody friction tensor and 
+\begin_inset Formula $U$
+\end_inset
+
+ is the potential and 
+\begin_inset Formula $\eta$
+\end_inset
+
+ is noise of thermal origin.
+ In a optical trap, the potential is 
+\series bold
+
+\begin_inset Formula $U(t)=\sum k_{i}(\mathbf{R}_{i}(t)-\mathbf{R}_{i}^{o}(t))^{2}$
+\end_inset
+
+
+\series default
+ with 
+\begin_inset Formula $\mathbf{R}_{i}^{o}$
+\end_inset
+
+ is the position of the potential minimum of the 
+\begin_inset Formula $i$
+\end_inset
+
+-th optical trap.
+ In the experimental set up the minimum of the optical trap is shifting
+ with a periodic signal from outside and the response of the two beads have
+ been studied.
+ If the adiabatic approximation, the velocity reaches to the equilibrium
+ faster.
+ So in that time scale, the particle will move steadily without acceleration.
+ So the velocity equation can be presented in terms of mobility matrix as,
+\begin_inset Formula 
+\begin{alignat}{1}
+\mathbf{v}_{i}(t) & =\bm{\mu}_{ij}\left[-\bm{\nabla}_{j}U+\bm{\eta}_{j}\right]
+\end{alignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This Eq.(2) can be written as,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{\dot{R}}_{1} & = & -\mu\bm{\delta}k_{1}(\mathbf{R}_{1}(t)-\mathbf{R}_{1}^{o}(t))-\bm{\mu}_{12}k_{2}(\mathbf{R}_{2}(t)-\mathbf{R}_{2}^{o}(t))+\bm{\eta}_{1}\\
+\mathbf{\dot{R}}_{2} & = & -\bm{\mu}_{21}k_{1}(\mathbf{R}_{1}(t)-\mathbf{R}_{1}^{o}(t))-\mu\bm{\delta}k_{2}(\mathbf{R}_{2}(t)-\mathbf{R}_{2}^{o}(t))+\bm{\eta}_{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
