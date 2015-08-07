@@ -102,6 +102,8 @@ status open
 
 \backslash
 begin{subequations}
+\backslash
+
 \end_layout
 
 \end_inset
@@ -131,6 +133,10 @@ end{subequations}
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 In the above Eq.
  
 \begin_inset Formula $\mathbf{R}_{i}$
@@ -181,9 +187,8 @@ In the above Eq.
  In the experimental set up the minimum of the optical trap is shifting
  with a periodic signal from outside and the response of the two beads have
  been studied.
- Velocity equilibration happens an order faster.
- In this time scale, the particle will move steadily without acceleration.
- So the velocity equation can be presented in terms of mobility matrix as,
+ Assuming momentum to be rapidly relaxing on the time scale of the trap
+ motion, we neglect inertia and average over the noise to get,
 \begin_inset Formula 
 \begin{alignat}{1}
 \bm{\gamma}_{ij}\mathbf{\dot{R}}_{j} & -\bm{\nabla}_{j}U=0
@@ -191,19 +196,16 @@ In the above Eq.
 
 \end_inset
 
-This Eq.(2) can be inverted and presented in terms of mobility matrices
+Eq.(2) can be inverted and presented in terms of mobility matrices 
 \begin_inset Formula $\bm{\mu}_{ij}=\bm{\gamma}_{ij}^{-1}$
 \end_inset
 
  as,
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray*}
-\mathbf{\dot{R}}_{1} & = & -\mu k_{1}\bm{\delta}(\mathbf{R}_{1}-\mathbf{R}_{1}^{0})-\bm{\mu}_{12}k_{2}(\mathbf{R}_{2}-\mathbf{R}_{2}^{0})+\bm{\eta}_{1}\\
-\mathbf{\dot{R}}_{2} & = & -\bm{\mu}_{21}k_{1}(\mathbf{R}_{1}-\mathbf{R}_{1}^{0})-\mu k_{2}\bm{\delta}(\mathbf{R}_{2}-\mathbf{R}_{2}^{0})+\bm{\eta}_{2}
-\end{eqnarray*}
+\begin{eqnarray}
+\negthickspace\negthickspace\mathbf{\dot{R}}_{1} & = & -\mu k_{1}\bm{\delta}(\mathbf{R}_{1}-\mathbf{R}_{1}^{0})-\bm{\mu}_{12}k_{2}(\mathbf{R}_{2}-\mathbf{R}_{2}^{0})\nonumber \\
+\negthickspace\negthickspace\mathbf{\dot{R}}_{2} & = & -\bm{\mu}_{21}k_{1}(\mathbf{R}_{1}-\mathbf{R}_{1}^{0})-\mu k_{2}\bm{\delta}(\mathbf{R}_{2}-\mathbf{R}_{2}^{0})
+\end{eqnarray}
 
 \end_inset
 
@@ -220,16 +222,16 @@ Now we introduce new variable
  Thus we get,
 \begin_inset Formula 
 \begin{equation}
-\frac{d}{dt}\left[\begin{array}{c}
+\negthickspace\frac{d}{dt}\left[\begin{array}{c}
 \bm{\Delta}_{1}\\
 \bm{\Delta}_{2}
 \end{array}\right]=-\left[\begin{array}{cc}
 \mu k_{1}\bm{\delta} & \bm{\mu}_{12}k_{2}\\
 \bm{\mu}_{21}k_{1} & \mu k_{2}\bm{\delta}
-\end{array}\right]\left[\begin{array}{c}
+\end{array}\right]\negthickspace\left[\begin{array}{c}
 \bm{\Delta}_{1}\\
 \bm{\Delta}_{2}
-\end{array}\right]-\left[\begin{array}{c}
+\end{array}\right]\negthickspace-\negthickspace\left[\begin{array}{c}
 \dot{\mathbf{R}}_{1}^{0}\\
 \dot{\mathbf{R}}_{2}^{0}
 \end{array}\right]
@@ -251,13 +253,10 @@ Steady state solution of the Eq.(4) can easily be calculated by taking Fourier
 \end_inset
 
 , the solution in frequency is
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
-\[
+\begin{equation}
 \bm{\Delta}_{i}(\omega)=-i\omega[i\omega\bm{\delta}+\mathbf{A}]_{ij}^{-1}\mathbf{R}_{j}^{0}(\omega)=\bm{\chi}_{ij}(\omega)\mathbf{R}_{j}^{0}(\omega)
-\]
+\end{equation}
 
 \end_inset
 
@@ -266,7 +265,11 @@ which defines the response for
 \end_inset
 
 .
- As the minimum of the optical trap is modulated by a sinusoidal wave with
+ 
+\end_layout
+
+\begin_layout Standard
+As the minimum of the optical trap is modulated by a sinusoidal wave with
  driving frequency 
 \begin_inset Formula $\Omega$
 \end_inset
@@ -305,7 +308,12 @@ for motion along the trap separation and the motion perpendicular to it.
 
 \end_inset
 
+Two time scales from two traps can be calculated to be 
+\begin_inset Formula $\tau_{i}=1/\mu k_{i}$
+\end_inset
 
+.
+ 
 \begin_inset Float figure
 wide true
 sideways false
@@ -313,9 +321,20 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename test.png
+	filename chi11.eps
 	display false
-	width 100text%
+	width 105text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename chi12.eps
+	display false
+	width 105text%
 
 \end_inset
 
@@ -394,15 +413,48 @@ end{widetext}
 
 \end_inset
 
-where 
-\begin_inset Formula $\bm{\chi}_{\parallel}=\bm{\chi}_{\parallel}'+i\bm{\chi}_{\parallel}''$
+
+\end_layout
+
+\begin_layout Standard
+We are interested in the resonance in amplitude of the second bead due to
+ the forcing of the first bead, that is given by the maximising modulus
+ of 
+\begin_inset Formula $\chi_{\parallel21}$
 \end_inset
 
-, and 
-\begin_inset Formula $\mathbf{X}_{j}$
+ with respect to 
+\begin_inset Formula $\Omega$
 \end_inset
 
-'s are the amplitude of the signal.
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+|\chi_{21}| & =\big| & \frac{i\Omega}{Det\, A_{\parallel}-\Omega^{2}+i\Omega Tr\, A_{\parallel}}\big|\\
+ & = & \big|\frac{1}{\left({\displaystyle \frac{Det\, A_{\parallel}}{\Omega}-\Omega}\right)^{2}+(Tr\, A_{\parallel})^{2}}\big|
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Clearly the resonance frequency 
+\begin_inset Formula $\Omega_{res}=\sqrt{DetA}$
+\end_inset
+
+.
+ and thus the peak of the response appears at 
+\begin_inset Formula $\Omega_{res}\tau_{1}$
+\end_inset
+
+.
+ 
 \end_layout
 
 \end_body

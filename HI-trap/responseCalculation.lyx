@@ -445,7 +445,7 @@ We are interested in the resonance in amplitude of the second bead due to
 
 \begin_layout Standard
 Clearly the resonance frequency 
-\begin_inset Formula $\Omega_{res}=\sqrt{DetA}$
+\begin_inset Formula $\Omega_{res}=\sqrt{DetA_{\parallel}}=\sqrt{k_{1}k_{2}(\mu^{2}-\mu_{\parallel12}^{2})}$
 \end_inset
 
 .
