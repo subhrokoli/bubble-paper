@@ -332,7 +332,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename chi12.eps
+	filename chi21.eps
 	display false
 	width 105text%
 
@@ -429,13 +429,10 @@ We are interested in the resonance in amplitude of the second bead due to
 
 .
  
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-|\chi_{21}| & =\big| & \frac{i\Omega}{Det\, A_{\parallel}-\Omega^{2}+i\Omega Tr\, A_{\parallel}}\big|\\
- & = & \big|\frac{1}{\left({\displaystyle \frac{Det\, A_{\parallel}}{\Omega}-\Omega}\right)^{2}+(Tr\, A_{\parallel})^{2}}\big|
+|\chi_{21}| & =\big| & \frac{i\Omega\mu_{12}k_{2}}{Det\, A_{\parallel}-\Omega^{2}+i\Omega Tr\, A_{\parallel}}\big|\\
+ & = & \frac{\Omega\mu_{12}k_{2}}{\sqrt{\left(Det\, A_{\parallel}-\Omega^{2}\right)^{2}+\Omega^{2}(Tr\, A_{\parallel})^{2}}}
 \end{eqnarray*}
 
 \end_inset
@@ -444,17 +441,15 @@ We are interested in the resonance in amplitude of the second bead due to
 \end_layout
 
 \begin_layout Standard
-Clearly the resonance frequency 
-\begin_inset Formula $\Omega_{res}=\sqrt{DetA_{\parallel}}=\sqrt{k_{1}k_{2}(\mu^{2}-\mu_{\parallel12}^{2})}$
+Clearly the resonance frequency in dimensionless unit is 
+\begin_inset Formula $\tau_{1}\Omega_{res}=\sqrt{\frac{DetA_{\parallel}}{\mu^{2}k_{1}^{2}}}=\sqrt{\frac{k_{2}}{k_{1}}\left(1-\frac{\mu_{\parallel12}^{2}}{\mu^{2}}\right)}$
+\end_inset
+
+ when 
+\begin_inset Formula $\mu_{12}\neq0$
 \end_inset
 
 .
- and thus the peak of the response appears at 
-\begin_inset Formula $\Omega_{res}\tau_{1}$
-\end_inset
-
-.
- 
 \end_layout
 
 \end_body
