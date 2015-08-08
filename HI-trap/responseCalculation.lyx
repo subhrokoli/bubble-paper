@@ -191,7 +191,7 @@ In the above Eq.
  motion, we neglect inertia and average over the noise to get,
 \begin_inset Formula 
 \begin{alignat}{1}
-\bm{\gamma}_{ij}\mathbf{\dot{R}}_{j} & -\bm{\nabla}_{j}U=0
+-\bm{\gamma}_{ij}\mathbf{\dot{R}}_{j} & -\bm{\nabla}_{i}U=0
 \end{alignat}
 
 \end_inset
@@ -255,7 +255,7 @@ Steady state solution of the Eq.(4) can easily be calculated by taking Fourier
 , the solution in frequency is
 \begin_inset Formula 
 \begin{equation}
-\bm{\Delta}_{i}(\omega)=-i\omega[i\omega\bm{\delta}+\mathbf{A}]_{ij}^{-1}\mathbf{R}_{j}^{0}(\omega)=\bm{\chi}_{ij}(\omega)\mathbf{R}_{j}^{0}(\omega)
+\bm{\Delta}_{i}(\omega)=i\omega[-i\omega\bm{\delta}+\mathbf{A}]_{ij}^{-1}\mathbf{R}_{j}^{0}(\omega)=\bm{\chi}_{ij}(\omega)\mathbf{R}_{j}^{0}(\omega)
 \end{equation}
 
 \end_inset
@@ -375,14 +375,14 @@ begin{widetext}
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-\bm{\chi}_{\parallel}(\Omega) & = & -i\Omega\left[\begin{array}{cc}
-(\mu k_{1}+i\Omega) & \mu_{12}k_{2}\\
+\bm{\chi}_{\parallel}(\Omega) & = & i\Omega\left[\begin{array}{cc}
+(\mu k_{1}-i\Omega) & \mu_{12}k_{2}\\
 \\
-\mu_{21}k_{1} & (\mu k_{2}+i\Omega)
-\end{array}\right]^{-1}=-\frac{i\Omega}{Det\, A_{\parallel}-\Omega^{2}+i\Omega Tr\, A_{\parallel}}\left[\begin{array}{cc}
-(\mu k_{2}+i\Omega) & -\mu_{21}k_{1}\\
+\mu_{21}k_{1} & (\mu k_{2}-i\Omega)
+\end{array}\right]^{-1}=\frac{i\Omega}{Det\, A_{\parallel}-\Omega^{2}-i\Omega Tr\, A_{\parallel}}\left[\begin{array}{cc}
+(\mu k_{2}-i\Omega) & -\mu_{21}k_{1}\\
 \, & \,\\
--\mu_{12}k_{2} & (\mu k_{1}+i\Omega)
+-\mu_{12}k_{2} & (\mu k_{1}-i\Omega)
 \end{array}\right]\\
 \\
 \bm{\chi}_{\parallel}^{'}(\Omega) & = & \frac{\Omega^{2}}{(Det\, A_{\parallel}-\Omega^{2})^{2}+\Omega^{2}(Tr\, A_{\parallel})^{2}}\left[\begin{array}{cc}
@@ -391,7 +391,7 @@ begin{widetext}
 {\displaystyle \mu_{12}k_{2}Tr\, A_{\parallel}} & {\displaystyle Det\, A_{\parallel}-\Omega^{2}-\mu k_{1}Tr\, A_{\parallel}}
 \end{array}\right]\\
 \\
-\bm{\chi}_{\parallel}^{''}(\Omega) & = & -\frac{\Omega}{(Det\, A_{\parallel}-\Omega^{2})^{2}+\Omega^{2}(Tr\, A_{\parallel})^{2}}\left[\begin{array}{cc}
+\bm{\chi}_{\parallel}^{''}(\Omega) & = & \frac{\Omega}{(Det\, A_{\parallel}-\Omega^{2})^{2}+\Omega^{2}(Tr\, A_{\parallel})^{2}}\left[\begin{array}{cc}
 {\displaystyle \mu k_{2}(Det\, A_{\parallel}-\Omega^{2})+\Omega^{2}Tr\, A_{\parallel}} & {\displaystyle -\mu_{21}k_{1}(Det\, A_{\parallel}}-\Omega^{2})\\
 \\
 -{\displaystyle \mu_{12}k_{2}(Det\, A_{\parallel}-\Omega^{2})} & {\displaystyle \mu k_{1}(Det\, A_{\parallel}-\Omega^{2})+\Omega^{2}Tr\, A}_{\parallel}
@@ -431,7 +431,7 @@ We are interested in the resonance in amplitude of the second bead due to
  
 \begin_inset Formula 
 \begin{eqnarray*}
-|\chi_{21}| & =\big| & \frac{i\Omega\mu_{12}k_{2}}{Det\, A_{\parallel}-\Omega^{2}+i\Omega Tr\, A_{\parallel}}\big|\\
+|\chi_{21}| & =\big| & \frac{-i\Omega\mu_{12}k_{2}}{Det\, A_{\parallel}-\Omega^{2}-i\Omega Tr\, A_{\parallel}}\big|\\
  & = & \frac{\Omega\mu_{12}k_{2}}{\sqrt{\left(Det\, A_{\parallel}-\Omega^{2}\right)^{2}+\Omega^{2}(Tr\, A_{\parallel})^{2}}}
 \end{eqnarray*}
 
