@@ -191,7 +191,7 @@ In the above Eq.
  motion, we neglect inertia and average over the noise to get,
 \begin_inset Formula 
 \begin{alignat}{1}
-\bm{\gamma}_{ij}\mathbf{\dot{R}}_{j} & -\bm{\nabla}_{j}U=0
+-\bm{\gamma}_{ij}\mathbf{\dot{R}}_{j} & -\bm{\nabla}_{i}U=0
 \end{alignat}
 
 \end_inset
