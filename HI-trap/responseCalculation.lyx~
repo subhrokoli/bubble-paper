@@ -115,7 +115,7 @@ begin{subequations}
 \begin_inset Formula 
 \begin{alignat}{1}
 \dot{\mathbf{R}_{i}} & =\mathbf{v}_{i}\\
-m\dot{\mathbf{v}}_{i} & =-\bm{\gamma}_{ij}\mathbf{v}_{j}-\bm{\nabla}_{i}U+\bm{\eta}_{i}
+m\dot{\mathbf{v}}_{i} & =-\bm{\gamma}_{ij}\mathbf{v}_{j}-\bm{\nabla}_{i}U+\bm{\xi}_{i}
 \end{alignat}
 
 \end_inset
@@ -163,7 +163,7 @@ In the above Eq.
 \end_inset
 
  is the potential and 
-\begin_inset Formula $\eta$
+\begin_inset Formula $\xi$
 \end_inset
 
  is noise of thermal origin.
@@ -450,6 +450,149 @@ Clearly the resonance frequency in dimensionless unit is
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+We can further calculate auto-correlation and cross-correlation functions.
+ To do that, we have kept two separate particles in two different optical
+ traps and let them jiggle due to the thermal motion.
+ The equation of motion for such motion is described by,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\negthickspace\frac{d}{dt}\left[\begin{array}{c}
+\bm{\Delta}_{1}\\
+\bm{\Delta}_{2}
+\end{array}\right]=-\left[\begin{array}{cc}
+\mu k_{1}\bm{\delta} & \bm{\mu}_{12}k_{2}\\
+\bm{\mu}_{21}k_{1} & \mu k_{2}\bm{\delta}
+\end{array}\right]\negthickspace\left[\begin{array}{c}
+\bm{\Delta}_{1}\\
+\bm{\Delta}_{2}
+\end{array}\right]\negthickspace+\negthickspace\left[\begin{array}{c}
+\bm{\xi}_{1}\\
+\bm{\xi}_{2}
+\end{array}\right]
+\end{equation}
+
+\end_inset
+
+Writing this equation in index form we get,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dot{\Delta}_{i}=-A_{ij}\Delta_{j}+B_{ij}w_{j}
+\]
+
+\end_inset
+
+ where noise is correlated Wiener processes with variances go as 
+\begin_inset Formula $\mathbf{B}\mathbf{B}^{T}=k_{b}T\mathbf{A}$
+\end_inset
+
+ and white noise 
+\begin_inset Formula $w$
+\end_inset
+
+ satisfy 
+\begin_inset Formula $\langle w\rangle=0$
+\end_inset
+
+ 
+\begin_inset Formula $\langle w_{i}(t)w_{j}(t')\rangle=\delta_{ij}\delta(t-t')$
+\end_inset
+
+.
+ The solution of this multivariate Stochatic differential equation is
+\begin_inset Formula 
+\[
+\bm{\Delta}(t)=\bm{\Delta}(0)e^{-\mathbf{A}t}+\int_{0}^{t}ds\, e^{-\mathbf{A}(t-s)}\mathbf{B}\mathbf{w}
+\]
+
+\end_inset
+
+ Keeping the particles in the trap for long time will let them equilibriate
+ and all transient effect will die out and hence will not have any consequences.
+ The correlation matrix can be calculated which will only depend on contribution
+ from noise.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\bm{\Delta}(t)\bm{\Delta}^{T}(t')=\int_{0}^{t'}\int_{0}^{t}ds'ds\, e^{-\mathbf{A}(t-s)}\mathbf{B}\mathbf{w}\mathbf{w}^{T}\mathbf{B}^{T}e^{-\mathbf{A}^{T}(t'-s')}.
+\]
+
+\end_inset
+
+For stationary case average of the correlator become,
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{widetext}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\langle\bm{\Delta}(t)\bm{\Delta}^{T}(t')\rangle_{eq} & = & \int_{-\infty}^{t'}\int_{-\infty}^{t}ds'ds\, e^{-\mathbf{A}(t-s)}\mathbf{B}\langle\mathbf{w}\mathbf{w}^{T}\rangle_{eq}\mathbf{B}^{T}e^{-\mathbf{A}^{T}(t'-s')}.\\
+\langle\bm{\Delta}(t)\bm{\Delta}^{T}(t')\rangle_{eq} & = & e^{-\mathbf{A}(t-t')}\int_{-\infty}^{t}ds\, e^{-\mathbf{A}(t'-s)}\mathbf{B}\mathbf{B}^{T}e^{-\mathbf{A}^{T}(t'-s)}=e^{-\mathbf{A}(t-t')}\mathbf{C}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{widetext}
+\end_layout
+
+\end_inset
+
+ where 
+\begin_inset Formula $\mathbf{C}$
+\end_inset
+
+ is the stationary covariance matrix, 
+\end_layout
+
+\begin_layout Standard
+For a two dimensional system C can easily be calculated 
+\backslash
+cite{gardinar}, the solution is 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{C}=\frac{(Det\,\mathbf{A})\mathbf{B}\mathbf{B}^{T}+[\mathbf{A}-Tr\,\mathbf{A}]\mathbf{B}\mathbf{B}^{T}[\mathbf{A}-Tr\,\mathbf{A}]}{2Tr\,\mathbf{A}\, Det\,\mathbf{A}}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body
