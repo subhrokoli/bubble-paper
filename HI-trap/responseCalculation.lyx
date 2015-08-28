@@ -651,11 +651,11 @@ where distribution for noise follow
 
  The steady state solution for average in frequency space is
 \begin_inset Formula 
-\begin{eqnarray}
-x(\omega) & = & =\chi(\omega)f(\omega)\\
-\chi(\omega) & = & \frac{(\mu^{2}k+i\mu\omega)}{\omega^{2}+\mu^{2}k^{2}}\nonumber \\
-\chi''(\omega) & = & \frac{\mu\omega}{\omega^{2}+\mu^{2}k^{2}}\label{eq:img}
-\end{eqnarray}
+\begin{alignat}{1}
+x(\omega) & =\frac{{\displaystyle \mu kx^{0}(\omega)}}{{\displaystyle (-i\omega+\mu k)}}=\chi(\omega)f(\omega)\\
+\chi(\omega) & =\frac{(\mu k+i\omega)\mu}{\omega^{2}+\mu^{2}k^{2}}\nonumber \\
+\chi''(\omega) & =\frac{\mu\omega}{\omega^{2}+\mu^{2}k^{2}}\label{eq:img}
+\end{alignat}
 
 \end_inset
 

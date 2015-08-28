@@ -481,10 +481,7 @@ reference "eq:fric"
 
 \end_inset
 
- we can get 
-\end_layout
-
-\begin_layout Standard
+ we can get
 \begin_inset Formula 
 \begin{gather*}
 \gamma_{ij}\dot{R}_{j}=-k_{ij}R_{j}+\xi_{i}\\
@@ -503,15 +500,7 @@ Steady state solution in frequency space can be derived easily by Fourier
 
 \end_inset
 
-.
- 
-\end_layout
-
-\begin_layout Standard
 Correlation matrix become
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
 \langle\mathbf{R}(\omega)\mathbf{R}^{\dagger}(\omega)\rangle & = & (-i\omega\bm{\delta}+\mathbf{A})^{-1}\mathbf{M}\langle\bm{\xi}(\omega)\bm{\xi}^{\dagger}(\omega)\rangle\mathbf{M}(i\omega\bm{\delta}+\mathbf{A}^{T})^{-1}\\
@@ -521,9 +510,6 @@ Correlation matrix become
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status open
 
