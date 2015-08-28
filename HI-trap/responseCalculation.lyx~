@@ -617,5 +617,104 @@ end{widetext}
 
 \end_layout
 
+\begin_layout Section
+\start_of_appendix
+One independent harmonic oscillator
+\end_layout
+
+\begin_layout Standard
+For the case of a one dimensional harmonic oscillator, the equation can
+ be written as
+\begin_inset Formula 
+\begin{eqnarray}
+m\dot{v} & = & -\gamma v-k(x-x^{0})+\xi\\
+\dot{x} & = & v
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Clearly, for over-damed limit of the equation, we can neglect the mass term
+ and force balance equation can be written as,
+\begin_inset Formula 
+\begin{eqnarray}
+\gamma v & = & -kx+kx^{0}+\xi
+\end{eqnarray}
+
+\end_inset
+
+where distribution for noise follow 
+\begin_inset Formula $\langle\xi\rangle=0$
+\end_inset
+
+,
+\begin_inset Formula $\langle\xi\xi\rangle=2k_{B}T\gamma$
+\end_inset
+
+.
+ Inverting the equation we get,
+\begin_inset Formula 
+\begin{eqnarray*}
+\dot{x} & = & -\mu kx+\mu kx^{0}+\mu\xi
+\end{eqnarray*}
+
+\end_inset
+
+ The steady state solution for average in frequency space is
+\begin_inset Formula 
+\begin{eqnarray}
+x(\omega) & = & =\chi(\omega)f(\omega)\\
+\chi(\omega) & = & \frac{(\mu^{2}k+i\mu\omega)}{\omega^{2}+\mu^{2}k^{2}}\nonumber \\
+\chi''(\omega) & = & \frac{\mu\omega}{\omega^{2}+\mu^{2}k^{2}}\label{eq:img}
+\end{eqnarray}
+
+\end_inset
+
+If there is no external force we can calculate the auto-correlation function
+\begin_inset Formula 
+\begin{alignat}{1}
+C_{xx}(\omega) & =\langle x(\omega)x^{\ast}(\omega)\rangle\\
+ & =\langle\frac{\mu\xi(\omega)}{(-i\omega+\mu k)}\frac{\xi^{\ast}(\omega)\mu}{(i\omega+\mu k)}\rangle\nonumber \\
+ & =\frac{2k_{B}T\mu\gamma\mu}{\omega^{2}+\mu^{2}k^{2}}=\frac{2k_{B}T\mu}{\omega^{2}+\mu^{2}k^{2}}\label{eq:cor}
+\end{alignat}
+
+\end_inset
+
+Generalised form of fluctuation dissipation theorem connects correlation
+ to the imaginary part of the response function as
+\begin_inset Formula 
+\begin{equation}
+C_{xx}(\omega)=2k_{B}T\frac{\chi''(\omega)}{\omega}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can read of imaginary part of the response and correlation function directly
+ from Eq.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:img"
+
+\end_inset
+
+ and Eq.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cor"
+
+\end_inset
+
+ respectively and confirm fluctuation dissipation theorem in one dimentional
+ harmonic oscillator context.
+ 
+\end_layout
+
 \end_body
 \end_document
