@@ -114,8 +114,8 @@ begin{subequations}
 \begin_layout Standard
 \begin_inset Formula 
 \begin{alignat}{1}
-\dot{\mathbf{R}_{i}} & =\mathbf{v}_{i}\\
-m\dot{\mathbf{v}}_{i} & =-\bm{\gamma}_{ij}\mathbf{v}_{j}-\bm{\nabla}_{i}U+\bm{\xi}_{i}
+m\dot{\mathbf{v}}_{i} & =-\bm{\gamma}_{ij}\mathbf{v}_{j}-\bm{\nabla}_{i}U+\bm{\xi}_{i}\\
+\dot{\mathbf{R}}_{i} & =\mathbf{v}_{i}
 \end{alignat}
 
 \end_inset
@@ -191,20 +191,16 @@ In the above Eq.
  motion, we neglect inertia and average over the noise to get,
 \begin_inset Formula 
 \begin{alignat}{1}
--\bm{\gamma}_{ij}\mathbf{\dot{R}}_{j} & -\bm{\nabla}_{i}U=0
+-\bm{\gamma}_{ij}\mathbf{\dot{R}}_{j} & -\bm{\nabla}_{i}U=0\label{eq:fric}
 \end{alignat}
 
 \end_inset
 
-Eq.(2) can be inverted and presented in terms of mobility matrices 
-\begin_inset Formula $\bm{\mu}_{ij}=\bm{\gamma}_{ij}^{-1}$
-\end_inset
-
- as,
+Eq.(2) can be inverted and presented in terms of mobility matrices as,
 \begin_inset Formula 
 \begin{eqnarray}
-\negthickspace\negthickspace\mathbf{\dot{R}}_{1} & = & -\mu k_{1}\bm{\delta}(\mathbf{R}_{1}-\mathbf{R}_{1}^{0})-\bm{\mu}_{12}k_{2}(\mathbf{R}_{2}-\mathbf{R}_{2}^{0})\nonumber \\
-\negthickspace\negthickspace\mathbf{\dot{R}}_{2} & = & -\bm{\mu}_{21}k_{1}(\mathbf{R}_{1}-\mathbf{R}_{1}^{0})-\mu k_{2}\bm{\delta}(\mathbf{R}_{2}-\mathbf{R}_{2}^{0})
+\negthickspace\negthickspace\mathbf{\dot{R}}_{1} & = & -\mu\bm{\delta}k_{1}(\mathbf{R}_{1}-\mathbf{R}_{1}^{0})-\bm{\mu}_{12}k_{2}(\mathbf{R}_{2}-\mathbf{R}_{2}^{0})\nonumber \\
+\negthickspace\negthickspace\mathbf{\dot{R}}_{2} & = & -\bm{\mu}_{21}k_{1}(\mathbf{R}_{1}-\mathbf{R}_{1}^{0})-\mu\bm{\delta}k_{2}(\mathbf{R}_{2}-\mathbf{R}_{2}^{0})
 \end{eqnarray}
 
 \end_inset
@@ -213,29 +209,29 @@ Eq.(2) can be inverted and presented in terms of mobility matrices
 \end_layout
 
 \begin_layout Standard
-Now we introduce new variable 
-\begin_inset Formula $\bm{\Delta}_{i}=\mathbf{R}_{i}-\mathbf{R}_{i}^{0}$
-\end_inset
-
-, approximate mobility matrices with separation vector to be the average
- distance between two minimum of the optical traps.
+Approximate mobility matrices with separation vector to be the average distance
+ between two minimum of the optical traps.
  Thus we get,
 \begin_inset Formula 
-\begin{equation}
+\begin{eqnarray}
 \negthickspace\frac{d}{dt}\left[\begin{array}{c}
-\bm{\Delta}_{1}\\
-\bm{\Delta}_{2}
-\end{array}\right]=-\left[\begin{array}{cc}
+\mathbf{R}_{1}\\
+\mathbf{R}_{2}
+\end{array}\right] & = & -\left[\begin{array}{cc}
 \mu k_{1}\bm{\delta} & \bm{\mu}_{12}k_{2}\\
 \bm{\mu}_{21}k_{1} & \mu k_{2}\bm{\delta}
 \end{array}\right]\negthickspace\left[\begin{array}{c}
-\bm{\Delta}_{1}\\
-\bm{\Delta}_{2}
-\end{array}\right]\negthickspace-\negthickspace\left[\begin{array}{c}
-\dot{\mathbf{R}}_{1}^{0}\\
-\dot{\mathbf{R}}_{2}^{0}
+\mathbf{R}_{1}\\
+\mathbf{R}_{2}
+\end{array}\right]\nonumber \\
+ &  & +\left[\begin{array}{cc}
+\mu\bm{\delta} & \bm{\mu}_{12}\\
+\bm{\mu}_{21} & \mu\bm{\delta}
+\end{array}\right]\negthickspace\left[\begin{array}{c}
+\mathbf{F}_{1}^{0}\\
+\mathbf{F}_{2}^{0}
 \end{array}\right]
-\end{equation}
+\end{eqnarray}
 
 \end_inset
 
@@ -252,10 +248,17 @@ Steady state solution of the Eq.(4) can easily be calculated by taking Fourier
 \end{array}\right]$
 \end_inset
 
+ and 
+\begin_inset Formula $\mathbf{M}=\left[\begin{array}{cc}
+\mu\bm{\delta} & \bm{\mu}_{12}\\
+\bm{\mu}_{21} & \mu\bm{\delta}
+\end{array}\right]$
+\end_inset
+
 , the solution in frequency is
 \begin_inset Formula 
 \begin{equation}
-\bm{\Delta}_{i}(\omega)=i\omega[-i\omega\bm{\delta}+\mathbf{A}]_{ij}^{-1}\mathbf{R}_{j}^{0}(\omega)=\bm{\chi}_{ij}(\omega)\mathbf{R}_{j}^{0}(\omega)
+\mathbf{R}_{i}(\omega)=[-i\omega\bm{\delta}+\mathbf{A}]_{ij}^{-1}\mathbf{M}\mathbf{F}_{j}^{0}(\omega)=\bm{\chi}_{ij}(\omega)\mathbf{F}_{j}^{0}(\omega)
 \end{equation}
 
 \end_inset
@@ -275,7 +278,7 @@ As the minimum of the optical trap is modulated by a sinusoidal wave with
 \end_inset
 
 , 
-\begin_inset Formula $\mathbf{R}_{j}^{0}(\omega)=\frac{\mathbf{X}_{i}}{2}(\delta(\omega-\Omega)+\delta(\omega+\Omega)).$
+\begin_inset Formula $\mathbf{F}_{j}^{0}(\omega)=\frac{\mathbf{X}_{j}}{2}(\delta(\omega-\Omega)+\delta(\omega+\Omega)).$
 \end_inset
 
  Further 
@@ -374,29 +377,45 @@ begin{widetext}
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray*}
-\bm{\chi}_{\parallel}(\Omega) & = & i\Omega\left[\begin{array}{cc}
+\begin{alignat*}{1}
+\bm{\chi}_{\parallel}(\Omega) & =\left[\begin{array}{cc}
 (\mu k_{1}-i\Omega) & \mu_{12}k_{2}\\
 \\
 \mu_{21}k_{1} & (\mu k_{2}-i\Omega)
-\end{array}\right]^{-1}=\frac{i\Omega}{Det\, A_{\parallel}-\Omega^{2}-i\Omega Tr\, A_{\parallel}}\left[\begin{array}{cc}
-(\mu k_{2}-i\Omega) & -\mu_{21}k_{1}\\
+\end{array}\right]^{-1}\left[\begin{array}{cc}
+\mu & \mu_{12}\\
+\mu_{21} & \mu
+\end{array}\right]\\
+ & =\frac{1}{Det\, A_{\parallel}-\Omega^{2}-i\Omega Tr\, A_{\parallel}}\left[\begin{array}{cc}
+(\mu k_{2}-i\Omega) & -\mu_{12}k_{2}\\
 \, & \,\\
--\mu_{12}k_{2} & (\mu k_{1}-i\Omega)
+-\mu_{21}k_{1} & (\mu k_{1}-i\Omega)
+\end{array}\right]\left[\begin{array}{cc}
+\mu & \mu_{12}\\
+\mu_{21} & \mu
+\end{array}\right]\\
+ & =\frac{Det\, A_{\parallel}-\Omega^{2}+i\Omega Tr\, A_{\parallel}}{(Det\, A_{\parallel}-\Omega^{2})^{2}+\Omega^{2}(Tr\, A_{\parallel})^{2}}\left[\begin{array}{cc}
+k_{2}DetM_{\parallel}-i\mu\Omega & -i\Omega\mu_{12}\\
+\, & \,\\
+-i\Omega\mu_{21} & k_{1}DetM_{\parallel}-i\mu\Omega
+\end{array}\right]\\
+\bm{\chi}_{\parallel}^{'}(\Omega) & =\frac{1}{(Det\, A_{\parallel}-\Omega^{2})^{2}+\Omega^{2}(Tr\, A_{\parallel})^{2}}\left[\begin{array}{cc}
+\begin{array}{c}
+k_{2}DetA_{\parallel}DetM_{\parallel}\\
++\Omega^{2}(k_{2}\mu_{12}\mu_{21}+k_{1}\mu^{2})
+\end{array} & \Omega^{2}Tr\, A_{\parallel}\mu_{12}\\
+{\displaystyle \Omega^{2}Tr\, A_{\parallel}\mu_{12}} & \begin{array}{c}
+k_{1}DetA_{\parallel}DetM_{\parallel}\\
++\Omega^{2}(k_{1}\mu_{12}\mu_{21}+k_{2}\mu^{2})
+\end{array}
 \end{array}\right]\\
 \\
-\bm{\chi}_{\parallel}^{'}(\Omega) & = & \frac{\Omega^{2}}{(Det\, A_{\parallel}-\Omega^{2})^{2}+\Omega^{2}(Tr\, A_{\parallel})^{2}}\left[\begin{array}{cc}
-{\displaystyle Det\, A_{\parallel}-\Omega^{2}-\mu k_{2}Tr\, A_{\parallel}} & {\displaystyle \mu_{21}k_{1}Tr\, A_{\parallel}}\\
+\bm{\chi}_{\parallel}^{''}(\Omega) & =\frac{\Omega}{(Det\, A_{\parallel}-\Omega^{2})^{2}+\Omega^{2}(Tr\, A_{\parallel})^{2}}\left[\begin{array}{cc}
+{\displaystyle \mu k_{2}^{2}DetM_{\parallel}+\mu\Omega^{2}} & -(Det\, A_{\parallel}-\Omega^{2})\mu_{12}\\
 \\
-{\displaystyle \mu_{12}k_{2}Tr\, A_{\parallel}} & {\displaystyle Det\, A_{\parallel}-\Omega^{2}-\mu k_{1}Tr\, A_{\parallel}}
-\end{array}\right]\\
-\\
-\bm{\chi}_{\parallel}^{''}(\Omega) & = & \frac{\Omega}{(Det\, A_{\parallel}-\Omega^{2})^{2}+\Omega^{2}(Tr\, A_{\parallel})^{2}}\left[\begin{array}{cc}
-{\displaystyle \mu k_{2}(Det\, A_{\parallel}-\Omega^{2})+\Omega^{2}Tr\, A_{\parallel}} & {\displaystyle -\mu_{21}k_{1}(Det\, A_{\parallel}}-\Omega^{2})\\
-\\
--{\displaystyle \mu_{12}k_{2}(Det\, A_{\parallel}-\Omega^{2})} & {\displaystyle \mu k_{1}(Det\, A_{\parallel}-\Omega^{2})+\Omega^{2}Tr\, A}_{\parallel}
+-(Det\, A_{\parallel}-\Omega^{2})\mu_{21} & \mu k_{1}^{2}DetM_{\parallel}+\mu\Omega^{2}
 \end{array}\right]
-\end{eqnarray*}
+\end{alignat*}
 
 \end_inset
 
@@ -431,8 +450,8 @@ We are interested in the resonance in amplitude of the second bead due to
  
 \begin_inset Formula 
 \begin{eqnarray*}
-|\chi_{21}| & =\big| & \frac{-i\Omega\mu_{12}k_{2}}{Det\, A_{\parallel}-\Omega^{2}-i\Omega Tr\, A_{\parallel}}\big|\\
- & = & \frac{\Omega\mu_{12}k_{2}}{\sqrt{\left(Det\, A_{\parallel}-\Omega^{2}\right)^{2}+\Omega^{2}(Tr\, A_{\parallel})^{2}}}
+|\chi_{21}| & =\big| & \frac{-i\Omega\mu_{21}}{Det\, A_{\parallel}-\Omega^{2}-i\Omega Tr\, A_{\parallel}}\big|\\
+ & = & \frac{\Omega\mu_{21}}{\sqrt{\left(Det\, A_{\parallel}-\Omega^{2}\right)^{2}+\Omega^{2}(Tr\, A_{\parallel})^{2}}}
 \end{eqnarray*}
 
 \end_inset
@@ -446,91 +465,65 @@ Clearly the resonance frequency in dimensionless unit is
 \end_inset
 
  when 
-\begin_inset Formula $\mu_{12}\neq0$
+\begin_inset Formula $\mu_{21}\neq0$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-We can further calculate auto-correlation and cross-correlation functions.
- To do that, we have kept two separate particles in two different optical
- traps and let them jiggle due to the thermal motion.
- The equation of motion for such motion is described by,
+Now lets consider there is no external force but two particles are moving
+ in the trap because of thermal fluctuation.
+ Then from Eq.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:fric"
+
+\end_inset
+
+ we can get 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
-\negthickspace\frac{d}{dt}\left[\begin{array}{c}
-\bm{\Delta}_{1}\\
-\bm{\Delta}_{2}
-\end{array}\right]=-\left[\begin{array}{cc}
-\mu k_{1}\bm{\delta} & \bm{\mu}_{12}k_{2}\\
-\bm{\mu}_{21}k_{1} & \mu k_{2}\bm{\delta}
-\end{array}\right]\negthickspace\left[\begin{array}{c}
-\bm{\Delta}_{1}\\
-\bm{\Delta}_{2}
-\end{array}\right]\negthickspace+\negthickspace\left[\begin{array}{c}
-\bm{\xi}_{1}\\
-\bm{\xi}_{2}
-\end{array}\right]\label{eq:gen}
-\end{equation}
+\begin{gather*}
+\gamma_{ij}\dot{R}_{j}=-k_{ij}R_{j}+\xi_{i}\\
+\langle\xi_{j}\rangle=0\\
+\langle\xi_{i}\xi_{j}\rangle=2k_{B}T\gamma_{ij}
+\end{gather*}
 
 \end_inset
 
-Writing this equation in index form we get,
-\end_layout
-
-\begin_layout Standard
+Steady state solution in frequency space can be derived easily by Fourier
+ transform 
 \begin_inset Formula 
 \[
-\dot{\Delta}_{i}=-A_{ij}\Delta_{j}+B_{ij}w_{j}
+\mathbf{R}(\omega)=(-i\omega\bm{\delta}+\mathbf{A})^{-1}\mathbf{M}\bm{\xi}(\omega)
 \]
 
-\end_inset
-
- where noise is correlated Wiener processes with variances go as 
-\begin_inset Formula $\mathbf{B}\mathbf{B}^{T}=k_{b}T\bm{\mu}$
-\end_inset
-
- and white noise 
-\begin_inset Formula $w$
-\end_inset
-
- satisfy 
-\begin_inset Formula $\langle w\rangle=0$
-\end_inset
-
- 
-\begin_inset Formula $\langle w_{i}(t)w_{j}(t')\rangle=\delta_{ij}\delta(t-t')$
 \end_inset
 
 .
- The solution of this multivariate Stochatic differential equation is
-\begin_inset Formula 
-\[
-\bm{\Delta}(t)=\bm{\Delta}(0)e^{-\mathbf{A}t}+\int_{0}^{t}ds\, e^{-\mathbf{A}(t-s)}\mathbf{B}\mathbf{w}
-\]
-
-\end_inset
-
- Keeping the particles in the trap for long time will let them equilibriate
- and all transient effect will die out and hence will not have any consequences.
- The correlation matrix can be calculated which will only depend on contribution
- from noise.
  
 \end_layout
 
 \begin_layout Standard
+Correlation matrix become
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
-\[
-\bm{\Delta}(t)\bm{\Delta}^{T}(t')=\int_{0}^{t'}\int_{0}^{t}ds'ds\, e^{-\mathbf{A}(t-s)}\mathbf{B}\mathbf{w}\mathbf{w}^{T}\mathbf{B}^{T}e^{-\mathbf{A}^{T}(t'-s')}.
-\]
+\begin{eqnarray*}
+\langle\mathbf{R}(\omega)\mathbf{R}^{\dagger}(\omega)\rangle & = & (-i\omega\bm{\delta}+\mathbf{A})^{-1}\mathbf{M}\langle\bm{\xi}(\omega)\bm{\xi}^{\dagger}(\omega)\rangle\mathbf{M}(i\omega\bm{\delta}+\mathbf{A}^{T})^{-1}\\
+\frac{1}{2k_{B}T}\, C_{\Delta\Delta} & = & (-i\omega\bm{\delta}+\mathbf{A})^{-1}\mathbf{M}(i\omega\bm{\delta}+\mathbf{A}^{T})^{-1}
+\end{eqnarray*}
 
 \end_inset
 
-For stationary case average of the correlator become,
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -548,14 +541,67 @@ begin{widetext}
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray*}
-\langle\bm{\Delta}(t)\bm{\Delta}^{T}(t')\rangle_{eq} & = & \int_{-\infty}^{t'}\int_{-\infty}^{t}ds'ds\, e^{-\mathbf{A}(t-s)}\mathbf{B}\langle\mathbf{w}\mathbf{w}^{T}\rangle_{eq}\mathbf{B}^{T}e^{-\mathbf{A}^{T}(t'-s')}.\\
-\langle\bm{\Delta}(t)\bm{\Delta}^{T}(t')\rangle_{eq} & = & e^{-\mathbf{A}(t-t')}\int_{-\infty}^{t}ds\, e^{-\mathbf{A}(t'-s)}\mathbf{B}\mathbf{B}^{T}e^{-\mathbf{A}^{T}(t'-s)}=e^{-\mathbf{A}(t-t')}\mathbf{C}
-\end{eqnarray*}
+\[
+(-i\omega\bm{\delta}+\mathbf{A}_{\parallel})^{-1}\mathbf{M}_{\parallel}(i\omega\bm{\delta}+\mathbf{A}_{\parallel}^{T})^{-1}=\frac{1}{(Det\, A_{\parallel}-\omega^{2})^{2}+\omega^{2}(Tr\, A_{\parallel})^{2}}\left[\begin{array}{cc}
+\mu k_{2}-i\omega & -\mu_{12}k_{2}\\
+-\mu_{21}k_{1} & \mu k_{1}-i\omega
+\end{array}\right]\left[\begin{array}{cc}
+\mu & \mu_{12}\\
+\mu_{21} & \mu
+\end{array}\right]\left[\begin{array}{cc}
+\mu k_{2}+i\omega & -\mu_{21}k_{1}\\
+-\mu_{12}k_{2} & \mu k_{1}+i\omega
+\end{array}\right]
+\]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \left[\begin{array}{cc}
+\mu k_{2}-i\omega & -\mu_{12}k_{2}\\
+\, & \,\\
+-\mu_{21}k_{1} & \mu k_{1}-i\omega
+\end{array}\right]\left[\begin{array}{cc}
+\mu & \mu_{12}\\
+\, & \,\\
+\mu_{21} & \mu
+\end{array}\right]\left[\begin{array}{cc}
+\mu k_{2}+i\omega & -\mu_{21}k_{1}\\
+\, & \,\\
+-\mu_{12}k_{2} & \mu k_{1}+i\omega
+\end{array}\right]\\
+= & \left[\begin{array}{cc}
+k_{2}DetM_{\parallel}-i\omega\mu & -i\omega\mu_{12}\\
+\, & \,\\
+-i\omega\mu_{21} & k_{1}DetM_{\parallel}-i\omega\mu
+\end{array}\right]\left[\begin{array}{cc}
+\mu k_{2}+i\omega & -\mu_{21}k_{1}\\
+\, & \,\\
+-\mu_{12}k_{2} & \mu k_{1}+i\omega
+\end{array}\right]\\
+= & \left[\begin{array}{cc}
+(k_{2}DetM_{\parallel}-i\omega\mu)(\mu k_{2}+i\omega)+i\omega\mu_{12}^{2}k_{2} & -(k_{2}DetM_{\parallel}-i\omega\mu)\mu_{21}k_{1}-(\mu k_{1}+i\omega)i\omega\mu_{12}\\
+\, & \,\\
+-(k_{1}DetM_{\parallel}-i\omega\mu)\mu_{12}k_{2}-(\mu k_{2}+i\omega)i\omega\mu_{21} & (k_{1}DetM_{\parallel}-i\omega\mu)(\mu k_{1}+i\omega)+i\omega\mu_{21}^{2}k_{1}
+\end{array}\right]\\
+= & \left[\begin{array}{cc}
+\mu k_{2}^{2}DetM_{\parallel}+\mu\omega^{2} & -(DetA_{\parallel}-\omega^{2})\mu_{21}\\
+\, & \,\\
+-(DetA_{\parallel}-\omega^{2})\mu_{12} & \mu k_{1}^{2}DetM_{\parallel}+\mu\omega^{2}
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -565,82 +611,6 @@ status open
 \backslash
 end{widetext}
 \end_layout
-
-\end_inset
-
- where 
-\begin_inset Formula $\mathbf{C}$
-\end_inset
-
- is the stationary covariance matrix, 
-\end_layout
-
-\begin_layout Standard
-For a two dimensional system C can easily be calculated 
-\backslash
-cite{gardinar}, the solution is 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\mathbf{C}=\frac{(Det\,\mathbf{A})\mathbf{B}\mathbf{B}^{T}+[\mathbf{A}-Tr\,\mathbf{A}]\mathbf{B}\mathbf{B}^{T}[\mathbf{A}-Tr\,\mathbf{A}]}{2Tr\,\mathbf{A}\, Det\,\mathbf{A}}
-\]
-
-\end_inset
-
- Frequency dependent response function can be calculated from the correlation
- function through fluctuation-Dissipation theorem.
- 
-\end_layout
-
-\begin_layout Standard
-In an well established paper, Meiners and Quake have verified the correlation
- between two optically trapped beads in an viscous fluid at different separation
- and temperature.
- Following that Hough and Ou-Yang has shown how the response function from
- correlation can be calculated using generalised fluctuation-dissipation
- theorem and Kramer Kronig relations.
- This response function is verified in the driven optical trap.
- Here in this problem we have calculated both correlation and response function
- in steady state directly in similar set of experiments.
- 
-\end_layout
-
-\begin_layout Standard
-For steady state, the best way to calculate correation is to take a Fourier
- transform of Eq.
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:gen"
-
-\end_inset
-
-.
- Doing so, we get 
-\begin_inset Formula $\bm{\Delta}(\omega)=(-i\omega\bm{\delta}+\mathbf{A})^{-1}\bm{\xi}(\omega)$
-\end_inset
-
- and similarly 
-\begin_inset Formula $C_{\Delta\Delta}(\omega)=(-i\omega\bm{\delta}+\mathbf{A})^{-1}\langle\bm{\xi}\bm{\xi}^{T}\rangle(-i\omega\bm{\delta}+\mathbf{A}^{T})^{-1}$
-\end_inset
-
-.
- Now using white noise, where strength of the noise is independent of frequency,
- we can calculate auto and cross correlation function.
- 
-\begin_inset Formula $\langle\bm{\xi}(\omega)\bm{\xi}^{T}(\omega')\rangle=\bm{\mu}k_{B}T\delta(\omega+\omega')$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\mathbf{C}_{\Delta\Delta}(\omega)=2k_{B}T\,\frac{\bm{\chi}''(\omega)}{\omega}
-\]
 
 \end_inset
 

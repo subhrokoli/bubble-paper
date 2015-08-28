@@ -474,7 +474,7 @@ We can further calculate auto-correlation and cross-correlation functions.
 \end{array}\right]\negthickspace+\negthickspace\left[\begin{array}{c}
 \bm{\xi}_{1}\\
 \bm{\xi}_{2}
-\end{array}\right]
+\end{array}\right]\label{eq:gen}
 \end{equation}
 
 \end_inset
@@ -491,7 +491,7 @@ Writing this equation in index form we get,
 \end_inset
 
  where noise is correlated Wiener processes with variances go as 
-\begin_inset Formula $\mathbf{B}\mathbf{B}^{T}=k_{b}T\mathbf{A}$
+\begin_inset Formula $\mathbf{B}\mathbf{B}^{T}=k_{b}T\bm{\mu}$
 \end_inset
 
  and white noise 
@@ -531,9 +531,6 @@ Writing this equation in index form we get,
 \end_inset
 
 For stationary case average of the correlator become,
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -588,6 +585,61 @@ cite{gardinar}, the solution is
 \begin_inset Formula 
 \[
 \mathbf{C}=\frac{(Det\,\mathbf{A})\mathbf{B}\mathbf{B}^{T}+[\mathbf{A}-Tr\,\mathbf{A}]\mathbf{B}\mathbf{B}^{T}[\mathbf{A}-Tr\,\mathbf{A}]}{2Tr\,\mathbf{A}\, Det\,\mathbf{A}}
+\]
+
+\end_inset
+
+ Frequency dependent response function can be calculated from the correlation
+ function through fluctuation-Dissipation theorem.
+ 
+\end_layout
+
+\begin_layout Standard
+In an well established paper, Meiners and Quake have verified the correlation
+ between two optically trapped beads in an viscous fluid at different separation
+ and temperature.
+ Following that Hough and Ou-Yang has shown how the response function from
+ correlation can be calculated using generalised fluctuation-dissipation
+ theorem and Kramer Kronig relations.
+ This response function is verified in the driven optical trap.
+ Here in this problem we have calculated both correlation and response function
+ in steady state directly in similar set of experiments.
+ 
+\end_layout
+
+\begin_layout Standard
+For steady state, the best way to calculate correation is to take a Fourier
+ transform of Eq.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:gen"
+
+\end_inset
+
+.
+ Doing so, we get 
+\begin_inset Formula $\bm{\Delta}(\omega)=(-i\omega\bm{\delta}+\mathbf{A})^{-1}\bm{\xi}(\omega)$
+\end_inset
+
+ and similarly 
+\begin_inset Formula $C_{\Delta\Delta}(\omega)=(-i\omega\bm{\delta}+\mathbf{A})^{-1}\langle\bm{\xi}\bm{\xi}^{T}\rangle(-i\omega\bm{\delta}+\mathbf{A}^{T})^{-1}$
+\end_inset
+
+.
+ Now using white noise, where strength of the noise is independent of frequency,
+ we can calculate auto and cross correlation function.
+ 
+\begin_inset Formula $\langle\bm{\xi}(\omega)\bm{\xi}^{T}(\omega')\rangle=\bm{\mu}k_{B}T\delta(\omega+\omega')$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{C}_{\Delta\Delta}(\omega)=2k_{B}T\,\frac{\bm{\chi}''(\omega)}{\omega}
 \]
 
 \end_inset
