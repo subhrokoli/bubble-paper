@@ -305,9 +305,9 @@ for motion along the trap separation and the motion perpendicular to it.
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\Delta_{\parallel i}(t)=\chi_{\parallel ij}'(\Omega)\cos(\Omega t)X_{j}+\chi_{\parallel ij}''(\Omega)\sin(\Omega t)X_{j}
-\]
+\begin{equation}
+\negthickspace R_{\parallel i}(t)=\chi_{\parallel ij}'(\Omega)\cos(\Omega t)X_{j}+\chi_{\parallel ij}''(\Omega)\sin(\Omega t)X_{j}
+\end{equation}
 
 \end_inset
 
@@ -377,7 +377,7 @@ begin{widetext}
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{alignat*}{1}
+\begin{alignat}{1}
 \bm{\chi}_{\parallel}(\Omega) & =\left[\begin{array}{cc}
 (\mu k_{1}-i\Omega) & \mu_{12}k_{2}\\
 \\
@@ -385,7 +385,7 @@ begin{widetext}
 \end{array}\right]^{-1}\left[\begin{array}{cc}
 \mu & \mu_{12}\\
 \mu_{21} & \mu
-\end{array}\right]\\
+\end{array}\right]\nonumber \\
  & =\frac{1}{Det\, A_{\parallel}-\Omega^{2}-i\Omega Tr\, A_{\parallel}}\left[\begin{array}{cc}
 (\mu k_{2}-i\Omega) & -\mu_{12}k_{2}\\
 \, & \,\\
@@ -393,12 +393,12 @@ begin{widetext}
 \end{array}\right]\left[\begin{array}{cc}
 \mu & \mu_{12}\\
 \mu_{21} & \mu
-\end{array}\right]\\
+\end{array}\right]\nonumber \\
  & =\frac{Det\, A_{\parallel}-\Omega^{2}+i\Omega Tr\, A_{\parallel}}{(Det\, A_{\parallel}-\Omega^{2})^{2}+\Omega^{2}(Tr\, A_{\parallel})^{2}}\left[\begin{array}{cc}
 k_{2}DetM_{\parallel}-i\mu\Omega & -i\Omega\mu_{12}\\
 \, & \,\\
 -i\Omega\mu_{21} & k_{1}DetM_{\parallel}-i\mu\Omega
-\end{array}\right]\\
+\end{array}\right]\nonumber \\
 \bm{\chi}_{\parallel}^{'}(\Omega) & =\frac{1}{(Det\, A_{\parallel}-\Omega^{2})^{2}+\Omega^{2}(Tr\, A_{\parallel})^{2}}\left[\begin{array}{cc}
 \begin{array}{c}
 k_{2}DetA_{\parallel}DetM_{\parallel}\\
@@ -408,14 +408,14 @@ k_{2}DetA_{\parallel}DetM_{\parallel}\\
 k_{1}DetA_{\parallel}DetM_{\parallel}\\
 +\Omega^{2}(k_{1}\mu_{12}\mu_{21}+k_{2}\mu^{2})
 \end{array}
-\end{array}\right]\\
-\\
+\end{array}\right]\nonumber \\
+\nonumber \\
 \bm{\chi}_{\parallel}^{''}(\Omega) & =\frac{\Omega}{(Det\, A_{\parallel}-\Omega^{2})^{2}+\Omega^{2}(Tr\, A_{\parallel})^{2}}\left[\begin{array}{cc}
 {\displaystyle \mu k_{2}^{2}DetM_{\parallel}+\mu\Omega^{2}} & -(Det\, A_{\parallel}-\Omega^{2})\mu_{12}\\
 \\
 -(Det\, A_{\parallel}-\Omega^{2})\mu_{21} & \mu k_{1}^{2}DetM_{\parallel}+\mu\Omega^{2}
-\end{array}\right]
-\end{alignat*}
+\end{array}\right]\label{eq:ImRes2}
+\end{alignat}
 
 \end_inset
 
@@ -502,10 +502,10 @@ Steady state solution in frequency space can be derived easily by Fourier
 
 Correlation matrix become
 \begin_inset Formula 
-\begin{eqnarray*}
-\langle\mathbf{R}(\omega)\mathbf{R}^{\dagger}(\omega)\rangle & = & (-i\omega\bm{\delta}+\mathbf{A})^{-1}\mathbf{M}\langle\bm{\xi}(\omega)\bm{\xi}^{\dagger}(\omega)\rangle\mathbf{M}(i\omega\bm{\delta}+\mathbf{A}^{T})^{-1}\\
-\frac{1}{2k_{B}T}\, C_{\Delta\Delta} & = & (-i\omega\bm{\delta}+\mathbf{A})^{-1}\mathbf{M}(i\omega\bm{\delta}+\mathbf{A}^{T})^{-1}
-\end{eqnarray*}
+\begin{eqnarray}
+\langle\mathbf{R}(\omega)\mathbf{R}^{\dagger}(\omega)\rangle & = & (-i\omega\bm{\delta}+\mathbf{A})^{-1}\mathbf{M}\langle\bm{\xi}(\omega)\bm{\xi}^{\dagger}(\omega)\rangle\mathbf{M}(i\omega\bm{\delta}+\mathbf{A}^{T})^{-1}\nonumber \\
+\frac{1}{2k_{B}T}\, C_{\Delta\Delta} & = & (-i\omega\bm{\delta}+\mathbf{A})^{-1}\mathbf{M}(i\omega\bm{\delta}+\mathbf{A}^{T})^{-1}\label{eq:Corr2}
+\end{eqnarray}
 
 \end_inset
 
@@ -547,7 +547,7 @@ begin{widetext}
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{align*}
+\begin{align}
  & \left[\begin{array}{cc}
 \mu k_{2}-i\omega & -\mu_{12}k_{2}\\
 \, & \,\\
@@ -560,7 +560,7 @@ begin{widetext}
 \mu k_{2}+i\omega & -\mu_{21}k_{1}\\
 \, & \,\\
 -\mu_{12}k_{2} & \mu k_{1}+i\omega
-\end{array}\right]\\
+\end{array}\right]\nonumber \\
 = & \left[\begin{array}{cc}
 k_{2}DetM_{\parallel}-i\omega\mu & -i\omega\mu_{12}\\
 \, & \,\\
@@ -569,18 +569,18 @@ k_{2}DetM_{\parallel}-i\omega\mu & -i\omega\mu_{12}\\
 \mu k_{2}+i\omega & -\mu_{21}k_{1}\\
 \, & \,\\
 -\mu_{12}k_{2} & \mu k_{1}+i\omega
-\end{array}\right]\\
+\end{array}\right]\nonumber \\
 = & \left[\begin{array}{cc}
 (k_{2}DetM_{\parallel}-i\omega\mu)(\mu k_{2}+i\omega)+i\omega\mu_{12}^{2}k_{2} & -(k_{2}DetM_{\parallel}-i\omega\mu)\mu_{21}k_{1}-(\mu k_{1}+i\omega)i\omega\mu_{12}\\
 \, & \,\\
 -(k_{1}DetM_{\parallel}-i\omega\mu)\mu_{12}k_{2}-(\mu k_{2}+i\omega)i\omega\mu_{21} & (k_{1}DetM_{\parallel}-i\omega\mu)(\mu k_{1}+i\omega)+i\omega\mu_{21}^{2}k_{1}
-\end{array}\right]\\
+\end{array}\right]\nonumber \\
 = & \left[\begin{array}{cc}
 \mu k_{2}^{2}DetM_{\parallel}+\mu\omega^{2} & -(DetA_{\parallel}-\omega^{2})\mu_{21}\\
 \, & \,\\
 -(DetA_{\parallel}-\omega^{2})\mu_{12} & \mu k_{1}^{2}DetM_{\parallel}+\mu\omega^{2}
-\end{array}\right]
-\end{align*}
+\end{array}\right]\label{eq:CorrMatmul}
+\end{align}
 
 \end_inset
 
@@ -597,6 +597,40 @@ status open
 \backslash
 end{widetext}
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now reading off the equations 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ImRes2"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Corr2"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:CorrMatmul"
+
+\end_inset
+
+, we can easily see that Fluctuation-dissipation holds.
+ It comes out to be in matrix form as,
+\begin_inset Formula 
+\[
+2k_{B}T\times\bm{\chi}''(\omega)=\omega\mathbf{C}_{xx}(\omega)
+\]
 
 \end_inset
 
@@ -673,7 +707,7 @@ Generalised form of fluctuation dissipation theorem connects correlation
  to the imaginary part of the response function as
 \begin_inset Formula 
 \begin{equation}
-C_{xx}(\omega)=2k_{B}T\frac{\chi''(\omega)}{\omega}
+2k_{B}T\chi''(\omega)=\omega C_{xx}(\omega)
 \end{equation}
 
 \end_inset
