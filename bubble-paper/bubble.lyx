@@ -145,18 +145,16 @@ The temperature variation of the surface tension at a liquid-gas interface
  ambient fluid.
  Here, we demonstrate that such active stresses can be produced in a controlled
  manner by inducing a microbubble in optical tweezers.
- Under the action of the resulting flow, mesoscopic particles dispersed
- in the ambient fluid assemble in in rings at the bubble interface and may
- even be released from it by modulating the bubble diameter controllably.
+ Entrained in the active flow, mesoscopic particles dispersed in the ambient
+ fluid assemble in rings at the bubble interface and may be released from
+ it by modulating the bubble diameter controllably.
  We experimentally demonstrate capture, transport and release of a wide
- range of particles ranging from gold nanoparticles to polystyrene microspheres
- using thermophoretic motion of the bubble under translation and modulation
- of the optical tweezers.
+ range of particles, ranging from gold nanoparticles to polystyrene microspheres.
  Multiple microbubbles allow for additional control on particle assembly
- and manipulation, as we demonstrate for a pair of microbubbles.
+ and manipulation, as we demonstrate with a pair of microbubbles.
  An analytical solution of the thermocapillary problem, based on the Stokes
- and heat equations, yields the flow profile around the bubble from which
- the mechanisms behind assembly and manipulation are understood.
+ and heat equations, yields the flow profile around bubbles from which the
+ mechanisms behind assembly and manipulation can be understood.
  Active thermocapillary stress offers a route to trap and manipulate particles
  that are, otherwise, difficult to trap in optical tweezers.
  
