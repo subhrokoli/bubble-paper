@@ -74,7 +74,7 @@
 \begin_body
 
 \begin_layout Title
-Going NUTS in an optical trap: precise Bayesian estimation of  parameters
+Going NUTS in an optical trap: precise Bayesian estimation of parameters
  by Hamiltonian Monte Carlo 
 \end_layout
 
@@ -87,9 +87,9 @@ Bayesian inference provides a principled way of estimating the parameters
  of a stochastic process that is observed at discrete points in time.
  The overdamped motion of a bead confined in an optical trap is generally
  modelled as an Ornstein-Uhlenbeck process and is observed discretely in
- experiment.
+ experiments.
  Here we present a fast and accurate Bayesian method for determining the
- parameters of this process, the trap potential and the particle friction
+ parameters of this process, the trap stiffness and the particle friction
  coefficient, by using Hamiltonian Monte Carlo with a no-U turn sampler
  (NUTS).
  Our method is several orders of magnitude faster than the current state
