@@ -295,7 +295,38 @@ where
 \end_inset
 
  is the volatility.
- The transition probability density 
+ The particle diffusion coefficient 
+\begin_inset Formula $D$
+\end_inset
+
+ is related to the friction 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ by the Einstein relation 
+\begin_inset Formula $D=k_{B}T\gamma^{-1}$
+\end_inset
+
+ and so 
+\begin_inset Formula $2D=\sigma^{2}.$
+\end_inset
+
+ In problems involving Brownian motion, it is convenient to work with the
+ diffusion coefficient, rather than the volatility, and henceforth we infer
+ 
+\begin_inset Formula $D$
+\end_inset
+
+ rather than 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ directly.
+ 
+\end_layout
+
+\begin_layout Standard
+The transition probability density 
 \begin_inset Formula $P_{1|1}$
 \end_inset
 
@@ -337,7 +368,7 @@ where
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\mathcal{L}=\frac{\partial}{\partial x}\lambda x+\frac{\partial^{2}}{\partial x^{2}}\sigma^{2}.
+\mathcal{L}=\frac{\partial}{\partial x}\lambda x+\frac{\partial^{2}}{\partial x^{2}}D.
 \end{equation}
 
 \end_inset
@@ -364,7 +395,7 @@ This gives probability of a path segment ending at the point
 \begin_layout Standard
 \begin_inset Formula 
 \[
-x^{\prime}t^{\prime}|x\thinspace t\sim\mathcal{N}\left(xe^{-\lambda(t-t^{\prime})},\frac{\sigma^{2}}{2\lambda}[1-e^{-2\lambda(t-t^{\prime})}]\right),
+x^{\prime}t^{\prime}|x\thinspace t\sim\mathcal{N}\left(xe^{-\lambda(t-t^{\prime})},\frac{D}{\lambda}[1-e^{-2\lambda(t-t^{\prime})}]\right),
 \]
 
 \end_inset
@@ -405,7 +436,7 @@ where
 \begin_layout Standard
 \begin_inset Formula 
 \[
-x\sim\mathcal{N}\left(0,\frac{\sigma^{2}}{2\lambda}\right)=\mathcal{N}\left(0,\frac{k_{B}T}{k}\right)
+x\sim\mathcal{N}\left(0,\frac{D}{\lambda}\right)=\mathcal{N}\left(0,\frac{k_{B}T}{k}\right)
 \]
 
 \end_inset
@@ -428,22 +459,6 @@ where
 \end_inset
 
 , as it should.
- The particle diffusion coefficient 
-\begin_inset Formula $D$
-\end_inset
-
- is related to the friction 
-\begin_inset Formula $\gamma$
-\end_inset
-
- by the Einstein relation 
-\begin_inset Formula $D=k_{B}T\gamma^{-1}$
-\end_inset
-
- and so 
-\begin_inset Formula $2D=\sigma^{2}.$
-\end_inset
-
  
 \end_layout
 
@@ -472,13 +487,13 @@ t with
  probability of the sample path is given by 
 \begin_inset Formula 
 \[
-P(X|\lambda,\sigma)=\prod_{n=1}^{N-1}P_{1|1}(x_{n+1}|x_{n},\lambda,\sigma)P_{1}(x_{1}|\lambda,\sigma)
+P(X|\lambda,D)=\prod_{n=1}^{N-1}P_{1|1}(x_{n+1}|x_{n},\lambda,D)P_{1}(x_{1}|\lambda,D)
 \]
 
 \end_inset
 
 The probability 
-\begin_inset Formula $P(\lambda,\sigma|X)$
+\begin_inset Formula $P(\lambda,D|X)$
 \end_inset
 
  of the parameters, given the sample path, can now be computed using Bayes
@@ -488,7 +503,7 @@ The probability
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-P(\lambda,\sigma|X)=\frac{P(X|\lambda,\sigma)P(\lambda,\sigma)}{P(X)}
+P(\lambda,D|X)=\frac{P(X|\lambda,D)P(\lambda,D)}{P(X)}
 \end{equation}
 
 \end_inset
@@ -536,18 +551,170 @@ The denominator
 \begin_inset Formula $P_{1}$
 \end_inset
 
- is, 
+, is
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\ln P(\lambda,\sigma|X)=\sum_{n=1}(add)
-\]
+\begin{align}
+\ln P(\lambda,D|X) & =\frac{N-1}{2}\ln\frac{\lambda}{2\pi DI_{2}}-\frac{\lambda}{2DI_{2}}\sum\Delta_{n}^{2}\nonumber \\
+ & +\frac{1}{2}\ln\frac{\lambda}{2\pi D}-\frac{\lambda}{2D}x_{1}^{2}
+\end{align}
 
 \end_inset
 
+where we have defined the two quantities 
+\begin_inset Formula 
+\begin{equation}
+I_{2}\equiv1-e^{-2\lambda\Delta t},\quad\Delta_{n}\equiv x_{n+1}-e^{-\lambda\Delta t}x_{n}.
+\end{equation}
 
+\end_inset
+
+and the sum runs from 
+\begin_inset Formula $n=1,\ldots,N$
+\end_inset
+
+ as earlier.
+ 
+\end_layout
+
+\begin_layout Standard
+The maximum aposteriori (MAP) estimate 
+\begin_inset Formula $(\lambda^{\star},D^{\star})$
+\end_inset
+
+ follows from the stationary conditions 
+\begin_inset Formula $\partial\ln P(\lambda,D|X)/\partial\lambda=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\partial\ln P(\lambda,D|X)/\partial D=0$
+\end_inset
+
+, while the standard error of this estimate is obtained from the matrix
+ of second derivatives evaluated at the maximum.
+ The exact solution of the stationary conditions yields the MAP estimate
+ to be
+\begin_inset Formula 
+\begin{eqnarray*}
+\lambda^{\star} & = & \frac{1}{\Delta t}\ln\frac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}}\\
+D^{\star} & = & \frac{\lambda^{\star}}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)\\
+k^{\star} & = & \frac{\lambda^{\star}}{D^{\star}}
+\end{eqnarray*}
+
+\end_inset
+
+where both 
+\begin_inset Formula $I_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Delta_{n}$
+\end_inset
+
+ are now evaluated at 
+\begin_inset Formula $\lambda=\lambda^{\star}.$
+\end_inset
+
+ This completes our description of the Bayesian procedure for jointly estimating
+ 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+An alternative Bayesian procedure for estimating the trap stiffness alone
+ results when 
+\begin_inset Formula $X$
+\end_inset
+
+ is interpreted not as a time series but as an exchangeable sequence, or,
+ in physical terms, as repeated independent observations of the stationary
+ distribution 
+\begin_inset Formula $P_{1}(x)$
+\end_inset
+
+.
+ In that case, the posterior probability, assuming an informative prior
+ that constrains 
+\begin_inset Formula $k$
+\end_inset
+
+ to positive values, is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\ln P(k|X)=\frac{N}{2}\ln\frac{k}{2\pi k_{B}T}-\frac{1}{2}\frac{k}{k_{B}T}\sum_{n=1}^{N}x_{n}^{2}
+\end{equation}
+
+\end_inset
+
+The MAP estimate follows 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+k^{\star}=\frac{Nk_{B}T}{\sum_{n=1}^{N}x_{n}^{2}}
+\end{equation}
+
+\end_inset
+
+This procedure is independent of the sampling time and is equivalent to
+ the equipartition method when the Heaviside prior is used for 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ A comparison of the estimates obtained from these independent procedures
+ provides a check on the assumptions implicit in Ornstein-Uhlenbeck process:
+ harmonicity of the potential and thermal equilibrium, that is, stationarity
+ with a Gibbs distribution.
+ A disagreement between the two methods signals a breakdown of either or
+ both of the above assumptions.
+ 
+\end_layout
+
+\begin_layout Standard
+The posterior probabilities in both methods can be written in terms of the
+ four quantities 
+\begin_inset Formula $T_{1}(X)=\sum x_{n+1}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $T_{2}(X)=\sum x_{n+1}x_{n}$
+\end_inset
+
+, 
+\begin_inset Formula $T_{3}(X)=\sum x_{n}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $T_{4}(X)=x_{1}^{2}$
+\end_inset
+
+, which, therefore, are the sufficient statistics of the problem.
+ The entire information in the time series 
+\begin_inset Formula $X$
+\end_inset
+
+ relevant to estimation is contained in these four statistics.
+ There use reduces computational expense enormously as only four numbers,
+ rather than an entire time series, is required.
+ The combination of exact likelihoods, analytical MAP estimates, and the
+ use of sufficient statistics provides an accurate and efficient method,
+ together with a self-consistency criterion, for estimating parameters from
+ the time series of particle positions.
 \end_layout
 
 \begin_layout Section
@@ -581,10 +748,17 @@ l plane interferometry using the back-scattered intensity of a detection
  than that required to trap a bead independently.
  The back-scattered signal from a trapped bead is collected on a position
  sensitive photodiode that we construct by placing a knife-edge in front
- of a Thorlabs DET10A Si-photodiode so that a portion of the signal is obstructe
-d by the knife-edge.
- The position of the knife-edge determines whether we measure the $x$ or
- $y$ component of the Brownian motion of the bead with the edge being flipped
+ of a Thorlabs PDA100A-EC Si-photodiode (bandwidth 2.4 MHz) so that a portion
+ of the signal is obstructed by the knife-edge.
+ The The position of the knife-edge determines whether we measure the 
+\begin_inset Formula $x$
+\end_inset
+
+ or 
+\begin_inset Formula $y$
+\end_inset
+
+ component of the Brownian motion of the bead with the edge being flipped
  by 90 degrees to choose between the coordinate being measured.
  To reduce cross-talk between the orthogonal components, we use an acousto-optic
  modulator that is placed in the conjugate plane of the microscope 
@@ -594,6 +768,9 @@ cite{rsi12} to sinusoidally scan the trapping beam (and thus the single
  with the knife-edge placed to detect the $y$-component of motion.
  The detected signal is minimized so that the effects of cross-talk are
  almost entirely negligible.
+ The large bandwidth of the photodiode, that is typically much faster than
+ most available commercial quadrant photodetectors, addresses concerns about
+ photodiode response time and associated requirements of data filtering.
  The data from the photodiode is logged into a computer using a National
  Instruments DAQ system.
  
@@ -620,11 +797,25 @@ ts, and so on.
 \end_layout
 
 \begin_layout Section
-Conclusion
+DISCUSSION
 \end_layout
 
 \begin_layout Itemize
-no approximations, exact likelihood used
+use of exact likelihood removes the need to sample at high frequencies.
+ this is the limitation of Euler approximation used in the paper of the
+ French group.
+ accuracy.
+\end_layout
+
+\begin_layout Itemize
+use of analytical MAP estimates removes the need for Monte Carlo sampling,
+ speed.
+\end_layout
+
+\begin_layout Itemize
+use of sufficient statistics reduces the entire time series to four numbers,
+ efficiency.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -633,13 +824,9 @@ joint probability obtained, can marginalize out friction if that is not
 \end_layout
 
 \begin_layout Itemize
-exact map estimate in terms of sufficient statistics makes for tractable
- 
-\end_layout
-
-\begin_layout Itemize
 can do many more complicated models, e.g.
- air trapping etc.
+ air trapping etc, using Bayesian inference.
+ 
 \end_layout
 
 \end_body
