@@ -1,9 +1,7 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
-\save_transient_properties true
-\origin unavailable
 \textclass revtex4
 \options aps,pre, reprint, twocolumn, draft
 \use_default_options false
@@ -12,16 +10,16 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "default"
-\font_sans "default" "default"
-\font_typewriter "default" "default"
-\font_math "auto" "auto"
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100 100
-\font_tt_scale 100 100
+\font_sf_scale 100
+\font_tt_scale 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -77,8 +75,7 @@
 \end_layout
 
 \begin_layout Title
-Direct experimental observation of the emergence of memory in the coupled
- dynamics of memory-less processes
+Emergence of memory in the coupled dynamics of memory-less processes
 \end_layout
 
 \begin_layout Author
@@ -132,29 +129,7 @@ Indian Institute of Science Education and Research, Kolkata
 \end_layout
 
 \begin_layout Abstract
-Markovian or memory-less processes are typically understood to be intrinsically
- different from non-Markovian ones since any correlations between two events
- in the former exist only if the events occur in successive instants of
- time, which implies that only first order time correlations exist in the
- former while higher order correlations may exist in the latter.
- However, recent theoretical work has demonstrated that non-Markovian signatures
- may in general evolve from a superposition of distinct and uncorrelated
- Markovian processes.
- We provide for the first time an experimental validation of this by measuring
- the coupled dynamics of a pair of optically trapped colloidal microparticles
- in water.
- The particles are trapped in very close proximity of each other and the
- resultant hydrodynamic interactions lead to a double exponential autocorrelatio
-n function for the Brownian motion of each particle which is in clear violation
- of Doob's theorem for Markovian processes where the autocorrelation should
- necessarily be exponential.
- We show that the fluctuations of the pair of particles in a viscous medium
- thus resemble that of a single particle in a viscoelastic medium where
- the correlation function is also a double exponential in time.
- The emergence of memory in the viscous medium is thus a consequence of
- near-field hydrodynamic interactions and gradually dies out as the separation
- between the two particles is increased.
- 
+The 
 \end_layout
 
 \begin_layout Section
@@ -203,7 +178,7 @@ Title
 \series bold
 Volume
 \series default
-, page–numbers (year).
+, page--numbers (year).
 \end_layout
 
 \end_body
