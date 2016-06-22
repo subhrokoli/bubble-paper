@@ -751,13 +751,7 @@ We collect data on position fluctuations of an optically trapped Brownian
  The optical tweezers system is constructed around a Zeiss inverted microscope
  (Axiovert.A1) with a 100x 1.4 numerical aperture (NA) objective lens tightly
  focusing laser light from a semiconductor laser at 1064 nm (Lasever, maximum
- power 500 mW) into the sample chamber.
- The 
-\series bold
-sample chamber is built using a standard glass microscope slide and cover
- slip that are attached to each other using double sided tape
-\series default
-.
+ power 500 mW) into the sample.
  The back aperture of the objective is slightly overfilled so as to maximize
  the trapping intensity.
  The sample consists of a dilute dispersion (volume fraction 
@@ -768,7 +762,32 @@ sample chamber is built using a standard glass microscope slide and cover
 \begin_inset Formula $3\mu$
 \end_inset
 
-m in 10% NaCl-water solution.
+m in 10% NaCl-water solution, around 20
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+𝜇
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ l .
+ of which is taken on a standard glass cover slip.
  Details of our experimental set up including the beam-coupling optics is
  available in Ref.~
 \backslash
