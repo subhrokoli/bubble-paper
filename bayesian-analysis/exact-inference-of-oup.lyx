@@ -822,6 +822,12 @@ Results
 \end_layout
 
 \begin_layout Itemize
+Descriptive statistics : (a) data set (b) histogram (c) autocorrelation
+ plot.
+ 
+\end_layout
+
+\begin_layout Itemize
 Plot of posterior distribution in the 
 \begin_inset Formula $\lambda-D$
 \end_inset
@@ -835,7 +841,7 @@ Comparison with equipartition result
 \end_layout
 
 \begin_layout Itemize
-Comparison with autocorrelation method 
+Comparison with autocorrelation method in the time domain
 \end_layout
 
 \begin_layout Itemize
@@ -872,6 +878,14 @@ joint probability obtained, can marginalize out friction if that is not
 \begin_layout Itemize
 can do many more complicated models, e.g.
  air trapping etc, using Bayesian inference.
+ 
+\end_layout
+
+\begin_layout Acknowledgments
+RA extends his thanks, overdue by a decade, to Professor M.
+ E.
+ Cates, for introducing him to Bayesian data analysis.
+ We thank x, y and z.
  
 \end_layout
 
