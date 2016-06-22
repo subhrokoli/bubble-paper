@@ -821,20 +821,25 @@ cite{rsi12} to sinusoidally scan the trapping beam (and thus the single
 Results
 \end_layout
 
-\begin_layout Standard
-Since the seminal of contributions of Rayleigh, Einstein, and Langevin,
- stochastic processes have been used to model physical phenomena in which
- fluctuations play an essential role.
- Examples include the Brownian motion of a particle, the fluctuation of
- current in a resistor, and the radioactive decay of subatomic particles.
- A central problem is to infer the parameters of the process from partially
- observed sample paths, for instance, the diffusion constant from a time
- series of positions, or the resistance from a time series of current measuremen
-ts, and so on.
- Bayesian inference provides a principled solution for this inverse problem,
- making optimal use of the information contained in the partially observed
- sample path.
- And this si something test gitkraken.
+\begin_layout Itemize
+Plot of posterior distribution in the 
+\begin_inset Formula $\lambda-D$
+\end_inset
+
+ plane, together with position of numerical maximum and position of analytical
+ maximum.
+\end_layout
+
+\begin_layout Itemize
+Comparison with equipartition result
+\end_layout
+
+\begin_layout Itemize
+Comparison with autocorrelation method 
+\end_layout
+
+\begin_layout Itemize
+Estimation of viscosity and diffusion coefficient
 \end_layout
 
 \begin_layout Section
