@@ -76,7 +76,7 @@
 \begin_body
 
 \begin_layout Title
-Bayesian inference of optical trap stiffness and particle friction
+Fast Bayesian inference of optical trap stiffness and particle friction
 \end_layout
 
 \begin_layout Author
@@ -123,13 +123,10 @@ Bayesian inference provides a principled way of estimating the parameters
  exact likelihoods.
  Maximum aposteriori estimates are obtained analytically by exploiting sufficien
 t statistics.
- Our method obviates the need for Monte Carlo sampling and is, consequently,
- orders of magnitude faster.
- The viscosity of the ambient fluid can be estimated from the particle friction,
- given the bead radius.
- We apply our method to experimental data and find excellent consistency
- with the fluctuation-dissipation theorem and good agreement with commonly
- used non-Bayesian methods.
+ This obviates the need for Monte Carlo sampling and is, consequently, both
+ fast and accurate.
+ We apply two Bayesian methods to experimental data to find excellent consistenc
+y between them and good agreement with commonly used non-Bayesian methods.
  
 \end_layout
 
@@ -618,14 +615,14 @@ The maximum aposteriori (MAP) estimate
 
 , while the standard error of this estimate is obtained from the matrix
  of second derivatives evaluated at the maximum.
- The exact solution of the stationary conditions yields the MAP estimate
- to be
+ The exact solution of the stationary conditions, derived in the Appendix,
+ yields the MAP estimate to be
 \begin_inset Formula 
-\begin{eqnarray*}
-\lambda^{\star} & = & \frac{1}{\Delta t}\ln\frac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}}\\
-D^{\star} & = & \frac{\lambda^{\star}}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)\\
-k^{\star} & = & \frac{\lambda^{\star}}{D^{\star}}
-\end{eqnarray*}
+\begin{eqnarray}
+\lambda^{\star} & = & \frac{1}{\Delta t}\ln\frac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}}\label{eq:map-estimate}\\
+D^{\star} & = & \frac{\lambda^{\star}}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)\nonumber \\
+k^{\star} & = & \frac{\lambda^{\star}}{D^{\star}}\nonumber 
+\end{eqnarray}
 
 \end_inset
 
@@ -641,6 +638,8 @@ where both
 \begin_inset Formula $\lambda=\lambda^{\star}.$
 \end_inset
 
+ The expression for the matrix of second-derivatives is cumbersome and,
+ therefore, we evaluate it using automatic differentiation.
  This completes our description of the Bayesian procedure for jointly estimating
  
 \begin_inset Formula $\lambda$
@@ -683,13 +682,13 @@ An alternative Bayesian procedure for estimating the trap stiffness alone
 
 \end_inset
 
-The MAP estimate follows 
+The MAP estimate straightforwardly follows,
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-k^{\star}=\frac{Nk_{B}T}{\sum_{n=1}^{N}x_{n}^{2}}
+k^{\star}=\frac{Nk_{B}T}{\sum_{n=1}^{N}x_{n}^{2}}.
 \end{equation}
 
 \end_inset
@@ -901,10 +900,83 @@ can do many more complicated models, e.g.
 \end_layout
 
 \begin_layout Acknowledgments
-RA extends his thanks, overdue by a decade, to Professor M.
+RA gratefully, and much belatedly, acknowledges Professor M.
  E.
- Cates, for introducing him to Bayesian data analysis.
- We thank x, y and z.
+ Cates for introducing him to Bayesian data analysis.
+ 
+\end_layout
+
+\begin_layout Subsection
+Appendix 
+\end_layout
+
+\begin_layout Standard
+The partial derivatives of the logarithm of the posterior probability with
+ respect to 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+ are 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial\ln P}{\partial\lambda} & = & \frac{N-1}{2}\left(\frac{1}{\lambda}-\frac{I_{2}^{'}}{I_{2}}\right)+\frac{\sum\Delta_{n}^{2}}{2DI_{2}}\\
+ & - & \frac{\lambda}{2D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)-\frac{1}{2\lambda}-\frac{x_{1}^{2}}{2D}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial\ln P}{\partial D}=-\frac{N-1}{2D}+\frac{\lambda\sum\Delta_{n}^{2}}{2D^{2}I_{2}}-\frac{1}{2D}+\frac{\lambda x_{1}^{2}}{2D^{2}}
+\]
+
+\end_inset
+
+Setting the second of these equations to zero, 
+\begin_inset Formula $D$
+\end_inset
+
+ is solved in term of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and this solution is used in the first equation, together with the large-sample
+ approximation
+\begin_inset Formula 
+\[
+\frac{\lambda}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)\thickapprox\frac{\lambda}{\left(N-1\right)}\frac{\sum\Delta_{n}^{2}}{I_{2}},
+\]
+
+\end_inset
+
+to cancel all 
+\begin_inset Formula $D$
+\end_inset
+
+-dependent terms.
+ Setting the resulting equation to zero and solving for 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ then yields the MAP estimates in Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map-estimate"
+
+\end_inset
+
+).
  
 \end_layout
 
