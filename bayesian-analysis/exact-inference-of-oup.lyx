@@ -640,16 +640,6 @@ where both
 
  The expression for the matrix of second-derivatives is cumbersome and,
  therefore, we evaluate it using automatic differentiation.
- This completes our description of the Bayesian procedure for jointly estimating
- 
-\begin_inset Formula $\lambda$
-\end_inset
-
- and 
-\begin_inset Formula $D$
-\end_inset
-
-.
  
 \end_layout
 
@@ -699,12 +689,6 @@ This procedure is independent of the sampling time and is equivalent to
 \end_inset
 
 .
- A comparison of the estimates obtained from these independent procedures
- provides a check on the assumptions implicit in Ornstein-Uhlenbeck process:
- harmonicity of the potential and thermal equilibrium, that is, stationarity
- with a Gibbs distribution.
- A disagreement between the two methods signals a breakdown of either or
- both of the above assumptions.
  
 \end_layout
 
@@ -738,6 +722,35 @@ The posterior probabilities in both methods can be written in terms of the
  use of sufficient statistics provides an accurate and efficient method,
  together with a self-consistency criterion, for estimating parameters from
  the time series of particle positions.
+ This completes our description of the Bayesian procedure for jointly estimating
+ 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+, and from there the 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+A comparison of the estimates obtained from these independent procedures
+ provides a check on the assumptions implicit in Ornstein-Uhlenbeck process:
+ harmonicity of the potential and thermal equilibrium, that is, stationarity
+ with a Gibbs distribution.
+ A disagreement between the two methods signals a breakdown of either or
+ both of the above assumptions.
+ 
 \end_layout
 
 \begin_layout Section
@@ -900,7 +913,7 @@ can do many more complicated models, e.g.
 \end_layout
 
 \begin_layout Acknowledgments
-RA gratefully, and much belatedly, acknowledges Professor M.
+RA gratefully (and much belatedly) acknowledges Professor M.
  E.
  Cates for introducing him to Bayesian data analysis.
  
@@ -926,7 +939,7 @@ The partial derivatives of the logarithm of the posterior probability with
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-\frac{\partial\ln P}{\partial\lambda} & = & \frac{N-1}{2}\left(\frac{1}{\lambda}-\frac{I_{2}^{'}}{I_{2}}\right)+\frac{\sum\Delta_{n}^{2}}{2DI_{2}}\\
+\frac{\partial\ln P}{\partial\lambda} & = & \frac{N-1}{2}\left(\frac{1}{\lambda}-\frac{I_{2}^{\prime}}{I_{2}}\right)+\frac{\sum\Delta_{n}^{2}}{2DI_{2}}\\
  & - & \frac{\lambda}{2D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)-\frac{1}{2\lambda}-\frac{x_{1}^{2}}{2D}
 \end{eqnarray*}
 
@@ -943,7 +956,12 @@ The partial derivatives of the logarithm of the posterior probability with
 
 \end_inset
 
-Setting the second of these equations to zero, 
+where 
+\begin_inset Formula $I_{2}^{\prime}=2\lambda\Delta t\thinspace e^{-2\lambda\Delta t}$
+\end_inset
+
+.
+ Setting the second of these equations to zero, 
 \begin_inset Formula $D$
 \end_inset
 
