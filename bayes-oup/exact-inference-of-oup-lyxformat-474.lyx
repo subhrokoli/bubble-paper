@@ -1,0 +1,833 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass revtex4-1
+\begin_preamble
+
+\end_preamble
+\options aps, twocolumn, pre
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 4
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Bayesian inference of optical trap stiffness and particle friction
+\end_layout
+
+\begin_layout Author
+Sudipta Bera
+\end_layout
+
+\begin_layout Affiliation
+Indian Institute of Science Education and Research, Kolkata
+\end_layout
+
+\begin_layout Author
+Shuvojit Paul
+\end_layout
+
+\begin_layout Affiliation
+Indian Institute of Science Education and Research, Kolkata
+\end_layout
+
+\begin_layout Author
+R.
+ Adhikari
+\end_layout
+
+\begin_layout Affiliation
+The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
+\end_layout
+
+\begin_layout Author
+Ayan Banerjee
+\end_layout
+
+\begin_layout Affiliation
+Indian Institute of Science Education and Research, Kolkata
+\end_layout
+
+\begin_layout Abstract
+Bayesian inference provides a principled way of estimating the parameters
+ of a stochastic process that is observed at discrete points in time.
+ The overdamped Brownian motion of a bead confined in an optical trap is
+ generally modelled as an Ornstein-Uhlenbeck process and is measured directly
+ in experiment.
+ Here we present Bayesian methods for determining the parameters of this
+ process, the trap stiffness and the particle friction coefficient, using
+ exact likelihoods.
+ Maximum aposteriori estimates are obtained analytically by exploiting sufficien
+t statistics.
+ Our method obviates the need for Monte Carlo sampling and is, consequently,
+ orders of magnitude faster.
+ The viscosity of the ambient fluid can be estimated from the particle friction,
+ given the bead radius.
+ We apply our method to experimental data and find excellent consistency
+ with the fluctuation-dissipation theorem and good agreement with commonly
+ used non-Bayesian methods.
+ 
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Since the seminal contributions of Rayleigh, Einstein, and Langevin, stochastic
+ processes have been used to model physical phenomena in which fluctuations
+ play an essential role.
+ Examples include the Brownian motion of a particle, the fluctuation of
+ current in a resistor, and the radioactive decay of subatomic particles.
+ A central problem is to infer the parameters of the process from partially
+ observed sample paths, for instance, the diffusion constant from a time
+ series of positions, or the resistance from a time series of current measuremen
+ts, and so on.
+ Bayesian inference provides a principled solution for this inverse problem,
+ making optimal use of the information contained in the partially observed
+ sample path.
+ 
+\end_layout
+
+\begin_layout Standard
+The Ornstein-Uhlenbeck process is commonly used to model the sample paths
+ of a harmonically confined Brownian particle.
+ This process has a mean regression rate 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and a volatility 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ which correspond, in the physical application, to the stiffness 
+\begin_inset Formula $k$
+\end_inset
+
+ of the harmonic potential and the friction 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ of the particle.
+ Since the friction of a particle of radius 
+\begin_inset Formula $a$
+\end_inset
+
+ is given by 
+\begin_inset Formula $\gamma=6\pi\eta a$
+\end_inset
+
+, where 
+\begin_inset Formula $\eta$
+\end_inset
+
+ is the viscosity of the ambient fluid, any estimation of the friction also
+ provides an estimate of the viscosity of the medium, given the particle
+ radius.
+ Thus, the viscosity, which is defined as the response of the fluid to an
+ externally imposed shear, can be inferred from the observation of harmonically
+ confined Brownian fluctuations.
+ This, of course, is a consequence of the relation between response and
+ fluctuation that prevails in a physical system in thermal equilibrium.
+ 
+\end_layout
+
+\begin_layout Standard
+In this paper, we apply Bayesian inference to the problem of estimating
+ the parameters of the Ornstein-Uhlenbeck process from time series that
+ represent partially observed sample paths.
+ This is of great current experimental relevance, since harmonic confinement
+ of micron-sized spheres is easily achieved using optical tweezers.
+ A reliable estimation of the trap stiffness is a necessary first step when
+ using tweezers in force measurements.
+ Bayesian methods, using Monte Carlo sampling, have been proposed earlier
+ to this end.
+ Here, we present a method that does not require sampling, exploits the
+ sufficient statistics of the problem, and provides exact maximum a posteriori
+ estimates using these statistics.
+ Consequently, the method is both extremely fast and accurate, being able
+ to jointly estimate the trap stiffness and the particle friction from a
+ time series with a million points in less than a millisecond.
+ Further, the fluctuation-dissipation relation provides a stringent internal
+ consistency check on the accuracy of the estimation.
+ We apply our method to experimental data to find estimates that have excellent
+ internal consistency.
+ These estimates are in good agreement with commonly used non-Bayesian calibrati
+on methods.
+ 
+\end_layout
+
+\begin_layout Standard
+The remainder of the paper is organized as follows.
+ In the next section we recall several key properties of the sample paths
+ and distributions of the Ornstein-Uhlenbeck process.
+ In Section III, we present the Bayesian method and follow, in section IV,
+ with its application to experimental data.
+ We conclude with a discussion of future directions in Bayesian inference
+ in optical tweezer experiments.
+ 
+\end_layout
+
+\begin_layout Section
+Ornstein-Uhlenbeck process
+\end_layout
+
+\begin_layout Standard
+The Langevin equation for a Brownian particle confined in a potential 
+\begin_inset Formula $U$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\begin{equation}
+m\dot{v}+\gamma v+\nabla U=\xi
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\xi(t)$
+\end_inset
+
+ is a zero-mean Gaussian white noise with variance 
+\begin_inset Formula $\langle\xi(t)\xi(t')\rangle=2k_{B}T\gamma\delta(t-t')$
+\end_inset
+
+ as required by the fluctuation-dissipation theorem.
+ In the limit of vanishing inertia and a harmonic potential, 
+\begin_inset Formula $U=\frac{{1}}{2}kx^{2}$
+\end_inset
+
+, we obtain the overdamped Langevin equation 
+\begin_inset Formula 
+\begin{equation}
+\dot{x}=-\frac{k}{\gamma}x+\sqrt{\frac{2k_{B}T}{\gamma}}\zeta(t)
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\zeta(t)$
+\end_inset
+
+ is now a zero-mean Gaussian white noise with unit variance.
+ This is the Ornstein-Uhlenbeck process, whose sample paths obey the Ito
+ stochastic differential equation, 
+\begin_inset Formula 
+\begin{equation}
+dx=-\lambda xdt+\sigma dW
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $W$
+\end_inset
+
+ is the Wiener process, 
+\begin_inset Formula $\lambda=k/\gamma$
+\end_inset
+
+ is the mean-regression rate and 
+\begin_inset Formula $\sigma=\sqrt{2k_{B}T\gamma^{-1}}$
+\end_inset
+
+ is the volatility.
+ The particle diffusion coefficient 
+\begin_inset Formula $D$
+\end_inset
+
+ is related to the friction 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ by the Einstein relation 
+\begin_inset Formula $D=k_{B}T\gamma^{-1}$
+\end_inset
+
+ and so 
+\begin_inset Formula $2D=\sigma^{2}.$
+\end_inset
+
+ In problems involving Brownian motion, it is convenient to work with the
+ diffusion coefficient, rather than the volatility, and henceforth we infer
+ 
+\begin_inset Formula $D$
+\end_inset
+
+ rather than 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ directly.
+ 
+\end_layout
+
+\begin_layout Standard
+The transition probability density 
+\begin_inset Formula $P_{1|1}$
+\end_inset
+
+
+\begin_inset Formula $(x^{\prime}t^{\prime}|x\thinspace t$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+)
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ obeys the Fokker-Planck equation 
+\begin_inset Formula $\partial_{t}P_{1|1}=\mathcal{L}P_{1|1}$
+\end_inset
+
+ where the Fokker-Planck operator is 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathcal{L}=\frac{\partial}{\partial x}\lambda x+\frac{\partial^{2}}{\partial x^{2}}D.
+\end{equation}
+
+\end_inset
+
+This gives probability of a path segment ending at the point 
+\begin_inset Formula $x^{\prime}$
+\end_inset
+
+ at time 
+\begin_inset Formula $t^{\prime}$
+\end_inset
+
+, given that it started at the point 
+\begin_inset Formula $x$
+\end_inset
+
+ at time 
+\begin_inset Formula $t.$
+\end_inset
+
+ The solution is a normal distribution, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x^{\prime}t^{\prime}|x\thinspace t\sim\mathcal{N}\left(xe^{-\lambda(t-t^{\prime})},\frac{D}{\lambda}[1-e^{-2\lambda(t-t^{\prime})}]\right),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathcal{N}(a,b)$
+\end_inset
+
+ is the univariate normal distribution with mean 
+\begin_inset Formula $a$
+\end_inset
+
+ and variance 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ This solution is exact and holds for arbitrary values of 
+\begin_inset Formula $|t-t^{\prime}|$
+\end_inset
+
+, unlike the Euler approximation used in which is accurate only when 
+\begin_inset Formula $\lambda|t-t^{\prime}|\ll1$
+\end_inset
+
+.
+ The stationary distribution 
+\begin_inset Formula $P_{1}(x)$
+\end_inset
+
+ obeys the steady state Fokker-Plank equation 
+\begin_inset Formula $\mathcal{L}P_{1}=0$
+\end_inset
+
+ and the solution is a normal distribution,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x\sim\mathcal{N}\left(0,\frac{D}{\lambda}\right)=\mathcal{N}\left(0,\frac{k_{B}T}{k}\right)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\sigma^{2}/2\lambda=k_{B}T/k$
+\end_inset
+
+ has been used to obtain the equality above.
+ Comparing the forms of 
+\begin_inset Formula $P_{1|1}$
+\end_inset
+
+ and 
+\begin_inset Formula $P_{1}$
+\end_inset
+
+ it is clear that former tends to the latter for 
+\begin_inset Formula $|t-t^{\prime}|\rightarrow\infty$
+\end_inset
+
+, as it should.
+ 
+\end_layout
+
+\begin_layout Section
+Bayesian inference
+\end_layout
+
+\begin_layout Standard
+Consider the time series 
+\begin_inset Formula $X\equiv(x_{1},x_{2},\ldots,x_{N})$
+\end_inset
+
+ consisting of observations of the sample path 
+\begin_inset Formula $x(t)$
+\end_inset
+
+ at the discrete times 
+\begin_inset Formula $t=n\Delta$
+\end_inset
+
+t with 
+\begin_inset Formula $n=1,\ldots,N.$
+\end_inset
+
+ Then, using the Markov property of the Ornstein-Uhlenbeck process, the
+ probability of the sample path is given by 
+\begin_inset Formula 
+\[
+P(X|\lambda,D)=\prod_{n=1}^{N-1}P_{1|1}(x_{n+1}|x_{n},\lambda,D)P_{1}(x_{1}|\lambda,D)
+\]
+
+\end_inset
+
+The probability 
+\begin_inset Formula $P(\lambda,D|X)$
+\end_inset
+
+ of the parameters, given the sample path, can now be computed using Bayes
+ theorem, as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P(\lambda,D|X)=\frac{P(X|\lambda,D)P(\lambda,D)}{P(X)}
+\end{equation}
+
+\end_inset
+
+The denominator 
+\begin_inset Formula $P(X)$
+\end_inset
+
+ is an unimportant normalization, independent of the parameters that we
+ henceforth ignore.
+ Since both 
+\begin_inset Formula $k$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ must be positive, respectively for stability and positivity of entropy
+ production, we use informative priors for 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma$
+\end_inset
+
+, 
+\begin_inset Formula $P(\lambda,\sigma)=H(\lambda)H(\sigma)$
+\end_inset
+
+, where 
+\begin_inset Formula $H$
+\end_inset
+
+ is the Heaviside step function.
+ This assigns zero probability weight for negative values of the parameters
+ and equal probability weight for all positive values.
+ The logarithm of the posterior probability, after using the explicit forms
+ of 
+\begin_inset Formula $P_{1|1}$
+\end_inset
+
+ and 
+\begin_inset Formula $P_{1}$
+\end_inset
+
+, is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\ln P(\lambda,D|X) & =\frac{N-1}{2}\ln\frac{\lambda}{2\pi DI_{2}}-\frac{\lambda}{2DI_{2}}\sum\Delta_{n}^{2}\nonumber \\
+ & +\frac{1}{2}\ln\frac{\lambda}{2\pi D}-\frac{\lambda}{2D}x_{1}^{2}
+\end{align}
+
+\end_inset
+
+where we have defined the two quantities 
+\begin_inset Formula 
+\begin{equation}
+I_{2}\equiv1-e^{-2\lambda\Delta t},\quad\Delta_{n}\equiv x_{n+1}-e^{-\lambda\Delta t}x_{n}.
+\end{equation}
+
+\end_inset
+
+and the sum runs from 
+\begin_inset Formula $n=1,\ldots,N$
+\end_inset
+
+ as earlier.
+ 
+\end_layout
+
+\begin_layout Standard
+The maximum aposteriori (MAP) estimate 
+\begin_inset Formula $(\lambda^{\star},D^{\star})$
+\end_inset
+
+ follows from the stationary conditions 
+\begin_inset Formula $\partial\ln P(\lambda,D|X)/\partial\lambda=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\partial\ln P(\lambda,D|X)/\partial D=0$
+\end_inset
+
+, while the standard error of this estimate is obtained from the matrix
+ of second derivatives evaluated at the maximum.
+ The exact solution of the stationary conditions yields the MAP estimate
+ to be
+\begin_inset Formula 
+\begin{eqnarray*}
+\lambda^{\star} & = & \frac{1}{\Delta t}\ln\frac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}}\\
+D^{\star} & = & \frac{\lambda^{\star}}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)\\
+k^{\star} & = & \frac{\lambda^{\star}}{D^{\star}}
+\end{eqnarray*}
+
+\end_inset
+
+where both 
+\begin_inset Formula $I_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Delta_{n}$
+\end_inset
+
+ are now evaluated at 
+\begin_inset Formula $\lambda=\lambda^{\star}.$
+\end_inset
+
+ This completes our description of the Bayesian procedure for jointly estimating
+ 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+An alternative Bayesian procedure for estimating the trap stiffness alone
+ results when 
+\begin_inset Formula $X$
+\end_inset
+
+ is interpreted not as a time series but as an exchangeable sequence, or,
+ in physical terms, as repeated independent observations of the stationary
+ distribution 
+\begin_inset Formula $P_{1}(x)$
+\end_inset
+
+.
+ In that case, the posterior probability, assuming an informative prior
+ that constrains 
+\begin_inset Formula $k$
+\end_inset
+
+ to positive values, is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\ln P(k|X)=\frac{N}{2}\ln\frac{k}{2\pi k_{B}T}-\frac{1}{2}\frac{k}{k_{B}T}\sum_{n=1}^{N}x_{n}^{2}
+\end{equation}
+
+\end_inset
+
+The MAP estimate follows 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+k^{\star}=\frac{Nk_{B}T}{\sum_{n=1}^{N}x_{n}^{2}}
+\end{equation}
+
+\end_inset
+
+This procedure is independent of the sampling time and is equivalent to
+ the equipartition method when the Heaviside prior is used for 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ A comparison of the estimates obtained from these independent procedures
+ provides a check on the assumptions implicit in Ornstein-Uhlenbeck process:
+ harmonicity of the potential and thermal equilibrium, that is, stationarity
+ with a Gibbs distribution.
+ A disagreement between the two methods signals a breakdown of either or
+ both of the above assumptions.
+ 
+\end_layout
+
+\begin_layout Standard
+The posterior probabilities in both methods can be written in terms of the
+ four quantities 
+\begin_inset Formula $T_{1}(X)=\sum x_{n+1}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $T_{2}(X)=\sum x_{n+1}x_{n}$
+\end_inset
+
+, 
+\begin_inset Formula $T_{3}(X)=\sum x_{n}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $T_{4}(X)=x_{1}^{2}$
+\end_inset
+
+, which, therefore, are the sufficient statistics of the problem.
+ The entire information in the time series 
+\begin_inset Formula $X$
+\end_inset
+
+ relevant to estimation is contained in these four statistics.
+ There use reduces computational expense enormously as only four numbers,
+ rather than an entire time series, is required.
+ The combination of exact likelihoods, analytical MAP estimates, and the
+ use of sufficient statistics provides an accurate and efficient method,
+ together with a self-consistency criterion, for estimating parameters from
+ the time series of particle positions.
+\end_layout
+
+\begin_layout Section
+data acquisition
+\end_layout
+
+\begin_layout Standard
+The optical tweezers system is constructed around a Zeiss inverted microscope
+ (Axiovert.A1) with a 100x 1.4 numerical aperture (NA) objective lens tightly
+ focusing laser light from a semiconductor laser at 1064 nm (Lasever, maximum
+ power 500 mW) into the sample chamber.
+ The sample chamber is built using a standard glass microscope slide and
+ cover slip that are attached to each other using double sided tape.
+ The back aperture of the objective is slightly overfilled so as to maximize
+ the trapping intensity.
+ The sample consists of a dilute (1:10000) dispersion of polystyrene beads
+ of diameter 3 $
+\backslash
+mu$m in 10
+\backslash
+% NaCl-water solution.
+ Details of our experimental set up including the beam-coupling optics is
+ available in Ref.~
+\backslash
+cite{rsi12}.
+ The total power available at the trapping plane is around 15 mW.
+ Detection of Brownian motion of a single trapped bead is performed by back-foca
+l plane interferometry using the back-scattered intensity of a detection
+ laser at 671 nm that co-propagates with the trapping laser.
+ Note that the detection laser power is maintained at much lower levels
+ than that required to trap a bead independently.
+ The back-scattered signal from a trapped bead is collected on a position
+ sensitive photodiode that we construct by placing a knife-edge in front
+ of a Thorlabs PDA100A-EC Si-photodiode (bandwidth 2.4 MHz) so that a portion
+ of the signal is obstructed by the knife-edge.
+ The The position of the knife-edge determines whether we measure the 
+\begin_inset Formula $x$
+\end_inset
+
+ or 
+\begin_inset Formula $y$
+\end_inset
+
+ component of the Brownian motion of the bead with the edge being flipped
+ by 90 degrees to choose between the coordinate being measured.
+ To reduce cross-talk between the orthogonal components, we use an acousto-optic
+ modulator that is placed in the conjugate plane of the microscope 
+\backslash
+cite{rsi12} to sinusoidally scan the trapping beam (and thus the single
+ trapped bead) in the $x$-direction, and measure the response in the photodiode
+ with the knife-edge placed to detect the $y$-component of motion.
+ The detected signal is minimized so that the effects of cross-talk are
+ almost entirely negligible.
+ The large bandwidth of the photodiode, that is typically much faster than
+ most available commercial quadrant photodetectors, addresses concerns about
+ photodiode response time and associated requirements of data filtering.
+ The data from the photodiode is logged into a computer using a National
+ Instruments DAQ system.
+ 
+\end_layout
+
+\begin_layout Section
+Results
+\end_layout
+
+\begin_layout Standard
+Since the seminal of contributions of Rayleigh, Einstein, and Langevin,
+ stochastic processes have been used to model physical phenomena in which
+ fluctuations play an essential role.
+ Examples include the Brownian motion of a particle, the fluctuation of
+ current in a resistor, and the radioactive decay of subatomic particles.
+ A central problem is to infer the parameters of the process from partially
+ observed sample paths, for instance, the diffusion constant from a time
+ series of positions, or the resistance from a time series of current measuremen
+ts, and so on.
+ Bayesian inference provides a principled solution for this inverse problem,
+ making optimal use of the information contained in the partially observed
+ sample path.
+ And this si something test gitkraken.
+\end_layout
+
+\begin_layout Section
+DISCUSSION
+\end_layout
+
+\begin_layout Itemize
+use of exact likelihood removes the need to sample at high frequencies.
+ this is the limitation of Euler approximation used in the paper of the
+ French group.
+ accuracy.
+\end_layout
+
+\begin_layout Itemize
+use of analytical MAP estimates removes the need for Monte Carlo sampling,
+ speed.
+\end_layout
+
+\begin_layout Itemize
+use of sufficient statistics reduces the entire time series to four numbers,
+ efficiency.
+ 
+\end_layout
+
+\begin_layout Itemize
+joint probability obtained, can marginalize out friction if that is not
+ known and treat it as a nuisance parameter
+\end_layout
+
+\begin_layout Itemize
+can do many more complicated models, e.g.
+ air trapping etc, using Bayesian inference.
+ 
+\end_layout
+
+\end_body
+\end_document
