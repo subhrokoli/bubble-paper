@@ -114,19 +114,18 @@ Indian Institute of Science Education and Research, Kolkata
 
 \begin_layout Abstract
 Bayesian inference provides a principled way of estimating the parameters
- of a stochastic process that is observed at discrete points in time.
+ of a stochastic process that is observed discretely in time.
  The overdamped Brownian motion of a bead confined in an optical trap is
  generally modelled as an Ornstein-Uhlenbeck process and is measured directly
  in experiment.
- Here we present Bayesian methods for determining the parameters of this
- process, the trap stiffness and the particle friction coefficient, using
- exact likelihoods.
- Maximum aposteriori estimates are obtained analytically by exploiting sufficien
-t statistics.
- This obviates the need for Monte Carlo sampling and is, consequently, both
- fast and accurate.
- We apply two Bayesian methods to experimental data to find excellent consistenc
-y between them and good agreement with commonly used non-Bayesian methods.
+ Here we present Bayesian methods for inferring the parameters of this process,
+ the trap stiffness and the particle friction coefficient, that use exact
+ likelihoods and sufficient statistics to arrive at simple expressions for
+ the maximum aposteriori estimates.
+ This obviates the need for Monte Carlo sampling and yields methods that
+ are both fast and accurate.
+ We apply these to experimental data and compare with commonly used non-Bayesian
+ estimation methods.
  
 \end_layout
 
