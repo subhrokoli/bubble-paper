@@ -1,0 +1,815 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+The posterior probability for entire trajectory
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+P(
+\begin_inset Formula $\lambda,D\mid X)=$
+\end_inset
+
+
+\emph default
+
+\begin_inset Formula $\left(\frac{\lambda}{2\pi DI_{2}}\right)^{\frac{N-1}{2}}$
+\end_inset
+
+
+\begin_inset Formula $e$
+\end_inset
+
+
+\begin_inset Formula $^{-\frac{\lambda\sum\Delta_{n}^{2}}{2DI_{2}}}$
+\end_inset
+
+
+\begin_inset Formula $\left(\frac{\lambda}{2\pi D}\right)^{\frac{1}{2}}e$
+\end_inset
+
+
+\begin_inset Formula $^{-\frac{\lambda x_{1}^{2}}{2D}}$
+\end_inset
+
+ 
+\begin_inset Formula $\left(1\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where we have defined two quantities I
+\begin_inset Formula $_{2}$
+\end_inset
+
+
+\begin_inset Formula $\equiv1-e^{-2\lambda\Delta t}$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta_{n}$
+\end_inset
+
+
+\begin_inset Formula $\equiv x_{n+1}$
+\end_inset
+
+- 
+\emph on
+x
+\begin_inset Formula $_{n}$
+\end_inset
+
+e
+\emph default
+
+\begin_inset Formula $^{-\lambda\Delta t}$
+\end_inset
+
+
+\begin_inset Formula $\left(2\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The logarithm of the posterior probability
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\ln$
+\end_inset
+
+
+\emph on
+P(
+\begin_inset Formula $\lambda,D\mid X)=$
+\end_inset
+
+
+\emph default
+
+\begin_inset Formula $\frac{N-1}{2}$
+\end_inset
+
+
+\begin_inset Formula $\ln$
+\end_inset
+
+
+\begin_inset Formula $\left(\frac{\lambda}{2\pi DI_{2}}\right)$
+\end_inset
+
+-
+\begin_inset Formula $\frac{\lambda\sum\Delta_{n}^{2}}{2DI_{2}}$
+\end_inset
+
++
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+
+\begin_inset Formula $\ln$
+\end_inset
+
+
+\begin_inset Formula $\left(\frac{\lambda}{2\pi D}\right)$
+\end_inset
+
+-
+\begin_inset Formula $\frac{\lambda x_{1}^{2}}{2D}$
+\end_inset
+
+
+\begin_inset Formula $\left(3\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The maximum aposteriori (MAP) estimate (
+\begin_inset Formula $\lambda^{*},D^{*}$
+\end_inset
+
+) can be calculated from 
+\end_layout
+
+\begin_layout Standard
+the stationary conditions
+\begin_inset Formula $\left(\frac{\partial lnP}{\partial D}\right)$
+\end_inset
+
+=0 and 
+\begin_inset Formula $\left(\frac{\partial lnP}{\partial\lambda}\right)$
+\end_inset
+
+=0
+\end_layout
+
+\begin_layout Standard
+Now, from eq 
+\begin_inset Formula $\left(3\right)$
+\end_inset
+
+we get 
+\begin_inset Formula $\left(\frac{\partial lnP}{\partial D}\right)$
+\end_inset
+
+=
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-
+\begin_inset Formula $\frac{N-1}{2D^{*}}$
+\end_inset
+
++
+\begin_inset Formula $\frac{\lambda^{*}\sum\Delta_{n}^{2}}{2D^{*2}I_{2}}$
+\end_inset
+
+-
+\begin_inset Formula $\frac{1}{2D^{*}}$
+\end_inset
+
+
+\begin_inset Formula $+$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\frac{\lambda^{*}x_{1}^{2}}{2D^{*2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Applying
+\begin_inset Formula $\left(\frac{\partial lnP}{\partial D}\right)$
+\end_inset
+
+=0
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-
+\begin_inset Formula $\frac{N-1}{2D^{*}}$
+\end_inset
+
++
+\begin_inset Formula $\frac{\lambda^{*}\sum\Delta_{n}^{2}}{2D^{*2}I_{2}}$
+\end_inset
+
+-
+\begin_inset Formula $\frac{1}{2D^{*}}$
+\end_inset
+
+
+\begin_inset Formula $+$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\frac{\lambda^{*}x_{1}^{2}}{2D^{*2}}$
+\end_inset
+
+=0
+\end_layout
+
+\begin_layout Standard
+or, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-
+\begin_inset Formula $\frac{N}{2D^{*}}$
+\end_inset
+
++
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\frac{\lambda}{2D^{*2}}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)$
+\end_inset
+
+=0
+\end_layout
+
+\begin_layout Standard
+or, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\frac{ND^{*}}{2}$
+\end_inset
+
+=
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\frac{\lambda^{*}}{2}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+or, 
+\emph on
+D
+\begin_inset Formula $^{*}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+=
+\begin_inset Formula $\frac{\lambda^{*}}{N}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)$
+\end_inset
+
+
+\begin_inset Formula $\left(4\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From equation 
+\begin_inset Formula $\left(3\right)$
+\end_inset
+
+derivative both side by 
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(\frac{\partial lnP}{\partial\lambda}\right)$
+\end_inset
+
+=
+\begin_inset Formula $\frac{N-1}{2}$
+\end_inset
+
+
+\begin_inset Formula $\left(\frac{1}{\lambda}-\frac{I_{2}^{'}}{I_{2}}\right)$
+\end_inset
+
+-
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\frac{\sum\Delta_{n}^{2}}{2DI_{2}}$
+\end_inset
+
+
+\begin_inset Formula $-\frac{\lambda}{2D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)$
+\end_inset
+
++
+\begin_inset Formula $\frac{1}{2\lambda}$
+\end_inset
+
+-
+\begin_inset Formula $\frac{x_{1}^{2}}{2D}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+=
+\begin_inset Formula $\left(\frac{N}{2\lambda}-\frac{N-1}{2}\frac{I_{2}^{'}}{I_{2}}\right)$
+\end_inset
+
+-
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\frac{1}{2D}$
+\end_inset
+
+
+\begin_inset Formula $\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)$
+\end_inset
+
+-
+\begin_inset Formula $-\frac{\lambda}{2D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+=
+\begin_inset Formula $\frac{N}{2\lambda}$
+\end_inset
+
+-
+\begin_inset Formula $\frac{N-1}{2}\frac{I_{2}^{'}}{I_{2}}$
+\end_inset
+
+-
+\begin_inset Formula $\frac{1}{2D}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)$
+\end_inset
+
+-
+\begin_inset Formula $\frac{\lambda}{2D}$
+\end_inset
+
+
+\begin_inset Formula $\left(\frac{2\sum\Delta_{n}}{I_{2}}\frac{\partial}{\partial\lambda}\left(x_{n+1}-x_{n}e^{-\lambda\Delta t}\right)-\frac{I_{2}^{'}\sum\Delta_{n}^{2}}{I_{2}}\right)$
+\end_inset
+
+
+\begin_inset Formula $FromEq\left(4\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+=
+\begin_inset Formula $\frac{N}{2\lambda}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-
+\begin_inset Formula $\frac{1}{2D}$
+\end_inset
+
+
+\begin_inset Formula $\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+-
+\begin_inset Formula $\frac{N-1}{2}\frac{I_{2}^{'}}{I_{2}}$
+\end_inset
+
++
+\begin_inset Formula $\frac{\lambda\sum\Delta_{n}^{2}}{2D}\frac{I_{2}^{'}}{I_{2}}$
+\end_inset
+
+-
+\begin_inset Formula $\frac{\lambda}{2D}$
+\end_inset
+
+
+\begin_inset Formula $\left(\frac{2\sum\Delta_{n}\left(x_{n}\Delta te^{-\lambda\Delta t}\right)}{I_{2}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Applying 
+\begin_inset Formula $\left(\frac{\partial lnP}{\partial\lambda}\right)$
+\end_inset
+
+=0 at 
+\begin_inset Formula $\lambda=\lambda^{*}$
+\end_inset
+
+and
+\emph on
+ D=D
+\begin_inset Formula $^{*}$
+\end_inset
+
+
+\emph default
+we get 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(\frac{\partial lnP}{\partial\lambda}\right)$
+\end_inset
+
+=
+\begin_inset Formula $\frac{N}{2\lambda^{*}}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-
+\begin_inset Formula $\frac{1}{2D^{*}}$
+\end_inset
+
+
+\begin_inset Formula $\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+-
+\begin_inset Formula $\frac{N-1}{2}\frac{I_{2}^{'}}{I_{2}}$
+\end_inset
+
++
+\begin_inset Formula $\frac{\lambda^{*}\sum\Delta_{n}^{2}}{2D^{*}}\frac{I_{2}^{'}}{I_{2}}$
+\end_inset
+
+-
+\begin_inset Formula $\frac{\lambda^{*}}{2D^{*}}$
+\end_inset
+
+
+\begin_inset Formula $\left(\frac{2\sum\Delta_{n}\left(x_{n}\Delta te^{-\lambda^{*}\Delta t}\right)}{I_{2}}\right)$
+\end_inset
+
+=0
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(\frac{\partial lnP}{\partial\lambda}\right)$
+\end_inset
+
+=
+\begin_inset Formula $\frac{N}{2\lambda^{*}}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+-
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\frac{N}{2\lambda^{*}}$
+\end_inset
+
+-
+\begin_inset Formula $\frac{N-1}{2}\frac{I_{2}^{'}}{I_{2}}$
+\end_inset
+
++
+\begin_inset Formula $\frac{N-1}{2}\frac{I_{2}^{'}}{I_{2}}$
+\end_inset
+
+-
+\begin_inset Formula $\frac{\lambda^{*}}{2D^{*}}$
+\end_inset
+
+
+\begin_inset Formula $\left(\frac{2\sum\Delta_{n}\left(x_{n}\Delta te^{-\lambda^{*}\Delta t}\right)}{I_{2}}\right)$
+\end_inset
+
+ =0
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[Approximating\frac{1}{2D^{*}}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)=\frac{N}{2\lambda^{*}}\thinspace and\thinspace D^{*}=\frac{\lambda^{*}}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)\thickapprox\frac{\lambda^{*}\sum\Delta_{n}^{2}}{\left(N-1\right)I_{2}}from\thinspace eq\left(4\right)\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(\frac{\partial lnP}{\partial\lambda}\right)$
+\end_inset
+
+=
+\begin_inset Formula $\frac{\lambda^{*}}{2D^{*}}$
+\end_inset
+
+
+\begin_inset Formula $\left(\frac{2\sum\Delta_{n}\left(x_{n}\Delta te^{-\lambda^{*}\Delta t}\right)}{I_{2}}\right)$
+\end_inset
+
+=0
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sum$
+\end_inset
+
+
+\begin_inset Formula $\left(x_{n+1}-x_{n}e^{-\lambda^{*}\Delta t}\right)x_{n}\exp^{-\lambda^{*}\Delta t}$
+\end_inset
+
+=0
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sum\left(x_{n+1}x_{n}-x_{n}^{2}e^{-\lambda^{*}\Delta t}\right)$
+\end_inset
+
+=0
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\lambda^{*}=\frac{1}{\Delta t}$
+\end_inset
+
+
+\begin_inset Formula $\ln\frac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}}$
+\end_inset
+
+
+\begin_inset Formula $\left(5\right)$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

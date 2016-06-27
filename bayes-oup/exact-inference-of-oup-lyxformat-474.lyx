@@ -1,9 +1,7 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
-\save_transient_properties true
-\origin unavailable
 \textclass revtex4-1
 \begin_preamble
 
@@ -15,16 +13,16 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "default"
-\font_sans "default" "default"
-\font_typewriter "default" "default"
-\font_math "auto" "auto"
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100 100
-\font_tt_scale 100 100
+\font_sf_scale 100
+\font_tt_scale 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -76,7 +74,7 @@
 \begin_body
 
 \begin_layout Title
-Fast Bayesian inference of optical trap stiffness and particle friction
+Bayesian inference of optical trap stiffness and particle friction
 \end_layout
 
 \begin_layout Author
@@ -123,10 +121,13 @@ Bayesian inference provides a principled way of estimating the parameters
  exact likelihoods.
  Maximum aposteriori estimates are obtained analytically by exploiting sufficien
 t statistics.
- This obviates the need for Monte Carlo sampling and is, consequently, both
- fast and accurate.
- We apply two Bayesian methods to experimental data to find excellent consistenc
-y between them and good agreement with commonly used non-Bayesian methods.
+ Our method obviates the need for Monte Carlo sampling and is, consequently,
+ orders of magnitude faster.
+ The viscosity of the ambient fluid can be estimated from the particle friction,
+ given the bead radius.
+ We apply our method to experimental data and find excellent consistency
+ with the fluctuation-dissipation theorem and good agreement with commonly
+ used non-Bayesian methods.
  
 \end_layout
 
@@ -394,7 +395,7 @@ This gives probability of a path segment ending at the point
 \begin_layout Standard
 \begin_inset Formula 
 \[
-x^{\prime}t^{\prime}|x\thinspace t\sim\mathcal{N}\left(xe^{-\lambda(t^{\prime}-t)},\frac{D}{\lambda}[1-e^{-2\lambda(t^{\prime}-t)}]\right),
+x^{\prime}t^{\prime}|x\thinspace t\sim\mathcal{N}\left(xe^{-\lambda(t-t^{\prime})},\frac{D}{\lambda}[1-e^{-2\lambda(t-t^{\prime})}]\right),
 \]
 
 \end_inset
@@ -416,39 +417,12 @@ where
 \begin_inset Formula $|t-t^{\prime}|$
 \end_inset
 
-, unlike approximate solutions, used for instance in (), in which are accurate
- only when 
+, unlike the Euler approximation used in which is accurate only when 
 \begin_inset Formula $\lambda|t-t^{\prime}|\ll1$
 \end_inset
 
 .
- The correlation function decays exponentially, 
-\begin_inset Formula $\langle x(t^{\prime})x(t)\rangle=\frac{k_{B}T}{k}e^{-\lambda(t^{\prime}-t)}$
-\end_inset
-
-, a consequence of Doob's theorem for Gauss-Markov processes.
- 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-The relation 
-\begin_inset Formula $D/\lambda=k_{B}T/k$
-\end_inset
-
- has been used in obtaining the correlation function.
- 
-\end_layout
-
-\begin_layout Standard
-The stationary distribution 
+ The stationary distribution 
 \begin_inset Formula $P_{1}(x)$
 \end_inset
 
@@ -462,12 +436,17 @@ The stationary distribution
 \begin_layout Standard
 \begin_inset Formula 
 \[
-x\sim\mathcal{N}\left(0,\frac{D}{\lambda}\right)=\mathcal{N}\left(0,\frac{k_{B}T}{k}\right).
+x\sim\mathcal{N}\left(0,\frac{D}{\lambda}\right)=\mathcal{N}\left(0,\frac{k_{B}T}{k}\right)
 \]
 
 \end_inset
 
-Comparing the forms of 
+where 
+\begin_inset Formula $\sigma^{2}/2\lambda=k_{B}T/k$
+\end_inset
+
+ has been used to obtain the equality above.
+ Comparing the forms of 
 \begin_inset Formula $P_{1|1}$
 \end_inset
 
@@ -615,14 +594,14 @@ The maximum aposteriori (MAP) estimate
 
 , while the standard error of this estimate is obtained from the matrix
  of second derivatives evaluated at the maximum.
- The exact solution of the stationary conditions, derived in the Appendix,
- yields the MAP estimate to be
+ The exact solution of the stationary conditions yields the MAP estimate
+ to be
 \begin_inset Formula 
-\begin{eqnarray}
-\lambda^{\star} & = & \frac{1}{\Delta t}\ln\frac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}}\label{eq:map-estimate}\\
-D^{\star} & = & \frac{\lambda^{\star}}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)\nonumber \\
-k^{\star} & = & \frac{\lambda^{\star}}{D^{\star}}\nonumber 
-\end{eqnarray}
+\begin{eqnarray*}
+\lambda^{\star} & = & \frac{1}{\Delta t}\ln\frac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}}\\
+D^{\star} & = & \frac{\lambda^{\star}}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)\\
+k^{\star} & = & \frac{\lambda^{\star}}{D^{\star}}
+\end{eqnarray*}
 
 \end_inset
 
@@ -638,8 +617,6 @@ where both
 \begin_inset Formula $\lambda=\lambda^{\star}.$
 \end_inset
 
- The expression for the matrix of second-derivatives is cumbersome and,
- therefore, we evaluate it using automatic differentiation.
  This completes our description of the Bayesian procedure for jointly estimating
  
 \begin_inset Formula $\lambda$
@@ -682,13 +659,13 @@ An alternative Bayesian procedure for estimating the trap stiffness alone
 
 \end_inset
 
-The MAP estimate straightforwardly follows,
+The MAP estimate follows 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-k^{\star}=\frac{Nk_{B}T}{\sum_{n=1}^{N}x_{n}^{2}}.
+k^{\star}=\frac{Nk_{B}T}{\sum_{n=1}^{N}x_{n}^{2}}
 \end{equation}
 
 \end_inset
@@ -745,48 +722,20 @@ data acquisition
 \end_layout
 
 \begin_layout Standard
-We collect data on position fluctuations of an optically trapped Brownian
- particle using the following setup.
- The optical tweezers system is constructed around a Zeiss inverted microscope
+The optical tweezers system is constructed around a Zeiss inverted microscope
  (Axiovert.A1) with a 100x 1.4 numerical aperture (NA) objective lens tightly
  focusing laser light from a semiconductor laser at 1064 nm (Lasever, maximum
- power 500 mW) into the sample.
+ power 500 mW) into the sample chamber.
+ The sample chamber is built using a standard glass microscope slide and
+ cover slip that are attached to each other using double sided tape.
  The back aperture of the objective is slightly overfilled so as to maximize
  the trapping intensity.
- The sample consists of a dilute dispersion (volume fraction 
-\begin_inset Formula $\phi=0.01$
-\end_inset
-
-) of polystyrene beads of diameter 
-\begin_inset Formula $3\mu$
-\end_inset
-
-m in 10% NaCl-water solution, around 20
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-𝜇
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
- l .
- of which is taken on a standard glass cover slip.
+ The sample consists of a dilute (1:10000) dispersion of polystyrene beads
+ of diameter 3 $
+\backslash
+mu$m in 10
+\backslash
+% NaCl-water solution.
  Details of our experimental set up including the beam-coupling optics is
  available in Ref.~
 \backslash
@@ -801,7 +750,7 @@ l plane interferometry using the back-scattered intensity of a detection
  sensitive photodiode that we construct by placing a knife-edge in front
  of a Thorlabs PDA100A-EC Si-photodiode (bandwidth 2.4 MHz) so that a portion
  of the signal is obstructed by the knife-edge.
- The position of the knife-edge determines whether the 
+ The The position of the knife-edge determines whether we measure the 
 \begin_inset Formula $x$
 \end_inset
 
@@ -809,22 +758,14 @@ l plane interferometry using the back-scattered intensity of a detection
 \begin_inset Formula $y$
 \end_inset
 
- component of the Brownian motion of the bead is measured, with the edge
- being flipped by 90 degrees to choose between the coordinate being measured.
+ component of the Brownian motion of the bead with the edge being flipped
+ by 90 degrees to choose between the coordinate being measured.
  To reduce cross-talk between the orthogonal components, we use an acousto-optic
  modulator that is placed in the conjugate plane of the microscope 
 \backslash
 cite{rsi12} to sinusoidally scan the trapping beam (and thus the single
- trapped bead) in the 
-\begin_inset Formula $x$
-\end_inset
-
--direction, and measure the response in the photodiode with the knife-edge
- placed to detect the 
-\begin_inset Formula $y$
-\end_inset
-
--component of motion.
+ trapped bead) in the $x$-direction, and measure the response in the photodiode
+ with the knife-edge placed to detect the $y$-component of motion.
  The detected signal is minimized so that the effects of cross-talk are
  almost entirely negligible.
  The large bandwidth of the photodiode, that is typically much faster than
@@ -839,31 +780,20 @@ cite{rsi12} to sinusoidally scan the trapping beam (and thus the single
 Results
 \end_layout
 
-\begin_layout Itemize
-Descriptive statistics : (a) data set (b) histogram (c) autocorrelation
- plot.
- 
-\end_layout
-
-\begin_layout Itemize
-Plot of posterior distribution in the 
-\begin_inset Formula $\lambda-D$
-\end_inset
-
- plane, together with position of numerical maximum and position of analytical
- maximum.
-\end_layout
-
-\begin_layout Itemize
-Comparison with equipartition result
-\end_layout
-
-\begin_layout Itemize
-Comparison with autocorrelation method in the time domain
-\end_layout
-
-\begin_layout Itemize
-Estimation of viscosity and diffusion coefficient
+\begin_layout Standard
+Since the seminal of contributions of Rayleigh, Einstein, and Langevin,
+ stochastic processes have been used to model physical phenomena in which
+ fluctuations play an essential role.
+ Examples include the Brownian motion of a particle, the fluctuation of
+ current in a resistor, and the radioactive decay of subatomic particles.
+ A central problem is to infer the parameters of the process from partially
+ observed sample paths, for instance, the diffusion constant from a time
+ series of positions, or the resistance from a time series of current measuremen
+ts, and so on.
+ Bayesian inference provides a principled solution for this inverse problem,
+ making optimal use of the information contained in the partially observed
+ sample path.
+ And this si something test gitkraken.
 \end_layout
 
 \begin_layout Section
@@ -896,87 +826,6 @@ joint probability obtained, can marginalize out friction if that is not
 \begin_layout Itemize
 can do many more complicated models, e.g.
  air trapping etc, using Bayesian inference.
- 
-\end_layout
-
-\begin_layout Acknowledgments
-RA gratefully, and much belatedly, acknowledges Professor M.
- E.
- Cates for introducing him to Bayesian data analysis.
- 
-\end_layout
-
-\begin_layout Subsection
-Appendix 
-\end_layout
-
-\begin_layout Standard
-The partial derivatives of the logarithm of the posterior probability with
- respect to 
-\begin_inset Formula $\lambda$
-\end_inset
-
- and 
-\begin_inset Formula $D$
-\end_inset
-
- are 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray*}
-\frac{\partial\ln P}{\partial\lambda} & = & \frac{N-1}{2}\left(\frac{1}{\lambda}-\frac{I_{2}^{'}}{I_{2}}\right)+\frac{\sum\Delta_{n}^{2}}{2DI_{2}}\\
- & - & \frac{\lambda}{2D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)-\frac{1}{2\lambda}-\frac{x_{1}^{2}}{2D}
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\frac{\partial\ln P}{\partial D}=-\frac{N-1}{2D}+\frac{\lambda\sum\Delta_{n}^{2}}{2D^{2}I_{2}}-\frac{1}{2D}+\frac{\lambda x_{1}^{2}}{2D^{2}}
-\]
-
-\end_inset
-
-Setting the second of these equations to zero, 
-\begin_inset Formula $D$
-\end_inset
-
- is solved in term of 
-\begin_inset Formula $\lambda$
-\end_inset
-
- and this solution is used in the first equation, together with the large-sample
- approximation
-\begin_inset Formula 
-\[
-\frac{\lambda}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)\thickapprox\frac{\lambda}{\left(N-1\right)}\frac{\sum\Delta_{n}^{2}}{I_{2}},
-\]
-
-\end_inset
-
-to cancel all 
-\begin_inset Formula $D$
-\end_inset
-
--dependent terms.
- Setting the resulting equation to zero and solving for 
-\begin_inset Formula $\lambda$
-\end_inset
-
- then yields the MAP estimates in Eq.(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map-estimate"
-
-\end_inset
-
-).
  
 \end_layout
 
