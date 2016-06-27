@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass revtex4
 \options aps,pre, reprint, twocolumn, draft
 \use_default_options false
@@ -10,16 +12,16 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -96,11 +98,18 @@ Institute of Mathematical Sciences, Chennai
 \end_layout
 
 \begin_layout Author
+Subhrokoli Ghosh
+\end_layout
+
+\begin_layout Affiliation
+Indian Institute of Science Education and Research, Kolkata 
+\end_layout
+
+\begin_layout Author
 Ronojoy Adhikari
 \end_layout
 
 \begin_layout Author Email
-
 ronojoy.adhikari@gmail.com
 \begin_inset Note Note
 status collapsed
@@ -131,7 +140,6 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -145,18 +153,26 @@ The temperature variation of the surface tension at a liquid-gas interface
  ambient fluid.
  Here, we demonstrate that such active stresses can be produced in a controlled
  manner by inducing a microbubble in optical tweezers.
- Entrained in the active flow, mesoscopic particles dispersed in the ambient
- fluid assemble in rings at the bubble interface and may be released from
- it by modulating the bubble diameter controllably.
- We experimentally demonstrate capture, transport and release of a wide
- range of particles, ranging from gold nanoparticles to polystyrene microspheres.
- Multiple microbubbles allow for additional control on particle assembly
- and manipulation, as we demonstrate with a pair of microbubbles.
  An analytical solution of the thermocapillary problem, based on the Stokes
- and heat equations, yields the flow profile around bubbles from which the
- mechanisms behind assembly and manipulation can be understood.
- Active thermocapillary stress offers a route to trap and manipulate particles
- that are, otherwise, difficult to trap in optical tweezers.
+ and heat equations, yields the flow profile around the bubble.
+ It is clear that under the action of the resulting flow, mesoscopic particles
+ dispersed in the ambient fluid assemble in in rings at the bubble interface.
+ We proceed to demonstrate this experimentally by inducing self-assembly
+ of polystyrene microparticles on the bubble surface in rings.
+ In addition, we show transport of a wide range of particles ranging from
+ gold nanoparticles to polystyrene microspheres using thermophoretic motion
+ of the bubble under translation of the optical tweezers.
+ Most importantly, we are able to release particles captured on the bubble
+ surface by modulating the bubble diameter controllably.
+ We also study the flow fields around a pair of microbubbles theoretically
+ and observe that these would allow for additional control on particle assembly
+ and manipulation.
+ We realize the theoretical predictions experimetally by growing two microbubble
+s adjacent to each other and modifying the trajectory of freely diffusing
+ polystyrene microparticles which are in the vicinity of the bubbles.
+ Our studies indicate that the active thermocapillary stresses induced by
+ multiple microbubbles could offer routes to particle micromanipulation
+ that would otherwise be difficult to achieve in optical tweezers.
  
 \end_layout
 
@@ -465,7 +481,7 @@ The thermo-optic tweezers setup is based on an inverted Zeiss Axiovert.A1
 Self assembly of particles on bubbles:
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:selfassem"
+name "subsec:selfassem"
 
 \end_inset
 
@@ -519,7 +535,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename figures/Figure2.pdf
+	filename ../../submission/2014/bubbletransport/iiscer-kolkata-traps-bubbles/iiscer-kolkata-traps-bubbles/bubble-paper/figures/Figure2.pdf
 
 \end_inset
 
@@ -637,7 +653,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename figures/Figure3.pdf
+	filename ../../submission/2014/bubbletransport/iiscer-kolkata-traps-bubbles/iiscer-kolkata-traps-bubbles/bubble-paper/figures/Figure3.pdf
 
 \end_inset
 
@@ -743,7 +759,7 @@ Title
 \series bold
 Volume
 \series default
-, page--numbers (year).
+, page–numbers (year).
 \end_layout
 
 \end_body
