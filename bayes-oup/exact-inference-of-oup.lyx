@@ -160,15 +160,19 @@ The Ornstein-Uhlenbeck process is commonly used to model the sample paths
 \begin_inset Formula $\sigma$
 \end_inset
 
- which correspond, in the physical application, to the stiffness 
+ which map, in the physical application, to the stiffness 
 \begin_inset Formula $k$
 \end_inset
 
- of the harmonic potential and the friction 
+ of the harmonic potential, the friction 
 \begin_inset Formula $\gamma$
 \end_inset
 
- of the particle.
+ of the particle and the temperature 
+\begin_inset Formula $k_{B}T$
+\end_inset
+
+ of the ambient fluid.
  Since the friction of a particle of radius 
 \begin_inset Formula $a$
 \end_inset
@@ -181,14 +185,22 @@ The Ornstein-Uhlenbeck process is commonly used to model the sample paths
 \begin_inset Formula $\eta$
 \end_inset
 
- is the viscosity of the ambient fluid, any estimation of the friction also
- provides an estimate of the viscosity of the medium, given the particle
- radius.
- Thus, the viscosity, which is defined as the response of the fluid to an
- externally imposed shear, can be inferred from the observation of harmonically
- confined Brownian fluctuations.
- This, of course, is a consequence of the relation between response and
- fluctuation that prevails in a physical system in thermal equilibrium.
+ is the viscosity of the fluid, any estimation of the friction also provides
+ an estimate of the viscosity of the medium, given the particle radius.
+ Thus, the viscosity, which is defined as the macroscopic response of the
+ fluid to an externally imposed shear, can be inferred from microscopic
+ obversation of the Brownian fluctuations of harmonically confined particle.
+ Likewise, the particle diffusion coefficient 
+\begin_inset Formula $D$
+\end_inset
+
+ can be inferred from the friction through the Einstein relation 
+\begin_inset Formula $D=k_{B}T/\gamma$
+\end_inset
+
+.
+ These, of course, are consequences of the relation between response and
+ correlation that prevails in a physical system in thermal equilibrium.
  
 \end_layout
 
@@ -202,9 +214,10 @@ In this paper, we apply Bayesian inference to the problem of estimating
  using tweezers in force measurements.
  Bayesian methods, using Monte Carlo sampling, have been proposed earlier
  to this end.
- Here, we present a method that does not require sampling, exploits the
- sufficient statistics of the problem, and provides exact maximum a posteriori
- estimates using these statistics.
+ Here, we present a method that does away with sampling by exploiting the
+ exact likelihoods and sufficient statistics of the problem and providing,
+ thereby, exact maximum aposteriori parameter estimates in terms of these
+ statistics.
  Consequently, the method is both extremely fast and accurate, being able
  to jointly estimate the trap stiffness and the particle friction from a
  time series with a million points in less than a millisecond.
@@ -212,8 +225,8 @@ In this paper, we apply Bayesian inference to the problem of estimating
  consistency check on the accuracy of the estimation.
  We apply our method to experimental data to find estimates that have excellent
  internal consistency.
- These estimates are in good agreement with commonly used non-Bayesian calibrati
-on methods.
+ These estimates are found to be in good agreement with commonly used non-Bayesi
+an calibration methods.
  
 \end_layout
 
@@ -293,20 +306,12 @@ where
 \end_inset
 
  is the volatility.
- The particle diffusion coefficient 
-\begin_inset Formula $D$
-\end_inset
-
- is related to the friction 
-\begin_inset Formula $\gamma$
-\end_inset
-
- by the Einstein relation 
+ Since 
 \begin_inset Formula $D=k_{B}T\gamma^{-1}$
 \end_inset
 
- and so 
-\begin_inset Formula $2D=\sigma^{2}.$
+ we have 
+\begin_inset Formula $\sigma^{2}=2D.$
 \end_inset
 
  In problems involving Brownian motion, it is convenient to work with the
@@ -542,8 +547,8 @@ The denominator
 \begin_inset Formula $\gamma$
 \end_inset
 
- must be positive, respectively for stability and positivity of entropy
- production, we use informative priors for 
+ must be positive, for stability and positivity of entropy production respective
+ly, we use informative priors for 
 \begin_inset Formula $\lambda$
 \end_inset
 
@@ -595,7 +600,7 @@ and the sum runs from
 \begin_inset Formula $n=1,\ldots,N$
 \end_inset
 
- as earlier.
+.
  
 \end_layout
 
@@ -604,7 +609,7 @@ The maximum aposteriori (MAP) estimate
 \begin_inset Formula $(\lambda^{\star},D^{\star})$
 \end_inset
 
- follows from the stationary conditions 
+ solves the stationary conditions 
 \begin_inset Formula $\partial\ln P(\lambda,D|X)/\partial\lambda=0$
 \end_inset
 
@@ -717,10 +722,9 @@ The posterior probabilities in both methods can be written in terms of the
  relevant to estimation is contained in these four statistics.
  There use reduces computational expense enormously as only four numbers,
  rather than an entire time series, is required.
- The combination of exact likelihoods, analytical MAP estimates, and the
- use of sufficient statistics provides an accurate and efficient method,
- together with a self-consistency criterion, for estimating parameters from
- the time series of particle positions.
+ The combination of exact likelihoods, the use of sufficient statistics
+ and analytical MAP estimates yields fast and accurate methods for estimating
+ parameters from the time series of particle positions.
  This completes our description of the Bayesian procedure for jointly estimating
  
 \begin_inset Formula $\lambda$
@@ -730,7 +734,7 @@ The posterior probabilities in both methods can be written in terms of the
 \begin_inset Formula $D$
 \end_inset
 
-, and from there the 
+, and from there, 
 \begin_inset Formula $\gamma$
 \end_inset
 
