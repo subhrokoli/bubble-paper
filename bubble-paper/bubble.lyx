@@ -5,13 +5,16 @@
 \save_transient_properties true
 \origin unavailable
 \textclass revtex4
-\options aps,pre, reprint, twocolumn, draft
+\begin_preamble
+\usepackage{babel}
+\end_preamble
+\options aps,pre,reprint
 \use_default_options false
 \maintain_unincluded_children false
 \language english
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding iso8859-15
+\fontencoding T1
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -33,12 +36,12 @@
 \papersize default
 \use_geometry false
 \use_package amsmath 1
-\use_package amssymb 1
+\use_package amssymb 0
 \use_package cancel 0
 \use_package esint 1
-\use_package mathdots 1
+\use_package mathdots 0
 \use_package mathtools 0
-\use_package mhchem 1
+\use_package mhchem 0
 \use_package stackrel 0
 \use_package stmaryrd 0
 \use_package undertilde 0
@@ -60,7 +63,7 @@
 \paragraph_separation indent
 \paragraph_indentation default
 \quotes_language english
-\papercolumns 1
+\papercolumns 2
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
@@ -111,24 +114,6 @@ Ronojoy Adhikari
 
 \begin_layout Author Email
 ronojoy.adhikari@gmail.com
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Make sure to put any Email, URL, and Thanks layouts IN
-\end_layout
-
-\begin_layout Plain Layout
-BETWEEN the Author layout and the corresponding Address
-\end_layout
-
-\begin_layout Plain Layout
-layout for that author.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Affiliation
@@ -152,27 +137,36 @@ The temperature variation of the surface tension at a liquid-gas interface
  generates tangential thermocapillary stresses which produce flows in the
  ambient fluid.
  Here, we demonstrate that such active stresses can be produced in a controlled
- manner by inducing a microbubble in optical tweezers.
+ manner by inducing a microbubble on a glass substrate that is in contact
+ with a liquid in optical tweezers.
  An analytical solution of the thermocapillary problem, based on the Stokes
  and heat equations, yields the flow profile around the bubble.
- It is clear that under the action of the resulting flow, mesoscopic particles
- dispersed in the ambient fluid assemble in in rings at the bubble interface.
- We proceed to demonstrate this experimentally by inducing self-assembly
- of polystyrene microparticles on the bubble surface in rings.
- In addition, we show transport of a wide range of particles ranging from
- gold nanoparticles to polystyrene microspheres using thermophoretic motion
- of the bubble under translation of the optical tweezers.
- Most importantly, we are able to release particles captured on the bubble
- surface by modulating the bubble diameter controllably.
- We also study the flow fields around a pair of microbubbles theoretically
- and observe that these would allow for additional control on particle assembly
- and manipulation.
- We realize the theoretical predictions experimetally by growing two microbubble
-s adjacent to each other and modifying the trajectory of freely diffusing
- polystyrene microparticles which are in the vicinity of the bubbles.
+ The flow around a single bubble causes mesoscopic particles dispersed in
+ the ambient liquid assemble to in in rings at the bubble interface, which
+ we demonstrate experimentally by inducing self-assembly of polystyrene
+ microparticles on the bubble surface in rings.
+ However, an asymmetric temperature profile generated at the bubble base
+ leads to the breaking of azimuthal symmetry in the resultant flow that
+ leads to strongly diverging streamlines away from the bubble.
+ This is exploited experimentally by inducing simultaneous accumulation
+ and pumping of mesoscopic particles that are at different z-planes with
+ respect to the bubble.
+ The presence of two bubbles in close vicinity causes further modifications
+ of the flow field.
+ While growing two bubbles on spatially discrete temperature profiles leads
+ to a superposition of two separate azimuthally symmetric flows, the same
+ problem with two bubbles grown on a temperature gradient leads to even
+ stronger breaking of aziumthal symmetry resulting in closed streamlines
+ in the axial direction.
+ Experimentally, the former leads to the assembly of freely diffusing mesoscopic
+ particles on either bubble depending on their initial trajectory with respect
+ to the separatrix in the resultant flow, while the latter leads to local
+ vorticity that causes spiraling motion in the particles akin to that induced
+ by angular momentum carrying beams in optical tweezers.
  Our studies indicate that the active thermocapillary stresses induced by
- multiple microbubbles could offer routes to particle micromanipulation
- that would otherwise be difficult to achieve in optical tweezers.
+ multiple microbubbles offer simple routes to complex and controllable micromani
+pulation of particles that are typically difficult to achieve in optical
+ tweezers.
  
 \end_layout
 
@@ -241,7 +235,6 @@ hot spot
 tic forces, follows it.
  This provides a method for transporting particles that are attached to
  the bubble surface.
- 
 \end_layout
 
 \begin_layout Standard
@@ -290,13 +283,13 @@ Theory
 
 \begin_layout Standard
 We describe the system with a set of equations assuming a steady state,
- which are: 
+ which are:
 \end_layout
 
 \begin_layout Standard
 1.
  The Navier-Stokes equation describes the velocity of the fluid flow in
- the system: 
+ the system:
 \end_layout
 
 \begin_layout Standard
@@ -358,7 +351,7 @@ Here
  are the fluid velocity, pressure and temperature respectively.
  These set of equations have to solved together with a set of boundary condition
 s.
- These are:
+ These are: 
 \end_layout
 
 \begin_layout Enumerate
@@ -366,10 +359,12 @@ s.
 \end_inset
 
  on the wall.
+ 
 \end_layout
 
 \begin_layout Enumerate
 T = Room temperature at wall.
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -381,6 +376,7 @@ T = Room temperature at wall.
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -392,6 +388,7 @@ constant at
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -420,6 +417,7 @@ There are another set of boundary conditions on the bubble wall that balances
 \end_inset
 
  on the surface of the bubble (no flow into the bubble).
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -427,6 +425,7 @@ There are another set of boundary conditions on the bubble wall that balances
 \end_inset
 
  on the bubble surface (temperature gradient is only tangential).
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -474,7 +473,6 @@ The thermo-optic tweezers setup is based on an inverted Zeiss Axiovert.A1
  liquid with the surface tension tending to zero.
  The temperature of the hot spot can be modified by changing the laser intensity
  incident on it, which we typically achieve by changing the laser power.
- 
 \end_layout
 
 \begin_layout Subsection
@@ -529,6 +527,7 @@ in diameter formed along a SOM trail in a sample chamber of the first type.
 
 \begin_layout Standard
 \begin_inset Float figure
+placement h
 wide false
 sideways false
 status open
@@ -536,7 +535,8 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename figures/Figure2.pdf
-	scale 50
+	scale 40
+	clip
 
 \end_inset
 
@@ -561,6 +561,7 @@ Figure 2.
  are distinctly visible in d, which is at t=13 s.
  These have been extracted from Video 1 in the multimedia files of the Supplemen
 tary Information.
+ 
 \end_layout
 
 \end_inset
@@ -643,11 +644,11 @@ d recently in Refs.
  It is expected that larger particles would require a smaller bubble size
  to be released since they have larger surface area with a higher sticking
  force on the bubble surface.
- 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
+placement t
 wide false
 sideways false
 status open
@@ -655,6 +656,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename figures/Figure3.pdf
+	scale 35
 
 \end_inset
 
@@ -738,7 +740,7 @@ Conclusions
 \end_layout
 
 \begin_layout Acknowledgments
-Thank you so much!
+Thank you so much! 
 \end_layout
 
 \begin_layout Bibliography
@@ -761,6 +763,7 @@ Title
 Volume
 \series default
 , page–numbers (year).
+ 
 \end_layout
 
 \end_body
