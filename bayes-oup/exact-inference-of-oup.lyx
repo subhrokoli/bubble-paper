@@ -553,11 +553,11 @@ ly, we use informative priors for
 \end_inset
 
  and 
-\begin_inset Formula $\sigma$
+\begin_inset Formula $D$
 \end_inset
 
 , 
-\begin_inset Formula $P(\lambda,\sigma)=H(\lambda)H(\sigma)$
+\begin_inset Formula $P(\lambda,D)=H(\lambda)H(D)$
 \end_inset
 
 , where 
@@ -942,8 +942,8 @@ The partial derivatives of the logarithm of the posterior probability with
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-\frac{\partial\ln P}{\partial\lambda} & = & \frac{N-1}{2}\left(\frac{1}{\lambda}-\frac{I_{2}^{\prime}}{I_{2}}\right)+\frac{\sum\Delta_{n}^{2}}{2DI_{2}}\\
- & - & \frac{\lambda}{2D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)-\frac{1}{2\lambda}-\frac{x_{1}^{2}}{2D}
+\frac{\partial\ln P}{\partial\lambda} & = & \frac{N-1}{2}\left(\frac{1}{\lambda}-\frac{I_{2}^{\prime}}{I_{2}}\right)-\frac{\sum\Delta_{n}^{2}}{2DI_{2}}\\
+ & - & \frac{\lambda}{2D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{1}{2\lambda}-\frac{x_{1}^{2}}{2D}
 \end{eqnarray*}
 
 \end_inset
@@ -960,7 +960,7 @@ The partial derivatives of the logarithm of the posterior probability with
 \end_inset
 
 where 
-\begin_inset Formula $I_{2}^{\prime}=2\lambda\Delta t\thinspace e^{-2\lambda\Delta t}$
+\begin_inset Formula $I_{2}^{\prime}=2\Delta t\thinspace e^{-2\lambda\Delta t}$
 \end_inset
 
 .
