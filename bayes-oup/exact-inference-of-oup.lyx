@@ -213,7 +213,14 @@ In this paper, we apply Bayesian inference to the problem of estimating
  A reliable estimation of the trap stiffness is a necessary first step in
  using tweezers for force measurements.
  Bayesian methods, using Monte Carlo sampling, have been proposed earlier
- to this end.
+ to this end 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "richly2013calibrating"
+
+\end_inset
+
+.
  Here, we present a method that does away with sampling by exploiting the
  exact likelihoods and sufficient statistics of the problem and provides,
  thereby, exact maximum a posteriori parameter estimates in terms of these
@@ -1010,7 +1017,17 @@ reference "eq:map-estimate"
 \end_inset
 
 ).
- 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "exact-inference-of-oup"
+options "rsc"
+
+\end_inset
+
+
 \end_layout
 
 \end_body
