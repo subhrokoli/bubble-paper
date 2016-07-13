@@ -625,7 +625,7 @@ The maximum aposteriori (MAP) estimate
 \begin{eqnarray}
 \lambda^{\star} & = & \frac{1}{\Delta t}\ln\frac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}}\label{eq:map-estimate}\\
 D^{\star} & = & \frac{\lambda^{\star}}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)\nonumber \\
-k^{\star} & = & \frac{\lambda^{\star}}{D^{\star}}\nonumber 
+\frac{k^{\star}}{k_{B}T} & = & \frac{\lambda^{\star}}{D^{\star}}\nonumber 
 \end{eqnarray}
 
 \end_inset
@@ -682,7 +682,7 @@ The MAP estimate straightforwardly follows,
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-k^{\star}=\frac{Nk_{B}T}{\sum_{n=1}^{N}x_{n}^{2}}.
+\frac{k^{\star}}{k_{B}T}=\frac{N}{\sum_{n=1}^{N}x_{n}^{2}}.
 \end{equation}
 
 \end_inset
