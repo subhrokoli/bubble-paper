@@ -34,7 +34,7 @@
 \spacing single
 \use_hyperref false
 \papersize default
-\use_geometry true
+\use_geometry false
 \use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 1
@@ -361,15 +361,7 @@ The transition probability density
 \uwave default
 \noun default
 \color inherit
-, that gives the probability of a path segment ending at the point 
-\begin_inset Formula $x^{\prime}$
-\end_inset
-
- at time 
-\begin_inset Formula $t^{\prime}$
-\end_inset
-
-, given that it started at the point 
+, the probability of a displacement from 
 \begin_inset Formula $x$
 \end_inset
 
@@ -377,11 +369,19 @@ The transition probability density
 \begin_inset Formula $t$
 \end_inset
 
+ to 
+\begin_inset Formula $x^{\prime}$
+\end_inset
+
+ at time 
+\begin_inset Formula $t^{\prime}$
+\end_inset
+
 , obeys the Fokker-Planck equation 
 \begin_inset Formula $\partial_{t}P_{1|1}=\mathcal{L}P_{1|1}$
 \end_inset
 
- where the Fokker-Planck operator is 
+, where the Fokker-Planck operator is 
 \end_layout
 
 \begin_layout Standard
@@ -427,10 +427,14 @@ where
 
 .
  The correlation function decays exponentially, 
-\begin_inset Formula $\langle x(t^{\prime})x(t)\rangle=\frac{k_{B}T}{k}e^{-\lambda(t^{\prime}-t)}$
+\begin_inset Formula 
+\[
+\langle x(t)x(t^{\prime})\rangle=\frac{k_{B}T}{k}e^{-\lambda|t-t^{\prime}|}
+\]
+
 \end_inset
 
-, a property guaranteed by Doob's theorem for any Gauss-Markov processes.
+a property guaranteed by Doob's theorem for any Gauss-Markov processes.
  
 \family roman
 \series medium
@@ -642,9 +646,12 @@ where both
 \begin_inset Formula $\lambda=\lambda^{\star}.$
 \end_inset
 
- The expression for the matrix of second-derivatives is cumbersome and,
- therefore, we evaluate it using automatic differentiation.
- 
+ These straightforwardly provide estimates of the parameters without the
+ need for fitting or sampling.
+ The standar errors of these estimates are obtained from the matrix of second
+ derivates of the posterior, evaluated at the maximum.
+ We do not provide their unwieldy expressions but do make use of them when
+ reporting point estimates.
 \end_layout
 
 \begin_layout Standard
@@ -752,8 +759,8 @@ A comparison of the estimates obtained from these independent procedures
  data model.
  Any significant disagreement between the estimates from the two methods
  signals a breakdown of applicability of the model and the assumptions implicit
- in it: overdamped dynamics, harmonicity of the potential, and thermal equilibri
-um.
+ in it: overdamped dynamics, constant friction, harmonicity of the potential,
+ and thermal equilibrium.
  
 \end_layout
 
@@ -762,8 +769,11 @@ data acquisition
 \end_layout
 
 \begin_layout Standard
-We collect data on position fluctuations of an optically trapped Brownian
- particle using the following setup.
+Data on the position fluctuations of an optically trapped Brownian particle
+ is collected using the setup described below.
+ Further details are available in 
+\backslash
+cite{rsi12}.
  The optical tweezers system is constructed around a Zeiss inverted microscope
  (Axiovert.A1) with a 
 \begin_inset Formula $100x$
@@ -773,12 +783,12 @@ We collect data on position fluctuations of an optically trapped Brownian
 \begin_inset Formula $1.4$
 \end_inset
 
- numerical aperture (NA) objective lens tightly focusing laser light from
- a semiconductor laser at 
+ numerical aperture (NA) objective lens tightly focusing laser light at
+ 
 \begin_inset Formula $1064$
 \end_inset
 
- nm (Lasever, maximum power 
+ nm from a semiconductor laser (Lasever, maximum power 
 \begin_inset Formula $500$
 \end_inset
 
@@ -789,7 +799,7 @@ mW) into the sample.
 \begin_inset Formula $\phi=0.01$
 \end_inset
 
-) of polystyrene beads of diameter 
+) of polystyrene sphere of diameter 
 \begin_inset Formula $3\mu$
 \end_inset
 
@@ -797,22 +807,18 @@ m in 10% NaCl-water solution, around
 \begin_inset Formula $20\mu l$
 \end_inset
 
- of which is taken on a standard glass cover slip.
- Details of our experimental set up including the beam-coupling optics is
- available in Ref.~
-\backslash
-cite{rsi12}.
+ of which is pipetted on a standard glass cover slip.
  The total power available at the trapping plane is around 15 mW.
- Detection of Brownian motion of a single trapped bead is performed by back-foca
-l plane interferometry using the back-scattered intensity of a detection
+ Motion detection of a single trapped particle is performed by back-focal
+ plane interferometry using the back-scattered intensity of a detection
  laser at 
 \begin_inset Formula $671$
 \end_inset
 
  nm that co-propagates with the trapping laser.
  The detection laser power is maintained at much lower levels than that
- required to trap a bead independently.
- The back-scattered signal from a trapped bead is collected on a position
+ required to trap a particle independently.
+ The back-scattered signal from a trapped particle is collected on a position
  sensitive photodiode that we construct by placing a knife-edge in front
  of a Thorlabs PDA100A-EC Si-photodiode (bandwidth 2.4 MHz) so that a portion
  of the signal is obstructed by the knife-edge.
@@ -824,21 +830,20 @@ l plane interferometry using the back-scattered intensity of a detection
 \begin_inset Formula $y$
 \end_inset
 
- component of the Brownian motion of the bead is measured, with the edge
- being flipped by 
+ component of the motion of the particle is measured, with the edge being
+ flipped by 
 \begin_inset Formula $90$
 \end_inset
 
- degrees to select the coordinate being measured.
- To reduce cross-talk between the orthogonal components, we use an acousto-optic
- modulator that is placed in the conjugate plane of the microscope 
-\backslash
-cite{rsi12} to sinusoidally scan the trapping beam (and thus the single
- trapped bead) in the 
+ degrees to select between components .
+ To reduce cross-talk between the orthogonal components, an acousto-optic
+ modulator is placed in the conjugate plane of the microscope to sinusoidally
+ scan the trapping beam, and thus the single trapped particle, in the direction
+ of the 
 \begin_inset Formula $x$
 \end_inset
 
--direction, and measure the response in the photodiode with the knife-edge
+component, and measure the response in the photodiode with the knife-edge
  placed to detect the 
 \begin_inset Formula $y$
 \end_inset
@@ -846,11 +851,15 @@ cite{rsi12} to sinusoidally scan the trapping beam (and thus the single
 -component of motion.
  The detected signal is minimized so that the effects of cross-talk are
  almost entirely negligible.
- The large bandwidth of the photodiode, that is typically much faster than
- most available commercial quadrant photodetectors, addresses concerns about
- photodiode response time and associated requirements of data filtering.
- The data from the photodiode is logged into a computer using a National
- Instruments DAQ system.
+ The large bandwidth of the photodiode, that is much faster than most available
+ commercial quadrant photodetectors, minimizes photodiode response time
+ and prevents spurious correlations in the displacement time series.
+ The data from the photodiode is logged using a National Instruments DAQ
+ system.
+ Details of our experimental set up including the beam-coupling optics is
+ available in Ref.~
+\backslash
+cite{rsi12}.
  
 \end_layout
 
@@ -957,7 +966,7 @@ The partial derivatives of the logarithm of the posterior probability with
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\frac{\partial\ln P}{\partial D}=-\frac{N-1}{2D}+\frac{\lambda\sum\Delta_{n}^{2}}{2D^{2}I_{2}}-\frac{1}{2D}+\frac{\lambda x_{1}^{2}}{2D^{2}}
+\frac{\partial\ln P}{\partial D}=-\frac{N-1}{2D}+\frac{\lambda\sum\Delta_{n}^{2}}{2D^{2}I_{2}}-\frac{1}{2D}+\frac{\lambda x_{1}^{2}}{2D^{2}}`
 \]
 
 \end_inset
@@ -976,7 +985,7 @@ where
 \end_inset
 
  and this solution is used in the first equation, together with the large-sample
- approximation
+ asymptotics
 \begin_inset Formula 
 \[
 \frac{\lambda}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)\thickapprox\frac{\lambda}{\left(N-1\right)}\frac{\sum\Delta_{n}^{2}}{I_{2}},
