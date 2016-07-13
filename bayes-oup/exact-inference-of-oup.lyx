@@ -121,7 +121,7 @@ Bayesian inference provides a principled way of estimating the parameters
  Here we present Bayesian methods for inferring the parameters of this process,
  the trap stiffness and the particle friction coefficient, that use exact
  likelihoods and sufficient statistics to arrive at simple expressions for
- the maximum aposteriori estimates.
+ the maximum a posteriori estimates.
  This obviates the need for Monte Carlo sampling and yields methods that
  are both fast and accurate.
  We apply these to experimental data and compare with commonly used non-Bayesian
@@ -216,7 +216,7 @@ In this paper, we apply Bayesian inference to the problem of estimating
  to this end.
  Here, we present a method that does away with sampling by exploiting the
  exact likelihoods and sufficient statistics of the problem and provides,
- thereby, exact maximum aposteriori parameter estimates in terms of these
+ thereby, exact maximum a posteriori parameter estimates in terms of these
  statistics.
  Consequently, the method is both extremely fast and accurate, being able
  to jointly estimate the trap stiffness and the particle friction from a
@@ -609,7 +609,7 @@ and the sum runs from
 \end_layout
 
 \begin_layout Standard
-The maximum aposteriori (MAP) estimate 
+The maximum a posteriori (MAP) estimate 
 \begin_inset Formula $(\lambda^{\star},D^{\star})$
 \end_inset
 
@@ -646,12 +646,12 @@ where both
 \begin_inset Formula $\lambda=\lambda^{\star}.$
 \end_inset
 
- These straightforwardly provide estimates of the parameters without the
- need for fitting or sampling.
+ These provide direct estimates of the parameters without the need for fitting
+ or sampling.
  The standar errors of these estimates are obtained from the matrix of second
  derivates of the posterior, evaluated at the maximum.
  We do not provide their unwieldy expressions but do make use of them when
- reporting point estimates.
+ reporting, below, point estimates from experimental data.
 \end_layout
 
 \begin_layout Standard
