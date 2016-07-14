@@ -658,7 +658,7 @@ where both
  The standar errors of these estimates are obtained from the matrix of second
  derivates of the posterior, evaluated at the maximum.
  We do not provide their unwieldy expressions but do make use of them when
- reporting, below, point estimates from experimental data.
+ reporting, see below, point estimates from experimental data.
 \end_layout
 
 \begin_layout Standard
@@ -733,9 +733,9 @@ entire
  relevant to estimation is contained in these four statistics.
  Their use reduces computational expense enormously as only four numbers,
  rather than an entire time series, is required.
- The combination of exact likelihoods, the use of sufficient statistics
- and analytical MAP estimates yields fast and accurate methods for estimating
- parameters from the time series of particle positions.
+ The combined use of exact likelihoods, sufficient statistics and analytical
+ MAP estimates  yields fast and accurate methods for estimating parameters
+ from the time series of particle positions.
  This completes our description of the Bayesian procedure for jointly estimating
  
 \begin_inset Formula $\lambda$
