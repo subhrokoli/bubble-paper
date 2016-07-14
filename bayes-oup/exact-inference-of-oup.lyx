@@ -436,7 +436,7 @@ where
  The correlation function decays exponentially, 
 \begin_inset Formula 
 \[
-\langle x(t)x(t^{\prime})\rangle=\frac{k_{B}T}{k}e^{-\lambda|t-t^{\prime}|}
+C(t-t^{\prime})\equiv\langle x(t)x(t^{\prime})\rangle=\frac{k_{B}T}{k}e^{-\lambda|t-t^{\prime}|}
 \]
 
 \end_inset
