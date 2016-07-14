@@ -711,25 +711,22 @@ This procedure is independent of the sampling time and is equivalent to
 \end_layout
 
 \begin_layout Standard
-The posterior probabilities in both methods can be written in terms of the
- four quantities 
-\begin_inset Formula $T_{1}(X)=\sum x_{n+1}^{2}$
+The posterior probabilities in both methods can be written in terms of four
+ functions of the data
+\begin_inset Formula 
+\begin{eqnarray}
+T_{1}(X) & = & \sum x_{n+1}^{2},\quad T_{2}(X)=\sum x_{n+1}x_{n},\nonumber \\
+T_{3}(X) & = & \sum x_{n}^{2},\qquad T_{4}(X)=x_{1}^{2},
+\end{eqnarray}
+
 \end_inset
 
-, 
-\begin_inset Formula $T_{2}(X)=\sum x_{n+1}x_{n}$
-\end_inset
-
-, 
-\begin_inset Formula $T_{3}(X)=\sum x_{n}^{2}$
-\end_inset
-
- and 
-\begin_inset Formula $T_{4}(X)=x_{1}^{2}$
-\end_inset
-
-, which, therefore, are the sufficient statistics of the problem.
- The entire information in the time series 
+which, therefore, are the sufficient statistics of the problem.
+ The 
+\emph on
+entire
+\emph default
+ information in the time series 
 \begin_inset Formula $X$
 \end_inset
 
