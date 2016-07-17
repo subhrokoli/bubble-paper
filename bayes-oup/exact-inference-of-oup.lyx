@@ -404,9 +404,9 @@ The solution is a normal distribution,
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
+\begin{equation}
 x^{\prime}t^{\prime}|x\thinspace t\sim\mathcal{N}\left(xe^{-\lambda(t^{\prime}-t)},\frac{D}{\lambda}[1-e^{-2\lambda(t^{\prime}-t)}]\right),
-\]
+\end{equation}
 
 \end_inset
 
@@ -435,9 +435,9 @@ where
 .
  The correlation function decays exponentially, 
 \begin_inset Formula 
-\[
+\begin{equation}
 C(t-t^{\prime})\equiv\langle x(t)x(t^{\prime})\rangle=\frac{k_{B}T}{k}e^{-\lambda|t-t^{\prime}|}
-\]
+\end{equation}
 
 \end_inset
 
@@ -454,11 +454,20 @@ a property guaranteed by Doob's theorem for any Gauss-Markov processes.
 \uwave off
 \noun off
 \color none
+The Fourier transform of the correlation function gives the power spectral
+ density, which is a Lorentzian, 
+\begin_inset Formula 
+\begin{equation}
+C(\omega)\equiv\langle|x(\omega)|^{2}\rangle=\frac{k_{B}T}{k}\frac{1}{\omega^{2}+\lambda^{2}}
+\end{equation}
+
+\end_inset
+
 The relation 
 \begin_inset Formula $D/\lambda=k_{B}T/k$
 \end_inset
 
- has been used in obtaining the correlation function.
+ has been used while obtaining the last two relations.
  
 \end_layout
 
@@ -476,9 +485,9 @@ The stationary distribution
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
+\begin{equation}
 x\sim\mathcal{N}\left(0,\frac{D}{\lambda}\right)=\mathcal{N}\left(0,\frac{k_{B}T}{k}\right).
-\]
+\end{equation}
 
 \end_inset
 
@@ -522,9 +531,9 @@ t with
  Then, using the Markov property of the Ornstein-Uhlenbeck process, the
  probability of the sample path is given by 
 \begin_inset Formula 
-\[
+\begin{equation}
 P(X|\lambda,D)=\prod_{n=1}^{N-1}P_{1|1}(x_{n+1}|x_{n},\lambda,D)P_{1}(x_{1}|\lambda,D)
-\]
+\end{equation}
 
 \end_inset
 
@@ -548,7 +557,7 @@ The denominator
 \begin_inset Formula $P(X)$
 \end_inset
 
- is an unimportant normalization, independent of the parameters that we
+ is an unimportant normalization, independent of the parameters, that we
  henceforth ignore.
  Since both 
 \begin_inset Formula $k$
@@ -630,13 +639,13 @@ The maximum a posteriori (MAP) estimate
 
 , while the standard error of this estimate is obtained from the matrix
  of second derivatives evaluated at the maximum.
- The exact solution of the stationary conditions, derived in the Appendix,
+ The analytical solution of the stationary conditions, derived in the Appendix,
  yields the MAP estimate to be
 \begin_inset Formula 
 \begin{eqnarray}
-\lambda^{\star} & = & \frac{1}{\Delta t}\ln\frac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}}\label{eq:map-estimate}\\
+\lambda^{\star} & = & \frac{1}{\Delta t}\ln\frac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}}\nonumber \\
 D^{\star} & = & \frac{\lambda^{\star}}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)\nonumber \\
-\frac{k^{\star}}{k_{B}T} & = & \frac{\lambda^{\star}}{D^{\star}}\nonumber 
+\frac{k^{\star}}{k_{B}T} & = & \frac{\lambda^{\star}}{D^{\star}}\label{eq:map-estimate}
 \end{eqnarray}
 
 \end_inset
@@ -732,7 +741,7 @@ entire
 
  relevant to estimation is contained in these four statistics.
  Their use reduces computational expense enormously as only four numbers,
- rather than an entire time series, is required.
+ rather than the entire time series, is required.
  The combined use of exact likelihoods, sufficient statistics and analytical
  MAP estimates yields fast and accurate methods for estimating parameters
  from the time series of particle positions.
@@ -765,11 +774,46 @@ A comparison of the estimates obtained from these independent procedures
  signals a breakdown of applicability of the model and the assumptions implicit
  in it: overdamped dynamics, constant friction, harmonicity of the potential,
  and thermal equilibrium.
- 
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename balanced detection.pdf
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Setup for simultaneous detection of 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ components of particle motion.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
-data acquisition
+Data acquisition
 \end_layout
 
 \begin_layout Standard
