@@ -538,9 +538,9 @@ The probability
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
+\[
 P(\lambda,D|X)=\frac{P(X|\lambda,D)P(\lambda,D)}{P(X)}
-\end{equation}
+\]
 
 \end_inset
 
@@ -601,9 +601,9 @@ ly, we use informative priors for
 
 where we have defined the two quantities 
 \begin_inset Formula 
-\begin{equation}
+\[
 I_{2}\equiv1-e^{-2\lambda\Delta t},\quad\Delta_{n}\equiv x_{n+1}-e^{-\lambda\Delta t}x_{n}
-\end{equation}
+\]
 
 \end_inset
 
@@ -658,7 +658,7 @@ where both
  The standar errors of these estimates are obtained from the matrix of second
  derivates of the posterior, evaluated at the maximum.
  We do not provide their unwieldy expressions but do make use of them when
- reporting, see below, point estimates from experimental data.
+ reporting point estimates from experimental data (see below).
 \end_layout
 
 \begin_layout Standard
@@ -734,7 +734,7 @@ entire
  Their use reduces computational expense enormously as only four numbers,
  rather than an entire time series, is required.
  The combined use of exact likelihoods, sufficient statistics and analytical
- MAP estimates  yields fast and accurate methods for estimating parameters
+ MAP estimates yields fast and accurate methods for estimating parameters
  from the time series of particle positions.
  This completes our description of the Bayesian procedure for jointly estimating
  
@@ -775,9 +775,7 @@ data acquisition
 \begin_layout Standard
 Data on the position fluctuations of an optically trapped Brownian particle
  is collected using the setup described below.
- Further details are available in 
-\backslash
-cite{rsi12}.
+ Further details are available in [].
  The optical tweezers system is constructed around a Zeiss inverted microscope
  (Axiovert.A1) with a 
 \begin_inset Formula $100x$
