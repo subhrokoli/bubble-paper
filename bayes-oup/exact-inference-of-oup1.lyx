@@ -831,8 +831,8 @@ ref{fig1}.
 
  coordinate of Brownian motion at any instant of time.
  The advantage of such balanced detection is that the intensity fluctuations
- of the laser are present in both beams simultaneously and are thus canceled
- out when the difference is taken.
+ of the laser are present in both detection beams simultaneously and are
+ thus canceled out when the difference is taken.
  Note that the direction of the edge mirror decides whether the 
 \begin_inset Formula $x$
 \end_inset
@@ -853,15 +853,12 @@ ref{fig1}.
  of data filtering.
  The data from the photodiodes is logged into a computer using a National
  Instruments DAQ system and Labview at a sampling rate of 5 kHz.
-\end_layout
-
-\begin_layout Standard
-For calibrating the Brownian motion, i.e.
+ For calibrating the Brownian motion, i.e.
  converting the voltage into physical distance which is necessary for measuring
  the diffusion constant, we employ an acousto-optic modulator that is placed
- in the back-focal plane of the microscope objective, and scan the trapped
- bead by known distances and measure the balanced detector response according
- to the method described in Ref.
+ in a plane conjugate to the back-focal plane of the microscope objective,
+ and scan the trapped bead by known distances and measure the balanced detector
+ response according to the method described in Ref.
  ~
 \backslash
 cite{rsi12}.

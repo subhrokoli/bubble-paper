@@ -810,15 +810,30 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Setup for simultaneous detection of 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig1"
+
+\end_inset
+
+Schematic of balanced detection scheme to measure Brownian motion in the
+ 
 \begin_inset Formula $x$
 \end_inset
 
- and 
-\begin_inset Formula $y$
+ direction from a single trapped polystyrene bead.
+ Back-scattered light from the trapped bead is incident on an edge mirror
+ that divides it equally between photodiodes PD1 and PD2, having voltate
+ outputs A and B respectively.
+ The normalized 
+\begin_inset Formula $x$
 \end_inset
 
- components of particle motion.
+ coordinate of the Brownian motion at any instant in time is given by 
+\begin_inset Formula $\dfrac{A-B}{A+B}.$
+\end_inset
+
+
 \end_layout
 
 \end_inset
