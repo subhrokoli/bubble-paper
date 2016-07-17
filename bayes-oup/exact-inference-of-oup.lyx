@@ -812,7 +812,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset label
 LatexCommand label
-name "fig1"
+name "fig:balanced-detection"
 
 \end_inset
 
@@ -821,16 +821,16 @@ Schematic of balanced detection scheme to measure Brownian motion in the
 \begin_inset Formula $x$
 \end_inset
 
- direction from a single trapped polystyrene bead.
- Back-scattered light from the trapped bead is incident on an edge mirror
- that divides it equally between photodiodes PD1 and PD2, having voltate
+ direction from a single trapped polystyrene sphere.
+ Back-scattered light from the trapped sphere is incident on an edge mirror
+ that divides it equally between photodiodes PD1 and PD2, having voltage
  outputs A and B respectively.
  The normalized 
 \begin_inset Formula $x$
 \end_inset
 
- coordinate of the Brownian motion at any instant in time is given by 
-\begin_inset Formula $\dfrac{A-B}{A+B}.$
+ coordinate of the sphere at any instant in time is given by 
+\begin_inset Formula $(A-B)/(A+B).$
 \end_inset
 
 
@@ -899,9 +899,16 @@ m in 10% NaCl-water solution, around
  The detection laser power is maintained at much lower levels than that
  required to trap a particle independently.
  The back-scattered signal from a trapped particle is collected on a position
- sensitive photodiode that we construct by placing a knife-edge in front
+ sensitive photodiode that is constructed by placing a knife-edge in front
  of a Thorlabs PDA100A-EC Si-photodiode (bandwidth 2.4 MHz) so that a portion
- of the signal is obstructed by the knife-edge.
+ of the signal is obstructed by the knife-edge, see Fig.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:balanced-detection"
+
+\end_inset
+
+).
  The position of the knife-edge determines whether the 
 \begin_inset Formula $x$
 \end_inset
@@ -911,11 +918,11 @@ m in 10% NaCl-water solution, around
 \end_inset
 
  component of the motion of the particle is measured, with the edge being
- flipped by 
+ turned by 
 \begin_inset Formula $90$
 \end_inset
 
- degrees to select between components .
+ degrees to select between components.
  To reduce cross-talk between the orthogonal components, an acousto-optic
  modulator is placed in the conjugate plane of the microscope to sinusoidally
  scan the trapping beam, and thus the single trapped particle, in the direction
@@ -923,14 +930,14 @@ m in 10% NaCl-water solution, around
 \begin_inset Formula $x$
 \end_inset
 
-component, and measure the response in the photodiode with the knife-edge
+-component, and measure the response in the photodiode with the knife-edge
  placed to detect the 
 \begin_inset Formula $y$
 \end_inset
 
 -component of motion.
  The detected signal is minimized so that the effects of cross-talk are
- almost entirely negligible.
+ entirely negligible.
  The large bandwidth of the photodiode, that is much faster than most available
  commercial quadrant photodetectors, minimizes photodiode response time
  and prevents spurious correlations in the displacement time series.
