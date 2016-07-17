@@ -427,8 +427,14 @@ where
 \begin_inset Formula $|t-t^{\prime}|$
 \end_inset
 
-, unlike approximate solutions used Optics Express, which are accurate only
- when 
+, unlike the approximate solution used in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "richly2013calibrating"
+
+\end_inset
+
+, which is accurate only when 
 \begin_inset Formula $\lambda|t-t^{\prime}|\ll1$
 \end_inset
 
@@ -455,7 +461,7 @@ a property guaranteed by Doob's theorem for any Gauss-Markov processes.
 \noun off
 \color none
 The Fourier transform of the correlation function gives the power spectral
- density, which is a Lorentzian, 
+ density 
 \begin_inset Formula 
 \begin{equation}
 C(\omega)\equiv\langle|x(\omega)|^{2}\rangle=\frac{k_{B}T}{k}\frac{1}{\omega^{2}+\lambda^{2}}
@@ -463,7 +469,12 @@ C(\omega)\equiv\langle|x(\omega)|^{2}\rangle=\frac{k_{B}T}{k}\frac{1}{\omega^{2}
 
 \end_inset
 
-The relation 
+which is Lorentzian in the angular frequency 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
+ The relation 
 \begin_inset Formula $D/\lambda=k_{B}T/k$
 \end_inset
 
@@ -512,7 +523,7 @@ Bayesian inference
 \end_layout
 
 \begin_layout Standard
-Consider the time series 
+Consider, now, the time series 
 \begin_inset Formula $X\equiv(x_{1},x_{2},\ldots,x_{N})$
 \end_inset
 
@@ -778,13 +789,21 @@ A comparison of the estimates obtained from these independent procedures
 placement t
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
+\begin_inset space \hfill{}
+\end_inset
+
+
 \begin_inset Graphics
 	filename balanced detection.pdf
 	scale 30
 
+\end_inset
+
+
+\begin_inset space \hfill{}
 \end_inset
 
 
