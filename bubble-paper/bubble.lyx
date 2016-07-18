@@ -85,7 +85,7 @@ Assembly and manipulation of mesoscopic particles by active thermocapillary
 \end_layout
 
 \begin_layout Author
-Basudev Roy
+Subhrokoli Ghosh
 \end_layout
 
 \begin_layout Affiliation
@@ -101,7 +101,7 @@ Institute of Mathematical Sciences, Chennai
 \end_layout
 
 \begin_layout Author
-Subhrokoli Ghosh
+Basudev Roy
 \end_layout
 
 \begin_layout Affiliation
@@ -142,12 +142,12 @@ The temperature variation of the surface tension at a liquid-gas interface
  An analytical solution of the thermocapillary problem, based on the Stokes
  and heat equations, yields the flow profile around the bubble.
  The flow around a single bubble causes mesoscopic particles dispersed in
- the ambient liquid assemble to in in rings at the bubble interface, which
- we demonstrate experimentally by inducing self-assembly of polystyrene
- microparticles on the bubble surface in rings.
- However, an asymmetric temperature profile generated at the bubble base
- leads to the breaking of azimuthal symmetry in the resultant flow that
- leads to strongly diverging streamlines away from the bubble.
+ the ambient liquid to assemble in rings at the bubble interface, which
+ we demonstrate experimentally on freely diffusing polystyrene microparticles
+ near of the bubble.
+ An asymmetric temperature profile generated at the bubble base leads to
+ the breaking of azimuthal symmetry in the resultant flow that leads to
+ strongly diverging streamlines away from the bubble.
  This is exploited experimentally by inducing simultaneous accumulation
  and pumping of mesoscopic particles that are at different z-planes with
  respect to the bubble.
@@ -158,11 +158,11 @@ The temperature variation of the surface tension at a liquid-gas interface
  problem with two bubbles grown on a temperature gradient leads to even
  stronger breaking of aziumthal symmetry resulting in closed streamlines
  in the axial direction.
- Experimentally, the former leads to the assembly of freely diffusing mesoscopic
- particles on either bubble depending on their initial trajectory with respect
- to the separatrix in the resultant flow, while the latter leads to local
- vorticity that causes spiraling motion in the particles akin to that induced
- by angular momentum carrying beams in optical tweezers.
+ Experimentally, the former leads to the sorting of  mesoscopic particles
+ by their assembly on either bubble depending on their initial trajectory
+ with respect to the separatrix in the resultant flow, while the latter
+ leads to local vorticity that causes spiraling motion in the particles
+ similar to that induced by angular momentum carrying beams in optical tweezers.
  Our studies indicate that the active thermocapillary stresses induced by
  multiple microbubbles offer simple routes to complex and controllable micromani
 pulation of particles that are typically difficult to achieve in optical
