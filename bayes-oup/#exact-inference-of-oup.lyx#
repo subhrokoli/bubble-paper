@@ -851,7 +851,7 @@ Experimental setup and data acquisition
 \end_layout
 
 \begin_layout Standard
-We collect the position fluctuation data of an optically trapped Brownian
+We collect data on position fluctuations of an optically trapped Brownian
  particle using a standard optical tweezers setup that is described in detail
  in Ref.~ 
 \backslash
@@ -892,9 +892,9 @@ m in 10% NaCl-water solution, around
 
  of which is pipetted on a standard glass cover slip.
  The total power available at the trapping plane is around 15 mW.
- The detection of Brownian motion of a single trapped particle is performed
- by back-focal plane interferometry using the back-scattered intensity of
- a detection laser at 
+ Motion detection of a single trapped particle is performed by back-focal
+ plane interferometry using the back-scattered intensity of a detection
+ laser at 
 \begin_inset Formula $671$
 \end_inset
 
@@ -954,8 +954,7 @@ cite{rsi12}.
 istance calibration of the detection system.
  For the viscosity measurement, we add glycerol to water in fixed proportions
  to create 5 samples of different viscosity.
- The viscosity of each sample is then measured by a viscometer to match
- with the experimental results.
+ 
 \end_layout
 
 \begin_layout Section
