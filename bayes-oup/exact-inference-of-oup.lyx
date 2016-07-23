@@ -851,9 +851,8 @@ Experimental setup and data acquisition
 \end_layout
 
 \begin_layout Standard
-We collect the position fluctuation data of an optically trapped Brownian
- particle using a standard optical tweezers setup that is described in detail
- in Ref.
+We collect position fluctuation data of an optically trapped Brownian particle
+ using a standard optical tweezers setup that is described in detail in
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -864,7 +863,11 @@ key "rsi12"
 .
  Here we provide a brief overview.
  The optical tweezers system is constructed around a Zeiss inverted microscope
- (Axiovert.A1) with a 
+ (
+\emph on
+Axiovert.A1
+\emph default
+) with a 
 \begin_inset Formula $100x$
 \end_inset
 
@@ -877,13 +880,17 @@ key "rsi12"
 \begin_inset Formula $1064$
 \end_inset
 
- nm from a semiconductor laser (Lasever, maximum power 
+ nm from a semiconductor laser (
+\emph on
+Lasever
+\emph default
+, maximum power 
 \begin_inset Formula $500$
 \end_inset
 
 mW) into the sample.
- The back aperture of the objective is slightly overfilled so as to maximize
- the trapping intensity.
+ The back aperture of the objective is slightly overfilled to maximize the
+ trapping intensity.
  The sample consists of a dilute suspension (volume fraction 
 \begin_inset Formula $\phi=0.01$
 \end_inset
@@ -898,17 +905,17 @@ m in 10% NaCl-water solution, around
 
  of which is pipetted on a standard glass cover slip.
  The total power available at the trapping plane is around 15 mW.
- The detection of Brownian motion of a single trapped particle is performed
- by back-focal plane interferometry using the back-scattered intensity of
- a detection laser at 
+ The motion of a single trapped particle is observed by back-focal plane
+ interferometry using the back-scattered intensity of a detection laser
+ at 
 \begin_inset Formula $671$
 \end_inset
 
  nm that co-propagates with the trapping laser.
  The detection laser power is maintained at much lower levels than that
- required to trap a particle independently.
- The back-scattered signal from a trapped bead is measured using a balanced
- detection scheme that we show in Fig.
+ required to trap a particle.
+ The back-scattered signal from the trapped particle is measured using a
+ balanced detection scheme, schematically illustrated in Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -917,20 +924,30 @@ reference "fig:balanced-detection"
 \end_inset
 
 .
- The back- scattered light beam is incident on an edge mirror which divides
+ The back-scattered light beam is incident on an edge mirror which divides
  it equally into two halves that are focused using two lenses of equal focal
- length on photodiodes PD1 and PD2 (Thorlabs PDA100A-EC Si-photodiodes having
- bandwidth 2.4 MHz).
- The voltage outputs of PD1 and PD2, i.e.
- A and B, respectively, are then combined as 
-\begin_inset Formula $\dfrac{A-B}{A+B}$
+ length on photodiodes PD1 and PD2 (
+\emph on
+Thorlabs
+\emph default
+ PDA100A-EC Si-photodiodes of bandwidth 2.4 MHz).
+ The voltage outputs 
+\begin_inset Formula $A$
 \end_inset
 
- , which gives the normalized value of the 
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+, of PD1 and PD2 respectively, are then combined as 
+\begin_inset Formula $(A-B)/(A+B)$
+\end_inset
+
+ to give the normalized value of the 
 \begin_inset Formula $x$
 \end_inset
 
- coordinate of Brownian motion at any instant of time.
+ coordinate of motion at any instant of time.
  The advantage of such balanced detection is that the intensity fluctuations
  of the laser are present in both beams simultaneously and are thus canceled
  out when the difference is taken.
@@ -942,19 +959,23 @@ reference "fig:balanced-detection"
 \begin_inset Formula $y$
 \end_inset
 
- coordinate of Brownian motion are being measured with the mirror rotated
- by 
+ coordinate of motion is being measured.
+ The mirror is rotated by 
 \begin_inset Formula $90$
 \end_inset
 
  degrees to select between the coordinates.
- The photodiodes are much faster than most available commercial quadrant
- photodetectors with a rise time of around 50 ns at highest gain, which
- addresses concerns about photodiode response time and associated requirements
- of data filtering.
+ The fast response of the photodiodes, with a rise time of 50ns at highest
+ gain, ensures that spurious correlations are kept to a minimum and the
+ data filtering necessary with sloewer commercial quadrant photodetectors
+ is avoided entirely.
  The data from the photodiodes is logged into a computer using a National
  Instruments DAQ system and Labview at sampling rates between 2-5 kHz.
- For calibrating the Brownian motion, i.e.
+ For calibrating the motion, 
+\emph on
+i.e.
+
+\emph default
  converting the voltage into physical distance which is necessary for measuring
  the diffusion constant, we employ an acousto-optic modulator that is placed
  in the back-focal plane of the microscope objective and scan the trapped
