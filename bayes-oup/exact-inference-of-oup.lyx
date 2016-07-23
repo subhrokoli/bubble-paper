@@ -853,9 +853,15 @@ Experimental setup and data acquisition
 \begin_layout Standard
 We collect the position fluctuation data of an optically trapped Brownian
  particle using a standard optical tweezers setup that is described in detail
- in Ref.~ 
-\backslash
-cite{rsi12}.
+ in Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rsi12"
+
+\end_inset
+
+.
  Here we provide a brief overview.
  The optical tweezers system is constructed around a Zeiss inverted microscope
  (Axiovert.A1) with a 
@@ -902,9 +908,15 @@ m in 10% NaCl-water solution, around
  The detection laser power is maintained at much lower levels than that
  required to trap a particle independently.
  The back-scattered signal from a trapped bead is measured using a balanced
- detection scheme that we show in Fig.~ 
-\backslash
-ref{fig1}.
+ detection scheme that we show in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:balanced-detection"
+
+\end_inset
+
+.
  The back- scattered light beam is incident on an edge mirror which divides
  it equally into two halves that are focused using two lenses of equal focal
  length on photodiodes PD1 and PD2 (Thorlabs PDA100A-EC Si-photodiodes having
@@ -948,8 +960,13 @@ ref{fig1}.
  in the back-focal plane of the microscope objective and scan the trapped
  bead by distances which are determined from the pixel calibration of images
  taken by the camera attached to the microscope 
-\backslash
-cite{rsi12}.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rsi12"
+
+\end_inset
+
+.
  The balanced detection output is simultaneously measured to yield the voltage-d
 istance calibration of the detection system.
  For the viscosity measurement, we add glycerol to water in fixed proportions
