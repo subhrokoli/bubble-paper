@@ -992,8 +992,8 @@ key "rsi12"
 istance calibration of the detection system.
  For the viscosity measurement, we add glycerol to water in fixed proportions
  to create 5 samples of different viscosity.
- The viscosity of each sample is then measured by a commercial viscometer
- to match with the experimental results.
+ The viscosity of each sample is then measured by a commercial rheometer
+ (Brookfield DB3TLVCJ0) to match with the experimental results.
 \end_layout
 
 \begin_layout Section
