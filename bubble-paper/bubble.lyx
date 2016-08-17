@@ -282,155 +282,640 @@ Theory
 \end_layout
 
 \begin_layout Standard
-We describe the system with a set of equations assuming a steady state,
- which are:
-\end_layout
+Temperature field 
+\begin_inset Formula $\theta(\mathbf{r})$
+\end_inset
 
-\begin_layout Standard
-1.
- The Navier-Stokes equation describes the velocity of the fluid flow in
- the system:
-\end_layout
+ satisfies the Laplace equation, while the fluid flow 
+\begin_inset Formula $\mathbf{v}(\mathbf{r})$
+\end_inset
 
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\nabla P+\eta\nabla^{2}\mathrm{\mathit{v}=}0
-\end{equation}
+ satisfies the Stokes equation.
+ The fluid flow 
+\begin_inset Formula $\mathbf{v}(\mathbf{r})$
+\end_inset
+
+ and temperature 
+\begin_inset Formula $\mathbf{\theta}(\mathbf{r})$
+\end_inset
+
+, satisfy the following equation for a point 
+\begin_inset Formula $\mathbf{r}$
+\end_inset
+
+ in the bulk, which does not include the bubble surface, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-2.
- Incompressibility condition:
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
-\nabla.v=0
-\end{equation}
+\begin{align}
+\boldsymbol{\nabla}^{2}\mathrm{\theta} & =0,\\
+\boldsymbol{\nabla}\cdot\mathbf{\boldsymbol{\sigma}} & =0,\\
+\boldsymbol{\nabla}\cdot\mathbf{v} & =0.
+\end{align}
 
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
 \end_layout
 
-\begin_layout Standard
-3.
- Heat equation:
-\end_layout
+\end_inset
 
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\nabla^{2}\mathrm{\mathit{T}=}0
-\end{equation}
+where 
+\begin_inset Formula $\bm{\sigma}=-p\mathbf{I}+\eta(\bm{\nabla}\mathbf{v}+\bm{\nabla}\mathbf{v}^{T})$
+\end_inset
+
+ is the Cauchy stress, 
+\begin_inset Formula $\eta$
+\end_inset
+
+ is viscosity, and 
+\begin_inset Formula $p$
+\end_inset
+
+ is the pressure.
+ The first two equations above are respectively the Laplace and the Stokes
+ equation while the last equation is the statement of the incompressibility
+ of the fluid.
+ The inside of the bubble is air with negligible heat condition.
+ Thus, there is no heat flux at the surface of the 
+\begin_inset Formula $i$
+\end_inset
+
+-th bubble.
+ We also note that there is no radial component of the fluid velocity on
+ the surface of the bubble, as the it does not move.
+ These lead to boundary condition on the 
+\shape italic
+bubble surface
+\shape default
+,
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
 
 \end_inset
 
 
+\begin_inset Formula 
+\begin{align}
+\mathbf{n}\cdot\boldsymbol{\nabla}\theta(\mathbf{r}_{i}) & =0,\\
+\mathbf{n}\cdot\mathbf{v}(\mathbf{r}_{i}) & =0,\\
+\mathbf{n}\cdot\boldsymbol{\sigma} & =\mathbf{f}.
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
 \end_layout
 
-\begin_layout Standard
+\end_inset
+
 Here 
-\begin_inset Formula $\mathit{v,}$
+\begin_inset Formula $\mathbf{f}$
 \end_inset
 
+ is the traction or force density on the bubble surface.
+ In addition, the fluid flow need to satisfy the no-slip condition at the
+ plane wall and vanish at infinity, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\mathbf{v}=0\text{ at}\,\,z=0,\,\,\\
+\mathbf{v}\rightarrow0,\,p\rightarrow\text{constant as } & z\rightarrow\infty,\\
+\mathbf{\theta}=\text{constant}\text{ at}\,\,z= & 0,
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+and
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
  
-\begin_inset Formula $\mathit{P,}$
+\begin_inset Formula $\boldsymbol{\nabla}\mathbf{\theta}$
+\end_inset
+
+ is a constant vector along 
+\begin_inset Formula $\ensuremath{z}$
+\end_inset
+
+-axis, very far away from the bubbles.
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+Having presented the differential equations and the boundary conditions
+ of the problem, we now turn to the method of the solution.
+ The temperature at any point 
+\begin_inset Formula $\mathbf{r}$
+\end_inset
+
+ in the bulk can be then written in terms of the boundary integral 
+\begin_inset Formula 
+\begin{align}
+\theta(\mathbf{r}) & =\theta^{{\scriptscriptstyle \infty}}(\mathbf{r})-\int G(\mathbf{r,\,\mathbf{R}_{i}+\mathbf{s}}_{i})\,\left(\mathbf{n}\cdot\boldsymbol{\nabla}\theta(\mathbf{r}_{i})\right)\,\text{d}S_{i}.\nonumber \\
+ & +\int\mathbf{n}\cdot\mathbf{\boldsymbol{\nabla}}G(\mathbf{r,\,\mathbf{R}_{i}+\mathbf{s}}_{i})\,\theta(\mathbf{r}_{i})\,\text{d}S_{i}.
+\end{align}
+
+\end_inset
+
+Here 
+\begin_inset Formula $\theta^{{\scriptscriptstyle \infty}}(\mathbf{r})$
+\end_inset
+
+ is the externally imposed temperature at location 
+\begin_inset Formula $\mathbf{r}$
+\end_inset
+
+ and repeated particle indices are summed over.
+\begin_inset Formula $G(\mathbf{R}_{i},\,\mathbf{R}_{j})$
+\end_inset
+
+ is the Green's function of Laplace equation,
+\begin_inset Formula 
+\begin{alignat*}{1}
+ & \boldsymbol{\nabla}^{2}G(\mathbf{r},\,\mathbf{r}')=-\delta(\mathbf{r}-\mathbf{r}').
+\end{alignat*}
+
+\end_inset
+
+The first term in the boundary integral for the temperature, does not contribute
+, due to negligible heat flux across the particle surface.
+ The second terms can be evaluate by expanding the temperature in terms
+ of, 
+\begin_inset Formula $\mathbf{Y}^{(l)},$
+\end_inset
+
+ tensorial spherical harmonics as 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\theta(\mathbf{r}_{i}) & =\frac{1}{l!(2l-1)!!}\boldsymbol{\Theta}^{(l)}\cdot\mathbf{Y}^{(l)}(\bm{\hat{\rho}}),\\
+\theta^{{\scriptscriptstyle \infty}}(\mathbf{r}_{i}) & =\frac{1}{l!(2l-1)!!}\boldsymbol{\Theta}^{{\scriptscriptstyle \infty}}{}^{(l)}\cdot\mathbf{Y}^{(l)}(\bm{\hat{\rho}}).
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathbf{Y}^{(l)}$
+\end_inset
+
+ are defined as, 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{Y}^{(l)}(\bm{\hat{\rho}})=(-1)^{l}\rho^{l+1}\bm{\nabla}^{(l)}\rho^{-1},
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\bm{\nabla}^{(l)}=\bm{\nabla}_{\alpha_{1}}\dots\bm{\nabla}_{\alpha_{l}}$
+\end_inset
+
+.
+ Using the expansion, in the boundary integral expression, the coefficients
+ of the temperature on the surface of 
+\begin_inset Formula $i$
+\end_inset
+
+-th bubble can be written as,
+\begin_inset Formula 
+\begin{align}
+ & \boldsymbol{\Theta}_{i}^{(l)}=\boldsymbol{\Theta}_{i}^{{\scriptscriptstyle \infty}}{}^{(l)}+\sum_{i\neq j}^{N}\sum_{l'=1}^{\infty}\boldsymbol{\Gamma}_{ij}^{(l,\,l')}\cdot\boldsymbol{\Theta}_{j}^{(l')}.
+\end{align}
+
+\end_inset
+
+where 
+\begin_inset Formula $\boldsymbol{\Gamma}_{ij}^{(l,\,l')}$
+\end_inset
+
+ can be written in terms of the Green's function of the Laplace equation
+ and its derivatives.
+ 
+\end_layout
+
+\begin_layout Standard
+Marangoni effect leads to motion of the bubble due to a non-uniform temperature
+ on its surface.
+ The non-uniformity of the temperature manifests itself in a non-uniform
+ surface tension 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+.
+ The gradient of the surface tension, then, leads to a stress of the surface
+ of the particle which caused the motion.
+ The surface tension is found to decrease with an increase in temperature.
+ The expression for the surface tension for the bubble, then, can be written
+ as function of the temperature 
+\begin_inset Formula $\theta$
+\end_inset
+
+ as,
+\begin_inset Formula $\Upsilon=\Upsilon'\theta.$
+\end_inset
+
+ Here 
+\begin_inset Formula $\Upsilon'$
+\end_inset
+
+ is the derivative of surface tension with respect to temperature and is
+ usually negative.
+ This, as we will show, implies that the bubbles moves towards the hotter
+ region.
+ Thus a gradient in surface temperature implies a gradient in the surface
+ density.
+ A gradient of the surface tension, on the other hand, is related to the
+ discontinuity in the traction,
+\begin_inset Formula 
+\begin{equation}
+(1-\mathbf{n}\mathbf{n})\cdot\mathbf{f}=(1-\mathbf{n}\mathbf{n})\cdot\Upsilon'\boldsymbol{\nabla}\theta^{{\scriptscriptstyle \theta}}.
+\end{equation}
+
+\end_inset
+
+In writing above, we have used the definition of surface tension along with
+ expression of temperature on the surface of the bubble, with an approximation
+ that effect of temperature disturbance by nearby bubbles is negligible.
+ The normal stress balance ensures the spherical shape of the bubble.
+ Here we will assume that the bubble remains spherical and work only with
+ the tangential part of the traction.
+ The speed of the bubble is then determined by 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{V}=
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Having determined the traction from the tangential gradients of the surface
+ tension, we now turn to solve the exterior fluid flow problem.
+ The tangential components of the traction leads to a slip velocity on the
+ surface of the particle such that the boundary velocity 
+\begin_inset Formula $\mathbf{v}(\mathbf{R}_{i}+\boldsymbol{\rho}_{i})$
+\end_inset
+
+ on the surface of the colloid is 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{equation}
+\mathbf{v}(\mathbf{R}_{i}+\boldsymbol{\rho}_{i})=\mathbf{V}_{i}+\bm{\Omega}_{i}\times\bm{\rho}_{i}+\mathbf{v}_{i}^{\mathcal{A}}(\bm{\rho}_{i}).\label{eq:slip-RBM-BC}
+\end{equation}
+
+\end_inset
+
+Here
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset Formula $\mathbf{v}_{i}^{\mathcal{A}}$
+\end_inset
+
+ is the contribution from the slip.
+ The flow in the bulk is given in terms of integrals of the tractions and
+ velocities at the boundaries, 
+\begin_inset Formula 
+\begin{alignat}{1}
+v_{\alpha}(\mathbf{r})= & -\int G_{\alpha\beta}^{W}(\mathbf{r},\mathbf{s}_{j})f_{\beta}(\mathbf{r}_{j})\,d\mathrm{S}_{i}\nonumber \\
++ & \int K_{\beta\alpha\gamma}^{W}(\mathbf{r},\mathbf{s}_{j})n_{\gamma}v_{\beta}(\mathbf{r}_{j})\,d\mathrm{S}_{i},\label{eq:BIE}
+\end{alignat}
+
+\end_inset
+
+where 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+repeated particle indices are summed over,
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset Formula $\mathbf{s}_{j}=\mathbf{R}_{j}+\boldsymbol{\rho}_{j}$
+\end_inset
+
+ is a point on the surface of 
+\begin_inset Formula $j$
+\end_inset
+
+-th particle and 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $G_{\alpha\beta}^{W}(\mathbf{r},\mathbf{r^{\prime}})$
+\end_inset
+
+ is the Green's function of the Stokes system satisfying no-slip condition,
+ 
+\begin_inset Formula $\mathbf{v}=0$
+\end_inset
+
+ on the wall at 
+\begin_inset Formula $z=0$
+\end_inset
+
+.
+ The Green's function 
+\begin_inset Formula $G_{\alpha\beta}^{W}(\mathbf{r},\mathbf{r^{\prime}})$
+\end_inset
+
+, the stress tensor 
+\begin_inset Formula $K_{\alpha\beta\gamma}^{W}(\mathbf{r},\mathbf{r^{\prime}})$
+\end_inset
+
+, and the pressure vector
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset Formula $P_{\alpha}^{W}$
+\end_inset
+
+(
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\mathbf{r},\mathbf{r^{\prime}})$
+\end_inset
+
+ satisfy 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula 
+\begin{alignat*}{1}
+ & \nabla_{\alpha}G_{\alpha\beta}=0,\\
+-\nabla_{\alpha}P_{\beta}+ & \eta\nabla^{2}G_{\alpha\beta}=-\delta\left(\mathbf{r}-\mathbf{r'}\right)\delta_{\alpha\beta},\\
+K_{\alpha\beta\gamma}=-\delta_{\alpha\gamma} & P_{\beta}+\eta\left(\nabla_{\gamma}G_{\alpha\beta}+\nabla_{\alpha}G_{\beta\gamma}\right).
+\end{alignat*}
+
+\end_inset
+
+We now expand the known traction and the unknown velocity in terms of tensorial
+ harmonics as
+\begin_inset Formula 
+\begin{align}
+\mathbf{v}_{i}^{\mathcal{}}\big(\mathbf{R}_{i}+\bm{\rho}_{i}\big) & =\sum_{l=1}^{\infty}\frac{1}{(l-1)!(2l-3)!!}\,\mathbf{V}_{i}^{(l)}\cdot\mathbf{Y}^{(l-1)}(\bm{\hat{\rho}}_{i}),\nonumber \\
+\mathbf{f}\big(\mathbf{R}_{i}+\bm{\rho}_{i}\big) & =\sum_{l=1}^{\infty}\frac{2l-1}{4\pi a^{2}}\,\mathbf{F}_{i}^{(l)}\cdot\mathbf{Y}^{(l-1)}(\bm{\hat{\rho}}_{i}).
+\end{align}
+
+\end_inset
+
+We can then complete the integrals using the orthogonality of the tensorial
+ spherical harmonics.
+ The fluid flow at any point is then obtained in terms of coefficients of
+ traction and velocity,
+\begin_inset Formula 
+\begin{alignat}{1}
+\mathbf{v}(\mathbf{r})=\sum_{l=1}^{\infty}\Big(-\boldsymbol{G}_{j}^{(l)}\cdot\mathbf{F}_{j}^{(l)}+ & \boldsymbol{K}_{j}^{(l)}\cdot\mathbf{V}_{j}^{(l)}\Big),\label{eq:fluid-flow}
+\end{alignat}
+
+\end_inset
+
+where the boundary integrals 
+\begin_inset Formula $\boldsymbol{G}_{j}^{(l)}$
 \end_inset
 
  and 
-\begin_inset Formula $\mathit{T}$
+\begin_inset Formula $\boldsymbol{K}_{j}^{(l)}$
 \end_inset
 
- are the fluid velocity, pressure and temperature respectively.
- These set of equations have to solved together with a set of boundary condition
-s.
- These are: 
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $v=0$
-\end_inset
-
- on the wall.
  
-\end_layout
-
-\begin_layout Enumerate
-T = Room temperature at wall.
- 
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $v\rightarrow0$
-\end_inset
-
- at 
-\begin_inset Formula $x=\infty$
-\end_inset
-
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+can be written in terms of Green's function and its derivatives
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
 .
- 
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $p\rightarrow$
-\end_inset
-
-constant at 
-\begin_inset Formula $x=\infty$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\nabla T$
-\end_inset
-
- is along 
-\begin_inset Formula $\mathit{z}$
-\end_inset
-
- at 
-\begin_inset Formula $x=\infty$
-\end_inset
-
-.
- 
 \end_layout
 
 \begin_layout Standard
-There are another set of boundary conditions on the bubble wall that balances
- stresses: 
-\end_layout
 
-\begin_layout Enumerate
-\begin_inset Formula $v.n=0$
+\shape italic
+Summary
+\shape default
+: Heating of the plane wall by laser beams leads to a temperature distribution
+ in the system.
+ We call this temperature distribution 
+\begin_inset Formula $\theta^{{\scriptscriptstyle \infty}}$
 \end_inset
 
- on the surface of the bubble (no flow into the bubble).
- 
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $n.\nabla T=0$
+.
+ The distribution of this imposed temperature field 
+\begin_inset Formula $\theta^{{\scriptscriptstyle \infty}}$
 \end_inset
 
- on the bubble surface (temperature gradient is only tangential).
- 
-\end_layout
+, then, determines the temperature on the surface of bubbles 
+\begin_inset Formula $\theta(\mathbf{r}_{i})$
+\end_inset
 
-\begin_layout Enumerate
-Tangential stress = Normal temperature gradient (Marangoni condition).
- 
+.
+ The gradient in the temperature on the surface of the bubbles determines
+ the gradient in the surface tension 
+\begin_inset Formula $\Upsilon$
+\end_inset
+
+.
+ The surface tension in turn, leads to the Marangoni stress on the surface
+ of the bubble, which drives the exterior fluid flow 
+\begin_inset Formula $\mathbf{v}(\mathbf{r})$
+\end_inset
+
+, leading to assembly and entrainment of the mesoscopic particles in the
+ flow.
 \end_layout
 
 \begin_layout Section
