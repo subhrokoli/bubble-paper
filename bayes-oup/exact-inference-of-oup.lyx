@@ -1685,6 +1685,76 @@ assumption
 \end_inset
 
 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename four_plots.pdf
+	scale 24.5
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $(a)$
+\end_inset
+
+: Plot of the displacement of the Brownian particle as a function of time,
+ 
+\begin_inset Formula $(b)$
+\end_inset
+
+: Histogram of the displacement of the Brownian particle with a Gaussian
+ curve fitted in black, 
+\begin_inset Formula $(c)$
+\end_inset
+
+: Comparison of the Bayesian estimate of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ with corresponding estimate from autocorrelation function.
+ A straight line with slope equal to 
+\begin_inset Formula $(-\lambda^{\ast})$
+\end_inset
+
+ has been passed through the logarithm of the autocorrelation function,
+ 
+\begin_inset Formula $(d)$
+\end_inset
+
+: Comparison of the Bayesian estimate of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ with corresponding estimate from power spectral density.
+ The value of 
+\begin_inset Formula $\lambda^{\ast}$
+\end_inset
+
+ corresponds to the knee of the log-log plot, as indicated by theory.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1719,7 +1789,7 @@ Estimation of viscosity and diffusion coefficient
 placement t
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -2233,7 +2303,7 @@ Spectral
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+223.961
 \end_layout
 
 \end_inset
