@@ -1733,14 +1733,14 @@ assumption
 
 
 \begin_inset Float figure
-wide false
+wide true
 sideways false
 status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename four_plots.pdf
-	scale 24.5
+	filename four_plots.png
+	scale 42
 
 \end_inset
 
