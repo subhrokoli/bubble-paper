@@ -1066,7 +1066,64 @@ istance calibration of the detection system.
 Results
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
+Descriptive statistics : (a) data set (b) histogram (c) autocorrelation
+ plot.
+ 
+\end_layout
+
+\begin_layout Itemize
+Plot of posterior distribution in the 
+\begin_inset Formula $\lambda-D$
+\end_inset
+
+ plane, together with position of numerical maximum and position of analytical
+ maximum.
+\end_layout
+
+\begin_layout Itemize
+Comparison with equipartition result
+\end_layout
+
+\begin_layout Itemize
+Comparison with autocorrelation method in the time domain
+\end_layout
+
+\begin_layout Itemize
+Estimation of viscosity and diffusion coefficient
+\end_layout
+
+\begin_layout Section
+DISCUSSION
+\end_layout
+
+\begin_layout Itemize
+use of exact likelihood removes the need to sample at high frequencies.
+ this is the limitation of Euler approximation used in the paper of the
+ French group.
+ accuracy.
+\end_layout
+
+\begin_layout Itemize
+use of analytical MAP estimates removes the need for Monte Carlo sampling,
+ speed.
+\end_layout
+
+\begin_layout Itemize
+use of sufficient statistics reduces the entire time series to four numbers,
+ efficiency.
+ 
+\end_layout
+
+\begin_layout Itemize
+joint probability obtained, can marginalize out friction if that is not
+ known and treat it as a nuisance parameter
+\end_layout
+
+\begin_layout Itemize
+can do many more complicated models, e.g.
+ air trapping etc, using Bayesian inference.
+ 
 \begin_inset Float table
 wide false
 sideways false
@@ -1798,36 +1855,6 @@ assumption
 \end_inset
 
 
-\end_layout
-
-\begin_layout Itemize
-Descriptive statistics : (a) data set (b) histogram (c) autocorrelation
- plot.
- 
-\end_layout
-
-\begin_layout Itemize
-Plot of posterior distribution in the 
-\begin_inset Formula $\lambda-D$
-\end_inset
-
- plane, together with position of numerical maximum and position of analytical
- maximum.
-\end_layout
-
-\begin_layout Itemize
-Comparison with equipartition result
-\end_layout
-
-\begin_layout Itemize
-Comparison with autocorrelation method in the time domain
-\end_layout
-
-\begin_layout Itemize
-Estimation of viscosity and diffusion coefficient
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float table
 placement t
 wide false
@@ -2400,39 +2427,6 @@ Spectral
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section
-DISCUSSION
-\end_layout
-
-\begin_layout Itemize
-use of exact likelihood removes the need to sample at high frequencies.
- this is the limitation of Euler approximation used in the paper of the
- French group.
- accuracy.
-\end_layout
-
-\begin_layout Itemize
-use of analytical MAP estimates removes the need for Monte Carlo sampling,
- speed.
-\end_layout
-
-\begin_layout Itemize
-use of sufficient statistics reduces the entire time series to four numbers,
- efficiency.
- 
-\end_layout
-
-\begin_layout Itemize
-joint probability obtained, can marginalize out friction if that is not
- known and treat it as a nuisance parameter
-\end_layout
-
-\begin_layout Itemize
-can do many more complicated models, e.g.
- air trapping etc, using Bayesian inference.
- 
 \end_layout
 
 \begin_layout Acknowledgments
