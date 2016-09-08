@@ -1008,7 +1008,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="13" columns="5">
+<lyxtabular version="3" rows="14" columns="5">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="1cm">
 <column alignment="center" valignment="top" width="1.4cm">
@@ -1172,7 +1172,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.39
+0.846
 \end_layout
 
 \end_inset
@@ -1181,7 +1181,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.366
+0.173
 \end_layout
 
 \end_inset
@@ -1190,7 +1190,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-3.159
+6.038
 \end_layout
 
 \end_inset
@@ -1199,7 +1199,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-3.159
+6.038
 \end_layout
 
 \end_inset
@@ -1219,7 +1219,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.422
+0.800
 \end_layout
 
 \end_inset
@@ -1228,7 +1228,54 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.347
+0.183
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.318
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.317
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.844
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.173
 \end_layout
 
 \end_inset
@@ -1237,7 +1284,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-2.772
+5.545
 \end_layout
 
 \end_inset
@@ -1246,7 +1293,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-2.772
+5.543
 \end_layout
 
 \end_inset
@@ -1266,7 +1313,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.723
+1.446
 \end_layout
 
 \end_inset
@@ -1275,7 +1322,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.203
+0.101
 \end_layout
 
 \end_inset
@@ -1284,7 +1331,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-4.129
+8.258
 \end_layout
 
 \end_inset
@@ -1293,7 +1340,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-4.129
+8.258
 \end_layout
 
 \end_inset
@@ -1313,7 +1360,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.696
+1.392
 \end_layout
 
 \end_inset
@@ -1322,7 +1369,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.210
+0.105
 \end_layout
 
 \end_inset
@@ -1331,7 +1378,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-5.429
+10.858
 \end_layout
 
 \end_inset
@@ -1340,7 +1387,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-5.432
+10.865
 \end_layout
 
 \end_inset
@@ -1360,7 +1407,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.081
+2.161
 \end_layout
 
 \end_inset
@@ -1369,7 +1416,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.135
+0.067
 \end_layout
 
 \end_inset
@@ -1378,7 +1425,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-3.381
+6.762
 \end_layout
 
 \end_inset
@@ -1387,7 +1434,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-3.381
+6.762
 \end_layout
 
 \end_inset
@@ -1407,7 +1454,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.032
+2.064
 \end_layout
 
 \end_inset
@@ -1416,7 +1463,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.142
+0.071
 \end_layout
 
 \end_inset
@@ -1425,7 +1472,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-3.002
+6.003
 \end_layout
 
 \end_inset
@@ -1434,7 +1481,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-3.002
+6.003
 \end_layout
 
 \end_inset
@@ -1454,7 +1501,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.259
+2.518
 \end_layout
 
 \end_inset
@@ -1463,7 +1510,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.116
+0.058
 \end_layout
 
 \end_inset
@@ -1472,7 +1519,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.781
+3.562
 \end_layout
 
 \end_inset
@@ -1481,7 +1528,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.781
+3.562
 \end_layout
 
 \end_inset
@@ -1501,7 +1548,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.974
+1.947
 \end_layout
 
 \end_inset
@@ -1510,7 +1557,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.150
+0.075
 \end_layout
 
 \end_inset
@@ -1519,7 +1566,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-2.508
+5.016
 \end_layout
 
 \end_inset
@@ -1528,7 +1575,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-2.505
+5.009
 \end_layout
 
 \end_inset
@@ -1548,7 +1595,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-2.796
+5.591
 \end_layout
 
 \end_inset
@@ -1557,7 +1604,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.052
+0.026
 \end_layout
 
 \end_inset
@@ -1566,7 +1613,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-18.971
+37.943
 \end_layout
 
 \end_inset
@@ -1575,7 +1622,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-18.965
+37.930
 \end_layout
 
 \end_inset
@@ -1595,7 +1642,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-2.690
+5.538
 \end_layout
 
 \end_inset
@@ -1604,7 +1651,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.054
+0.027
 \end_layout
 
 \end_inset
@@ -1613,7 +1660,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-19.120
+38.241
 \end_layout
 
 \end_inset
@@ -1622,7 +1669,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-19.117
+38.234
 \end_layout
 
 \end_inset
@@ -1642,7 +1689,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-3.099
+6.198
 \end_layout
 
 \end_inset
@@ -1651,7 +1698,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.047
+0.024
 \end_layout
 
 \end_inset
@@ -1660,7 +1707,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-19.892
+39.783
 \end_layout
 
 \end_inset
@@ -1669,7 +1716,7 @@ assumption
 \begin_inset Text
 
 \begin_layout Plain Layout
-19.896
+39.792
 \end_layout
 
 \end_inset
@@ -1793,7 +1840,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="13" columns="4">
+<lyxtabular version="3" rows="14" columns="4">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="middle" width="2cm">
 <column alignment="center" valignment="top" width="2cm">
@@ -1905,6 +1952,44 @@ Spectral
 \begin_inset Text
 
 \begin_layout Plain Layout
+252.339
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+252.429
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+250.806
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 279.394
 \end_layout
 
@@ -1930,7 +2015,7 @@ Spectral
 </cell>
 </row>
 <row>
-<cell multirow="4" alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
