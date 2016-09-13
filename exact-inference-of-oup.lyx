@@ -1,0 +1,2547 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass revtex4-1
+\begin_preamble
+
+\end_preamble
+\options aps, twocolumn, pre
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 4
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Fast Bayesian inference of optical trap stiffness and particle friction
+\end_layout
+
+\begin_layout Author
+Sudipta Bera†
+\end_layout
+
+\begin_layout Affiliation
+Dept of Physical Sciences, Indian Institute of Science Education and Research,
+ Kolkata, Mohanpur 741246
+\end_layout
+
+\begin_layout Author
+Shuvojit Paul†
+\end_layout
+
+\begin_layout Affiliation
+Dept of Physical Sciences, Indian Institute of Science Education and Research,
+ Kolkata, Mohanpur 741246
+\end_layout
+
+\begin_layout Author
+Dipanjan Ghosh
+\end_layout
+
+\begin_layout Affiliation
+Dept of Mechanical Engineering, Jadavpur University, Kolkata 700032
+\end_layout
+
+\begin_layout Author
+Avijit Kundu
+\end_layout
+
+\begin_layout Affiliation
+Dept of Physical Sciences, Indian Institute of Science Education and Research,
+ Kolkata, Mohanpur 741246
+\end_layout
+
+\begin_layout Author
+R.
+ Adhikari
+\end_layout
+
+\begin_layout Affiliation
+The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
+\end_layout
+
+\begin_layout Author Email
+
+rjoy@imsc.res.in
+\end_layout
+
+\begin_layout Author
+Ayan Banerjee
+\end_layout
+
+\begin_layout Affiliation
+Dept of Physical Sciences, Indian Institute of Science Education and Research,
+ Kolkata, Mohanpur 741246
+\end_layout
+
+\begin_layout Author Email
+
+ayan@iiserkol.ac.in
+\end_layout
+
+\begin_layout Author
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+†These authors contributed equally.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+Bayesian inference provides a principled way of estimating the parameters
+ of a stochastic process that is observed discretely in time.
+ The overdamped Brownian motion of a particle confined in an optical trap
+ is generally modelled by the Ornstein-Uhlenbeck process and can be observed
+ directly in experiment.
+ Here we present Bayesian methods for inferring the parameters of this process,
+ the trap stiffness and the particle friction coefficient, that use exact
+ likelihoods and sufficient statistics to arrive at simple expressions for
+ the maximum a posteriori estimates.
+ This obviates the need for Monte Carlo sampling and yields methods that
+ are both fast and accurate.
+ We apply these to experimental data and compare with commonly used non-Bayesian
+ estimation methods.
+ 
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Since the seminal contributions of Rayleigh, Einstein, and Langevin, stochastic
+ processes have been used to model physical phenomena in which fluctuations
+ play an essential role.
+ Examples include the Brownian motion of a particle, the fluctuation of
+ current in a resistor, and the radioactive decay of subatomic particles.
+ A central problem is to infer the parameters of the process from partially
+ observed sample paths, for instance, the diffusion constant from a time
+ series of positions, or the resistance from a time series of current measuremen
+ts, and so on.
+ Bayesian inference provides a principled solution for this inverse problem,
+ making optimal use of the information contained in the partially observed
+ sample path.
+ 
+\end_layout
+
+\begin_layout Standard
+The Ornstein-Uhlenbeck process is commonly used to model the sample paths
+ of a harmonically confined Brownian particle.
+ This process has a mean regression rate 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and a volatility 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ which map, in the physical application, to the stiffness 
+\begin_inset Formula $k$
+\end_inset
+
+ of the harmonic potential, the friction 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ of the particle and the temperature 
+\begin_inset Formula $k_{B}T$
+\end_inset
+
+ of the ambient fluid.
+ Since the friction of a particle of radius 
+\begin_inset Formula $a$
+\end_inset
+
+ is given by 
+\begin_inset Formula $\gamma=6\pi\eta a$
+\end_inset
+
+, where 
+\begin_inset Formula $\eta$
+\end_inset
+
+ is the viscosity of the fluid, any estimation of the friction also provides
+ an estimate of the viscosity of the medium, given the particle radius.
+ Thus, the viscosity, which is defined as the macroscopic response of the
+ fluid to an externally imposed shear, can be inferred from microscopic
+ obversation of the Brownian fluctuations of harmonically confined particle.
+ Likewise, the particle diffusion coefficient 
+\begin_inset Formula $D$
+\end_inset
+
+ can be inferred from the friction through the Einstein relation 
+\begin_inset Formula $D=k_{B}T/\gamma$
+\end_inset
+
+.
+ These, of course, are consequences of the relation between response and
+ correlation that prevails in a physical system in thermal equilibrium.
+ 
+\end_layout
+
+\begin_layout Standard
+In this paper, we apply Bayesian inference to the problem of estimating
+ the parameters of the Ornstein-Uhlenbeck process from time series that
+ represent partially observed sample paths.
+ This is of great current experimental relevance, since harmonic confinement
+ of micron-sized spheres is easily achieved using optical tweezers.
+ A reliable estimation of the trap stiffness is a necessary first step in
+ using tweezers for force measurements.
+ Bayesian methods, using Monte Carlo sampling, have been proposed earlier
+ to this end 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "richly2013calibrating"
+
+\end_inset
+
+.
+ Here, we present a method that does away with sampling by exploiting the
+ exact likelihoods and sufficient statistics of the problem and provides,
+ thereby, exact maximum a posteriori parameter estimates in terms of these
+ statistics.
+ Consequently, the method is both extremely fast and accurate, being able
+ to jointly estimate the trap stiffness and the particle friction from a
+ time series with a million points in less than a millisecond.
+ Further, the fluctuation-dissipation relation provides a stringent internal
+ consistency check on the accuracy of the estimation.
+ We apply our method to experimental data to find estimates that have excellent
+ internal consistency.
+ These estimates are found to be in good agreement with commonly used non-Bayesi
+an calibration methods.
+ 
+\end_layout
+
+\begin_layout Standard
+The remainder of the paper is organized as follows.
+ In the next section we recall several key properties of the sample paths
+ and distributions of the Ornstein-Uhlenbeck process.
+ In Section III, we present the Bayesian methods and follow, in section
+ IV, with their application to experimental data.
+ We conclude with a discussion of future directions in Bayesian inference
+ in optical tweezer experiments.
+ 
+\end_layout
+
+\begin_layout Section
+Ornstein-Uhlenbeck process
+\end_layout
+
+\begin_layout Standard
+The Langevin equation for a Brownian particle confined in a potential 
+\begin_inset Formula $U$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\begin{equation}
+m\dot{v}+\gamma v+\nabla U=\xi
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\xi(t)$
+\end_inset
+
+ is a zero-mean Gaussian white noise with variance 
+\begin_inset Formula $\langle\xi(t)\xi(t')\rangle=2k_{B}T\gamma\delta(t-t')$
+\end_inset
+
+ as required by the fluctuation-dissipation theorem.
+ In the limit of vanishing inertia and a harmonic potential, 
+\begin_inset Formula $U=\frac{{1}}{2}kx^{2}$
+\end_inset
+
+, we obtain the overdamped Langevin equation 
+\begin_inset Formula 
+\begin{equation}
+\dot{x}=-\frac{k}{\gamma}x+\sqrt{\frac{2k_{B}T}{\gamma}}\zeta(t)
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\zeta(t)$
+\end_inset
+
+ is now a zero-mean Gaussian white noise with unit variance.
+ This is the Ornstein-Uhlenbeck process, whose sample paths obey the Ito
+ stochastic differential equation, 
+\begin_inset Formula 
+\begin{equation}
+dx=-\lambda xdt+\sigma dW
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $W$
+\end_inset
+
+ is the Wiener process, 
+\begin_inset Formula $\lambda=k/\gamma$
+\end_inset
+
+ is the mean-regression rate and 
+\begin_inset Formula $\sigma=\sqrt{2k_{B}T\gamma^{-1}}$
+\end_inset
+
+ is the volatility.
+ Since 
+\begin_inset Formula $D=k_{B}T\gamma^{-1}$
+\end_inset
+
+ we have 
+\begin_inset Formula $\sigma^{2}=2D.$
+\end_inset
+
+ In problems involving Brownian motion, it is convenient to work with the
+ diffusion coefficient, rather than the volatility, and therefore we infer
+ 
+\begin_inset Formula $D$
+\end_inset
+
+, rather than 
+\begin_inset Formula $\sigma$
+\end_inset
+
+, directly.
+ 
+\end_layout
+
+\begin_layout Standard
+The transition probability density 
+\begin_inset Formula $P_{1|1}$
+\end_inset
+
+
+\begin_inset Formula $(x^{\prime}t^{\prime}|x\thinspace t$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+)
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+, the probability of a displacement from 
+\begin_inset Formula $x$
+\end_inset
+
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+ to 
+\begin_inset Formula $x^{\prime}$
+\end_inset
+
+ at time 
+\begin_inset Formula $t^{\prime}$
+\end_inset
+
+, obeys the Fokker-Planck equation 
+\begin_inset Formula $\partial_{t}P_{1|1}=\mathcal{L}P_{1|1}$
+\end_inset
+
+, where the Fokker-Planck operator is 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathcal{L}=\frac{\partial}{\partial x}\lambda x+\frac{\partial^{2}}{\partial x^{2}}D.
+\end{equation}
+
+\end_inset
+
+The solution is a normal distribution, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+x^{\prime}t^{\prime}|x\thinspace t\sim\mathcal{N}\left(xe^{-\lambda(t^{\prime}-t)},\frac{D}{\lambda}[1-e^{-2\lambda(t^{\prime}-t)}]\right),
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathcal{N}(a,b)$
+\end_inset
+
+ is the univariate normal distribution with mean 
+\begin_inset Formula $a$
+\end_inset
+
+ and variance 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ This solution is exact and holds for arbitrary values of 
+\begin_inset Formula $|t-t^{\prime}|$
+\end_inset
+
+, unlike the approximate solution used in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "richly2013calibrating"
+
+\end_inset
+
+, which is accurate only when 
+\begin_inset Formula $\lambda|t-t^{\prime}|\ll1$
+\end_inset
+
+.
+ The correlation function decays exponentially, 
+\begin_inset Formula 
+\begin{equation}
+C(t-t^{\prime})\equiv\langle x(t)x(t^{\prime})\rangle=\frac{k_{B}T}{k}e^{-\lambda|t-t^{\prime}|}
+\end{equation}
+
+\end_inset
+
+a property guaranteed by Doob's theorem for any Gauss-Markov processes.
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+The Fourier transform of the correlation function gives the power spectral
+ density 
+\begin_inset Formula 
+\begin{equation}
+C(\omega)\equiv\langle|x(\omega)|^{2}\rangle=\frac{k_{B}T}{k}\frac{1}{\omega^{2}+\lambda^{2}}
+\end{equation}
+
+\end_inset
+
+which is Lorentzian in the angular frequency 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
+ The relation 
+\begin_inset Formula $D/\lambda=k_{B}T/k$
+\end_inset
+
+ has been used while obtaining the last two relations.
+ 
+\end_layout
+
+\begin_layout Standard
+The stationary distribution 
+\begin_inset Formula $P_{1}(x)$
+\end_inset
+
+ obeys the steady state Fokker-Plank equation 
+\begin_inset Formula $\mathcal{L}P_{1}=0$
+\end_inset
+
+ and the solution is a normal distribution,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+x\sim\mathcal{N}\left(0,\frac{D}{\lambda}\right)=\mathcal{N}\left(0,\frac{k_{B}T}{k}\right).
+\end{equation}
+
+\end_inset
+
+Comparing the forms of 
+\begin_inset Formula $P_{1|1}$
+\end_inset
+
+ and 
+\begin_inset Formula $P_{1}$
+\end_inset
+
+ it is clear that former tends to the latter for 
+\begin_inset Formula $|t-t^{\prime}|\rightarrow\infty$
+\end_inset
+
+, as it should.
+ 
+\end_layout
+
+\begin_layout Section
+Bayesian inference
+\end_layout
+
+\begin_layout Standard
+Consider, now, the time series 
+\begin_inset Formula $X\equiv(x_{1},x_{2},\ldots,x_{N})$
+\end_inset
+
+ consisting of observations of the sample path 
+\begin_inset Formula $x(t)$
+\end_inset
+
+ at the discrete times 
+\begin_inset Formula $t=n\Delta$
+\end_inset
+
+t with 
+\begin_inset Formula $n=1,\ldots,N.$
+\end_inset
+
+ Then, using the Markov property of the Ornstein-Uhlenbeck process, the
+ probability of the sample path is given by 
+\begin_inset Formula 
+\begin{equation}
+P(X|\lambda,D)=\prod_{n=1}^{N-1}P_{1|1}(x_{n+1}|x_{n},\lambda,D)P_{1}(x_{1}|\lambda,D)
+\end{equation}
+
+\end_inset
+
+The probability 
+\begin_inset Formula $P(\lambda,D|X)$
+\end_inset
+
+ of the parameters, given the sample path, can now be computed using Bayes
+ theorem, as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(\lambda,D|X)=\frac{P(X|\lambda,D)P(\lambda,D)}{P(X)}
+\]
+
+\end_inset
+
+The denominator 
+\begin_inset Formula $P(X)$
+\end_inset
+
+ is an unimportant normalization, independent of the parameters, that we
+ henceforth ignore.
+ Since both 
+\begin_inset Formula $k$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ must be positive, for stability and positivity of entropy production respective
+ly, we use informative priors for 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+, 
+\begin_inset Formula $P(\lambda,D)=H(\lambda)H(D)$
+\end_inset
+
+, where 
+\begin_inset Formula $H$
+\end_inset
+
+ is the Heaviside step function.
+ This assigns zero probability weight for negative values of the parameters
+ and equal probability weight for all positive values.
+ The logarithm of the posterior probability, after using the explicit forms
+ of 
+\begin_inset Formula $P_{1|1}$
+\end_inset
+
+ and 
+\begin_inset Formula $P_{1}$
+\end_inset
+
+, is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\ln P(\lambda,D|X) & =\frac{N-1}{2}\ln\frac{\lambda}{2\pi DI_{2}}-\frac{\lambda}{2DI_{2}}\sum\Delta_{n}^{2}\nonumber \\
+ & +\frac{1}{2}\ln\frac{\lambda}{2\pi D}-\frac{\lambda}{2D}x_{1}^{2}
+\end{align}
+
+\end_inset
+
+where we have defined the two quantities 
+\begin_inset Formula 
+\[
+I_{2}\equiv1-e^{-2\lambda\Delta t},\quad\Delta_{n}\equiv x_{n+1}-e^{-\lambda\Delta t}x_{n}
+\]
+
+\end_inset
+
+and the sum runs from 
+\begin_inset Formula $n=1,\ldots,N-1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The maximum a posteriori (MAP) estimate 
+\begin_inset Formula $(\lambda^{\star},D^{\star})$
+\end_inset
+
+ solves the stationary conditions 
+\begin_inset Formula $\partial\ln P(\lambda,D|X)/\partial\lambda=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\partial\ln P(\lambda,D|X)/\partial D=0$
+\end_inset
+
+, while the standard error of this estimate is obtained from the matrix
+ of second derivatives evaluated at the maximum.
+ The analytical solution of the stationary conditions, derived in the Appendix,
+ yields the MAP estimate to be
+\begin_inset Formula 
+\begin{eqnarray}
+\lambda^{\star} & = & \frac{1}{\Delta t}\ln\frac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}}\nonumber \\
+D^{\star} & = & \frac{\lambda^{\star}}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)\nonumber \\
+\frac{k^{\star}}{k_{B}T} & = & \frac{\lambda^{\star}}{D^{\star}}\label{eq:map-estimate}
+\end{eqnarray}
+
+\end_inset
+
+where both 
+\begin_inset Formula $I_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Delta_{n}$
+\end_inset
+
+ are now evaluated at 
+\begin_inset Formula $\lambda=\lambda^{\star}.$
+\end_inset
+
+ These provide direct estimates of the parameters without the need for fitting
+ or sampling.
+ The standar errors of these estimates are obtained from the matrix of second
+ derivates of the posterior, evaluated at the maximum.
+ We do not provide their unwieldy expressions but do make use of them when
+ reporting point estimates from experimental data (see below).
+\end_layout
+
+\begin_layout Standard
+A second Bayesian procedure for estimating the trap stiffness alone results
+ when 
+\begin_inset Formula $X$
+\end_inset
+
+ is interpreted not as a time series but as an exchangeable sequence, or,
+ in physical terms, as repeated independent observations of the stationary
+ distribution 
+\begin_inset Formula $P_{1}(x)$
+\end_inset
+
+.
+ In that case, the posterior probability, assuming an informative prior
+ that constrains 
+\begin_inset Formula $k$
+\end_inset
+
+ to positive values, is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\ln P(k|X)=\frac{N}{2}\ln\frac{k}{2\pi k_{B}T}-\frac{1}{2}\frac{k}{k_{B}T}\sum_{n=1}^{N}x_{n}^{2}
+\end{equation}
+
+\end_inset
+
+The MAP estimate straightforwardly follows,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{k^{\star}}{k_{B}T}=\frac{N}{\sum_{n=1}^{N}x_{n}^{2}}.
+\end{equation}
+
+\end_inset
+
+This procedure is independent of the sampling time and is equivalent to
+ the equipartition method when the Heaviside prior is used for 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The posterior probabilities in both methods can be written in terms of four
+ functions of the data
+\begin_inset Formula 
+\begin{eqnarray}
+T_{1}(X) & = & \sum x_{n+1}^{2},\quad T_{2}(X)=\sum x_{n+1}x_{n},\nonumber \\
+T_{3}(X) & = & \sum x_{n}^{2},\qquad T_{4}(X)=x_{1}^{2},
+\end{eqnarray}
+
+\end_inset
+
+which, therefore, are the sufficient statistics of the problem.
+ The 
+\emph on
+entire
+\emph default
+ information in the time series 
+\begin_inset Formula $X$
+\end_inset
+
+ relevant to estimation is contained in these four statistics.
+ Their use reduces computational expense enormously as only four numbers,
+ rather than the entire time series, is required.
+ The combined use of exact likelihoods, sufficient statistics and analytical
+ MAP estimates yields fast and accurate methods for estimating parameters
+ from the time series of particle positions.
+ This completes our description of the Bayesian procedure for jointly estimating
+ 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+, and from there, 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+A comparison of the estimates obtained from these independent procedures
+ provides a check on the validity of the Ornstein-Uhlenbeck process as a
+ data model.
+ Any significant disagreement between the estimates from the two methods
+ signals a breakdown of applicability of the model and the assumptions implicit
+ in it: overdamped dynamics, constant friction, harmonicity of the potential,
+ and thermal equilibrium.
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename balanced detection.pdf
+	scale 30
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:balanced-detection"
+
+\end_inset
+
+Schematic of balanced detection scheme to measure Brownian motion in the
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ direction from a single trapped polystyrene sphere.
+ Back-scattered light from the trapped sphere is incident on an edge mirror
+ that divides it equally between photodiodes PD1 and PD2, having voltage
+ outputs A and B respectively.
+ The normalized 
+\begin_inset Formula $x$
+\end_inset
+
+ coordinate of the sphere at any instant in time is given by 
+\begin_inset Formula $(A-B)/(A+B).$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Experimental setup and data acquisition
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement t
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figure2.pdf
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+(a) Plot of the displacement of the Brownian particle as a function of time.
+ (b) Histogram of the probability distribution of the displacement of the
+ Brownian particle with a Gaussian curve fitted in black.
+ (c) Auto-correlation function evaluated for the Brownian particle.
+ (d) Power spectral density of the Brownian particle.
+ (e) Plot of posterior distribution in the 
+\begin_inset Formula $\lambda-D$
+\end_inset
+
+ plane, showing the position of the numerical maximum and that of the analytical
+ maximum.
+ (f) Variation of stiffness evaluated from Bayesian and PSD as a function
+ of trapping laser power.
+ The slopes agree at the 1
+\begin_inset Formula $\sigma$
+\end_inset
+
+ level.
+\end_layout
+
+\end_inset
+
+ We collect position fluctuation data of an optically trapped Brownian particle
+ using a standard optical tweezers setup that is described in detail in
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rsi12"
+
+\end_inset
+
+.
+ Here we provide a brief overview.
+ The optical tweezers system is constructed around a Zeiss inverted microscope
+ (
+\emph on
+Axiovert.A1
+\emph default
+) with a 
+\begin_inset Formula $100x$
+\end_inset
+
+ 
+\begin_inset Formula $1.4$
+\end_inset
+
+ numerical aperture (NA) objective lens tightly focusing laser light at
+ 
+\begin_inset Formula $1064$
+\end_inset
+
+ nm from a semiconductor laser (
+\emph on
+Lasever
+\emph default
+, maximum power 
+\begin_inset Formula $500$
+\end_inset
+
+mW) into the sample.
+ The back aperture of the objective is slightly overfilled to maximize the
+ trapping intensity.
+ The sample consists of a dilute suspension (volume fraction 
+\begin_inset Formula $\phi=0.01$
+\end_inset
+
+) of polystyrene sphere of diameter 
+\begin_inset Formula $3\mu$
+\end_inset
+
+m in 10% NaCl-water solution, around 
+\begin_inset Formula $20\mu l$
+\end_inset
+
+ of which is pipetted on a standard glass cover slip.
+ The total power available at the trapping plane is around 15 mW.
+ The motion of a single trapped particle is observed by back-focal plane
+ interferometry using the back-scattered intensity of a detection laser
+ at 
+\begin_inset Formula $671$
+\end_inset
+
+ nm that co-propagates with the trapping laser.
+ The detection laser power is maintained at much lower levels than that
+ required to trap a particle.
+ The back-scattered signal from the trapped particle is measured using a
+ balanced detection scheme, schematically illustrated in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:balanced-detection"
+
+\end_inset
+
+.
+ The back-scattered light beam is incident on an edge mirror which divides
+ it equally into two halves that are focused using two lenses of equal focal
+ length on photodiodes PD1 and PD2 (
+\emph on
+Thorlabs
+\emph default
+ PDA100A-EC Si-photodiodes of bandwidth 2.4 MHz).
+ The voltage outputs 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+, of PD1 and PD2 respectively, are then combined as 
+\begin_inset Formula $(A-B)/(A+B)$
+\end_inset
+
+ to give the normalized value of the 
+\begin_inset Formula $x$
+\end_inset
+
+ coordinate of motion at any instant of time.
+ The advantage of such balanced detection is that the intensity fluctuations
+ of the laser are present in both beams simultaneously and are thus canceled
+ out when the difference is taken.
+ Note that the direction of the edge mirror decides whether the 
+\begin_inset Formula $x$
+\end_inset
+
+ or 
+\begin_inset Formula $y$
+\end_inset
+
+ coordinate of motion is being measured.
+ The mirror is rotated by 
+\begin_inset Formula $90$
+\end_inset
+
+ degrees to select between the coordinates.
+ The fast response of the photodiodes, with a rise time of 50ns at highest
+ gain, ensures that spurious correlations are kept to a minimum and the
+ data filtering necessary with slower commercial quadrant photodetectors
+ is avoided entirely.
+ The data from the photodiodes is logged into a computer using a National
+ Instruments DAQ system and Labview at sampling rates between 2-5 kHz.
+ For calibrating the motion, 
+\emph on
+i.e.
+
+\emph default
+ converting the voltage into physical distance which is necessary for measuring
+ the diffusion constant, we employ an acousto-optic modulator that is placed
+ in the back-focal plane of the microscope objective and scan the trapped
+ bead by distances which are determined from the pixel calibration of images
+ taken by the camera attached to the microscope 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rsi12"
+
+\end_inset
+
+.
+ The balanced detection output is simultaneously measured to yield the voltage-d
+istance calibration of the detection system.
+ For the viscosity measurement, we add glycerol to water in fixed proportions
+ to create 5 samples of different viscosity.
+ The viscosity of each sample is then measured by a commercial rheometer
+ (Brookfield DB3TLVCJ0) to match with the experimental results.
+\end_layout
+
+\begin_layout Section
+Results
+\end_layout
+
+\begin_layout Itemize
+Descriptive statistics : (a) data set (b) histogram (c) autocorrelation
+ plot.
+ 
+\end_layout
+
+\begin_layout Itemize
+Plot of posterior distribution in the 
+\begin_inset Formula $\lambda-D$
+\end_inset
+
+ plane, together with position of numerical maximum and position of analytical
+ maximum.
+\end_layout
+
+\begin_layout Itemize
+Comparison with equipartition result
+\end_layout
+
+\begin_layout Itemize
+Comparison with autocorrelation method in the time domain
+\end_layout
+
+\begin_layout Itemize
+Estimation of viscosity and diffusion coefficient
+\end_layout
+
+\begin_layout Section
+DISCUSSION
+\end_layout
+
+\begin_layout Itemize
+use of exact likelihood removes the need to sample at high frequencies.
+ this is the limitation of Euler approximation used in the paper of the
+ French group.
+ accuracy.
+\end_layout
+
+\begin_layout Itemize
+use of analytical MAP estimates removes the need for Monte Carlo sampling,
+ speed.
+\end_layout
+
+\begin_layout Itemize
+use of sufficient statistics reduces the entire time series to four numbers,
+ efficiency.
+ 
+\end_layout
+
+\begin_layout Itemize
+joint probability obtained, can marginalize out friction if that is not
+ known and treat it as a nuisance parameter
+\end_layout
+
+\begin_layout Itemize
+can do many more complicated models, e.g.
+ air trapping etc, using Bayesian inference.
+ 
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="14" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="1.6cm">
+<column alignment="center" valignment="top" width="1.4cm">
+<column alignment="center" valignment="top" width="1.65cm">
+<column alignment="center" valignment="top" width="1.2cm">
+<column alignment="center" valignment="top" width="1.65cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $D$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+(
+\begin_inset Formula $\mu m^{2}/s$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" width="3.5cm">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+(
+\begin_inset Formula $pN/\mu m$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" width="2.4cm">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\eta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+(
+\begin_inset Formula $cP$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bayesian
+\end_layout
+
+\begin_layout Plain Layout
+inference
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bayesian
+\end_layout
+
+\begin_layout Plain Layout
+inference
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stationary
+\end_layout
+
+\begin_layout Plain Layout
+assumption
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Visco-metry
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bayesian
+\end_layout
+
+\begin_layout Plain Layout
+inference
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.173
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.038
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.038
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.89
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.846
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.183
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.318
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.317
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.800
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.173
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.545
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.543
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.844
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.101
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8.258
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8.258
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.37
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.446
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.105
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.858
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.865
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.392
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.067
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.762
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.762
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.97
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.161
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.071
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.003
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.003
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.064
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.058
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.562
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.562
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.43
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.518
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.075
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.016
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.009
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.947
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.026
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+37.943
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+37.930
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.87
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.591
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.027
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+38.241
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+38.234
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.538
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.024
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+39.783
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+39.792
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.198
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float table
+placement t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="14" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="left" valignment="middle" width="0.8cm">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="4cm">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+(
+\begin_inset Formula $s^{-1}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\eta$
+\end_inset
+
+ (
+\begin_inset Formula $cP$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bayesian 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Correlation
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Spectral 
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+252.339
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+252.429
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+250.806
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.89
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+279.394
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+279.363
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+276.117
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+232.258
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+232.287
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+230.097
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+201.939
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+201.863
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+199.418
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.37
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+275.810
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+276.150
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+273.049
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+110.648
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+110.606
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+110.447
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.97
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+102.854
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+102.810
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+101.243
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+50.031
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+50.019
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+49.087
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.43
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+91.115
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+91.074
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+88.970
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+240.014
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+240.014
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+239.301
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="left" valignment="middle" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.87
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+251.437
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+251.337
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+248.505
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+226.987
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+227.039
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+223.961
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Acknowledgments
+RA gratefully (and much belatedly) acknowledges Professor M.
+ E.
+ Cates for introducing him to Bayesian data analysis.
+ 
+\end_layout
+
+\begin_layout Subsection
+Appendix 
+\end_layout
+
+\begin_layout Standard
+The partial derivatives of the logarithm of the posterior probability with
+ respect to 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+ are 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial\ln P}{\partial\lambda} & = & \frac{N-1}{2}\left(\frac{1}{\lambda}-\frac{I_{2}^{\prime}}{I_{2}}\right)-\frac{\sum\Delta_{n}^{2}}{2DI_{2}}\\
+ & - & \frac{\lambda}{2D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{1}{2\lambda}-\frac{x_{1}^{2}}{2D}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial\ln P}{\partial D}=-\frac{N-1}{2D}+\frac{\lambda\sum\Delta_{n}^{2}}{2D^{2}I_{2}}-\frac{1}{2D}+\frac{\lambda x_{1}^{2}}{2D^{2}}`
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $I_{2}^{\prime}=2\Delta t\thinspace e^{-2\lambda\Delta t}$
+\end_inset
+
+.
+ Setting the second of these equations to zero, 
+\begin_inset Formula $D$
+\end_inset
+
+ is solved in term of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and this solution is used in the first equation, together with the large-sample
+ asymptotics
+\begin_inset Formula 
+\[
+\frac{\lambda}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)\thickapprox\frac{\lambda}{\left(N-1\right)}\frac{\sum\Delta_{n}^{2}}{I_{2}},
+\]
+
+\end_inset
+
+to cancel all 
+\begin_inset Formula $D$
+\end_inset
+
+-dependent terms.
+ Setting the resulting equation to zero and solving for 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ then yields the MAP estimates in Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map-estimate"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "exact-inference-of-oup"
+options "rsc"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
