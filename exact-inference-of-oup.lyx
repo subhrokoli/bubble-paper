@@ -903,11 +903,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename figure2.pdf
-<<<<<<< HEAD
 	scale 50
-=======
-	scale 42
->>>>>>> master
 
 \end_inset
 
@@ -2452,10 +2448,9 @@ Spectral
 \end_layout
 
 \begin_layout Acknowledgments
-RA gratefully acknowledges Professor M.
+RA gratefully (and much belatedly) acknowledges Professor M.
  E.
- Cates for introducing him to the Bayesian interpretation of probability
- and to Bayesian inference.
+ Cates for introducing him to Bayesian data analysis.
  
 \end_layout
 
