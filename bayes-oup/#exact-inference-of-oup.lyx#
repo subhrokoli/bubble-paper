@@ -80,38 +80,19 @@ Fast Bayesian inference of optical trap stiffness and particle friction
 \end_layout
 
 \begin_layout Author
-Sudipta Bera†
+Sudipta Bera$^†$
 \end_layout
 
 \begin_layout Affiliation
-Dept of Physical Sciences, Indian Institute of Science Education and Research,
- Kolkata, Mohanpur 741246
+Indian Institute of Science Education and Research, Kolkata
 \end_layout
 
 \begin_layout Author
-Shuvojit Paul†
+Shuvojit Paul$^†$
 \end_layout
 
 \begin_layout Affiliation
-Dept of Physical Sciences, Indian Institute of Science Education and Research,
- Kolkata, Mohanpur 741246
-\end_layout
-
-\begin_layout Author
-Dipanjan Ghosh
-\end_layout
-
-\begin_layout Affiliation
-Dept of Mechanical Engineering, Jadavpur University, Kolkata 700032
-\end_layout
-
-\begin_layout Author
-Avijit Kundu
-\end_layout
-
-\begin_layout Affiliation
-Dept of Physical Sciences, Indian Institute of Science Education and Research,
- Kolkata, Mohanpur 741246
+Indian Institute of Science Education and Research, Kolkata
 \end_layout
 
 \begin_layout Author
@@ -123,23 +104,12 @@ R.
 The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
 \end_layout
 
-\begin_layout Author Email
-
-rjoy@imsc.res.in
-\end_layout
-
 \begin_layout Author
 Ayan Banerjee
 \end_layout
 
 \begin_layout Affiliation
-Dept of Physical Sciences, Indian Institute of Science Education and Research,
- Kolkata, Mohanpur 741246
-\end_layout
-
-\begin_layout Author Email
-
-ayan@iiserkol.ac.in
+Indian Institute of Science Education and Research, Kolkata
 \end_layout
 
 \begin_layout Author
@@ -903,7 +873,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename figure2.pdf
-	scale 50
+	scale 42
 
 \end_inset
 
@@ -920,15 +890,9 @@ status open
 \begin_inset Formula $\lambda-D$
 \end_inset
 
- plane, showing the position of the numerical maximum and that of the analytical
+ plane, showing the position of numerical maximum and position of analytical
  maximum.
- (f) Variation of stiffness evaluated from Bayesian and PSD as a function
- of trapping laser power.
- The slopes agree at the 1
-\begin_inset Formula $\sigma$
-\end_inset
-
- level.
+ (f) Variation of sti
 \end_layout
 
 \end_inset
