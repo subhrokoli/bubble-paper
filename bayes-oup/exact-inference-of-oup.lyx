@@ -124,7 +124,6 @@ The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -138,7 +137,6 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -903,11 +901,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename figure2.pdf
-<<<<<<< HEAD
-	scale 50
-=======
 	scale 42
->>>>>>> master
 
 \end_inset
 
@@ -926,8 +920,8 @@ status open
 
  plane, showing the position of the numerical maximum and that of the analytical
  maximum.
- (f) Variation of stiffness evaluated from Bayesian and PSD as a function
- of trapping laser power.
+ (f) Variation of stiffness evaluated from Bayesian, PSD, and equipartition
+ methods as a function of trapping laser power.
  The slopes agree at the 1
 \begin_inset Formula $\sigma$
 \end_inset
