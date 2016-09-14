@@ -8,7 +8,7 @@
 \begin_preamble
 
 \end_preamble
-\options aps, twocolumn, pre,superscriptaddreess
+\options aps, twocolumn, pre,superscriptaddress
 \use_default_options false
 \maintain_unincluded_children false
 \language english
@@ -138,19 +138,6 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 
 \begin_layout Author Email
 ayan@iiserkol.ac.in
-\end_layout
-
-\begin_layout Author
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-†These authors contributed equally.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Abstract
