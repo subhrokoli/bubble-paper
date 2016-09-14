@@ -8,7 +8,7 @@
 \begin_preamble
 
 \end_preamble
-\options aps, twocolumn, pre
+\options aps, twocolumn, pre,superscriptaddreess
 \use_default_options false
 \maintain_unincluded_children false
 \language english
@@ -901,6 +901,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename figure2.pdf
+	display false
 	scale 42
 
 \end_inset
