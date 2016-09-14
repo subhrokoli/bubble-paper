@@ -102,7 +102,7 @@ Dipanjan Ghosh
 \end_layout
 
 \begin_layout Affiliation
-Dept of Mechanical Engineering, Jadavpur University, Kolkata 700032
+Dept of Chemical Engineering, Jadavpur University, Kolkata 700032
 \end_layout
 
 \begin_layout Author
@@ -124,7 +124,6 @@ The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -138,7 +137,6 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -903,11 +901,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename figure2.pdf
-<<<<<<< HEAD
-	scale 50
-=======
 	scale 42
->>>>>>> master
 
 \end_inset
 
