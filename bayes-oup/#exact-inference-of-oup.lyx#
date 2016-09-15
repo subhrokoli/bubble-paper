@@ -1255,14 +1255,7 @@ reference "table2"
 
  are evaluated.
  The agreement with the values measured using the rheometer is good to within
- 3% for all data points except for the highest viscosity value, where the
- trap was not very robust due to the high viscosity.
- Note that for all these measurements the trap stiffness was kept constant
- to around 6 
-\begin_inset Formula $pN/\mu m$
-\end_inset
-
-.
+ 3% for all data points except for 
 \end_layout
 
 \begin_layout Itemize

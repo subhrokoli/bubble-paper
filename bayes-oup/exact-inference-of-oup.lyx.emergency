@@ -124,7 +124,6 @@ The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -138,7 +137,6 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -705,8 +703,8 @@ where both
 
  These provide direct estimates of the parameters without the need for fitting
  or sampling.
- The standard errors of these estimates are obtained from the matrix of
- second derivates of the posterior, evaluated at the maximum.
+ The standar errors of these estimates are obtained from the matrix of second
+ derivates of the posterior, evaluated at the maximum.
  We do not provide their unwieldy expressions but do make use of them when
  reporting point estimates from experimental data (see below).
 \end_layout
@@ -819,7 +817,7 @@ A comparison of the estimates obtained from these independent procedures
 placement t
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset space \hfill{}
@@ -888,6 +886,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig2"
+
+\end_inset
+
+
 \begin_inset Graphics
 	filename figure2.pdf
 	scale 42
@@ -898,43 +903,24 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig2"
-
-\end_inset
-
-(a) Plot of the displacement of the single trapped polystyrene bead of diameter
- 
-\begin_inset Formula $3\mu$
-\end_inset
-
-m (Brownian particle) as a function of time.
- (b) Histogram of the displacement of the trapped Brownian particle with
- a Gaussian curve fitted (black solid line).
- (c) Auto-correlation function evaluated for the trapped Brownian particle.
- (d) Power spectral density of the trapped Brownian particle.
+(a) Plot of the displacement of the Brownian particle as a function of time.
+ (b) Histogram of the probability distribution of the displacement of the
+ Brownian particle with a Gaussian curve fitted in black.
+ (c) Auto-correlation function evaluated for the Brownian particle.
+ (d) Power spectral density of the Brownian particle.
  (e) Plot of posterior distribution in the 
 \begin_inset Formula $\lambda-D$
 \end_inset
 
  plane, showing the position of the numerical maximum and that of the analytical
  maximum.
- (f) Variation of stiffness of the trapped particle evaluated from Bayesian,
- PSD, and equipartition methods as a function of the trapping laser power.
+ (f) Variation of stiffness evaluated from Bayesian, PSD, and equipartition
+ methods as a function of trapping laser power.
  The slopes agree at the 1
 \begin_inset Formula $\sigma$
 \end_inset
 
- level (shown in parentheses).
-\end_layout
-
-\end_inset
-
-
+ level.
 \end_layout
 
 \end_inset
@@ -1089,9 +1075,7 @@ Results
 \end_layout
 
 \begin_layout Standard
-The results of our measurements of trap stiffness as a function of trapping
- laser power and the viscosity of the glycerol + water solutions are summarized
- in Fig.
+The results are summarized in Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1100,169 +1084,6 @@ reference "fig2"
 \end_inset
 
  and Tables 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "table1"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "table2"
-
-\end_inset
-
-, respectively.
- For each data set of the displacement of the single trapped polystyrene
- bead of diameter 
-\begin_inset Formula $3\mu$
-\end_inset
-
-m (Brownian particle), we first check the quality of raw time series data
- (Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig2"
-
-\end_inset
-
-(a)) from the position histogram counts and ensure that it fits well to
- a Gaussian (Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig2"
-
-\end_inset
-
-(b)).
- We then plot the autocorrelation function (ACF) and power spectral density
- (PSD) of the data, and again ensure robust exponential and Lorentzian fits,
- respectively (Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig2"
-
-\end_inset
-
-(c) and (d)).
- The Bayesian analyses is carried out only for those series of data which
- show good results in the preliminary analyses, and we proceed to calculate
- the MAP estimate for 
-\begin_inset Formula $(\lambda^{\star},D^{\star})$
-\end_inset
-
- both analytically and numerically as shown in Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig2"
-
-\end_inset
-
-(e).
- As is clear from the figure, the results match very well, and the standard
- deviation of the estimated parameters for one set of time series data using
- the Bayesian analysis is less than 0.1%.
- In comparison, the corresponding error in the estimates from the PSD is
- much higher, being typically of the order of 3-4%, which can be mostly
- attributed to the variability of the results on changing the start and
- end points of the Lorentzian fit to the data shown in Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig2"
-
-\end_inset
-
-(d).
- Thus, it is clear that the inherent error in the Bayesian estimation is
- far lesser than that in the PSD fit - something which is important to note
- considering that the Lorentzian fit to the PSD is the most standard calibration
- method in optical trapping.
- However, we still use the PSD technique as a benchmark for our estimates
- of 
-\begin_inset Formula $k$
-\end_inset
-
- at different trapping laser powers, which is shown in Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "table1"
-
-\end_inset
-
-.
- The trapping stiffness increases linearly with laser power, and we check
- for this by trapping at six different laser powers.
- The measured values of 
-\begin_inset Formula $k$
-\end_inset
-
- by the Bayesian MAP and stationary (equipartition) analyses agree very
- well.
- Note that the 
-\begin_inset Formula $1\sigma$
-\end_inset
-
- errors indicated in parenthesis are actually the standard errors of the
- mean values of 
-\begin_inset Formula $k$
-\end_inset
-
- after averaging over 5 different data sets for each laser power.
- The PSD are also computed for the same 5 sets of data, and a typical averaged
- spectrum is shown in Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig2"
-
-\end_inset
-
-(d).
- The variation of trap stiffness with laser power is shown in Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig2"
-
-\end_inset
-
-(f), and we get good linear fits with the slopes of the Bayesian processes
- and the PSD agreeing well within 
-\begin_inset Formula $1\sigma$
-\end_inset
-
-.
- For the viscosity data, we show the values of 
-\begin_inset Formula $D$
-\end_inset
-
- in Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "table2"
-
-\end_inset
-
-, from which the values of 
-\begin_inset Formula $\eta$
-\end_inset
-
- are evaluated.
- The agreement with the values measured using the rheometer is good to within
- 3% for all data points except for the highest viscosity value, where the
- trap was not very robust due to the high viscosity.
- Note that for all these measurements the trap stiffness was kept constant
- to around 6 
-\begin_inset Formula $pN/\mu m$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Itemize
@@ -1275,12 +1096,6 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "table1"
-
-\end_inset
-
 Variation of 
 \begin_inset Formula $k$
 \end_inset
@@ -1293,17 +1108,6 @@ Variation of
  by using Bayesian inference and analysis of the MSD assuming equipartition
  in the time domain, and power spectral density analysis in the frequency
  domain.
- The 
-\begin_inset Formula $1\sigma$
-\end_inset
-
- errors in the measured values are indicated in parentheses.
- Note that for the Bayesian analyses, these are the standard errors of the
- mean values of 
-\begin_inset Formula $k$
-\end_inset
-
- after averaging over 5 different data sets for each laser power.
  
 \end_layout
 
@@ -1346,6 +1150,13 @@ Laser power (mW)
 \end_inset
 
 )
+\begin_inset CommandInset label
+LatexCommand label
+name "table1"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1647,6 +1458,10 @@ Equipartition
 
 \end_layout
 
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
 
@@ -1664,8 +1479,8 @@ status open
 <features tabularvalignment="middle">
 <column alignment="center" valignment="middle" width="2cm">
 <column alignment="center" valignment="top" width="2cm">
-<column alignment="center" valignment="top" width="2cm">
-<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="3cm">
+<column alignment="center" valignment="top" width="3cm">
 <row>
 <cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" width="2.4cm">
 \begin_inset Text
@@ -1707,6 +1522,10 @@ status open
 \begin_inset Formula $D$
 \end_inset
 
+
+\end_layout
+
+\begin_layout Plain Layout
 (
 \begin_inset Formula $10^{-13}m$
 \end_inset
@@ -1766,7 +1585,7 @@ From Rheometer values
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1808,7 +1627,7 @@ inference
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1846,7 +1665,7 @@ inference
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1965,6 +1784,13 @@ inference
 
 \begin_layout Plain Layout
 0.276(14)
+\begin_inset CommandInset label
+LatexCommand label
+name "table2"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1978,12 +1804,6 @@ inference
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "table2"
-
-\end_inset
-
 Viscosity measurements on glyecerol + water mixture using Bayesian analysis.
  We determine 
 \begin_inset Formula $D$
@@ -1994,7 +1814,11 @@ Viscosity measurements on glyecerol + water mixture using Bayesian analysis.
 \end_inset
 
  using the Einstein relation.
- 
+ The 
+\begin_inset Formula $1\sigma$
+\end_inset
+
+ errors in the measured values are indicated in parenthesis.
 \end_layout
 
 \end_inset
