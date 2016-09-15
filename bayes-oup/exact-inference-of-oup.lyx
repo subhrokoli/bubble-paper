@@ -1086,10 +1086,6 @@ istance calibration of the detection system.
  (Brookfield DB3TLVCJ0) to match with the experimental results.
 \end_layout
 
-\begin_layout Section
-Results
-\end_layout
-
 \begin_layout Standard
 The results of our measurements of trap stiffness as a function of trapping
  laser power and the viscosity of the glycerol + water solutions are summarized
@@ -1169,10 +1165,12 @@ reference "fig2"
  As is clear from the figure, the results match very well, and the standard
  deviation of the estimated parameters for one set of time series data using
  the Bayesian analysis is less than 0.1%.
- In comparison, the corresponding error in the estimates from the PSD is
- much higher, being typically of the order of 3-4%, which can be mostly
- attributed to the variability of the results on changing the start and
- end points of the Lorentzian fit to the data shown in Fig.
+ In comparison, the corresponding error in the estimates from the PSD for
+ a single time series data set is much higher, being typically of the order
+ of 3-4%.
+ This can be principally attributed to the variation in the fit parameters
+ depending on the start and end points of the Lorentzian fit to the data
+ shown in Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1190,7 +1188,7 @@ reference "fig2"
 \begin_inset Formula $k$
 \end_inset
 
- at different trapping laser powers, which is shown in Table 
+ at different trapping laser powers, which are shown in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "table1"
@@ -1199,7 +1197,8 @@ reference "table1"
 
 .
  The trapping stiffness increases linearly with laser power, and we check
- for this by trapping at six different laser powers.
+ for this by trapping at six different laser powers, with five sets of time
+ series data used for each laser power.
  The measured values of 
 \begin_inset Formula $k$
 \end_inset
@@ -1215,9 +1214,10 @@ reference "table1"
 \begin_inset Formula $k$
 \end_inset
 
- after averaging over 5 different data sets for each laser power.
- The PSD are also computed for the same 5 sets of data, and a typical averaged
- spectrum is shown in Fig.
+ after averaging over the five different data sets for each laser power,
+ and should not be confused with the inherent error in the Bayesian statistics.
+ PSDs are also computed for the same five sets of data, and a typical averaged
+ spectrum for the laser power of 10.1 mW is shown in Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1234,8 +1234,17 @@ reference "fig2"
 
 \end_inset
 
-(f), and we get good linear fits with the slopes of the Bayesian processes
- and the PSD agreeing well within 
+(f), and we get good linear fits with the slopes (rate of change of stiffness
+ with laser power) of the Bayesian processes (we do not show the MAP and
+ stationary analyses data separately since they have overlap almost completely
+ as shown in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "table1"
+
+\end_inset
+
+) and the PSD agreeing well within 
 \begin_inset Formula $1\sigma$
 \end_inset
 
@@ -1255,16 +1264,31 @@ reference "table2"
 \begin_inset Formula $\eta$
 \end_inset
 
- are evaluated.
- The agreement with the values measured using the rheometer is good to within
- 3% for all data points except for the highest viscosity value, where the
- trap was not very robust due to the high viscosity.
+ are evaluated using the Einstein relation 
+\begin_inset Formula $\left(\eta=\dfrac{k_{B}T}{6\pi Da},\;\mathrm{a}=\mathrm{bead}\;\mathrm{radius}\right)$
+\end_inset
+
+.
+ In these sets of experiments, the voltage-physical distance calibration
+ becomes of crucial importance, and we perform fresh calibrations for each
+ different viscosity sample.
+ The agreement with the viscosity values measured using the rheometer is
+ good to within 3% for all data points except for the highest viscosity
+ value, where the trap was not very robust due to the high viscosity, with
+ the corner frequency 
+\begin_inset Formula $\left(\dfrac{\lambda}{2\pi}\right)$
+\end_inset
+
+ being rather low for the same laser power.
  Note that for all these measurements the trap stiffness was kept constant
  to around 6 
 \begin_inset Formula $pN/\mu m$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
   
 \begin_inset Float table
 wide false
