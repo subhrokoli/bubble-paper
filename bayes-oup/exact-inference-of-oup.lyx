@@ -709,6 +709,16 @@ where both
  second derivates of the posterior, evaluated at the maximum.
  We do not provide their unwieldy expressions but do make use of them when
  reporting point estimates from experimental data (see below).
+ We refer to this procedure as 
+\begin_inset Quotes eld
+\end_inset
+
+Bayes I
+\begin_inset Quotes erd
+\end_inset
+
+ below.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -757,7 +767,15 @@ This procedure is independent of the sampling time and is equivalent to
 \end_inset
 
 .
- 
+ We refer to this procedure as 
+\begin_inset Quotes eld
+\end_inset
+
+Bayes II
+\begin_inset Quotes erd
+\end_inset
+
+ below.
 \end_layout
 
 \begin_layout Standard
@@ -886,7 +904,7 @@ Experimental setup and data acquisition
 placement t
 wide true
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
