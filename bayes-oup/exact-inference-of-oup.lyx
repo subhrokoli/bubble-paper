@@ -1997,7 +1997,7 @@ reference "fig2"
 
 (f), and we get good linear fits with the slopes (rate of change of stiffness
  with laser power) of the Bayesian processes (we do not show the MAP and
- stationary analyses data separately since they have overlap almost completely
+ stationary analyses data separately since they overlap almost completely
  as shown in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
