@@ -819,7 +819,7 @@ A comparison of the estimates obtained from these independent procedures
 placement t
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset space \hfill{}
@@ -902,29 +902,24 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-(a) Plot of the displacement of the single trapped polystyrene bead of diameter
- 
+Parameter estimation from the discretely observed sample paths of an optically
+ trapped 
 \begin_inset Formula $3\mu$
 \end_inset
 
-m (Brownian particle) as a function of time.
- (b) Histogram of the displacement of the trapped Brownian particle with
- a Gaussian curve fitted (black solid line).
- (c) Auto-correlation function evaluated for the trapped Brownian particle.
- (d) Power spectral density of the trapped Brownian particle.
- (e) Plot of posterior distribution in the 
-\begin_inset Formula $\lambda-D$
+m Brownian polysterene bead.
+ Panel (a) shows discrete observations of one coordinate of the sample path,
+ (b) the histogram the coordinate, (c) the autocorrelation function and
+ (d) the spectral density.
+ Panel (e) show the posterior distribution, together with iso-probability
+ contours and the location of the maximum.
+ Panel (f) shows the variation of stiffness 
+\begin_inset Formula $k$
 \end_inset
 
- plane, showing the position of the numerical maximum and that of the analytical
- maximum.
- (f) Variation of stiffness of the trapped particle evaluated from Bayesian,
- PSD, and equipartition methods as a function of the trapping laser power.
- The slopes agree at the 1
-\begin_inset Formula $\sigma$
-\end_inset
-
- level (shown in parentheses).
+ as a function of laser power, estimated by thw two Bayesian methods of
+ this paper and from a fit to the spectral density.
+ Standard errors of estimates are indicated in parentheses.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig2"
@@ -1290,13 +1285,11 @@ reference "table2"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
+ 
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -1625,30 +1618,15 @@ PSD
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Variation of 
+Variation of trap stiffness 
 \begin_inset Formula $k$
 \end_inset
 
- with laser power.
- We determine 
-\begin_inset Formula $k$
-\end_inset
-
- by using Bayesian inference and analysis of the MSD assuming equipartition
- in the time domain, and power spectral density analysis in the frequency
- domain.
- The 
-\begin_inset Formula $1\sigma$
-\end_inset
-
- errors in the measured values are indicated in parentheses.
- Note that for the Bayesian analyses, these are the standard errors of the
- mean values of 
-\begin_inset Formula $k$
-\end_inset
-
- after averaging over 5 different data sets for each laser power.
- 
+ with laser power estimated by the two Bayesian methods of this work (Bayes
+ I and Bayes II) and by the standard fit to the spectral density (PSD).
+ For each value of laser power, the corresponding stiffness is the mean
+ over 5 different sets of measurements.
+ The standard error of mean is indicated in parentheses.
 \begin_inset CommandInset label
 LatexCommand label
 name "table1"
@@ -1669,7 +1647,7 @@ name "table1"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -1709,7 +1687,7 @@ status open
 \end_inset
 
  (
-\begin_inset Formula $10^{-3}$
+\begin_inset Formula $10^{-13}$
 \end_inset
 
  m
