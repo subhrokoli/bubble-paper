@@ -550,6 +550,13 @@ Comparing the forms of
 
 \begin_layout Section
 Bayesian inference
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Bayesian-inference"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -992,7 +999,7 @@ m in 10% NaCl-water solution, around
 \end_inset
 
  of which is pipetted on a standard glass cover slip.
- The total power available at the trapping plane is around 15 mW.
+ The maximum power available at the trapping plane is around 40 mW.
  The motion of a single trapped particle is observed by back-focal plane
  interferometry using the back-scattered intensity of a detection laser
  at 
@@ -1168,8 +1175,8 @@ reference "fig2"
  deviation of the estimated parameters for one set of time series data using
  the Bayesian analysis is less than 0.1%.
  In comparison, the corresponding error in the estimates from the PSD is
- much higher, being typically of the order of 3-4%, which can be mostly
- attributed to the variability of the results on changing the start and
+ much higher, being typically of the order of 3-4%, which can be principally
+ attributed to the variability of the results depending on the start and
  end points of the Lorentzian fit to the data shown in Fig.
  
 \begin_inset CommandInset ref
@@ -1188,7 +1195,7 @@ reference "fig2"
 \begin_inset Formula $k$
 \end_inset
 
- at different trapping laser powers, which is shown in Table 
+ at different trapping laser powers, which are shown in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "table1"
@@ -1197,7 +1204,8 @@ reference "table1"
 
 .
  The trapping stiffness increases linearly with laser power, and we check
- for this by trapping at six different laser powers.
+ for this by trapping at six different laser powers, with five sets of time
+ series data used for each laser power.
  The measured values of 
 \begin_inset Formula $k$
 \end_inset
@@ -1213,9 +1221,9 @@ reference "table1"
 \begin_inset Formula $k$
 \end_inset
 
- after averaging over 5 different data sets for each laser power.
- The PSD are also computed for the same 5 sets of data, and a typical averaged
- spectrum is shown in Fig.
+ after averaging over the five different data sets for each laser power.
+ The PSD are also computed for the same five sets of data, and a typical
+ averaged spectrum is shown in Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1232,8 +1240,9 @@ reference "fig2"
 
 \end_inset
 
-(f), and we get good linear fits with the slopes of the Bayesian processes
- and the PSD agreeing well within 
+(f), and we get good linear fits with the slopes (rate of change of stiffness
+ with laser power) of the Bayesian processes and the PSD agreeing well within
+ 
 \begin_inset Formula $1\sigma$
 \end_inset
 
@@ -1254,8 +1263,23 @@ reference "table2"
 \end_inset
 
  are evaluated.
- The agreement with the values measured using the rheometer is good to within
- 3% for all data points except for 
+ In these sets of experiments, the voltage-physical distance calibration
+ becomes of crucial importance, and we perform fresh calibrations for each
+ different viscosity samples.
+ The agreement with the viscosity values measured using the rheometer is
+ good to within 3% for all data points except for the highest viscosity
+ value, where the trap was not very robust due to the high viscosity, with
+ the corner frequency 
+\begin_inset Formula $\left(\dfrac{\lambda}{2\pi}\right)$
+\end_inset
+
+ being rather low for the same laser power.
+ Note that for all these measurements the trap stiffness was kept constant
+ to around 6 
+\begin_inset Formula $pN/\mu m$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
