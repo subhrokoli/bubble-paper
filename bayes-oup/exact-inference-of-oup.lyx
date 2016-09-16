@@ -124,7 +124,6 @@ The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -138,7 +137,6 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -154,8 +152,8 @@ Bayesian inference provides a principled way of estimating the parameters
  the maximum a posteriori estimates.
  This obviates the need for Monte Carlo sampling and yields methods that
  are both fast and accurate.
- We apply these to experimental data and compare with commonly used non-Bayesian
- estimation methods.
+ We apply these to experimental data and demonstrate their advantage over
+ commonly used non-Bayesian fitting methods.
  
 \end_layout
 
@@ -750,13 +748,14 @@ A second Bayesian procedure for estimating the trap stiffness alone results
 
 \end_inset
 
-The MAP estimate straightforwardly follows,
+The MAP estimate and its standard error follow straightforwardly from the
+ posterior distribution as, 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\frac{k^{\star}}{k_{B}T}=\frac{N}{\sum_{n=1}^{N}x_{n}^{2}}.
+\frac{k^{\star}}{k_{B}T}=\frac{N}{\sum_{n=1}^{N}x_{n}^{2}},\quad\sigma_{k^{\star}}=\frac{k^{\star}}{\sqrt{N}}
 \end{equation}
 
 \end_inset
@@ -1307,7 +1306,7 @@ reference "table2"
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
