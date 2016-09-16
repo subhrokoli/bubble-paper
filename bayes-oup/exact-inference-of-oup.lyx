@@ -313,9 +313,16 @@ exact
  We apply both methods to experimental data to obtain estimates that have
  excellent internal consistency.
  These estimates are found to be in good agreement with commonly used non-Bayesi
-an calibration methods.
+an calibration methods 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "berg2004power"
+
+\end_inset
+
+.
  We discuss the advantages of our methods in comparision to standard calibriatio
-n methods and strongly advocate their use in optical tweezer experiments.
+n methods in optical tweezer experiments.
  The remainder of the paper is organized as follows.
  In the next section we recall several key properties of the sample paths
  and distributions of the Ornstein-Uhlenbeck process.
@@ -342,7 +349,8 @@ reference "sec:Results"
 
  we apply the Bayesian procedures to the experimental data.
  We conclude with a discussion of future directions in Bayesian inference
- in optical tweezer experiments.
+ in optical tweezer experiments while advocating its use as a complement
+ to standard fitting methods.
  
 \end_layout
 
@@ -1237,6 +1245,57 @@ name "sec:Results"
 
 \end_layout
 
+\begin_layout Itemize
+Overview of time series, histogram, autocorrelation and power spectral density
+ - Fig.
+ 1
+\end_layout
+
+\begin_layout Itemize
+Bayesian results, joint probability plot, together with marginals - Fig.
+ 2
+\end_layout
+
+\begin_layout Itemize
+Variation of 
+\begin_inset Formula $k$
+\end_inset
+
+ with laser power Bayes I, Bayes II, psd (need to say that 
+\begin_inset Formula $\gamma$
+\end_inset
+
+must be known) - Table 1
+\end_layout
+
+\begin_layout Itemize
+Microrheological application - from friction to 
+\begin_inset Formula $\eta$
+\end_inset
+
+- Table 2
+\end_layout
+
+\begin_layout Itemize
+Bayes I : less sensitive to drift, does not require prior knowledge of particle
+ radius or fluid viscosity : these are estimated from the data.
+ 
+\end_layout
+
+\begin_layout Itemize
+Bayes II : more sensitive to drift, directly estimates k, consistency with
+ Bayes I is an excellent test of implicit assumptions.
+ 
+\end_layout
+
+\begin_layout Itemize
+Both methods have statistical errors that scale as inverse square root of
+ the number of data points.
+ With a 1000 points, the statistical accuracy would be 3% of the MAP estimate,
+ and with 10000 points, it would be less than 1% of the MAP estimate.
+ 
+\end_layout
+
 \begin_layout Standard
 The results of our measurements of trap stiffness as a function of trapping
  laser power and the viscosity of the glycerol + water solutions are summarized
@@ -1441,7 +1500,7 @@ reference "table2"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -1799,74 +1858,25 @@ name "table1"
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="7" columns="4">
+<lyxtabular version="3" rows="6" columns="4">
 <features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="middle" width="2cm">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="2cm">
 <column alignment="center" valignment="top" width="2cm">
 <row>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" width="2.4cm">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset Formula $\eta$
 \end_inset
 
-(Pa s)
-\end_layout
 
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $D$
-\end_inset
-
- (
-\begin_inset Formula $10^{-13}$
-\end_inset
-
- m
-\begin_inset Formula $^{2}/$
-\end_inset
-
-s)
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Rheometry
 \end_layout
 
 \end_inset
@@ -1875,16 +1885,7 @@ Rheometry
 \begin_inset Text
 
 \begin_layout Plain Layout
-Bayes I
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $k_{B}T/6\pi\eta a$
+\begin_inset Formula $D$
 \end_inset
 
 
@@ -1896,7 +1897,22 @@ Bayes I
 \begin_inset Text
 
 \begin_layout Plain Layout
-Bayes I
+\begin_inset Formula $D^{\star}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\eta^{\star}$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1912,16 +1928,7 @@ Bayes I
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.00085(3)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1935,6 +1942,15 @@ Bayes I
 
 \begin_layout Plain Layout
 1.72(6) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00085(3)
 \end_layout
 
 \end_inset
@@ -1954,15 +1970,6 @@ Bayes I
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.00139(4)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 1.07
 \end_layout
 
@@ -1973,6 +1980,15 @@ Bayes I
 
 \begin_layout Plain Layout
 1.05(3)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00139(4)
 \end_layout
 
 \end_inset
@@ -1988,16 +2004,7 @@ Bayes I
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.00200(3)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2015,6 +2022,15 @@ Bayes I
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00200(3)
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
@@ -2026,16 +2042,7 @@ Bayes I
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.00250(5)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2049,6 +2056,15 @@ Bayes I
 
 \begin_layout Plain Layout
 0.586(12)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00250(5)
 \end_layout
 
 \end_inset
@@ -2068,15 +2084,6 @@ Bayes I
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.00530(8)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 0.301
 \end_layout
 
@@ -2091,6 +2098,15 @@ Bayes I
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00530(8)
+\end_layout
+
+\end_inset
+</cell>
 </row>
 </lyxtabular>
 
@@ -2100,16 +2116,14 @@ Bayes I
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Viscosity measurements on glyecerol + water mixture using Bayesian analysis.
- We determine 
-\begin_inset Formula $D$
-\end_inset
-
- from the variance as described in the text and determine 
-\begin_inset Formula $\eta$
-\end_inset
-
- using the Einstein relation.
+Bayesian viscometry in an optical trap.
+ The first column is the viscosity of the solvent as measured in a rheometer
+ and the second column is the diffusion coefficient as given by the Stokes-Einst
+ein relation for that value of the viscosity.
+ The third column is the Bayesian MAP estimate for the diffusion coefficient
+ and the fourth column is the value of the viscosity, as given by the Stokes-Ein
+stein relation for that value of the diffusion coefficient.
+ There is a good match between the first and fourth columns.
  
 \begin_inset CommandInset label
 LatexCommand label
