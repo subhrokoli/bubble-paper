@@ -124,6 +124,7 @@ The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -137,6 +138,7 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -162,24 +164,60 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-Since the seminal contributions of Rayleigh, Einstein, and Langevin, stochastic
- processes have been used to model physical phenomena in which fluctuations
- play an essential role.
+Since the seminal contributions of Rayleigh, Einstein, Smoluchowki, Langevin
+ and others 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "chandrasekhar1943stochastic"
+
+\end_inset
+
+, stochastic processes have been used to model physical phenomena in which
+ fluctuations play an essential role.
  Examples include the Brownian motion of a particle, the fluctuation of
- current in a resistor, and the radioactive decay of subatomic particles.
+ current in a resistor, and the radioactive decay of subatomic particles
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "van1992stochastic"
+
+\end_inset
+
+.
  A central problem is to infer the parameters of the process from partially
  observed sample paths, for instance, the diffusion constant from a time
  series of positions, or the resistance from a time series of current measuremen
 ts, and so on.
- Bayesian inference provides a principled solution for this inverse problem,
- making optimal use of the information contained in the partially observed
- sample path.
+ Bayesian inference provides a principled solution to this inverse problem
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jeffreys1998theory"
+
+\end_inset
+
+, making optimal use of the information contained in the partially observed
+ sample path 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zellner1988optimal"
+
+\end_inset
+
+.
  
 \end_layout
 
 \begin_layout Standard
-The Ornstein-Uhlenbeck process is commonly used to model the sample paths
- of a harmonically confined Brownian particle.
+The sample path of a harmonically confined Brownian particle is usually
+ modelled by the Ornstein-Uhlenbeck process 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "van1992stochastic,gardiner1985handbook"
+
+\end_inset
+
+.
  This process has a mean regression rate 
 \begin_inset Formula $\lambda$
 \end_inset
@@ -228,20 +266,30 @@ The Ornstein-Uhlenbeck process is commonly used to model the sample paths
 
 .
  These, of course, are consequences of the relation between response and
- correlation that prevails in a physical system in thermal equilibrium.
+ correlation that prevails in a physical system in thermal equilibrium 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "kubo1966fluctuation"
+
+\end_inset
+
+.
  
 \end_layout
 
 \begin_layout Standard
 In this paper, we apply Bayesian inference to the problem of estimating
- the parameters of the Ornstein-Uhlenbeck process from time series that
- represent partially observed sample paths.
+ the parameters of an optically trapped Brownian sphere from time series
+ that represent partially observed sample paths, under conditions in which
+ these paths can be modelled as an Ornstein-Uhlenbeck process.
  This is of great current experimental relevance, since harmonic confinement
- of micron-sized spheres is easily achieved using optical tweezers.
+ of micron-sized spheres is ubiquitous in optical tweezers.
  A reliable estimation of the trap stiffness is a necessary first step in
  using tweezers for force measurements.
- Bayesian methods, using Monte Carlo sampling, have been proposed earlier
- to this end 
+ Reliable estimate of the particle friction is immediately useful in microrheolo
+gy.
+ A Bayesian method Monte Carlo sampling has been proposed earlier to this
+ end 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "richly2013calibrating"
@@ -249,28 +297,50 @@ key "richly2013calibrating"
 \end_inset
 
 .
- Here, we present a method that does away with sampling by exploiting the
- exact likelihoods and sufficient statistics of the problem and provides,
- thereby, exact maximum a posteriori parameter estimates in terms of these
- statistics.
- Consequently, the method is both extremely fast and accurate, being able
- to jointly estimate the trap stiffness and the particle friction from a
- time series with a million points in less than a millisecond.
- Further, the fluctuation-dissipation relation provides a stringent internal
- consistency check on the accuracy of the estimation.
- We apply our method to experimental data to find estimates that have excellent
- internal consistency.
+ Here, we present two Bayesian methods that do away with sampling by exploiting
+ the exact likelihoods and sufficient statistics of the problem and provide
+ thereby, 
+\emph on
+exact
+\emph default
+ maximum a posteriori parameter estimates in terms of these statistics.
+ Consequently, both methods are extremely fast and accurate, and are able
+ to estimate the trap stiffness or the particle friction from a time series
+ with a million points in less than a millisecond.
+ Further, the fluctuation-dissipation relation provides provides a stringent
+ internal consistency check on the accuracy of estimation of the trap stiffness
+ from each of these methods.
+ We apply both methods to experimental data to obtain estimates that have
+ excellent internal consistency.
  These estimates are found to be in good agreement with commonly used non-Bayesi
 an calibration methods.
- 
-\end_layout
-
-\begin_layout Standard
-The remainder of the paper is organized as follows.
+ We discuss the advantages of our methods in comparision to standard calibriatio
+n methods and strongly advocate their use in optical tweezer experiments.
+ The remainder of the paper is organized as follows.
  In the next section we recall several key properties of the sample paths
  and distributions of the Ornstein-Uhlenbeck process.
- In Section III, we present the Bayesian methods and follow, in section
- IV, with their application to experimental data.
+ In Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Bayesian-inference"
+
+\end_inset
+
+, we present the Bayesian methods, in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Experimental-setup-and"
+
+\end_inset
+
+ we describe the experimental setup, and in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Results"
+
+\end_inset
+
+ we apply the Bayesian procedures to the experimental data.
  We conclude with a discussion of future directions in Bayesian inference
  in optical tweezer experiments.
  
@@ -278,6 +348,13 @@ The remainder of the paper is organized as follows.
 
 \begin_layout Section
 Ornstein-Uhlenbeck process
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Ornstein-Uhlenbeck-process"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -320,7 +397,14 @@ where
 
  is now a zero-mean Gaussian white noise with unit variance.
  This is the Ornstein-Uhlenbeck process, whose sample paths obey the Ito
- stochastic differential equation, 
+ stochastic differential equation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gardiner1985handbook"
+
+\end_inset
+
+, 
 \begin_inset Formula 
 \begin{equation}
 dx=-\lambda xdt+\sigma dW
@@ -455,17 +539,6 @@ where
 \begin_inset Formula $|t-t^{\prime}|$
 \end_inset
 
-, unlike the approximate solution used in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "richly2013calibrating"
-
-\end_inset
-
-, which is accurate only when 
-\begin_inset Formula $\lambda|t-t^{\prime}|\ll1$
-\end_inset
-
 .
  The correlation function decays exponentially, 
 \begin_inset Formula 
@@ -475,7 +548,14 @@ C(t-t^{\prime})\equiv\langle x(t)x(t^{\prime})\rangle=\frac{k_{B}T}{k}e^{-\lambd
 
 \end_inset
 
-a property guaranteed by Doob's theorem for any Gauss-Markov processes.
+a property guaranteed by Doob's theorem for any Gauss-Markov processes 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "van1992stochastic"
+
+\end_inset
+
+.
  
 \family roman
 \series medium
@@ -548,6 +628,13 @@ Comparing the forms of
 
 \begin_layout Section
 Bayesian inference
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Bayesian-inference"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -569,6 +656,13 @@ t with
 
  Then, using the Markov property of the Ornstein-Uhlenbeck process, the
  probability of the sample path is given by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wang1945theory"
+
+\end_inset
+
+ 
 \begin_inset Formula 
 \begin{equation}
 P(X|\lambda,D)=\prod_{n=1}^{N-1}P_{1|1}(x_{n+1}|x_{n},\lambda,D)P_{1}(x_{1}|\lambda,D)
@@ -677,7 +771,14 @@ The maximum a posteriori (MAP) estimate
 \end_inset
 
 , while the standard error of this estimate is obtained from the matrix
- of second derivatives evaluated at the maximum.
+ of second derivatives evaluated at the maximum 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jeffreys1998theory"
+
+\end_inset
+
+.
  The analytical solution of the stationary conditions, derived in the Appendix,
  yields the MAP estimate to be
 \begin_inset Formula 
@@ -701,12 +802,16 @@ where both
 \begin_inset Formula $\lambda=\lambda^{\star}.$
 \end_inset
 
- These provide direct estimates of the parameters without the need for fitting
- or sampling.
+ These provide direct estimates of the parameters 
+\emph on
+without
+\emph default
+ the need for fitting or sampling.
  The standard errors of these estimates are obtained from the matrix of
  second derivates of the posterior, evaluated at the maximum.
  We do not provide their unwieldy expressions but do make use of them when
- reporting point estimates from experimental data (see below).
+ reporting standard errors of the MAP estimates obtained from experimental
+ data (see below).
  We refer to this procedure as 
 \begin_inset Quotes eld
 \end_inset
@@ -720,7 +825,7 @@ Bayes I
 \end_layout
 
 \begin_layout Standard
-A second Bayesian procedure for estimating the trap stiffness alone results
+A second Bayesian procedure for estimating the trap stiffness directly results
  when 
 \begin_inset Formula $X$
 \end_inset
@@ -729,6 +834,13 @@ A second Bayesian procedure for estimating the trap stiffness alone results
  in physical terms, as repeated independent observations of the stationary
  distribution 
 \begin_inset Formula $P_{1}(x)$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jaynes2003probability"
+
 \end_inset
 
 .
@@ -743,24 +855,26 @@ A second Bayesian procedure for estimating the trap stiffness alone results
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\ln P(k|X)=\frac{N}{2}\ln\frac{k}{2\pi k_{B}T}-\frac{1}{2}\frac{k}{k_{B}T}\sum_{n=1}^{N}x_{n}^{2}
+\ln P(k|X)=\frac{N}{2}\ln\frac{k}{2\pi k_{B}T}-\frac{1}{2}\frac{k}{k_{B}T}\sum_{n=1}^{N}x_{n}^{2}\quad(k>0)
 \end{equation}
 
 \end_inset
 
 The MAP estimate and its standard error follow straightforwardly from the
- posterior distribution as, 
+ posterior distribution as
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\frac{k^{\star}}{k_{B}T}=\frac{N}{\sum_{n=1}^{N}x_{n}^{2}},\quad\sigma_{k^{\star}}=\frac{k^{\star}}{\sqrt{N}}
+\frac{k^{\star}}{k_{B}T}=\frac{N}{\sum_{n=1}^{N}x_{n}^{2}},\quad\sigma_{k^{\star}}=\frac{1}{\sqrt{N}}\frac{k^{\star}}{k_{B}T}
 \end{equation}
 
 \end_inset
 
-This procedure is independent of the sampling time and is equivalent to
+and, not unexpectedly, the standard error decreases with increasing number
+ of sampling points.
+ This procedure is independent of the sampling rate and is equivalent to
  the equipartition method when the Heaviside prior is used for 
 \begin_inset Formula $k$
 \end_inset
@@ -775,6 +889,16 @@ Bayes II
 \end_inset
 
  below.
+\end_layout
+
+\begin_layout Standard
+A comparison of the estimates for the trap stiffness obtained from these
+ independent procedures provides a check on the validity of the Ornstein-Uhlenbe
+ck process as a data model.
+ Any significant disagreement between the estimates from the two methods
+ signals a breakdown of the applicability of the model and the assumptions
+ implicit in it: overdamped dynamics, constant friction, harmonicity of
+ the potential, and thermal equilibrium.
 \end_layout
 
 \begin_layout Standard
@@ -797,9 +921,16 @@ entire
 \begin_inset Formula $X$
 \end_inset
 
- relevant to estimation is contained in these four statistics.
- Their use reduces computational expense enormously as only four numbers,
- rather than the entire time series, is required.
+ relevant to estimation is contained in these four statistics 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jaynes2003probability"
+
+\end_inset
+
+.
+ Their use reduces computational expense enormously, as only four numbers,
+ rather than the entire time series, are required.
  The combined use of exact likelihoods, sufficient statistics and analytical
  MAP estimates yields fast and accurate methods for estimating parameters
  from the time series of particle positions.
@@ -822,16 +953,6 @@ entire
 
 .
  
-\end_layout
-
-\begin_layout Standard
-A comparison of the estimates obtained from these independent procedures
- provides a check on the validity of the Ornstein-Uhlenbeck process as a
- data model.
- Any significant disagreement between the estimates from the two methods
- signals a breakdown of applicability of the model and the assumptions implicit
- in it: overdamped dynamics, constant friction, harmonicity of the potential,
- and thermal equilibrium.
 \begin_inset Float figure
 placement t
 wide false
@@ -896,6 +1017,13 @@ name "fig:balanced-detection"
 
 \begin_layout Section
 Experimental setup and data acquisition
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Experimental-setup-and"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1100,6 +1228,13 @@ istance calibration of the detection system.
 
 \begin_layout Section
 Results
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Results"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1996,7 +2131,14 @@ name "table2"
 \end_layout
 
 \begin_layout Section
-DISCUSSION
+Discussion
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Discussion"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -2026,6 +2168,25 @@ joint probability obtained, can marginalize out friction if that is not
 can do many more complicated models, e.g.
  air trapping etc, using Bayesian inference.
  
+\end_layout
+
+\begin_layout Standard
+This solution is exact and holds for arbitrary values of 
+\begin_inset Formula $|t-t^{\prime}|$
+\end_inset
+
+, unlike the approximate solution used in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "richly2013calibrating"
+
+\end_inset
+
+, which is accurate only when 
+\begin_inset Formula $\lambda|t-t^{\prime}|\ll1$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Acknowledgments
