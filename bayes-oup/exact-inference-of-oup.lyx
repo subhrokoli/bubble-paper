@@ -778,11 +778,11 @@ The maximum a posteriori (MAP) estimate
 \begin_inset Formula $\partial\ln P(\lambda,D|X)/\partial D=0$
 \end_inset
 
-, while the error bars of this estimate is obtained from the matrix of second
- derivatives evaluated at the maximum 
+, while the error bars of this estimate are obtained from the Hessian matrix
+ of second derivatives evaluated at the maximum 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "jeffreys1998theory"
+key "jeffreys1998theory,jaynes2003probability,sivia2006data"
 
 \end_inset
 
@@ -815,11 +815,11 @@ where both
 without
 \emph default
  the need for fitting or sampling.
- The standard errors of these estimates are obtained from the matrix of
- second derivates of the posterior, evaluated at the maximum.
+ The errors bars of these estimates are obtained from the matrix of second
+ derivates of the posterior, evaluated at the maximum.
  We do not provide their unwieldy expressions but do make use of them when
- reporting standard errors of the MAP estimates obtained from experimental
- data (see below).
+ reporting errors of the MAP estimates obtained from experimental data (see
+ below).
  We refer to this procedure as 
 \begin_inset Quotes eld
 \end_inset
@@ -868,8 +868,8 @@ key "jaynes2003probability"
 
 \end_inset
 
-The MAP estimate and its standard error follow straightforwardly from the
- posterior distribution as
+The MAP estimate and its error bar follow straightforwardly from the posterior
+ distribution as
 \end_layout
 
 \begin_layout Standard
@@ -1056,8 +1056,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Parameter estimation from the discretely observed sample paths of an optically
- trapped 
+Discrete sample path and empirical statistics of an optically trapped 
 \begin_inset Formula $3\mu$
 \end_inset
 
@@ -1065,15 +1064,28 @@ m Brownian polysterene bead.
  Panel (a) shows discrete observations of one coordinate of the sample path,
  (b) the histogram the coordinate, (c) the autocorrelation function and
  (d) the spectral density.
- Panel (e) show the posterior distribution, together with iso-probability
- contours and the location of the maximum.
- Panel (f) shows the variation of stiffness 
-\begin_inset Formula $k$
+ The fit of 
+\begin_inset Formula $\lambda$
 \end_inset
 
- as a function of laser power, estimated by thw two Bayesian methods of
- this paper and from a fit to the spectral density.
- Standard errors of estimates are indicated in parentheses.
+ from the both the autocorrelation and the spectral density vary on the
+ amount of data used 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "berg2004power,tassieri2012microrheology"
+
+\end_inset
+
+.
+ The numbers alongside the vertical lines indicate values of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ fitted using data to the
+\emph on
+ left 
+\emph default
+of the corresponding line.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:discrete-sample-path"
@@ -1095,7 +1107,7 @@ name "fig:discrete-sample-path"
 placement t
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1112,24 +1124,16 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Parameter estimation from the discretely observed sample paths of an optically
- trapped 
-\begin_inset Formula $3\mu$
+Logarithms of the posterior probability density for Bayes I (left) and Bayes
+ II (right).
+ The MAP estimate for Bayes I is shown by the 
+\begin_inset Formula $+$
 \end_inset
 
-m Brownian polysterene bead.
- Panel (a) shows discrete observations of one coordinate of the sample path,
- (b) the histogram the coordinate, (c) the autocorrelation function and
- (d) the spectral density.
- Panel (e) show the posterior distribution, together with iso-probability
- contours and the location of the maximum.
- Panel (f) shows the variation of stiffness 
-\begin_inset Formula $k$
-\end_inset
-
- as a function of laser power, estimated by thw two Bayesian methods of
- this paper and from a fit to the spectral density.
- Standard errors of estimates are indicated in parentheses.
+ and for Bayes II by the vertical line.
+ The error bars are obtained from the Hessian matrix of second derivatives
+ evaluated at the MAP value.
+ 
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:bayes-I-and-II"
