@@ -124,6 +124,7 @@ The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -137,6 +138,7 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -423,20 +425,63 @@ where
 \end_inset
 
  is the Wiener process, 
-\begin_inset Formula $\lambda=k/\gamma$
+\begin_inset Formula $\lambda$
 \end_inset
 
  is the mean-regression rate and 
-\begin_inset Formula $\sigma=\sqrt{2k_{B}T\gamma^{-1}}$
+\begin_inset Formula $\sigma$
 \end_inset
 
  is the volatility.
- Since 
+ 
+\end_layout
+
+\begin_layout Standard
+For Brownian motion the mean regression rate 
+\begin_inset Formula $\lambda=k/\gamma$
+\end_inset
+
+ is the ratio of the stiffness and the friction while the square of the
+ volatility 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\sigma^{2}=2D$
+\end_inset
+
+ is twice the diffusion coefficient 
+\begin_inset Formula $D$
+\end_inset
+
+.
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ The latter follows from Einstein relation 
 \begin_inset Formula $D=k_{B}T\gamma^{-1}$
 \end_inset
 
- we have 
-\begin_inset Formula $\sigma^{2}=2D.$
+ between the diffusion and friction coefficients of a Brownian particle.
+ Therefore, the volatility and diffusion are related as 
+\begin_inset Formula $ $
 \end_inset
 
  In problems involving Brownian motion, it is convenient to work with the
@@ -450,6 +495,19 @@ where
 \end_inset
 
 , directly.
+ The ratio of the mean regression rate 
+\begin_inset Formula $\lambda=k/\gamma$
+\end_inset
+
+ and the diffusion coefficient then provides the stiffness 
+\begin_inset Formula $k/k_{B}T=\lambda/D$
+\end_inset
+
+ in units of 
+\begin_inset Formula $k_{B}T$
+\end_inset
+
+.
  
 \end_layout
 
@@ -1037,7 +1095,7 @@ name "sec:Experimental-setup-and"
 placement t
 wide true
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
