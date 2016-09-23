@@ -1224,32 +1224,9 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename pybispFig1.jpg
+	filename pybispPlot.jpg
 	display false
-	width 48text%
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\backslash
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename pybispFig2.jpg
-	display false
-	width 48text%
+	width 45text%
 
 \end_inset
 
