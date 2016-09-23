@@ -1192,12 +1192,11 @@ name "sec:Experimental-setup-and"
 placement t
 wide true
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename figure2.pdf
-	display false
 	scale 53
 
 \end_inset
