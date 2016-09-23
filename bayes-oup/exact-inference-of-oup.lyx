@@ -124,7 +124,6 @@ The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -138,7 +137,6 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -1230,7 +1228,22 @@ status open
 \begin_inset Graphics
 	filename pybispFig1.jpg
 	display false
-	width 25text%
+	width 48text%
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
 
 \end_inset
 
@@ -1238,7 +1251,7 @@ status open
 \begin_inset Graphics
 	filename pybispFig2.jpg
 	display false
-	width 25text%
+	width 48text%
 
 \end_inset
 
