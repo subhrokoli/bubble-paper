@@ -508,10 +508,8 @@ We note that, in general, there is no relation between the mean regression
 \begin_inset Formula $physical$
 \end_inset
 
- constraints, namely the fluctuation-dissipation relation and the Einstein
- relation.
- Kubo subsumes both these relations into fluctuation-dissipation relations
- of the first and second kind 
+ constraints, namely the fluctuation-dissipation and Einstein relations
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "kubo1966fluctuation"
