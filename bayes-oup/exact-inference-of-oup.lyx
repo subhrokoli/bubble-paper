@@ -124,7 +124,6 @@ The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -138,7 +137,6 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -483,7 +481,11 @@ For Brownian motion the mean regression rate
  between the diffusion and friction coefficients of a Brownian particle.
  In problems involving Brownian motion, it is convenient to work with the
  diffusion coefficient, rather than the volatility.
- The ratio of 
+ 
+\end_layout
+
+\begin_layout Standard
+The ratio of 
 \begin_inset Formula $\lambda$
 \end_inset
 
@@ -492,19 +494,19 @@ For Brownian motion the mean regression rate
 \end_inset
 
  provides the stiffness 
-\begin_inset Formula $k/k_{B}T=\lambda/D$
+\begin_inset Formula 
+\begin{equation}
+\lambda/D=k/k_{B}T
+\end{equation}
+
 \end_inset
 
- in units of 
+in units of 
 \begin_inset Formula $k_{B}T$
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Standard
-We note that, in general, there is no relation between the mean regression
+ We note that, in general, there is no relation between the mean regression
  rate and volatility of the Ornstein-Uhlenbeck process and the preceeding
  identity is a consequence of additional 
 \begin_inset Formula $physical$
@@ -2571,10 +2573,9 @@ key "richly2013calibrating"
 \end_layout
 
 \begin_layout Acknowledgments
-RA gratefully acknowledges Professor M.
- E.
- Cates for introducing him to the Bayesian interpretation of probability
- and to Bayesian inference.
+We thank Rajesh Singh for contributing to the PyBISP package and for preparing
+ Figure.
+ 3.
  
 \end_layout
 
