@@ -1003,6 +1003,42 @@ ck process as a data model.
 \end_layout
 
 \begin_layout Standard
+The posterior distributions obtained above are for flat priors.
+ Other choice of priors are possible.
+ In particular, since both 
+\begin_inset Formula $D$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ are scale parameters a non-informative Jeffreys prior is most appropriate.
+ However, as Jeffreys noted 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jeffreys1998theory"
+
+\end_inset
+
+: 
+\begin_inset Quotes eld
+\end_inset
+
+An accurate statement of the prior probability is not necessary in a pure
+ problem of estimation when the number of observations is large.
+\begin_inset Quotes erd
+\end_inset
+
+ In the applications we are concerned with here, the number of observations
+ number in the tens of thousands and the posterior is dominated by the likelihoo
+od rather than the prior.
+ Our results will differ insignificantly if priors more sophisticated than
+ the flat priors are chosen.
+ 
+\end_layout
+
+\begin_layout Standard
 We note that the error bars obtained in both Bayes I and Bayes II refer
  to Bayesian credible intervals, which are relevant to the uncertainty in
  the parameter estimates, given the data set 
