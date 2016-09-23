@@ -124,6 +124,7 @@ The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -137,6 +138,7 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -1215,54 +1217,6 @@ name "fig:discrete-sample-path"
 
 \end_inset
 
- 
-\begin_inset Float figure
-placement t
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename pybispPlot.jpg
-	display false
-	width 45text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Logarithms of the posterior probability density for Bayes I (left) and Bayes
- II (right).
- The MAP estimate for Bayes I is shown by the 
-\begin_inset Formula $+$
-\end_inset
-
- and for Bayes II by the vertical line.
- The error bars are obtained from the Hessian matrix of second derivatives
- evaluated at the MAP value.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:bayes-I-and-II"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
  We collect position fluctuation data of an optically trapped Brownian particle
  using a standard optical tweezers setup that is described in detail in
  
@@ -1407,6 +1361,54 @@ istance calibration of the detection system.
  to create 5 samples of different viscosity.
  The viscosity of each sample is then measured by a commercial rheometer
  (Brookfield DB3TLVCJ0) to match with the experimental results.
+\begin_inset Float figure
+placement t
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename pybispPlot.jpg
+	display false
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Logarithms of the posterior probability density for Bayes I (left) and Bayes
+ II (right).
+ The MAP estimate for Bayes I is shown by the 
+\begin_inset Formula $+$
+\end_inset
+
+ and for Bayes II by the vertical line.
+ The error bars are obtained from the Hessian matrix of second derivatives
+ evaluated at the MAP value.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:bayes-I-and-II"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1645,6 +1647,209 @@ in reverse
  due to ambient low frequency noise sources.
  Thus, the Bayesian method can be used for accurate viscometry using only
  the discretely observed sample paths of a trapped Brownian particle.
+ 
+\end_layout
+
+\begin_layout Standard
+The results of our measurements of trap stiffness as a function of trapping
+ laser power and the viscosity of the glycerol + water solutions are summarized
+ in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:discrete-sample-path"
+
+\end_inset
+
+ and Tables 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:k-versus-power"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:viscometry"
+
+\end_inset
+
+, respectively.
+ For each data set of the displacement of the single trapped polystyrene
+ bead of diameter 
+\begin_inset Formula $3\mu$
+\end_inset
+
+m (Brownian particle), we first check the quality of raw time series data
+ (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:discrete-sample-path"
+
+\end_inset
+
+(a)) from the position histogram counts and ensure that it fits well to
+ a Gaussian (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:discrete-sample-path"
+
+\end_inset
+
+(b)).
+ We then plot the autocorrelation function (ACF) and power spectral density
+ (PSD) of the data, and again ensure robust exponential and Lorentzian fits,
+ respectively (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:discrete-sample-path"
+
+\end_inset
+
+(c) and (d)).
+ The Bayesian analyses is carried out only for those series of data which
+ show good results in the preliminary analyses, and we proceed to calculate
+ the MAP estimate for 
+\begin_inset Formula $(\lambda^{\star},D^{\star})$
+\end_inset
+
+ both analytically and numerically as shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:discrete-sample-path"
+
+\end_inset
+
+(e).
+ As is clear from the figure, the results match very well, and the standard
+ deviation of the estimated parameters for one set of time series data using
+ the Bayesian analysis is less than 0.1%.
+ In comparison, the corresponding error in the estimates from the PSD for
+ a single time series data set is much higher, being typically of the order
+ of 3-4%.
+ This can be principally attributed to the variation in the fit parameters
+ depending on the start and end points of the Lorentzian fit to the data
+ shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:discrete-sample-path"
+
+\end_inset
+
+(d).
+ Thus, it is clear that the inherent error in the Bayesian estimation is
+ far lesser than that in the PSD fit - something which is important to note
+ considering that the Lorentzian fit to the PSD is the most standard calibration
+ method in optical trapping.
+ However, we still use the PSD technique as a benchmark for our estimates
+ of 
+\begin_inset Formula $k$
+\end_inset
+
+ at different trapping laser powers, which are shown in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:k-versus-power"
+
+\end_inset
+
+.
+ The trapping stiffness increases linearly with laser power, and we check
+ for this by trapping at six different laser powers, with five sets of time
+ series data used for each laser power.
+ The measured values of 
+\begin_inset Formula $k$
+\end_inset
+
+ by the Bayesian MAP and stationary (equipartition) analyses agree very
+ well.
+ Note that the 
+\begin_inset Formula $1\sigma$
+\end_inset
+
+ errors indicated in parenthesis are actually the standard errors of the
+ mean values of 
+\begin_inset Formula $k$
+\end_inset
+
+ after averaging over the five different data sets for each laser power,
+ and should not be confused with the inherent error in the Bayesian statistics.
+ PSDs are also computed for the same five sets of data, and a typical averaged
+ spectrum for the laser power of 10.1 mW is shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:discrete-sample-path"
+
+\end_inset
+
+(d).
+ The variation of trap stiffness with laser power is shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:discrete-sample-path"
+
+\end_inset
+
+(f), and we get good linear fits with the slopes (rate of change of stiffness
+ with laser power) of the Bayesian processes (we do not show the MAP and
+ stationary analyses data separately since they overlap almost completely
+ as shown in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:k-versus-power"
+
+\end_inset
+
+) and the PSD agreeing well within 
+\begin_inset Formula $1\sigma$
+\end_inset
+
+.
+ For the viscosity data, we show the values of 
+\begin_inset Formula $D$
+\end_inset
+
+ in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:viscometry"
+
+\end_inset
+
+, from which the values of 
+\begin_inset Formula $\eta$
+\end_inset
+
+ are evaluated using the Einstein relation 
+\begin_inset Formula $\left(\eta=\dfrac{k_{B}T}{6\pi Da},\;\mathrm{a}=\mathrm{bead}\;\mathrm{radius}\right)$
+\end_inset
+
+.
+ In these sets of experiments, the voltage-physical distance calibration
+ becomes of crucial importance, and we perform fresh calibrations for each
+ different viscosity sample.
+ The agreement with the viscosity values measured using the rheometer is
+ good to within 3% for all data points except for the highest viscosity
+ value, where the trap was not very robust due to the high viscosity, with
+ the corner frequency 
+\begin_inset Formula $\left(\dfrac{\lambda}{2\pi}\right)$
+\end_inset
+
+ being rather low for the same laser power.
+ Note that for all these measurements the trap stiffness was kept constant
+ to around 6 
+\begin_inset Formula $pN/\mu m$
+\end_inset
+
+.
  
 \begin_inset Float table
 wide false
