@@ -500,11 +500,7 @@ For Brownian motion the mean regression rate
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Standard
-We note that, in general, there is no relation between the mean regression
+ We note that, in general, there is no relation between the mean regression
  rate and volatility of the Ornstein-Uhlenbeck process and the preceeding
  identity is a consequence of additional 
 \begin_inset Formula $physical$
@@ -663,8 +659,7 @@ which is Lorentzian in the angular frequency
 \begin_inset Formula $f_{c}=\lambda/2\pi$
 \end_inset
 
- is proportional to the mean regression rate.
- 
+ is proportional to the corner frequency
 \end_layout
 
 \begin_layout Standard
@@ -676,7 +671,7 @@ The stationary distribution
 \begin_inset Formula $\mathcal{L}P_{1}=0$
 \end_inset
 
- and the solution is, again, a normal distribution,
+ and the solution is a normal distribution,
 \end_layout
 
 \begin_layout Standard
@@ -700,26 +695,6 @@ Comparing the forms of
 \end_inset
 
 , as it should.
- Both the transition probability density yields a Bayesian method for jointly
- estimating 
-\begin_inset Formula $\lambda$
-\end_inset
-
- and 
-\begin_inset Formula $D$
-\end_inset
-
-, and from there 
-\begin_inset Formula $k$
-\end_inset
-
- while the stationary distribution yields a Bayesian method for estimating
- 
-\begin_inset Formula $k$
-\end_inset
-
- directly.
- We now describe these two methods.
  
 \end_layout
 
