@@ -124,6 +124,7 @@ The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -137,6 +138,7 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -698,7 +700,11 @@ Comparing the forms of
 \end_inset
 
 , as it should.
- Both the transition probability density yields a Bayesian method for jointly
+ 
+\end_layout
+
+\begin_layout Standard
+The transition probability density yields a Bayesian method for jointly
  estimating 
 \begin_inset Formula $\lambda$
 \end_inset
@@ -707,16 +713,16 @@ Comparing the forms of
 \begin_inset Formula $D$
 \end_inset
 
-, and from there 
+, and hence 
 \begin_inset Formula $k$
 \end_inset
 
- while the stationary distribution yields a Bayesian method for estimating
- 
+ while the stationary distribution yields a Bayesian method for directly
+ estimating 
 \begin_inset Formula $k$
 \end_inset
 
- directly.
+ alone.
  We now describe these two methods.
  
 \end_layout
@@ -997,6 +1003,29 @@ ck process as a data model.
 \end_layout
 
 \begin_layout Standard
+We note that the error bars obtained in both Bayes I and Bayes II refer
+ to Bayesian credible intervals, which are relevant to the uncertainty in
+ the parameter estimates, given the data set 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ In contrast, conventional error bars refer to frequentist confidence intervales
+, which are relevant to the outcomes of hypothetical repetitions of measurement.
+ In general, Bayesian credible intervals and frequentist confidence intervals
+ are not identical and should be be compared as they provide answers to
+ separate questions 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jaynes1976confidence"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
 The posterior probabilities in both methods can be written in terms of four
  functions of the data
 \begin_inset Formula 
@@ -1008,6 +1037,7 @@ T_{3}(X) & = & \sum x_{n}^{2},\qquad T_{4}(X)=x_{1}^{2},
 \end_inset
 
 which, therefore, are the sufficient statistics of the problem.
+ We provide explicit expressions in the Appendix.
  The 
 \emph on
 entire
@@ -1029,16 +1059,16 @@ key "jaynes2003probability"
  The combined use of exact likelihoods, sufficient statistics and analytical
  MAP estimates yields fast and accurate methods for estimating parameters
  from the time series of particle positions.
- This completes our description of the Bayesian procedure for jointly estimating
+ This completes our description of the Bayesian procedures for estimating
  
 \begin_inset Formula $\lambda$
 \end_inset
 
- and 
+, 
 \begin_inset Formula $D$
 \end_inset
 
-, and from there, 
+, 
 \begin_inset Formula $\gamma$
 \end_inset
 
