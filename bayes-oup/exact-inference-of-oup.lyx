@@ -404,8 +404,8 @@ where
 \end_inset
 
  is now a zero-mean Gaussian white noise with unit variance.
- This is the Ornstein-Uhlenbeck process, whose sample paths obey the Ito
- stochastic differential equation 
+ This describes the Ornstein-Uhlenbeck process, whose sample paths obey
+ the Ito stochastic differential equation 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "gardiner1985handbook"
@@ -421,18 +421,18 @@ dx=-\lambda xdt+\sigma dW
 \end_inset
 
 where 
-\begin_inset Formula $W$
-\end_inset
-
- is the Wiener process, 
 \begin_inset Formula $\lambda$
 \end_inset
 
- is the mean-regression rate and 
+ is the mean-regression rate , 
 \begin_inset Formula $\sigma$
 \end_inset
 
- is the volatility.
+ is the volatility and 
+\begin_inset Formula $W(t)$
+\end_inset
+
+ is the Wiener process.
  
 \end_layout
 
@@ -475,36 +475,45 @@ For Brownian motion the mean regression rate
 \uwave default
 \noun default
 \color inherit
- The latter follows from Einstein relation 
+ The latter follows by comparing the Langevin and Ito forms of the path
+ equation and recalling the Einstein relation 
 \begin_inset Formula $D=k_{B}T\gamma^{-1}$
 \end_inset
 
  between the diffusion and friction coefficients of a Brownian particle.
- Therefore, the volatility and diffusion are related as 
-\begin_inset Formula $ $
+ In problems involving Brownian motion, it is convenient to work with the
+ diffusion coefficient, rather than the volatility.
+ The ratio of 
+\begin_inset Formula $\lambda$
 \end_inset
 
- In problems involving Brownian motion, it is convenient to work with the
- diffusion coefficient, rather than the volatility, and therefore we infer
- 
+ and 
 \begin_inset Formula $D$
 \end_inset
 
-, rather than 
-\begin_inset Formula $\sigma$
-\end_inset
-
-, directly.
- The ratio of the mean regression rate 
-\begin_inset Formula $\lambda=k/\gamma$
-\end_inset
-
- and the diffusion coefficient then provides the stiffness 
+ provides the stiffness 
 \begin_inset Formula $k/k_{B}T=\lambda/D$
 \end_inset
 
  in units of 
 \begin_inset Formula $k_{B}T$
+\end_inset
+
+.
+ We note that, in general, there is no relation between the mean regression
+ rate and volatility of the Ornstein-Uhlenbeck process and the preceeding
+ identity is a consequence of additional 
+\begin_inset Formula $physical$
+\end_inset
+
+ constraints, namely the fluctuation-dissipation relation and the Einstein
+ relation.
+ Kubo subsumes both these relations into fluctuation-dissipation relations
+ of the first and second kind 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "kubo1966fluctuation"
+
 \end_inset
 
 .
@@ -646,11 +655,11 @@ which is Lorentzian in the angular frequency
 \end_inset
 
 .
- The relation 
-\begin_inset Formula $D/\lambda=k_{B}T/k$
+ The corner frequency 
+\begin_inset Formula $f_{c}=\lambda/2\pi$
 \end_inset
 
- has been used while obtaining the last two relations.
+ is proportional to the mean regression rate.
  
 \end_layout
 
@@ -663,7 +672,7 @@ The stationary distribution
 \begin_inset Formula $\mathcal{L}P_{1}=0$
 \end_inset
 
- and the solution is a normal distribution,
+ and the solution is, again, a normal distribution,
 \end_layout
 
 \begin_layout Standard
@@ -687,6 +696,26 @@ Comparing the forms of
 \end_inset
 
 , as it should.
+ Both the transition probability density yields a Bayesian method for jointly
+ estimating 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+, and from there 
+\begin_inset Formula $k$
+\end_inset
+
+ while the stationary distribution yields a Bayesian method for estimating
+ 
+\begin_inset Formula $k$
+\end_inset
+
+ directly.
+ We now describe these two methods.
  
 \end_layout
 
