@@ -76,7 +76,7 @@
 \begin_body
 
 \begin_layout Title
-Fast Bayesian inference of optical trap stiffness and particle friction
+Fast Bayesian inference of optical trap stiffness and particle diffusion
 \end_layout
 
 \begin_layout Author
@@ -124,6 +124,7 @@ The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -137,6 +138,7 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -147,7 +149,7 @@ Bayesian inference provides a principled way of estimating the parameters
  is generally modelled by the Ornstein-Uhlenbeck process and can be observed
  directly in experiment.
  Here we present Bayesian methods for inferring the parameters of this process,
- the trap stiffness and the particle friction coefficient, that use exact
+ the trap stiffness and the particle diffusion coefficient, that use exact
  likelihoods and sufficient statistics to arrive at simple expressions for
  the maximum a posteriori estimates.
  This obviates the need for Monte Carlo sampling and yields methods that
@@ -993,13 +995,40 @@ Bayes II
 \end_layout
 
 \begin_layout Standard
-A comparison of the estimates for the trap stiffness obtained from these
- independent procedures provides a check on the validity of the Ornstein-Uhlenbe
-ck process as a data model.
- Any significant disagreement between the estimates from the two methods
- signals a breakdown of the applicability of the model and the assumptions
- implicit in it: overdamped dynamics, constant friction, harmonicity of
- the potential, and thermal equilibrium.
+The posterior probabilities in both methods can be written in terms of four
+ functions of the data
+\begin_inset Formula 
+\begin{eqnarray}
+T_{1}(X) & = & \sum x_{n+1}^{2},\quad T_{2}(X)=\sum x_{n+1}x_{n},\nonumber \\
+T_{3}(X) & = & \sum x_{n}^{2},\qquad T_{4}(X)=x_{1}^{2},
+\end{eqnarray}
+
+\end_inset
+
+which, therefore, are the sufficient statistics of the problem.
+ We provide explicit expressions in the Appendix.
+ The 
+\emph on
+entire
+\emph default
+ information in the time series 
+\begin_inset Formula $X$
+\end_inset
+
+ relevant to estimation is contained in these four statistics 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jaynes2003probability"
+
+\end_inset
+
+.
+ Their use reduces computational expense enormously, as only four numbers,
+ rather than the entire time series, are required.
+ The combined use of exact likelihoods, sufficient statistics and analytical
+ MAP estimates yields fast and accurate methods for estimating parameters
+ from the time series of particle positions.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1062,39 +1091,13 @@ key "jaynes1976confidence"
 \end_layout
 
 \begin_layout Standard
-The posterior probabilities in both methods can be written in terms of four
- functions of the data
-\begin_inset Formula 
-\begin{eqnarray}
-T_{1}(X) & = & \sum x_{n+1}^{2},\quad T_{2}(X)=\sum x_{n+1}x_{n},\nonumber \\
-T_{3}(X) & = & \sum x_{n}^{2},\qquad T_{4}(X)=x_{1}^{2},
-\end{eqnarray}
-
-\end_inset
-
-which, therefore, are the sufficient statistics of the problem.
- We provide explicit expressions in the Appendix.
- The 
-\emph on
-entire
-\emph default
- information in the time series 
-\begin_inset Formula $X$
-\end_inset
-
- relevant to estimation is contained in these four statistics 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "jaynes2003probability"
-
-\end_inset
-
-.
- Their use reduces computational expense enormously, as only four numbers,
- rather than the entire time series, are required.
- The combined use of exact likelihoods, sufficient statistics and analytical
- MAP estimates yields fast and accurate methods for estimating parameters
- from the time series of particle positions.
+A comparison of the estimates for the trap stiffness obtained from these
+ independent procedures provides a check on the validity of the Ornstein-Uhlenbe
+ck process as a data model.
+ Any significant disagreement between the estimates from the two methods
+ signals a breakdown of the applicability of the model and the assumptions
+ implicit in it: overdamped dynamics, constant friction, harmonicity of
+ the potential, and thermal equilibrium.
  This completes our description of the Bayesian procedures for estimating
  
 \begin_inset Formula $\lambda$
