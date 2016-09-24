@@ -124,6 +124,7 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -137,6 +138,7 @@ The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -460,7 +462,7 @@ key "berg2004power"
  open-source software available freely on GitHub 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "hadoop"
+key "pybisp"
 
 \end_inset
 
@@ -538,7 +540,7 @@ where
 , we obtain the overdamped Langevin equation 
 \begin_inset Formula 
 \begin{equation}
-\dot{x}=-\frac{k}{\gamma}x+\sqrt{\frac{2k_{B}T}{\gamma}}\zeta(t)
+\dot{x}=-\frac{k}{\gamma}x+\sqrt{\frac{2k_{B}T}{\gamma}}\zeta(t),
 \end{equation}
 
 \end_inset
@@ -550,16 +552,9 @@ where
  is now a zero-mean Gaussian white noise with unit variance.
  This describes the Ornstein-Uhlenbeck process, whose sample paths obey
  the Ito stochastic differential equation 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "gardiner1985handbook"
-
-\end_inset
-
-, 
 \begin_inset Formula 
 \begin{equation}
-dx=-\lambda xdt+\sigma dW
+dx=-\lambda xdt+\sigma dW,
 \end{equation}
 
 \end_inset
@@ -576,7 +571,14 @@ where
 \begin_inset Formula $W(t)$
 \end_inset
 
- is the Wiener process.
+ is the Wiener process 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gardiner1985handbook"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -850,7 +852,7 @@ Comparing the forms of
 \end_layout
 
 \begin_layout Standard
-The transition probability density yields a Bayesian method for jointly
+The transition probability density yields the Bayesian method for jointly
  estimating 
 \begin_inset Formula $\lambda$
 \end_inset
@@ -859,11 +861,11 @@ The transition probability density yields a Bayesian method for jointly
 \begin_inset Formula $D$
 \end_inset
 
-, and hence 
+ (and hence 
 \begin_inset Formula $k$
 \end_inset
 
- while the stationary distribution yields a Bayesian method for directly
+), while the stationary distribution yields the Bayesian method for directly
  estimating 
 \begin_inset Formula $k$
 \end_inset
@@ -1053,13 +1055,61 @@ where both
 \emph on
 without
 \emph default
- the need for fitting or sampling.
- The errors bars of these estimates are obtained from the matrix of second
- derivates of the posterior, evaluated at the maximum.
- We do not provide their unwieldy expressions but do make use of them when
- reporting errors of the MAP estimates obtained from experimental data (see
- below).
- We refer to this procedure as 
+ the need for fitting, minimization, or Monte Carlo sampling.
+ 
+\end_layout
+
+\begin_layout Standard
+The error bars are obtained from the Taylor expansion of the log posterior
+ to quadratic order about the MAP value, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\ln\frac{P(\lambda,D|X)}{P(\lambda^{\star},D^{\star}|X)}\approx-\left[\frac{(\Delta\lambda)^{2}}{2\sigma_{\lambda}^{2}}+\frac{\Delta\lambda\Delta D}{\sigma_{\lambda D}^{2}}+\frac{(\Delta D)^{2}}{2\sigma_{D}^{2}}\right]
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\Delta\lambda=\lambda-\lambda^{\star}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Delta D=D-D^{\star}$
+\end_inset
+
+ and the co-variances 
+\begin_inset Formula $\sigma_{\lambda}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma_{\lambda D}^{2}$
+\end_inset
+
+ , 
+\begin_inset Formula $\sigma_{D}^{2}$
+\end_inset
+
+ are elements of the 
+\emph on
+inverse
+\emph default
+ of the matrix of second derivates of the log posterior, evaluated at the
+ maximum.
+ The covariances define the size and shape of the Bayesian credible region
+ around the maximum 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "sivia2006data"
+
+\end_inset
+
+.
+ We do not provide their unwieldy expressions here but do make use of them
+ when computing credible regions around the MAP estimates.
+ We refer to this Bayesian estimation procedure as 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1114,15 +1164,19 @@ The MAP estimate and its error bar follow straightforwardly from the posterior
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\frac{k^{\star}}{k_{B}T}=\frac{N}{\sum_{n=1}^{N}x_{n}^{2}},\quad\sigma_{k^{\star}}=\frac{1}{\sqrt{N}}\frac{k^{\star}}{k_{B}T}
+\frac{k^{\star}}{k_{B}T}=\frac{N}{\sum_{n=1}^{N}x_{n}^{2}},\quad\sigma_{k}=\frac{1}{\sqrt{N}}\frac{k^{\star}}{k_{B}T}
 \end{equation}
 
 \end_inset
 
-and, not unexpectedly, the standard error decreases with increasing number
- of sampling points.
- This procedure is independent of the sampling rate and is equivalent to
- the equipartition method when the Heaviside prior is used for 
+and, not unexpectedly, the standard error decreases as the number of observation
+s increases.
+ This procedure is independent of 
+\begin_inset Formula $\Delta t$
+\end_inset
+
+ and is equivalent to the equipartition method when the Heaviside prior
+ is used for 
 \begin_inset Formula $k$
 \end_inset
 
@@ -1167,12 +1221,9 @@ key "jaynes2003probability"
 \end_inset
 
 .
- Their use reduces computational expense enormously, as only four numbers,
- rather than the entire time series, are required.
- The combined use of exact likelihoods, sufficient statistics and analytical
- MAP estimates yields fast and accurate methods for estimating parameters
- from the time series of particle positions.
- 
+ Their use reduces computational expense greatly, as only four numbers,
+ rather than the entire time series, is needed for evaluating the posterior
+ distributions.
 \end_layout
 
 \begin_layout Standard
@@ -1186,15 +1237,15 @@ The posterior distributions obtained above are for flat priors.
 \begin_inset Formula $k$
 \end_inset
 
- are scale parameters a non-informative Jeffreys prior is most appropriate.
- However, as Jeffreys noted 
+ are scale parameters a non-informative Jeffreys prior is appropriate 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "jeffreys1998theory"
 
 \end_inset
 
-: 
+.
+ Jeffreys has observed, however, that 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1203,12 +1254,18 @@ An accurate statement of the prior probability is not necessary in a pure
 \begin_inset Quotes erd
 \end_inset
 
- In the applications we are concerned with here, the number of observations
- number in the tens of thousands and the posterior is dominated by the likelihoo
-od rather than the prior.
- Our results will differ insignificantly if priors more sophisticated than
- the flat priors are chosen.
  
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jeffreys1998theory"
+
+\end_inset
+
+.
+ The number of observations are in the tens of thousands in time series
+ we study here and the posterior is dominated by the likelihoood rather
+ than the prior.
+ The change in 
 \end_layout
 
 \begin_layout Standard
