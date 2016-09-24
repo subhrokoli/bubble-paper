@@ -2681,6 +2681,42 @@ reference "eq:map-estimate"
 \end_inset
 
 ).
+ The Hessian matrix can be calculated by obtaining the second derivatives
+ of the logarithm of posterior probability with respect to 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ These are,
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial^{2}\ln P}{\partial D^{2}} & =\frac{N-1}{2D^{2}}-\frac{\lambda}{D^{3}}\Big(\frac{\sum\Delta_{n}^{2}}{I_{2}}-x_{1}^{2}\Big)+\frac{1}{2D^{2}},
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial^{2}\ln P}{\partial D\partial\lambda} & =\frac{\sum\Delta_{n}^{2}}{2D^{2}I_{2}}+\frac{\lambda}{2D^{2}}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{x_{1}^{2}}{2D^{2}},
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial^{2}\ln P}{\partial\lambda^{2}} & = & \frac{N-1}{2}\Big(-\frac{1}{\lambda^{2}}+\frac{I_{2}^{\prime}I_{2}^{\prime}}{I_{2}^{2}}-\frac{I_{2}^{\prime\prime}}{I_{2}}\Big)-\frac{1}{2\lambda^{2}}\\
+ & - & \frac{1}{D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)-\frac{\lambda}{2D}\frac{\partial^{2}}{\partial\lambda^{2}}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
