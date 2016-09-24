@@ -115,20 +115,6 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author
-R.
- Adhikari
-\end_layout
-
-\begin_layout Affiliation
-The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
-\end_layout
-
-\begin_layout Author Email
-
-rjoy@imsc.res.in
-\end_layout
-
-\begin_layout Author
 Ayan Banerjee
 \end_layout
 
@@ -140,6 +126,20 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \begin_layout Author Email
 
 ayan@iiserkol.ac.in
+\end_layout
+
+\begin_layout Author
+R.
+ Adhikari
+\end_layout
+
+\begin_layout Affiliation
+The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
+\end_layout
+
+\begin_layout Author Email
+
+rjoy@imsc.res.in
 \end_layout
 
 \begin_layout Abstract
@@ -209,8 +209,9 @@ key "zellner1988optimal"
 \end_layout
 
 \begin_layout Standard
-The sample path of a harmonically confined Brownian particle is usually
- modelled by the Ornstein-Uhlenbeck process 
+The motion of a Brownian particle harmonically trapped in optical tweezers
+ in a volume of a viscous fluid far away from walls is usually modelled
+ by the Ornstein-Uhlenbeck stochastic process 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "van1992stochastic,gardiner1985handbook"
@@ -218,15 +219,7 @@ key "van1992stochastic,gardiner1985handbook"
 \end_inset
 
 .
- This process has a mean regression rate 
-\begin_inset Formula $\lambda$
-\end_inset
-
- and a volatility 
-\begin_inset Formula $\sigma$
-\end_inset
-
- which map, in the physical application, to the stiffness 
+ The stiffness 
 \begin_inset Formula $k$
 \end_inset
 
@@ -234,42 +227,124 @@ key "van1992stochastic,gardiner1985handbook"
 \begin_inset Formula $\gamma$
 \end_inset
 
- of the particle and the temperature 
+of the particle, and the temperature 
 \begin_inset Formula $k_{B}T$
 \end_inset
 
- of the ambient fluid.
- Since the friction of a particle of radius 
-\begin_inset Formula $a$
-\end_inset
-
- is given by 
+ of the fluid are three parameters of the stochastic dynamics.
+ For spherical particles Stokes' law 
 \begin_inset Formula $\gamma=6\pi\eta a$
 \end_inset
 
-, where 
+ relates the friction to the particle fluid radius 
+\begin_inset Formula $a$
+\end_inset
+
+ and the viscosity 
 \begin_inset Formula $\eta$
 \end_inset
 
- is the viscosity of the fluid, any estimation of the friction also provides
- an estimate of the viscosity of the medium, given the particle radius.
- Thus, the viscosity, which is defined as the macroscopic response of the
- fluid to an externally imposed shear, can be inferred from microscopic
- obversation of the Brownian fluctuations of harmonically confined particle.
- Likewise, the particle diffusion coefficient 
+while the Einstein relation, which holds generally, relates the particle
+ diffusion coefficient 
 \begin_inset Formula $D$
 \end_inset
 
- can be inferred from the friction through the Einstein relation 
-\begin_inset Formula $D=k_{B}T/\gamma$
+ to the temperature and friction through 
+\begin_inset Formula $D=k_{B}T\gamma^{-1}$
 \end_inset
 
-.
- These, of course, are consequences of the relation between response and
- correlation that prevails in a physical system in thermal equilibrium 
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "kubo1966fluctuation"
+
+\end_inset
+
+.
+ Of these several physical parameters, any 
+\emph on
+two
+\emph default
+ may be chosen independently, and it is conventional to the choose the ratio
+ 
+\begin_inset Formula $k/\gamma$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+ to be independent as they relate, respectively, to the mean regression
+ rate 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and the volatility 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ of the Ornstein-Uhlenbeck process, as we clarify below.
+ 
+\end_layout
+
+\begin_layout Standard
+A reliable estimation of the stiffness is a necessary first step in using
+ tweezers for force measurements.
+ An estimation of the friction for a particle of known size provides an
+ indirect measure of the viscosity of the medium.
+ This microscopic method of viscometry is of great utility when sample volumes
+ are in the nanoliter range and conventional rheometric methods cannot be
+ used.
+ Conversely, an estimate of the friction in a fluid of known viscosity provides
+ a method for estimating the particle size.
+ In both cases, the estimate of the diffusion coefficient provides identical
+ information by virtue of the Einstein relation.
+ 
+\end_layout
+
+\begin_layout Standard
+Extant protocols for estimating these parameters from discrete observations
+ of the position of the Brownian particle can be broadly divided into experiment
+s that measure fluctuations or responses.
+ In the fluctuational methods, the time series is recorded, typically by
+ a quadrant photo-diode, and known forms of the static and dynamic correlation
+ functions 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "berg2004power"
+
+\end_inset
+
+ are fitted to the data.
+ In the response methods, external perturbations are applied to the particle
+ and the known forms of the average response is fitted to the data.
+ Considerable care is needed in these fitting procedures to obtain reliable
+ estimates.
+ 
+\end_layout
+
+\begin_layout Standard
+In recent work 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "richly2013calibrating"
+
+\end_inset
+
+, Bayesian inference has been applied to the optical tweezer parameter estimatio
+n problem.
+ This method, which falls in the fluctuational category described above,
+ provides the posterior probability distribution of the stiffness and diffusion
+ coefficient of the particle.
+ Monte Carlo sampling is used to draw samples from the posterior distribution
+ and the estimation from a time series of 
+\begin_inset Formula $10,000$
+\end_inset
+
+ points requires few tens of seconds 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "richly2013calibrating"
 
 \end_inset
 
@@ -278,42 +353,81 @@ key "kubo1966fluctuation"
 \end_layout
 
 \begin_layout Standard
-In this paper, we apply Bayesian inference to the problem of estimating
- the parameters of an optically trapped Brownian sphere from time series
- that represent partially observed sample paths, under conditions in which
- these paths can be modelled as an Ornstein-Uhlenbeck process.
- This is of great current experimental relevance, since harmonic confinement
- of micron-sized spheres is ubiquitous in optical tweezers.
- A reliable estimation of the trap stiffness is a necessary first step in
- using tweezers for force measurements.
- Reliable estimate of the particle friction is immediately useful in microrheolo
-gy.
- A Bayesian method Monte Carlo sampling has been proposed earlier to this
- end 
+In this paper, we present two Bayesian methods, of the fluctuational category,
+ which do not require Monte Carlo sampling and, consequently, are extremely
+ fast.
+ They are able to estimate the trap stiffness and diffusion coefficient
+ from time series with a million points in less than a millisecond.
+ The first method extracts information exploiting the Markov property of
+ the sample path and jointly estimates the mean regression rate 
+\begin_inset Formula $k/\gamma$
+\end_inset
+
+ and the diffusion coefficient 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ The second method extracts information from the equal-time fluctuations
+ of the position, which, in equilibrium, cannot depend on the friction coefficie
+nt, and is, then, a function of 
+\begin_inset Formula $k$
+\end_inset
+
+ alone.
+ In essence, this is recasting of the 
+\begin_inset Quotes eld
+\end_inset
+
+equipartition
+\begin_inset Quotes erd
+\end_inset
+
+ method in the language of Bayesian inference.
+\end_layout
+
+\begin_layout Standard
+The first method, in addition to the generic advantages of Bayesian inference
+ that have already been pointed out in 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "richly2013calibrating"
 
 \end_inset
 
-.
- Here, we present two Bayesian methods that do away with sampling by exploiting
- the exact likelihoods and sufficient statistics of the problem and provide
- thereby, 
-\emph on
-exact
-\emph default
- maximum a posteriori parameter estimates in terms of these statistics.
- Consequently, both methods are extremely fast and accurate, and are able
- to estimate the trap stiffness or the particle friction from a time series
- with a million points in less than a millisecond.
- Further, the fluctuation-dissipation relation provides provides a stringent
- internal consistency check on the accuracy of estimation of the trap stiffness
- from each of these methods.
- We apply both methods to experimental data to obtain estimates that have
- excellent internal consistency.
- These estimates are found to be in good agreement with commonly used non-Bayesi
-an calibration methods 
+, several specific advantages.
+ First, it uses an exact expression for the likelihood, which is valid for
+ any 
+\begin_inset Formula $\Delta t$
+\end_inset
+
+, the interval at which the path is observed.
+ Therefore, it works reliably with data acquired at low frequencies.
+ Second, the exact likelihood is expressed in terms of four sufficient statistic
+s, which are quadratic functions of the data.
+ Their use greatly reduces the computation needed to evaluate the posterior
+ distribution, as four numbers, rather than a large time series now represents
+ the entire information relevant to inference.
+ Finally, we are able to obtain exact maximum aposteriori (MAP) estimates
+ of the mean regression and diffusion coefficients in terms of the four
+ sufficient statistics.
+ This obviates the need for the Monte Carlo sampling or numerical minimization
+ steps usually required in Bayesian inference.
+ Bayesian credible regions are easily calculated from the exact posterior
+ distribution.
+ The second method is different from the conventional equipartition method
+ in that it provides a Bayesian error bar, representing a Bayesian credible
+ intervals, rather than the frequentist confidence intervals.
+ The combined use of exact likelihoods, sufficient statistics and analytical
+ MAP estimates yields two fast and accurate methods for estimating parameters
+ from the time series of particle positions.
+\end_layout
+
+\begin_layout Standard
+We apply both methods to experimental data and obtain MAP estimates and
+ error bars that are in excellent agreement with each other.
+ These estimates are found to be in good agreement with the commonly used
+ power spectral density calibration method 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "berg2004power"
@@ -321,9 +435,12 @@ key "berg2004power"
 \end_inset
 
 .
- We discuss the advantages of our methods in comparision to standard calibriatio
-n methods in optical tweezer experiments.
- The remainder of the paper is organized as follows.
+ We provide a comparison of the relative merits of these methods.
+ 
+\end_layout
+
+\begin_layout Standard
+The remainder of the paper is organized as follows.
  In the next section we recall several key properties of the sample paths
  and distributions of the Ornstein-Uhlenbeck process.
  In Section 
@@ -350,8 +467,7 @@ reference "sec:Results"
  we apply the Bayesian procedures to the experimental data.
  We conclude with a discussion of future directions in Bayesian inference
  in optical tweezer experiments while advocating its use as a complement
- to standard fitting methods.
- 
+ to standard non-Bayesian methods.
 \end_layout
 
 \begin_layout Section
