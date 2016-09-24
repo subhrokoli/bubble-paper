@@ -2716,7 +2716,11 @@ reference "eq:map-estimate"
 
 \end_inset
 
+Here 
+\begin_inset Formula $I_{2}^{\prime\prime}=-4\Delta t^{2}\thinspace e^{-2\lambda\Delta t}$
+\end_inset
 
+.
 \end_layout
 
 \begin_layout Standard
