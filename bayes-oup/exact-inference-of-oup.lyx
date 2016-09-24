@@ -124,7 +124,6 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -138,7 +137,6 @@ The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -227,24 +225,24 @@ key "van1992stochastic,gardiner1985handbook"
 \begin_inset Formula $\gamma$
 \end_inset
 
-of the particle, and the temperature 
+ of the particle, and the temperature 
 \begin_inset Formula $k_{B}T$
 \end_inset
 
- of the fluid are three parameters of the stochastic dynamics.
+ of the fluid are the three parameters of the stochastic dynamics.
  For spherical particles Stokes' law 
 \begin_inset Formula $\gamma=6\pi\eta a$
 \end_inset
 
- relates the friction to the particle fluid radius 
+ relates the friction to the particle radius 
 \begin_inset Formula $a$
 \end_inset
 
- and the viscosity 
+ and the fluid viscosity 
 \begin_inset Formula $\eta$
 \end_inset
 
-while the Einstein relation, which holds generally, relates the particle
+, while the Einstein relation, which holds generally, relates the particle
  diffusion coefficient 
 \begin_inset Formula $D$
 \end_inset
@@ -265,7 +263,7 @@ key "kubo1966fluctuation"
 \emph on
 two
 \emph default
- may be chosen independently, and it is conventional to the choose the ratio
+ may be chosen independently, and it is conventional to choose the ratio
  
 \begin_inset Formula $k/\gamma$
 \end_inset
@@ -283,43 +281,57 @@ two
 \begin_inset Formula $\sigma$
 \end_inset
 
- of the Ornstein-Uhlenbeck process, as we clarify below.
+ of the Ornstein-Uhlenbeck process (see below).
  
 \end_layout
 
 \begin_layout Standard
-A reliable estimation of the stiffness is a necessary first step in using
+Reliable estimation of the stiffness is a necessary first step in using
  tweezers for force measurements.
- An estimation of the friction for a particle of known size provides an
+ An estimation of the friction, for a particle of known size, provides an
  indirect measure of the viscosity of the medium.
  This microscopic method of viscometry is of great utility when sample volumes
- are in the nanoliter range and conventional rheometric methods cannot be
- used.
+ are in the nanoliter range and conventional viscometric methods cannot
+ be used.
  Conversely, an estimate of the friction in a fluid of known viscosity provides
  a method for estimating the particle size.
- In both cases, the estimate of the diffusion coefficient provides identical
- information by virtue of the Einstein relation.
- 
+ In both these cases, an estimate of the diffusion coefficient provides,
+ by virtue of the Einstein relation, identical information.
 \end_layout
 
 \begin_layout Standard
 Extant protocols for estimating these parameters from discrete observations
- of the position of the Brownian particle can be broadly divided into experiment
-s that measure fluctuations or responses.
- In the fluctuational methods, the time series is recorded, typically by
- a quadrant photo-diode, and known forms of the static and dynamic correlation
- functions 
+ of the position of the Brownian particle can be divided into 
+\begin_inset Quotes eld
+\end_inset
+
+fluctuation
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+response
+\begin_inset Quotes erd
+\end_inset
+
+ categories.
+ In the fluctuational methods, the fluctuating position of the particle
+ is recorded and the known forms of the static and dynamic correlation functions
+ are fitted to the data.
+ In response methods, external perturbations are applied to the particle
+ and the known forms of the average response is fitted to the data.
+ Considerable care is needed in these fitting procedures to obtain reliable
+ estimates 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "berg2004power"
 
 \end_inset
 
- are fitted to the data.
- In the response methods, external perturbations are applied to the particle
- and the known forms of the average response is fitted to the data.
- Considerable care is needed in these fitting procedures to obtain reliable
- estimates.
+.
  
 \end_layout
 
@@ -333,15 +345,25 @@ key "richly2013calibrating"
 
 , Bayesian inference has been applied to the optical tweezer parameter estimatio
 n problem.
- This method, which falls in the fluctuational category described above,
- provides the posterior probability distribution of the stiffness and diffusion
- coefficient of the particle.
- Monte Carlo sampling is used to draw samples from the posterior distribution
- and the estimation from a time series of 
+ The posterior probability distribution of the stiffness and diffusion coefficie
+nt is estimated for a time series of positions, making it a method of the
+ 
+\begin_inset Quotes eld
+\end_inset
+
+fluctuation
+\begin_inset Quotes erd
+\end_inset
+
+ category.
+ Monte Carlo sampling is needed to compute the posterior distribution and
+ estimation from a time series of 
 \begin_inset Formula $10,000$
 \end_inset
 
- points requires few tens of seconds 
+ points requires few tens of seconds.
+ The advantages of the Bayesian method over conventional calibration methods
+ have been discussed at length in this work 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "richly2013calibrating"
@@ -349,7 +371,6 @@ key "richly2013calibrating"
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Standard
@@ -357,7 +378,7 @@ In this paper, we present two Bayesian methods, of the fluctuational category,
  which do not require Monte Carlo sampling and, consequently, are extremely
  fast.
  They are able to estimate the trap stiffness and diffusion coefficient
- from time series with a million points in less than a millisecond.
+ from time series containing a million points in less than a millisecond.
  The first method extracts information exploiting the Markov property of
  the sample path and jointly estimates the mean regression rate 
 \begin_inset Formula $k/\gamma$
@@ -370,7 +391,7 @@ In this paper, we present two Bayesian methods, of the fluctuational category,
 .
  The second method extracts information from the equal-time fluctuations
  of the position, which, in equilibrium, cannot depend on the friction coefficie
-nt, and is, then, a function of 
+nt, and is, then, a function of the stiffness 
 \begin_inset Formula $k$
 \end_inset
 
@@ -387,37 +408,37 @@ equipartition
 \end_layout
 
 \begin_layout Standard
-The first method, in addition to the generic advantages of Bayesian inference
- that have already been pointed out in 
+The first method, in addition to inheriting the generic advantages of Bayesian
+ inference that have already been pointed out in 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "richly2013calibrating"
 
 \end_inset
 
-, several specific advantages.
+, has several specific advantages.
  First, it uses an exact expression for the likelihood, which is valid for
  any 
 \begin_inset Formula $\Delta t$
 \end_inset
 
-, the interval at which the path is observed.
+, the interval at which the position is observed.
  Therefore, it works reliably with data acquired at low frequencies.
  Second, the exact likelihood is expressed in terms of four sufficient statistic
-s, which are quadratic functions of the data.
+s, which are quadratic functions of the positions.
  Their use greatly reduces the computation needed to evaluate the posterior
  distribution, as four numbers, rather than a large time series now represents
  the entire information relevant to inference.
  Finally, we are able to obtain exact maximum aposteriori (MAP) estimates
- of the mean regression and diffusion coefficients in terms of the four
- sufficient statistics.
+ of the mean regression and diffusion coefficients and their error bars
+ in terms of the four sufficient statistics.
  This obviates the need for the Monte Carlo sampling or numerical minimization
  steps usually required in Bayesian inference.
- Bayesian credible regions are easily calculated from the exact posterior
- distribution.
+ Bayesian credible regions are easily calculated from the analytically obtained
+ error bars.
  The second method is different from the conventional equipartition method
  in that it provides a Bayesian error bar, representing a Bayesian credible
- intervals, rather than the frequentist confidence intervals.
+ interval, rather than the frequentist confidence intervals.
  The combined use of exact likelihoods, sufficient statistics and analytical
  MAP estimates yields two fast and accurate methods for estimating parameters
  from the time series of particle positions.
@@ -435,8 +456,15 @@ key "berg2004power"
 \end_inset
 
 .
- We provide a comparison of the relative merits of these methods.
- 
+ Both Bayesian methods of this paper are implemented in a well-documented,
+ open-source software available freely on GitHub 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hadoop"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -465,9 +493,9 @@ reference "sec:Results"
 \end_inset
 
  we apply the Bayesian procedures to the experimental data.
- We conclude with a discussion of future directions in Bayesian inference
- in optical tweezer experiments while advocating its use as a complement
- to standard non-Bayesian methods.
+ We conclude with a discussion of future directions in the application of
+ Bayesian inference to optical tweezer experiments and advocate its use
+ as a complement to standard non-Bayesian methods.
 \end_layout
 
 \begin_layout Section
@@ -540,7 +568,7 @@ where
 \begin_inset Formula $\lambda$
 \end_inset
 
- is the mean-regression rate , 
+ is the mean-regression rate, 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -553,7 +581,7 @@ where
 \end_layout
 
 \begin_layout Standard
-For Brownian motion the mean regression rate 
+For Brownian motion, the mean regression rate 
 \begin_inset Formula $\lambda=k/\gamma$
 \end_inset
 
