@@ -130,6 +130,7 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -143,6 +144,7 @@ The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -369,21 +371,14 @@ fluctuation
 
  points requires few tens of seconds.
  The advantages of the Bayesian method over conventional calibration methods
- have been discussed at length in this work 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "richly2013calibrating"
-
-\end_inset
-
-.
+ have been discussed at length in this work.
 \end_layout
 
 \begin_layout Standard
 In this paper, we present two Bayesian methods, of the fluctuational category,
  which do not require Monte Carlo sampling and, consequently, are extremely
  fast.
- They are able to estimate the trap stiffness and diffusion coefficient
+ For example, they estimate the trap stiffness and diffusion coefficient
  from time series containing a million points in less than a millisecond.
  The first method extracts information exploiting the Markov property of
  the sample path and jointly estimates the mean regression rate 
@@ -436,7 +431,7 @@ s, which are quadratic functions of the positions.
  distribution, as four numbers, rather than a large time series now represents
  the entire information relevant to inference.
  Finally, we are able to obtain exact maximum aposteriori (MAP) estimates
- of the mean regression and diffusion coefficients and their error bars
+ of the mean regression and diffusion coefficients, and their error bars,
  in terms of the four sufficient statistics.
  This obviates the need for the Monte Carlo sampling or numerical minimization
  steps usually required in Bayesian inference.
@@ -444,10 +439,9 @@ s, which are quadratic functions of the positions.
  error bars.
  The second method is different from the conventional equipartition method
  in that it provides a Bayesian error bar, representing a Bayesian credible
- interval, rather than the frequentist confidence intervals.
+ interval, rather than a frequentist confidence interval.
  The combined use of exact likelihoods, sufficient statistics and analytical
- MAP estimates yields two fast and accurate methods for estimating parameters
- from the time series of particle positions.
+ MAP estimates yields both speed and accuracy in parameter estimation.
 \end_layout
 
 \begin_layout Standard
@@ -462,7 +456,7 @@ key "berg2004power"
 \end_inset
 
 .
- Both Bayesian methods of this paper are implemented in a well-documented,
+ The Bayesian methods of this paper are implemented in a well-documented,
  open-source software available freely on GitHub 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1064,7 +1058,7 @@ without
 \end_layout
 
 \begin_layout Standard
-The error bars are obtained from the Taylor expansion of the log posterior
+The error bars are obtained from a Taylor expansion of the log posterior
  to quadratic order about the MAP value, 
 \end_layout
 
@@ -1111,8 +1105,8 @@ key "sivia2006data"
 \end_inset
 
 .
- We do not provide their unwieldy expressions here but do make use of them
- when computing credible regions around the MAP estimates.
+ Their unwieldy expressions are provided in the Appendix and are made use
+ of when computing credible regions around the MAP estimates.
  We refer to this Bayesian estimation procedure as 
 \begin_inset Quotes eld
 \end_inset
@@ -1126,7 +1120,7 @@ Bayes I
 \end_layout
 
 \begin_layout Standard
-A second Bayesian procedure for estimating the trap stiffness directly results
+A second Bayesian procedure for directly estimating the trap stiffness results
  when 
 \begin_inset Formula $X$
 \end_inset
@@ -1208,7 +1202,6 @@ T_{3}(X) & = & \sum x_{n}^{2},\qquad T_{4}(X)=x_{1}^{2},
 \end_inset
 
 which, therefore, are the sufficient statistics of the problem.
- We provide explicit expressions in the Appendix.
  The 
 \emph on
 entire
@@ -1269,7 +1262,8 @@ key "jeffreys1998theory"
  The number of observations are in the tens of thousands in time series
  we study here and the posterior is dominated by the likelihoood rather
  than the prior.
- The change in 
+ The prior, then, has an insignificant contribution to the posterior.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1315,11 +1309,7 @@ ck process as a data model.
 \begin_inset Formula $D$
 \end_inset
 
-, 
-\begin_inset Formula $\gamma$
-\end_inset
-
- and 
+, and 
 \begin_inset Formula $k$
 \end_inset
 
@@ -2592,6 +2582,8 @@ name "tab:viscometry"
 \end_layout
 
 \begin_layout Standard
+
+\emph on
 The results of our measurements of trap stiffness as a function of trapping
  laser power and the viscosity of the glycerol + water solutions are summarized
  in Fig.
@@ -2805,7 +2797,7 @@ name "sec:Discussion"
 
 \end_layout
 
-\begin_layout Acknowledgments
+\begin_layout Standard
 We thank Rajesh Singh for contributing to the PyBISP package 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2815,7 +2807,9 @@ key "pybisp"
 
  and for preparing Figure.
  3.
- 
+ RA expresses his gratitude, long overdue, to Professor M.
+ E.
+ Cates for the introduction to Bayesianism.
 \end_layout
 
 \begin_layout Subsection
