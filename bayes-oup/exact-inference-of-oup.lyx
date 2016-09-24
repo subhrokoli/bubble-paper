@@ -1067,7 +1067,7 @@ The error bars are obtained from the Taylor expansion of the log posterior
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\ln\frac{P(\lambda,D|X)}{P(\lambda^{\star},D^{\star}|X)}\approx-\left[\frac{(\Delta\lambda)^{2}}{2\sigma_{\lambda}^{2}}+\frac{\Delta\lambda\Delta D}{\sigma_{\lambda D}^{2}}+\frac{(\Delta D)^{2}}{2\sigma_{D}^{2}}\right]
+\ln\frac{P(\lambda,D|X)}{P(\lambda^{\star},D^{\star}|X)}\approx-\left[\frac{(\Delta\lambda)^{2}}{2\sigma_{\lambda}^{2}}+\frac{\Delta\lambda\Delta D}{\sigma_{\lambda D}^{2}}+\frac{(\Delta D)^{2}}{2\sigma_{D}^{2}}\right]\label{eq:quadratic-form}
 \end{equation}
 
 \end_inset
@@ -2587,142 +2587,6 @@ name "tab:viscometry"
 
 \end_layout
 
-\begin_layout Section
-Discussion
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Discussion"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Acknowledgments
-We thank Rajesh Singh for contributing to the PyBISP package and for preparing
- Figure.
- 3.
- 
-\end_layout
-
-\begin_layout Subsection
-Appendix 
-\end_layout
-
-\begin_layout Standard
-The partial derivatives of the logarithm of the posterior probability with
- respect to 
-\begin_inset Formula $\lambda$
-\end_inset
-
- and 
-\begin_inset Formula $D$
-\end_inset
-
- are 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray*}
-\frac{\partial\ln P}{\partial\lambda} & = & \frac{N-1}{2}\left(\frac{1}{\lambda}-\frac{I_{2}^{\prime}}{I_{2}}\right)-\frac{\sum\Delta_{n}^{2}}{2DI_{2}}\\
- & - & \frac{\lambda}{2D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{1}{2\lambda}-\frac{x_{1}^{2}}{2D}
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\frac{\partial\ln P}{\partial D}=-\frac{N-1}{2D}+\frac{\lambda\sum\Delta_{n}^{2}}{2D^{2}I_{2}}-\frac{1}{2D}+\frac{\lambda x_{1}^{2}}{2D^{2}}`
-\]
-
-\end_inset
-
-where 
-\begin_inset Formula $I_{2}^{\prime}=2\Delta t\thinspace e^{-2\lambda\Delta t}$
-\end_inset
-
-.
- Setting the second of these equations to zero, 
-\begin_inset Formula $D$
-\end_inset
-
- is solved in term of 
-\begin_inset Formula $\lambda$
-\end_inset
-
- and this solution is used in the first equation, together with the large-sample
- asymptotics
-\begin_inset Formula 
-\[
-\frac{\lambda}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)\thickapprox\frac{\lambda}{\left(N-1\right)}\frac{\sum\Delta_{n}^{2}}{I_{2}},
-\]
-
-\end_inset
-
-to cancel all 
-\begin_inset Formula $D$
-\end_inset
-
--dependent terms.
- Setting the resulting equation to zero and solving for 
-\begin_inset Formula $\lambda$
-\end_inset
-
- then yields the MAP estimates in Eq.(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map-estimate"
-
-\end_inset
-
-).
- The Hessian matrix can be calculated by obtaining the second derivatives
- of the logarithm of posterior probability with respect to 
-\begin_inset Formula $\lambda$
-\end_inset
-
- and 
-\begin_inset Formula $D$
-\end_inset
-
-.
- These are,
-\begin_inset Formula 
-\begin{eqnarray*}
-\frac{\partial^{2}\ln P}{\partial D^{2}} & =\frac{N-1}{2D^{2}}-\frac{\lambda}{D^{3}}\Big(\frac{\sum\Delta_{n}^{2}}{I_{2}}-x_{1}^{2}\Big)+\frac{1}{2D^{2}},
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\frac{\partial^{2}\ln P}{\partial D\partial\lambda} & =\frac{\sum\Delta_{n}^{2}}{2D^{2}I_{2}}+\frac{\lambda}{2D^{2}}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{x_{1}^{2}}{2D^{2}},
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\frac{\partial^{2}\ln P}{\partial\lambda^{2}} & = & \frac{N-1}{2}\Big(-\frac{1}{\lambda^{2}}+\frac{I_{2}^{\prime}I_{2}^{\prime}}{I_{2}^{2}}-\frac{I_{2}^{\prime\prime}}{I_{2}}\Big)-\frac{1}{2\lambda^{2}}\\
- & - & \frac{1}{D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)-\frac{\lambda}{2D}\frac{\partial^{2}}{\partial\lambda^{2}}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right).
-\end{eqnarray*}
-
-\end_inset
-
-Here 
-\begin_inset Formula $I_{2}^{\prime\prime}=-4\Delta t^{2}\thinspace e^{-2\lambda\Delta t}$
-\end_inset
-
-.
-\end_layout
-
 \begin_layout Standard
 The results of our measurements of trap stiffness as a function of trapping
  laser power and the viscosity of the glycerol + water solutions are summarized
@@ -2924,6 +2788,146 @@ reference "tab:viscometry"
 
 .
  
+\end_layout
+
+\begin_layout Section
+Discussion
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Discussion"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Acknowledgments
+We thank Rajesh Singh for contributing to the PyBISP package and for preparing
+ Figure.
+ 3.
+ 
+\end_layout
+
+\begin_layout Subsection
+Appendix 
+\end_layout
+
+\begin_layout Standard
+The first partial derivatives of the logarithm of the posterior probability
+ with respect to 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+ are 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial\ln P}{\partial\lambda} & = & \frac{N-1}{2}\left(\frac{1}{\lambda}-\frac{I_{2}^{\prime}}{I_{2}}\right)-\frac{\sum\Delta_{n}^{2}}{2DI_{2}}\\
+ & - & \frac{\lambda}{2D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{1}{2\lambda}-\frac{x_{1}^{2}}{2D}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial\ln P}{\partial D}=-\frac{N-1}{2D}+\frac{\lambda\sum\Delta_{n}^{2}}{2D^{2}I_{2}}-\frac{1}{2D}+\frac{\lambda x_{1}^{2}}{2D^{2}}`
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $I_{2}^{\prime}=2\Delta t\thinspace e^{-2\lambda\Delta t}$
+\end_inset
+
+.
+ Setting the second of these equations to zero, 
+\begin_inset Formula $D$
+\end_inset
+
+ is solved in term of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and this solution is used in the first equation, together with the large-sample
+ asymptotics
+\begin_inset Formula 
+\[
+\frac{\lambda}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)\thickapprox\frac{\lambda}{\left(N-1\right)}\frac{\sum\Delta_{n}^{2}}{I_{2}},
+\]
+
+\end_inset
+
+to cancel all 
+\begin_inset Formula $D$
+\end_inset
+
+-dependent terms.
+ Setting the resulting equation to zero and solving for 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ then yields the MAP estimates in Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map-estimate"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+The second partial derivatives are 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial^{2}\ln P}{\partial D^{2}} & =\frac{N-1}{2D^{2}}-\frac{\lambda}{D^{3}}\Big(\frac{\sum\Delta_{n}^{2}}{I_{2}}-x_{1}^{2}\Big)+\frac{1}{2D^{2}},
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial^{2}\ln P}{\partial D\partial\lambda} & =\frac{\sum\Delta_{n}^{2}}{2D^{2}I_{2}}+\frac{\lambda}{2D^{2}}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{x_{1}^{2}}{2D^{2}},
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial^{2}\ln P}{\partial\lambda^{2}} & = & \frac{N-1}{2}\Big(-\frac{1}{\lambda^{2}}+\frac{I_{2}^{\prime}I_{2}^{\prime}}{I_{2}^{2}}-\frac{I_{2}^{\prime\prime}}{I_{2}}\Big)-\frac{1}{2\lambda^{2}}\\
+ & - & \frac{1}{D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)-\frac{\lambda}{2D}\frac{\partial^{2}}{\partial\lambda^{2}}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right).
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $I_{2}^{\prime\prime}=-4\Delta t^{2}\thinspace e^{-2\lambda\Delta t}$
+\end_inset
+
+.
+ These are assembled into the Hessian matrix and the matrix is inverted
+ to give the covariances in Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:quadratic-form"
+
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Standard
