@@ -6,7 +6,13 @@
 \origin unavailable
 \textclass revtex4-1
 \begin_preamble
-
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = blue, %Colour for external hyperlinks
+  linkcolor    = blue, %Colour of internal links
+  citecolor    = blue%Colour of citations
+}
 \end_preamble
 \options aps, twocolumn, pre,superscriptaddress
 \use_default_options false
@@ -124,7 +130,6 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -138,7 +143,6 @@ The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -2802,8 +2806,14 @@ name "sec:Discussion"
 \end_layout
 
 \begin_layout Acknowledgments
-We thank Rajesh Singh for contributing to the PyBISP package and for preparing
- Figure.
+We thank Rajesh Singh for contributing to the PyBISP package 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "pybisp"
+
+\end_inset
+
+ and for preparing Figure.
  3.
  
 \end_layout
