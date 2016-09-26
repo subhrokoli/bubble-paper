@@ -1694,6 +1694,64 @@ name "fig:bayes-I-and-II"
 \end_inset
 
 
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename errorBayes1.jpg
+	display false
+	width 38text%
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename errorBayes2.jpg
+	display false
+	width 38text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Variation of trap stiffness k with laser power esti- mated by the two Bayesian
+ methods of this work (Bayes I (top) and Bayes II (bottom)) and by the standard
+ fit to the spectral density (PSD).
+ The error bars are also shown.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2955,7 +3013,7 @@ The second partial derivatives are
 \begin_inset Formula 
 \begin{eqnarray*}
 \frac{\partial^{2}\ln P}{\partial\lambda^{2}} & = & \frac{N-1}{2}\Big(-\frac{1}{\lambda^{2}}+\frac{I_{2}^{\prime}I_{2}^{\prime}}{I_{2}^{2}}-\frac{I_{2}^{\prime\prime}}{I_{2}}\Big)-\frac{1}{2\lambda^{2}}\\
- & - & \frac{1}{D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)-\frac{\lambda}{2D}\frac{\partial^{2}}{\partial\lambda^{2}}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right).
+ & - & \frac{1}{D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)-\frac{\lambda}{2D}\frac{\partial^{2}}{\partial\lambda^{2}}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right),
 \end{eqnarray*}
 
 \end_inset
@@ -2974,7 +3032,7 @@ reference "eq:quadratic-form"
 
 \end_inset
 
-)
+).
 \end_layout
 
 \begin_layout Standard
