@@ -86,7 +86,7 @@ Fast Bayesian inference of optical trap stiffness and particle diffusion
 \end_layout
 
 \begin_layout Author
-Sudipta Bera†
+Sudipta Bera
 \end_layout
 
 \begin_layout Affiliation
@@ -95,7 +95,7 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author
-Shuvojit Paul†
+Shuvojit Paul
 \end_layout
 
 \begin_layout Affiliation
@@ -138,7 +138,6 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -152,7 +151,6 @@ The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -405,7 +403,7 @@ nt, and is, then, a function of the stiffness
 \end_inset
 
  alone.
- In essence, this is recasting of the 
+ In essence, this is a recasting of the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -426,8 +424,8 @@ key "richly2013calibrating"
 \end_inset
 
 , has several specific advantages.
- First, it uses an exact expression for the likelihood, which is valid for
- any 
+ First, it uses the exact expression for the likelihood, which is valid
+ for any 
 \begin_inset Formula $\Delta t$
 \end_inset
 
@@ -447,7 +445,14 @@ s, which are quadratic functions of the positions.
  error bars.
  The second method is different from the conventional equipartition method
  in that it provides a Bayesian error bar, representing a Bayesian credible
- interval, rather than a frequentist confidence interval.
+ interval, rather than a frequentist confidence interval 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jaynes1976confidence"
+
+\end_inset
+
+.
  The combined use of exact likelihoods, sufficient statistics and analytical
  MAP estimates yields both speed and accuracy in parameter estimation.
 \end_layout
@@ -465,7 +470,7 @@ key "berg2004power"
 
 .
  The Bayesian methods of this paper are implemented in a well-documented,
- open-source software available freely on GitHub 
+ open-source software freely available on GitHub 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "pybisp"
