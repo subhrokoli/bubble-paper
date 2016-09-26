@@ -138,7 +138,6 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -152,7 +151,6 @@ The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -2678,8 +2676,11 @@ where
 \end_inset
 
 .
- These are assembled into the Hessian matrix and the matrix is inverted
- to give the covariance matrix 
+ These are assembled into the Hessian matrix 
+\begin_inset Formula $\boldsymbol{\Sigma}^{-1}$
+\end_inset
+
+and the matrix is inverted to give the covariance matrix 
 \begin_inset Formula $\boldsymbol{\Sigma}$
 \end_inset
 
@@ -2691,8 +2692,7 @@ reference "eq:quadratic-form"
 
 \end_inset
 
-).
- 
+), whose matrix elements are 
 \begin_inset Formula $\sigma_{\lambda}^{2}$
 \end_inset
 
@@ -2704,11 +2704,7 @@ reference "eq:quadratic-form"
 \begin_inset Formula $\sigma_{D}^{2}$
 \end_inset
 
- of the covariance matrix 
-\begin_inset Formula $\boldsymbol{\Sigma}$
-\end_inset
-
- are,
+ 
 \begin_inset Formula 
 \begin{eqnarray*}
 \sigma_{\lambda}^{2}= & \frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{22}^{-1},\qquad\sigma_{\lambda D}^{2}=-\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{12}^{-1},\\
