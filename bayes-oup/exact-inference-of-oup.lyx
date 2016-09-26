@@ -2649,7 +2649,7 @@ reference "eq:quadratic-form"
 ), are 
 \begin_inset Formula 
 \begin{eqnarray*}
-\Sigma_{11}^{-1}=\frac{\partial^{2}\ln P}{\partial\lambda^{2}} & = & \frac{N-1}{2}\Big(-\frac{1}{\lambda^{2}}+\frac{I_{2}^{\prime}I_{2}^{\prime}}{I_{2}^{2}}-\frac{I_{2}^{\prime\prime}}{I_{2}}\Big)-\frac{1}{2\lambda^{2}}\\
+\Sigma_{11}^{-1}=\frac{\partial^{2}\ln P}{\partial\lambda^{2}}\Big| & = & \frac{N-1}{2}\Big(-\frac{1}{\lambda^{2}}+\frac{I_{2}^{\prime}I_{2}^{\prime}}{I_{2}^{2}}-\frac{I_{2}^{\prime\prime}}{I_{2}}\Big)-\frac{1}{2\lambda^{2}}\\
  & - & \frac{1}{D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)-\frac{\lambda}{2D}\frac{\partial^{2}}{\partial\lambda^{2}}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right),
 \end{eqnarray*}
 
@@ -2676,6 +2676,15 @@ where
 \end_inset
 
 .
+ All the derivates are evaluated at the statinary solution given in Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map-estimate"
+
+\end_inset
+
+).
  These are assembled into the Hessian matrix 
 \begin_inset Formula $\boldsymbol{\Sigma}^{-1}$
 \end_inset
@@ -2707,7 +2716,7 @@ reference "eq:quadratic-form"
  
 \begin_inset Formula 
 \begin{eqnarray*}
-\sigma_{\lambda}^{2}= &  & \frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{22}^{-1},\qquad\sigma_{\lambda D}^{2}=-\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{12}^{-1},\\
+\sigma_{\lambda}^{2}= &  & -\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{22}^{-1},\qquad\sigma_{\lambda D}^{2}=\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{12}^{-1},\\
 \sigma_{D}^{2}= &  & -\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{11}^{-1},
 \end{eqnarray*}
 
