@@ -104,6 +104,14 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author
+Rajesh Singh
+\end_layout
+
+\begin_layout Affiliation
+The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
+\end_layout
+
+\begin_layout Author
 Dipanjan Ghosh
 \end_layout
 
@@ -130,6 +138,7 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -143,6 +152,7 @@ The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -1391,11 +1401,12 @@ name "sec:Experimental-setup-and"
 placement t
 wide true
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename figure2.pdf
+	display false
 	scale 53
 
 \end_inset
@@ -2834,16 +2845,7 @@ name "sec:Discussion"
 \end_layout
 
 \begin_layout Standard
-We thank Rajesh Singh for contributing to the PyBISP package 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "pybisp"
-
-\end_inset
-
- and for preparing Figure.
- 3.
- RA expresses his gratitude, long overdue, to Professor M.
+RA expresses his gratitude, long overdue, to Professor M.
  E.
  Cates for the introduction to Bayesianism.
 \end_layout
