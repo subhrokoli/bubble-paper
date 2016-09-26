@@ -138,6 +138,7 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -151,6 +152,7 @@ The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -995,7 +997,7 @@ ly, we use informative priors for
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-\ln P(\lambda,D|X) & =\frac{N-1}{2}\ln\frac{\lambda}{2\pi DI_{2}}-\frac{\lambda}{2DI_{2}}\sum\Delta_{n}^{2}\label{eq:joint-posterior}\\
+\ln P(\lambda,D|X) & =\frac{N-1}{2}\ln\frac{\lambda}{2\pi DI_{2}}-\frac{\lambda}{2DI_{2}}\sum_{n=1}^{N-1}\Delta_{n}^{2}\label{eq:joint-posterior}\\
  & +\frac{1}{2}\ln\frac{\lambda}{2\pi D}-\frac{\lambda}{2D}x_{1}^{2}
 \end{align}
 
@@ -1004,17 +1006,12 @@ ly, we use informative priors for
 where we have defined the two quantities 
 \begin_inset Formula 
 \[
-I_{2}\equiv1-e^{-2\lambda\Delta t},\quad\Delta_{n}\equiv x_{n+1}-e^{-\lambda\Delta t}x_{n}
+I_{2}\equiv1-e^{-2\lambda\Delta t},\quad\Delta_{n}\equiv x_{n+1}-e^{-\lambda\Delta t}x_{n}.
 \]
 
 \end_inset
 
-and the sum runs from 
-\begin_inset Formula $n=1,\ldots,N-1$
-\end_inset
 
-.
- 
 \end_layout
 
 \begin_layout Standard
@@ -1059,9 +1056,14 @@ where both
 \end_inset
 
  are now evaluated at 
-\begin_inset Formula $\lambda=\lambda^{\star}.$
+\begin_inset Formula $\lambda=\lambda^{\star}$
 \end_inset
 
+ and the sum runs from 
+\begin_inset Formula $n=1,\ldots,N-1$
+\end_inset
+
+.
  These provide direct estimates of the parameters 
 \emph on
 without
@@ -1208,8 +1210,8 @@ The posterior probabilities in both methods can be written in terms of four
  functions of the data
 \begin_inset Formula 
 \begin{eqnarray}
-T_{1}(X) & = & \sum x_{n+1}^{2},\quad T_{2}(X)=\sum x_{n+1}x_{n},\nonumber \\
-T_{3}(X) & = & \sum x_{n}^{2},\qquad T_{4}(X)=x_{1}^{2},
+T_{1}(X) & = & \sum_{n=1}^{N-1}x_{n+1}^{2},\quad T_{2}(X)=\sum_{n=1}^{N-1}x_{n+1}x_{n},\nonumber \\
+T_{3}(X) & = & \sum_{n=1}^{N-1}x_{n}^{2},\qquad T_{4}(X)=x_{1}^{2},
 \end{eqnarray}
 
 \end_inset
