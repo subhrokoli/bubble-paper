@@ -138,6 +138,7 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -151,6 +152,7 @@ The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -1036,12 +1038,45 @@ key "jeffreys1998theory,jaynes2003probability,sivia2006data"
 .
  The analytical solution of the stationary conditions, derived in the Appendix,
  yields the MAP estimate to be
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "eq:map-estimate"
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{eqnarray}
-\lambda^{\star} & = & \frac{1}{\Delta t}\ln\frac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}}\nonumber \\
-D^{\star} & = & \frac{\lambda^{\star}}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)\nonumber \\
-\frac{k^{\star}}{k_{B}T} & = & \frac{\lambda^{\star}}{D^{\star}}\label{eq:map-estimate}
+\lambda^{\star} & = & \frac{1}{\Delta t}\ln\frac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}}\\
+D^{\star} & = & \frac{\lambda^{\star}}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)\\
+\frac{k^{\star}}{k_{B}T} & = & \frac{\lambda^{\star}}{D^{\star}}
 \end{eqnarray}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
 
 \end_inset
 
@@ -1072,7 +1107,7 @@ without
 
 \begin_layout Standard
 The error bars are obtained from a Taylor expansion of the log posterior
- to quadratic order about the MAP value, 
+ to quadratic order about the MAP value,
 \end_layout
 
 \begin_layout Standard
