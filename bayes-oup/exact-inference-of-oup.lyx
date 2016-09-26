@@ -1369,7 +1369,7 @@ ck process as a data model.
 placement t
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset space \hfill{}
@@ -1443,7 +1443,7 @@ name "sec:Experimental-setup-and"
 placement t
 wide true
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1467,8 +1467,8 @@ Discrete sample path and empirical statistics of an optically trapped Brownian
 
 m.
  Panel (a) shows discrete observations of one coordinate of the sample path,
- (b) the histogram the coordinate, (c) the autocorrelation function and
- (d) the spectral density.
+ (b) the histogram of the position coordinate, (c) the autocorrelation function
+ and (d) the spectral density.
  The fits of 
 \begin_inset Formula $\lambda$
 \end_inset
@@ -1655,7 +1655,7 @@ istance calibration of the detection system.
 placement h
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1735,7 +1735,7 @@ name "fig:bayes-I-and-II"
 placement h
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2707,8 +2707,8 @@ reference "eq:quadratic-form"
  
 \begin_inset Formula 
 \begin{eqnarray*}
-\sigma_{\lambda}^{2}= & \frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{22}^{-1},\qquad\sigma_{\lambda D}^{2}=-\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{12}^{-1},\\
- & \sigma_{D}^{2}=-\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{11}^{-1},
+\sigma_{\lambda}^{2}= &  & \frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{22}^{-1},\qquad\sigma_{\lambda D}^{2}=-\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{12}^{-1},\\
+\sigma_{D}^{2}= &  & -\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{11}^{-1},
 \end{eqnarray*}
 
 \end_inset
