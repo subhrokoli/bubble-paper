@@ -138,7 +138,6 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -152,7 +151,6 @@ The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -997,8 +995,8 @@ ly, we use informative priors for
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-\ln P(\lambda,D|X) & =\frac{N-1}{2}\ln\frac{\lambda}{2\pi DI_{2}}-\frac{\lambda}{2DI_{2}}\sum_{n=1}^{N-1}\Delta_{n}^{2}\label{eq:joint-posterior}\\
- & +\frac{1}{2}\ln\frac{\lambda}{2\pi D}-\frac{\lambda}{2D}x_{1}^{2}
+\ln P(\lambda,D|X) & =\frac{N-1}{2}\ln\frac{\lambda}{2\pi DI_{2}}-\frac{\lambda}{2DI_{2}}\sum_{n=1}^{N-1}\Delta_{n}^{2}\nonumber \\
+ & +\frac{1}{2}\ln\frac{\lambda}{2\pi D}-\frac{\lambda}{2D}x_{1}^{2}\label{eq:joint-posterior}
 \end{align}
 
 \end_inset
@@ -1080,7 +1078,7 @@ The error bars are obtained from a Taylor expansion of the log posterior
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\ln\frac{P(\lambda,D|X)}{P(\lambda^{\star},D^{\star}|X)}\approx-\left[\frac{(\Delta\lambda)^{2}}{2\sigma_{\lambda}^{2}}+\frac{\Delta\lambda\Delta D}{\sigma_{\lambda D}^{2}}+\frac{(\Delta D)^{2}}{2\sigma_{D}^{2}}\right]\label{eq:quadratic-form}
+\ln\frac{P(\lambda,D|X)}{P(\lambda^{\star},D^{\star}|X)}\approx-\left(\Delta\lambda,\Delta D\right)^{T}\mathbf{\boldsymbol{\Sigma}}^{-1}\left(\Delta\lambda,\Delta D\right)\label{eq:quadratic-form}
 \end{equation}
 
 \end_inset
@@ -1093,7 +1091,13 @@ where
 \begin_inset Formula $\Delta D=D-D^{\star}$
 \end_inset
 
- and the co-variances 
+ and 
+\begin_inset Formula $\boldsymbol{\Sigma}^{-1}$
+\end_inset
+
+ is the matrix of second derivatives of the log posterior evaluated at the
+ maximum.
+ The elements 
 \begin_inset Formula $\sigma_{\lambda}^{2}$
 \end_inset
 
@@ -1101,18 +1105,16 @@ where
 \begin_inset Formula $\sigma_{\lambda D}^{2}$
 \end_inset
 
- , 
+, 
 \begin_inset Formula $\sigma_{D}^{2}$
 \end_inset
 
- are elements of the 
-\emph on
-inverse
-\emph default
- of the matrix of second derivates of the log posterior, evaluated at the
- maximum.
- The covariances define the size and shape of the Bayesian credible region
- around the maximum 
+ of the covariance matrix 
+\begin_inset Formula $\boldsymbol{\Sigma}$
+\end_inset
+
+ are the Bayesian error bars; they determine the size and shape of the Bayesian
+ credible region around the maximum 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "sivia2006data"
@@ -1165,7 +1167,7 @@ key "jaynes2003probability"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\ln P(k|X)=\frac{N}{2}\ln\frac{k}{2\pi k_{B}T}-\frac{1}{2}\frac{k}{k_{B}T}\sum_{n=1}^{N}x_{n}^{2}\quad(k>0)\label{eq:k-posterior}
+\ln P(k|X)=\frac{N}{2}\ln\frac{k}{2\pi k_{B}T}-\frac{1}{2}\frac{k}{k_{B}T}\sum_{n=1}^{N}x_{n}^{2}\label{eq:k-posterior}
 \end{equation}
 
 \end_inset
@@ -1408,7 +1410,7 @@ name "sec:Experimental-setup-and"
 placement t
 wide true
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1620,7 +1622,7 @@ istance calibration of the detection system.
 placement h
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1700,7 +1702,7 @@ name "fig:bayes-I-and-II"
 placement h
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
