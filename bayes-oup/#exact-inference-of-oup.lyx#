@@ -2317,7 +2317,7 @@ Bayesian viscometry in an optical trap.
 ein relation for that value of the viscosity.
  The third column is the Bayesian MAP estimate for the diffusion coefficient
  and the fourth column is the value of the viscosity, as given by the Stokes-Ein
-stein relation for the corresponding value of the diffusion coefficient.
+stein relation for that value of the diffusion coefficient.
  There is a good match between the first and fourth columns.
  
 \begin_inset CommandInset label
