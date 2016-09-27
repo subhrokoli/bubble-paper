@@ -1752,12 +1752,15 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Variation of trap stiffness k with laser power estimated by the two Bayesian
- methods of this work (Bayes I and Bayes II ) and by the standard fit to
- the spectral density (PSD).
+Variation of trap stiffness 
+\begin_inset Formula $k$
+\end_inset
+
+ with laser power estimated by the two Bayesian methods of (Bayes I and
+ Bayes II ) and by the standard fit to the power spectral density (PSD).
  The error bars are also shown.
- The error bar corresponding to Bayesian method is much smaller as compared
- to PSD.
+ The Bayesian standard error is less than 1 % of the mean for each data
+ set.
 \end_layout
 
 \end_inset
@@ -2726,11 +2729,15 @@ where
 \begin_inset Formula $\det\boldsymbol{\Sigma}^{-1}=\Sigma_{11}^{-1}\Sigma_{22}^{-1}-\Sigma_{12}^{-1}\Sigma_{21}^{-1}$
 \end_inset
 
+ and 
+\begin_inset Formula $\Sigma_{21}^{-1}=\Sigma_{12}^{-1}$
+\end_inset
+
 .
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -3076,7 +3083,7 @@ key "berg2004power"
  over 5 different sets of measurements.
  The variance of mean is indicated in parentheses.
  The Bayesian standard error is less than 
-\begin_inset Formula $\frac{1}{2}\%$
+\begin_inset Formula $1\%$
 \end_inset
 
  of the mean for each data set.
