@@ -108,7 +108,8 @@ Rajesh Singh
 \end_layout
 
 \begin_layout Affiliation
-The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
+The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
+ 600113
 \end_layout
 
 \begin_layout Author
@@ -138,6 +139,7 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -147,10 +149,12 @@ R.
 \end_layout
 
 \begin_layout Affiliation
-The Institute of Mathematical Sciences, CIT Campus, Taramani, Chennai 600113
+The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
+ 600113
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -1655,7 +1659,7 @@ istance calibration of the detection system.
 placement h
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1735,7 +1739,7 @@ name "fig:bayes-I-and-II"
 placement h
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1761,6 +1765,13 @@ Variation of trap stiffness
  The error bars are also shown.
  The Bayesian standard error is less than 1 % of the mean for each data
  set.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Variation-of-trap"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1778,6 +1789,8 @@ We note that the measured data is a result of a transformation by the detection
  apparatus of the physical sample paths.
  The Bayesian modelling of the detection apparatus and the transformations
  it induces on the physical sample paths is not pursued here.
+ Therefore, we have a problem of pure estimation and there is no attempt
+ to compare between alternative models of the data generation process.
  
 \end_layout
 
@@ -1793,7 +1806,7 @@ name "sec:Results"
 \end_layout
 
 \begin_layout Standard
-We now present the results of our Bayesian analysis of the data.
+We now present our results.
  In Figure.
  (
 \begin_inset CommandInset ref
@@ -1803,8 +1816,8 @@ reference "fig:discrete-sample-path"
 \end_inset
 
 ) we show a typical sample path of one component of motion in the plane
- of the trap together with its histogram, autocorrelation function and spectral
- density.
+ of the trap, together with its histogram, autocorrelation function and
+ spectral density.
  The histogram shows that the distribution of positions is stationary and
  very well-approximated by a Gaussian.
  The variance 
@@ -1841,8 +1854,7 @@ reference "eq:spectral-density"
 ) is used to estimate the spring constant when the friction constant is
  given.
  For estimation of the stiffness from the PSD, we employ the procedures
- suggested in Ref.
- 
+ suggested in 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "berg2004power"
@@ -1871,7 +1883,7 @@ key "berg2004power"
  method - where the presence of any additive noise leads to an increase
  in the variance that leads to over-estimation of the trap stiffness, and
  the PSD - where the standard systematics related to fitting can be minimized
- at best, and not removed.
+ at best but not removed.
  
 \end_layout
 
@@ -1885,7 +1897,7 @@ reference "fig:discrete-sample-path"
 \end_inset
 
 ).
- In panel (a) we show a heat map of the Bayesian posterior distribution
+ In panel (a) we show show filled contours of the posterior distribution
  in the 
 \begin_inset Formula $\lambda-D$
 \end_inset
@@ -1922,9 +1934,18 @@ Bayes II
 \end_inset
 
  method.
- There is remarkably good agreement between these two conceptually and procedura
-lly independent Bayesian methods in estimating the stiffness, as shown in
- Table.(
+ There is remarkably good agreement between these two Bayesian methods and
+ the power spectral density method, all three of which are conceptually
+ and procedurally independent, as shown in Fig.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Variation-of-trap"
+
+\end_inset
+
+) and Table.
+ (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:k-versus-power"
@@ -1965,11 +1986,19 @@ reference "tab:k-versus-power"
 \begin_layout Standard
 To compare the Bayesian estimate for the diffusion coefficient we repeat
  the experiment for different solvent viscosities keeping both the laser
- power (implying constant stiffness that was around 6 
+ power ( corresponding to 
+\begin_inset Formula $k\sim$
+\end_inset
+
+ 6 
 \begin_inset Formula $pN$
 \end_inset
 
-) and the particle size fixed.
+) and the particle size (
+\begin_inset Formula $3\mu m$
+\end_inset
+
+) fixed.
  The Stokes-Einstein relation then provides an estimate of the diffusion
  coefficient.
  We compare this estimate with the MAP estimate 
@@ -2011,733 +2040,10 @@ in reverse
  due to ambient low frequency noise sources.
  Thus, the Bayesian method can be used for accurate viscometry using only
  the discretely observed sample paths of a trapped Brownian particle.
- 
 \begin_inset Float table
 wide false
 sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="7" columns="4">
-<features booktabs="true" tabularvalignment="middle">
-<column alignment="center" valignment="middle" width="2cm">
-<column alignment="center" valignment="top" width="2cm">
-<column alignment="center" valignment="top" width="2cm">
-<column alignment="center" valignment="top" width="2cm">
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\eta$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $D$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $D^{\star}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\eta^{\star}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.00085
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1.72
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1.736
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.00084(3)
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.00089
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1.65
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1.72(6) 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.00085(3)
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.00137
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1.07
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1.05(3)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.00139(4)
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.00197
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.743
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.732(11)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.00200(3)
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.00243
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.603
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.586(12)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.00250(5)
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.00487
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.301
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.276(14)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.00530(8)
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Bayesian viscometry in an optical trap.
- The first column is the viscosity of the solvent as measured in a rheometer
- and the second column is the diffusion coefficient as given by the Stokes-Einst
-ein relation for that value of the viscosity.
- The third column is the Bayesian MAP estimate for the diffusion coefficient
- and the fourth column is the value of the viscosity, as given by the Stokes-Ein
-stein relation for the corresponding value of the diffusion coefficient.
- There is a good match between the first and fourth columns.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:viscometry"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\emph on
-The results of our measurements of trap stiffness as a function of trapping
- laser power and the viscosity of the glycerol + water solutions are summarized
- in Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:discrete-sample-path"
-
-\end_inset
-
- and Tables 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:k-versus-power"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:viscometry"
-
-\end_inset
-
-, respectively.
- For each data set of the displacement of the single trapped polystyrene
- bead of diameter 
-\begin_inset Formula $3\mu$
-\end_inset
-
-m (Brownian particle), we first check the quality of raw time series data
- (Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:discrete-sample-path"
-
-\end_inset
-
-(a)) from the position histogram counts and ensure that it fits well to
- a Gaussian (Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:discrete-sample-path"
-
-\end_inset
-
-(b)).
- We then plot the autocorrelation function (ACF) and power spectral density
- (PSD) of the data, and again ensure robust exponential and Lorentzian fits,
- respectively (Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:discrete-sample-path"
-
-\end_inset
-
-(c) and (d)).
- The Bayesian analyses is carried out only for those series of data which
- show good results in the preliminary analyses, and we proceed to calculate
- the MAP estimate for 
-\begin_inset Formula $(\lambda^{\star},D^{\star})$
-\end_inset
-
- both analytically and numerically as shown in Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:discrete-sample-path"
-
-\end_inset
-
-(e).
- As is clear from the figure, the results match very well, and the standard
- deviation of the estimated parameters for one set of time series data using
- the Bayesian analysis is less than 0.1%.
- In comparison, the corresponding error in the estimates from the PSD for
- a single time series data set is much higher, being typically of the order
- of 3-4%.
- This can be principally attributed to the variation in the fit parameters
- depending on the start and end points of the Lorentzian fit to the data
- shown in Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:discrete-sample-path"
-
-\end_inset
-
-(d).
- Thus, it is clear that the inherent error in the Bayesian estimation is
- far lesser than that in the PSD fit - something which is important to note
- considering that the Lorentzian fit to the PSD is the most standard calibration
- method in optical trapping.
- However, we still use the PSD technique as a benchmark for our estimates
- of 
-\begin_inset Formula $k$
-\end_inset
-
- at different trapping laser powers, which are shown in Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:k-versus-power"
-
-\end_inset
-
-.
- The trapping stiffness increases linearly with laser power, and we check
- for this by trapping at six different laser powers, with five sets of time
- series data used for each laser power.
- The measured values of 
-\begin_inset Formula $k$
-\end_inset
-
- by the Bayesian MAP and stationary (equipartition) analyses agree very
- well.
- Note that the 
-\begin_inset Formula $1\sigma$
-\end_inset
-
- errors indicated in parenthesis are actually the standard errors of the
- mean values of 
-\begin_inset Formula $k$
-\end_inset
-
- after averaging over the five different data sets for each laser power,
- and should not be confused with the inherent error in the Bayesian statistics.
- PSDs are also computed for the same five sets of data, and a typical averaged
- spectrum for the laser power of 10.1 mW is shown in Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:discrete-sample-path"
-
-\end_inset
-
-(d).
- The variation of trap stiffness with laser power is shown in Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:discrete-sample-path"
-
-\end_inset
-
-(f), and we get good linear fits with the slopes (rate of change of stiffness
- with laser power) of the Bayesian processes (we do not show the MAP and
- stationary analyses data separately since they overlap almost completely
- as shown in Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:k-versus-power"
-
-\end_inset
-
-) and the PSD agreeing well within 
-\begin_inset Formula $1\sigma$
-\end_inset
-
-.
- For the viscosity data, we show the values of 
-\begin_inset Formula $D$
-\end_inset
-
- in Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:viscometry"
-
-\end_inset
-
-, from which the values of 
-\begin_inset Formula $\eta$
-\end_inset
-
- are evaluated using the Einstein relation 
-\begin_inset Formula $\left(\eta=\dfrac{k_{B}T}{6\pi Da},\;\mathrm{a}=\mathrm{bead}\;\mathrm{radius}\right)$
-\end_inset
-
-.
- In these sets of experiments, the voltage-physical distance calibration
- becomes of crucial importance, and we perform fresh calibrations for each
- different viscosity sample.
- The agreement with the viscosity values measured using the rheometer is
- good to within 3% for all data points except for the highest viscosity
- value, where the trap was not very robust due to the high viscosity, with
- the corner frequency 
-\begin_inset Formula $\left(\dfrac{\lambda}{2\pi}\right)$
-\end_inset
-
- being rather low for the same laser power.
- Note that for all these measurements the trap stiffness was kept constant
- to around 6 
-\begin_inset Formula $pN/\mu m$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Section
-Discussion
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Discussion"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-RA expresses his gratitude, long overdue, to Professor M.
- E.
- Cates for the introduction to Bayesianism.
-\end_layout
-
-\begin_layout Subsection
-Appendix 
-\end_layout
-
-\begin_layout Standard
-The first partial derivatives of the logarithm of the posterior probability
- with respect to 
-\begin_inset Formula $\lambda$
-\end_inset
-
- and 
-\begin_inset Formula $D$
-\end_inset
-
- are 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray*}
-\frac{\partial\ln P}{\partial\lambda} & = & \frac{N-1}{2}\left(\frac{1}{\lambda}-\frac{I_{2}^{\prime}}{I_{2}}\right)-\frac{\sum\Delta_{n}^{2}}{2DI_{2}}\\
- & - & \frac{\lambda}{2D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{1}{2\lambda}-\frac{x_{1}^{2}}{2D}
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\frac{\partial\ln P}{\partial D}=-\frac{N-1}{2D}+\frac{\lambda\sum\Delta_{n}^{2}}{2D^{2}I_{2}}-\frac{1}{2D}+\frac{\lambda x_{1}^{2}}{2D^{2}}`
-\]
-
-\end_inset
-
-where 
-\begin_inset Formula $I_{2}^{\prime}=2\Delta t\thinspace e^{-2\lambda\Delta t}$
-\end_inset
-
-.
- Setting the second of these equations to zero, 
-\begin_inset Formula $D$
-\end_inset
-
- is solved in term of 
-\begin_inset Formula $\lambda$
-\end_inset
-
- and this solution is used in the first equation, together with the large-sample
- asymptotics
-\begin_inset Formula 
-\[
-\frac{\lambda}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)\thickapprox\frac{\lambda}{\left(N-1\right)}\frac{\sum\Delta_{n}^{2}}{I_{2}},
-\]
-
-\end_inset
-
-to cancel all 
-\begin_inset Formula $D$
-\end_inset
-
--dependent terms.
- Setting the resulting equation to zero and solving for 
-\begin_inset Formula $\lambda$
-\end_inset
-
- then yields the MAP estimates in Eq.(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map-estimate"
-
-\end_inset
-
-).
- 
-\end_layout
-
-\begin_layout Standard
-The second partial derivatives, appearing in Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:quadratic-form"
-
-\end_inset
-
-), are 
-\begin_inset Formula 
-\begin{eqnarray*}
-\Sigma_{11}^{-1}=\frac{\partial^{2}\ln P}{\partial\lambda^{2}} & = & \frac{N-1}{2}\Big(-\frac{1}{\lambda^{2}}+\frac{I_{2}^{\prime}I_{2}^{\prime}}{I_{2}^{2}}-\frac{I_{2}^{\prime\prime}}{I_{2}}\Big)-\frac{1}{2\lambda^{2}}\\
- & - & \frac{1}{D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)-\frac{\lambda}{2D}\frac{\partial^{2}}{\partial\lambda^{2}}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right),
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\Sigma_{12}^{-1}=\frac{\partial^{2}\ln P}{\partial D\partial\lambda} & =\frac{\sum\Delta_{n}^{2}}{2D^{2}I_{2}}+\frac{\lambda}{2D^{2}}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{x_{1}^{2}}{2D^{2}},
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\Sigma_{22}^{-1}=\frac{\partial^{2}\ln P}{\partial D^{2}} & =\frac{N-1}{2D^{2}}-\frac{\lambda}{D^{3}}\Big(\frac{\sum\Delta_{n}^{2}}{I_{2}}-x_{1}^{2}\Big)+\frac{1}{2D^{2}},
-\end{eqnarray*}
-
-\end_inset
-
-where 
-\begin_inset Formula $I_{2}^{\prime\prime}=-4\Delta t^{2}\thinspace e^{-2\lambda\Delta t}$
-\end_inset
-
-.
- All the derivates are evaluated at the maximum given in Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map-estimate"
-
-\end_inset
-
-).
- These are assembled into the Hessian matrix 
-\begin_inset Formula $\boldsymbol{\Sigma}^{-1}$
-\end_inset
-
-and the matrix is inverted to give the covariance matrix 
-\begin_inset Formula $\boldsymbol{\Sigma}$
-\end_inset
-
- in Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:quadratic-form"
-
-\end_inset
-
-), whose matrix elements are 
-\begin_inset Formula $\sigma_{\lambda}^{2}$
-\end_inset
-
-, 
-\begin_inset Formula $\sigma_{\lambda D}^{2}$
-\end_inset
-
-, 
-\begin_inset Formula $\sigma_{D}^{2}$
-\end_inset
-
- 
-\begin_inset Formula 
-\begin{eqnarray*}
-\sigma_{\lambda}^{2}= &  & -\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{22}^{-1},\qquad\sigma_{\lambda D}^{2}=\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{12}^{-1},\\
-\sigma_{D}^{2}= &  & -\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{11}^{-1},
-\end{eqnarray*}
-
-\end_inset
-
-where 
-\begin_inset Formula $\det\boldsymbol{\Sigma}^{-1}=\Sigma_{11}^{-1}\Sigma_{22}^{-1}-\Sigma_{12}^{-1}\Sigma_{21}^{-1}$
-\end_inset
-
- and 
-\begin_inset Formula $\Sigma_{21}^{-1}=\Sigma_{12}^{-1}$
-\end_inset
-
-.
-\begin_inset Float table
-wide false
-sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -3142,7 +2448,566 @@ name "tab:k-versus-power"
 
 \end_inset
 
+ 
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
 
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="4">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="2cm">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="2cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\eta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $D$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $D^{\star}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\eta^{\star}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00085
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.72
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.736
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00084(3)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00089
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.65
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.72(6) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00085(3)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00137
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.07
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.05(3)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00139(4)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00197
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.743
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.732(11)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00200(3)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00243
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.603
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.586(12)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00250(5)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00487
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.301
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.276(14)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00530(8)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Bayesian viscometry in an optical trap.
+ The first column is the viscosity of the solvent as measured in a rheometer
+ and the second column is the diffusion coefficient as given by the Stokes-Einst
+ein relation for that value of the viscosity.
+ The third column is the Bayesian MAP estimate for the diffusion coefficient
+ and the fourth column is the value of the viscosity, as given by the Stokes-Ein
+stein relation for the corresponding value of the diffusion coefficient.
+ There is a good match between the first and fourth columns.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:viscometry"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Discussion
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Discussion"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this work, we have presented an exact Bayesian method for jointly estimating
+ the mean regression rate and the diffusion coefficient of an optically
+ trapped Brownian particle.
+ The trap stiffness in temperature units is obtained as a ratio of the mean
+ regression rate and the diffusion coefficient.
+ We have also rephrased the standard 
+\begin_inset Quotes eld
+\end_inset
+
+equipartition
+\begin_inset Quotes erd
+\end_inset
+
+ method of directly estimating the trap stiffness as a problem in Bayesian
+ inference.
+ We have assumed that the Ornstein-Uhlenbeck process is the data generating
+ model.
+ More general models, which include the position dependence of the particle
+ friction (as would be the case in the proximity to walls) or the non-Markovian
+ character of the trajectories (as would be the case when momentum diffusion
+ is not slow compared to the time scales of interest) can, with additional
+ effort, be incorporated in the Bayesian framework.
+ Exact analytical solutions will no longer be available and one has to resort
+ to approximations of the likelihood, as short-time expansions of the Fokker-Pla
+nck propagator or via numerical solutions.
+ These introduce additional sources of error which must be carefully evaluated.
+ In contrast, the method presented here is exact and can serve as an useful
+ 
+\begin_inset Quotes eld
+\end_inset
+
+null hypothesis
+\begin_inset Quotes erd
+\end_inset
+
+ when comparing between different models for the data.
+ In future work, we shall present Bayesian methods for more complex models
+ and provide a fully Bayesian procedure, embodying Ockham's razor, for the
+ problem of model selection.
+\end_layout
+
+\begin_layout Acknowledgments
+RA expresses his gratitude, long overdue, to Professor M.
+ E.
+ Cates for introducing him to Bayesianism.
+\end_layout
+
+\begin_layout Subsection
+Appendix 
+\end_layout
+
+\begin_layout Standard
+The first partial derivatives of the logarithm of the posterior probability
+ with respect to 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+ are 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial\ln P}{\partial\lambda} & = & \frac{N-1}{2}\left(\frac{1}{\lambda}-\frac{I_{2}^{\prime}}{I_{2}}\right)-\frac{\sum\Delta_{n}^{2}}{2DI_{2}}\\
+ & - & \frac{\lambda}{2D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{1}{2\lambda}-\frac{x_{1}^{2}}{2D}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial\ln P}{\partial D}=-\frac{N-1}{2D}+\frac{\lambda\sum\Delta_{n}^{2}}{2D^{2}I_{2}}-\frac{1}{2D}+\frac{\lambda x_{1}^{2}}{2D^{2}}`
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $I_{2}^{\prime}=2\Delta t\thinspace e^{-2\lambda\Delta t}$
+\end_inset
+
+.
+ Setting the second of these equations to zero, 
+\begin_inset Formula $D$
+\end_inset
+
+ is solved in term of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and this solution is used in the first equation, together with the large-sample
+ asymptotics
+\begin_inset Formula 
+\[
+\frac{\lambda}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)\thickapprox\frac{\lambda}{\left(N-1\right)}\frac{\sum\Delta_{n}^{2}}{I_{2}},
+\]
+
+\end_inset
+
+to cancel all 
+\begin_inset Formula $D$
+\end_inset
+
+-dependent terms.
+ Setting the resulting equation to zero and solving for 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ then yields the MAP estimates in Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map-estimate"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+The second partial derivatives, appearing in Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:quadratic-form"
+
+\end_inset
+
+), are 
+\begin_inset Formula 
+\begin{eqnarray*}
+\Sigma_{11}^{-1}=\frac{\partial^{2}\ln P}{\partial\lambda^{2}} & = & \frac{N-1}{2}\Big(-\frac{1}{\lambda^{2}}+\frac{I_{2}^{\prime}I_{2}^{\prime}}{I_{2}^{2}}-\frac{I_{2}^{\prime\prime}}{I_{2}}\Big)-\frac{1}{2\lambda^{2}}\\
+ & - & \frac{1}{D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)-\frac{\lambda}{2D}\frac{\partial^{2}}{\partial\lambda^{2}}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right),
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\Sigma_{12}^{-1}=\frac{\partial^{2}\ln P}{\partial D\partial\lambda} & =\frac{\sum\Delta_{n}^{2}}{2D^{2}I_{2}}+\frac{\lambda}{2D^{2}}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{x_{1}^{2}}{2D^{2}},
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\Sigma_{22}^{-1}=\frac{\partial^{2}\ln P}{\partial D^{2}} & =\frac{N-1}{2D^{2}}-\frac{\lambda}{D^{3}}\Big(\frac{\sum\Delta_{n}^{2}}{I_{2}}-x_{1}^{2}\Big)+\frac{1}{2D^{2}},
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $I_{2}^{\prime\prime}=-4\Delta t^{2}\thinspace e^{-2\lambda\Delta t}$
+\end_inset
+
+.
+ All the derivates are evaluated at the maximum given in Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map-estimate"
+
+\end_inset
+
+).
+ These are assembled into the Hessian matrix 
+\begin_inset Formula $\boldsymbol{\Sigma}^{-1}$
+\end_inset
+
+and the matrix is inverted to give the covariance matrix 
+\begin_inset Formula $\boldsymbol{\Sigma}$
+\end_inset
+
+ in Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:quadratic-form"
+
+\end_inset
+
+), whose matrix elements are 
+\begin_inset Formula $\sigma_{\lambda}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma_{\lambda D}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma_{D}^{2}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\sigma_{\lambda}^{2}= &  & -\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{22}^{-1},\qquad\sigma_{\lambda D}^{2}=\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{12}^{-1},\\
+\sigma_{D}^{2}= &  & -\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{11}^{-1},
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\det\boldsymbol{\Sigma}^{-1}=\Sigma_{11}^{-1}\Sigma_{22}^{-1}-\Sigma_{12}^{-1}\Sigma_{21}^{-1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Sigma_{21}^{-1}=\Sigma_{12}^{-1}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
