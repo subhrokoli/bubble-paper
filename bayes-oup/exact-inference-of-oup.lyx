@@ -139,6 +139,7 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -153,6 +154,7 @@ The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -178,7 +180,7 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-Since the seminal contributions of Rayleigh, Einstein, Smoluchowki, Langevin
+Since the seminal contributions of Rayleigh, Einstein, Smoluchowski, Langevin
  and others 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -438,7 +440,7 @@ s, which are quadratic functions of the positions.
  Their use greatly reduces the computation needed to evaluate the posterior
  distribution, as four numbers, rather than a large time series now represents
  the entire information relevant to inference.
- Finally, we are able to obtain exact maximum aposteriori (MAP) estimates
+ Finally, we are able to obtain exact maximum a posteriori (MAP) estimates
  of the mean regression and diffusion coefficients, and their error bars,
  in terms of the four sufficient statistics.
  This obviates the need for the Monte Carlo sampling or numerical minimization
@@ -938,9 +940,6 @@ The probability
 
  of the parameters, given the sample path, can now be computed using Bayes
  theorem, as
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \[
 P(\lambda,D|X)=\frac{P(X|\lambda,D)P(\lambda,D)}{P(X)}
@@ -992,9 +991,6 @@ ly, we use informative priors for
 \end_inset
 
 , is
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{align}
 \ln P(\lambda,D|X) & =\frac{N-1}{2}\ln\frac{\lambda}{2\pi DI_{2}}-\frac{\lambda}{2DI_{2}}\sum_{n=1}^{N-1}\Delta_{n}^{2}\nonumber \\
@@ -1108,9 +1104,6 @@ without
 \begin_layout Standard
 The error bars are obtained from a Taylor expansion of the log posterior
  to quadratic order about the MAP value,
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 \ln\frac{P(\lambda,D|X)}{P(\lambda^{\star},D^{\star}|X)}\approx-\left(\Delta\lambda,\Delta D\right)^{T}\mathbf{\boldsymbol{\Sigma}}^{-1}\left(\Delta\lambda,\Delta D\right)\label{eq:quadratic-form}
@@ -1197,9 +1190,6 @@ key "jaynes2003probability"
 \end_inset
 
  to positive values, is
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 \ln P(k|X)=\frac{N}{2}\ln\frac{k}{2\pi k_{B}T}-\frac{1}{2}\frac{k}{k_{B}T}\sum_{n=1}^{N}x_{n}^{2}\label{eq:k-posterior}
@@ -1209,9 +1199,6 @@ key "jaynes2003probability"
 
 The MAP estimate and its error bar follow straightforwardly from the posterior
  distribution as
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 \frac{k^{\star}}{k_{B}T}=\frac{N}{\sum_{n=1}^{N}x_{n}^{2}},\quad\sigma_{k}=\frac{1}{\sqrt{N}}\frac{k^{\star}}{k_{B}T}\label{eq:k-map}
@@ -1326,8 +1313,8 @@ We note that the error bars obtained in both Bayes I and Bayes II refer
 \end_inset
 
 .
- In contrast, conventional error bars refer to frequentist confidence intervales
-, which are relevant to the outcomes of hypothetical repetitions of measurement.
+ In contrast, conventional error bars refer to frequentist confidence intervals,
+ which are relevant to the outcomes of hypothetical repetitions of measurement.
  In general, Bayesian credible intervals and frequentist confidence intervals
  are not identical and should 
 \begin_inset Formula $not$
@@ -1463,7 +1450,7 @@ status open
 
 \begin_layout Plain Layout
 Discrete sample path and empirical statistics of an optically trapped Brownian
- polysterene bead of radius 
+ polystyrene bead of radius 
 \begin_inset Formula $a=3\mu$
 \end_inset
 
@@ -1877,7 +1864,7 @@ key "berg2004power"
 \end_inset
 
 .
- However, there exist issues in estimating stiffness from both the equiparition
+ However, there exist issues in estimating stiffness from both the equipartition
  method - where the presence of any additive noise leads to an increase
  in the variance that leads to over-estimation of the trap stiffness, and
  the PSD - where the standard systematics related to fitting can be minimized
@@ -2450,7 +2437,7 @@ name "tab:k-versus-power"
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -2533,7 +2520,7 @@ status collapsed
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.736
+1.73(6)
 \end_layout
 
 \end_inset
@@ -2847,10 +2834,7 @@ The first partial derivatives of the logarithm of the posterior probability
 \begin_inset Formula $D$
 \end_inset
 
- are 
-\end_layout
-
-\begin_layout Standard
+ are
 \begin_inset Formula 
 \begin{eqnarray*}
 \frac{\partial\ln P}{\partial\lambda} & = & \frac{N-1}{2}\left(\frac{1}{\lambda}-\frac{I_{2}^{\prime}}{I_{2}}\right)-\frac{\sum\Delta_{n}^{2}}{2DI_{2}}\\
@@ -2860,13 +2844,10 @@ The first partial derivatives of the logarithm of the posterior probability
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
-\[
-\frac{\partial\ln P}{\partial D}=-\frac{N-1}{2D}+\frac{\lambda\sum\Delta_{n}^{2}}{2D^{2}I_{2}}-\frac{1}{2D}+\frac{\lambda x_{1}^{2}}{2D^{2}}`
-\]
+\begin{eqnarray*}
+\frac{\partial\ln P}{\partial D} & = & -\frac{N-1}{2D}+\frac{\lambda\sum\Delta_{n}^{2}}{2D^{2}I_{2}}-\frac{1}{2D}+\frac{\lambda x_{1}^{2}}{2D^{2}},
+\end{eqnarray*}
 
 \end_inset
 
@@ -2886,9 +2867,9 @@ where
  and this solution is used in the first equation, together with the large-sample
  asymptotics
 \begin_inset Formula 
-\[
-\frac{\lambda}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)\thickapprox\frac{\lambda}{\left(N-1\right)}\frac{\sum\Delta_{n}^{2}}{I_{2}},
-\]
+\begin{alignat*}{1}
+\frac{\lambda}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right) & \thickapprox\frac{\lambda}{\left(N-1\right)}\frac{\sum\Delta_{n}^{2}}{I_{2}},
+\end{alignat*}
 
 \end_inset
 

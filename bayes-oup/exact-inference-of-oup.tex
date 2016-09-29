@@ -63,6 +63,7 @@ and Research, Kolkata, Mohanpur 741246}
 and Research, Kolkata, Mohanpur 741246}
 \email{ayan@iiserkol.ac.in}
 
+\selectlanguage{english}%
 
 \author{R. Adhikari}
 
@@ -70,6 +71,7 @@ and Research, Kolkata, Mohanpur 741246}
 Chennai 600113}
 \email{rjoy@imsc.res.in}
 
+\selectlanguage{english}%
 \begin{abstract}
 Bayesian inference provides a principled way of estimating the parameters
 of a stochastic process that is observed discretely in time. The overdamped
@@ -88,7 +90,7 @@ methods.
 
 \section{Introduction}
 
-Since the seminal contributions of Rayleigh, Einstein, Smoluchowki,
+Since the seminal contributions of Rayleigh, Einstein, Smoluchowski,
 Langevin and others \cite{chandrasekhar1943stochastic}, stochastic
 processes have been used to model physical phenomena in which fluctuations
 play an essential role. Examples include the Brownian motion of a
@@ -171,7 +173,7 @@ expressed in terms of four sufficient statistics, which are quadratic
 functions of the positions. Their use greatly reduces the computation
 needed to evaluate the posterior distribution, as four numbers, rather
 than a large time series now represents the entire information relevant
-to inference. Finally, we are able to obtain exact maximum aposteriori
+to inference. Finally, we are able to obtain exact maximum a posteriori
 (MAP) estimates of the mean regression and diffusion coefficients,
 and their error bars, in terms of the four sufficient statistics.
 This obviates the need for the Monte Carlo sampling or numerical minimization
@@ -301,7 +303,6 @@ P(X|\lambda,D)=\prod_{n=1}^{N-1}P_{1|1}(x_{n+1}|x_{n},\lambda,D)P_{1}(x_{1}|\lam
 \end{equation}
 The probability $P(\lambda,D|X)$ of the parameters, given the sample
 path, can now be computed using Bayes theorem, as
-
 \[
 P(\lambda,D|X)=\frac{P(X|\lambda,D)P(\lambda,D)}{P(X)}
 \]
@@ -314,7 +315,6 @@ step function. This assigns zero probability weight for negative values
 of the parameters and equal probability weight for all positive values.
 The logarithm of the posterior probability, after using the explicit
 forms of $P_{1|1}$ and $P_{1}$, is
-
 \begin{align}
 \ln P(\lambda,D|X) & =\frac{N-1}{2}\ln\frac{\lambda}{2\pi DI_{2}}-\frac{\lambda}{2DI_{2}}\sum_{n=1}^{N-1}\Delta_{n}^{2}\nonumber \\
  & +\frac{1}{2}\ln\frac{\lambda}{2\pi D}-\frac{\lambda}{2D}x_{1}^{2}\label{eq:joint-posterior}
@@ -343,7 +343,6 @@ need for fitting, minimization, or Monte Carlo sampling.
 
 The error bars are obtained from a Taylor expansion of the log posterior
 to quadratic order about the MAP value,
-
 \begin{equation}
 \ln\frac{P(\lambda,D|X)}{P(\lambda^{\star},D^{\star}|X)}\approx-\left(\Delta\lambda,\Delta D\right)^{T}\mathbf{\boldsymbol{\Sigma}}^{-1}\left(\Delta\lambda,\Delta D\right)\label{eq:quadratic-form}
 \end{equation}
@@ -364,13 +363,11 @@ sequence, or, in physical terms, as repeated independent observations
 of the stationary distribution $P_{1}(x)$ \cite{jaynes2003probability}.
 In that case, the posterior probability, assuming an informative prior
 that constrains $k$ to positive values, is
-
 \begin{equation}
 \ln P(k|X)=\frac{N}{2}\ln\frac{k}{2\pi k_{B}T}-\frac{1}{2}\frac{k}{k_{B}T}\sum_{n=1}^{N}x_{n}^{2}\label{eq:k-posterior}
 \end{equation}
 The MAP estimate and its error bar follow straightforwardly from the
 posterior distribution as
-
 \begin{equation}
 \frac{k^{\star}}{k_{B}T}=\frac{N}{\sum_{n=1}^{N}x_{n}^{2}},\quad\sigma_{k}=\frac{1}{\sqrt{N}}\frac{k^{\star}}{k_{B}T}\label{eq:k-map}
 \end{equation}
@@ -406,7 +403,7 @@ has an insignificant contribution to the posterior.
 We note that the error bars obtained in both Bayes I and Bayes II
 refer to Bayesian credible intervals, which are relevant to the uncertainty
 in the parameter estimates, given the data set $X$. In contrast,
-conventional error bars refer to frequentist confidence intervales,
+conventional error bars refer to frequentist confidence intervals,
 which are relevant to the outcomes of hypothetical repetitions of
 measurement. In general, Bayesian credible intervals and frequentist
 confidence intervals are not identical and should $not$ be compared
@@ -436,7 +433,7 @@ at any instant in time is given by $(A-B)/(A+B).$\label{fig:balanced-detection}}
 \includegraphics[scale=0.53]{figure2}
 
 \caption{Discrete sample path and empirical statistics of an optically trapped
-Brownian polysterene bead of radius $a=3\mu$m. Panel (a) shows discrete
+Brownian polystyrene bead of radius $a=3\mu$m. Panel (a) shows discrete
 observations of one coordinate of the sample path, (b) the histogram
 of the position coordinate, (c) the autocorrelation function and (d)
 the spectral density. The fits of $\lambda$ from the both the autocorrelation
@@ -540,7 +537,7 @@ the procedures suggested in \cite{berg2004power}, including ``blocking''
 the data with a bin size of 100 points, and setting the frequency
 range for fitting in order to avoid systematic errors due to reliability
 issues at both low and high frequencies \cite{berg2004power}. However,
-there exist issues in estimating stiffness from both the equiparition
+there exist issues in estimating stiffness from both the equipartition
 method - where the presence of any additive noise leads to an increase
 in the variance that leads to over-estimation of the trap stiffness,
 and the PSD - where the standard systematics related to fitting can
@@ -619,7 +616,7 @@ $1\%$ of the mean for each data set. \label{tab:k-versus-power}}
 \toprule 
 $\eta$ & $D$ & $D^{\star}$ & $\eta^{\star}$\tabularnewline
 \midrule 
-0.00085 & 1.72 & 1.736 & 0.00084(3)\tabularnewline
+0.00085 & 1.72 & 1.73(6) & 0.00084(3)\tabularnewline
 \midrule 
 0.00089 & 1.65 & 1.72(6)  & 0.00085(3)\tabularnewline
 \midrule 
@@ -674,23 +671,21 @@ for introducing him to Bayesianism.
 \subsection{Appendix }
 
 The first partial derivatives of the logarithm of the posterior probability
-with respect to $\lambda$ and $D$ are 
-
+with respect to $\lambda$ and $D$ are
 \begin{eqnarray*}
 \frac{\partial\ln P}{\partial\lambda} & = & \frac{N-1}{2}\left(\frac{1}{\lambda}-\frac{I_{2}^{\prime}}{I_{2}}\right)-\frac{\sum\Delta_{n}^{2}}{2DI_{2}}\\
  & - & \frac{\lambda}{2D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{1}{2\lambda}-\frac{x_{1}^{2}}{2D}
 \end{eqnarray*}
-
-\[
-\frac{\partial\ln P}{\partial D}=-\frac{N-1}{2D}+\frac{\lambda\sum\Delta_{n}^{2}}{2D^{2}I_{2}}-\frac{1}{2D}+\frac{\lambda x_{1}^{2}}{2D^{2}}`
-\]
+\begin{eqnarray*}
+\frac{\partial\ln P}{\partial D} & = & -\frac{N-1}{2D}+\frac{\lambda\sum\Delta_{n}^{2}}{2D^{2}I_{2}}-\frac{1}{2D}+\frac{\lambda x_{1}^{2}}{2D^{2}},
+\end{eqnarray*}
 where $I_{2}^{\prime}=2\Delta t\thinspace e^{-2\lambda\Delta t}$.
 Setting the second of these equations to zero, $D$ is solved in term
 of $\lambda$ and this solution is used in the first equation, together
 with the large-sample asymptotics
-\[
-\frac{\lambda}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)\thickapprox\frac{\lambda}{\left(N-1\right)}\frac{\sum\Delta_{n}^{2}}{I_{2}},
-\]
+\begin{alignat*}{1}
+\frac{\lambda}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right) & \thickapprox\frac{\lambda}{\left(N-1\right)}\frac{\sum\Delta_{n}^{2}}{I_{2}},
+\end{alignat*}
 to cancel all $D$-dependent terms. Setting the resulting equation
 to zero and solving for $\lambda$ then yields the MAP estimates in
 Eq.(\ref{eq:map-estimate}). 
