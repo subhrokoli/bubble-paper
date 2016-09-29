@@ -1780,7 +1780,7 @@ We note that the measured data is a result of a transformation by the detection
 \end_layout
 
 \begin_layout Section
-Results
+Results and discussions
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Results"
@@ -1938,12 +1938,6 @@ reference "tab:k-versus-power"
 \end_inset
 
 ).
- Note that the errors indicated in parenthesis indicate the 1
-\begin_inset Formula $\sigma$
-\end_inset
-
- standard errors in the mean due to measurements over five independent sets
- of data.
  The agreement with the conventional method, shown in the third column,
  is within 
 \begin_inset Formula $2-3\%$
@@ -1962,10 +1956,35 @@ reference "tab:k-versus-power"
 
 % of the mean.
  These are well below the systematic errors and the approximately 
-\begin_inset Formula $3\%$
+\begin_inset Formula $1.5-2\%$
 \end_inset
 
  variability of the estimates obtained from the fitting procedure.
+ The 1
+\begin_inset Formula $\sigma$
+\end_inset
+
+ standard errors in the mean are indicated in parenthesis next to each 
+\begin_inset Formula $k$
+\end_inset
+
+ value in Table.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:k-versus-power"
+
+\end_inset
+
+).
+ Note that for the Bayes II method, we have used a temperature of 300K which
+ is slightly higher than the lab environment temperature of 297K, which
+ we account to the fact that the laser trap slightly heats the water around
+ the particle.
+ However, the fact that the results from Bayes I and Bayes II are extremely
+ close to each other demonstrates that our estimate of temperature is trustworth
+y.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -2016,8 +2035,43 @@ in reverse
 \end_inset
 
 , which agrees very well with the known viscosity of the mixture.
- The agreement is within 5% for all cases with the exception of the last,
- where the enhanced friction caused a shift in 
+ The experiments were performed for five sets of data for each viscosity
+ sample and the mean value of 
+\begin_inset Formula $D^{\star}$
+\end_inset
+
+ has been reported with the corresponding 1
+\begin_inset Formula $\sigma$
+\end_inset
+
+ error in parenthesis.
+ The error bars, which are higher than that for the 
+\begin_inset Formula $k$
+\end_inset
+
+ measurement, chiefly reflect the systematic errors in our experimental
+ apparatus that may arise due to slow drifts of the laser power, beam pointing
+ of the laser, drifts in ambient temperature, etc.
+ Such systematic effects occur at time scales longer than 20 s, which is
+ the time over which we collect one set of data.
+ We check that the estimate of 
+\begin_inset Formula $D^{\star}$
+\end_inset
+
+over different windows of a single time series is still limited by the standard
+ error defined by value of 
+\begin_inset Formula $N$
+\end_inset
+
+ in the particular window, which confirms that the errors we observe are
+ due to systematic shifts in the operating conditions of the experiment.
+ The agreement in the viscosity values for that measured in the rhemoeter
+ and by the Bayesian estimate of 
+\begin_inset Formula $D^{\star}$
+\end_inset
+
+is within 5% for all cases with the exception of the last, where the enhanced
+ friction caused a shift in 
 \begin_inset Formula $\lambda$
 \end_inset
 
@@ -2719,7 +2773,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.00530(8)
+0.00530(24)
 \end_layout
 
 \end_inset
@@ -2741,7 +2795,8 @@ ein relation for that value of the viscosity.
  and the fourth column is the value of the viscosity, as given by the Stokes-Ein
 stein relation for the corresponding value of the diffusion coefficient.
  There is a good match between the first and fourth columns.
- 
+ Note that the first row is for water while the rest are for water + glyecerol
+ samples with increasing glycerol concentration.
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:viscometry"
@@ -2762,10 +2817,10 @@ name "tab:viscometry"
 \end_layout
 
 \begin_layout Section
-Discussion
+Conclusion
 \begin_inset CommandInset label
 LatexCommand label
-name "sec:Discussion"
+name "sec:Conclusion"
 
 \end_inset
 
