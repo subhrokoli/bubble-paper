@@ -1984,101 +1984,7 @@ reference "tab:k-versus-power"
  However, the fact that the results from Bayes I and Bayes II are extremely
  close to each other demonstrates that our estimate of temperature is trustworth
 y.
- 
-\end_layout
-
-\begin_layout Standard
-To compare the Bayesian estimate for the diffusion coefficient we repeat
- the experiment for different solvent viscosities keeping both the laser
- power ( corresponding to 
-\begin_inset Formula $k\sim$
-\end_inset
-
- 6 
-\begin_inset Formula $pN$
-\end_inset
-
-) and the particle size (
-\begin_inset Formula $3\mu m$
-\end_inset
-
-) fixed.
- The Stokes-Einstein relation then provides an estimate of the diffusion
- coefficient.
- We compare this estimate with the MAP estimate 
-\begin_inset Formula $D^{\star}$
-\end_inset
-
- in Table.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:viscometry"
-
-\end_inset
-
-) to find agreement to within 
-\begin_inset Formula $10\%$
-\end_inset
-
- in all cases.
- The Stokes-Einstein relation can be used 
-\begin_inset Quotes eld
-\end_inset
-
-in reverse
-\begin_inset Quotes erd
-\end_inset
-
- to obtain a MAP estimate of the viscosity, 
-\begin_inset Formula $\eta^{\star}$
-\end_inset
-
-, which agrees very well with the known viscosity of the mixture.
- The experiments were performed for five sets of data for each viscosity
- sample and the mean value of 
-\begin_inset Formula $D^{\star}$
-\end_inset
-
- has been reported with the corresponding 1
-\begin_inset Formula $\sigma$
-\end_inset
-
- error in parenthesis.
- The error bars, which are higher than that for the 
-\begin_inset Formula $k$
-\end_inset
-
- measurement, chiefly reflect the systematic errors in our experimental
- apparatus that may arise due to slow drifts of the laser power, beam pointing
- of the laser, drifts in ambient temperature, etc.
- Such systematic effects occur at time scales longer than 20 s, which is
- the time over which we collect one set of data.
- We check that the estimate of 
-\begin_inset Formula $D^{\star}$
-\end_inset
-
-over different windows of a single time series is still limited by the standard
- error defined by value of 
-\begin_inset Formula $N$
-\end_inset
-
- in the particular window, which confirms that the errors we observe are
- due to systematic shifts in the operating conditions of the experiment.
- The agreement in the viscosity values for that measured in the rhemoeter
- and by the Bayesian estimate of 
-\begin_inset Formula $D^{\star}$
-\end_inset
-
-is within 5% for all cases with the exception of the last, where the enhanced
- friction caused a shift in 
-\begin_inset Formula $\lambda$
-\end_inset
-
- towards lower values, once again increasing the effects of systematics
- due to ambient low frequency noise sources.
- Thus, the Bayesian method can be used for accurate viscometry using only
- the discretely observed sample paths of a trapped Brownian particle.
+ .
 \begin_inset Float table
 wide false
 sideways false
@@ -2491,7 +2397,7 @@ name "tab:k-versus-power"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -2814,6 +2720,100 @@ name "tab:viscometry"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+To compare the Bayesian estimate for the diffusion coefficient we repeat
+ the experiment for different solvent viscosities keeping both the laser
+ power ( corresponding to 
+\begin_inset Formula $k\sim$
+\end_inset
+
+ 6 
+\begin_inset Formula $pN$
+\end_inset
+
+) and the particle size (
+\begin_inset Formula $3\mu m$
+\end_inset
+
+) fixed.
+ The Stokes-Einstein relation then provides an estimate of the diffusion
+ coefficient.
+ We compare this estimate with the MAP estimate 
+\begin_inset Formula $D^{\star}$
+\end_inset
+
+ in Table.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:viscometry"
+
+\end_inset
+
+) to find agreement to within 
+\begin_inset Formula $10\%$
+\end_inset
+
+ in all cases.
+ The Stokes-Einstein relation can be used 
+\begin_inset Quotes eld
+\end_inset
+
+in reverse
+\begin_inset Quotes erd
+\end_inset
+
+ to obtain a MAP estimate of the viscosity, 
+\begin_inset Formula $\eta^{\star}$
+\end_inset
+
+, which agrees very well with the known viscosity of the mixture.
+ The experiments were performed for five sets of data for each viscosity
+ sample and the mean value of 
+\begin_inset Formula $D^{\star}$
+\end_inset
+
+ has been reported with the corresponding 1
+\begin_inset Formula $\sigma$
+\end_inset
+
+ error in parenthesis.
+ The error bars, which are higher than that for the 
+\begin_inset Formula $k$
+\end_inset
+
+ measurement, chiefly reflect the systematic errors in our experimental
+ apparatus that may arise due to slow drifts of the laser power, beam pointing
+ of the laser, drifts in ambient temperature, etc.
+ Such systematic effects occur at time scales longer than 20 s, which is
+ the time over which we collect one set of data.
+ We check that the estimate of 
+\begin_inset Formula $D^{\star}$
+\end_inset
+
+over different windows of a single time series is still limited by the standard
+ error defined by value of 
+\begin_inset Formula $N$
+\end_inset
+
+ in the particular window, which confirms that the errors we observe are
+ due to systematic shifts in the operating conditions of the experiment.
+ The agreement in the viscosity values for that measured in the rhemoeter
+ and by the Bayesian estimate of 
+\begin_inset Formula $D^{\star}$
+\end_inset
+
+is within 5% for all cases with the exception of the last, where the enhanced
+ friction caused a shift in 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ towards lower values, once again increasing the effects of systematics
+ due to ambient low frequency noise sources.
+ Thus, the Bayesian method can be used for accurate viscometry using only
+ the discretely observed sample paths of a trapped Brownian particle
 \end_layout
 
 \begin_layout Section
