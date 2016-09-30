@@ -1752,11 +1752,9 @@ Variation of trap stiffness
 \begin_inset Formula $k$
 \end_inset
 
- with laser power estimated by the two Bayesian methods of (Bayes I and
- Bayes II ) and by the standard fit to the power spectral density (PSD).
+ with laser power estimated by the two Bayesian methods (Bayes I and Bayes
+ II) and by the standard fit to the power spectral density (PSD).
  The error bars are also shown.
- The Bayesian standard error is less than 1 % of the mean for each data
- set.
  Solid line is the best fit to Bayes I and II while the dotted line is a
  best fit to PSD.
 \begin_inset CommandInset label
@@ -2532,7 +2530,7 @@ name "tab:k-versus-power"
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -2836,7 +2834,7 @@ ein relation for that value of the viscosity.
  and the fourth column is the value of the viscosity, as given by the Stokes-Ein
 stein relation for the corresponding value of the diffusion coefficient.
  There is a good match between the first and fourth columns.
- Note that the first row is for water while the rest are for water and glycerol
+ Note that the first row is for water while the rest are for water + glycerol
  samples with increasing glycerol concentration.
 \begin_inset CommandInset label
 LatexCommand label
