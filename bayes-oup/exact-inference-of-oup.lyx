@@ -139,7 +139,6 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -154,7 +153,6 @@ The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -1724,11 +1722,11 @@ name "fig:bayes-I-and-II"
 placement h
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename linefit.pdf
+	filename errorBayes1.jpg
 	display false
 	width 44text%
 
@@ -1750,6 +1748,8 @@ Variation of trap stiffness
  The error bars are also shown.
  The Bayesian standard error is less than 1 % of the mean for each data
  set.
+ Solid line is the best fit to Bayes I and II while the dotted line is a
+ best bit to PSD.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Variation-of-trap"
@@ -2074,7 +2074,7 @@ over different windows of a single time series is still limited by the standard
 
  in the particular window, which confirms that the errors we observe are
  due to systematic shifts in the operating conditions of the experiment.
- The agreement in the viscosity values for that measured in the rhemoeter
+ The agreement in the viscosity values for that measured in the rheometer
  and by the Bayesian estimate of 
 \begin_inset Formula $D^{\star}$
 \end_inset
