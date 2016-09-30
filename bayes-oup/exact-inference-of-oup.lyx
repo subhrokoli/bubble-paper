@@ -139,6 +139,7 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -153,6 +154,7 @@ The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -1885,7 +1887,7 @@ reference "fig:discrete-sample-path"
 \end_inset
 
 ).
- In panel (a) we show show filled contours of the posterior distribution
+ In the top panel we show show filled contours of the posterior distribution
  in the 
 \begin_inset Formula $\lambda-D$
 \end_inset
@@ -1912,8 +1914,8 @@ reference "eq:map-estimate"
 \end_inset
 
 ).
- In panel (b) we show the Bayesian posterior distribution for the stiffness
- for the 
+ In the bottom panel we show the Bayesian posterior distribution for the
+ stiffness for the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1922,9 +1924,8 @@ Bayes II
 \end_inset
 
  method.
- There is remarkably good agreement between these two Bayesian methods and
- the power spectral density method, all three of which are conceptually
- and procedurally independent, as shown in Fig.
+ There is remarkably good agreement between the two Bayesian estimates and
+ the fit to the power spectral density as shown in Fig.
  (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1941,8 +1942,10 @@ reference "tab:k-versus-power"
 \end_inset
 
 ).
- The agreement with the conventional method, shown in the third column,
- is within 
+ This consistency between three conceptually and procedurally independent
+ methods is evidence for the appropriateness of the data model.
+ The agreement with the spectral density method, shown in the third column
+ of the table, is within 
 \begin_inset Formula $2-3\%$
 \end_inset
 
@@ -1953,7 +1956,7 @@ reference "tab:k-versus-power"
 \begin_inset Formula $N\sim30000$
 \end_inset
 
- and this gives a Bayesian standard error that is less than 
+ and this gives a Bayesian error bar that is less than 
 \begin_inset Formula $\frac{1}{2}$
 \end_inset
 
@@ -1963,8 +1966,8 @@ reference "tab:k-versus-power"
 \end_inset
 
  variability of the estimates obtained from the fitting procedure.
- The 1
-\begin_inset Formula $\sigma$
+ The 
+\begin_inset Formula $1\sigma$
 \end_inset
 
  standard errors in the mean are indicated in parenthesis next to each 
@@ -1991,9 +1994,7 @@ reference "tab:k-versus-power"
 , we have used a temperature of 300K which is the the same as the lab environmen
 t temperature - this assumption being based on studies in literature where
  the effects of laser heating in water has shown to be well below 1K at
- the power levels we employ in the trap 
-\backslash
-cite{}.
+ the power levels we employ in the trap.
  However, the fact that the results from Bayes I and Bayes II are extremely
  close to each other demonstrates that our estimate of temperature is trustworth
 y.
@@ -2010,8 +2011,8 @@ To compare the Bayesian estimate for the diffusion coefficient we repeat
 \begin_inset Formula $pN$
 \end_inset
 
-) and the particle size (
-\begin_inset Formula $3\mu m$
+) and the particle radius (
+\begin_inset Formula $a=3\mu m$
 \end_inset
 
 ) fixed.
@@ -2063,20 +2064,24 @@ in reverse
 
  measurement, chiefly reflect the systematic errors in our experimental
  apparatus that may arise due to slow drifts of the laser power, beam pointing
- of the laser, drifts in ambient temperature, etc.
- Such systematic effects occur at time scales longer than 20 s, which is
- the time over which we collect one set of data.
- We check that the estimate of 
+ of the laser, drifts in ambient temperature and possibly other unidentified
+ reasons.
+ Such systematic effects occur at time scales longer than 
+\begin_inset Formula $20s$
+\end_inset
+
+, which is the duration over which a single data set is collected.
+ We have checked that the estimates of 
 \begin_inset Formula $D^{\star}$
 \end_inset
 
-over different windows of a single time series is still limited by the standard
- error defined by value of 
-\begin_inset Formula $N$
-\end_inset
-
- in the particular window, which confirms that the errors we observe are
- due to systematic shifts in the operating conditions of the experiment.
+over different non-overlapping segments of a 
+\emph on
+single 
+\emph default
+data set are within the Bayesian error bars, which confirms that the errors
+ we observe are due to systematic shifts in the operating conditions of
+ the experiment.
  The agreement in the viscosity values for that measured in the rheometer
  and by the Bayesian estimate of 
 \begin_inset Formula $D^{\star}$
@@ -2091,10 +2096,8 @@ is within 5% for all cases with the exception of the last, where the enhanced
  due to ambient low frequency noise sources.
  Also, since this value corresponded to the highest concentration of glycerol
  in the water + glycerol mixture, the effects of laser heating could have
- been more significant 
-\backslash
-cite{} leading to a slight increase of temperature at the trap focal volume
- which we have not considered in the Bayesian estimate.
+ been more significantleading to a slight increase of temperature at the
+ trap focal volume which we have not considered in the Bayesian estimate.
  Thus, we conclude that the Bayesian method can be used for accurate viscometry
  using only the discretely observed sample paths of a trapped Brownian particle.
 \end_layout
@@ -2849,13 +2852,7 @@ name "sec:Conclusion"
 \end_layout
 
 \begin_layout Standard
-The Bayesian approach provides several advantages that are unique - namely,
- independence of the inherent statistical uncertainties of fitting in the
- standard techniques employed in optical traps, and an innate construction
- that relates a parameter to a physical model directly unlike other statistical
- techniques that simply minimize the statistical errors of a fit for a given
- set of data without any consideration of priors.
- In this work, we have presented an exact Bayesian method for jointly estimating
+In this work, we have presented an exact Bayesian method for jointly estimating
  the mean regression rate and the diffusion coefficient of an optically
  trapped Brownian particle.
  The trap stiffness in temperature units is obtained as a ratio of the mean
@@ -2878,9 +2875,10 @@ equipartition
  is not slow compared to the time scales of interest) can, with additional
  effort, be incorporated in the Bayesian framework.
  Exact analytical solutions will no longer be available and one has to resort
- to approximations of the likelihood, as short-time expansions of the Fokker-Pla
-nck propagator or via numerical solutions.
- These introduce additional sources of error which must be carefully evaluated.
+ to approximations of the likelihood, such as short-time expansions of the
+ Fokker-Planck propagator or numerical solutions of the equivalent stochastic
+ differential equations.
+ These introduce discretization errors which must be carefully evaluated.
  In contrast, the method presented here is exact and can serve as an useful
  
 \begin_inset Quotes eld
@@ -2894,14 +2892,61 @@ null hypothesis
  In future work, we shall present Bayesian methods for more complex models
  and provide a fully Bayesian procedure, embodying Ockham's razor, for the
  problem of model selection.
- Bayesian analysis can thus prove to be rather ubiquitous in studying the
- dynamics (Brownian and other) of a vast range of mesoscopic particles in
- diverse trapping environments.
+ 
+\end_layout
+
+\begin_layout Standard
+Bayesian analysis is generally applicable in studying the dynamics (Brownian
+ or otherwise) of a vast range of mesoscopic particles in diverse trapping
+ environments.
  The capability of modeling the apparatus itself could also be extremely
  helpful in understanding and improving the experimental techniques employed
  in optical trapping with the possibility of studying different systematic
  effects that may influence the trajectory of trapped particles, thus enhancing
  the capabilities and sphere of influence of optical tweezers.
+\end_layout
+
+\begin_layout Standard
+Bayesian methods for data analysis are not widespread in soft matter, despite
+ of their advantages and demonstrated success in other areas of physics.
+ To quote a popular textbook 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gregory2005bayesian"
+
+\end_inset
+
+: 
+\begin_inset Quotes eld
+\end_inset
+
+Increasingly, researchers in many branches of science are coming into contact
+ with Bayesian statistics or Bayesian probability theory.
+ By encompassing both inductive and deductive logic, Bayesian analysis can
+ improve model parameter estimates by many orders of magnitude.
+ It provides a simple and unified approach to all data analysis problems,
+ allowing the experimenter to assign probabilities to competing hypotheses
+ of interest, on the basis of the current state of knowledge.
+\begin_inset Quotes erd
+\end_inset
+
+ We hope to see more applications of this 
+\begin_inset Quotes eld
+\end_inset
+
+elegant and powerful approach to scientific inference
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gregory2005bayesian"
+
+\end_inset
+
+ to problems in soft matter.
+ 
 \end_layout
 
 \begin_layout Acknowledgments
