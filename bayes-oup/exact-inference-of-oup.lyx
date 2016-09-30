@@ -86,7 +86,7 @@ Fast Bayesian inference of optical trap stiffness and particle diffusion
 \end_layout
 
 \begin_layout Author
-Sudipta Bera
+Sudipta Bera†
 \end_layout
 
 \begin_layout Affiliation
@@ -95,7 +95,7 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author
-Shuvojit Paul
+Shuvojit Paul†
 \end_layout
 
 \begin_layout Affiliation
@@ -154,6 +154,11 @@ The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
 
 \begin_layout Author Email
 rjoy@imsc.res.in
+\end_layout
+
+\begin_layout Thanks
+
+†These authors have equal contribution in this work
 \end_layout
 
 \begin_layout Abstract
@@ -1992,9 +1997,15 @@ reference "tab:k-versus-power"
 \end_inset
 
 , we have used a temperature of 300K which is the the same as the lab environmen
-t temperature - this assumption being based on studies in literature where
- the effects of laser heating in water has shown to be well below 1K at
- the power levels we employ in the trap.
+t temperature - this assumption being based on studies in literature 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "schmidt03heating"
+
+\end_inset
+
+where the effects of laser heating in water has shown to be well below 1K
+ at the power levels we employ in the trap.
  However, the fact that the results from Bayes I and Bayes II are extremely
  close to each other demonstrates that our estimate of temperature is trustworth
 y.
@@ -2096,8 +2107,20 @@ is within 5% for all cases with the exception of the last, where the enhanced
  due to ambient low frequency noise sources.
  Also, since this value corresponded to the highest concentration of glycerol
  in the water + glycerol mixture, the effects of laser heating could have
+<<<<<<< HEAD
+ been more significant 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "schmidt03heating"
+
+\end_inset
+
+, leading to a slight increase of temperature at the trap focal volume which
+ we have not considered in the Bayesian estimate.
+=======
  been more significant leading to a slight increase of temperature at the
  trap focal volume which we have not considered in the Bayesian estimate.
+>>>>>>> master
  Thus, we conclude that the Bayesian method can be used for accurate viscometry
  using only the discretely observed sample paths of a trapped Brownian particle.
 \end_layout
