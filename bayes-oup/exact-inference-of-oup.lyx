@@ -139,7 +139,6 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -154,7 +153,6 @@ The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -2909,8 +2907,14 @@ null hypothesis
 
  when comparing between different models for the data.
  In future work, we shall present Bayesian methods for more complex models
- and provide a fully Bayesian procedure, embodying Ockham's razor, for the
- problem of model selection.
+ and provide a fully Bayesian procedure, embodying Ockham's razor 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jaynes2003probability"
+
+\end_inset
+
+, for the problem of model selection.
  
 \end_layout
 
