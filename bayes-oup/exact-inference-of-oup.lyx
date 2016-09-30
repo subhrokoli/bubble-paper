@@ -139,7 +139,6 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -154,7 +153,6 @@ The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -1644,7 +1642,7 @@ istance calibration of the detection system.
 placement h
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1662,7 +1660,8 @@ status collapsed
 
 \begin_layout Plain Layout
 Bayesian posterior probability densities.
- The top panel shows filled contours of Eq.(
+ The top panel shows filled contours of Eq.
+ (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:joint-posterior"
@@ -1670,7 +1669,8 @@ reference "eq:joint-posterior"
 \end_inset
 
 ).
- The MAP estimate, Eq.(
+ The MAP estimate, Eq.
+ (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:map-estimate"
@@ -1678,7 +1678,7 @@ reference "eq:map-estimate"
 \end_inset
 
 ), is marked by the filled dot and contours enclosing 70%, 90% and 99% of
- the probability are labelled.
+ the probability are labeled.
  The bottom panel shows Eq.
  (
 \begin_inset CommandInset ref
@@ -2096,7 +2096,7 @@ is within 5% for all cases with the exception of the last, where the enhanced
  due to ambient low frequency noise sources.
  Also, since this value corresponded to the highest concentration of glycerol
  in the water + glycerol mixture, the effects of laser heating could have
- been more significantleading to a slight increase of temperature at the
+ been more significant leading to a slight increase of temperature at the
  trap focal volume which we have not considered in the Bayesian estimate.
  Thus, we conclude that the Bayesian method can be used for accurate viscometry
  using only the discretely observed sample paths of a trapped Brownian particle.
@@ -2213,7 +2213,7 @@ PSD
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.100(6)
+1.10(6)
 \end_layout
 
 \end_inset
@@ -2222,7 +2222,7 @@ PSD
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.090(6)
+1.10(6)
 \end_layout
 
 \end_inset
@@ -2260,7 +2260,7 @@ PSD
 \begin_inset Text
 
 \begin_layout Plain Layout
-2.230(5)
+2.23(5)
 \end_layout
 
 \end_inset
@@ -2298,7 +2298,7 @@ PSD
 \begin_inset Text
 
 \begin_layout Plain Layout
-3.882(5)
+3.88(5)
 \end_layout
 
 \end_inset
@@ -2819,7 +2819,7 @@ ein relation for that value of the viscosity.
  and the fourth column is the value of the viscosity, as given by the Stokes-Ein
 stein relation for the corresponding value of the diffusion coefficient.
  There is a good match between the first and fourth columns.
- Note that the first row is for water while the rest are for water + glyecerol
+ Note that the first row is for water while the rest are for water and glycerol
  samples with increasing glycerol concentration.
 \begin_inset CommandInset label
 LatexCommand label
@@ -2971,18 +2971,18 @@ The first partial derivatives of the logarithm of the posterior probability
 
  are
 \begin_inset Formula 
-\begin{eqnarray*}
-\frac{\partial\ln P}{\partial\lambda} & = & \frac{N-1}{2}\left(\frac{1}{\lambda}-\frac{I_{2}^{\prime}}{I_{2}}\right)-\frac{\sum\Delta_{n}^{2}}{2DI_{2}}\\
- & - & \frac{\lambda}{2D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{1}{2\lambda}-\frac{x_{1}^{2}}{2D}
-\end{eqnarray*}
+\begin{alignat*}{1}
+\frac{\partial\ln P}{\partial\lambda} & =\frac{N-1}{2}\left(\frac{1}{\lambda}-\frac{I_{2}^{\prime}}{I_{2}}\right)-\frac{\sum\Delta_{n}^{2}}{2DI_{2}}\\
+ & -\frac{\lambda}{2D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{1}{2\lambda}-\frac{x_{1}^{2}}{2D}
+\end{alignat*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\begin{eqnarray*}
-\frac{\partial\ln P}{\partial D} & =-\frac{N-1}{2D}+\frac{\lambda\sum\Delta_{n}^{2}}{2D^{2}I_{2}}-\frac{1}{2D}+\frac{\lambda x_{1}^{2}}{2D^{2}} & ,
-\end{eqnarray*}
+\begin{alignat*}{1}
+\frac{\partial\ln P}{\partial D} & =-\frac{N-1}{2D}+\frac{\lambda\sum\Delta_{n}^{2}}{2D^{2}I_{2}}-\frac{1}{2D}+\frac{\lambda x_{1}^{2}}{2D^{2}},
+\end{alignat*}
 
 \end_inset
 
@@ -3039,26 +3039,26 @@ reference "eq:quadratic-form"
 
 ), are 
 \begin_inset Formula 
-\begin{eqnarray*}
-\Sigma_{11}^{-1}=\frac{\partial^{2}\ln P}{\partial\lambda^{2}} & = & \frac{N-1}{2}\Big(-\frac{1}{\lambda^{2}}+\frac{I_{2}^{\prime}I_{2}^{\prime}}{I_{2}^{2}}-\frac{I_{2}^{\prime\prime}}{I_{2}}\Big)-\frac{1}{2\lambda^{2}}\\
- & - & \frac{1}{D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)-\frac{\lambda}{2D}\frac{\partial^{2}}{\partial\lambda^{2}}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right),
-\end{eqnarray*}
+\begin{alignat*}{1}
+\Sigma_{11}^{-1}=\frac{\partial^{2}\ln P}{\partial\lambda^{2}} & =\frac{N-1}{2}\Big(-\frac{1}{\lambda^{2}}+\frac{I_{2}^{\prime}I_{2}^{\prime}}{I_{2}^{2}}-\frac{I_{2}^{\prime\prime}}{I_{2}}\Big)-\frac{1}{2\lambda^{2}}\\
+ & -\frac{1}{D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)-\frac{\lambda}{2D}\frac{\partial^{2}}{\partial\lambda^{2}}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right),
+\end{alignat*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\begin{eqnarray*}
+\begin{alignat*}{1}
 \Sigma_{12}^{-1}=\frac{\partial^{2}\ln P}{\partial D\partial\lambda} & =\frac{\sum\Delta_{n}^{2}}{2D^{2}I_{2}}+\frac{\lambda}{2D^{2}}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{x_{1}^{2}}{2D^{2}},
-\end{eqnarray*}
+\end{alignat*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\begin{eqnarray*}
+\begin{alignat*}{1}
 \Sigma_{22}^{-1}=\frac{\partial^{2}\ln P}{\partial D^{2}} & =\frac{N-1}{2D^{2}}-\frac{\lambda}{D^{3}}\Big(\frac{\sum\Delta_{n}^{2}}{I_{2}}-x_{1}^{2}\Big)+\frac{1}{2D^{2}},
-\end{eqnarray*}
+\end{alignat*}
 
 \end_inset
 
