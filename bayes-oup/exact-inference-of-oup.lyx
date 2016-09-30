@@ -139,6 +139,7 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -153,11 +154,11 @@ The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
 \begin_layout Thanks
-
 †These authors have equal contribution in this work
 \end_layout
 
@@ -2107,7 +2108,6 @@ is within 5% for all cases with the exception of the last, where the enhanced
  due to ambient low frequency noise sources.
  Also, since this value corresponded to the highest concentration of glycerol
  in the water + glycerol mixture, the effects of laser heating could have
-<<<<<<< HEAD
  been more significant 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2117,10 +2117,6 @@ key "schmidt03heating"
 
 , leading to a slight increase of temperature at the trap focal volume which
  we have not considered in the Bayesian estimate.
-=======
- been more significant leading to a slight increase of temperature at the
- trap focal volume which we have not considered in the Bayesian estimate.
->>>>>>> master
  Thus, we conclude that the Bayesian method can be used for accurate viscometry
  using only the discretely observed sample paths of a trapped Brownian particle.
 \end_layout
