@@ -1718,6 +1718,9 @@ name "fig:bayes-I-and-II"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 placement h
 wide false
@@ -1749,7 +1752,7 @@ Variation of trap stiffness
  The Bayesian standard error is less than 1 % of the mean for each data
  set.
  Solid line is the best fit to Bayes I and II while the dotted line is a
- best bit to PSD.
+ best fit to PSD.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Variation-of-trap"
@@ -2933,7 +2936,7 @@ The first partial derivatives of the logarithm of the posterior probability
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\frac{\partial\ln P}{\partial D} & = & -\frac{N-1}{2D}+\frac{\lambda\sum\Delta_{n}^{2}}{2D^{2}I_{2}}-\frac{1}{2D}+\frac{\lambda x_{1}^{2}}{2D^{2}},
+\frac{\partial\ln P}{\partial D} & =-\frac{N-1}{2D}+\frac{\lambda\sum\Delta_{n}^{2}}{2D^{2}I_{2}}-\frac{1}{2D}+\frac{\lambda x_{1}^{2}}{2D^{2}} & ,
 \end{eqnarray*}
 
 \end_inset
