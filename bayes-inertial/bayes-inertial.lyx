@@ -91,7 +91,6 @@ Rajesh Singh
 \end_layout
 
 \begin_layout Author Email
-
 rsingh@imsc.res.in
 \end_layout
 
@@ -106,7 +105,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -318,103 +316,6 @@ Closing the contour from below, we encounter two of the poles and the solution
 \begin{equation}
 \Sigma(t)=\frac{k_{B}T}{k}e^{-\lambda_{I}t/2}\left(\cos\omega_{I}t+\frac{1}{2\lambda_{I}\omega_{I}}\sin\omega_{I}t\right).
 \end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-second-order autoregressive process: AR(2)
-\end_layout
-
-\begin_layout Standard
-In this section we write the Langevin equation as AR(2).
- To do this we use
-\begin_inset Formula 
-\begin{equation}
-\ddot{x}=\frac{x_{n+1}-2x_{n}+x_{n-1}}{\Delta t^{2}}
-\end{equation}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-\dot{x}=\frac{x_{n+1}-x_{n-1}}{2\Delta t}
-\end{equation}
-
-\end_inset
-
-So the discretized version of Langevin equation becomes,
-\begin_inset Formula 
-\begin{equation}
-\lambda_{I}\frac{x_{n+1}-2x_{n}+x_{n-1}}{\Delta t^{2}}+\frac{x_{n+1}-x_{n-1}}{2\Delta t}+\frac{k}{\gamma}x_{n}=\sqrt{\frac{2k_{B}T}{\gamma}}\xi_{t},
-\end{equation}
-
-\end_inset
-
-Rearranging the terms we have,
-\begin_inset Formula 
-\begin{equation}
-\left(\frac{\lambda_{I}+0.5\Delta t}{\Delta t^{2}}\right)x_{n+1}+\left(\frac{\lambda_{I}-0.5\Delta t}{\Delta t^{2}}\right)x_{n-1}+\left(\frac{k}{\gamma}-\frac{2\lambda_{I}}{\Delta t^{2}}\right)x_{n}=\sqrt{\frac{2k_{B}T}{\gamma}}\xi_{t+1},
-\end{equation}
-
-\end_inset
-
-We now define the sufficient statistics for this problem as,
-\begin_inset Formula 
-\begin{eqnarray*}
-T_{1}(X)=\sum x_{n}^{2},\quad T_{2}(X)=\sum x_{n-1}x_{n},\quad T_{3}(X) & = & \sum x_{n-1}^{2},\quad T_{4}(X)=\sum x_{n}x_{n+1},\quad T_{5}(X)=\sum x_{n-1}x_{n},
-\end{eqnarray*}
-
-\end_inset
-
-and the sum runs from 
-\begin_inset Formula $n=1$
-\end_inset
-
- to 
-\begin_inset Formula $N-1$
-\end_inset
-
-.
- We write this in the standard AR(2) form as,
-\begin_inset Formula 
-\begin{equation}
-x_{n+1}=\alpha_{1}x_{n}+\alpha_{2}x_{n-1}+u_{n},
-\end{equation}
-
-\end_inset
-
-The estimates of 
-\begin_inset Formula $\hat{\alpha}_{1}$
-\end_inset
-
- are 
-\begin_inset Formula $\hat{\alpha}_{2}$
-\end_inset
-
- are 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "zellner1988optimal"
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-\hat{\alpha}_{1}=\frac{T_{3}T_{4}-T_{2}T_{5}}{T_{1}T_{3}-T_{2}^{2}},\qquad\hat{\alpha}_{2}=\frac{T_{1}T_{5}-T_{2}T_{4}}{T_{1}T_{3}-T_{2}^{2}},
-\end{equation}
-
-\end_inset
-
-
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-bibfiles "/home/rsingh/Dropbox/repos/iiscer-kolkata-traps-bubbles/bayes-oup/exact-inference-of-oup"
-options "rsc"
 
 \end_inset
 

@@ -1,0 +1,317 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass revtex4-1
+\begin_preamble
+\usepackage{amsmath}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\def\rcurs{{\mbox{$\resizebox{.08in}{.08in}{\includegraphics{ScriptR}}$}}}
+\def\brcurs{{\mbox{$\resizebox{.08in}{.08in}{\includegraphics{BoldR}}$}}}
+\def\hrcurs{{\mbox{$\hat \brcurs$}}}
+\usepackage[linktocpage,colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+\end_preamble
+\options prl, onecolumn, notitlepage
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\output_sync_macro "\usepackage[active]{srcltx}"
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+SREP-16-40973: Reply to Reviewer #1
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+The manuscript reported by Bera et al used Bayesian inference to elucidate
+ the optical trap stiffness and the diffusion coefficient of particles within
+ the trap.
+ The paper presents two Bayesian methods, which do not require Monte Carlo
+ sampling, are extremely fast, exact and can serve as an useful “null hypothesis
+” when comparing between different models for the data.
+ At the end, the manuscript gives some perspective to present Bayesian methods
+ for more complex models and provide a fully Bayesian procedure.
+ Generally, this paper is well organized and written.
+ The manuscript has a certain technical depth and strong logic, but the
+ layout of the paper is not good.
+ I recommend a major revision.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+The following are the elaborated points 
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+There are too many problems with the manuscript editing.
+ It is very difficult to review this manuscript because the figures and
+ tables are disordered.
+ In the second paragraph of the results and discussion section, it would
+ be better to replace Figure.
+ (2) with Figure.
+ (3).
+ The style of the manuscript does not comply with Sci.
+ Rep.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\color inherit
+ Will update the format.
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+It needs to explain why there is no relation between the mean regression
+ rate and volatility of the Ornstein-Uhlenbeck process.
+\color inherit
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+The manuscript discusses some limitations of this method.
+ For example, “the error bars of the Bayesian estimate for the diffusion
+ coefficient, which are higher than that for the k measurement, chiefly
+ reflect the systematic errors in our experimental apparatus that may arise
+ due to slow drifts of the laser power……”It would be better to do some experimen
+ts to explain these problems.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+Statements were made without giving supporting data.
+ For example, “Thus, we conclude that the Bayesian method can be used for
+ accurate viscometry using only the discretely observed sample paths of
+ a trapped Brownian particle.” No detailed explanation was given when obtained
+ the conclusion.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+It is recommended to use particles with different sizes to repeat the experiment
+s.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+would you please explain the method to eliminate the vibrations from the
+ table.
+ How about the localization precision of the particle position? There are
+ lacking of detailed experimental explanations.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+error bar was required for figure 4.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
