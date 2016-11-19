@@ -183,20 +183,25 @@ The manuscript discusses some limitations of this method.
  reflect the systematic errors in our experimental apparatus that may arise
  due to slow drifts of the laser power……”It would be better to do some experimen
 ts to explain these problems.
+ 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
+We have performed a whole series of measurements to check for systematic
+ errors in our experiments.
+ This has been done in two ways: a) by comparing the mean and standard deviation
+ of measured trapping parameters over 3 sets of independent time series
+ data collected at low and high trapping laser powers for the same particle
+ (diameter 3 microns), and b) by comparing the trapping parameters measured
+ on time series data of different length obtained at the same laser power
+ for the same particle.
+ The results are shown in Tables III(a) and (b).
+ It is clear that systematics due to coupling with low frequency ambient
+ noise occurs for low stiffness traps, while that due to slow drifts in
+ experimental conditions occur at time scales longer than 20s.
+ A detailed discussion has been given in Pgs 6 and 7 in the revised ms.
 \end_layout
 
 \end_inset
@@ -208,10 +213,10 @@ status open
 
 \color blue
 Statements were made without giving supporting data.
- For example, “Thus, we conclude that the Bayesian method can be used for
- accurate viscometry using only the discretely observed sample paths of
- a trapped Brownian particle.” No detailed explanation was given when obtained
- the conclusion.
+ For example, “Thus, we conclude that the Bayesian can be used for accurate
+ viscometry using only the discretely observed sample paths of a trapped
+ Brownian particle.” No detailed explanation was given when obtained the
+ conclusion.
 \begin_inset ERT
 status open
 
@@ -243,15 +248,8 @@ status open
 
 \begin_layout Plain Layout
 
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
+This has been performed for 5 and 10 micron diameter particles.
+ The results are summarized in Table II.
 \end_layout
 
 \end_inset
@@ -264,23 +262,45 @@ status open
 \color blue
 would you please explain the method to eliminate the vibrations from the
  table.
- How about the localization precision of the particle position? There are
- lacking of detailed experimental explanations.
  
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
+We perform our experiments on an optical table with active vibration isolation,
+ so that there is no coupling with ambient vibrations, whereas vibrations
+ from the table itself are at much higher frequencies than our region of
+ interest due to the large table mass and are also damped out very fast
+ by the presence of active dampers (we also take care not to place vibrating
+ objects such as power supplies, etc on the table).
+ This discussion has been included in Pg 7.
+\end_layout
 
-\backslash
+\end_inset
 
-\backslash
 
-\backslash
+\end_layout
 
-\backslash
+\begin_layout Itemize
 
+\color blue
+How about the localization precision of the particle position? There are
+ lacking of detailed experimental explanations.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+The detection signal amplitude for Brownian motion data for 3 microns diameter
+ spheres in water is around 1.5 V/m and the noise floor is around 5 mV, which
+ implies that we have a sensitivity of around 7 nm (considering signal/noise=2)
+ for this case.
+ However, since scattering from spheres depends on diameter (generally increasin
+g with diameter) as well as the refractive index of the ambient medium,
+ this value changes when we change spheres or the medium.
+ Typically, the particle localization is within 2-7 nm in our experiments.
+ This discussion has been included in Pg 5.
 \end_layout
 
 \end_inset
