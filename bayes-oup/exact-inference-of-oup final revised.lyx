@@ -140,7 +140,6 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -155,7 +154,6 @@ The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -1441,7 +1439,8 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename E:/ayan/physics/papers/submission/Ronojoy papers/iiscer-kolkata-traps-bubbles/bayes-oup/figure2rev.pdf
+	filename figure2rev.pdf
+	display false
 	scale 53
 
 \end_inset
@@ -3198,6 +3197,8 @@ Trap stiffness
 \end_inset
 
 m diameter polystyrene spheres trapped at the same laser power.
+ The variance of mean is indicated in parentheses.
+ 
 \end_layout
 
 \end_inset
@@ -3640,6 +3641,8 @@ Study of systematic error in the experimental apparatus by analysis of particle
  trajectory for (a) same particle trapped at different laser powers, and
  (b) time series of different lengths for the same particle trapped at the
  same laser power.
+ The variance of mean is indicated in parentheses.
+ 
 \end_layout
 
 \end_inset
@@ -3959,6 +3962,8 @@ stein relation for the corresponding value of the diffusion coefficient.
  There is a good match between the first and fourth columns.
  Note that the first row is for water while the rest are for water + glycerol
  samples with increasing glycerol concentration.
+ The variance of mean is indicated in parentheses.
+ 
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:viscometry"
@@ -4272,7 +4277,7 @@ where
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "exact-inference-of-oup"
-options "../../../2016/bayesian/rsc"
+options "rsc"
 
 \end_inset
 

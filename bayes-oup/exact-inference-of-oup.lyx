@@ -139,6 +139,7 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -153,6 +154,7 @@ The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -1438,9 +1440,9 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename figure2.pdf
+	filename srep/figure2.jpg
 	display false
-	scale 53
+	scale 66
 
 \end_inset
 
@@ -1638,10 +1640,34 @@ key "rsi12"
 .
  The balanced detection output is simultaneously measured to yield the voltage-d
 istance calibration of the detection system.
- For the viscosity measurement, we add glycerol to water in fixed proportions
+ 
+\color blue
+The detection signal amplitude for Brownian motion data for 3 
+\begin_inset Formula $\mu$
+\end_inset
+
+m diameter spheres in water is around 1.5 V/
+\begin_inset Formula $\mu$
+\end_inset
+
+m and the noise floor is around 5 mV, which implies that we have a sensitivity
+ of around 7 nm (considering signal/noise=2) for this case.
+ However, since scattering from spheres depends on diameter (generally increasin
+g with diameter) as well as the refractive index of the ambient medium,
+ this value changes when we change spheres or the medium.
+ Typically, the particle localization is within 2-7 nm in our experiments.
+ 
+\color inherit
+For the viscosity measurement, we add glycerol to water in fixed proportions
  to create 5 samples of different viscosity.
  The viscosity of each sample is then measured by a commercial rheometer
  (Brookfield DB3TLVCJ0) to match with the experimental results.
+ 
+\color blue
+The voltage-distance calibration is performed every time we change the particle
+ or the ambient medium.
+\color inherit
+
 \begin_inset Float figure
 placement h
 wide false
@@ -1884,12 +1910,12 @@ The results of Bayesian inference are shown in Figure.
  (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:discrete-sample-path"
+reference "fig:bayes-I-and-II"
 
 \end_inset
 
 ).
- In the top panel we show show filled contours of the posterior distribution
+ In the top panel we show filled contours of the posterior distribution
  in the 
 \begin_inset Formula $\lambda-D$
 \end_inset
@@ -2006,6 +2032,183 @@ where the effects of laser heating in water has shown to be well below 1K
  However, the fact that the results from Bayes I and Bayes II are extremely
  close to each other demonstrates that our estimate of temperature is trustworth
 y.
+ 
+\color blue
+Next, in order to determine the robustness of our experimental techniques,
+ we perform experiments on two other sizes of polystyrene spheres - of diameter
+ 5 and 10 
+\begin_inset Formula $\mu$
+\end_inset
+
+m, respectively.
+ Representative values of measured stiffness and diffusion constant at a
+ laser power of 43.8 mW are shown in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:k-different-dia"
+
+\end_inset
+
+.
+ It is clear that the remarkable consistency in the values of 
+\begin_inset Formula $k$
+\end_inset
+
+ and 
+\begin_inset Formula $D^{\star}$
+\end_inset
+
+ given by the Bayes I and II methods are preserved, as is the close agreement
+ with the values obtained from the PSD analysis.
+ Note that the stiffness values are not really related to bead size as is
+ well known in literature - the dependence of 
+\begin_inset Formula $k$
+\end_inset
+
+ on bead diameter being rather non-linear 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "simmonsbeadstiff96"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+Our next set of measurements are directed towards determining the extent
+ of systematic errors in our measurements.
+ Systematic errors in our experimental apparatus may arise due to various
+ issues including slow drifts of the laser power, beam pointing of the laser,
+ drifts in ambient temperature, coupling with ambient low frequency (typically
+ acoustic) noise sources, and possibly other unidentified reasons.
+ The coupling with ambient low frequency noise sources would manifest themselves
+ at low trapping stiffness, where sudden perturbations could affect the
+ Brownian motion of the bead since the restoring force is less.
+ On the other hand, the affect of slow drifts of experimental parameters
+ would be observed at time series data of longer length.
+ Thus, we attempt to understand the effect of systematics in our experiments
+ using two different approaches: a) by comparing the mean and standard deviation
+ of measured trapping parameters over 3 sets of independent time series
+ data collected at low and high trapping laser powers for the same particle
+ (diameter 3 
+\begin_inset Formula $\mu$
+\end_inset
+
+m), and b) by comparing the trapping parameters measured on time series
+ data of different length obtained at the same laser power for the same
+ particle.
+ The results are shown in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:systematic-error"
+
+\end_inset
+
+(a) and (b).
+ In Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:systematic-error"
+
+\end_inset
+
+(a), we observe that at a low laser power of 18.5 mW, we have a standard
+ deviation of around 6.5% in 
+\color inherit
+
+\begin_inset Formula ${\color{blue}k}$
+\end_inset
+
+
+\color blue
+ and 4.5% in 
+\begin_inset Formula $D^{\star}$
+\end_inset
+
+, while at the higher power of 43.8 mW, the standard deviation is only around
+ 1.5% for both 
+\color inherit
+
+\begin_inset Formula ${\color{blue}k}$
+\end_inset
+
+ 
+\color blue
+and 
+\begin_inset Formula $D^{\star}$
+\end_inset
+
+.
+ This demonstrates that the effect of ambient noise does increase at lower
+ trapping powers.
+ In Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:systematic-error"
+
+\end_inset
+
+(b), we show the results of measurements of 
+\color inherit
+
+\begin_inset Formula ${\color{blue}k}$
+\end_inset
+
+ 
+\color blue
+and 
+\begin_inset Formula $D^{\star}$
+\end_inset
+
+for time series data of different lengths for the same particle trapped
+ at a laser power of 48 mW (we choose a high laser power since the coupling
+ with the ambient noise is lesser in that case).
+ It is clear that for time series of lengths 5, 10, and 20s, the variation
+ in the mean of both 
+\color inherit
+
+\begin_inset Formula ${\color{blue}k}$
+\end_inset
+
+ 
+\color blue
+and 
+\begin_inset Formula $D^{\star}$
+\end_inset
+
+is only around 1.5%, but there is a large change in the mean values between
+ 7-24% for time series data of 40 and 60s.
+ In addition, we check that the estimates of 
+\color inherit
+
+\begin_inset Formula ${\color{blue}k}$
+\end_inset
+
+ 
+\color blue
+and 
+\begin_inset Formula $D^{\star}$
+\end_inset
+
+over different non-overlapping segments of up to 20s length in a 
+\emph on
+single 
+\emph default
+data set are within the Bayesian error bars for all the time series; however,
+ for 40 and 60s, the mean values of different non-overlapping sets of 20s
+ data differ from each other significantly.
+ Thus, it is clear that systematics due to slow drifts in different experimental
+ apparatus occur at time scales longer than 20s.
+ Note that we perform our experiments on an optical table with active vibration
+ isolation, so that there is no coupling with ambient vibrations, whereas
+ vibrations from the table itself are at much higher frequencies than our
+ region of interest due to the large table mass and are also damped out
+ very fast by the presence of active dampers (we also take care not to place
+ vibrating objects such as power supplies, etc on the table).
 \end_layout
 
 \begin_layout Standard
@@ -2121,7 +2324,7 @@ key "schmidt03heating"
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -2501,8 +2704,6 @@ key "berg2004power"
 \end_inset
 
 .
- For each value of laser power, the corresponding stiffness is the mean
- over 5 different sets of measurements.
  The variance of mean is indicated in parentheses.
  The Bayesian standard error is less than 
 \begin_inset Formula $1\%$
@@ -2526,7 +2727,913 @@ name "tab:k-versus-power"
 
 \end_inset
 
- 
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="7">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="2cm">
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Particle diameter (
+\begin_inset Formula $\mu m$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k$
+\end_inset
+
+ (
+\begin_inset Formula $pN\mu m^{-1}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $D^{\star}$
+\end_inset
+
+ (
+\begin_inset Formula $10^{-13}ms^{-1}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bayes I
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bayes II
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PSD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bayes I
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bayes II
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PSD
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.01(3)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.01(3)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.98(12)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.73(6)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.74(6)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.70(8)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11.5(1)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11.5(1)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11.6(3) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.015(10)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.014(10)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.03(5) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.03(2)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.03(5)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ 3.26(6)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.505(5)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.504(5)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ 0.50(1)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:k-different-dia"
+
+\end_inset
+
+Trap stiffness 
+\begin_inset Formula $k$
+\end_inset
+
+ and diffusion constant 
+\begin_inset Formula $D^{\star}$
+\end_inset
+
+ measured for 3, 5, and 10 
+\begin_inset Formula $\mu$
+\end_inset
+
+m diameter polystyrene spheres trapped at the same laser power.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="2cm">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="2.5cm">
+<column alignment="center" valignment="top" width="1cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Laser power
+\end_layout
+
+\begin_layout Plain Layout
+(mW)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k$
+\end_inset
+
+ (
+\begin_inset Formula $pN\mu m^{-1}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $D^{\star}$
+\end_inset
+
+ (
+\begin_inset Formula $10^{-13}ms^{-1}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+18.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.44(16)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.74(8)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+43.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.98(9)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.75(3) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(a)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="2cm">
+<column alignment="center" valignment="top" width="2cm">
+<column alignment="center" valignment="top" width="2.5cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Time series length (s)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k$
+\end_inset
+
+ (
+\begin_inset Formula $pN\mu m^{-1}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $D^{\star}$
+\end_inset
+
+ (
+\begin_inset Formula $10^{-13}ms^{-1}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.77(6)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.78(4)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.58(5)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.74(3) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.72(4)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.73(2)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+40
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.29(2)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.01(1)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+60
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.10(1)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.93(1)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(b)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:systematic-error"
+
+\end_inset
+
+Study of systematic error in the experimental apparatus by analysis of particle
+ trajectory for (a) same particle trapped at different laser powers, and
+ (b) time series of different lengths for the same particle trapped at the
+ same laser power.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \begin_inset Float table
 wide false
 sideways false

@@ -189,6 +189,21 @@ status open
 
 \begin_layout Plain Layout
 
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\color inherit
 We have performed a whole series of measurements to check for systematic
  errors in our experiments.
  This has been done in two ways: a) by comparing the mean and standard deviation
@@ -202,11 +217,6 @@ We have performed a whole series of measurements to check for systematic
  noise occurs for low stiffness traps, while that due to slow drifts in
  experimental conditions occur at time scales longer than 20s.
  A detailed discussion has been given in Pgs 6 and 7 in the revised ms.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
@@ -248,13 +258,23 @@ status open
 
 \begin_layout Plain Layout
 
-This has been performed for 5 and 10 micron diameter particles.
- The results are summarized in Table II.
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
 \end_layout
 
 \end_inset
 
 
+\color inherit
+This has been performed for 5 and 10 micron diameter particles.
+ The results are summarized in Table II.
 \end_layout
 
 \begin_layout Itemize
@@ -268,6 +288,21 @@ status open
 
 \begin_layout Plain Layout
 
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\color inherit
 We perform our experiments on an optical table with active vibration isolation,
  so that there is no coupling with ambient vibrations, whereas vibrations
  from the table itself are at much higher frequencies than our region of
@@ -275,11 +310,6 @@ We perform our experiments on an optical table with active vibration isolation,
  by the presence of active dampers (we also take care not to place vibrating
  objects such as power supplies, etc on the table).
  This discussion has been included in Pg 7.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
@@ -292,6 +322,21 @@ status open
 
 \begin_layout Plain Layout
 
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\color inherit
 The detection signal amplitude for Brownian motion data for 3 microns diameter
  spheres in water is around 1.5 V/m and the noise floor is around 5 mV, which
  implies that we have a sensitivity of around 7 nm (considering signal/noise=2)
@@ -301,11 +346,6 @@ g with diameter) as well as the refractive index of the ambient medium,
  this value changes when we change spheres or the medium.
  Typically, the particle localization is within 2-7 nm in our experiments.
  This discussion has been included in Pg 5.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
