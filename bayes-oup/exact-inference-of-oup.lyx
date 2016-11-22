@@ -139,6 +139,7 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -153,6 +154,7 @@ The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -1466,7 +1468,7 @@ mW) into the sample.
 \begin_inset Formula $\phi=0.01$
 \end_inset
 
-) of polystyrene sphere of diameter 
+) of polystyrene spheres of diameter 
 \begin_inset Formula $3\mu$
 \end_inset
 
@@ -1541,7 +1543,11 @@ Thorlabs
  gain, ensures that spurious correlations are kept to a minimum and the
  data filtering necessary with slower commercial quadrant photodetectors
  is avoided entirely.
- The data from the photodiodes is logged into a computer using a National
+
+\color blue
+ 
+\color inherit
+The data from the photodiodes is logged into a computer using a National
  Instruments DAQ system and Labview at sampling rates between 2-5 kHz.
  For calibrating the motion, 
 \emph on
@@ -1789,12 +1795,12 @@ The results of Bayesian inference are shown in Figure.
  (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:bayes-I-and-II"
+reference "fig:discrete-sample-path"
 
 \end_inset
 
 ).
- In the top panel we show filled contours of the posterior distribution
+ In the top panel we show show filled contours of the posterior distribution
  in the 
 \begin_inset Formula $\lambda-D$
 \end_inset
@@ -1858,7 +1864,11 @@ reference "tab:k-versus-power"
 
  in all cases, other than the first case where the inherent low stiffness
  of the trap due to low trapping power led to larger systematics due to
- the increased influence of the ambient low frequency noise.
+ the increased influence of the ambient low frequency noise, 
+\color blue
+as we shall discuss later
+\color inherit
+.
  The typical length of our time series is 
 \begin_inset Formula $N\sim30000$
 \end_inset
@@ -2212,6 +2222,10 @@ name "fig:Variation-of-trap"
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 To compare the Bayesian estimate for the diffusion coefficient we repeat
  the experiment for different solvent viscosities keeping both the laser
  power ( corresponding to 
@@ -2274,15 +2288,20 @@ in reverse
 \end_inset
 
  measurement, chiefly reflect the systematic errors in our experimental
- apparatus that may arise due to slow drifts of the laser power, beam pointing
- of the laser, drifts in ambient temperature and possibly other unidentified
- reasons.
- Such systematic effects occur at time scales longer than 
+ apparatus that 
+\color blue
+have been described previously and occur
+\color inherit
+ at time scales longer than 
 \begin_inset Formula $20s$
 \end_inset
 
 , which is the duration over which a single data set is collected.
- We have checked that the estimates of 
+ 
+\color blue
+As mentioned earlier, we
+\color inherit
+ have checked that the estimates of 
 \begin_inset Formula $D^{\star}$
 \end_inset
 
@@ -2290,9 +2309,12 @@ over different non-overlapping segments of a
 \emph on
 single 
 \emph default
-data set are within the Bayesian error bars, which confirms that the errors
- we observe are due to systematic shifts in the operating conditions of
- the experiment.
+data set are within the Bayesian error bars, which 
+\color blue
+again 
+\color inherit
+confirms that the errors we observe are due to systematic shifts in the
+ operating conditions of the experiment.
  The agreement in the viscosity values for that measured in the rheometer
  and by the Bayesian estimate of 
 \begin_inset Formula $D^{\star}$
@@ -2316,7 +2338,6 @@ key "schmidt03heating"
 
 , leading to a slight increase of temperature at the trap focal volume which
  we have not considered in the Bayesian estimate.
- 
 \color teal
 The Bayesian procedures, presented in this work, provide estimates of the
  parameters directly from the observed sample path, without any need for
