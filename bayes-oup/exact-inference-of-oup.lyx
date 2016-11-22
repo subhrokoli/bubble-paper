@@ -139,7 +139,6 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -154,7 +153,6 @@ The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -1037,16 +1035,9 @@ key "jeffreys1998theory,jaynes2003probability,sivia2006data"
 .
  The analytical solution of the stationary conditions, derived in the Appendix,
  yields the MAP estimate to be
-\begin_inset CommandInset label
-LatexCommand label
-name "eq:map-estimate"
-
-\end_inset
-
-
 \begin_inset Formula 
 \begin{eqnarray}
-\lambda^{\star} & = & \frac{1}{\Delta t}\ln\frac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}},\qquad D^{\star}=\frac{\lambda^{\star}}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right),\qquad\frac{k^{\star}}{k_{B}T}=\frac{\lambda^{\star}}{D^{\star}},
+\lambda^{\star} & = & \frac{1}{\Delta t}\ln\frac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}},\qquad D^{\star}=\frac{\lambda^{\star}}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right),\qquad\frac{k^{\star}}{k_{B}T}=\frac{\lambda^{\star}}{D^{\star}},\label{eq:map-estimate}
 \end{eqnarray}
 
 \end_inset
@@ -1338,7 +1329,7 @@ status open
 \begin_inset Graphics
 	filename srep/figure1.jpg
 	display false
-	scale 30
+	scale 27
 
 \end_inset
 
@@ -1600,7 +1591,8 @@ Discrete sample path and empirical statistics of an optically trapped Brownian
 m.
  Panel (a) shows discrete observations of one coordinate of the sample path,
  (b) the histogram of the position coordinate, (c) the autocorrelation function
- and (d)-(f) are, respectively, the spectral density for 3, 5, and 10 
+ and (d) is the spectral density.
+ Panel (e) and (f) are the spectral density for 5 and 10 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -1695,8 +1687,7 @@ reference "eq:autocorr"
 
 \end_inset
 
-) or of the spectral density to the Lorentzian in Eq.
- (
+) or of the spectral density to the Lorentzian in Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:spectral-density"
@@ -1759,8 +1750,7 @@ status open
 
 \begin_layout Plain Layout
 Bayesian posterior probability densities.
- The left panel shows filled contours of Eq.
- (
+ The left panel shows filled contours of Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:joint-posterior"
@@ -1768,8 +1758,7 @@ reference "eq:joint-posterior"
 \end_inset
 
 ).
- The MAP estimate, Eq.
- (
+ The MAP estimate, Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:map-estimate"
@@ -1778,8 +1767,7 @@ reference "eq:map-estimate"
 
 ), is marked by the filled dot and contours enclosing 70%, 90% and 99% of
  the probability are labeled.
- The middle panel shows Eq.
- (
+ The middle panel shows Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:k-posterior"
@@ -1787,8 +1775,7 @@ reference "eq:k-posterior"
 \end_inset
 
 ).
- The MAP estimate, Eq.
- (
+ The MAP estimate, Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:k-map"
@@ -4040,7 +4027,7 @@ Competing financial interests: The authors declare no competing financial
  
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section*
 Appendix 
 \end_layout
 
@@ -4113,8 +4100,7 @@ reference "eq:map-estimate"
 \end_layout
 
 \begin_layout Standard
-The second partial derivatives, appearing in Eq.
- (
+The second partial derivatives, appearing in Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:quadratic-form"
@@ -4150,8 +4136,7 @@ where
 \end_inset
 
 .
- All the derivatives are evaluated at the maximum given in Eq.
- (
+ All the derivatives are evaluated at the maximum given in Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:map-estimate"
@@ -4167,8 +4152,7 @@ and the matrix is inverted to give the covariance matrix
 \begin_inset Formula $\boldsymbol{\Sigma}$
 \end_inset
 
- in Eq.
- (
+ in Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:quadratic-form"
