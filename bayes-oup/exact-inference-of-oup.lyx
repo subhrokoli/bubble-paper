@@ -86,7 +86,7 @@ Fast Bayesian inference of optical trap stiffness and particle diffusion
 \end_layout
 
 \begin_layout Author
-Sudipta Bera†
+Sudipta Bera
 \end_layout
 
 \begin_layout Affiliation
@@ -95,7 +95,7 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author
-Shuvojit Paul†
+Shuvojit Paul
 \end_layout
 
 \begin_layout Affiliation
@@ -133,13 +133,14 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 Ayan Banerjee
 \end_layout
 
+\begin_layout Author Email
+
+ayan@iiserkol.ac.in
+\end_layout
+
 \begin_layout Affiliation
 Dept of Physical Sciences, Indian Institute of Science Education and Research,
  Kolkata, Mohanpur 741246
-\end_layout
-
-\begin_layout Author Email
-ayan@iiserkol.ac.in
 \end_layout
 
 \begin_layout Author
@@ -147,17 +148,14 @@ R.
  Adhikari
 \end_layout
 
-\begin_layout Affiliation
-The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
- 600113
-\end_layout
-
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
-\begin_layout Thanks
-†These authors have equal contribution in this work
+\begin_layout Affiliation
+The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
+ 600113
 \end_layout
 
 \begin_layout Abstract
