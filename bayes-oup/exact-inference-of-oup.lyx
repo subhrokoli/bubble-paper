@@ -14,7 +14,7 @@
   citecolor    = blue%Colour of citations
 }
 \end_preamble
-\options aps, twocolumn, pre,superscriptaddress
+\options aps, onecolumn, pre,superscriptaddress, notitlepage
 \use_default_options false
 \maintain_unincluded_children false
 \language english
@@ -997,8 +997,7 @@ ly, we use informative priors for
 , is
 \begin_inset Formula 
 \begin{align}
-\ln P(\lambda,D|X) & =\frac{N-1}{2}\ln\frac{\lambda}{2\pi DI_{2}}-\frac{\lambda}{2DI_{2}}\sum_{n=1}^{N-1}\Delta_{n}^{2}\nonumber \\
- & +\frac{1}{2}\ln\frac{\lambda}{2\pi D}-\frac{\lambda}{2D}x_{1}^{2}\label{eq:joint-posterior}
+\ln P(\lambda,D|X) & =\frac{N-1}{2}\ln\frac{\lambda}{2\pi DI_{2}}-\frac{\lambda}{2DI_{2}}\sum_{n=1}^{N-1}\Delta_{n}^{2}+\frac{1}{2}\ln\frac{\lambda}{2\pi D}-\frac{\lambda}{2D}x_{1}^{2}\label{eq:joint-posterior}
 \end{align}
 
 \end_inset
@@ -1038,19 +1037,6 @@ key "jeffreys1998theory,jaynes2003probability,sivia2006data"
 .
  The analytical solution of the stationary conditions, derived in the Appendix,
  yields the MAP estimate to be
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{subequations}
-\end_layout
-
-\end_inset
-
-
 \begin_inset CommandInset label
 LatexCommand label
 name "eq:map-estimate"
@@ -1060,23 +1046,8 @@ name "eq:map-estimate"
 
 \begin_inset Formula 
 \begin{eqnarray}
-\lambda^{\star} & = & \frac{1}{\Delta t}\ln\frac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}}\\
-D^{\star} & = & \frac{\lambda^{\star}}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)\\
-\frac{k^{\star}}{k_{B}T} & = & \frac{\lambda^{\star}}{D^{\star}}
+\lambda^{\star} & = & \frac{1}{\Delta t}\ln\frac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}},\qquad D^{\star}=\frac{\lambda^{\star}}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right),\qquad\frac{k^{\star}}{k_{B}T}=\frac{\lambda^{\star}}{D^{\star}},
 \end{eqnarray}
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{subequations}
-\end_layout
 
 \end_inset
 
@@ -1238,8 +1209,7 @@ The posterior probabilities in both methods can be written in terms of four
  functions of the data
 \begin_inset Formula 
 \begin{eqnarray}
-T_{1}(X) & = & \sum_{n=1}^{N-1}x_{n+1}^{2},\quad T_{2}(X)=\sum_{n=1}^{N-1}x_{n+1}x_{n},\nonumber \\
-T_{3}(X) & = & \sum_{n=1}^{N-1}x_{n}^{2},\qquad T_{4}(X)=x_{1}^{2},
+T_{1}(X)=\sum_{n=1}^{N-1}x_{n+1}^{2},\qquad T_{2}(X)=\sum_{n=1}^{N-1}x_{n+1}x_{n},\qquad T_{3}(X) & = & \sum_{n=1}^{N-1}x_{n}^{2},\qquad T_{4}(X)=x_{1}^{2},
 \end{eqnarray}
 
 \end_inset
@@ -1362,21 +1332,14 @@ ck process as a data model.
 placement t
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
-\begin_inset space \hfill{}
-\end_inset
-
-
 \begin_inset Graphics
-	filename figure1.pdf
+	filename srep/figure1.jpg
+	display false
 	scale 30
 
-\end_inset
-
-
-\begin_inset space \hfill{}
 \end_inset
 
 
@@ -1432,75 +1395,7 @@ name "sec:Experimental-setup-and"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-placement t
-wide true
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename srep/figure2.jpg
-	display false
-	scale 66
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Discrete sample path and empirical statistics of an optically trapped Brownian
- polystyrene bead of radius 
-\begin_inset Formula $a=3\mu$
-\end_inset
-
-m.
- Panel (a) shows discrete observations of one coordinate of the sample path,
- (b) the histogram of the position coordinate, (c) the autocorrelation function
- and (d) the spectral density.
- The fits of 
-\begin_inset Formula $\lambda$
-\end_inset
-
- from the both the autocorrelation and the spectral density depend, respectively
-, on the number of lags and the number of frequencies used.
- The guidelines in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "berg2004power"
-
-\end_inset
-
- and 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "tassieri2012microrheology"
-
-\end_inset
-
- are followed in obtaining the fits.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:discrete-sample-path"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- We collect position fluctuation data of an optically trapped Brownian particle
+We collect position fluctuation data of an optically trapped Brownian particle
  using a standard optical tweezers setup that is described in detail in
  
 \begin_inset CommandInset citation
@@ -1666,140 +1561,6 @@ For the viscosity measurement, we add glycerol to water in fixed proportions
 \color blue
 The voltage-distance calibration is performed every time we change the particle
  or the ambient medium.
-\color inherit
-
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename figure3.jpg
-	display false
-	width 39text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Bayesian posterior probability densities.
- The top panel shows filled contours of Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:joint-posterior"
-
-\end_inset
-
-).
- The MAP estimate, Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map-estimate"
-
-\end_inset
-
-), is marked by the filled dot and contours enclosing 70%, 90% and 99% of
- the probability are labeled.
- The bottom panel shows Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:k-posterior"
-
-\end_inset
-
-).
- The MAP estimate, Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:k-map"
-
-\end_inset
-
-), is marked by the filled dot and intervals enclosing 70%, 90% and 99%
- of the probability are shaded.
- The two estimates for 
-\begin_inset Formula $k$
-\end_inset
-
- agree to three decimal places.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:bayes-I-and-II"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename figure4.jpg
-	display false
-	width 44text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Variation of trap stiffness 
-\begin_inset Formula $k$
-\end_inset
-
- with laser power estimated by the two Bayesian methods (Bayes I and Bayes
- II) and by the standard fit to the power spectral density (PSD).
- The error bars are also shown.
- Solid line is the best fit to Bayes I and II while the dotted line is a
- best fit to PSD.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Variation-of-trap"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1810,6 +1571,79 @@ We note that the measured data is a result of a transformation by the detection
  Therefore, we have a problem of pure estimation and there is no attempt
  to compare between alternative models of the data generation process.
  
+\begin_inset Float figure
+placement t
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename srep/figure2.jpg
+	display false
+	scale 66
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Discrete sample path and empirical statistics of an optically trapped Brownian
+ polystyrene bead of radius 
+\begin_inset Formula $a=3\mu$
+\end_inset
+
+m.
+ Panel (a) shows discrete observations of one coordinate of the sample path,
+ (b) the histogram of the position coordinate, (c) the autocorrelation function
+ and (d)-(f) are, respectively, the spectral density for 3, 5, and 10 
+\begin_inset Formula $\mu$
+\end_inset
+
+m diameter polystyrene spheres.
+ The fits of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ from the both the autocorrelation and the spectral density depend, respectively
+, on the number of lags and the number of frequencies used.
+ The guidelines in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "berg2004power"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "tassieri2012microrheology"
+
+\end_inset
+
+ are followed in obtaining the fits.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:discrete-sample-path"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1903,6 +1737,103 @@ key "berg2004power"
  the PSD - where the standard systematics related to fitting can be minimized
  at best but not removed.
  
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename srep/figure3.jpg
+	display false
+	width 94text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Bayesian posterior probability densities.
+ The left panel shows filled contours of Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:joint-posterior"
+
+\end_inset
+
+).
+ The MAP estimate, Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map-estimate"
+
+\end_inset
+
+), is marked by the filled dot and contours enclosing 70%, 90% and 99% of
+ the probability are labeled.
+ The middle panel shows Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:k-posterior"
+
+\end_inset
+
+).
+ The MAP estimate, Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:k-map"
+
+\end_inset
+
+), is marked by the filled dot and intervals enclosing 70%, 90% and 99%
+ of the probability are shaded.
+ The two estimates for 
+\begin_inset Formula $k$
+\end_inset
+
+ agree to three decimal places.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:bayes-I-and-II"
+
+\end_inset
+
+ The panel on the right shows the variation of trap stiffness 
+\begin_inset Formula $k$
+\end_inset
+
+ with laser power estimated by the two Bayesian methods (Bayes I and Bayes
+ II) and by the standard fit to the power spectral density (PSD).
+ The error bars are also shown.
+ Solid line is the best fit to Bayes I and II while the dotted line is a
+ best fit to PSD.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Variation-of-trap"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4083,6 +4014,32 @@ RA expresses his gratitude, long overdue, to Professor M.
  Cates for introducing him to Bayesianism.
 \end_layout
 
+\begin_layout Section*
+Author contributions 
+\end_layout
+
+\begin_layout Standard
+SB and SP contributed equally to this work - SB worked on the theoretical
+ analysis and SP in experiments.
+ RS and RA developed PyBISP.
+ DG helped in the data analysis and AK in experiments.
+ RA supervised the development of the Bayesian framework and the theoretical
+ analysis.
+ The experiments were performed at AB’s lab.
+ RA and AB designed the research and wrote the paper.
+ 
+\end_layout
+
+\begin_layout Section*
+Additional information 
+\end_layout
+
+\begin_layout Standard
+Competing financial interests: The authors declare no competing financial
+ interests.
+ 
+\end_layout
+
 \begin_layout Subsection
 Appendix 
 \end_layout
@@ -4100,8 +4057,7 @@ The first partial derivatives of the logarithm of the posterior probability
  are
 \begin_inset Formula 
 \begin{alignat*}{1}
-\frac{\partial\ln P}{\partial\lambda} & =\frac{N-1}{2}\left(\frac{1}{\lambda}-\frac{I_{2}^{\prime}}{I_{2}}\right)-\frac{\sum\Delta_{n}^{2}}{2DI_{2}}\\
- & -\frac{\lambda}{2D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{1}{2\lambda}-\frac{x_{1}^{2}}{2D}
+\frac{\partial\ln P}{\partial\lambda} & =\frac{N-1}{2}\left(\frac{1}{\lambda}-\frac{I_{2}^{\prime}}{I_{2}}\right)-\frac{\sum\Delta_{n}^{2}}{2DI_{2}}-\frac{\lambda}{2D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{1}{2\lambda}-\frac{x_{1}^{2}}{2D},
 \end{alignat*}
 
 \end_inset
@@ -4168,8 +4124,7 @@ reference "eq:quadratic-form"
 ), are 
 \begin_inset Formula 
 \begin{alignat*}{1}
-\Sigma_{11}^{-1}=\frac{\partial^{2}\ln P}{\partial\lambda^{2}} & =\frac{N-1}{2}\Big(-\frac{1}{\lambda^{2}}+\frac{I_{2}^{\prime}I_{2}^{\prime}}{I_{2}^{2}}-\frac{I_{2}^{\prime\prime}}{I_{2}}\Big)-\frac{1}{2\lambda^{2}}\\
- & -\frac{1}{D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)-\frac{\lambda}{2D}\frac{\partial^{2}}{\partial\lambda^{2}}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right),
+\Sigma_{11}^{-1}=\frac{\partial^{2}\ln P}{\partial\lambda^{2}} & =\frac{N-1}{2}\Big(-\frac{1}{\lambda^{2}}+\frac{I_{2}^{\prime}I_{2}^{\prime}}{I_{2}^{2}}-\frac{I_{2}^{\prime\prime}}{I_{2}}\Big)-\frac{1}{2\lambda^{2}}-\frac{1}{D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)-\frac{\lambda}{2D}\frac{\partial^{2}}{\partial\lambda^{2}}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right),
 \end{alignat*}
 
 \end_inset
@@ -4235,8 +4190,7 @@ reference "eq:quadratic-form"
  
 \begin_inset Formula 
 \begin{eqnarray*}
-\sigma_{\lambda}^{2}= &  & -\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{22}^{-1},\qquad\sigma_{\lambda D}^{2}=\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{12}^{-1},\\
-\sigma_{D}^{2}= &  & -\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{11}^{-1},
+\sigma_{\lambda}^{2}= &  & -\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{22}^{-1},\qquad\sigma_{\lambda D}^{2}=\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{12}^{-1},\qquad\sigma_{D}^{2}=-\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{11}^{-1},
 \end{eqnarray*}
 
 \end_inset

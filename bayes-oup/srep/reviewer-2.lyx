@@ -163,7 +163,7 @@ status open
 
 
 \color inherit
-Fixed it.
+FWe have now been more 
 \end_layout
 
 \begin_layout Itemize
@@ -194,7 +194,7 @@ status open
 
 
 \color inherit
-Fixed it.
+We have now fixed the cross-reference to Figure 3.
 \end_layout
 
 \begin_layout Itemize
@@ -222,7 +222,8 @@ status open
 
 
 \color inherit
-Added the detail.
+We have now added the descripton of the parenthesis in each table of the
+ manuscript.
 \end_layout
 
 \begin_layout Itemize
@@ -231,7 +232,6 @@ Added the detail.
 I’d recommend the authors to emphasize their work’s significance more in
  Introduction part.
  Currently, I cannot see their main contributions.
- 
 \begin_inset ERT
 status open
 
@@ -259,7 +259,6 @@ status open
 I’m wondering whether the Bayesian methods can be applied to study the rotationa
 l diffusion and exerted torque constant of a nonspherical particle in optical
  trap.
- 
 \begin_inset ERT
 status open
 
