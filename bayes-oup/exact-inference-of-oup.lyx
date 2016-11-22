@@ -139,7 +139,6 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -154,7 +153,6 @@ The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -1795,12 +1793,12 @@ The results of Bayesian inference are shown in Figure.
  (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:discrete-sample-path"
+reference "fig:bayes-I-and-II"
 
 \end_inset
 
 ).
- In the top panel we show show filled contours of the posterior distribution
+ In the top panel we show filled contours of the posterior distribution
  in the 
 \begin_inset Formula $\lambda-D$
 \end_inset
