@@ -102,6 +102,24 @@ The manuscript reported by Bera et al used Bayesian inference to elucidate
  layout of the paper is not good.
  I recommend a major revision.
  
+\color teal
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+We thank the reviewer for careful reading of our manuscript.
+ We add our replies, to the points raised, below.
 \end_layout
 
 \begin_layout Standard
@@ -122,7 +140,6 @@ There are too many problems with the manuscript editing.
  (3).
  The style of the manuscript does not comply with Sci.
  Rep.
- 
 \begin_inset ERT
 status open
 
@@ -133,17 +150,14 @@ status open
 
 \backslash
 
-\backslash
-
-\backslash
-
 \end_layout
 
 \end_inset
 
 
-\color inherit
- Will update the format.
+\color teal
+We have now updated the format of the manuscript.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -163,14 +177,33 @@ status open
 
 \backslash
 
-\backslash
-
-\backslash
-
 \end_layout
 
 \end_inset
 
+
+\color teal
+The three parameters at hand are: (a) stiffness 
+\begin_inset Formula $k$
+\end_inset
+
+ of the harmonic potential, (b) the friction 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ of the particle and the (c) the temperature 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ These parameter do not vary independently and are related by Eq.
+ (1) and thus only two of them can be chosen independently.
+ We also use the Einstein relation 
+\begin_inset Formula $D=k_{B}T\gamma^{-1}$
+\end_inset
+
+ and then choose mean regression rate and volatility as the independent
+ parameters .
  
 \end_layout
 
@@ -189,10 +222,6 @@ status open
 
 \begin_layout Plain Layout
 
-
-\backslash
-
-\backslash
 
 \backslash
 
@@ -237,15 +266,13 @@ status open
 
 \backslash
 
-\backslash
-
-\backslash
-
 \end_layout
 
 \end_inset
 
- 
+
+\color teal
+We have now detailed on the comment in the manuscript.
 \end_layout
 
 \begin_layout Itemize
@@ -258,10 +285,6 @@ status open
 
 \begin_layout Plain Layout
 
-
-\backslash
-
-\backslash
 
 \backslash
 
@@ -293,10 +316,6 @@ status open
 
 \backslash
 
-\backslash
-
-\backslash
-
 \end_layout
 
 \end_inset
@@ -322,10 +341,6 @@ status open
 
 \begin_layout Plain Layout
 
-
-\backslash
-
-\backslash
 
 \backslash
 
@@ -362,15 +377,15 @@ status open
 
 \backslash
 
-\backslash
-
-\backslash
-
 \end_layout
 
 \end_inset
 
 
+\color teal
+The error bars are included in the figure but the error is very small as
+ we explain in our response to the query of the reviewer above.
+ 
 \end_layout
 
 \end_body

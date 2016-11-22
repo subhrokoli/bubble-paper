@@ -139,6 +139,7 @@ Dept of Physical Sciences, Indian Institute of Science Education and Research,
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -153,6 +154,7 @@ The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -175,10 +177,6 @@ Bayesian inference provides a principled way of estimating the parameters
  We apply these to experimental data and demonstrate their advantage over
  commonly used non-Bayesian fitting methods.
  
-\end_layout
-
-\begin_layout Section
-Introduction
 \end_layout
 
 \begin_layout Standard
@@ -467,7 +465,7 @@ key "jaynes1976confidence"
 We apply both methods to experimental data and obtain MAP estimates and
  error bars that are in excellent agreement with each other.
  These estimates are found to be in good agreement with the commonly used
- power spectral density calibration method 
+ power spectral density (PSD) calibration method 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "berg2004power"
@@ -475,7 +473,14 @@ key "berg2004power"
 \end_inset
 
 .
- The Bayesian methods of this paper are implemented in a well-documented,
+ 
+\color teal
+The Bayesian estimates of the parameters are directly obtained from the
+ observed sample path of the Brownian particle, unlike non-Bayesian fitting
+ methods like PSD.
+ 
+\color inherit
+The Bayesian methods of this paper are implemented in a well-documented,
  open-source software freely available on GitHub 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -490,38 +495,22 @@ key "pybisp"
 The remainder of the paper is organized as follows.
  In the next section we recall several key properties of the sample paths
  and distributions of the Ornstein-Uhlenbeck process.
- In Section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Bayesian-inference"
-
-\end_inset
-
-, we present the Bayesian methods, in section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Experimental-setup-and"
-
-\end_inset
-
- we describe the experimental setup, and in section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Results"
-
-\end_inset
-
- we apply the Bayesian procedures to the experimental data.
+ We, then, present the Bayesian methods and describe the experimental setup.
+ The Bayesian procedures is then applied to the experimental data.
  We conclude with a discussion of future directions in the application of
  Bayesian inference to optical tweezer experiments and advocate its use
  as a complement to standard non-Bayesian methods.
-\end_layout
+\begin_inset ERT
+status open
 
-\begin_layout Section
-Ornstein-Uhlenbeck process
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Ornstein-Uhlenbeck-process"
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
 
 \end_inset
 
@@ -529,11 +518,31 @@ name "sec:Ornstein-Uhlenbeck-process"
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\size large
+\color black
+Ornstein-Uhlenbeck process.
+
+\size larger
+\color teal
+ 
+\size default
+\color inherit
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Ornstein-Uhlenbeck-process"
+
+\end_inset
+
+
+\series default
 The Langevin equation for a Brownian particle confined in a potential 
 \begin_inset Formula $U$
 \end_inset
 
- is given by 
+ is given by
 \begin_inset Formula 
 \begin{equation}
 m\dot{v}+\gamma v+\nabla U=\xi
@@ -554,7 +563,7 @@ where
 \begin_inset Formula $U=\frac{{1}}{2}kx^{2}$
 \end_inset
 
-, we obtain the overdamped Langevin equation 
+, we obtain the overdamped Langevin equation
 \begin_inset Formula 
 \begin{equation}
 \dot{x}=-\frac{k}{\gamma}x+\sqrt{\frac{2k_{B}T}{\gamma}}\zeta(t),
@@ -658,7 +667,7 @@ The ratio of
 \begin_inset Formula $D$
 \end_inset
 
- provides the stiffness 
+ provides the stiffness
 \begin_inset Formula 
 \begin{equation}
 \lambda/D=k/k_{B}T
@@ -742,10 +751,7 @@ The transition probability density
 \begin_inset Formula $\partial_{t}P_{1|1}=\mathcal{L}P_{1|1}$
 \end_inset
 
-, where the Fokker-Planck operator is 
-\end_layout
-
-\begin_layout Standard
+, where the Fokker-Planck operator is
 \begin_inset Formula 
 \begin{equation}
 \mathcal{L}=\frac{\partial}{\partial x}\lambda x+\frac{\partial^{2}}{\partial x^{2}}D.
@@ -753,10 +759,7 @@ The transition probability density
 
 \end_inset
 
-The solution is a normal distribution, 
-\end_layout
-
-\begin_layout Standard
+The solution is a normal distribution,
 \begin_inset Formula 
 \begin{equation}
 x^{\prime}t^{\prime}|x\thinspace t\sim\mathcal{N}\left(xe^{-\lambda(t^{\prime}-t)},\frac{D}{\lambda}[1-e^{-2\lambda(t^{\prime}-t)}]\right),
@@ -811,7 +814,7 @@ key "van1992stochastic"
 \noun off
 \color none
 The Fourier transform of the correlation function gives the power spectral
- density 
+ density
 \begin_inset Formula 
 \begin{equation}
 C(\omega)\equiv\langle|x(\omega)|^{2}\rangle=\frac{k_{B}T}{k}\frac{1}{\omega^{2}+\lambda^{2}}\label{eq:spectral-density}
@@ -842,9 +845,6 @@ The stationary distribution
 \end_inset
 
  and the solution is, again, a normal distribution,
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 x\sim\mathcal{N}\left(0,\frac{D}{\lambda}\right)=\mathcal{N}\left(0,\frac{k_{B}T}{k}\right).
@@ -889,14 +889,17 @@ The transition probability density yields the Bayesian method for jointly
 
  alone.
  We now describe these two methods.
- 
-\end_layout
+\begin_inset ERT
+status open
 
-\begin_layout Section
-Bayesian inference
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Bayesian-inference"
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
 
 \end_inset
 
@@ -904,7 +907,23 @@ name "sec:Bayesian-inference"
 \end_layout
 
 \begin_layout Standard
-Consider, now, the time series 
+
+\series bold
+\size large
+\color black
+Bayesian inference.
+ 
+\series default
+\size default
+\color inherit
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Bayesian-inference"
+
+\end_inset
+
+ Consider, now, the time series 
 \begin_inset Formula $X\equiv(x_{1},x_{2},\ldots,x_{N})$
 \end_inset
 
@@ -1000,7 +1019,7 @@ ly, we use informative priors for
 
 \end_inset
 
-where we have defined the two quantities 
+where we have defined the two quantities
 \begin_inset Formula 
 \[
 I_{2}\equiv1-e^{-2\lambda\Delta t},\quad\Delta_{n}\equiv x_{n+1}-e^{-\lambda\Delta t}x_{n}.
@@ -1318,12 +1337,11 @@ ck process as a data model.
 \end_inset
 
 .
- 
 \begin_inset Float figure
 placement t
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1372,13 +1390,17 @@ name "fig:balanced-detection"
 \end_inset
 
 
-\end_layout
+\begin_inset ERT
+status open
 
-\begin_layout Section
-Experimental setup and data acquisition
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Experimental-setup-and"
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
 
 \end_inset
 
@@ -1386,6 +1408,22 @@ name "sec:Experimental-setup-and"
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\size large
+\color black
+Experimental setup and data acquisition.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Experimental-setup-and"
+
+\end_inset
+
+
+\series default
+\size default
+\color inherit
 We collect position fluctuation data of an optically trapped Brownian particle
  using a standard optical tweezers setup that is described in detail in
  
@@ -1561,12 +1599,11 @@ We note that the measured data is a result of a transformation by the detection
  it induces on the physical sample paths is not pursued here.
  Therefore, we have a problem of pure estimation and there is no attempt
  to compare between alternative models of the data generation process.
- 
 \begin_inset Float figure
 placement t
 wide true
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1636,13 +1673,17 @@ name "fig:discrete-sample-path"
 \end_inset
 
 
-\end_layout
+\begin_inset ERT
+status open
 
-\begin_layout Section
-Results and discussions
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Results"
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
 
 \end_inset
 
@@ -1650,6 +1691,18 @@ name "sec:Results"
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+Results and discussions.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Results"
+
+\end_inset
+
+
+\series default
 We now present our results.
  In Figure.
  (
@@ -1728,99 +1781,6 @@ key "berg2004power"
  the PSD - where the standard systematics related to fitting can be minimized
  at best but not removed.
  
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename srep/figure3.jpg
-	display false
-	width 94text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Bayesian posterior probability densities.
- The left panel shows filled contours of Eq.(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:joint-posterior"
-
-\end_inset
-
-).
- The MAP estimate, Eq.(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map-estimate"
-
-\end_inset
-
-), is marked by the filled dot and contours enclosing 70%, 90% and 99% of
- the probability are labeled.
- The middle panel shows Eq.(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:k-posterior"
-
-\end_inset
-
-).
- The MAP estimate, Eq.(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:k-map"
-
-\end_inset
-
-), is marked by the filled dot and intervals enclosing 70%, 90% and 99%
- of the probability are shaded.
- The two estimates for 
-\begin_inset Formula $k$
-\end_inset
-
- agree to three decimal places.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:bayes-I-and-II"
-
-\end_inset
-
- The panel on the right shows the variation of trap stiffness 
-\begin_inset Formula $k$
-\end_inset
-
- with laser power estimated by the two Bayesian methods (Bayes I and Bayes
- II) and by the standard fit to the power spectral density (PSD).
- The error bars are also shown.
- Solid line is the best fit to Bayes I and II while the dotted line is a
- best fit to PSD.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Variation-of-trap"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1992,9 +1952,85 @@ key "simmonsbeadstiff96"
 
 .
  
+\color inherit
+
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename srep/figure3.jpg
+	display false
+	width 74text%
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Bayesian posterior probability densities.
+ The left panel shows filled contours of Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:joint-posterior"
+
+\end_inset
+
+).
+ The MAP estimate, Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map-estimate"
+
+\end_inset
+
+), is marked by the filled dot and contours enclosing 70%, 90% and 99% of
+ the probability are labeled.
+ The middle panel shows Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:k-posterior"
+
+\end_inset
+
+).
+ The MAP estimate, Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:k-map"
+
+\end_inset
+
+), is marked by the filled dot and intervals enclosing 70%, 90% and 99%
+ of the probability are shaded.
+ The two estimates for 
+\begin_inset Formula $k$
+\end_inset
+
+ agree to three decimal places.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:bayes-I-and-II"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 
 \color blue
 Our next set of measurements are directed towards determining the extent
@@ -2127,9 +2163,54 @@ data set are within the Bayesian error bars for all the time series; however,
  region of interest due to the large table mass and are also damped out
  very fast by the presence of active dampers (we also take care not to place
  vibrating objects such as power supplies, etc on the table).
+\color inherit
+
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figure4.jpg
+	display false
+	width 44text%
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Variation of trap stiffness 
+\begin_inset Formula $k$
+\end_inset
+
+ with laser power estimated by the two Bayesian methods (Bayes I and Bayes
+ II) and by the standard fit to the power spectral density (PSD).
+ The error bars are also shown.
+ Solid line is the best fit to Bayes I and II while the dotted line is a
+ best fit to PSD.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Variation-of-trap"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 To compare the Bayesian estimate for the diffusion coefficient we repeat
  the experiment for different solvent viscosities keeping both the laser
  power ( corresponding to 
@@ -2234,15 +2315,155 @@ key "schmidt03heating"
 
 , leading to a slight increase of temperature at the trap focal volume which
  we have not considered in the Bayesian estimate.
- Thus, we conclude that the Bayesian method can be used for accurate viscometry
+ 
+\color teal
+The Bayesian procedures, presented in this work, provide estimates of the
+ parameters directly from the observed sample path, without any need for
+ fitting or Monte Carlo sampling.
+ This is in contrast to, the more commonly used PSD, where additional errors
+ are incurred due to the fitting methods.
+ 
+\color inherit
+Thus, we conclude that the Bayesian method can be used for accurate viscometry
  using only the discretely observed sample paths of a trapped Brownian particle.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\size large
+\color black
+Conclusion
+\series default
+\size default
+\color inherit
+.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Conclusion"
+
+\end_inset
+
+In this work, we have presented an exact Bayesian method for jointly estimating
+ the mean regression rate and the diffusion coefficient of an optically
+ trapped Brownian particle.
+ The trap stiffness in temperature units is obtained as a ratio of the mean
+ regression rate and the diffusion coefficient.
+ We have also rephrased the standard 
+\begin_inset Quotes eld
+\end_inset
+
+equipartition
+\begin_inset Quotes erd
+\end_inset
+
+ method of directly estimating the trap stiffness as a problem in Bayesian
+ inference.
+ We have assumed that the Ornstein-Uhlenbeck process is the data generating
+ model.
+ More general models, which include the position dependence of the particle
+ friction (as would be the case in the proximity to walls) or the non-Markovian
+ character of the trajectories (as would be the case when momentum diffusion
+ is not slow compared to the time scales of interest) can, with additional
+ effort, be incorporated in the Bayesian framework.
+ Exact analytical solutions will no longer be available and one has to resort
+ to approximations of the likelihood, such as short-time expansions of the
+ Fokker-Planck propagator or numerical solutions of the equivalent stochastic
+ differential equations.
+ These introduce discretization errors which must be carefully evaluated.
+ In contrast, the method presented here is exact and can serve as an useful
+ 
+\begin_inset Quotes eld
+\end_inset
+
+null hypothesis
+\begin_inset Quotes erd
+\end_inset
+
+ when comparing between different models for the data.
+ In future work, we shall present Bayesian methods for more complex models
+ and provide a fully Bayesian procedure, embodying Ockham's razor 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jaynes2003probability"
+
+\end_inset
+
+, for the problem of model selection.
+ 
+\end_layout
+
+\begin_layout Standard
+Bayesian analysis is generally applicable in studying the dynamics (Brownian
+ or otherwise) of a vast range of mesoscopic particles in diverse trapping
+ environments.
+ The capability of modeling the apparatus itself could also be extremely
+ helpful in understanding and improving the experimental techniques employed
+ in optical trapping with the possibility of studying different systematic
+ effects that may influence the trajectory of trapped particles, thus enhancing
+ the capabilities and sphere of influence of optical tweezers.
+\end_layout
+
+\begin_layout Standard
+Bayesian methods for data analysis are not widespread in soft matter, despite
+ of their advantages and demonstrated success in other areas of physics.
+ To quote a popular textbook 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gregory2005bayesian"
+
+\end_inset
+
+: 
+\begin_inset Quotes eld
+\end_inset
+
+Increasingly, researchers in many branches of science are coming into contact
+ with Bayesian statistics or Bayesian probability theory.
+ By encompassing both inductive and deductive logic, Bayesian analysis can
+ improve model parameter estimates by many orders of magnitude.
+ It provides a simple and unified approach to all data analysis problems,
+ allowing the experimenter to assign probabilities to competing hypotheses
+ of interest, on the basis of the current state of knowledge.
+\begin_inset Quotes erd
+\end_inset
+
+ In future, we hope to see many more applications of this 
+\begin_inset Quotes eld
+\end_inset
+
+elegant and powerful approach to scientific inference
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gregory2005bayesian"
+
+\end_inset
+
+ to problems in soft matter.
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -2646,13 +2867,10 @@ name "tab:k-versus-power"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float table
 wide true
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -3110,13 +3328,10 @@ m diameter polystyrene spheres trapped at the same laser power.
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float table
 wide true
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -3555,7 +3770,7 @@ Study of systematic error in the experimental apparatus by analysis of particle
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -3878,130 +4093,57 @@ name "tab:viscometry"
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
 \end_layout
 
-\begin_layout Section
-Conclusion
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Conclusion"
-
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-In this work, we have presented an exact Bayesian method for jointly estimating
- the mean regression rate and the diffusion coefficient of an optically
- trapped Brownian particle.
- The trap stiffness in temperature units is obtained as a ratio of the mean
- regression rate and the diffusion coefficient.
- We have also rephrased the standard 
-\begin_inset Quotes eld
-\end_inset
-
-equipartition
-\begin_inset Quotes erd
-\end_inset
-
- method of directly estimating the trap stiffness as a problem in Bayesian
- inference.
- We have assumed that the Ornstein-Uhlenbeck process is the data generating
- model.
- More general models, which include the position dependence of the particle
- friction (as would be the case in the proximity to walls) or the non-Markovian
- character of the trajectories (as would be the case when momentum diffusion
- is not slow compared to the time scales of interest) can, with additional
- effort, be incorporated in the Bayesian framework.
- Exact analytical solutions will no longer be available and one has to resort
- to approximations of the likelihood, such as short-time expansions of the
- Fokker-Planck propagator or numerical solutions of the equivalent stochastic
- differential equations.
- These introduce discretization errors which must be carefully evaluated.
- In contrast, the method presented here is exact and can serve as an useful
- 
-\begin_inset Quotes eld
-\end_inset
-
-null hypothesis
-\begin_inset Quotes erd
-\end_inset
-
- when comparing between different models for the data.
- In future work, we shall present Bayesian methods for more complex models
- and provide a fully Bayesian procedure, embodying Ockham's razor 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "jaynes2003probability"
-
-\end_inset
-
-, for the problem of model selection.
- 
 \end_layout
 
 \begin_layout Standard
-Bayesian analysis is generally applicable in studying the dynamics (Brownian
- or otherwise) of a vast range of mesoscopic particles in diverse trapping
- environments.
- The capability of modeling the apparatus itself could also be extremely
- helpful in understanding and improving the experimental techniques employed
- in optical trapping with the possibility of studying different systematic
- effects that may influence the trajectory of trapped particles, thus enhancing
- the capabilities and sphere of influence of optical tweezers.
+
+\series bold
+\size large
+\color black
+Acknowledgements
 \end_layout
 
 \begin_layout Standard
-Bayesian methods for data analysis are not widespread in soft matter, despite
- of their advantages and demonstrated success in other areas of physics.
- To quote a popular textbook 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "gregory2005bayesian"
-
-\end_inset
-
-: 
-\begin_inset Quotes eld
-\end_inset
-
-Increasingly, researchers in many branches of science are coming into contact
- with Bayesian statistics or Bayesian probability theory.
- By encompassing both inductive and deductive logic, Bayesian analysis can
- improve model parameter estimates by many orders of magnitude.
- It provides a simple and unified approach to all data analysis problems,
- allowing the experimenter to assign probabilities to competing hypotheses
- of interest, on the basis of the current state of knowledge.
-\begin_inset Quotes erd
-\end_inset
-
- In future, we hope to see many more applications of this 
-\begin_inset Quotes eld
-\end_inset
-
-elegant and powerful approach to scientific inference
-\begin_inset Quotes erd
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "gregory2005bayesian"
-
-\end_inset
-
- to problems in soft matter.
- 
-\end_layout
-
-\begin_layout Acknowledgments
 RA expresses his gratitude, long overdue, to Professor M.
  E.
  Cates for introducing him to Bayesianism.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
 \end_layout
 
-\begin_layout Section*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+\color black
 Author contributions 
 \end_layout
 
@@ -4015,19 +4157,60 @@ SB and SP contributed equally to this work - SB worked on the theoretical
  The experiments were performed at AB’s lab.
  RA and AB designed the research and wrote the paper.
  
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
 \end_layout
 
-\begin_layout Section*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+\color black
 Additional information 
 \end_layout
 
 \begin_layout Standard
 Competing financial interests: The authors declare no competing financial
  interests.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\series bold
+\size large
+\color black
  
 \end_layout
 
-\begin_layout Section*
+\begin_layout Standard
+
+\series bold
+\size large
+\color black
 Appendix 
 \end_layout
 
@@ -4044,15 +4227,7 @@ The first partial derivatives of the logarithm of the posterior probability
  are
 \begin_inset Formula 
 \begin{alignat*}{1}
-\frac{\partial\ln P}{\partial\lambda} & =\frac{N-1}{2}\left(\frac{1}{\lambda}-\frac{I_{2}^{\prime}}{I_{2}}\right)-\frac{\sum\Delta_{n}^{2}}{2DI_{2}}-\frac{\lambda}{2D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{1}{2\lambda}-\frac{x_{1}^{2}}{2D},
-\end{alignat*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{alignat*}{1}
-\frac{\partial\ln P}{\partial D} & =-\frac{N-1}{2D}+\frac{\lambda\sum\Delta_{n}^{2}}{2D^{2}I_{2}}-\frac{1}{2D}+\frac{\lambda x_{1}^{2}}{2D^{2}},
+\frac{\partial\ln P}{\partial\lambda} & =\frac{N-1}{2}\left(\frac{1}{\lambda}-\frac{I_{2}^{\prime}}{I_{2}}\right)-\frac{\sum\Delta_{n}^{2}}{2DI_{2}}-\frac{\lambda}{2D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{1}{2\lambda}-\frac{x_{1}^{2}}{2D},\quad\frac{\partial\ln P}{\partial D}=-\frac{N-1}{2D}+\frac{\lambda\sum\Delta_{n}^{2}}{2D^{2}I_{2}}-\frac{1}{2D}+\frac{\lambda x_{1}^{2}}{2D^{2}},
 \end{alignat*}
 
 \end_inset
@@ -4110,23 +4285,8 @@ reference "eq:quadratic-form"
 ), are 
 \begin_inset Formula 
 \begin{alignat*}{1}
-\Sigma_{11}^{-1}=\frac{\partial^{2}\ln P}{\partial\lambda^{2}} & =\frac{N-1}{2}\Big(-\frac{1}{\lambda^{2}}+\frac{I_{2}^{\prime}I_{2}^{\prime}}{I_{2}^{2}}-\frac{I_{2}^{\prime\prime}}{I_{2}}\Big)-\frac{1}{2\lambda^{2}}-\frac{1}{D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)-\frac{\lambda}{2D}\frac{\partial^{2}}{\partial\lambda^{2}}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right),
-\end{alignat*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{alignat*}{1}
-\Sigma_{12}^{-1}=\frac{\partial^{2}\ln P}{\partial D\partial\lambda} & =\frac{\sum\Delta_{n}^{2}}{2D^{2}I_{2}}+\frac{\lambda}{2D^{2}}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{x_{1}^{2}}{2D^{2}},
-\end{alignat*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{alignat*}{1}
-\Sigma_{22}^{-1}=\frac{\partial^{2}\ln P}{\partial D^{2}} & =\frac{N-1}{2D^{2}}-\frac{\lambda}{D^{3}}\Big(\frac{\sum\Delta_{n}^{2}}{I_{2}}-x_{1}^{2}\Big)+\frac{1}{2D^{2}},
+\Sigma_{11}^{-1}=\frac{\partial^{2}\ln P}{\partial\lambda^{2}} & =\frac{N-1}{2}\Big(-\frac{1}{\lambda^{2}}+\frac{I_{2}^{\prime}I_{2}^{\prime}}{I_{2}^{2}}-\frac{I_{2}^{\prime\prime}}{I_{2}}\Big)-\frac{1}{2\lambda^{2}}-\frac{1}{D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)-\frac{\lambda}{2D}\frac{\partial^{2}}{\partial\lambda^{2}}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right),\\
+\Sigma_{12}^{-1}=\frac{\partial^{2}\ln P}{\partial D\partial\lambda}= & \frac{\sum\Delta_{n}^{2}}{2D^{2}I_{2}}+\frac{\lambda}{2D^{2}}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{x_{1}^{2}}{2D^{2}},\qquad\Sigma_{22}^{-1}=\frac{\partial^{2}\ln P}{\partial D^{2}}=\frac{N-1}{2D^{2}}-\frac{\lambda}{D^{3}}\Big(\frac{\sum\Delta_{n}^{2}}{I_{2}}-x_{1}^{2}\Big)+\frac{1}{2D^{2}},
 \end{alignat*}
 
 \end_inset

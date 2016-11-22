@@ -104,6 +104,25 @@ The authors applied two Bayesian methods to the analysis of the Brownian
  theoretical and experimental procedures and adequate illustrations.
  I recommend the acceptance.
  But some minor comments may help the manuscript to be finalized: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\color blue
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\color teal
+We thank the reviewer for a positive evaluation of our manuscript.
+ We reply to the comments of the reviewer below.
 \end_layout
 
 \begin_layout Itemize
@@ -112,7 +131,6 @@ The authors applied two Bayesian methods to the analysis of the Brownian
 Please be careful with the paper formats of Scientific Reports.
  Maybe the subsections will be merged.
  And then the last paragraph of Introduction will not be necessary.
- 
 \begin_inset ERT
 status open
 
@@ -123,17 +141,15 @@ status open
 
 \backslash
 
-\backslash
-
-\backslash
-
 \end_layout
 
 \end_inset
 
 
-\color inherit
-Will update the format.
+\color teal
+We have now updated the format of the manuscript to comply with format of
+ Sci Rep.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -142,7 +158,6 @@ Will update the format.
 Please avoid some occasional typos, e.g.
  the second paragraph of Results and discussion: “In the top panel we show
  show…”.
- 
 \begin_inset ERT
 status open
 
@@ -153,17 +168,15 @@ status open
 
 \backslash
 
-\backslash
-
-\backslash
-
 \end_layout
 
 \end_inset
 
 
-\color inherit
-FWe have now been more 
+\color teal
+We have corrected the indicated typo and checked the manuscript carefully
+ for possible typos.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -173,7 +186,6 @@ The second paragraph of Results and discussion, “The results of Bayesian
  inference are shown in Figure.
  (2)”.
  It should be Figure 3.
- 
 \begin_inset ERT
 status open
 
@@ -184,16 +196,12 @@ status open
 
 \backslash
 
-\backslash
-
-\backslash
-
 \end_layout
 
 \end_inset
 
 
-\color inherit
+\color teal
 We have now fixed the cross-reference to Figure 3.
 \end_layout
 
@@ -201,7 +209,6 @@ We have now fixed the cross-reference to Figure 3.
 
 \color blue
 For Table II, please indicate what the parentheses mean in the table caption.
- 
 \begin_inset ERT
 status open
 
@@ -212,17 +219,13 @@ status open
 
 \backslash
 
-\backslash
-
-\backslash
-
 \end_layout
 
 \end_inset
 
 
-\color inherit
-We have now added the descripton of the parenthesis in each table of the
+\color teal
+We have now added the description of the parenthesis in each table of the
  manuscript.
 \end_layout
 
@@ -242,15 +245,15 @@ status open
 
 \backslash
 
-\backslash
-
-\backslash
-
 \end_layout
 
 \end_inset
 
 
+\color teal
+We have now added more description in the introduction about Bayesian contributi
+ons of the work.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -269,15 +272,22 @@ status open
 
 \backslash
 
-\backslash
-
-\backslash
-
 \end_layout
 
 \end_inset
 
 
+\color teal
+The current application to spherical particles relies on the exact analytical
+ solution of the Ornstein-Uhlenbeck process.
+ To study the diffusion of a nonspherical particle depends, we require the
+ distribution functions of both the position and orientation.
+ Also, the rotational and translation are coupled, and thus, the resulting
+ coupled differential equations have to be solved simultaneously.
+ Use of Bayesian methods is then possible to study rotational diffusion
+ for nonspherical particle, but techniques like Monte Carlo sampling maybe
+ necessary to obtain the estimates.
+ 
 \end_layout
 
 \end_body

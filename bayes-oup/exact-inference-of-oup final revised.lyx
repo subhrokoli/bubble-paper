@@ -1753,9 +1753,6 @@ name "fig:bayes-I-and-II"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 placement h
 wide false
@@ -1766,7 +1763,7 @@ status open
 \begin_inset Graphics
 	filename figure4.jpg
 	display false
-	width 44text%
+	width 48text%
 
 \end_inset
 
