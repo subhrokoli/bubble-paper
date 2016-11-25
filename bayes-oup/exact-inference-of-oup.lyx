@@ -134,7 +134,6 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -149,7 +148,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -469,11 +467,8 @@ key "berg2004power"
 \end_inset
 
 .
- 
+
 \color teal
-The Bayesian estimates of the parameters are directly obtained from the
- observed sample path of the Brownian particle, unlike non-Bayesian fitting
- methods like PSD.
  
 \color inherit
 The Bayesian methods of this paper are implemented in a well-documented,
@@ -2334,16 +2329,33 @@ key "schmidt03heating"
 
 , leading to a slight increase of temperature at the trap focal volume which
  we have not considered in the Bayesian estimate.
+
 \color teal
-The Bayesian procedures, presented in this work, provide estimates of the
- parameters directly from the observed sample path, without any need for
- fitting or Monte Carlo sampling.
- This is in contrast to, the more commonly used PSD, where additional errors
- are incurred due to the fitting methods.
  
 \color inherit
-Thus, we conclude that the Bayesian method can be used for accurate viscometry
- using only the discretely observed sample paths of a trapped Brownian particle.
+This 
+\begin_inset Quotes eld
+\end_inset
+
+fluctuation
+\begin_inset Quotes erd
+\end_inset
+
+ method of estimating the viscosity does not require the application of
+ external fields and is so guaranteed to yield the linear response of the
+ system while the Bayesian analysis extracts, optimally, all information
+ relevant to this estimation problem.
+ The viscosity of nanoliter samples can be estimated by this method, making
+ it an attractive alternative to 
+\begin_inset Quotes eld
+\end_inset
+
+response
+\begin_inset Quotes erd
+\end_inset
+
+ methods that impose an external shear flow.
+ ∑
 \begin_inset ERT
 status open
 
@@ -2431,6 +2443,10 @@ key "jaynes2003probability"
 Bayesian analysis is generally applicable in studying the dynamics (Brownian
  or otherwise) of a vast range of mesoscopic particles in diverse trapping
  environments.
+ While we have focussed on spherical particles here, the method is not restricte
+d thus, and can be applied to non-spherical particles.
+ The rotational and translation motions are typically coupled in such cases,
+ making the analysis more difficult in detail but no different in principle.
  The capability of modeling the apparatus itself could also be extremely
  helpful in understanding and improving the experimental techniques employed
  in optical trapping with the possibility of studying different systematic

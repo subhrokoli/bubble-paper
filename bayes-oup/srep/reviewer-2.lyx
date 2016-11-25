@@ -109,7 +109,6 @@ status open
 
 \begin_layout Plain Layout
 
-\color blue
 
 \backslash
 
@@ -147,9 +146,11 @@ status open
 
 
 \color teal
-We have now updated the format of the manuscript to comply with format of
- Sci Rep.
- 
+We have revised our manuscript to comply with the format of 
+\emph on
+Scientific Reports
+\emph default
+.
 \end_layout
 
 \begin_layout Itemize
@@ -175,7 +176,7 @@ status open
 
 \color teal
 We have corrected the indicated typo and checked the manuscript carefully
- for possible typos.
+ for remaining typos.
  
 \end_layout
 
@@ -251,8 +252,15 @@ status open
 
 
 \color teal
-We have now added more description in the introduction about Bayesian contributi
-ons of the work.
+We have outlined the main contributions of our work in the 6
+\emph on
+th
+\emph default
+ and 7
+\emph on
+th
+\emph default
+ paragraphs of the Introduction to which we draw the reviewers attention.
  
 \end_layout
 
@@ -278,15 +286,16 @@ status open
 
 
 \color teal
-The current application to spherical particles relies on the exact analytical
- solution of the Ornstein-Uhlenbeck process.
- To study the diffusion of a nonspherical particle depends, we require the
- distribution functions of both the position and orientation.
- Also, the rotational and translation are coupled, and thus, the resulting
- coupled differential equations have to be solved simultaneously.
- Use of Bayesian methods is then possible to study rotational diffusion
- for nonspherical particle, but techniques like Monte Carlo sampling maybe
- necessary to obtain the estimates.
+We thank the reviewer for raising this important point.
+ Bayesian methods can indeed be used to study this important case as well.
+ The analysis will be considerably more involved, as there will be a coupling
+ of position and orientation, involving the solution of the 6 coupled stochastic
+ differential equations (or, a Fokker-Planck equation in 6 variables).
+ As analytical solutions are generally not known for arbitrary times, we
+ will either have to resort to short time expansions when experimental data
+ is collected sufficiently rapidly compared to the typical relaxation times,
+ or, fall back on Markov Chain Monte Carlo for the general case.
+ We now add this remark in the discussion.
  
 \end_layout
 

@@ -118,8 +118,10 @@ status open
 
 \end_inset
 
-We thank the reviewer for careful reading of our manuscript.
- We add our replies, to the points raised, below.
+We thank the reviewer for a positive evaluation and a careful reading of
+ our manuscript.
+ We have revised our manuscript following the suggestions of the reviewer
+ as detailed below.
 \end_layout
 
 \begin_layout Standard
@@ -156,7 +158,17 @@ status open
 
 
 \color teal
-We have now updated the format of the manuscript.
+We have now reformatted our manuscript to comply with the style of
+\emph on
+ Scientific Reports
+\emph default
+.
+ We appreciate the suggestion of the reviewer to interchange the two figures
+ in the results section, but we have retained the present order as Figure.
+ (2) represents the results of an empirical statistical analysis - plotting
+ of data, constructing histograms, fitting to known forms - which would
+ be logically prior to a Bayesian analysis, which goes beyond the empirical
+ analysis by confronting the data with a theoretical model.
  
 \end_layout
 
@@ -202,8 +214,8 @@ The three parameters at hand are: (a) stiffness
 \begin_inset Formula $D=k_{B}T\gamma^{-1}$
 \end_inset
 
- and then choose mean regression rate and volatility as the independent
- parameters .
+ and then choose the mean regression rate and the volatility as independent
+ parameters.
  
 \end_layout
 
@@ -245,7 +257,7 @@ We have performed a whole series of measurements to check for systematic
  It is clear that systematics due to coupling with low frequency ambient
  noise occurs for low stiffness traps, while that due to slow drifts in
  experimental conditions occur at time scales longer than 20s.
- A detailed discussion has been given in Pgs 6 and 7 in the revised ms.
+ A detailed discussion has now been given in pages 6 and 7 of the revision.
 \end_layout
 
 \begin_layout Itemize
@@ -272,7 +284,8 @@ status open
 
 
 \color teal
-We have now detailed on the comment in the manuscript.
+We have now elaborated on how we arrive at this conclusion.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -322,13 +335,14 @@ status open
 
 
 \color inherit
-We perform our experiments on an optical table with active vibration isolation,
- so that there is no coupling with ambient vibrations, whereas vibrations
+We perform our experiments on an optical table with active vibration isolation
+ so that there is no coupling with ambient vibrations.
+ Due to the large table mass and the presence of active dampers, vibrations
  from the table itself are at much higher frequencies than our region of
- interest due to the large table mass and are also damped out very fast
- by the presence of active dampers (we also take care not to place vibrating
- objects such as power supplies, etc on the table).
- This discussion has been included in Pg 7.
+ interest.
+ We also take care not to place vibrating objects such as power supplies,
+ etc on the table.
+ This discussion has been included in page 7 of the revision.
 \end_layout
 
 \begin_layout Itemize
@@ -360,7 +374,7 @@ The detection signal amplitude for Brownian motion data for 3 microns diameter
 g with diameter) as well as the refractive index of the ambient medium,
  this value changes when we change spheres or the medium.
  Typically, the particle localization is within 2-7 nm in our experiments.
- This discussion has been included in Pg 5.
+ This discussion has been included in page 5 of the revision.
 \end_layout
 
 \begin_layout Itemize
@@ -383,8 +397,9 @@ status open
 
 
 \color teal
-The error bars are included in the figure but the error is very small as
- we explain in our response to the query of the reviewer above.
+The error bars are indeed included, but are so small relative to the mean
+ that they are not visible.
+ We add a comment to alert the reader to this in the figure caption.
  
 \end_layout
 
