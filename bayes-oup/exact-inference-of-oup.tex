@@ -1,6 +1,9 @@
-\documentclass[english,aps, twocolumn, pre,superscriptaddress]{revtex4-1}
+%% LyX 2.2.0 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english,aps, onecolumn, pre,superscriptaddress, notitlepage]{revtex4-1}
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
+\usepackage{xcolor}
 \usepackage{array}
 \usepackage{booktabs}
 \usepackage{multirow}
@@ -10,9 +13,12 @@
 
 \makeatletter
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
 \providecommand{\tabularnewline}{\\}
 
 \@ifundefined{date}{}{\date{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
 \usepackage{hyperref}
 \hypersetup{
   colorlinks   = true, %Colours links instead of ugly boxes
@@ -28,12 +34,12 @@
 
 \title{Fast Bayesian inference of optical trap stiffness and particle diffusion}
 
-\author{Sudipta Bera\dag{}}
+\author{Sudipta Bera}
 
 \affiliation{Dept of Physical Sciences, Indian Institute of Science Education
 and Research, Kolkata, Mohanpur 741246}
 
-\author{Shuvojit Paul\dag{}}
+\author{Shuvojit Paul}
 
 \affiliation{Dept of Physical Sciences, Indian Institute of Science Education
 and Research, Kolkata, Mohanpur 741246}
@@ -53,20 +59,20 @@ Chennai 600113}
 and Research, Kolkata, Mohanpur 741246}
 
 \author{Ayan Banerjee}
+\email{ayan@iiserkol.ac.in}
+
+\selectlanguage{english}%
 
 \affiliation{Dept of Physical Sciences, Indian Institute of Science Education
 and Research, Kolkata, Mohanpur 741246}
-\email{ayan@iiserkol.ac.in}
-
 
 \author{R. Adhikari}
+\email{rjoy@imsc.res.in}
+
+\selectlanguage{english}%
 
 \affiliation{The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani,
 Chennai 600113}
-\email{rjoy@imsc.res.in}
-
-
-\thanks{\dag These authors have equal contribution in this work}
 \begin{abstract}
 Bayesian inference provides a principled way of estimating the parameters
 of a stochastic process that is observed discretely in time. The overdamped
@@ -82,9 +88,6 @@ and demonstrate their advantage over commonly used non-Bayesian fitting
 methods. 
 \end{abstract}
 \maketitle
-
-\section{Introduction}
-
 Since the seminal contributions of Rayleigh, Einstein, Smoluchowski,
 Langevin and others \cite{chandrasekhar1943stochastic}, stochastic
 processes have been used to model physical phenomena in which fluctuations
@@ -183,24 +186,21 @@ MAP estimates yields both speed and accuracy in parameter estimation.
 We apply both methods to experimental data and obtain MAP estimates
 and error bars that are in excellent agreement with each other. These
 estimates are found to be in good agreement with the commonly used
-power spectral density calibration method \cite{berg2004power}. The
-Bayesian methods of this paper are implemented in a well-documented,
+power spectral density (PSD) calibration method \cite{berg2004power}.\textcolor{teal}{{}
+}The Bayesian methods of this paper are implemented in a well-documented,
 open-source software freely available on GitHub \cite{pybisp}.
 
 The remainder of the paper is organized as follows. In the next section
 we recall several key properties of the sample paths and distributions
-of the Ornstein-Uhlenbeck process. In Section \ref{sec:Bayesian-inference},
-we present the Bayesian methods, in section \ref{sec:Experimental-setup-and}
-we describe the experimental setup, and in section \ref{sec:Results}
-we apply the Bayesian procedures to the experimental data. We conclude
-with a discussion of future directions in the application of Bayesian
-inference to optical tweezer experiments and advocate its use as a
-complement to standard non-Bayesian methods.
-
-\section{Ornstein-Uhlenbeck process\label{sec:Ornstein-Uhlenbeck-process}}
-
-The Langevin equation for a Brownian particle confined in a potential
-$U$ is given by 
+of the Ornstein-Uhlenbeck process. We, then, present the Bayesian
+methods and describe the experimental setup. The Bayesian procedures
+is then applied to the experimental data. We conclude with a discussion
+of future directions in the application of Bayesian inference to optical
+tweezer experiments and advocate its use as a complement to standard
+non-Bayesian methods.\\\\\textbf{\textcolor{black}{\large{}Ornstein-Uhlenbeck
+process.}}\textbf{\textcolor{teal}{\Large{} }}\textbf{\label{sec:Ornstein-Uhlenbeck-process}}The
+Langevin equation for a Brownian particle confined in a potential
+$U$ is given by
 \begin{equation}
 m\dot{v}+\gamma v+\nabla U=\xi
 \end{equation}
@@ -208,7 +208,7 @@ where $\xi(t)$ is a zero-mean Gaussian white noise with variance
 $\langle\xi(t)\xi(t')\rangle=2k_{B}T\gamma\delta(t-t')$ as required
 by the fluctuation-dissipation theorem. In the limit of vanishing
 inertia and a harmonic potential, $U=\frac{{1}}{2}kx^{2}$, we obtain
-the overdamped Langevin equation 
+the overdamped Langevin equation
 \begin{equation}
 \dot{x}=-\frac{k}{\gamma}x+\sqrt{\frac{2k_{B}T}{\gamma}}\zeta(t),
 \end{equation}
@@ -230,26 +230,24 @@ between the diffusion and friction coefficients of a Brownian particle.
 In problems involving Brownian motion, it is convenient to work with
 the diffusion coefficient, rather than the volatility. 
 
-The ratio of $\lambda$ and $D$ provides the stiffness 
+The ratio of $\lambda$ and $D$ provides the stiffness
 \begin{equation}
 \lambda/D=k/k_{B}T
 \end{equation}
 in units of $k_{B}T$. We note that, in general, there is no relation
 between the mean regression rate and volatility of the Ornstein-Uhlenbeck
-process and the preceding identity is a consequence of additional
+process and the preceeding identity is a consequence of additional
 $physical$ constraints, namely the fluctuation-dissipation and Einstein
 relations \cite{kubo1966fluctuation}. 
 
 The transition probability density $P_{1|1}$$(x^{\prime}t^{\prime}|x\thinspace t$),
 the probability of a displacement from $x$ at time $t$ to $x^{\prime}$
 at time $t^{\prime}$, obeys the Fokker-Planck equation $\partial_{t}P_{1|1}=\mathcal{L}P_{1|1}$,
-where the Fokker-Planck operator is 
-
+where the Fokker-Planck operator is
 \begin{equation}
 \mathcal{L}=\frac{\partial}{\partial x}\lambda x+\frac{\partial^{2}}{\partial x^{2}}D.
 \end{equation}
-The solution is a normal distribution, 
-
+The solution is a normal distribution,
 \begin{equation}
 x^{\prime}t^{\prime}|x\thinspace t\sim\mathcal{N}\left(xe^{-\lambda(t^{\prime}-t)},\frac{D}{\lambda}[1-e^{-2\lambda(t^{\prime}-t)}]\right),
 \end{equation}
@@ -262,7 +260,7 @@ C(t-t^{\prime})\equiv\langle x(t)x(t^{\prime})\rangle=\frac{k_{B}T}{k}e^{-\lambd
 \end{equation}
 a property guaranteed by Doob's theorem for any Gauss-Markov processes
 \cite{van1992stochastic}. The Fourier transform of the correlation
-function gives the power spectral density 
+function gives the power spectral density
 \begin{equation}
 C(\omega)\equiv\langle|x(\omega)|^{2}\rangle=\frac{k_{B}T}{k}\frac{1}{\omega^{2}+\lambda^{2}}\label{eq:spectral-density}
 \end{equation}
@@ -273,7 +271,6 @@ rate.
 The stationary distribution $P_{1}(x)$ obeys the steady state Fokker-Plank
 equation $\mathcal{L}P_{1}=0$ and the solution is, again, a normal
 distribution,
-
 \begin{equation}
 x\sim\mathcal{N}\left(0,\frac{D}{\lambda}\right)=\mathcal{N}\left(0,\frac{k_{B}T}{k}\right).
 \end{equation}
@@ -284,15 +281,12 @@ should.
 The transition probability density yields the Bayesian method for
 jointly estimating $\lambda$ and $D$ (and hence $k$), while the
 stationary distribution yields the Bayesian method for directly estimating
-$k$ alone. We now describe these two methods. 
-
-\section{Bayesian inference\label{sec:Bayesian-inference}}
-
-Consider, now, the time series $X\equiv(x_{1},x_{2},\ldots,x_{N})$
-consisting of observations of the sample path $x(t)$ at the discrete
-times $t=n\Delta$t with $n=1,\ldots,N.$ Then, using the Markov property
-of the Ornstein-Uhlenbeck process, the probability of the sample path
-is given by \cite{wang1945theory} 
+$k$ alone. We now describe these two methods.\\\\\textbf{\textcolor{black}{\large{}Bayesian
+inference. }}\label{sec:Bayesian-inference} Consider, now, the time
+series $X\equiv(x_{1},x_{2},\ldots,x_{N})$ consisting of observations
+of the sample path $x(t)$ at the discrete times $t=n\Delta$t with
+$n=1,\ldots,N.$ Then, using the Markov property of the Ornstein-Uhlenbeck
+process, the probability of the sample path is given by \cite{wang1945theory}
 \begin{equation}
 P(X|\lambda,D)=\prod_{n=1}^{N-1}P_{1|1}(x_{n+1}|x_{n},\lambda,D)P_{1}(x_{1}|\lambda,D)
 \end{equation}
@@ -311,10 +305,9 @@ of the parameters and equal probability weight for all positive values.
 The logarithm of the posterior probability, after using the explicit
 forms of $P_{1|1}$ and $P_{1}$, is
 \begin{align}
-\ln P(\lambda,D|X) & =\frac{N-1}{2}\ln\frac{\lambda}{2\pi DI_{2}}-\frac{\lambda}{2DI_{2}}\sum_{n=1}^{N-1}\Delta_{n}^{2}\nonumber \\
- & +\frac{1}{2}\ln\frac{\lambda}{2\pi D}-\frac{\lambda}{2D}x_{1}^{2}\label{eq:joint-posterior}
+\ln P(\lambda,D|X) & =\frac{N-1}{2}\ln\frac{\lambda}{2\pi DI_{2}}-\frac{\lambda}{2DI_{2}}\sum_{n=1}^{N-1}\Delta_{n}^{2}+\frac{1}{2}\ln\frac{\lambda}{2\pi D}-\frac{\lambda}{2D}x_{1}^{2}\label{eq:joint-posterior}
 \end{align}
-where we have defined the two quantities 
+where we have defined the two quantities
 \[
 I_{2}\equiv1-e^{-2\lambda\Delta t},\quad\Delta_{n}\equiv x_{n+1}-e^{-\lambda\Delta t}x_{n}.
 \]
@@ -325,16 +318,14 @@ and $\partial\ln P(\lambda,D|X)/\partial D=0$, while the error bars
 of this estimate are obtained from the Hessian matrix of second derivatives
 evaluated at the maximum \cite{jeffreys1998theory,jaynes2003probability,sivia2006data}.
 The analytical solution of the stationary conditions, derived in the
-Appendix, yields the MAP estimate to be\begin{subequations}\label{eq:map-estimate}
+Appendix, yields the MAP estimate to be
 \begin{eqnarray}
-\lambda^{\star} & = & \frac{1}{\Delta t}\ln\frac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}}\\
-D^{\star} & = & \frac{\lambda^{\star}}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right)\\
-\frac{k^{\star}}{k_{B}T} & = & \frac{\lambda^{\star}}{D^{\star}}
+\lambda^{\star} & = & \frac{1}{\Delta t}\ln\frac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}},\qquad D^{\star}=\frac{\lambda^{\star}}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right),\qquad\frac{k^{\star}}{k_{B}T}=\frac{\lambda^{\star}}{D^{\star}},\label{eq:map-estimate}
 \end{eqnarray}
-\end{subequations}where both $I_{2}$ and $\Delta_{n}$ are now evaluated
-at $\lambda=\lambda^{\star}$ and the sum runs from $n=1,\ldots,N-1$.
-These provide direct estimates of the parameters \emph{without} the
-need for fitting, minimization, or Monte Carlo sampling. 
+where both $I_{2}$ and $\Delta_{n}$ are now evaluated at $\lambda=\lambda^{\star}$
+and the sum runs from $n=1,\ldots,N-1$. These provide direct estimates
+of the parameters \emph{without} the need for fitting, minimization,
+or Monte Carlo sampling. 
 
 The error bars are obtained from a Taylor expansion of the log posterior
 to quadratic order about the MAP value,
@@ -374,8 +365,7 @@ is used for $k$. We refer to this procedure as ``Bayes II'' below.
 The posterior probabilities in both methods can be written in terms
 of four functions of the data
 \begin{eqnarray}
-T_{1}(X) & = & \sum_{n=1}^{N-1}x_{n+1}^{2},\quad T_{2}(X)=\sum_{n=1}^{N-1}x_{n+1}x_{n},\nonumber \\
-T_{3}(X) & = & \sum_{n=1}^{N-1}x_{n}^{2},\qquad T_{4}(X)=x_{1}^{2},
+T_{1}(X)=\sum_{n=1}^{N-1}x_{n+1}^{2},\qquad T_{2}(X)=\sum_{n=1}^{N-1}x_{n+1}x_{n},\qquad T_{3}(X) & = & \sum_{n=1}^{N-1}x_{n}^{2},\qquad T_{4}(X)=x_{1}^{2},
 \end{eqnarray}
 which, therefore, are the sufficient statistics of the problem. The
 \emph{entire} information in the time series $X$ relevant to estimation
@@ -411,115 +401,99 @@ between the estimates from the two methods signals a breakdown of
 the applicability of the model and the assumptions implicit in it:
 overdamped dynamics, constant friction, harmonicity of the potential,
 and thermal equilibrium. This completes our description of the Bayesian
-procedures for estimating $\lambda$, $D$, and $k$. 
+procedures for estimating $\lambda$, $D$, and $k$.
 \begin{figure}[t]
-\hfill{}\includegraphics[scale=0.3]{figure1}\hfill{}\caption{Schematic of balanced detection scheme to measure Brownian motion
+\includegraphics[scale=0.27]{srep/figure1}\caption{Schematic of balanced detection scheme to measure Brownian motion
 in the $x$ direction from a single trapped polystyrene sphere. Back-scattered
 light from the trapped sphere is incident on an edge mirror that divides
 it equally between photodiodes PD1 and PD2, having voltage outputs
 A and B respectively. The normalized $x$ coordinate of the sphere
 at any instant in time is given by $(A-B)/(A+B).$\label{fig:balanced-detection}}
 \end{figure}
-
-
-\section{Experimental setup and data acquisition\label{sec:Experimental-setup-and}}
-
-\begin{figure*}[t]
-\includegraphics[scale=0.53]{figure2}
-
-\caption{Discrete sample path and empirical statistics of an optically trapped
-Brownian polystyrene bead of radius $a=3\mu$m. Panel (a) shows discrete
-observations of one coordinate of the sample path, (b) the histogram
-of the position coordinate, (c) the autocorrelation function and (d)
-the spectral density. The fits of $\lambda$ from the both the autocorrelation
-and the spectral density depend, respectively, on the number of lags
-and the number of frequencies used. The guidelines in \cite{berg2004power}
-and \cite{tassieri2012microrheology} are followed in obtaining the
-fits. \label{fig:discrete-sample-path}}
-\end{figure*}
- We collect position fluctuation data of an optically trapped Brownian
-particle using a standard optical tweezers setup that is described
-in detail in \cite{rsi12}. Here we provide a brief overview. The
-optical tweezers system is constructed around a Zeiss inverted microscope
-(\emph{Axiovert.A1}) with a $100x$ $1.4$ numerical aperture (NA)
-objective lens tightly focusing laser light at $1064$ nm from a semiconductor
-laser (\emph{Lasever}, maximum power $500$mW) into the sample. The
-back aperture of the objective is slightly overfilled to maximize
-the trapping intensity. The sample consists of a dilute suspension
-(volume fraction $\phi=0.01$) of polystyrene sphere of diameter $3\mu$m
-in 10\% NaCl-water solution, around $20\mu l$ of which is pipetted
-on a standard glass cover slip. The total power available at the trapping
-plane is around 15 mW. A single particle is trapped at an axial distance
-greater than several times its radius to avoid any wall-effects in
-the effective drag force due to the water, and it's motion is observed
-by back-focal plane interferometry using the back-scattered intensity
-of a detection laser at $671$ nm that co-propagates with the trapping
-laser. The detection laser power is maintained at much lower levels
-than that required to trap a particle. The back-scattered signal from
-the trapped particle is measured using a balanced detection scheme,
-schematically illustrated in Fig. \ref{fig:balanced-detection}. The
-back-scattered light beam is incident on an edge mirror which divides
-it equally into two halves that are focused using two lenses of equal
-focal length on photodiodes PD1 and PD2 (\emph{Thorlabs} PDA100A-EC
-Si-photodiodes of bandwidth 2.4 MHz). The voltage outputs $A$ and
-$B$, of PD1 and PD2 respectively, are then combined as $(A-B)/(A+B)$
-to give the normalized value of the $x$ coordinate of motion at any
-instant of time. The advantage of such balanced detection is that
-the intensity fluctuations of the laser are present in both beams
-simultaneously and are thus canceled out when the difference is taken.
-Note that the direction of the edge mirror decides whether the $x$
-or $y$ coordinate of motion is being measured. The mirror is rotated
-by $90$ degrees to select between the coordinates. The fast response
-of the photodiodes, with a rise time of 50ns at highest gain, ensures
-that spurious correlations are kept to a minimum and the data filtering
-necessary with slower commercial quadrant photodetectors is avoided
-entirely. The data from the photodiodes is logged into a computer
-using a National Instruments DAQ system and Labview at sampling rates
-between 2-5 kHz. For calibrating the motion, \emph{i.e.} converting
-the voltage into physical distance which is necessary for measuring
-the diffusion constant, we employ an acousto-optic modulator that
-is placed in the back-focal plane of the microscope objective and
-scan the trapped bead by distances which are determined from the pixel
-calibration of images taken by the camera attached to the microscope
-\cite{rsi12}. The balanced detection output is simultaneously measured
-to yield the voltage-distance calibration of the detection system.
-For the viscosity measurement, we add glycerol to water in fixed proportions
-to create 5 samples of different viscosity. The viscosity of each
-sample is then measured by a commercial rheometer (Brookfield DB3TLVCJ0)
-to match with the experimental results.
-\begin{figure}[h]
-\includegraphics[width=0.39\textwidth]{figure3}
-
-\caption{Bayesian posterior probability densities. The top panel shows filled
-contours of Eq. (\ref{eq:joint-posterior}). The MAP estimate, Eq.
-(\ref{eq:map-estimate}), is marked by the filled dot and contours
-enclosing 70\%, 90\% and 99\% of the probability are labeled. The
-bottom panel shows Eq. (\ref{eq:k-posterior}). The MAP estimate,
-Eq. (\ref{eq:k-map}), is marked by the filled dot and intervals enclosing
-70\%, 90\% and 99\% of the probability are shaded. The two estimates
-for $k$ agree to three decimal places.\label{fig:bayes-I-and-II}}
-\end{figure}
-
-\begin{figure}[h]
-\includegraphics[width=0.44\textwidth]{figure4}
-
-\caption{Variation of trap stiffness $k$ with laser power estimated by the
-two Bayesian methods (Bayes I and Bayes II) and by the standard fit
-to the power spectral density (PSD). The error bars are also shown.
-Solid line is the best fit to Bayes I and II while the dotted line
-is a best fit to PSD.\label{fig:Variation-of-trap}}
-\end{figure}
+\\\\\textbf{\textcolor{black}{\large{}Experimental setup and data
+acquisition. \label{sec:Experimental-setup-and}}}We collect position
+fluctuation data of an optically trapped Brownian particle using a
+standard optical tweezers setup that is described in detail in \cite{rsi12}.
+Here we provide a brief overview. The optical tweezers system is constructed
+around a Zeiss inverted microscope (\emph{Axiovert.A1}) with a $100x$
+$1.4$ numerical aperture (NA) objective lens tightly focusing laser
+light at $1064$ nm from a semiconductor laser (\emph{Lasever}, maximum
+power $500$mW) into the sample. The back aperture of the objective
+is slightly overfilled to maximize the trapping intensity. The sample
+consists of a dilute suspension (volume fraction $\phi=0.01$) of
+polystyrene spheres of diameter $3\mu$m in 10\% NaCl-water solution,
+around $20\mu l$ of which is pipetted on a standard glass cover slip.
+The total power available at the trapping plane is around 15 mW. A
+single particle is trapped at an axial distance greater than several
+times its radius to avoid any wall-effects in the effective drag force
+due to the water, and it's motion is observed by back-focal plane
+interferometry using the back-scattered intensity of a detection laser
+at $671$ nm that co-propagates with the trapping laser. The detection
+laser power is maintained at much lower levels than that required
+to trap a particle. The back-scattered signal from the trapped particle
+is measured using a balanced detection scheme, schematically illustrated
+in Fig. \ref{fig:balanced-detection}. The back-scattered light beam
+is incident on an edge mirror which divides it equally into two halves
+that are focused using two lenses of equal focal length on photodiodes
+PD1 and PD2 (\emph{Thorlabs} PDA100A-EC Si-photodiodes of bandwidth
+2.4 MHz). The voltage outputs $A$ and $B$, of PD1 and PD2 respectively,
+are then combined as $(A-B)/(A+B)$ to give the normalized value of
+the $x$ coordinate of motion at any instant of time. The advantage
+of such balanced detection is that the intensity fluctuations of the
+laser are present in both beams simultaneously and are thus canceled
+out when the difference is taken. Note that the direction of the edge
+mirror decides whether the $x$ or $y$ coordinate of motion is being
+measured. The mirror is rotated by $90$ degrees to select between
+the coordinates. The fast response of the photodiodes, with a rise
+time of 50ns at highest gain, ensures that spurious correlations are
+kept to a minimum and the data filtering necessary with slower commercial
+quadrant photodetectors is avoided entirely.\textcolor{blue}{{} }The
+data from the photodiodes is logged into a computer using a National
+Instruments DAQ system and Labview at sampling rates between 2-5 kHz.
+For calibrating the motion, \emph{i.e.} converting the voltage into
+physical distance which is necessary for measuring the diffusion constant,
+we employ an acousto-optic modulator that is placed in the back-focal
+plane of the microscope objective and scan the trapped bead by distances
+which are determined from the pixel calibration of images taken by
+the camera attached to the microscope \cite{rsi12}. The balanced
+detection output is simultaneously measured to yield the voltage-distance
+calibration of the detection system. \textcolor{blue}{The detection
+signal amplitude for Brownian motion data for 3 $\mu$m diameter spheres
+in water is around 1.5 V/$\mu$m and the noise floor is around 5 mV,
+which implies that we have a sensitivity of around 7 nm (considering
+signal/noise=2) for this case. However, since scattering from spheres
+depends on diameter (generally increasing with diameter) as well as
+the refractive index of the ambient medium, this value changes when
+we change spheres or the medium. Typically, the particle localization
+is within 2-7 nm in our experiments. }For the viscosity measurement,
+we add glycerol to water in fixed proportions to create 5 samples
+of different viscosity. The viscosity of each sample is then measured
+by a commercial rheometer (Brookfield DB3TLVCJ0) to match with the
+experimental results. \textcolor{blue}{The voltage-distance calibration
+is performed every time we change the particle or the ambient medium.}
 
 We note that the measured data is a result of a transformation by
 the detection apparatus of the physical sample paths. The Bayesian
 modeling of the detection apparatus and the transformations it induces
 on the physical sample paths is not pursued here. Therefore, we have
 a problem of pure estimation and there is no attempt to compare between
-alternative models of the data generation process. 
+alternative models of the data generation process.
+\begin{figure*}[t]
+\includegraphics[scale=0.66]{srep/figure2}
 
-\section{Results and discussions\label{sec:Results}}
-
-We now present our results. In Figure. (\ref{fig:discrete-sample-path})
+\caption{Discrete sample path and empirical statistics of an optically trapped
+Brownian polystyrene bead of radius $a=3\mu$m. Panel (a) shows discrete
+observations of one coordinate of the sample path, (b) the histogram
+of the position coordinate, (c) the autocorrelation function and (d)
+is the spectral density. Panel (e) and (f) are the spectral density
+for 5 and 10 $\mu$m diameter polystyrene spheres. The fits of $\lambda$
+from the both the autocorrelation and the spectral density depend,
+respectively, on the number of lags and the number of frequencies
+used. The guidelines in \cite{berg2004power} and \cite{tassieri2012microrheology}
+are followed in obtaining the fits. \label{fig:discrete-sample-path}}
+\end{figure*}
+\\\\\textbf{\large{}Results and discussions.}\textbf{ \label{sec:Results}}We
+now present our results. In Figure. (\ref{fig:discrete-sample-path})
 we show a typical sample path of one component of motion in the plane
 of the trap, together with its histogram, autocorrelation function
 and spectral density. The histogram shows that the distribution of
@@ -527,7 +501,7 @@ positions is stationary and very well-approximated by a Gaussian.
 The variance $\langle x^{2}\rangle$ is used in the conventional ``equipartition''
 method to estimate the spring constant $k$, while the fitting of
 the autocorrelation to the exponential in Eq.(\ref{eq:autocorr})
-or of the spectral density to the Lorentzian in Eq. (\ref{eq:spectral-density})
+or of the spectral density to the Lorentzian in Eq.(\ref{eq:spectral-density})
 is used to estimate the spring constant when the friction constant
 is given. For estimation of the stiffness from the PSD, we employ
 the procedures suggested in \cite{berg2004power}, including ``blocking''
@@ -540,8 +514,8 @@ in the variance that leads to over-estimation of the trap stiffness,
 and the PSD - where the standard systematics related to fitting can
 be minimized at best but not removed. 
 
-The results of Bayesian inference are shown in Figure. (\ref{fig:discrete-sample-path}).
-In the top panel we show show filled contours of the posterior distribution
+The results of Bayesian inference are shown in Figure. (\ref{fig:bayes-I-and-II}).
+In the top panel we show filled contours of the posterior distribution
 in the $\lambda-D$ plane, together with contours of equal probability,
 for the ``Bayes I'' method. There is a single maximum at $(\lambda^{\star},D^{\star})$
 whose numerically computed value is in excellent agreement with the
@@ -556,21 +530,101 @@ of the data model. The agreement with the spectral density method,
 shown in the third column of the table, is within $2-3\%$ in all
 cases, other than the first case where the inherent low stiffness
 of the trap due to low trapping power led to larger systematics due
-to the increased influence of the ambient low frequency noise. The
-typical length of our time series is $N\sim30000$ and this gives
-a Bayesian error bar that is less than $\frac{1}{2}$\% of the mean.
-These are well below the systematic errors and the approximately $1.5-2\%$
-variability of the estimates obtained from the fitting procedure.
-The $1\sigma$ standard errors in the mean are indicated in parenthesis
-next to each $k$ value in Table. (\ref{tab:k-versus-power}). Note
-that for inference of the absolute values of $k$ and $D^{\star}$,
-we have used a temperature of 300K which is the same as the lab
-environment temperature - this assumption being based on studies in
-literature \cite{schmidt03heating}where the effects of laser heating
-in water has shown to be well below 1K at the power levels we employ
-in the trap. However, the fact that the results from Bayes I and Bayes
-II are extremely close to each other demonstrates that our estimate
-of temperature is trustworthy.
+to the increased influence of the ambient low frequency noise, \textcolor{blue}{as
+we shall discuss later}. The typical length of our time series is
+$N\sim30000$ and this gives a Bayesian error bar that is less than
+$\frac{1}{2}$\% of the mean. These are well below the systematic
+errors and the approximately $1.5-2\%$ variability of the estimates
+obtained from the fitting procedure. The $1\sigma$ standard errors
+in the mean are indicated in parenthesis next to each $k$ value in
+Table. (\ref{tab:k-versus-power}). Note that for inference of the
+absolute values of $k$ and $D^{\star}$, we have used a temperature
+of 300K which is the the same as the lab environment temperature -
+this assumption being based on studies in literature \cite{schmidt03heating}where
+the effects of laser heating in water has shown to be well below 1K
+at the power levels we employ in the trap. However, the fact that
+the results from Bayes I and Bayes II are extremely close to each
+other demonstrates that our estimate of temperature is trustworthy.
+\textcolor{blue}{Next, in order to determine the robustness of our
+experimental techniques, we perform experiments on two other sizes
+of polystyrene spheres - of diameter 5 and 10 $\mu$m, respectively.
+Representative values of measured stiffness and diffusion constant
+at a laser power of 43.8 mW are shown in Table \ref{tab:k-different-dia}.
+It is clear that the remarkable consistency in the values of $k$
+and $D^{\star}$ given by the Bayes I and II methods are preserved,
+as is the close agreement with the values obtained from the PSD analysis.
+Note that the stiffness values are not really related to bead size
+as is well known in literature - the dependence of $k$ on bead diameter
+being rather non-linear \cite{simmonsbeadstiff96}. }
+\begin{figure}[t]
+\includegraphics[width=0.74\textwidth]{srep/figure3}
+
+\caption{Bayesian posterior probability densities. The left panel shows filled
+contours of Eq.(\ref{eq:joint-posterior}). The MAP estimate, Eq.(\ref{eq:map-estimate}),
+is marked by the filled dot and contours enclosing 70\%, 90\% and
+99\% of the probability are labeled. The middle panel shows Eq.(\ref{eq:k-posterior}).
+The MAP estimate, Eq.(\ref{eq:k-map}), is marked by the filled dot
+and intervals enclosing 70\%, 90\% and 99\% of the probability are
+shaded. The two estimates for $k$ agree to three decimal places.\label{fig:bayes-I-and-II} }
+\end{figure}
+\textcolor{blue}{Our next set of measurements are directed towards
+determining the extent of systematic errors in our measurements. Systematic
+errors in our experimental apparatus may arise due to various issues
+including slow drifts of the laser power, beam pointing of the laser,
+drifts in ambient temperature, coupling with ambient low frequency
+(typically acoustic) noise sources, and possibly other unidentified
+reasons. The coupling with ambient low frequency noise sources would
+manifest themselves at low trapping stiffness, where sudden perturbations
+could affect the Brownian motion of the bead since the restoring force
+is less. On the other hand, the affect of slow drifts of experimental
+parameters would be observed at time series data of longer length.
+Thus, we attempt to understand the effect of systematics in our experiments
+using two different approaches: a) by comparing the mean and standard
+deviation of measured trapping parameters over 3 sets of independent
+time series data collected at low and high trapping laser powers for
+the same particle (diameter 3 $\mu$m), and b) by comparing the trapping
+parameters measured on time series data of different length obtained
+at the same laser power for the same particle. The results are shown
+in Table \ref{tab:systematic-error}(a) and (b). In Table \ref{tab:systematic-error}(a),
+we observe that at a low laser power of 18.5 mW, we have a standard
+deviation of around 6.5\% in }${\color{blue}k}$\textcolor{blue}{{}
+and 4.5\% in $D^{\star}$, while at the higher power of 43.8 mW, the
+standard deviation is only around 1.5\% for both }${\color{blue}k}$
+\textcolor{blue}{and $D^{\star}$. This demonstrates that the effect
+of ambient noise does increase at lower trapping powers. In Table
+\ref{tab:systematic-error}(b), we show the results of measurements
+of }${\color{blue}k}$ \textcolor{blue}{and $D^{\star}$for time series
+data of different lengths for the same particle trapped at a laser
+power of 48 mW (we choose a high laser power since the coupling with
+the ambient noise is lesser in that case). It is clear that for time
+series of lengths 5, 10, and 20s, the variation in the mean of both
+}${\color{blue}k}$ \textcolor{blue}{and $D^{\star}$is only around
+1.5\%, but there is a large change in the mean values between 7-24\%
+for time series data of 40 and 60s. In addition, we check that the
+estimates of }${\color{blue}k}$ \textcolor{blue}{and $D^{\star}$over
+different non-overlapping segments of up to 20s length in a }\textcolor{blue}{\emph{single
+}}\textcolor{blue}{data set are within the Bayesian error bars for
+all the time series; however, for 40 and 60s, the mean values of different
+non-overlapping sets of 20s data differ from each other significantly.
+Thus, it is clear that systematics due to slow drifts in different
+experimental apparatus occur at time scales longer than 20s. Note
+that we perform our experiments on an optical table with active vibration
+isolation, so that there is no coupling with ambient vibrations, whereas
+vibrations from the table itself are at much higher frequencies than
+our region of interest due to the large table mass and are also damped
+out very fast by the presence of active dampers (we also take care
+not to place vibrating objects such as power supplies, etc on the
+table).}
+\begin{figure}[h]
+\includegraphics[width=0.38\textwidth]{figure4}
+
+\caption{Variation of trap stiffness $k$ with laser power estimated by the
+two Bayesian methods (Bayes I and Bayes II) and by the standard fit
+to the power spectral density (PSD). The error bars are also shown\textcolor{black}{,
+but are so small relative to the mean that they are not visible}.
+Solid line is the best fit to Bayes I and II while the dotted line
+is a best fit to PSD.\label{fig:Variation-of-trap}}
+\end{figure}
 
 To compare the Bayesian estimate for the diffusion coefficient we
 repeat the experiment for different solvent viscosities keeping both
@@ -586,27 +640,80 @@ sets of data for each viscosity sample and the mean value of $D^{\star}$
 has been reported with the corresponding 1$\sigma$ error in parenthesis.
 The error bars, which are higher than that for the $k$ measurement,
 chiefly reflect the systematic errors in our experimental apparatus
-that may arise due to slow drifts of the laser power, beam pointing
-of the laser, drifts in ambient temperature and possibly other unidentified
-reasons. Such systematic effects occur at time scales longer than
-$20s$, which is the duration over which a single data set is collected.
-We have checked that the estimates of $D^{\star}$over different non-overlapping
-segments of a \emph{single }data set are within the Bayesian error
-bars, which confirms that the errors we observe are due to systematic
-shifts in the operating conditions of the experiment. The agreement
-in the viscosity values for that measured in the rheometer and by
-the Bayesian estimate of $D^{\star}$is within 5\% for all cases with
-the exception of the last, where the enhanced friction caused a shift
-in $\lambda$ towards lower values, once again increasing the effects
-of systematics due to ambient low frequency noise sources. Also, since
-this value corresponded to the highest concentration of glycerol in
-the water + glycerol mixture, the effects of laser heating could have
-been more significant \cite{schmidt03heating}, leading to a slight
-increase of temperature at the trap focal volume which we have not
-considered in the Bayesian estimate. Thus, we conclude that the Bayesian
-method can be used for accurate viscometry using only the discretely
-observed sample paths of a trapped Brownian particle.
+that \textcolor{blue}{have been described previously and occur} at
+time scales longer than $20s$, which is the duration over which a
+single data set is collected. \textcolor{blue}{As mentioned earlier,
+we} have checked that the estimates of $D^{\star}$over different
+non-overlapping segments of a \emph{single }data set are within the
+Bayesian error bars, which \textcolor{blue}{again }confirms that the
+errors we observe are due to systematic shifts in the operating conditions
+of the experiment. The agreement in the viscosity values for that
+measured in the rheometer and by the Bayesian estimate of $D^{\star}$is
+within 5\% for all cases with the exception of the last, where the
+enhanced friction caused a shift in $\lambda$ towards lower values,
+once again increasing the effects of systematics due to ambient low
+frequency noise sources. Also, since this value corresponded to the
+highest concentration of glycerol in the water + glycerol mixture,
+the effects of laser heating could have been more significant \cite{schmidt03heating},
+leading to a slight increase of temperature at the trap focal volume
+which we have not considered in the Bayesian estimate.\textcolor{teal}{{}
+}\textcolor{blue}{This ``fluctuation'' method of estimating the
+viscosity does not require the application of external fields and
+is so guaranteed to yield the linear response of the system while
+the Bayesian analysis extracts, optimally, all information relevant
+to this estimation problem. The viscosity of nanoliter samples can
+be estimated by this method, making it an attractive alternative to
+``response'' methods that impose an external shear flow.} \\\\\textbf{\textcolor{black}{\large{}Conclusion}}.
+\label{sec:Conclusion}In this work, we have presented an exact Bayesian
+method for jointly estimating the mean regression rate and the diffusion
+coefficient of an optically trapped Brownian particle. The trap stiffness
+in temperature units is obtained as a ratio of the mean regression
+rate and the diffusion coefficient. We have also rephrased the standard
+``equipartition'' method of directly estimating the trap stiffness
+as a problem in Bayesian inference. We have assumed that the Ornstein-Uhlenbeck
+process is the data generating model. More general models, which include
+the position dependence of the particle friction (as would be the
+case in the proximity to walls) or the non-Markovian character of
+the trajectories (as would be the case when momentum diffusion is
+not slow compared to the time scales of interest) can, with additional
+effort, be incorporated in the Bayesian framework. Exact analytical
+solutions will no longer be available and one has to resort to approximations
+of the likelihood, such as short-time expansions of the Fokker-Planck
+propagator or numerical solutions of the equivalent stochastic differential
+equations. These introduce discretization errors which must be carefully
+evaluated. In contrast, the method presented here is exact and can
+serve as an useful ``null hypothesis'' when comparing between different
+models for the data. In future work, we shall present Bayesian methods
+for more complex models and provide a fully Bayesian procedure, embodying
+Ockham's razor \cite{jaynes2003probability}, for the problem of model
+selection. 
 
+Bayesian analysis is generally applicable in studying the dynamics
+(Brownian or otherwise) of a vast range of mesoscopic particles in
+diverse trapping environments. \textcolor{blue}{While we have focussed
+on spherical particles here, the method is not restricted thus, and
+can be applied to non-spherical particles. The rotational and translation
+motions are typically coupled in such cases, making the analysis more
+difficult in detail but no different in principle. }The capability
+of modeling the apparatus itself could also be extremely helpful in
+understanding and improving the experimental techniques employed in
+optical trapping with the possibility of studying different systematic
+effects that may influence the trajectory of trapped particles, thus
+enhancing the capabilities and sphere of influence of optical tweezers.
+
+Bayesian methods for data analysis are not widespread in soft matter,
+despite of their advantages and demonstrated success in other areas
+of physics. To quote a popular textbook \cite{gregory2005bayesian}:
+``Increasingly, researchers in many branches of science are coming
+into contact with Bayesian statistics or Bayesian probability theory.
+By encompassing both inductive and deductive logic, Bayesian analysis
+can improve model parameter estimates by many orders of magnitude.
+It provides a simple and unified approach to all data analysis problems,
+allowing the experimenter to assign probabilities to competing hypotheses
+of interest, on the basis of the current state of knowledge.'' In
+future, we hope to see many more applications of this ``elegant and
+powerful approach to scientific inference''\cite{gregory2005bayesian}
+to problems in soft matter.
 \begin{table}
 \begin{tabular}{>{\centering}p{2cm}>{\centering}p{2cm}>{\centering}p{2cm}>{\centering}p{2cm}}
 \toprule 
@@ -631,12 +738,61 @@ observed sample paths of a trapped Brownian particle.
 \end{tabular}\caption{Variation of trap stiffness $k$ with laser power estimated by the
 two Bayesian methods of this work (Bayes I and Bayes II) and by the
 standard fit to the spectral density (PSD) \cite{berg2004power}.
-For each value of laser power, the corresponding stiffness is the
-mean over 5 different sets of measurements. The variance of mean is
-indicated in parentheses. The Bayesian standard error is less than
-$1\%$ of the mean for each data set. \label{tab:k-versus-power}}
+The variance of mean is indicated in parentheses. The Bayesian standard
+error is less than $1\%$ of the mean for each data set. \label{tab:k-versus-power}}
 \end{table}
- 
+\begin{table*}
+\begin{tabular}{>{\centering}p{2cm}>{\centering}p{2cm}>{\centering}p{2cm}>{\centering}p{2cm}>{\centering}p{2cm}>{\centering}p{2cm}>{\centering}p{2cm}}
+\toprule 
+\multirow{3}{2cm}{Particle diameter ($\mu m$)} & \multicolumn{3}{c}{$k$ ($pN\mu m^{-1}$)} & \multicolumn{3}{c}{$D^{\star}$ ($10^{-13}ms^{-1}$)}\tabularnewline
+ &  &  &  &  &  & \tabularnewline
+\cmidrule{2-7} 
+ & Bayes I & Bayes II & PSD & Bayes I & Bayes II & PSD\tabularnewline
+\midrule
+3 & 6.01(3) & 6.01(3) & 5.98(12) & 1.73(6) & 1.74(6) & 1.70(8)\tabularnewline
+\midrule
+5 & 11.5(1) & 11.5(1) & 11.6(3)  & 1.015(10) & 1.014(10) & 1.03(5) \tabularnewline
+\midrule
+10 & 3.03(2) & 3.03(5) &  3.26(6) & 0.505(5) & 0.504(5) &  0.50(1)\tabularnewline
+\bottomrule
+\end{tabular}\caption{\label{tab:k-different-dia}Trap stiffness $k$ and diffusion constant
+$D^{\star}$ measured for 3, 5, and 10 $\mu$m diameter polystyrene
+spheres trapped at the same laser power. The variance of mean is indicated
+in parentheses. }
+\end{table*}
+\begin{table*}
+\begin{tabular}{>{\centering}m{2cm}>{\centering}p{2cm}>{\centering}p{2.5cm}>{\centering}p{1cm}}
+\cmidrule{1-3} 
+Laser power
+
+(mW) & $k$ ($pN\mu m^{-1}$) & $D^{\star}$ ($10^{-13}ms^{-1}$) & \tabularnewline
+\cmidrule{1-3} 
+18.5 & 2.44(16) & 1.74(8) & \tabularnewline
+\cmidrule{1-3} 
+43.8 & 5.98(9) & 1.75(3)  & \tabularnewline
+\cmidrule{1-3} 
+ & (a) &  & \tabularnewline
+\end{tabular}%
+\begin{tabular}{>{\centering}m{2cm}>{\centering}p{2cm}>{\centering}p{2.5cm}}
+\toprule 
+Time series length (s) & $k$ ($pN\mu m^{-1}$) & $D^{\star}$ ($10^{-13}ms^{-1}$)\tabularnewline
+\midrule 
+5 & 6.77(6) & 1.78(4)\tabularnewline
+\midrule 
+10 & 6.58(5) & 1.74(3) \tabularnewline
+\midrule 
+20 & 6.72(4) & 1.73(2)\tabularnewline
+\midrule 
+40 & 6.29(2) & 2.01(1)\tabularnewline
+\midrule 
+60 & 5.10(1) & 1.93(1)\tabularnewline
+\midrule
+ & (b) & \tabularnewline
+\end{tabular}\caption{\label{tab:systematic-error}Study of systematic error in the experimental
+apparatus by analysis of particle trajectory for (a) same particle
+trapped at different laser powers, and (b) time series of different
+lengths for the same particle trapped at the same laser power. }
+\end{table*}
 \begin{table}
 \begin{tabular}{>{\centering}m{2cm}>{\centering}p{2cm}>{\centering}p{2cm}>{\centering}p{2cm}}
 \toprule 
@@ -663,74 +819,24 @@ the value of the viscosity, as given by the Stokes-Einstein relation
 for the corresponding value of the diffusion coefficient. There is
 a good match between the first and fourth columns. Note that the first
 row is for water while the rest are for water + glycerol samples with
-increasing glycerol concentration.\label{tab:viscometry}}
+increasing glycerol concentration. The variance of mean is indicated
+in parentheses. \label{tab:viscometry}}
 \end{table}
-
-
-\section{Conclusion\label{sec:Conclusion}}
-
-In this work, we have presented an exact Bayesian method for jointly
-estimating the mean regression rate and the diffusion coefficient
-of an optically trapped Brownian particle. The trap stiffness in temperature
-units is obtained as a ratio of the mean regression rate and the diffusion
-coefficient. We have also rephrased the standard ``equipartition''
-method of directly estimating the trap stiffness as a problem in Bayesian
-inference. We have assumed that the Ornstein-Uhlenbeck process is
-the data generating model. More general models, which include the
-position dependence of the particle friction (as would be the case
-in the proximity to walls) or the non-Markovian character of the trajectories
-(as would be the case when momentum diffusion is not slow compared
-to the time scales of interest) can, with additional effort, be incorporated
-in the Bayesian framework. Exact analytical solutions will no longer
-be available and one has to resort to approximations of the likelihood,
-such as short-time expansions of the Fokker-Planck propagator or numerical
-solutions of the equivalent stochastic differential equations. These
-introduce discretization errors which must be carefully evaluated.
-In contrast, the method presented here is exact and can serve as an
-useful ``null hypothesis'' when comparing between different models
-for the data. In future work, we shall present Bayesian methods for
-more complex models and provide a fully Bayesian procedure, embodying
-Ockham's razor \cite{jaynes2003probability}, for the problem of model
-selection. 
-
-Bayesian analysis is generally applicable in studying the dynamics
-(Brownian or otherwise) of a vast range of mesoscopic particles in
-diverse trapping environments. The capability of modeling the apparatus
-itself could also be extremely helpful in understanding and improving
-the experimental techniques employed in optical trapping with the
-possibility of studying different systematic effects that may influence
-the trajectory of trapped particles, thus enhancing the capabilities
-and sphere of influence of optical tweezers.
-
-Bayesian methods for data analysis are not widespread in soft matter,
-despite of their advantages and demonstrated success in other areas
-of physics. To quote a popular textbook \cite{gregory2005bayesian}:
-``Increasingly, researchers in many branches of science are coming
-into contact with Bayesian statistics or Bayesian probability theory.
-By encompassing both inductive and deductive logic, Bayesian analysis
-can improve model parameter estimates by many orders of magnitude.
-It provides a simple and unified approach to all data analysis problems,
-allowing the experimenter to assign probabilities to competing hypotheses
-of interest, on the basis of the current state of knowledge.'' In
-future, we hope to see many more applications of this ``elegant and
-powerful approach to scientific inference''\cite{gregory2005bayesian}
-to problems in soft matter. 
-\begin{acknowledgments}
-RA expresses his gratitude, long overdue, to Professor M. E. Cates
-for introducing him to Bayesianism.
-\end{acknowledgments}
-
-\appendix
-\section{}
-
-The first partial derivatives of the logarithm of the posterior probability
+\\\\\textbf{\textcolor{black}{\large{}Acknowledgements}}\\RA expresses
+his gratitude, long overdue, to Professor M. E. Cates for introducing
+him to Bayesianism.\\\\\textbf{\textcolor{black}{\large{}Author contributions}}\\SB
+and SP contributed equally to this work - SB worked on the theoretical
+analysis and SP in experiments. RS and RA developed PyBISP. DG helped
+in the data analysis and AK in experiments. RA supervised the development
+of the Bayesian framework and the theoretical analysis. The experiments
+were performed at AB\textquoteright s lab. RA and AB designed the
+research and wrote the paper.\\\\\textbf{\textcolor{black}{\large{}Additional
+information}}\\Competing financial interests: The authors declare
+no competing financial interests.\\\\\textbf{\textcolor{black}{\large{}Appendix\\}}The
+first partial derivatives of the logarithm of the posterior probability
 with respect to $\lambda$ and $D$ are
 \begin{alignat*}{1}
-\frac{\partial\ln P}{\partial\lambda} & =\frac{N-1}{2}\left(\frac{1}{\lambda}-\frac{I_{2}^{\prime}}{I_{2}}\right)-\frac{\sum\Delta_{n}^{2}}{2DI_{2}}\\
- & -\frac{\lambda}{2D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{1}{2\lambda}-\frac{x_{1}^{2}}{2D}
-\end{alignat*}
-\begin{alignat*}{1}
-\frac{\partial\ln P}{\partial D} & =-\frac{N-1}{2D}+\frac{\lambda\sum\Delta_{n}^{2}}{2D^{2}I_{2}}-\frac{1}{2D}+\frac{\lambda x_{1}^{2}}{2D^{2}},
+\frac{\partial\ln P}{\partial\lambda} & =\frac{N-1}{2}\left(\frac{1}{\lambda}-\frac{I_{2}^{\prime}}{I_{2}}\right)-\frac{\sum\Delta_{n}^{2}}{2DI_{2}}-\frac{\lambda}{2D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{1}{2\lambda}-\frac{x_{1}^{2}}{2D},\quad\frac{\partial\ln P}{\partial D}=-\frac{N-1}{2D}+\frac{\lambda\sum\Delta_{n}^{2}}{2D^{2}I_{2}}-\frac{1}{2D}+\frac{\lambda x_{1}^{2}}{2D^{2}},
 \end{alignat*}
 where $I_{2}^{\prime}=2\Delta t\thinspace e^{-2\lambda\Delta t}$.
 Setting the second of these equations to zero, $D$ is solved in term
@@ -741,176 +847,25 @@ with the large-sample asymptotics
 \end{alignat*}
 to cancel all $D$-dependent terms. Setting the resulting equation
 to zero and solving for $\lambda$ then yields the MAP estimates in
-Eq.(\ref{eq:map-estimate}). 
-
-The second partial derivatives of the logarithm of the posterior probability, appearing in Eq. (\ref{eq:quadratic-form}),
-are 
-\begin{align*}
-\Sigma_{11}^{-1}=\frac{\partial^{2}\ln P}{\partial\lambda^{2}} & =\frac{N-1}{2}\Big(-\frac{1}{\lambda^{2}}+\frac{I_{2}^{\prime}I_{2}^{\prime}}{I_{2}^{2}}-\frac{I_{2}^{\prime\prime}}{I_{2}}\Big)-\frac{1}{2\lambda^{2}}\nonumber\\
- & -\frac{1}{D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)-\frac{\lambda}{2D}\frac{\partial^{2}}{\partial\lambda^{2}}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right),
-\end{align*}
-\begin{align*}
-\Sigma_{12}^{-1}=\frac{\partial^{2}\ln P}{\partial D\partial\lambda} & =\frac{\sum\Delta_{n}^{2}}{2D^{2}I_{2}}+\frac{\lambda}{2D^{2}}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{x_{1}^{2}}{2D^{2}},
-\end{align*}
-and
-\begin{align*}
-\Sigma_{22}^{-1}=\frac{\partial^{2}\ln P}{\partial D^{2}} & =\frac{N-1}{2D^{2}}-\frac{\lambda}{D^{3}}\Big(\frac{\sum\Delta_{n}^{2}}{I_{2}}-x_{1}^{2}\Big)+\frac{1}{2D^{2}},
-\end{align*}
+Eq.(\ref{eq:map-estimate}). The second partial derivatives, appearing
+in Eq.(\ref{eq:quadratic-form}), are 
+\begin{alignat*}{1}
+\Sigma_{11}^{-1}=\frac{\partial^{2}\ln P}{\partial\lambda^{2}} & =\frac{N-1}{2}\Big(-\frac{1}{\lambda^{2}}+\frac{I_{2}^{\prime}I_{2}^{\prime}}{I_{2}^{2}}-\frac{I_{2}^{\prime\prime}}{I_{2}}\Big)-\frac{1}{2\lambda^{2}}-\frac{1}{D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)-\frac{\lambda}{2D}\frac{\partial^{2}}{\partial\lambda^{2}}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right),\\
+\Sigma_{12}^{-1}=\frac{\partial^{2}\ln P}{\partial D\partial\lambda}= & \frac{\sum\Delta_{n}^{2}}{2D^{2}I_{2}}+\frac{\lambda}{2D^{2}}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{x_{1}^{2}}{2D^{2}},\qquad\Sigma_{22}^{-1}=\frac{\partial^{2}\ln P}{\partial D^{2}}=\frac{N-1}{2D^{2}}-\frac{\lambda}{D^{3}}\Big(\frac{\sum\Delta_{n}^{2}}{I_{2}}-x_{1}^{2}\Big)+\frac{1}{2D^{2}},
+\end{alignat*}
 where $I_{2}^{\prime\prime}=-4\Delta t^{2}\thinspace e^{-2\lambda\Delta t}$.
-All the derivatives are evaluated at the maximum given in Eq. (\ref{eq:map-estimate}).
+All the derivatives are evaluated at the maximum given in Eq.(\ref{eq:map-estimate}).
 These are assembled into the Hessian matrix $\boldsymbol{\Sigma}^{-1}$and
 the matrix is inverted to give the covariance matrix $\boldsymbol{\Sigma}$
-in Eq. (\ref{eq:quadratic-form}), whose matrix elements are $\sigma_{\lambda}^{2}$,
+in Eq.(\ref{eq:quadratic-form}), whose matrix elements are $\sigma_{\lambda}^{2}$,
 $\sigma_{\lambda D}^{2}$, $\sigma_{D}^{2}$ 
-\begin{align*}
-\sigma_{\lambda}^{2}= &  -\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{22}^{-1},\qquad\sigma_{\lambda D}^{2}=\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{12}^{-1},\\
-\sigma_{D}^{2}= &  -\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{11}^{-1},
-\end{align*}
+\begin{eqnarray*}
+\sigma_{\lambda}^{2}= &  & -\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{22}^{-1},\qquad\sigma_{\lambda D}^{2}=\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{12}^{-1},\qquad\sigma_{D}^{2}=-\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{11}^{-1},
+\end{eqnarray*}
 where $\det\boldsymbol{\Sigma}^{-1}=\Sigma_{11}^{-1}\Sigma_{22}^{-1}-\Sigma_{12}^{-1}\Sigma_{21}^{-1}$
 and $\Sigma_{21}^{-1}=\Sigma_{12}^{-1}$.
 
-\providecommand*{\mcitethebibliography}{\thebibliography}
-\csname @ifundefined\endcsname{endmcitethebibliography}
-{\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{17}
-\providecommand*{\natexlab}[1]{#1}
-\providecommand*{\mciteSetBstSublistMode}[1]{}
-\providecommand*{\mciteSetBstMaxWidthForm}[2]{}
-\providecommand*{\mciteBstWouldAddEndPuncttrue}
-  {\def\EndOfBibitem{\unskip.}}
-\providecommand*{\mciteBstWouldAddEndPunctfalse}
-  {\let\EndOfBibitem\relax}
-\providecommand*{\mciteSetBstMidEndSepPunct}[3]{}
-\providecommand*{\mciteSetBstSublistLabelBeginEnd}[3]{}
-\providecommand*{\EndOfBibitem}{}
-\mciteSetBstSublistMode{f}
-\mciteSetBstMaxWidthForm{subitem}
-{(\emph{\alph{mcitesubitemcount}})}
-\mciteSetBstSublistLabelBeginEnd{\mcitemaxwidthsubitemform\space}
-{\relax}{\relax}
-
-\bibitem[Chandrasekhar(1943)]{chandrasekhar1943stochastic}
-S.~Chandrasekhar, \emph{Reviews of modern physics}, 1943, \textbf{15}, 1\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Van~Kampen(1992)]{van1992stochastic}
-N.~G. Van~Kampen, \emph{Stochastic processes in physics and chemistry},
-  Elsevier, 1992, vol.~1\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Jeffreys(1998)]{jeffreys1998theory}
-H.~Jeffreys, \emph{The theory of probability}, OUP Oxford, 1998\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Zellner(1988)]{zellner1988optimal}
-A.~Zellner, \emph{The American Statistician}, 1988, \textbf{42}, 278--280\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Gardiner
-  \emph{et~al.}(1985)Gardiner\emph{et~al.}]{gardiner1985handbook}
-C.~W. Gardiner \emph{et~al.}, \emph{Handbook of stochastic methods}, Springer
-  Berlin, 1985, vol.~3\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Kubo(1966)]{kubo1966fluctuation}
-R.~Kubo, \emph{Reports on progress in physics}, 1966, \textbf{29}, 255\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Berg-S{\o}rensen and Flyvbjerg(2004)]{berg2004power}
-K.~Berg-S{\o}rensen and H.~Flyvbjerg, \emph{Review of Scientific Instruments},
-  2004, \textbf{75}, 594--612\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Richly \emph{et~al.}(2013)Richly, T{\"u}rkcan, Le~Gall, Fiszman,
-  Masson, Westbrook, Perronet, and Alexandrou]{richly2013calibrating}
-M.~U. Richly, S.~T{\"u}rkcan, A.~Le~Gall, N.~Fiszman, J.-B. Masson,
-  N.~Westbrook, K.~Perronet and A.~Alexandrou, \emph{Optics express}, 2013,
-  \textbf{21}, 31578--31590\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Jaynes and Kempthorne(1976)]{jaynes1976confidence}
-E.~T. Jaynes and O.~Kempthorne, in \emph{Foundations of probability theory,
-  statistical inference, and statistical theories of science}, Springer, 1976,
-  pp. 175--257\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Singh and Adhikari()]{pybisp}
-R.~Singh and R.~Adhikari, \emph{PyBISP},
-  \url{https://github.com/ronojoy/pybisp}\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Wang and Uhlenbeck(1945)]{wang1945theory}
-M.~C. Wang and G.~E. Uhlenbeck, \emph{Reviews of Modern Physics}, 1945,
-  \textbf{17}, 323\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Jaynes(2003)]{jaynes2003probability}
-E.~T. Jaynes, \emph{Probability theory: The logic of science}, Cambridge
-  university press, 2003\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Sivia and Skilling(2006)]{sivia2006data}
-D.~Sivia and J.~Skilling, \emph{Data analysis: a Bayesian tutorial}, OUP
-  Oxford, 2006\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Tassieri \emph{et~al.}(2012)Tassieri, Evans, Warren, Bailey, and
-  Cooper]{tassieri2012microrheology}
-M.~Tassieri, R.~Evans, R.~L. Warren, N.~J. Bailey and J.~M. Cooper, \emph{New
-  Journal of Physics}, 2012, \textbf{14}, 115032\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Pal \emph{et~al.}(2012)Pal, Haldar, Roy, and Banerjee]{rsi12}
-S.~B. Pal, A.~Haldar, B.~Roy and A.~Banerjee, \emph{Review of Scientific
-  Instruments}, 2012, \textbf{83}, 023108\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Peterman \emph{et~al.}(2003)Peterman, Gittes, and
-  Schmidt]{schmidt03heating}
-E.~J.~G. Peterman, F.~Gittes and C.~F. Schmidt, \emph{Biophysical Journal},
-  2003, \textbf{84}, 1308\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\bibitem[Gregory(2005)]{gregory2005bayesian}
-P.~Gregory, \emph{Bayesian Logical Data Analysis for the Physical Sciences: A
-  Comparative Approach with Mathematica{\textregistered} Support}, Cambridge
-  University Press, 2005\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
-\end{mcitethebibliography}
+\bibliographystyle{rsc}
+\bibliography{exact-inference-of-oup}
 
 \end{document}

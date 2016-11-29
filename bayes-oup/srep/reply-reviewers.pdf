@@ -118,6 +118,8 @@ status open
 
 \end_inset
 
+
+\color black
 We thank the reviewer for a positive evaluation and a careful reading of
  our manuscript.
  We have revised our manuscript following the suggestions of the reviewer
@@ -157,7 +159,7 @@ status open
 \end_inset
 
 
-\color teal
+\color black
 We have now reformatted our manuscript to comply with the style of
 \emph on
  Scientific Reports
@@ -194,7 +196,7 @@ status open
 \end_inset
 
 
-\color teal
+\color black
 The three parameters at hand are: (a) stiffness 
 \begin_inset Formula $k$
 \end_inset
@@ -283,7 +285,7 @@ status open
 \end_inset
 
 
-\color teal
+\color black
 We have now elaborated on how we arrive at this conclusion.
  
 \end_layout
@@ -396,10 +398,227 @@ status open
 \end_inset
 
 
-\color teal
+\color black
 The error bars are indeed included, but are so small relative to the mean
  that they are not visible.
  We add a comment to alert the reader to this in the figure caption.
+ 
+\end_layout
+
+\begin_layout Section
+SREP-16-40973: Reply to Reviewer #2
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+The authors applied two Bayesian methods to the analysis of the Brownian
+ motion of a colloid particle confined in an optical trap.
+ The trap stiffness and diffusion coefficient can be estimated and compared
+ with the best fit to PSD and Stokes-Einstein relation.
+ The validity of the methods were then appropriately checked.
+ The current Bayesian methods do not require Monte Carlo sampling and are
+ very accurate and fast.
+ And I personally appreciate the authors’ comments on Bayesian analysis
+ in the conclusion part.
+ They informed the readers of the great potential of the Bayesian methods
+ in soft matter study, which have not been fully explored yet.
+ I think this is a rather well-written paper, for the clearly presented
+ theoretical and experimental procedures and adequate illustrations.
+ I recommend the acceptance.
+ But some minor comments may help the manuscript to be finalized: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\color black
+We thank the reviewer for a positive evaluation of our manuscript.
+ We reply to the comments of the reviewer below.
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+Please be careful with the paper formats of Scientific Reports.
+ Maybe the subsections will be merged.
+ And then the last paragraph of Introduction will not be necessary.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\color black
+We have revised our manuscript to comply with the format of 
+\emph on
+Scientific Reports
+\emph default
+.
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+Please avoid some occasional typos, e.g.
+ the second paragraph of Results and discussion: “In the top panel we show
+ show…”.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\color black
+We have corrected the indicated typo and checked the manuscript carefully
+ for remaining typos.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+The second paragraph of Results and discussion, “The results of Bayesian
+ inference are shown in Figure.
+ (2)”.
+ It should be Figure 3.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\color black
+We have now fixed the cross-reference to Figure 3.
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+For Table II, please indicate what the parentheses mean in the table caption.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\color black
+We have now added the description of the parenthesis in each table of the
+ manuscript.
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+I’d recommend the authors to emphasize their work’s significance more in
+ Introduction part.
+ Currently, I cannot see their main contributions.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\color black
+We have outlined the main contributions of our work in the 6
+\emph on
+th
+\emph default
+ and 7
+\emph on
+th
+\emph default
+ paragraphs of the Introduction to which we draw the reviewers attention.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+I’m wondering whether the Bayesian methods can be applied to study the rotationa
+l diffusion and exerted torque constant of a nonspherical particle in optical
+ trap.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\color black
+We thank the reviewer for raising this important point.
+ Bayesian methods can indeed be used to study this important case as well.
+ The analysis will be considerably more involved, as there will be a coupling
+ of position and orientation, involving the solution of the 6 coupled stochastic
+ differential equations (or, a Fokker-Planck equation in 6 variables).
+ As analytical solutions are generally not known for arbitrary times, we
+ will either have to resort to short time expansions when experimental data
+ is collected sufficiently rapidly compared to the typical relaxation times,
+ or, fall back on Markov Chain Monte Carlo for the general case.
+ We now add this remark in the discussion.
  
 \end_layout
 

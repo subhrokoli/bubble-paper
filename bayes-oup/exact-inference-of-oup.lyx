@@ -134,6 +134,7 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -148,6 +149,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -501,14 +503,14 @@ status open
 
 \backslash
 
+\backslash
+
+\backslash
+
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 
 \series bold
 \size large
@@ -890,14 +892,14 @@ status open
 
 \backslash
 
+\backslash
+
+\backslash
+
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 
 \series bold
 \size large
@@ -1391,14 +1393,14 @@ status open
 
 \backslash
 
+\backslash
+
+\backslash
+
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 
 \series bold
 \size large
@@ -1678,14 +1680,14 @@ status open
 
 \backslash
 
+\backslash
+
+\backslash
+
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 
 \series bold
 \size large
@@ -1957,7 +1959,7 @@ key "simmonsbeadstiff96"
 \color inherit
 
 \begin_inset Float figure
-placement h
+placement t
 wide false
 sideways false
 status open
@@ -2177,7 +2179,7 @@ status open
 \begin_inset Graphics
 	filename figure4.jpg
 	display false
-	width 44text%
+	width 38text%
 
 \end_inset
 
@@ -2194,7 +2196,11 @@ Variation of trap stiffness
 
  with laser power estimated by the two Bayesian methods (Bayes I and Bayes
  II) and by the standard fit to the power spectral density (PSD).
- The error bars are also shown.
+ The error bars are also shown
+\color black
+, but are so small relative to the mean that they are not visible
+\color inherit
+.
  Solid line is the best fit to Bayes I and II while the dotted line is a
  best fit to PSD.
 \begin_inset CommandInset label
@@ -2332,7 +2338,7 @@ key "schmidt03heating"
 
 \color teal
  
-\color inherit
+\color blue
 This 
 \begin_inset Quotes eld
 \end_inset
@@ -2355,7 +2361,9 @@ response
 \end_inset
 
  methods that impose an external shear flow.
- ∑
+
+\color inherit
+ 
 \begin_inset ERT
 status open
 
@@ -2366,14 +2374,14 @@ status open
 
 \backslash
 
+\backslash
+
+\backslash
+
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 
 \series bold
 \size large
@@ -2443,11 +2451,15 @@ key "jaynes2003probability"
 Bayesian analysis is generally applicable in studying the dynamics (Brownian
  or otherwise) of a vast range of mesoscopic particles in diverse trapping
  environments.
- While we have focussed on spherical particles here, the method is not restricte
-d thus, and can be applied to non-spherical particles.
+ 
+\color blue
+While we have focussed on spherical particles here, the method is not restricted
+ thus, and can be applied to non-spherical particles.
  The rotational and translation motions are typically coupled in such cases,
  making the analysis more difficult in detail but no different in principle.
- The capability of modeling the apparatus itself could also be extremely
+ 
+\color inherit
+The capability of modeling the apparatus itself could also be extremely
  helpful in understanding and improving the experimental techniques employed
  in optical trapping with the possibility of studying different systematic
  effects that may influence the trajectory of trapped particles, thus enhancing
@@ -2494,6 +2506,142 @@ key "gregory2005bayesian"
 \end_inset
 
  to problems in soft matter.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\series bold
+\size large
+\color black
+Acknowledgements
+\series default
+\size default
+\color inherit
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+RA expresses his gratitude, long overdue, to Professor M.
+ E.
+ Cates for introducing him to Bayesianism.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\series bold
+\size large
+\color black
+Author contributions
+\series default
+\size default
+\color inherit
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+SB and SP contributed equally to this work - SB worked on the theoretical
+ analysis and SP in experiments.
+ RS and RA developed PyBISP.
+ DG helped in the data analysis and AK in experiments.
+ RA supervised the development of the Bayesian framework and the theoretical
+ analysis.
+ The experiments were performed at AB’s lab.
+ RA and AB designed the research and wrote the paper.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\series bold
+\size large
+\color black
+Additional information
+\series default
+\size default
+\color inherit
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Competing financial interests: The authors declare no competing financial
+ interests
 \begin_inset Float table
 wide false
 sideways false
@@ -3352,6 +3500,8 @@ Trap stiffness
 \end_inset
 
 m diameter polystyrene spheres trapped at the same laser power.
+ The variance of mean is indicated in parentheses.
+ 
 \end_layout
 
 \end_inset
@@ -3791,6 +3941,7 @@ Study of systematic error in the experimental apparatus by analysis of particle
  trajectory for (a) same particle trapped at different laser powers, and
  (b) time series of different lengths for the same particle trapped at the
  same laser power.
+ 
 \end_layout
 
 \end_inset
@@ -4110,6 +4261,8 @@ stein relation for the corresponding value of the diffusion coefficient.
  There is a good match between the first and fourth columns.
  Note that the first row is for water while the rest are for water + glycerol
  samples with increasing glycerol concentration.
+ The variance of mean is indicated in parentheses.
+ 
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:viscometry"
@@ -4127,261 +4280,6 @@ name "tab:viscometry"
 \end_inset
 
 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\backslash
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\size large
-\color black
-Acknowledgements
-\end_layout
-
-\begin_layout Standard
-RA expresses his gratitude, long overdue, to Professor M.
- E.
- Cates for introducing him to Bayesianism.
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\backslash
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\size large
-\color black
-Author contributions 
-\end_layout
-
-\begin_layout Standard
-SB and SP contributed equally to this work - SB worked on the theoretical
- analysis and SP in experiments.
- RS and RA developed PyBISP.
- DG helped in the data analysis and AK in experiments.
- RA supervised the development of the Bayesian framework and the theoretical
- analysis.
- The experiments were performed at AB’s lab.
- RA and AB designed the research and wrote the paper.
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\backslash
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\size large
-\color black
-Additional information 
-\end_layout
-
-\begin_layout Standard
-Competing financial interests: The authors declare no competing financial
- interests.
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\backslash
-
-\end_layout
-
-\end_inset
-
-
-\series bold
-\size large
-\color black
- 
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\size large
-\color black
-Appendix 
-\end_layout
-
-\begin_layout Standard
-The first partial derivatives of the logarithm of the posterior probability
- with respect to 
-\begin_inset Formula $\lambda$
-\end_inset
-
- and 
-\begin_inset Formula $D$
-\end_inset
-
- are
-\begin_inset Formula 
-\begin{alignat*}{1}
-\frac{\partial\ln P}{\partial\lambda} & =\frac{N-1}{2}\left(\frac{1}{\lambda}-\frac{I_{2}^{\prime}}{I_{2}}\right)-\frac{\sum\Delta_{n}^{2}}{2DI_{2}}-\frac{\lambda}{2D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{1}{2\lambda}-\frac{x_{1}^{2}}{2D},\quad\frac{\partial\ln P}{\partial D}=-\frac{N-1}{2D}+\frac{\lambda\sum\Delta_{n}^{2}}{2D^{2}I_{2}}-\frac{1}{2D}+\frac{\lambda x_{1}^{2}}{2D^{2}},
-\end{alignat*}
-
-\end_inset
-
-where 
-\begin_inset Formula $I_{2}^{\prime}=2\Delta t\thinspace e^{-2\lambda\Delta t}$
-\end_inset
-
-.
- Setting the second of these equations to zero, 
-\begin_inset Formula $D$
-\end_inset
-
- is solved in term of 
-\begin_inset Formula $\lambda$
-\end_inset
-
- and this solution is used in the first equation, together with the large-sample
- asymptotics
-\begin_inset Formula 
-\begin{alignat*}{1}
-\frac{\lambda}{N}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}+x_{1}^{2}\right) & \thickapprox\frac{\lambda}{\left(N-1\right)}\frac{\sum\Delta_{n}^{2}}{I_{2}},
-\end{alignat*}
-
-\end_inset
-
-to cancel all 
-\begin_inset Formula $D$
-\end_inset
-
--dependent terms.
- Setting the resulting equation to zero and solving for 
-\begin_inset Formula $\lambda$
-\end_inset
-
- then yields the MAP estimates in Eq.(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map-estimate"
-
-\end_inset
-
-).
- 
-\end_layout
-
-\begin_layout Standard
-The second partial derivatives, appearing in Eq.(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:quadratic-form"
-
-\end_inset
-
-), are 
-\begin_inset Formula 
-\begin{alignat*}{1}
-\Sigma_{11}^{-1}=\frac{\partial^{2}\ln P}{\partial\lambda^{2}} & =\frac{N-1}{2}\Big(-\frac{1}{\lambda^{2}}+\frac{I_{2}^{\prime}I_{2}^{\prime}}{I_{2}^{2}}-\frac{I_{2}^{\prime\prime}}{I_{2}}\Big)-\frac{1}{2\lambda^{2}}-\frac{1}{D}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)-\frac{\lambda}{2D}\frac{\partial^{2}}{\partial\lambda^{2}}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right),\\
-\Sigma_{12}^{-1}=\frac{\partial^{2}\ln P}{\partial D\partial\lambda}= & \frac{\sum\Delta_{n}^{2}}{2D^{2}I_{2}}+\frac{\lambda}{2D^{2}}\frac{\partial}{\partial\lambda}\left(\frac{\sum\Delta_{n}^{2}}{I_{2}}\right)+\frac{x_{1}^{2}}{2D^{2}},\qquad\Sigma_{22}^{-1}=\frac{\partial^{2}\ln P}{\partial D^{2}}=\frac{N-1}{2D^{2}}-\frac{\lambda}{D^{3}}\Big(\frac{\sum\Delta_{n}^{2}}{I_{2}}-x_{1}^{2}\Big)+\frac{1}{2D^{2}},
-\end{alignat*}
-
-\end_inset
-
-where 
-\begin_inset Formula $I_{2}^{\prime\prime}=-4\Delta t^{2}\thinspace e^{-2\lambda\Delta t}$
-\end_inset
-
-.
- All the derivatives are evaluated at the maximum given in Eq.(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map-estimate"
-
-\end_inset
-
-).
- These are assembled into the Hessian matrix 
-\begin_inset Formula $\boldsymbol{\Sigma}^{-1}$
-\end_inset
-
-and the matrix is inverted to give the covariance matrix 
-\begin_inset Formula $\boldsymbol{\Sigma}$
-\end_inset
-
- in Eq.(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:quadratic-form"
-
-\end_inset
-
-), whose matrix elements are 
-\begin_inset Formula $\sigma_{\lambda}^{2}$
-\end_inset
-
-, 
-\begin_inset Formula $\sigma_{\lambda D}^{2}$
-\end_inset
-
-, 
-\begin_inset Formula $\sigma_{D}^{2}$
-\end_inset
-
- 
-\begin_inset Formula 
-\begin{eqnarray*}
-\sigma_{\lambda}^{2}= &  & -\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{22}^{-1},\qquad\sigma_{\lambda D}^{2}=\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{12}^{-1},\qquad\sigma_{D}^{2}=-\frac{1}{\det\boldsymbol{\Sigma}^{-1}}\Sigma_{11}^{-1},
-\end{eqnarray*}
-
-\end_inset
-
-where 
-\begin_inset Formula $\det\boldsymbol{\Sigma}^{-1}=\Sigma_{11}^{-1}\Sigma_{22}^{-1}-\Sigma_{12}^{-1}\Sigma_{21}^{-1}$
-\end_inset
-
- and 
-\begin_inset Formula $\Sigma_{21}^{-1}=\Sigma_{12}^{-1}$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
