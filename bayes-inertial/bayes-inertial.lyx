@@ -14,7 +14,7 @@
 \definecolor{myGreen}{rgb}{0.0, 1, 10.1}
 \definecolor{myBlue}{rgb}{0.9, 0.2, 0}
 \end_preamble
-\options prl, notitlepage, onecolumn 
+\options pre, notitlepage,twocolumn, superscriptaddress
 \use_default_options false
 \maintain_unincluded_children false
 \language english
@@ -83,20 +83,56 @@
 \begin_body
 
 \begin_layout Title
-Stochastic processes
+Fast Bayesian inference of particle inertia in an optical trap
+\end_layout
+
+\begin_layout Author
+Shuvojit Paul
+\end_layout
+
+\begin_layout Affiliation
+Dept of Physical Sciences, Indian Institute of Science Education and Research,
+ Kolkata, Mohanpur 741246
 \end_layout
 
 \begin_layout Author
 Rajesh Singh
 \end_layout
 
-\begin_layout Author Email
-rsingh@imsc.res.in
+\begin_layout Affiliation
+The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
+ 600113
+\end_layout
+
+\begin_layout Author
+Dipanjan Ghosh
 \end_layout
 
 \begin_layout Affiliation
-The Institute of Mathematical Sciences-HBNI, CIT Campus, Chennai 600113,
- India
+Dept of Chemical Engineering, Jadavpur University, Kolkata 700032
+\end_layout
+
+\begin_layout Author
+Avijit Kundu
+\end_layout
+
+\begin_layout Affiliation
+Dept of Physical Sciences, Indian Institute of Science Education and Research,
+ Kolkata, Mohanpur 741246
+\end_layout
+
+\begin_layout Author
+Ayan Banerjee
+\end_layout
+
+\begin_layout Author Email
+
+ayan@iiserkol.ac.in
+\end_layout
+
+\begin_layout Affiliation
+Dept of Physical Sciences, Indian Institute of Science Education and Research,
+ Kolkata, Mohanpur 741246
 \end_layout
 
 \begin_layout Author
@@ -105,18 +141,30 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
 \begin_layout Affiliation
-The Institute of Mathematical Sciences-HBNI, CIT Campus, Chennai 600113,
- India
+The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
+ 600113
 \end_layout
 
 \begin_layout Abstract
-Bayesian inference of the Markov and non-Markov processes is presented here.
- We also provide a numerical implementation of the expression provided.
- 
+Recent advances in instrumentation have enabled the observation of the inertial
+ motion of optically trapped Brownian particles.
+ This motion is usually modeled as a Brownian harmonic oscillator whose
+ parameters are the particle mass and friction, the trap stiffness and the
+ fluid temperature.
+ Here, we use Bayesian inference to estimate these parameters from a series
+ of discrete observations of the position and velocity of the Brownian particle.
+ We use the exact likelihood and non-informative priors to construct the
+ posterior distribution in terms of a set of sufficient statistics from
+ which exact point and interval parameter estimates are derived.
+ This eliminates the need to sample or approximate the posterior and yields,
+ therefore, fast and accurate estimates.
+ The method outperforms non-Bayesian fitting methods when applied to experimenta
+l data.
 \end_layout
 
 \begin_layout Section
