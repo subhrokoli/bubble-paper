@@ -156,15 +156,16 @@ Recent advances in instrumentation have enabled the observation of the inertial
  This motion is usually modeled as a Brownian harmonic oscillator whose
  parameters are the particle mass and friction, the trap stiffness and the
  fluid temperature.
- Here, we use Bayesian inference to estimate these parameters from a series
- of discrete observations of the position and velocity of the Brownian particle.
- We use the exact likelihood and non-informative priors to construct the
- posterior distribution in terms of a set of sufficient statistics from
- which exact point and interval parameter estimates are derived.
- This eliminates the need to sample or approximate the posterior and yields,
- therefore, fast and accurate estimates.
- The method outperforms non-Bayesian fitting methods when applied to experimenta
-l data.
+ Here, we use Bayesian inference to jointly estimate these parameters from
+ a series of discrete observations of the position and velocity of the Brownian
+ particle.
+ We use an exact likelihood and non-informative priors to derive exact point
+ and interval estimates of the parameters in terms of a set of sufficient
+ statistics of the posterior distribution.
+ This eliminates the need to sample or approximate the posterior and thereby
+ yields fast and accurate estimates.
+ The method outperforms non-Bayesian fitting methods in estimating particle
+ inertia from experimental data.
 \end_layout
 
 \begin_layout Section
