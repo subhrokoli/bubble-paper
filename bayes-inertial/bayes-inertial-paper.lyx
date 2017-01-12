@@ -86,9 +86,202 @@
 Bayesian Inference of Multivariate Ornstein Uhlenbeck Process
 \end_layout
 
+\begin_layout Author
+Authors
+\end_layout
+
+\begin_layout Abstract
+Bayesian parameter estimation for multivariate Ornstein Uhlenbeck process
+\end_layout
+
+\begin_layout Section
+Multivariate Ornstein-Uhlenbeck Process
+\end_layout
+
+\begin_layout Standard
+Consider a system of 
+\begin_inset Formula $N$
+\end_inset
+
+ particles specified by Cartesian coordinates 
+\begin_inset Formula $x_{i},i=1,...,3N$
+\end_inset
+
+, interacting thorugh the potential
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V\left(\boldsymbol{x}\right)=\dfrac{1}{2}\sum_{i,j=1}^{3N}\left(\dfrac{\partial^{2}V}{\partial x_{i}\partial x_{j}}\right)_{\boldsymbol{x^{0}}}\left(x_{i}-x_{i}^{0}\right)\left(x_{j}-x_{j}^{0}\right)=\dfrac{1}{2}\sum_{i,j=1}^{3N}V_{ij}^{''}\Delta x_{i}\Delta x_{j}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $x_{i}^{0}$
+\end_inset
+
+ denotes the equilibrium positions of the particles and we have defined
+ the quantity 
+\begin_inset Formula $\Delta x_{i}=x_{i}-x_{i}^{0}$
+\end_inset
+
+.
+ The dynamics of this system can be described by a set of coupled Langevin
+ equations
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+m_{i}\ddot{x_{i}}+\sum_{j=1}^{3N}\zeta_{ij}\dot{x}_{j}+\sum_{j=1}^{3N}V_{ij}^{''}\left(x_{j}-x_{j}^{0}\right)=\xi_{i}\left(t\right),\;\;\;,i=1,...,3N
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\boldsymbol{\zeta}$
+\end_inset
+
+ is the friction matrix, non-diagonal in the presence of hydrodynamic interactio
+ns and 
+\begin_inset Formula $\xi_{i}\left(t\right)$
+\end_inset
+
+ is a zero-mean Gaussian white noise with variance 
+\begin_inset Formula $\langle\xi\left(t\right)\xi\left(t'\right)\rangle=2k_{B}T\zeta_{ij}\delta\left(t-t'\right)$
+\end_inset
+
+as required by the fluctuation-dissipation theorem.
+ 
+\end_layout
+
+\begin_layout Standard
+In the position-velocity phase space, 
+\begin_inset Formula $P_{1\vert1}\left(\boldsymbol{\alpha},t\vert\boldsymbol{\alpha_{0}},t_{0}\right)$
+\end_inset
+
+, the probability density of transition from phase 
+\begin_inset Formula $\boldsymbol{\alpha_{0}}$
+\end_inset
+
+ at time 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+ to 
+\begin_inset Formula $\boldsymbol{\alpha}$
+\end_inset
+
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+, obeys the Fokker-Planck equation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\dfrac{\partial P\left(\boldsymbol{\alpha},t\vert\boldsymbol{\alpha_{0}},t_{0}\right)}{\partial t}=\sum_{i,j=1}^{6N}\left(-\lambda_{ij}\dfrac{\partial}{\partial\alpha_{i}}\alpha_{j}+D_{ij}\dfrac{\partial^{2}}{\partial\alpha_{i}\partial\alpha_{j}}\right)P\left(\boldsymbol{\alpha},t\vert\boldsymbol{\alpha_{0}},t_{0}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where the mass-weighted coordinates and velocities are defined as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\alpha_{i}=m_{i}^{\nicefrac{1}{2}}\Delta x_{i},\;\;\;i=1,...,3N,
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\alpha_{i}=m_{i}^{\nicefrac{1}{2}}\dot{x_{i}},\;\;\;i=3N+1,..,6N
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+, known as the drift and diffusion matrices respectively, are given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\lambda=\begin{pmatrix}\boldsymbol{0} & \boldsymbol{I}\\
+\boldsymbol{-F} & \boldsymbol{-\gamma}
+\end{pmatrix},\;\;\;\boldsymbol{D}=\left(k_{B}T\right)^{-1}\begin{pmatrix}\boldsymbol{0} & \boldsymbol{0}\\
+\boldsymbol{0} & \boldsymbol{\gamma}
+\end{pmatrix}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+with 
+\begin_inset Formula $\boldsymbol{I}$
+\end_inset
+
+denoting the 
+\begin_inset Formula $3N\times3N$
+\end_inset
+
+ unit matrix and 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\gamma_{ij}=\left(m_{i}m_{j}\right)^{-\nicefrac{1}{2}}\zeta_{ij},\;\;\;F_{ij}=\left(m_{i}m_{j}\right)^{-\nicefrac{1}{2}}V_{ij}^{''}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The solution is a normal distribution
+\end_layout
+
 \begin_layout Standard
 The vector 
-\begin_inset Formula $y=\left[x\;\;v\right]^{T}$
+\begin_inset Formula $y=\left[x\;\;\dot{x}\right]^{T}$
 \end_inset
 
  contains the position and velocity of the inertial Brownian particle at
@@ -130,6 +323,10 @@ y\sim\mathcal{N}\left(0\;,\;C\right)
 
 \end_layout
 
+\begin_layout Section
+Bayesian inference
+\end_layout
+
 \begin_layout Standard
 Consider, now the vector time series 
 \begin_inset Formula $Y=\left(y_{1},y_{2},...,y_{N}\right)$
@@ -140,7 +337,7 @@ Consider, now the vector time series
 \end_inset
 
  and particle velocity 
-\begin_inset Formula $v\left(t\right)$
+\begin_inset Formula $\dot{x}\left(t\right)$
 \end_inset
 
  at discrete times 
@@ -223,10 +420,6 @@ where we have defined the two quantities
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section*
-Completing the square
 \end_layout
 
 \begin_layout Standard
