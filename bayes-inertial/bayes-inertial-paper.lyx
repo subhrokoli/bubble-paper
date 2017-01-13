@@ -14,7 +14,7 @@
 \definecolor{myGreen}{rgb}{0.0, 1, 10.1}
 \definecolor{myBlue}{rgb}{0.9, 0.2, 0}
 \end_preamble
-\options pre, notitlepage,onecolumn, superscriptaddress
+\options aps, twocolumn, pre,superscriptaddress, notitlepage
 \use_default_options false
 \maintain_unincluded_children false
 \language english
@@ -119,7 +119,21 @@ The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
 \end_layout
 
 \begin_layout Abstract
-Bayesian parameter estimation for multivariate Ornstein Uhlenbeck process
+The multivariate Ornstein-Uhlenbeck process is used in many branches of
+ science and engineering to describe the regression of a system to its stationar
+y mean.
+ In systems with microscopic reversibility the matrix of regression rates
+ is constrained by the Onsager-Casimir relations.
+ Here we present a fast Bayesian method to infer the drift and diffusion
+ coefficients of the process from discretely observed sample paths.
+ We use exact likelihoods, expressed in terms of sufficient statistics,
+ to derive simple expressions for the maximum a posteriori estimates.
+ We show that the dimensionality of the parameter estimation problem is
+ reduced in the presence of Onsager-Casimir symmetry.
+ We apply our result to estimate the parameters of underdamped phonons in
+ a colloidal crystal using video microscopy data.
+ Other applications are indicated.
+ 
 \end_layout
 
 \begin_layout Section
