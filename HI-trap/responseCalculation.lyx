@@ -112,7 +112,7 @@ Hydrodynamic interactions play an important role in the motion of micron-sized
 \end_inset
 
 , centered at 
-\begin_inset Formula $\mathbf{R}_{i}$
+\begin_inset Formula $\bar{\mathbf{r}}_{i}$
 \end_inset
 
 .
@@ -122,7 +122,7 @@ Hydrodynamic interactions play an important role in the motion of micron-sized
 \begin_layout Standard
 \begin_inset Formula 
 \begin{alignat}{1}
-m_{i}\dot{\mathbf{v}}_{i} & +\boldsymbol{\gamma}_{_{ij}}\mathbf{v}_{j}+k_{i}(\mathbf{r}_{i}-\mathbf{R}_{i})=\bm{\xi}_{i}
+m_{i}\dot{\mathbf{v}}_{i} & +\boldsymbol{\gamma}_{_{ij}}\cdot\mathbf{v}_{j}+k_{i}(\mathbf{r}_{i}-\mathbf{\bar{\mathbf{r}}}_{i})=\bm{\xi}_{i}
 \end{alignat}
 
 \end_inset
@@ -166,7 +166,7 @@ where
 \end_inset
 
  is the Oseen tensor and 
-\begin_inset Formula $\mathcal{F}_{i}=1+\frac{a_{i}^{2}}{6}\nabla_{i}^{2}$
+\begin_inset Formula $\mathcal{F}_{i}=6\pi\eta a_{i}(1+\frac{a_{i}^{2}}{6}\nabla_{i}^{2})$
 \end_inset
 
  is the Faxen correction.
