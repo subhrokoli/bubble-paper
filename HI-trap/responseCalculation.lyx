@@ -122,7 +122,7 @@ Hydrodynamic interactions play an important role in the motion of micron-sized
 \begin_layout Standard
 \begin_inset Formula 
 \begin{alignat}{1}
-m_{i}\dot{\mathbf{v}}_{i} & =-\boldsymbol{\gamma}_{_{ij}}\mathbf{v}_{j}-\bm{\nabla}_{i}U+\bm{\xi}_{i}
+m_{i}\dot{\mathbf{v}}_{i} & +\boldsymbol{\gamma}_{_{ij}}\mathbf{v}_{j}+k_{i}(\mathbf{r}_{i}-\mathbf{R}_{i})=\bm{\xi}_{i}
 \end{alignat}
 
 \end_inset
@@ -174,12 +174,9 @@ where
  between the particles is large compared to their radii.
  More accurate expressions, correct at all distances, are available in the
  literature.
- The potential is a sum of harmonic terms from each spring 
-\begin_inset Formula $U=\sum_{i}\frac{1}{2}k|\mathbf{r}_{i}-\mathbf{R}_{i}|^{2}$
-\end_inset
-
- .
- With these, the model is completely specified.
+ Note that the source of coupling in the equations of motion above is the
+ mutual friction, which is a dissipative coupling.
+ There is no conservative coupling in this problem.
  
 \end_layout
 
