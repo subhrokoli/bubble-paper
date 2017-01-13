@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass revtex4-1
 \begin_preamble
 \usepackage{fullpage}
@@ -13,16 +15,16 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -74,7 +76,7 @@
 \begin_body
 
 \begin_layout Title
-Hydrodynamic Synchronization of optically trapped micro-beads
+Hydrodynamically interacting Brownian motion of harmonically trapped colloids
 \end_layout
 
 \begin_layout Section
@@ -82,58 +84,128 @@ introduction
 \end_layout
 
 \begin_layout Standard
-Hydrodynamic interaction plays an important role in the dynamics of microscopic
- particles.
- In a simple experimental setup using two optical traps, trapping a microbead
- each, we study the response of the second bead when first bead is driven
- with periodic force.
- We have further developed a theory to study and analyzed the experimental
- results.
- 
-\end_layout
-
-\begin_layout Standard
-The force balance equation of the optically trapped bead is,
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{subequations}
-\backslash
-
-\end_layout
-
+Hydrodynamic interactions play an important role in the motion of micron-sized
+ particles in viscous fluids.
+ When particle displacments are small in the time it takes vorticity to
+ cross the distance between them, hydrodynamic interactions appear to be
+ instantaneous, and follow from the solution of the quasi-static Stokes
+ equations.
+ Consider now, two colloidal particles of mass 
+\begin_inset Formula $m_{i}$
 \end_inset
 
+ and radius 
+\begin_inset Formula $a_{i}$
+\end_inset
 
+, where 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+, in an incompressible fluid of viscosity 
+\begin_inset Formula $\eta$
+\end_inset
+
+.
+ The particles are trapped optically in harmonic traps of stiffness 
+\begin_inset Formula $k_{i}$
+\end_inset
+
+, centered at 
+\begin_inset Formula $\mathbf{R}_{i}$
+\end_inset
+
+.
+ Then, the equation motion of the particles is 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{alignat}{1}
-m\dot{\mathbf{v}}_{i} & =-\bm{\gamma}_{ij}\mathbf{v}_{j}-\bm{\nabla}_{i}U+\bm{\xi}_{i}\\
-\dot{\mathbf{R}}_{i} & =\mathbf{v}_{i}
+m_{i}\dot{\mathbf{v}}_{i} & =-\boldsymbol{\gamma}_{_{ij}}\mathbf{v}_{j}-\bm{\nabla}_{i}U+\bm{\xi}_{i}
 \end{alignat}
 
 \end_inset
 
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{subequations}
-\end_layout
-
+where 
+\begin_inset Formula $\dot{\mathbf{r}}_{i}=\mathbf{v}_{i}$
 \end_inset
 
+ are the particle velocities, 
+\begin_inset Formula $\boldsymbol{\gamma}_{ij}$
+\end_inset
 
+ are the friction tensors and 
+\begin_inset Formula $\boldsymbol{\xi}_{i}$
+\end_inset
+
+ are Langevin noises satisfying the fluctuation-dissipation relation 
+\begin_inset Formula $\langle\boldsymbol{\xi}_{i}(t)\boldsymbol{\xi}_{j}(t')\rangle=2k_{B}T\boldsymbol{\gamma}_{ij}\delta(t-t')$
+\end_inset
+
+.
+ The friction tensors have both self (
+\begin_inset Formula $i=j)$
+\end_inset
+
+ and mutual (
+\begin_inset Formula $i\neq j)$
+\end_inset
+
+ contributions.
+ They are 
+\begin_inset Formula $\boldsymbol{\gamma}_{ii}=6\pi\eta a_{i}\boldsymbol{I}$
+\end_inset
+
+ and 
+\begin_inset Formula $\boldsymbol{\gamma}_{ij}=\mathcal{F}_{i}\mathcal{F}_{j}\mathbf{G}(\mathbf{r}_{i}-\mathbf{r}_{j})$
+\end_inset
+
+, where 
+\begin_inset Formula $\mathbf{G}$
+\end_inset
+
+ is the Oseen tensor and 
+\begin_inset Formula $\mathcal{F}_{i}=1+\frac{a_{i}^{2}}{6}\nabla_{i}^{2}$
+\end_inset
+
+ is the Faxen correction.
+ Note that this expression for the frictions apply only when the separation
+ between the particles is large compared to their radii.
+ More accurate expressions, correct at all distances, are available in the
+ literature.
+ The potential is a sum of harmonic terms from each spring 
+\begin_inset Formula $U=\sum_{i}\frac{1}{2}k|\mathbf{r}_{i}-\mathbf{R}_{i}|^{2}$
+\end_inset
+
+ .
+ With these, the model is completely specified.
+ 
+\end_layout
+
+\begin_layout Standard
+In the first approximation, the particle inertia may be neglected and the
+ momentum adiabatically eliminated from the system.
+ This will lead to overdamped Langevin equations, in which the divergence
+ of the inverse of the friction tensor will appear in the equations of motion.
+ Those equations can be linearised to compute the fluctuations in the positions
+ of individual particles.
+ This dynamics will, in general, be non-Markovian.
+ Therefore, starting from a Markovian system of equations for the position
+ and momentum, adiabatic elimination of the momentum, and then the projection
+ to the one-particle subspace, will produce non-Markovian equations of motion.
+ These will contain memory terms, whose strength will be depend on the hydrodyna
+mic interaction of the particles.
+ As the particles are removed far away from each other, the memory will
+ disappear, and each particle will have Markovian dynamics.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $NOTE:$
+\end_inset
+
+There may be errors in the calculation below!
 \end_layout
 
 \begin_layout Standard
@@ -320,7 +392,7 @@ Two time scales from two traps can be calculated to be
 \begin_inset Float figure
 wide true
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -386,7 +458,7 @@ begin{widetext}
 \mu & \mu_{12}\\
 \mu_{21} & \mu
 \end{array}\right]\nonumber \\
- & =\frac{1}{Det\, A_{\parallel}-\Omega^{2}-i\Omega Tr\, A_{\parallel}}\left[\begin{array}{cc}
+ & =\frac{1}{Det\,A_{\parallel}-\Omega^{2}-i\Omega Tr\,A_{\parallel}}\left[\begin{array}{cc}
 (\mu k_{2}-i\Omega) & -\mu_{12}k_{2}\\
 \, & \,\\
 -\mu_{21}k_{1} & (\mu k_{1}-i\Omega)
@@ -394,26 +466,26 @@ begin{widetext}
 \mu & \mu_{12}\\
 \mu_{21} & \mu
 \end{array}\right]\nonumber \\
- & =\frac{Det\, A_{\parallel}-\Omega^{2}+i\Omega Tr\, A_{\parallel}}{(Det\, A_{\parallel}-\Omega^{2})^{2}+\Omega^{2}(Tr\, A_{\parallel})^{2}}\left[\begin{array}{cc}
+ & =\frac{Det\,A_{\parallel}-\Omega^{2}+i\Omega Tr\,A_{\parallel}}{(Det\,A_{\parallel}-\Omega^{2})^{2}+\Omega^{2}(Tr\,A_{\parallel})^{2}}\left[\begin{array}{cc}
 k_{2}DetM_{\parallel}-i\mu\Omega & -i\Omega\mu_{12}\\
 \, & \,\\
 -i\Omega\mu_{21} & k_{1}DetM_{\parallel}-i\mu\Omega
 \end{array}\right]\nonumber \\
-\bm{\chi}_{\parallel}^{'}(\Omega) & =\frac{1}{(Det\, A_{\parallel}-\Omega^{2})^{2}+\Omega^{2}(Tr\, A_{\parallel})^{2}}\left[\begin{array}{cc}
+\bm{\chi}_{\parallel}^{'}(\Omega) & =\frac{1}{(Det\,A_{\parallel}-\Omega^{2})^{2}+\Omega^{2}(Tr\,A_{\parallel})^{2}}\left[\begin{array}{cc}
 \begin{array}{c}
 k_{2}DetA_{\parallel}DetM_{\parallel}\\
 +\Omega^{2}(k_{2}\mu_{12}\mu_{21}+k_{1}\mu^{2})
-\end{array} & \Omega^{2}Tr\, A_{\parallel}\mu_{12}\\
-{\displaystyle \Omega^{2}Tr\, A_{\parallel}\mu_{12}} & \begin{array}{c}
+\end{array} & \Omega^{2}Tr\,A_{\parallel}\mu_{12}\\
+{\displaystyle \Omega^{2}Tr\,A_{\parallel}\mu_{12}} & \begin{array}{c}
 k_{1}DetA_{\parallel}DetM_{\parallel}\\
 +\Omega^{2}(k_{1}\mu_{12}\mu_{21}+k_{2}\mu^{2})
 \end{array}
 \end{array}\right]\nonumber \\
 \nonumber \\
-\bm{\chi}_{\parallel}^{''}(\Omega) & =\frac{\Omega}{(Det\, A_{\parallel}-\Omega^{2})^{2}+\Omega^{2}(Tr\, A_{\parallel})^{2}}\left[\begin{array}{cc}
-{\displaystyle \mu k_{2}^{2}DetM_{\parallel}+\mu\Omega^{2}} & -(Det\, A_{\parallel}-\Omega^{2})\mu_{12}\\
+\bm{\chi}_{\parallel}^{''}(\Omega) & =\frac{\Omega}{(Det\,A_{\parallel}-\Omega^{2})^{2}+\Omega^{2}(Tr\,A_{\parallel})^{2}}\left[\begin{array}{cc}
+{\displaystyle \mu k_{2}^{2}DetM_{\parallel}+\mu\Omega^{2}} & -(Det\,A_{\parallel}-\Omega^{2})\mu_{12}\\
 \\
--(Det\, A_{\parallel}-\Omega^{2})\mu_{21} & \mu k_{1}^{2}DetM_{\parallel}+\mu\Omega^{2}
+-(Det\,A_{\parallel}-\Omega^{2})\mu_{21} & \mu k_{1}^{2}DetM_{\parallel}+\mu\Omega^{2}
 \end{array}\right]\label{eq:ImRes2}
 \end{alignat}
 
@@ -450,8 +522,8 @@ We are interested in the resonance in amplitude of the second bead due to
  
 \begin_inset Formula 
 \begin{eqnarray*}
-|\chi_{21}| & =\big| & \frac{-i\Omega\mu_{21}}{Det\, A_{\parallel}-\Omega^{2}-i\Omega Tr\, A_{\parallel}}\big|\\
- & = & \frac{\Omega\mu_{21}}{\sqrt{\left(Det\, A_{\parallel}-\Omega^{2}\right)^{2}+\Omega^{2}(Tr\, A_{\parallel})^{2}}}
+|\chi_{21}| & =\big| & \frac{-i\Omega\mu_{21}}{Det\,A_{\parallel}-\Omega^{2}-i\Omega Tr\,A_{\parallel}}\big|\\
+ & = & \frac{\Omega\mu_{21}}{\sqrt{\left(Det\,A_{\parallel}-\Omega^{2}\right)^{2}+\Omega^{2}(Tr\,A_{\parallel})^{2}}}
 \end{eqnarray*}
 
 \end_inset
@@ -504,7 +576,7 @@ Correlation matrix become
 \begin_inset Formula 
 \begin{eqnarray}
 \langle\mathbf{R}(\omega)\mathbf{R}^{\dagger}(\omega)\rangle & = & (-i\omega\bm{\delta}+\mathbf{A})^{-1}\mathbf{M}\langle\bm{\xi}(\omega)\bm{\xi}^{\dagger}(\omega)\rangle\mathbf{M}(i\omega\bm{\delta}+\mathbf{A}^{T})^{-1}\nonumber \\
-\frac{1}{2k_{B}T}\, C_{\Delta\Delta} & = & (-i\omega\bm{\delta}+\mathbf{A})^{-1}\mathbf{M}(i\omega\bm{\delta}+\mathbf{A}^{T})^{-1}\label{eq:Corr2}
+\frac{1}{2k_{B}T}\,C_{\Delta\Delta} & = & (-i\omega\bm{\delta}+\mathbf{A})^{-1}\mathbf{M}(i\omega\bm{\delta}+\mathbf{A}^{T})^{-1}\label{eq:Corr2}
 \end{eqnarray}
 
 \end_inset
@@ -528,7 +600,7 @@ begin{widetext}
 \begin_layout Standard
 \begin_inset Formula 
 \[
-(-i\omega\bm{\delta}+\mathbf{A}_{\parallel})^{-1}\mathbf{M}_{\parallel}(i\omega\bm{\delta}+\mathbf{A}_{\parallel}^{T})^{-1}=\frac{1}{(Det\, A_{\parallel}-\omega^{2})^{2}+\omega^{2}(Tr\, A_{\parallel})^{2}}\left[\begin{array}{cc}
+(-i\omega\bm{\delta}+\mathbf{A}_{\parallel})^{-1}\mathbf{M}_{\parallel}(i\omega\bm{\delta}+\mathbf{A}_{\parallel}^{T})^{-1}=\frac{1}{(Det\,A_{\parallel}-\omega^{2})^{2}+\omega^{2}(Tr\,A_{\parallel})^{2}}\left[\begin{array}{cc}
 \mu k_{2}-i\omega & -\mu_{12}k_{2}\\
 -\mu_{21}k_{1} & \mu k_{1}-i\omega
 \end{array}\right]\left[\begin{array}{cc}
