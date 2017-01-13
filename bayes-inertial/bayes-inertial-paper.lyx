@@ -229,7 +229,7 @@ The transition probability density
 , where the Fokker-Planck operator is
 \begin_inset Formula 
 \begin{equation}
-\mathcal{L}=\frac{\partial}{\partial x_{i}}\lambda_{ij}x_{j}+\frac{\partial^{2}}{\partial x_{i}\partial x_{j}}D_{ij}.
+\mathcal{L}=-\frac{\partial}{\partial x_{i}}\lambda_{ij}x_{j}+\frac{\partial^{2}}{\partial x_{i}\partial x_{j}}D_{ij}.
 \end{equation}
 
 \end_inset
@@ -292,11 +292,11 @@ key "van1992stochastic"
 \uwave off
 \noun off
 \color none
-The Fourier transform of the correlation function gives the power spectral
- density
+The PSD matrix, in terms of the linearised drift and diffusion matrices
+ for a multivariate Ornstein-Uhlenbeck process is 
 \begin_inset Formula 
 \begin{equation}
-C(\omega)\equiv\langle|x(\omega)|^{2}\rangle=\frac{k_{B}T}{k}\frac{1}{\omega^{2}+\lambda^{2}}\label{eq:spectral-density}
+\boldsymbol{P}(ω)=(\text{−}iω\mathbb{I}+\boldsymbol{\lambda})^{-1}\left(2\boldsymbol{D}\right)(iω\mathbb{I}+\boldsymbol{\lambda^{T}})^{-1}\label{eq:spectral-density}
 \end{equation}
 
 \end_inset
@@ -326,7 +326,7 @@ The stationary distribution
  and the solution is, again, a normal distribution,
 \begin_inset Formula 
 \begin{equation}
-x\sim\mathcal{N}\left(0,\frac{D}{\lambda}\right)=\mathcal{N}\left(0,\frac{k_{B}T}{k}\right).
+\boldsymbol{x}\sim\mathcal{N}\left(\boldsymbol{0},\boldsymbol{c}\right).
 \end{equation}
 
 \end_inset
@@ -343,15 +343,8 @@ Consider, now the vector time series
 \begin_inset Formula $Y=\left(y_{1},y_{2},...,y_{N}\right)$
 \end_inset
 
- consisting of observations of the sample path 
-\begin_inset Formula $x\left(t\right)$
-\end_inset
-
- and particle velocity 
-\begin_inset Formula $\dot{x}\left(t\right)$
-\end_inset
-
- at discrete times 
+ consisting of observations of the sample states of the multidimensional
+ Ornstein-Uhlenbeck process at discrete times 
 \begin_inset Formula $t=n\Delta t$
 \end_inset
 
