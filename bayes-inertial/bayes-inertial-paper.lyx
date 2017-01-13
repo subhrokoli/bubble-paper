@@ -83,11 +83,39 @@
 \begin_body
 
 \begin_layout Title
-Bayesian Inference of Multivariate Ornstein Uhlenbeck Process
+Fast Bayesian inference of the multivariate Ornstein-Uhlenbeck process
 \end_layout
 
 \begin_layout Author
-Authors
+Dipanjan Ghosh
+\end_layout
+
+\begin_layout Affiliation
+Dept of Chemical Engineering, Jadavpur University, Kolkata 700032, India
+\end_layout
+
+\begin_layout Author
+Rajesh Singh
+\end_layout
+
+\begin_layout Affiliation
+The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
+ 600113, India
+\end_layout
+
+\begin_layout Author
+R.
+ Adhikari
+\end_layout
+
+\begin_layout Author Email
+
+rjoy@imsc.res.in
+\end_layout
+
+\begin_layout Affiliation
+The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
+ 600113, India
 \end_layout
 
 \begin_layout Abstract
