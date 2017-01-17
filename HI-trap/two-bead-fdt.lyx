@@ -190,21 +190,14 @@ today
 \end_layout
 
 \begin_layout Abstract
-We study the overdamped dynamics of a pair of optically trapped colloidal
- particles in a viscous fluid separated by distances comparable to their
- radii.
- We show that such a system provides a natural test-bed for the direct verificat
-ion of the fluctuation-response theorem where we measure the response of
- a weakly trapped probe particle under the influence of a sinusoidally driven
- strongly trapped particle and compare this with separate measurements of
- the cross-correlation function between the two particles with the driving
- switched off.
- A theoretical analysis of the problem with fluid-mediated interactions
- represented by mobility tensors matches experimental results and also reveals
- a maxima in the amplitude response of the forced particle as a function
- of frequency of the forcing particle.
- This amplitude 'resonance' is a sensitive function of the fluid viscosity
- suggesting the use of this setup for accurate two-point microrheology.
+The fluctuation-response relation, the central result of linear response
+ theory, gives the response of a system to weak external forces in terms
+ of its equilibrium fluctuations.
+ Here we provide a direct verification of this relation for a pair of dissipativ
+ely coupled oscillators as realized by optically trapped colloidal particles.
+ The sharp 'resonance' peak in the modulus of the response can be utilized
+ to simultaneously calibrate pairs of traps or to accurately measure the
+ viscosity of the ambient fluid.
  
 \end_layout
 
