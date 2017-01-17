@@ -113,8 +113,8 @@ APS/123-QED
 \end_layout
 
 \begin_layout Title
-Direct verification of the fluctuation-response theorem in two optically
- trapped and hydrodynamically coupled colloidal particles
+Direct verification of the fluctuation-response theorem in dissipatively
+ coupled oscillators
 \end_layout
 
 \begin_layout Author
@@ -150,7 +150,6 @@ Ronojoy Adhikari
 \end_layout
 
 \begin_layout Author Email
-
 ronojoy.adhikari@gmail.com
 \end_layout
 
@@ -167,7 +166,6 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -725,7 +723,7 @@ centering
 
  
 \begin_inset Graphics
-	filename fig1.pdf
+	filename ../../../2016/twobeadhydro/fig1.pdf
 	width 45text%
 
 \end_inset
@@ -792,33 +790,19 @@ reference "Setup"
 \end_inset
 
 ).
- An AOM, located conjugate to the back-focal plane of the objective using
- the telescopic lens pair L1-L2 (see Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "Setup"
-
-\end_inset
-
-), is used for modulating one of the traps.
- A long optical path after the AOM ensures that a minimal beam deflection
- is enough to modulate one of the trapped beams, so that the intensity in
- the first order remains constant to around 2%.
- The modulated and unmodulated beams are independently steered using mirror
- pairs M1, M2 and M3, M4, respectively, and coupled into a polarizing beam
- splitter (PBS1).
- For detection, we use a separate laser of wavelength 
-\begin_inset Formula $\lambda=671$
-\end_inset
-
- nm, that is again divided into two beams of orthogonal polarization by
- PBS2 and coupled into PBS3.
- We then use a dichroic (DC1) to overlap the two pairs of trapping and detection
- beams into the optical tweezers microscope (Zeiss Axiovert.A1).
+ One of the lasers is modulated using an AOM located conjugate to the back-focal
+ plane of the microscope objective, and a long optical path after the AOM
+ ensures that a minimal beam deflection is enough to modulate one of the
+ trapped beams, so that the intensity in the first order remains constant
+ to around 2%.
+ The modulated and unmodulated beams are independently coupled into the
+ trapping microscope using mirrors and a polarizing beam splitter, while
+ detection is performed using a separate laser at 671 nm generating two
+ detection beams also orthogonally polarized and superposed on the respective
+ trapping beams using dichroic beam splitters.
  The two trapped beads are imaged and their displacements measured by back-focal
-- plane-interferometry, while the white light for imaging and the detection
- laser beams are separated by dichroics DC2 and DC3, respectively.
+- plane-interferometry, with the imaging white light and detection beams
+ also separated at the output by dichroic beam splitters.
  A very low volume fraction sample (
 \begin_inset Formula $\phi\approx0.01$
 \end_inset
@@ -900,7 +884,7 @@ centering
 
  
 \begin_inset Graphics
-	filename response1.png
+	filename ../../../2016/twobeadhydro/response1.png
 	width 50text%
 
 \end_inset
@@ -1183,7 +1167,7 @@ centering
 
  
 \begin_inset Graphics
-	filename FDT.pdf
+	filename ../../../2016/twobeadhydro/FDT.pdf
 	width 45text%
 
 \end_inset
