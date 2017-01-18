@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass revtex4-1
 \begin_preamble
 % ****** Start of file apssamp.tex ******
@@ -41,23 +43,23 @@
 %%height=10in,a5paper,hmargin={3cm,0.8in},
 %]{geometry}
 \end_preamble
-\options reprint,amsmath,amssymb,aps,
+\options reprint,amsmath,amssymb,aps,superscriptaddress
 \use_default_options false
 \maintain_unincluded_children false
 \language english
 \language_package none
 \inputencoding auto
 \fontencoding default
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -108,10 +110,6 @@
 
 \begin_body
 
-\begin_layout Preprint
-APS/123-QED
-\end_layout
-
 \begin_layout Title
 Direct verification of the fluctuation-response theorem in dissipatively
  coupled oscillators
@@ -119,53 +117,54 @@ Direct verification of the fluctuation-response theorem in dissipatively
 
 \begin_layout Author
 Shuvojit Paul
-\begin_inset Formula $^{1}$
+\begin_inset Formula $ $
 \end_inset
 
 
+\end_layout
+
+\begin_layout Affiliation
+Indian Institute of Science Education and Research, Kolkata
 \end_layout
 
 \begin_layout Author
 Abhrajit Laskar
-\begin_inset Formula $^{2}$
-\end_inset
+\end_layout
 
-
+\begin_layout Affiliation
+The Institute of Mathematical Sciences-HBNI, CIT Campus, Tarmani, Chennai
+ 600113, India
 \end_layout
 
 \begin_layout Author
 Basudev Roy
-\begin_inset Formula $^{1}$
-\end_inset
+\end_layout
 
-
+\begin_layout Affiliation
+Department of Physics, Indian Institute of Technology Madras, Chennai 600036,
+ India
 \end_layout
 
 \begin_layout Author
 Ronojoy Adhikari
-\begin_inset Formula $^{1}$
-\end_inset
-
-
 \end_layout
 
 \begin_layout Author Email
-ronojoy.adhikari@gmail.com
+
+rjoy@imsc.res.in
 \end_layout
 
 \begin_layout Affiliation
-Institute of Mathematical Sciences, Chennai
+The Institute of Mathematical Sciences-HBNI, CIT Campus, Tarmani, Chennai
+ 600113, India
 \end_layout
 
 \begin_layout Author
 Ayan Banerjee
-\begin_inset Formula $^{1}$
-\end_inset
-
-
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -190,15 +189,25 @@ today
 \end_layout
 
 \begin_layout Abstract
-The fluctuation-response relation, the central result of linear response
- theory, gives the response of a system to weak external forces in terms
- of its equilibrium fluctuations.
- Here we provide a direct verification of this relation for a pair of dissipativ
-ely coupled oscillators as realized by optically trapped colloidal particles.
- The sharp 'resonance' peak in the modulus of the response can be utilized
- to simultaneously calibrate pairs of traps or to accurately measure the
- viscosity of the ambient fluid.
- 
+The fluctuation-response relation, a central result in non-equilibrium statistic
+al mechanics, relates equilibrium fluctuations of a system to its linear
+ response to external forces.
+ Here we provide a direct experimental verification of this relation for
+ a pair of dissipatively coupled oscillators, as realized by optically trapped
+ colloidal particles.
+ A theoretical analysis in which fluid-mediated interactions are represented
+ by non-local friction tensors matches experimental results and reveals
+ a frequency maximum in the amplitude of the mutual response function.
+ This amplitude 
+\begin_inset Quotes eld
+\end_inset
+
+resonance
+\begin_inset Quotes erd
+\end_inset
+
+ is a sensitive function of the fluid viscosity suggesting the utility of
+ the trap setup for accurate two-point microrheology.
 \end_layout
 
 \begin_layout PACS
