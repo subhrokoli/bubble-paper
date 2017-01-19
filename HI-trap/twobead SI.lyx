@@ -1,0 +1,402 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass revtex4-1
+\begin_preamble
+% ****** Start of file apssamp.tex ******
+%
+%   This file is part of the APS files in the REVTeX 4.1 distribution.
+%   Version 4.1r of REVTeX, August 2010
+%
+%   Copyright (c) 2009, 2010 The American Physical Society.
+%
+%   See the REVTeX 4 README file for restrictions and more information.
+%
+% TeX'ing this file requires that you have AMS-LaTeX 2.0 installed
+% as well as the rest of the prerequisites for REVTeX 4.1
+%
+% See the REVTeX 4 README file
+% It also requires running BibTeX. The commands are as follows:
+%
+%  1)  latex apssamp.tex
+%  2)  bibtex apssamp
+%  3)  latex apssamp.tex
+%  4)  latex apssamp.tex
+%
+
+
+% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%\usepackage{hyperref}% add hypertext capabilities
+%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+%\linenumbers\relax % Commence numbering lines
+
+%\usepackage[showframe,%Uncomment any one of the following lines to test 
+%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
+%%text={7in,10in},centering,
+%%margin=1.5in,
+%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
+%%height=10in,a5paper,hmargin={3cm,0.8in},
+%]{geometry}
+\end_preamble
+\options reprint,amsmath,amssymb,aps,
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Preprint
+APS/123-QED
+\end_layout
+
+\begin_layout Title
+Direct verification of the fluctuation-response theorem in two optically
+ trapped and hydrodynamically coupled colloidal particles
+\end_layout
+
+\begin_layout Author
+Shuvojit Paul
+\begin_inset Formula $^{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+Abhrajit Laskar
+\begin_inset Formula $^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+Basudev Roy
+\begin_inset Formula $^{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+Ronojoy Adhikari
+\begin_inset Formula $^{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author Email
+
+ronojoy.adhikari@gmail.com
+\end_layout
+
+\begin_layout Affiliation
+Institute of Mathematical Sciences, Chennai
+\end_layout
+
+\begin_layout Author
+Ayan Banerjee
+\begin_inset Formula $^{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author Email
+
+ayan@iiserkol.ac.in
+\end_layout
+
+\begin_layout Affiliation
+Indian Institute of Science Education and Research, Kolkata
+\end_layout
+
+\begin_layout Section*
+Supplementary information
+\end_layout
+
+\begin_layout Standard
+We set up a dual-beam optical tweezers (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Setup"
+
+\end_inset
+
+) by focusing two orthogonally polarized beams of wavelength 
+\begin_inset Formula $\lambda=1064$
+\end_inset
+
+ nm generated independently from two diode lasers using a high NA immersion-oil
+ microscope objective (Zeiss PlanApo,
+\begin_inset Formula $100\times1.4$
+\end_inset
+
+).
+ An AOM, located conjugate to the back-focal plane of the objective using
+ the telescopic lens pair L1-L2 (see Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Setup"
+
+\end_inset
+
+), is used for modulating one of the traps.
+ A long optical path after the AOM ensures that a minimal beam deflection
+ is enough to modulate one of the trapped beams, so that the intensity in
+ the first order remains constant to around 2%.
+ The modulated and unmodulated beams are independently steered using mirror
+ pairs M1, M2 and M3, M4, respectively, and coupled into a polarizing beam
+ splitter (PBS1).
+ For detection, we use a separate laser of wavelength 
+\begin_inset Formula $\lambda=671$
+\end_inset
+
+ nm, that is again divided into two beams of orthogonal polarization by
+ PBS2 and coupled into PBS3.
+ We then use a dichroic (DC1) to overlap the two pairs of trapping and detection
+ beams into the optical tweezers microscope (Zeiss Axiovert.A1).
+ The two trapped beads are imaged and their displacements measured by back-focal
+- plane-interferometry, while the white light for imaging and the detection
+ laser beams are separated by dichroics DC2 and DC3, respectively.
+ A very low volume fraction sample (
+\begin_inset Formula $\phi\approx0.01$
+\end_inset
+
+) is prepared with 3 
+\begin_inset Formula $\mu$
+\end_inset
+
+m diameter polystyrene latex beads in 1 M NaCl-water solution for avoiding
+ surface charges.
+ A single droplet of about 20 
+\begin_inset Formula $\mu$
+\end_inset
+
+l volume of the sample is introduced on a standard 10 mm square cover slip
+ so that the droplet radius is around 200 
+\begin_inset Formula $\mu$
+\end_inset
+
+m.
+ We trap two spherical polystyrene beads (Sigma LB-30) of mean size 3 
+\begin_inset Formula $\mu$
+\end_inset
+
+m each, in two calibrated optical traps which are separated by a distance
+ 
+\begin_inset Formula $4\pm0.1\:\mu$
+\end_inset
+
+m, so that the surface-surface distance of the trapped beads is 
+\begin_inset Formula $1\pm0.2\:\mu$
+\end_inset
+
+m, and the distance from the cover slip surface is 30 
+\begin_inset Formula $\mu$
+\end_inset
+
+m.
+ From the literature 
+\backslash
+cite{
+\series bold
+PRL 107, 248101 (2011)
+\series default
+}, this distance is still large enough to avoid optical cross talk and effects
+ due to surface charges.
+ In order to ensure that the trapping beams do not influence each other,
+ we measure the Brownian motion of one when the other is switched on (in
+ the absence of a particle), and check that there are no changes in the
+ Brownian motion.
+ One of the traps is sinusoidally modulated and the phase and amplitude
+ response of both the driving and driven particles with reference to the
+ sinusoidal drive are measured by lock-in detection (Stanford Research,
+ SR830).
+ To get large signal to noise, we use balanced detection using photodiode
+ pairs PA1, PB1 and PA2, PB2, for the driving and driven particles, respectively.
+ The voltage-amplitude calibration of our detection system reveals that
+ we can resolve motion of around 12 nm with an SNR of 2.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename fig1.pdf
+	width 45text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A schematic of the setup is shown.
+ Where 
+\begin_inset Formula $\frac{\lambda}{2}$
+\end_inset
+
+ is half wave plate, L, M are lens and mirror respectively.
+ AOM is the accousto optical modulator which is working taking signal from
+ the signal generator.
+ PBS and DC are polarising beam splitter and dicroic mirror respectively.
+ E, P are edge mirror and polariser respectively.
+ PA, PB are photodiods (Thorlabs PDA100A-EC).
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Setup"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename histograms1.png
+	width 45text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Position histograms of the first (left) and the second (right) trap are
+ shown here.
+ The solid black lines in each are there corresponding Gaussian fits which
+ shows that the potentials are harmonic in nature.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "hist"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
