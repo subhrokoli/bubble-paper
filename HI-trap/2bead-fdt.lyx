@@ -111,7 +111,7 @@
 \begin_body
 
 \begin_layout Title
-Direct verification of the fluctuation-response theorem in dissipatively
+Direct verification of the fluctuation-response relation in dissipatively
  coupled oscillators
 \end_layout
 
@@ -190,10 +190,10 @@ today
 
 \begin_layout Abstract
 The fluctuation-response relation, a central result in non-equilibrium statistic
-al mechanics, relates equilibrium fluctuations of a system to its linear
+al mechanics, relates equilibrium fluctuations in a system to its linear
  response to external forces.
  Here we provide a direct experimental verification of this relation for
- a pair of dissipatively coupled oscillators, as realized by optically trapped
+ dissipatively coupled oscillators, as realized by a pair of optically trapped
  colloidal particles.
  A theoretical analysis in which fluid-mediated interactions are represented
  by non-local friction tensors matches experimental results and reveals
