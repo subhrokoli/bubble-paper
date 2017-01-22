@@ -121,14 +121,13 @@ The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
 The multivariate Ornstein-Uhlenbeck process is used in many branches of
  science and engineering to describe the regression of a system to its stationar
 y mean.
- In systems with microscopic reversibility the matrix of regression rates
- is constrained by the Onsager-Casimir relations.
  Here we present a fast Bayesian method to infer the drift and diffusion
  coefficients of the process from discretely observed sample paths.
  We use exact likelihoods, expressed in terms of sufficient statistics,
  to derive simple expressions for the maximum a posteriori estimates.
- We show that the dimensionality of the parameter estimation problem is
- reduced in the presence of Onsager-Casimir symmetry.
+ We show that the dimensionality of the estimation problem is reduced when
+ microscopic reversibility enforces Onsager-Casimir symmetry on the process
+ parameters.
  We apply our result to estimate the parameters of underdamped phonons in
  a colloidal crystal using video microscopy data.
  Other applications are indicated.
