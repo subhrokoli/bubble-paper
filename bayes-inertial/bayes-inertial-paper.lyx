@@ -397,13 +397,11 @@ The logarithm of the posterior probability, after using the explicit forms
 \end_inset
 
 , is
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
-\ln P\left(\lambda,C\vert Y\right)=\dfrac{N-1}{2}\ln\left(\dfrac{1}{4\pi^{2}\vert\Sigma\vert}\right)-\dfrac{1}{2}\sum_{n=1}^{N-1}\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}+\dfrac{1}{2}\ln\left(\dfrac{1}{4\pi^{2}C}\right)-\dfrac{1}{2}y_{1}^{T}C^{-1}y_{1}
-\end{equation}
+\begin{align}
+\ln P\left(\lambda,C\vert Y\right) & =\dfrac{N-1}{2}\ln\left(\dfrac{1}{4\pi^{2}\vert\Sigma\vert}\right)-\dfrac{1}{2}\sum_{n=1}^{N-1}\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}\nonumber \\
+ & +\dfrac{1}{2}\ln\left(\dfrac{1}{4\pi^{2}C}\right)-\dfrac{1}{2}y_{1}^{T}C^{-1}y_{1}
+\end{align}
 
 \end_inset
 
@@ -416,9 +414,10 @@ where we have defined the two quantities
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\Sigma\equiv C-\exp\left(-\lambda\Delta t\right)C\exp\left(-\lambda^{T}\Delta t\right),\;\;\Delta_{n}\equiv y_{n+1}-\exp\left(-\lambda\Delta t\right)y_{n}
-\]
+\begin{align*}
+\Sigma & \equiv C-\exp\left(-\lambda\Delta t\right)C\exp\left(-\lambda^{T}\Delta t\right),\\
+\Delta_{n} & \equiv y_{n+1}-\exp\left(-\lambda\Delta t\right)y_{n}.
+\end{align*}
 
 \end_inset
 
@@ -430,18 +429,15 @@ Consider the quantity
 \begin_inset Formula $\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}\equiv\left(y_{n+1}-\exp\left(-\lambda\Delta t\right)y_{n}\right)^{T}\Sigma^{-1}\left(y_{n+1}-\exp\left(-\lambda\Delta t\right)y_{n}\right)$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-Expanding the expression, we get the following four expressions in terms
+.
+ Expanding the expression, we get the following four expressions in terms
  of a contracted product
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-y_{n+1}^{T}\Sigma^{-1}y_{n+1}\equiv\Sigma^{-1}:T_{1}
+y_{n+1}^{T}\Sigma^{-1}y_{n+1}\equiv\Sigma^{-1}:T_{1},
 \]
 
 \end_inset
@@ -449,7 +445,7 @@ y_{n+1}^{T}\Sigma^{-1}y_{n+1}\equiv\Sigma^{-1}:T_{1}
 
 \begin_inset Formula 
 \[
-y_{n+1}^{T}\Sigma^{-1}\exp\left(\lambda\Delta t\right)y_{n}\equiv\left[\Sigma^{-1}\exp\left(\lambda\Delta t\right)\right]:T_{2}
+y_{n+1}^{T}\Sigma^{-1}\exp\left(\lambda\Delta t\right)y_{n}\equiv\left[\Sigma^{-1}\exp\left(\lambda\Delta t\right)\right]:T_{2},
 \]
 
 \end_inset
@@ -460,7 +456,7 @@ y_{n+1}^{T}\Sigma^{-1}\exp\left(\lambda\Delta t\right)y_{n}\equiv\left[\Sigma^{-
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\left(\exp\left(-\lambda\Delta t\right)y_{n}\right)^{T}\Sigma^{-1}y_{n+1}\equiv\left[\exp\left(-\lambda^{T}\Delta t\right)\Sigma^{-1}\right]:T_{2}^{T}
+\left(\exp\left(-\lambda\Delta t\right)y_{n}\right)^{T}\Sigma^{-1}y_{n+1}\equiv\left[\exp\left(-\lambda^{T}\Delta t\right)\Sigma^{-1}\right]:T_{2}^{T},
 \]
 
 \end_inset
@@ -470,39 +466,35 @@ y_{n+1}^{T}\Sigma^{-1}\exp\left(\lambda\Delta t\right)y_{n}\equiv\left[\Sigma^{-
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\left[\exp\left(-\lambda\Delta t\right)y_{n}\right]^{T}\Sigma^{-1}\left[\exp\left(-\lambda\Delta t\right)y_{n}\right]\equiv\left[\exp\left(-\lambda^{T}\Delta t\right)\Sigma^{-1}\exp\left(-\lambda\Delta t\right)\right]:T_{3}
-\]
+\begin{align*}
+\left[\exp\left(-\lambda\Delta t\right)y_{n}\right]^{T}\Sigma^{-1}\left[\exp\left(-\lambda\Delta t\right)y_{n}\right]\\
+\equiv\left[\exp\left(-\lambda^{T}\Delta t\right)\Sigma^{-1}\exp\left(-\lambda\Delta t\right)\right]:T_{3}
+\end{align*}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 Thus, we have formulated a set of matrix sufficient statistics for the problem
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-T_{1}=\sum_{n=1}^{N-1}y_{n+1}y_{n+1}^{T},\;\;\;T_{2}=\sum_{n=1}^{N-1}y_{n+1}y_{n}^{T},\;\;\;T_{3}=\sum y_{n}y_{n}^{T}
-\]
+\begin{align*}
+T_{1} & =\sum_{n=1}^{N-1}y_{n+1}y_{n+1}^{T},\;\;\;T_{2}=\sum_{n=1}^{N-1}y_{n+1}y_{n}^{T},\\
+\qquad & \qquad\qquad T_{3}=\sum y_{n}y_{n}^{T}.
+\end{align*}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 Completing the squares, we have the following identity
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
-\sum_{n=1}^{N-1}\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}\equiv\Sigma^{-1}:\left[\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)\left(T_{3}\right)\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)^{T}+\left(T_{1}-T_{2}T_{3}^{-1}T_{2}^{T}\right)\right]
-\end{equation}
+\begin{align}
+\sum_{n=1}^{N-1}\Delta_{n}^{T}\Sigma^{-1}\Delta_{n} & \equiv\Sigma^{-1}:\Big[\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)\nonumber \\
+ & \left(T_{3}\right)\big(\exp\left(-\lambda\Delta t\right)T_{2}T_{3}^{-1}\big)^{T}\\
+ & +\left(T_{1}-T_{2}T_{3}^{-1}T_{2}^{T}\right)\Big].
+\end{align}
 
 \end_inset
 
@@ -510,8 +502,8 @@ Completing the squares, we have the following identity
 \end_layout
 
 \begin_layout Standard
-Making the assumption that the number of samples is large, we can make the
- approximation 
+We now make the assumption that the number of samples is large, we can make
+ the approximation 
 \begin_inset Formula $\left(N-1\right)\approx N$
 \end_inset
 
@@ -524,16 +516,15 @@ Making the assumption that the number of samples is large, we can make the
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
-\ln P\left(\lambda,\Sigma\vert Y\right)=\dfrac{N}{2}\ln\left(\dfrac{|\Sigma^{-1}|}{4\pi^{2}}\right)-\dfrac{1}{2}\Sigma^{-1}:\left[\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)\left(T_{3}\right)\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)^{T}+\left(T_{1}-T_{2}T_{3}^{-1}T_{2}^{T}\right)\right]\label{eq:lp}
-\end{equation}
+\begin{align}
+\ln P\left(\lambda,\Sigma\vert Y\right) & =\dfrac{N}{2}\ln\left(\dfrac{|\Sigma^{-1}|}{4\pi^{2}}\right)-\dfrac{1}{2}\Sigma^{-1}:\nonumber \\
+ & \Big[\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)\nonumber \\
+ & \left(T_{3}\right)\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)^{T}\label{eq:lp}\\
+ & +\left(T_{1}-T_{2}T_{3}^{-1}T_{2}^{T}\right)\Big]
+\end{align}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 Writing only the terms containing 
 \begin_inset Formula $\lambda$
 \end_inset
@@ -543,9 +534,10 @@ Writing only the terms containing
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-P\left(\lambda,\Sigma|Y\right)\propto\exp\left(-\dfrac{1}{2}\Sigma^{-1}:\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)\left(T_{3}\right)\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)^{T}\right)
-\]
+\begin{align*}
+P\left(\lambda,\Sigma|Y\right) & \propto\exp\Bigg(-\dfrac{1}{2}\Sigma^{-1}:\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)\\
+ & \left(T_{3}\right)\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)^{T}\Bigg)
+\end{align*}
 
 \end_inset
 
@@ -598,9 +590,11 @@ reference "eq:lp"
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\dfrac{\partial\ln P\left(\lambda,\Sigma\vert Y\right)}{\partial\Sigma^{-1}}=\dfrac{N}{2}\left(\Sigma\right)-\dfrac{1}{2}\left[\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)\left(T_{3}\right)\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)^{T}+\left(T_{1}-T_{2}T_{3}^{-1}T_{2}^{T}\right)\right]
-\]
+\begin{align*}
+\dfrac{\partial\ln P\left(\lambda,\Sigma\vert Y\right)}{\partial\Sigma^{-1}} & =\dfrac{N}{2}\left(\Sigma\right)-\dfrac{1}{2}\Big[\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)\\
+ & \left(T_{3}\right)\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)^{T}\\
+ & +\left(T_{1}-T_{2}T_{3}^{-1}T_{2}^{T}\right)\Big]
+\end{align*}
 
 \end_inset
 
@@ -646,7 +640,7 @@ reference "eq:map_sigma"
 \end_inset
 
  give the MAP estimates of the drift matrix and the transition variance
- covariance martrix respectively.
+ covariance matrix respectively.
 \end_layout
 
 \end_body
