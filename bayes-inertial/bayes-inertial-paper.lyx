@@ -492,7 +492,7 @@ Completing the squares, we have the following identity
 \begin_inset Formula 
 \begin{align}
 \sum_{n=1}^{N-1}\Delta_{n}^{T}\Sigma^{-1}\Delta_{n} & \equiv\Sigma^{-1}:\Big[\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)\nonumber \\
- & \left(T_{3}\right)\big(\exp\left(-\lambda\Delta t\right)T_{2}T_{3}^{-1}\big)^{T}\\
+ & \left(T_{3}\right)\big(\exp\left(-\lambda\Delta t\right)T_{2}T_{3}^{-1}\big)^{T}\nonumber \\
  & +\left(T_{1}-T_{2}T_{3}^{-1}T_{2}^{T}\right)\Big].
 \end{align}
 
@@ -519,8 +519,8 @@ We now make the assumption that the number of samples is large, we can make
 \begin{align}
 \ln P\left(\lambda,\Sigma\vert Y\right) & =\dfrac{N}{2}\ln\left(\dfrac{|\Sigma^{-1}|}{4\pi^{2}}\right)-\dfrac{1}{2}\Sigma^{-1}:\nonumber \\
  & \Big[\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)\nonumber \\
- & \left(T_{3}\right)\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)^{T}\label{eq:lp}\\
- & +\left(T_{1}-T_{2}T_{3}^{-1}T_{2}^{T}\right)\Big]
+ & \left(T_{3}\right)\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)^{T}\nonumber \\
+ & +\left(T_{1}-T_{2}T_{3}^{-1}T_{2}^{T}\right)\Big]\label{eq:lp}
 \end{align}
 
 \end_inset
