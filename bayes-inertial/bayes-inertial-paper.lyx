@@ -338,7 +338,7 @@ Bayesian inference
 
 \begin_layout Standard
 Consider, now the vector time series 
-\begin_inset Formula $Y=\left(y_{1},y_{2},...,y_{N}\right)$
+\begin_inset Formula $\boldsymbol{X}=\left(\boldsymbol{x_{1}},\boldsymbol{x_{2}},...,\boldsymbol{x_{N}}\right)$
 \end_inset
 
  consisting of observations of the sample states of the multidimensional
@@ -357,7 +357,7 @@ Consider, now the vector time series
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-P\left(Y\vert\lambda,C\right)=\prod_{n=1}^{N-1}P_{1\vert1}\left(y_{n+1}\vert y_{n},\lambda,C\right)P_{1}\left(y_{1}\vert\lambda,C\right)
+P\left(\boldsymbol{X}\vert\boldsymbol{\lambda},\boldsymbol{C}\right)=\prod_{n=1}^{N-1}P_{1\vert1}\left(\boldsymbol{x_{n+1}}\vert\boldsymbol{x_{n}},\boldsymbol{\lambda},\boldsymbol{C}\right)P_{1}\left(\boldsymbol{x_{1}}\vert\boldsymbol{\lambda},\boldsymbol{C}\right)
 \end{equation}
 
 \end_inset
@@ -367,7 +367,7 @@ P\left(Y\vert\lambda,C\right)=\prod_{n=1}^{N-1}P_{1\vert1}\left(y_{n+1}\vert y_{
 
 \begin_layout Standard
 The probability 
-\begin_inset Formula $P\left(\lambda,C\vert Y\right)$
+\begin_inset Formula $P\left(\boldsymbol{\lambda},\boldsymbol{C}\vert\boldsymbol{X}\right)$
 \end_inset
 
  of the parameters, given the sample path, can now be computed using Bayes
@@ -377,7 +377,7 @@ The probability
 \begin_layout Standard
 \begin_inset Formula 
 \[
-P\left(\lambda,C\vert Y\right)=\dfrac{P\left(Y\vert\lambda,C\right)P\left(\lambda,C\right)}{P\left(Y\right)}
+P\left(\boldsymbol{\lambda},\boldsymbol{C}\vert\boldsymbol{X}\right)=\dfrac{P\left(\bm{X}\vert\boldsymbol{\lambda},\boldsymbol{C}\right)P\left(\boldsymbol{\lambda},\boldsymbol{C}\right)}{P\left(\boldsymbol{X}\right)}
 \]
 
 \end_inset
@@ -398,7 +398,7 @@ The logarithm of the posterior probability, after using the explicit forms
 , is
 \begin_inset Formula 
 \begin{align}
-\ln P\left(\lambda,C\vert Y\right) & =\dfrac{N-1}{2}\ln\left(\dfrac{1}{4\pi^{2}\vert\Sigma\vert}\right)-\dfrac{1}{2}\sum_{n=1}^{N-1}\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}\nonumber \\
+\ln P\left(\bm{\lambda},\bm{C}\vert\bm{X}\right) & =\dfrac{N-1}{2}\ln\left(\dfrac{1}{4\pi^{2}\vert\Sigma\vert}\right)-\dfrac{1}{2}\sum_{n=1}^{N-1}\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}\nonumber \\
  & +\dfrac{1}{2}\ln\left(\dfrac{1}{4\pi^{2}C}\right)-\dfrac{1}{2}y_{1}^{T}C^{-1}y_{1}
 \end{align}
 
@@ -414,8 +414,8 @@ where we have defined the two quantities
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\Sigma & \equiv C-\exp\left(-\lambda\Delta t\right)C\exp\left(-\lambda^{T}\Delta t\right),\\
-\Delta_{n} & \equiv y_{n+1}-\exp\left(-\lambda\Delta t\right)y_{n}.
+\bm{\Sigma} & \equiv\bm{C}-\exp\left(-\bm{\lambda}\Delta t\right)\bm{C}\exp\left(-\bm{\lambda}^{\bm{T}}\Delta t\right),\\
+\bm{\Delta_{n}} & \equiv\bm{x_{n+1}}-\exp\left(-\bm{\lambda}\Delta t\right)\bm{x_{n}}.
 \end{align*}
 
 \end_inset
@@ -425,7 +425,7 @@ where we have defined the two quantities
 
 \begin_layout Standard
 Consider the quantity 
-\begin_inset Formula $\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}\equiv\left(y_{n+1}-\exp\left(-\lambda\Delta t\right)y_{n}\right)^{T}\Sigma^{-1}\left(y_{n+1}-\exp\left(-\lambda\Delta t\right)y_{n}\right)$
+\begin_inset Formula $\bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}\equiv\left(\bm{x_{n+1}}-\exp\left(-\bm{\lambda}\Delta t\right)\bm{x_{n}}\right)^{\bm{T}}\bm{\Sigma^{-1}}\left(\bm{x_{n+1}}-\exp\left(-\bm{\lambda}\Delta t\right)\bm{x_{n}}\right)$
 \end_inset
 
 .
@@ -436,7 +436,7 @@ Consider the quantity
 \begin_layout Standard
 \begin_inset Formula 
 \[
-y_{n+1}^{T}\Sigma^{-1}y_{n+1}\equiv\Sigma^{-1}:T_{1},
+\bm{x_{n+1}^{T}\Sigma^{-1}x_{n+1}}\equiv\bm{\Sigma^{-1}:T_{1}},
 \]
 
 \end_inset
@@ -444,7 +444,7 @@ y_{n+1}^{T}\Sigma^{-1}y_{n+1}\equiv\Sigma^{-1}:T_{1},
 
 \begin_inset Formula 
 \[
-y_{n+1}^{T}\Sigma^{-1}\exp\left(\lambda\Delta t\right)y_{n}\equiv\left[\Sigma^{-1}\exp\left(\lambda\Delta t\right)\right]:T_{2},
+\bm{x_{n+1}^{T}\Sigma^{-1}}\exp\left(\bm{\lambda}\Delta t\right)\bm{x_{n}}\equiv\left[\bm{\Sigma^{-1}}\exp\left(\bm{\lambda}\Delta t\right)\right]:\bm{T_{2}},
 \]
 
 \end_inset
@@ -455,7 +455,7 @@ y_{n+1}^{T}\Sigma^{-1}\exp\left(\lambda\Delta t\right)y_{n}\equiv\left[\Sigma^{-
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\left(\exp\left(-\lambda\Delta t\right)y_{n}\right)^{T}\Sigma^{-1}y_{n+1}\equiv\left[\exp\left(-\lambda^{T}\Delta t\right)\Sigma^{-1}\right]:T_{2}^{T},
+\left(\exp\left(-\bm{\lambda}\Delta t\right)\bm{x_{n}}\right)^{\bm{T}}\bm{\Sigma^{-1}}\bm{x_{n+1}}\equiv\left[\exp\left(-\bm{\lambda}^{\bm{T}}\Delta t\right)\bm{\Sigma^{-1}}\right]:\bm{T_{2}^{T}},
 \]
 
 \end_inset
@@ -466,8 +466,8 @@ y_{n+1}^{T}\Sigma^{-1}\exp\left(\lambda\Delta t\right)y_{n}\equiv\left[\Sigma^{-
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\left[\exp\left(-\lambda\Delta t\right)y_{n}\right]^{T}\Sigma^{-1}\left[\exp\left(-\lambda\Delta t\right)y_{n}\right]\\
-\equiv\left[\exp\left(-\lambda^{T}\Delta t\right)\Sigma^{-1}\exp\left(-\lambda\Delta t\right)\right]:T_{3}
+\left[\exp\left(-\bm{\lambda}\Delta t\right)\bm{x_{n}}\right]^{\bm{T}}\bm{\Sigma^{-1}}\left[\exp\left(-\bm{\lambda}\Delta t\right)\bm{x_{n}}\right]\\
+\equiv\left[\exp\left(-\bm{\lambda^{T}}\Delta t\right)\bm{\Sigma^{-1}}\exp\left(-\bm{\lambda}\Delta t\right)\right]:\bm{T_{3}}
 \end{align*}
 
 \end_inset
@@ -478,8 +478,8 @@ Thus, we have formulated a set of matrix sufficient statistics for the problem
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-T_{1} & =\sum_{n=1}^{N-1}y_{n+1}y_{n+1}^{T},\;\;\;T_{2}=\sum_{n=1}^{N-1}y_{n+1}y_{n}^{T},\\
-\qquad & \qquad\qquad T_{3}=\sum y_{n}y_{n}^{T}.
+\bm{T_{1}} & =\sum_{n=1}^{N-1}\bm{y_{n+1}y_{n+1}^{T}},\;\;\;\bm{T_{2}}=\sum_{n=1}^{N-1}\bm{y_{n+1}y_{n}^{T}},\\
+\qquad & \qquad\qquad\bm{T_{3}}=\sum_{n=1}^{N-1}\bm{y_{n}y_{n}^{T}}.
 \end{align*}
 
 \end_inset
@@ -490,9 +490,9 @@ Completing the squares, we have the following identity
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-\sum_{n=1}^{N-1}\Delta_{n}^{T}\Sigma^{-1}\Delta_{n} & \equiv\Sigma^{-1}:\Big[\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)\nonumber \\
- & \left(T_{3}\right)\big(\exp\left(-\lambda\Delta t\right)T_{2}T_{3}^{-1}\big)^{T}\nonumber \\
- & +\left(T_{1}-T_{2}T_{3}^{-1}T_{2}^{T}\right)\Big].
+\sum_{n=1}^{N-1}\bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}} & \equiv\bm{\Sigma^{-1}}:\Big[\left(\exp\left(-\bm{\lambda}\Delta t\right)-\bm{T_{2}T_{3}^{-1}}\right)\nonumber \\
+ & \left(\bm{T_{3}}\right)\big(\exp\left(-\bm{\lambda}\Delta t\right)\bm{T_{2}T_{3}^{-1}}\big)^{\bm{T}}\nonumber \\
+ & +\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big].
 \end{align}
 
 \end_inset
@@ -516,10 +516,10 @@ We now make the assumption that the number of samples is large, we can make
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-\ln P\left(\lambda,\Sigma\vert Y\right) & =\dfrac{N}{2}\ln\left(\dfrac{|\Sigma^{-1}|}{4\pi^{2}}\right)-\dfrac{1}{2}\Sigma^{-1}:\nonumber \\
- & \Big[\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)\nonumber \\
- & \left(T_{3}\right)\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)^{T}\nonumber \\
- & +\left(T_{1}-T_{2}T_{3}^{-1}T_{2}^{T}\right)\Big]\label{eq:lp}
+\ln P\left(\bm{\lambda},\bm{\Sigma}\vert\bm{X}\right) & =\dfrac{N}{2}\ln\left(\dfrac{|\bm{\Sigma^{-1}}|}{4\pi^{2}}\right)-\dfrac{1}{2}\bm{\Sigma^{-1}}:\nonumber \\
+ & \Big[\left(\exp\left(-\bm{\lambda}\Delta t\right)-\bm{T_{2}T_{3}^{-1}}\right)\nonumber \\
+ & \left(\bm{T_{3}}\right)\left(\exp\left(-\bm{\lambda}\Delta t\right)-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}\nonumber \\
+ & +\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big]\label{eq:lp}
 \end{align}
 
 \end_inset
@@ -534,8 +534,8 @@ Writing only the terms containing
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-P\left(\lambda,\Sigma|Y\right) & \propto\exp\Bigg(-\dfrac{1}{2}\Sigma^{-1}:\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)\\
- & \left(T_{3}\right)\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)^{T}\Bigg)
+P\left(\bm{\lambda},\bm{\Sigma}|\bm{X}\right) & \propto\exp\Bigg(-\dfrac{1}{2}\bm{\Sigma^{-1}}:\left(\exp\left(-\bm{\lambda}\Delta t\right)-\bm{T_{2}T_{3}^{-1}}\right)\\
+ & \left(\bm{T_{3}}\right)\left(\exp\left(-\bm{\lambda}\Delta t\right)-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}\Bigg)
 \end{align*}
 
 \end_inset
@@ -545,7 +545,7 @@ P\left(\lambda,\Sigma|Y\right) & \propto\exp\Bigg(-\dfrac{1}{2}\Sigma^{-1}:\left
 
 \begin_layout Standard
 We recognize that the posterior is a Gaussian with respect to 
-\begin_inset Formula $\exp\left(-\lambda\Delta t\right)$
+\begin_inset Formula $\exp\left(-\bm{\lambda}\Delta t\right)$
 \end_inset
 
 .
@@ -560,7 +560,7 @@ We recognize that the posterior is a Gaussian with respect to
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\lambda^{\ast}=-\dfrac{1}{\Delta t}\ln(T_{2}T_{3}^{-1})\label{eq:map_lambda}
+\bm{\lambda^{\ast}}=-\dfrac{1}{\Delta t}\ln(\bm{T_{2}T_{3}^{-1}})\label{eq:map_lambda}
 \end{equation}
 
 \end_inset
@@ -581,7 +581,7 @@ reference "eq:lp"
 \end_inset
 
  and using the matrix identity 
-\begin_inset Formula $\dfrac{\partial\ln\left(\det A\right)}{\partial A}=\left(A^{T}\right)^{-1}$
+\begin_inset Formula $\dfrac{\partial\ln\left(\det\bm{A}\right)}{\partial\bm{A}}=\left(\bm{A}^{T}\right)^{-1}$
 \end_inset
 
 , we obtain
@@ -590,9 +590,9 @@ reference "eq:lp"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\dfrac{\partial\ln P\left(\lambda,\Sigma\vert Y\right)}{\partial\Sigma^{-1}} & =\dfrac{N}{2}\left(\Sigma\right)-\dfrac{1}{2}\Big[\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)\\
- & \left(T_{3}\right)\left(\exp\left(-\lambda\Delta t\right)-T_{2}T_{3}^{-1}\right)^{T}\\
- & +\left(T_{1}-T_{2}T_{3}^{-1}T_{2}^{T}\right)\Big]
+\dfrac{\partial\ln P\left(\bm{\lambda},\bm{\Sigma}\vert\bm{X}\right)}{\partial\bm{\Sigma^{-1}}} & =\dfrac{N}{2}\left(\bm{\Sigma}\right)-\dfrac{1}{2}\Big[\left(\exp\left(-\bm{\lambda}\Delta t\right)-\bm{T_{2}T_{3}^{-1}}\right)\\
+ & \left(\bm{T_{3}}\right)\left(\exp\left(-\bm{\lambda}\Delta t\right)-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}\\
+ & +\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big]
 \end{align*}
 
 \end_inset
@@ -602,11 +602,11 @@ reference "eq:lp"
 
 \begin_layout Standard
 Setting this derivative to zero, and noting that 
-\begin_inset Formula $\exp\left(-\lambda^{\ast}\Delta t\right)=T_{2}T_{3}^{-1}$
+\begin_inset Formula $\exp\left(-\bm{\lambda^{\ast}}\Delta t\right)=\bm{T_{2}T_{3}^{-1}}$
 \end_inset
 
  at the maximum a posteriori condition, we obtain the MAP estimate for 
-\begin_inset Formula $\Sigma$
+\begin_inset Formula $\bm{\Sigma}$
 \end_inset
 
  as
@@ -615,7 +615,7 @@ Setting this derivative to zero, and noting that
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\Sigma^{\ast}=\dfrac{1}{N}\left(T_{1}-T_{2}T_{3}^{-1}T_{2}^{T}\right)\label{eq:map_sigma}
+\bm{\Sigma^{\ast}}=\dfrac{1}{N}\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\label{eq:map_sigma}
 \end{equation}
 
 \end_inset
