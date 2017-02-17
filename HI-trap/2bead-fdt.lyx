@@ -150,7 +150,6 @@ Ronojoy Adhikari
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -164,7 +163,6 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -197,7 +195,8 @@ al mechanics, relates equilibrium fluctuations in a system to its linear
  colloidal particles.
  A theoretical analysis in which fluid-mediated interactions are represented
  by non-local friction tensors matches experimental results and reveals
- a frequency maximum in the amplitude of the mutual response function.
+ a frequency maximum in the amplitude of the mutual response function for
+ suitably chosen ratios of optical trap stiffnesses.
  This amplitude 
 \begin_inset Quotes eld
 \end_inset
@@ -206,8 +205,9 @@ resonance
 \begin_inset Quotes erd
 \end_inset
 
- is a sensitive function of the fluid viscosity suggesting the utility of
- the trap setup for accurate two-point microrheology.
+ is a sensitive function of the fluid viscosity and can be tuned by the
+ trap stiffnesses suggesting the utility of the trap setup for accurate
+ two-point microrheology.
 \end_layout
 
 \begin_layout PACS
@@ -278,6 +278,292 @@ on dissipation is stringently satisfied for the coupled system.
  The resonance response is a critical function of the viscosity of the liquid
  and can, in principle, be used to perform two point micro-rheology measurements
  with high accuracy.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Experiment:
+\shape default
+ The details of the experimental setup towards validation of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq14"
+
+\end_inset
+
+ are provided in Supplementary Information, here we provide a brief description.
+ Thus, we set up a dual-beam optical tweezers (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Setup"
+
+\end_inset
+
+) by focusing two orthogonally polarized beams of wavelength 
+\begin_inset Formula $\lambda=1064$
+\end_inset
+
+ nm generated independently from two diode lasers using a high NA immersion-oil
+ microscope objective (Zeiss PlanApo,
+\begin_inset Formula $100\times1.4$
+\end_inset
+
+).
+ One of the lasers is modulated using an AOM located conjugate to the back-focal
+ plane of the microscope objective, and a long optical path after the AOM
+ ensures that a minimal beam deflection is enough to modulate one of the
+ trapped beams, so that the intensity in the first order remains constant
+ to around 2%.
+ The modulated and unmodulated beams are independently coupled into the
+ trapping microscope using mirrors and a polarizing beam splitter, while
+ detection is performed using a separate laser at 671 nm generating two
+ detection beams also orthogonally polarized and superposed on the respective
+ trapping beams using dichroic beam splitters.
+ The two trapped beads are imaged and their displacements measured by back-focal
+- plane-interferometry, with the imaging white light and detection beams
+ also separated at the output by dichroic beam splitters.
+ A very low volume fraction sample (
+\begin_inset Formula $\phi\approx0.01$
+\end_inset
+
+) is prepared with 3 
+\begin_inset Formula $\mu$
+\end_inset
+
+m diameter polystyrene latex beads in 1 M NaCl-water solution for avoiding
+ surface charges.
+ A single droplet of about 20 
+\begin_inset Formula $\mu$
+\end_inset
+
+l volume of the sample is introduced on a standard 10 mm square cover slip
+ so that the droplet radius is around 200 
+\begin_inset Formula $\mu$
+\end_inset
+
+m.
+ We trap two spherical polystyrene beads (Sigma LB-30) of mean size 3 
+\begin_inset Formula $\mu$
+\end_inset
+
+m each, in two calibrated optical traps which are separated by a distance
+ 
+\begin_inset Formula $4\pm0.1\:\mu$
+\end_inset
+
+m, so that the surface-surface distance of the trapped beads is 
+\begin_inset Formula $1\pm0.2\:\mu$
+\end_inset
+
+m, and the distance from the cover slip surface is 30 
+\begin_inset Formula $\mu$
+\end_inset
+
+m.
+ From the literature 
+\backslash
+cite{
+\series bold
+PRL 107, 248101 (2011)
+\series default
+}, this distance is still large enough to avoid optical cross talk and effects
+ due to surface charges.
+ In order to ensure that the trapping beams do not influence each other,
+ we measure the Brownian motion of one when the other is switched on (in
+ the absence of a particle), and check that there are no changes in the
+ Brownian motion.
+ One of the traps is sinusoidally modulated and the phase and amplitude
+ response of both the driving and driven particles with reference to the
+ sinusoidal drive are measured by lock-in detection (Stanford Research,
+ SR830).
+ To get large signal to noise, we use balanced detection using photodiode
+ pairs PA1, PB1 and PA2, PB2, for the driving and driven particles, respectively.
+ The voltage-amplitude calibration of our detection system reveals that
+ we can resolve motion of around 12 nm with an SNR of 2.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename ../../../2016/twobeadhydro/fig1.pdf
+	width 45text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A schematic of the setup is shown.
+ TL1: Trapping laser for driving bead B1, TL2: trapping laser for driven
+ bead B2, DL: detection laser, PBS: polarizing beam splitter cube, 
+\begin_inset Formula $\frac{\lambda}{2}$
+\end_inset
+
+: half wave plate, DC: Dichroic mirror, MO: Microscope objective, CS: Cover
+ slip, BD1 and BD2: balanced detection systems based on Thorlabs photodiodes
+ PD-EC2, M: Mirror, EM: Edge mirror, LIA1 and LIA2: Lock-in amplifiers for
+ B1 and B2, respectively.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Setup"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename fig2.pdf
+	width 50text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Verfication of the Fluctuation-response relation (Eq.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq14"
+
+\end_inset
+
+).
+ We demonstrate this for individual matrix elements in the form of 
+\begin_inset Formula $\mathit{\frac{k_{B}T}{\pi f}\chi"_{ij}=C_{ij}}$
+\end_inset
+
+, where (a) and (c) are for the diagonal matrix elements, and (b) is for
+ the off-diagonal matrix element.
+ We also fit the experimentally measured rhs, i.e.
+ 
+\begin_inset Formula $\mathit{C_{ij}}$
+\end_inset
+
+(the auto and cross-correlation functions), with the theoretically calculated
+ values of the same.
+ Note that while 
+\begin_inset Formula $\mathit{C_{ij}=\mathit{C_{ji}}}$
+\end_inset
+
+trivially, we are not able to measure the response 
+\begin_inset Formula $\mathit{\chi"_{21}},$
+\end_inset
+
+ (response of B1 when B2 is driven), since the amplitude response of B1
+ (strongly trapped bead) when B2 is driven is lower than our detection sensitivi
+ty.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fdt"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+Each of the optical traps are calibrated using equipartition and power spectrum
+ methods considering the the particle temperature to be same as the room
+ temperature.
+ We verify that each of the potentials is harmonic in nature from the histogram
+ of the Brownian motion which is satisfactorily Gaussian (Fig.
+ 1 in Supplementary Information).
+ The sampling frequency is 2 kHz, while we performed data blocking at the
+ level of 100 points in order to ensure good Lorentzian fits [flyvbjerg]
+ for trap calibration.
+ We maintain a considerably higher stiffness for the particle in the modulated
+ trap so that it is not affected by the back-flow due to the driven particle.
+ The low stiffness of the driven trap ensures that it has a maximal response
+ to the drive.
+ Thus, for validation of the fluctuation response theorem, the stiffness
+ of the modulated bead (B1) was 69.6 
+\begin_inset Formula $\mu N/m$
+\end_inset
+
+, while that of the driven is 4.8 
+\begin_inset Formula $\mu N/m$
+\end_inset
+
+.
+ Note that, to observe a clear amplitude resonance, a lower ratio of trap
+ stiffness is required, as we demonstrate later.
+ The verification of the fluctuation-response theorem is shown in Figs.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fdt"
+
+\end_inset
+
+ .
+ Fig.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fdt"
+
+\end_inset
+
+(a) and (b) demonstrate the amplitude and phase response of the two beads
+ to the drive frequency, respectively.
+ Each point is the average of ten separate meauremnts at each frequency.
  
 \end_layout
 
@@ -561,7 +847,7 @@ reference "eq5"
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "response"
+reference "fdt"
 
 \end_inset
 
@@ -705,296 +991,10 @@ reference "eq14"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Graphics
-	filename ../../../2016/twobeadhydro/fig1.pdf
-	width 45text%
-
-\end_inset
-
- 
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-A schematic of the setup is shown.
- Where 
-\begin_inset Formula $\frac{\lambda}{2}$
-\end_inset
-
- is half wave plate, L, M are lens and mirror respectively.
- AOM is the accousto optical modulator which is working taking signal from
- the signal generator.
- PBS and DC are polarising beam splitter and dicroic mirror respectively.
- E, P are edge mirror and polariser respectively.
- PA, PB are photodiods (Thorlabs PDA100A-EC).
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "Setup"
-
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
-
-\shape italic
-Experiment:
-\shape default
- The details of the experimental setup towards validation of Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq14"
-
-\end_inset
-
- are provided in Supplementary Information, here we provide a brief description.
- Thus, we set up a dual-beam optical tweezers (Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "Setup"
-
-\end_inset
-
-) by focusing two orthogonally polarized beams of wavelength 
-\begin_inset Formula $\lambda=1064$
-\end_inset
-
- nm generated independently from two diode lasers using a high NA immersion-oil
- microscope objective (Zeiss PlanApo,
-\begin_inset Formula $100\times1.4$
-\end_inset
-
-).
- One of the lasers is modulated using an AOM located conjugate to the back-focal
- plane of the microscope objective, and a long optical path after the AOM
- ensures that a minimal beam deflection is enough to modulate one of the
- trapped beams, so that the intensity in the first order remains constant
- to around 2%.
- The modulated and unmodulated beams are independently coupled into the
- trapping microscope using mirrors and a polarizing beam splitter, while
- detection is performed using a separate laser at 671 nm generating two
- detection beams also orthogonally polarized and superposed on the respective
- trapping beams using dichroic beam splitters.
- The two trapped beads are imaged and their displacements measured by back-focal
-- plane-interferometry, with the imaging white light and detection beams
- also separated at the output by dichroic beam splitters.
- A very low volume fraction sample (
-\begin_inset Formula $\phi\approx0.01$
-\end_inset
-
-) is prepared with 3 
-\begin_inset Formula $\mu$
-\end_inset
-
-m diameter polystyrene latex beads in 1 M NaCl-water solution for avoiding
- surface charges.
- A single droplet of about 20 
-\begin_inset Formula $\mu$
-\end_inset
-
-l volume of the sample is introduced on a standard 10 mm square cover slip
- so that the droplet radius is around 200 
-\begin_inset Formula $\mu$
-\end_inset
-
-m.
- We trap two spherical polystyrene beads (Sigma LB-30) of mean size 3 
-\begin_inset Formula $\mu$
-\end_inset
-
-m each, in two calibrated optical traps which are separated by a distance
- 
-\begin_inset Formula $4\pm0.1\:\mu$
-\end_inset
-
-m, so that the surface-surface distance of the trapped beads is 
-\begin_inset Formula $1\pm0.2\:\mu$
-\end_inset
-
-m, and the distance from the cover slip surface is 30 
-\begin_inset Formula $\mu$
-\end_inset
-
-m.
- From the literature 
-\backslash
-cite{
-\series bold
-PRL 107, 248101 (2011)
-\series default
-}, this distance is still large enough to avoid optical cross talk and effects
- due to surface charges.
- In order to ensure that the trapping beams do not influence each other,
- we measure the Brownian motion of one when the other is switched on (in
- the absence of a particle), and check that there are no changes in the
- Brownian motion.
- One of the traps is sinusoidally modulated and the phase and amplitude
- response of both the driving and driven particles with reference to the
- sinusoidal drive are measured by lock-in detection (Stanford Research,
- SR830).
- To get large signal to noise, we use balanced detection using photodiode
- pairs PA1, PB1 and PA2, PB2, for the driving and driven particles, respectively.
- The voltage-amplitude calibration of our detection system reveals that
- we can resolve motion of around 12 nm with an SNR of 2.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Graphics
-	filename ../../../2016/twobeadhydro/response1.png
-	width 50text%
-
-\end_inset
-
- 
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-(a) Amplitude response of the first and the second bead with the modulation
- frequency given in the first trap.
- The first trap was modulated sinusoidally with an amplitude of 0.34 
-\begin_inset Formula $\mu$
-\end_inset
-
-m and the response of the bead in that shows decaying behavior where as
- that of the bead trapped in the second stationary one has an maximum at
- around 33 Hz.
- (b) Phase response of both the beads with respect to drive plotted against
- the driving frequency.
- 
-\begin_inset Formula $\phi_{1}$
-\end_inset
-
- and 
-\begin_inset Formula $\phi_{2}$
-\end_inset
-
- are the phase of the fist and the second bead respectively with respect
- to the drive.
- The theoretical agreements are also shown.
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "response"
-
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
-Each of the optical traps are calibrated using equipartition and power spectrum
- methods considering the the particle temperature to be same as the room
- temperature.
- We verify that each of the potentials is harmonic in nature from the histogram
- of the Brownian motion which is satisfactorily Gaussian (Fig.
- 1 in Supplementary Information).
- The sampling frequency is 2 kHz, while we performed data blocking at the
- level of 100 points in order to ensure good Lorentzian fits [flyvbjerg]
- for trap calibration.
- We maintain a considerably higher stiffness for the particle in the modulated
- trap so that it is not affected by the back-flow due to the driven particle.
- The low stiffness of the driven trap ensures that it has a maximal response
- to the drive.
- Thus, the stiffness of the modulated bead was 17 
-\begin_inset Formula $\mu$
-\end_inset
-
-N/m, while that of the driven is 3 
-\begin_inset Formula $\mu$
-\end_inset
-
-N/m.
- Note that a judicious choice of the stiffness ratio is also needed to observe
- the amplitude resonance with good SNR as is apparent from Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq14"
-
-\end_inset
-
-.
- The experimental results are shown in Figs.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "response"
-
-\end_inset
-
- and 
+The amplitude response of the driven bead, shown in 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fdt"
-
-\end_inset
-
-.
- Fig.
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "response"
-
-\end_inset
-
-(a) and (b) demonstrate the amplitude and phase response of the two beads
- to the drive frequency, respectively.
- Each point is the average of ten separate meauremnts at each frequency.
- The amplitude response of the driven bead, shown in 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "response"
 
 \end_inset
 
@@ -1017,7 +1017,7 @@ reference "eq14"
  The phase response in 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "response"
+reference "fdt"
 
 \end_inset
 
@@ -1033,7 +1033,7 @@ reference "response"
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fdt"
+reference "response"
 
 \end_inset
 
@@ -1082,7 +1082,7 @@ rather well.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "response"
+reference "fdt"
 
 \end_inset
 
@@ -1169,7 +1169,7 @@ centering
 
  
 \begin_inset Graphics
-	filename ../../../2016/twobeadhydro/FDT.pdf
+	filename fig3.pdf
 	width 45text%
 
 \end_inset
@@ -1178,9 +1178,16 @@ centering
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Experimental verification of the fluctuation response theorem for the two
- bead system.
- 
+Amplitude and phase response for driving (B1) and driven (B2) beads for
+ different trap stiffness ratios.
+ (a) and (b) demonstrate amplitude and phase responses (with respect to
+ driving frequency) of B1, while (c) and (d) demonstrate that of B2 as functions
+ of driving frequency, for trap stiffness ratios of 2.5:1 (black), 5.7:1 (red),
+ and 14.5:1 (blue).
+ The resonance frequency in (c) is 20 Hz (black), 35 Hz (red), and 111 Hz
+ (blue).
+ The solid spheres denote experimental data points while the solid lines
+ are corresponding theoretical fits.
 \end_layout
 
 \end_inset
@@ -1188,7 +1195,7 @@ Experimental verification of the fluctuation response theorem for the two
 
 \begin_inset CommandInset label
 LatexCommand label
-name "fdt"
+name "response"
 
 \end_inset
 
