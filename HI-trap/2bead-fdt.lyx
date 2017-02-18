@@ -43,11 +43,11 @@
 %%height=10in,a5paper,hmargin={3cm,0.8in},
 %]{geometry}
 \end_preamble
-\options reprint,amsmath,amssymb,aps,superscriptaddress
+\options prl, amsmath,amssymb,aps,superscriptaddress
 \use_default_options false
 \maintain_unincluded_children false
 \language english
-\language_package none
+\language_package babel
 \inputencoding auto
 \fontencoding default
 \font_roman "default" "default"
@@ -98,7 +98,7 @@
 \paragraph_separation indent
 \paragraph_indentation default
 \quotes_language english
-\papercolumns 1
+\papercolumns 2
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
@@ -309,15 +309,15 @@ centering
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-A schematic of the setup is shown.
- TL1: Trapping laser for driving bead B1, TL2: trapping laser for driven
- bead B2, DL: detection laser, PBS: polarizing beam splitter cube, 
+A schematic diagram of the experimental setup.
+ TL1: trapping laser for driving particle B1, TL2: trapping laser for driven
+ particle B2, DL: detection laser, PBS: polarizing beam splitter cube, 
 \begin_inset Formula $\frac{\lambda}{2}$
 \end_inset
 
-: half wave plate, DC: Dichroic mirror, MO: Microscope objective, CS: Cover
+: half wave plate, DC: dichroic mirror, MO: microscope objective, CS: cover
  slip, BD1 and BD2: balanced detection systems based on Thorlabs photodiodes
- PD-EC2, M: Mirror, EM: Edge mirror, LIA1 and LIA2: Lock-in amplifiers for
+ PD-EC2, M: mirror, EM: edge mirror, LIA1 and LIA2: lock-in amplifiers for
  B1 and B2, respectively.
 \end_layout
 
@@ -470,32 +470,18 @@ centering
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Verfication of the Fluctuation-response relation for a pair of colloidal
- particles coupled hydrodynamically.
- We demonstrate this for individual matrix elements in the form of 
-\begin_inset Formula $\mathit{\frac{k_{B}T}{\pi f}\chi"_{ij}=C_{ij}}$
+Verification of the fluctuation-response relation 
+\begin_inset Formula $C_{ij}=(k_{B}T/\pi f)\chi_{ij}^{\prime\prime}$
 \end_inset
 
-, where (a) and (c) are for the diagonal matrix elements, and (b) is for
- the off-diagonal matrix element.
- We also fit the experimentally measured rhs, i.e.
+ for a pair of viscously coupled colloidal particles in optical traps.
+ The first and third panels compare the self-response and the position auto-corr
+elation of, respectively, the driving and driven colloid, while the third
+ panel compares their mutual-response and cross-correlation.
+ Theoretically computed correlation functions, assuming over-damped motion
+ of the colloids and slow viscous flow in the fluid, are shown as solid
+ lines.
  
-\begin_inset Formula $\mathit{C_{ij}}$
-\end_inset
-
-(the auto and cross-correlation functions), with the theoretically calculated
- values of the same.
- Note that while 
-\begin_inset Formula $\mathit{C_{ij}=\mathit{C_{ji}}}$
-\end_inset
-
-trivially, we are not able to measure the response 
-\begin_inset Formula $\mathit{\chi"_{21}},$
-\end_inset
-
- (response of B1 when B2 is driven), since the amplitude response of B1
- (strongly trapped bead) when B2 is driven is lower than our detection sensitivi
-ty.
 \end_layout
 
 \end_inset
@@ -625,54 +611,147 @@ which is the response of B1 when B2 is driven since the much larger stiffness
 \shape italic
 Theory:
 \shape default
- It is naturally an interesting exercise to probe the underlying physics
- of the pair of trapped particles coupled by hydrodynamic interactions in
- a more quantitative manner.
- The force balance equation of an optically trapped bead is, 
+ The Langevin equations describing the stochastic trajectories of the colloids
+ are
 \begin_inset Formula 
 \begin{align}
-m{\bf \dot{v}}_{i} & =-\gamma_{ij}{\bf v}_{j}-{\bf \nabla}_{i}U+{\bf \xi}_{i}\label{eq1}\\
-{\bf \dot{R}}_{i} & ={\bf v}_{i}\nonumber 
+m_{i}\dot{\boldsymbol{v}_{i}} & +\boldsymbol{\gamma}_{ij}\cdot\boldsymbol{v}_{j}+{\bf \boldsymbol{\nabla}}_{i}U=\boldsymbol{{\bf \xi}}_{i}\label{eq1}
 \end{align}
 
 \end_inset
 
-where, 
-\begin_inset Formula ${\bf \dot{R}}_{i}$
+where 
+\begin_inset Formula $i,j=1,2$
 \end_inset
 
- and 
-\begin_inset Formula ${\bf \dot{v}}_{i}$
+ refer to the driving and driven colloid, 
+\begin_inset Formula $m_{i}$
 \end_inset
 
-, respectively, are the position and velocity of the i-th particle of mass
- m, 
-\begin_inset Formula $\gamma_{ij}$
+ are their masses, 
+\begin_inset Formula $\boldsymbol{v}_{i}$
 \end_inset
 
- is the many-body friction tensor, 
-\begin_inset Formula $\mathrm{U}$
+ are their velocities, 
+\begin_inset Formula $\boldsymbol{\gamma}_{ij}$
 \end_inset
 
- is the potential, and 
-\begin_inset Formula $\xi$
+ are the friction tensors encoding the velocity-dependent dissipative forces
+ mediated by the fluid, 
+\begin_inset Formula $U=U_{1}+U_{2}$
 \end_inset
 
- is the thermal stochastic noise.
- The optical potential is given by 
-\begin_inset Formula $U(t)=\frac{1}{2}\sum k_{i}({\bf R}_{i}-{\bf R}_{i}^{0})^{2}$
+ is the total potential of the conservative forces, and 
+\begin_inset Formula $\boldsymbol{\xi}_{i}$
 \end_inset
 
- with 
-\begin_inset Formula ${\bf R}_{i}^{0}$
+, the Langevin noises, are zero-mean Gaussian random variables whose variance
+ is provided by the fluctuation-dissipation relation 
+\begin_inset Formula $\langle\boldsymbol{\xi}_{i}(t)\boldsymbol{\xi}_{j}(t^{\prime})\rangle=2k_{B}T\boldsymbol{\gamma}_{ij}\delta(t-t^{\prime})$
 \end_inset
 
- is the position of the potential minimum of the i-th optical trap and 
+.
+ 
+\end_layout
+
+\begin_layout Standard
+In the limit of slow viscous flow in the fluid, the friction tensors can
+ be calculated from the Stokes equation using a variety of methods.
+ To leading order the result is 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{\gamma}_{ij}=\gamma_{i}\delta_{ij}+(1-\delta_{ij})\gamma_{i}\gamma_{j}\mathcal{F}_{i}\mathcal{F}_{j}\boldsymbol{G}_{ij}(\boldsymbol{r}_{i},\boldsymbol{r}_{j})
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\gamma_{i}=6\pi\eta a_{i}$
+\end_inset
+
+ are the self-frictions, 
+\begin_inset Formula $\boldsymbol{G}_{ij}$
+\end_inset
+
+ is a Green's function of the Stokes equatio and 
+\begin_inset Formula $\mathcal{F}_{i}=1+\frac{a_{i}^{2}}{6}\nabla_{i}^{2}$
+\end_inset
+
+ is the Faxen correction that accounts for the finite size of the spheres.
+ We emphasize that this expression is not limited to the Green's function
+ of unbounded flow 
+\begin_inset Formula $8\pi\eta\,\boldsymbol{G}_{ij}(\boldsymbol{r})=(\nabla^{2}\boldsymbol{I}-\boldsymbol{\nabla\nabla})r$
+\end_inset
+
+ but holds generally for any Green's function.
+ The assumption of slow viscous flow is valid at frequencies 
+\begin_inset Formula $\omega\tau_{\nu}\ll1$
+\end_inset
+
+ where 
+\begin_inset Formula $\tau_{\nu}=\rho L^{2}/\eta$
+\end_inset
+
+ is the vorticity diffusion time scale.
+ 
+\end_layout
+
+\begin_layout Standard
+The optical potential is given by 
+\begin_inset Formula $U_{i}(t)=\frac{1}{2}k_{i}({\bf \boldsymbol{r}}_{i}-{\bf \boldsymbol{r}}_{i}^{0})^{2}$
+\end_inset
+
+ where 
+\begin_inset Formula $\boldsymbol{r}_{i}^{0}$
+\end_inset
+
+ is center of the 
+\begin_inset Formula $i$
+\end_inset
+
+-th optical trap and 
 \begin_inset Formula $k_{i}$
 \end_inset
 
- is the corresponding stiffness.
- In the experimental set-up, we have two such optical traps with the minimum
+ is its stiffness.
+ We note that there is no conservative coupling between the colloids and
+ their only coupling is mediated by the flow-induced forces in the solvent.
+ Correlations are measured when the trap centers are stationary and responses
+ are measured by modulating one of the trap centers keeping the other fixed.
+ 
+\end_layout
+
+\begin_layout Standard
+At times longer than the momentum relaxation scales 
+\begin_inset Formula $m_{i}/\gamma_{i}$
+\end_inset
+
+ the velocities can be adiabatically eliminated from the Langevin equations
+ to yield over-damped Langevin equations for the positions.
+ The multiplicative noises in the resulting equations have clear interpretations
+ within the adiabatic elimination procedure; there is no Ito-Stratonovich
+ dilemma.
+ We calculate both the correlation and response functions in this over-damped
+ limit, linearizing about the equilibrium separation of the trap centers.
+ The results are 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Add\qquad correlation\quad result
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the experimental set-up, we have two such optical traps with the minimum
  of one of them is being shifted with an external periodic signal, and the
  response of the two beads studied.
  Assuming momentum to be rapidly relaxing on the time scale of the trap
