@@ -476,7 +476,7 @@ Verification of the fluctuation-response relation
 
  for a pair of viscously coupled colloidal particles in optical traps.
  The first and third panels compare the self-response and the position auto-corr
-elation of, respectively, the driving and driven colloid, while the third
+elation of, respectively, the driving and driven colloid, while the second
  panel compares their mutual-response and cross-correlation.
  Theoretically computed correlation functions, assuming over-damped motion
  of the colloids and slow viscous flow in the fluid, are shown as solid
@@ -636,8 +636,8 @@ where
 \begin_inset Formula $\boldsymbol{\gamma}_{ij}$
 \end_inset
 
- are the friction tensors encoding the velocity-dependent dissipative forces
- mediated by the fluid, 
+ are the second-rank friction tensors encoding the velocity-dependent dissipativ
+e forces mediated by the fluid, 
 \begin_inset Formula $U=U_{1}+U_{2}$
 \end_inset
 
@@ -651,7 +651,8 @@ where
 \end_inset
 
 .
- 
+ The bold-face notation, with Cartesian indices suppressed, is used for
+ both vectors and tensors.
 \end_layout
 
 \begin_layout Standard
@@ -663,7 +664,7 @@ In the limit of slow viscous flow in the fluid, the friction tensors can
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{\gamma}_{ij}=\gamma_{i}\delta_{ij}+(1-\delta_{ij})\gamma_{i}\gamma_{j}\mathcal{F}_{i}\mathcal{F}_{j}\boldsymbol{G}_{ij}(\boldsymbol{r}_{i},\boldsymbol{r}_{j})
+\boldsymbol{\gamma}_{ij}=\gamma_{i}\delta_{ij}+(1-\delta_{ij})\gamma_{i}\gamma_{j}\mathcal{F}_{i}\mathcal{F}_{j}\boldsymbol{G}(\boldsymbol{r}_{i},\boldsymbol{r}_{j})
 \end{equation}
 
 \end_inset
@@ -673,20 +674,28 @@ where
 \end_inset
 
  are the self-frictions, 
-\begin_inset Formula $\boldsymbol{G}_{ij}$
+\begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
- is a Green's function of the Stokes equatio and 
+ is a Green's function of the Stokes equation, 
+\begin_inset Formula $\boldsymbol{r}_{i}$
+\end_inset
+
+ are the centers of the colloids and 
 \begin_inset Formula $\mathcal{F}_{i}=1+\frac{a_{i}^{2}}{6}\nabla_{i}^{2}$
 \end_inset
 
- is the Faxen correction that accounts for the finite size of the spheres.
- We emphasize that this expression is not limited to the Green's function
- of unbounded flow 
-\begin_inset Formula $8\pi\eta\,\boldsymbol{G}_{ij}(\boldsymbol{r})=(\nabla^{2}\boldsymbol{I}-\boldsymbol{\nabla\nabla})r$
+ are the Faxen corrections that account for the finite radius 
+\begin_inset Formula $a_{i}$
 \end_inset
 
- but holds generally for any Green's function.
+ of the colloids.
+ We emphasize that this expression is not limited to the translationally
+ invariant Green's function of unbounded flow, 
+\begin_inset Formula $8\pi\eta\,\boldsymbol{G}(\boldsymbol{r})=(\nabla^{2}\boldsymbol{I}-\boldsymbol{\nabla\nabla})r$
+\end_inset
+
+, but holds generally for any Green's function.
  The assumption of slow viscous flow is valid at frequencies 
 \begin_inset Formula $\omega\tau_{\nu}\ll1$
 \end_inset
