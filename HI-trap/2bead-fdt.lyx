@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #LyX 2.2 created this file. For more info see http://www.lyx.org/
 \lyxformat 508
 \begin_document
@@ -1219,3 +1220,1220 @@ In conclusion, we study the coupled dynamics of two colloidal particles
 
 \end_body
 \end_document
+=======
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass revtex4-1
+\begin_preamble
+% ****** Start of file apssamp.tex ******
+%
+%   This file is part of the APS files in the REVTeX 4.1 distribution.
+%   Version 4.1r of REVTeX, August 2010
+%
+%   Copyright (c) 2009, 2010 The American Physical Society.
+%
+%   See the REVTeX 4 README file for restrictions and more information.
+%
+% TeX'ing this file requires that you have AMS-LaTeX 2.0 installed
+% as well as the rest of the prerequisites for REVTeX 4.1
+%
+% See the REVTeX 4 README file
+% It also requires running BibTeX. The commands are as follows:
+%
+%  1)  latex apssamp.tex
+%  2)  bibtex apssamp
+%  3)  latex apssamp.tex
+%  4)  latex apssamp.tex
+%
+
+
+% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%\usepackage{hyperref}% add hypertext capabilities
+%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+%\linenumbers\relax % Commence numbering lines
+
+%\usepackage[showframe,%Uncomment any one of the following lines to test 
+%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
+%%text={7in,10in},centering,
+%%margin=1.5in,
+%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
+%%height=10in,a5paper,hmargin={3cm,0.8in},
+%]{geometry}
+\end_preamble
+\options reprint,amsmath,amssymb,aps,superscriptaddress
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Direct verification of the fluctuation-response relation in viscously coupled
+ oscillators
+\end_layout
+
+\begin_layout Author
+Shuvojit Paul
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Affiliation
+Indian Institute of Science Education and Research, Kolkata
+\end_layout
+
+\begin_layout Author
+Abhrajit Laskar
+\end_layout
+
+\begin_layout Affiliation
+The Institute of Mathematical Sciences-HBNI, CIT Campus, Tarmani, Chennai
+ 600113, India
+\end_layout
+
+\begin_layout Author
+Basudev Roy
+\end_layout
+
+\begin_layout Affiliation
+Department of Physics, Indian Institute of Technology Madras, Chennai 600036,
+ India
+\end_layout
+
+\begin_layout Author
+Ronojoy Adhikari
+\end_layout
+
+\begin_layout Author Email
+rjoy@imsc.res.in
+\end_layout
+
+\begin_layout Affiliation
+The Institute of Mathematical Sciences-HBNI, CIT Campus, Tarmani, Chennai
+ 600113, India
+\end_layout
+
+\begin_layout Author
+Ayan Banerjee
+\end_layout
+
+\begin_layout Author Email
+ayan@iiserkol.ac.in
+\end_layout
+
+\begin_layout Affiliation
+Indian Institute of Science Education and Research, Kolkata
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+The fluctuation-response relation, a central result in non-equilibrium statistic
+al mechanics, relates equilibrium fluctuations in a system to its linear
+ response to external forces.
+ Here we provide a direct experimental verification of this relation for
+ viscously coupled oscillators, as realized by a pair of optically trapped
+ colloidal particles.
+ A theoretical analysis in which forces mediated by slow viscous flow are
+ represented by non-local friction tensors matches experimental results
+ and reveals a frequency maximum in the amplitude of the mutual response
+ function for varying ratios of the optical trap stiffnesses.
+ This amplitude 
+\begin_inset Quotes eld
+\end_inset
+
+resonance
+\begin_inset Quotes erd
+\end_inset
+
+ is a sensitive function of the fluid viscosity suggesting the utility of
+ the trap setup for accurate two-point microrheology.
+\end_layout
+
+\begin_layout PACS
+Valid PACS appear here
+\end_layout
+
+\begin_layout Standard
+The classical dynamics of a pair of coupled harmonic oscillators under a
+ variety of boundary conditions and in different environments offers interesting
+ study, and is often used to model systems encompassing diverse areas in
+ physics.
+ The environment dictates the dynamics, and thus, a careful analysis of
+ the dynamics leads to a precise calibration of the environment.
+ In this context, the coupled-oscillator problem in a fluid has interesting
+ connotations, especially when the oscillators in question are of mesoscopic
+ dimensions, since they would then be responsive to fluid properties at
+ the microscopic level.
+ Thus, while a preliminary perception would demarcate the problem to be
+ a typical coupled oscillator that is in the over-damped regime - the fact
+ that the particles are Brownian, and thus undergo position fluctuations
+ influenced by stochastic forces - renders interesting possibilities.
+ Moreover, the microscopic flow environment that the oscillators would sample
+ could also lead to non-trivial effects, and even produce phenomenon that
+ would otherwise be considered unlikely due to the boundary conditions governing
+ the over-damped regime.
+\end_layout
+
+\begin_layout Standard
+In this paper, we probe the coupled dynamics of a pair of colloidal particles
+ trapped in close proximity in water using optical tweezers.The simple system
+ of two colloidal spheres trapped in separate optical traps has earlier
+ been used to study the effects on one of the spheres when the other is
+ modulated sinusoidally 
+\backslash
+cite{pre, schmiddt}.
+ The results seemed to match the theory well - however, there seemed to
+ be limited interest in the consequences of the results and the possibilities
+ offered by this system as a whole to study interesting aspects of basic
+ physics.
+ For example, a trapped particle under optical tweezers undergoes Brownian
+ motion, which is a Markovian process and thus obeys detailed balance, so
+ that the fluctuation dissipation relation is almost trivially satisfied
+ in this case.
+ However, the situation becomes more complicated when two particles are
+ trapped in separate optical tweezers that are coupled by near-field hydrodynami
+c interactions with the entrained fluid.
+ The particles undergo Brownian motion apparently independent of each other,
+ and while both systems have linear responses individually - so that their
+ relaxations are exponential, it would be interesting to probe whether fluctuati
+on dissipation is stringently satisfied for the coupled system.
+ This is what we achieve in this paper, where we first develop a theory
+ to verify the fluctuation response relationship for two spheres trapped
+ in optical tweezers and coupled by hydrodynamic interactions.
+ Using appropriate fluid-mediated interactions represented by the mobility
+ tensors, we check whether the response of one of the particles when the
+ other is driven sinusoidally can indeed by equated with the cross-correlations
+ of the Brownian fluctuations of the individual particles.
+ We then verify this experimentally on two polystyrene microspheres trapped
+ in very close proximity of each other (surface to surface separation lesser
+ than the particle radius), and perform measurements to check whether the
+ fluctuation-response theorem is indeed validated.
+ In addition, we observe that when one of the microspheres is modulated
+ sinusoidally, the response of the other is dependent on the driving frequency
+ of the former, so that it displays an amplitude resonance.
+ This is typically not feasible in a highly overdamped system such as optical
+ tweezers where the liquid entirely damps out the inertial response of the
+ trapped object.
+ The resonance response is a critical function of the viscosity of the liquid
+ and can, in principle, be used to perform two point micro-rheology measurements
+ with high accuracy.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Experiment:
+\shape default
+ The details of the experimental setup towards validation of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq14"
+
+\end_inset
+
+ are provided in Supplementary Information, here we provide a brief description.
+ Thus, we set up a dual-beam optical tweezers (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Setup"
+
+\end_inset
+
+) by focusing two orthogonally polarized beams of wavelength 
+\begin_inset Formula $\lambda=1064$
+\end_inset
+
+ nm generated independently from two diode lasers using a high NA immersion-oil
+ microscope objective (Zeiss PlanApo,
+\begin_inset Formula $100\times1.4$
+\end_inset
+
+).
+ One of the lasers is modulated using an AOM located conjugate to the back-focal
+ plane of the microscope objective, and a long optical path after the AOM
+ ensures that a minimal beam deflection is enough to modulate one of the
+ trapped beams, so that the intensity in the first order remains constant
+ to around 2%.
+ The modulated and unmodulated beams are independently coupled into the
+ trapping microscope using mirrors and a polarizing beam splitter, while
+ detection is performed using a separate laser at 671 nm generating two
+ detection beams also orthogonally polarized and superposed on the respective
+ trapping beams using dichroic beam splitters.
+ The two trapped beads are imaged and their displacements measured by back-focal
+- plane-interferometry, with the imaging white light and detection beams
+ also separated at the output by dichroic beam splitters.
+ A very low volume fraction sample (
+\begin_inset Formula $\phi\approx0.01$
+\end_inset
+
+) is prepared with 3 
+\begin_inset Formula $\mu$
+\end_inset
+
+m diameter polystyrene latex beads in 1 M NaCl-water solution for avoiding
+ surface charges.
+ A single droplet of about 20 
+\begin_inset Formula $\mu$
+\end_inset
+
+l volume of the sample is introduced on a standard 10 mm square cover slip
+ so that the droplet radius is around 200 
+\begin_inset Formula $\mu$
+\end_inset
+
+m.
+ We trap two spherical polystyrene beads (Sigma LB-30) of mean size 3 
+\begin_inset Formula $\mu$
+\end_inset
+
+m each, in two calibrated optical traps which are separated by a distance
+ 
+\begin_inset Formula $4\pm0.1\:\mu$
+\end_inset
+
+m, so that the surface-surface distance of the trapped beads is 
+\begin_inset Formula $1\pm0.2\:\mu$
+\end_inset
+
+m, and the distance from the cover slip surface is 30 
+\begin_inset Formula $\mu$
+\end_inset
+
+m.
+ From the literature 
+\backslash
+cite{
+\series bold
+PRL 107, 248101 (2011)
+\series default
+}, this distance is still large enough to avoid optical cross talk and effects
+ due to surface charges.
+ In order to ensure that the trapping beams do not influence each other,
+ we measure the Brownian motion of one when the other is switched on (in
+ the absence of a particle), and check that there are no changes in the
+ Brownian motion.
+ One of the traps is sinusoidally modulated and the phase and amplitude
+ response of both the driving and driven particles with reference to the
+ sinusoidal drive are measured by lock-in detection (Stanford Research,
+ SR830).
+ To get large signal to noise, we use balanced detection using photodiode
+ pairs PA1, PB1 and PA2, PB2, for the driving and driven particles, respectively.
+ The voltage-amplitude calibration of our detection system reveals that
+ we can resolve motion of around 12 nm with an SNR of 2.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+f
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A schematic of the setup is shown.
+ TL1: Trapping laser for driving bead B1, TL2: trapping laser for driven
+ bead B2, DL: detection laser, PBS: polarizing beam splitter cube, 
+\begin_inset Formula $\frac{\lambda}{2}$
+\end_inset
+
+: half wave plate, DC: Dichroic mirror, MO: Microscope objective, CS: Cover
+ slip, BD1 and BD2: balanced detection systems based on Thorlabs photodiodes
+ PD-EC2, M: Mirror, EM: Edge mirror, LIA1 and LIA2: Lock-in amplifiers for
+ B1 and B2, respectively.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Setup"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename fig2.pdf
+	width 50text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Verfication of the Fluctuation-response relation for a pair of colloidal
+ particles coupled hydrodynamically.
+ We demonstrate this for individual matrix elements in the form of 
+\begin_inset Formula $\mathit{\frac{k_{B}T}{\pi f}\chi"_{ij}=C_{ij}}$
+\end_inset
+
+, where (a) and (c) are for the diagonal matrix elements, and (b) is for
+ the off-diagonal matrix element.
+ We also fit the experimentally measured rhs, i.e.
+ 
+\begin_inset Formula $\mathit{C_{ij}}$
+\end_inset
+
+(the auto and cross-correlation functions), with the theoretically calculated
+ values of the same.
+ Note that while 
+\begin_inset Formula $\mathit{C_{ij}=\mathit{C_{ji}}}$
+\end_inset
+
+trivially, we are not able to measure the response 
+\begin_inset Formula $\mathit{\chi"_{21}},$
+\end_inset
+
+ (response of B1 when B2 is driven), since the amplitude response of B1
+ (strongly trapped bead) when B2 is driven is lower than our detection sensitivi
+ty.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fdt"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+Each of the optical traps are calibrated using equipartition and power spectrum
+ methods considering the the particle temperature to be same as the room
+ temperature.
+ We verify that each of the potentials is harmonic in nature from the histogram
+ of the Brownian motion which is satisfactorily Gaussian (Fig.
+ 1 in Supplementary Information).
+ The sampling frequency is 2 kHz, while we performed data blocking at the
+ level of 100 points in order to ensure good Lorentzian fits [flyvbjerg]
+ for trap calibration.
+ We maintain a considerably higher stiffness for the particle in the modulated
+ trap so that it is not affected by the back-flow due to the driven particle.
+ The low stiffness of the driven trap ensures that it has a maximal response
+ to the drive.
+ Thus, for validation of the fluctuation response theorem, the stiffness
+ of the modulated bead (B1) was 69.6 
+\begin_inset Formula $\mu N/m$
+\end_inset
+
+, while that of the driven is 4.8 
+\begin_inset Formula $\mu N/m$
+\end_inset
+
+.
+ Note that, to observe a clear amplitude resonance, a lower ratio of trap
+ stiffness is required, as we demonstrate later.
+ The verification of the fluctuation-response theorem is shown in Figs.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fdt"
+
+\end_inset
+
+ .
+ It is understandable that while the fluctuation-response theorem is in
+ the form a simple equation for a single particle, for two particles the
+ equations would be represented in the form of a matrix.
+ This is what we demonstrate in Fig.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fdt"
+
+\end_inset
+
+(a), (b), and (c), where the auto and cross-correlations for both particles
+ are matched with the corresponding response functions.
+ The auto-correlation function of B1 is shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fdt"
+
+\end_inset
+
+(a), while that of B2 is shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fdt"
+
+\end_inset
+
+(b).
+ The corresponding response functions (
+\begin_inset Formula $\mathit{\chi"_{11},\:\chi"_{22}}$
+\end_inset
+
+) are obtained by measuring the amplitude and phase of the individual particles
+ when they are themselves driven.
+ Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fdt"
+
+\end_inset
+
+(c) shows the cross-correlation function which is again compared with the
+ corresponding response function 
+\begin_inset Formula $\mathit{\chi"_{12}}$
+\end_inset
+
+.
+ This is obtained by measuring the amplitude and phase of B2 when B1 is
+ driven.
+ Note that we are not able to measure 
+\begin_inset Formula $\mathit{\chi"_{21}}$
+\end_inset
+
+which is the response of B1 when B2 is driven since the much larger stiffness
+ of B1 renders the amplitude of the response extremely small so that it
+ is beyond our detection sensitivity.
+ For the response measurements, each data point is the average of ten separate
+ measurements at each frequency.
+ It is clear from the figures that we obtain a good match between fluctuation
+ and response - which essentially validates the fluctuation-response relations
+ for a pair of colloidal particles coupled by hydrodynamic interactions.
+ Note that for consistency check, we also plot the cross-correlation function
+ in the time domain (Fig.
+ 2 in Supplementary Information) and obtain qualitatively similar data as
+ reported in Ref.
+ [Meiners and Quake].
+ 
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Theory:
+\shape default
+ It is naturally an interesting exercise to probe the underlying physics
+ of the pair of trapped particles coupled by hydrodynamic interactions in
+ a more quantitative manner.
+ The force balance equation of an optically trapped bead is, 
+\begin_inset Formula 
+\begin{align}
+m{\bf \dot{v}}_{i} & =-\gamma_{ij}{\bf v}_{j}-{\bf \nabla}_{i}U+{\bf \xi}_{i}\label{eq1}\\
+{\bf \dot{R}}_{i} & ={\bf v}_{i}\nonumber 
+\end{align}
+
+\end_inset
+
+where, 
+\begin_inset Formula ${\bf \dot{R}}_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\bf \dot{v}}_{i}$
+\end_inset
+
+, respectively, are the position and velocity of the i-th particle of mass
+ m, 
+\begin_inset Formula $\gamma_{ij}$
+\end_inset
+
+ is the many-body friction tensor, 
+\begin_inset Formula $\mathrm{U}$
+\end_inset
+
+ is the potential, and 
+\begin_inset Formula $\xi$
+\end_inset
+
+ is the thermal stochastic noise.
+ The optical potential is given by 
+\begin_inset Formula $U(t)=\frac{1}{2}\sum k_{i}({\bf R}_{i}-{\bf R}_{i}^{0})^{2}$
+\end_inset
+
+ with 
+\begin_inset Formula ${\bf R}_{i}^{0}$
+\end_inset
+
+ is the position of the potential minimum of the i-th optical trap and 
+\begin_inset Formula $k_{i}$
+\end_inset
+
+ is the corresponding stiffness.
+ In the experimental set-up, we have two such optical traps with the minimum
+ of one of them is being shifted with an external periodic signal, and the
+ response of the two beads studied.
+ Assuming momentum to be rapidly relaxing on the time scale of the trap
+ motion, we neglect inertia and average over the noise to get, 
+\begin_inset Formula 
+\begin{align}
+-\gamma_{ij}{\bf \dot{R}}_{j}-{\bf \nabla_{i}U}=0\label{eq2}
+\end{align}
+
+\end_inset
+
+Eq.
+\begin_inset Formula $\ref{eq2}$
+\end_inset
+
+ can be inverted and presented in terms of mobility matrices as, 
+\begin_inset Formula 
+\begin{align}
+{\bf \dot{R}}_{1} & =-\mu{\bf \delta}k_{1}({\bf R}_{1}-{\bf R}_{1}^{0})-{\bf \mu_{12}}k_{2}({\bf R}_{2}-{\bf R}_{2}^{0})\label{eq3}\\
+{\bf \dot{R}}_{2} & =-{\bf \mu_{21}}k_{1}({\bf R}_{1}-{\bf R}_{1}^{0})-\mu{\bf \delta}k_{2}({\bf R}_{2}-{\bf R}_{2}^{0})\nonumber 
+\end{align}
+
+\end_inset
+
+We re-frame this equation using approximate mobility matrices with the separatio
+n vector to be the average distance between the two minima of the optical
+ traps.
+ Thus, one obtains, 
+\begin_inset Formula 
+\begin{align}
+\frac{d}{dt}\begin{bmatrix}{\bf R}_{1}\\
+{\bf R}_{2}
+\end{bmatrix}=-\begin{bmatrix}\mu k_{1}{\bf \delta} & {\bf \mu}_{12}k_{2}\\
+{\bf \mu}_{21}k_{1} & \mu k_{2}{\bf \delta}
+\end{bmatrix}\begin{bmatrix}{\bf R}_{1}\\
+{\bf R}_{2}
+\end{bmatrix}+\begin{bmatrix}\mu{\bf \delta} & {\bf \mu}_{12}\\
+{\bf \mu}_{21} & \mu\delta
+\end{bmatrix}\begin{bmatrix}{\bf F}_{1}^{0}\\
+{\bf F}_{2}^{0}
+\end{bmatrix}\label{eq4}
+\end{align}
+
+\end_inset
+
+The steady state solution of the Eq.
+\begin_inset Formula $\ref{eq4}$
+\end_inset
+
+ can easily be calculated by taking its Fourier transform.
+ Assuming 
+\begin_inset Formula ${\bf A}=\begin{bmatrix}\mu k_{1}{\bf \delta} & {\bf \mu}_{12}k_{2}\\
+{\bf \mu}_{21}k_{1} & \mu k_{2}{\bf \delta}
+\end{bmatrix}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\bf M}=\begin{bmatrix}\mu{\bf \delta} & {\bf \mu}_{12}\\
+{\bf \mu}_{21} & \mu\delta
+\end{bmatrix}$
+\end_inset
+
+, the solution in frequency domain is given by, 
+\begin_inset Formula 
+\begin{align}
+{\bf R}_{i}(\omega)=[-i\omega{\bf \delta}+{\bf A}]_{ij}^{-1}{\bf M}{\bf F}_{j}^{0}(\omega)={\bf \chi_{ij}}(\omega){\bf F}_{j}^{0}(\omega)\label{eq5}
+\end{align}
+
+\end_inset
+
+which defines the response for 
+\begin_inset Formula ${\chi}$
+\end_inset
+
+.
+ As the minimum of one of the optical traps is modulated by a sinusoidal
+ signal of driving frequency 
+\begin_inset Formula $\Omega$
+\end_inset
+
+, 
+\begin_inset Formula ${\bf F}_{j}^{0}(\omega)=\frac{X_{j}}{2}(\delta(\omega-\Omega)+\delta(\omega+\Omega))$
+\end_inset
+
+.
+ Further, 
+\begin_inset Formula ${\bf \chi}$
+\end_inset
+
+ is a block-diagonal matrix in cartesian indices.
+ Now, for a given experimental set-up, 
+\begin_inset Formula ${\bf \chi}$
+\end_inset
+
+ can be decomposed into 
+\begin_inset Formula ${\bf \chi_{\parallel}}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\bf \chi_{\perp}}$
+\end_inset
+
+, which correspond to motion along the trap separation and that perpendicular
+ to it, respectively.
+ Inserting this form of the signal into Eq.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq5"
+
+\end_inset
+
+, and reverting to the time domain, we find 
+\begin_inset Formula 
+\begin{align}
+R_{\parallel i}(t)=\chi'_{\parallel ij}\cos(\Omega t)X_{j}+\chi"_{\parallel ij}\sin(\Omega t)X_{j}\label{eq6}
+\end{align}
+
+\end_inset
+
+The two time scales from the two traps can be calculated to be 
+\begin_inset Formula $\tau_{i}=\frac{1}{\mu k_{i}}$
+\end_inset
+
+, so that, 
+\begin_inset Formula 
+\begin{align*}
+{\bf \chi}_{\parallel}(\Omega)=\frac{1}{DetA_{\parallel}-\Omega^{2}-i\Omega TrA_{\parallel}}\times\\
+\begin{bmatrix}(\mu k_{1}-i\Omega) & \mu_{12}k_{2}\\
+\mu_{21}k_{1} & (\mu k_{2}-i\Omega)
+\end{bmatrix}^{-1}\begin{bmatrix}\mu & \mu_{12}\\
+\mu_{21} & \mu
+\end{bmatrix}\\
+=\frac{1}{DetA_{\parallel}-\Omega^{2}-i\Omega TrA_{\parallel}}\times\\
+\begin{bmatrix}(\mu k_{2}-i\Omega) & -\mu_{12}k_{2}\\
+-\mu_{21}k_{1} & (\mu k_{1}-i\Omega)
+\end{bmatrix}\begin{bmatrix}\mu & \mu_{12}\\
+\mu_{21} & \mu
+\end{bmatrix}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+=\frac{DetA_{\parallel}-\Omega^{2}+i\Omega TrA_{\parallel}}{(DetA_{\parallel}-\Omega^{2})^{2}+\Omega^{2}(TrA_{\parallel})^{2}}\times\nonumber \\
+\begin{bmatrix}k_{2}DetM_{\parallel}-i\mu\Omega & -i\Omega\mu_{12}\\
+-i\Omega\mu_{21} & k_{1}DetM_{\parallel}-i\mu\Omega
+\end{bmatrix}\label{eq7}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+=(DetA_{\parallel}-\Omega^{2})^{2}+\Omega^{2}(TrA_{\parallel})^{2}\times\nonumber \\
+\begin{bmatrix}\mu k_{2}^{2}DetM_{\parallel}+\mu\Omega^{2} & -(DetA_{\parallel}-\Omega^{2})\mu_{12}\\
+-(DetA_{\parallel}-\Omega^{2})\mu_{21} & \mu k_{1}^{2}DetM_{\parallel}+\mu\Omega^{2}
+\end{bmatrix}\label{eq8}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note that we are interested in the resonance in amplitude of the second
+ bead due to the forcing of the first bead that is given by maximizing the
+ modulus of 
+\begin_inset Formula $\chi_{21\parallel}$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\begin{align}
+\mid\chi_{21\parallel}\mid & =\mid\frac{-i\Omega\mu_{21}}{DetA_{\parallel}-\Omega^{2}-i\Omega TrA_{\parallel}}\mid\nonumber \\
+ & =\frac{\Omega\mu_{21}}{\sqrt{(DetA_{\parallel}-\Omega^{2})^{2}+\Omega^{2}(TrA_{\parallel})^{2}}}\label{eq9}
+\end{align}
+
+\end_inset
+
+Clearly the resonance frequency in dimensionless unit is 
+\begin_inset Formula $\tau_{1}\Omega_{res}=\sqrt{\frac{DetA_{\parallel}}{\mu^{2}k_{1}^{2}}}=\sqrt{\frac{k_{2}}{k_{1}}\left(1-\frac{\mu_{\parallel12}^{2}}{\mu^{2}}\right)}$
+\end_inset
+
+ when 
+\begin_inset Formula $\mu_{21}\neq0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq5"
+
+\end_inset
+
+ is analogous to the expression of a forced harmonic oscillator where, resonance
+ frequency 
+\begin_inset Formula $\omega_{0}^{2}=DetA_{\parallel}$
+\end_inset
+
+ and the damping term 
+\begin_inset Formula $\Gamma=TrA_{\parallel}$
+\end_inset
+
+.
+ The theoretical phase and amplitude response as a function of frequency
+ are shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fdt"
+
+\end_inset
+
+(a) and (b).
+ Interestingly, the expression of 
+\begin_inset Formula $\chi_{21\parallel}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ resembles that of the velocity of the forced damped driven oscillator in
+ classical physics.
+ This is due to the fact that the interactions in this case are mediated
+ by the mobility of the fluid which essentially implies that amplitude (or
+ displacement) in our system assumes the role of velocity in classical physics.
+ Accordingly, the phase of the second bead lags behind the drive at 90 degrees
+ at low frequencies, and leads it by the same amount at high frequencies,
+ being in phase at resonance akin to the induced current against drive voltage
+ in LCR circuits.
+ 
+\end_layout
+
+\begin_layout Standard
+Let us now consider the situation where the external force is absent and
+ the two trapped particles are executing Brownian motion in their respective
+ traps.
+ Then, from Eq.
+\begin_inset Formula $\ref{eq2}$
+\end_inset
+
+ we obtain 
+\begin_inset Formula 
+\begin{align}
+\gamma_{ij}\dot{R}_{j} & =-k_{ij}R_{j}+\xi_{i}\label{eq10}\\
+\langle\xi_{i}\rangle & =0\nonumber \\
+\langle\xi_{i}\xi_{j}\rangle & =2K_{B}T\gamma_{ij}\nonumber 
+\end{align}
+
+\end_inset
+
+Once again, the steady state solution in frequency space is derived easily
+ by a Fourier transform, so that 
+\begin_inset Formula 
+\begin{align}
+{\bf R}(\omega)=(-i\omega{\bf \delta}+{\bf A})^{-1}{\bf M\xi}(\omega)\label{eq11}
+\end{align}
+
+\end_inset
+
+Thus, the correlation matrix can be written as
+\begin_inset Formula 
+\begin{eqnarray*}
+\langle{\bf R}(\omega){\bf R}^{\dagger}(\omega)\rangle= & (-i\omega{\bf \delta}+{\bf A})^{-1}{\bf M}\langle{\bf \xi}(\omega){\bf \xi}^{\dagger}(\omega)\rangle{\bf M}(i\omega{\bf \delta}+{\bf A}^{T})^{-1}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{1}{2K_{B}T}C_{\Delta\Delta}=(-i\omega{\bf \delta}+{\bf A})^{-1}{\bf M}(i\omega{\bf \delta}+{\bf A}^{T})^{-1}\label{eq12}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{flalign}
+(-i\omega{\bf \delta}+{\bf A})_{\parallel}^{-1}{\bf M}_{\parallel}(i\omega{\bf \delta}+{\bf A}_{\parallel}^{T})^{-1}=\nonumber \\
+\frac{1}{(DetA_{\parallel}-\omega^{2})^{2}+\omega^{2}(TrA_{\parallel})^{2}}\times\nonumber \\
+\begin{bmatrix}\mu k_{2}-i\omega & -\mu_{12}k_{2}\\
+-\mu_{21}k_{1} & \mu k_{1}-i\omega
+\end{bmatrix}\begin{bmatrix}\mu & \mu_{12}\\
+\mu_{21} & \mu
+\end{bmatrix}\begin{bmatrix}\mu k_{2}+i\omega & -\mu_{12}k_{2}\\
+-\mu_{21}k_{1} & \mu k_{1}+i\omega
+\end{bmatrix}\nonumber \\
+=\frac{1}{(DetA_{\parallel}-\omega^{2})^{2}+\omega^{2}(TrA_{\parallel})^{2}}\times\nonumber \\
+\begin{bmatrix}\mu k_{2}^{2}DetM_{\parallel}+\mu\omega^{2} & -(DetA_{\parallel}-\omega^{2})\mu_{21}\\
+-(DetA_{\parallel}-\omega^{2})\mu_{12} & \mu k_{1}^{2}DetM_{\parallel}+\mu\omega^{2}
+\end{bmatrix}\label{eq13}
+\end{flalign}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finally, from Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq7"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq10"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq14"
+
+\end_inset
+
+, we see that the Fluctuation-response theorem holds.
+ In matrix representation, it can be written as,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+2k_{B}T\chi^{"}(\omega)=\omega C_{xx}(\omega)\label{eq14}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is indeed what we validate in Fig.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "response"
+
+\end_inset
+
+(a)-(c).
+ We now focus on a particularly interesting facet of our problem, namely
+ the amplitude and phase response of B2 under the influence of the driven
+ particle B1.
+ We study this for three different trap stiffness ratios of B1 and B2, the
+ results of which are shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "response"
+
+\end_inset
+
+(a) - (d).
+ The amplitude and phase response of B1 to the drive frequency is expected,
+ with the amplitude decaying with increasing frequency, and the phase being
+ in sync with the drive at low frequencies and gradually lagging behind
+ as the frequency is increased.
+ However, the amplitude response of B2 is rather interesting, and shows
+ a clear resonance response at a certain frequency, the value of which changes
+ as the stiffness ratio of the traps is increased.
+ Thus, we have a resonance frequency of around 111 Hz (blue solid spheres
+ in Fig.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "response"
+
+\end_inset
+
+(c)) with 
+\begin_inset Formula $\mathit{k_{1}:k_{2}}=$
+\end_inset
+
+14.5, a frequency of around 33 Hz with a ratio of 5.7:1 (red solid spheres),
+ and a frequency of around 20 Hz with a ratio of 2.5:1 (black solid spheres).
+ Thus, it is as if the entrained fluid has minimum impedance around this
+ frequency, so that there is maximum energy transfer between the driving
+ and the driven beads.
+ In addition, the width of the resonance (
+\begin_inset Formula $\mathit{Q}$
+\end_inset
+
+ factor) is also dependent on this ratio, and increases as the stiffness
+ ratio is lowered.
+ The phase response in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "response"
+
+\end_inset
+
+(d) is easily explained: B2 lags 90 degrees in phase with respect to the
+ drive at very low frequencies with the lag reducing until the drive and
+ driven are in phase at resonance, after which the driven bead leads in
+ phase, and asymptotically approaches 90 degrees at high frequencies.
+ As mentioned earlier, this is exactly similar to the relationship between
+ velocity and driving force for a forced damped harmonic oscillator.
+ Note that we fit each graph with the calculated values of the responses
+ for the experimental parameters used, and obtain very good fits.
+ An interesting point that needs to be mentioned here is that the resonance
+ frequency is dependent on the viscosity of the fluid as shown in Eq.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq14"
+
+\end_inset
+
+, which implies that it would shift with changing viscosity.
+ This property promises the measurement of this frequency shift as an accurate
+ two-point micro-rheology probe of local viscosity of a fluid.
+ 
+\end_layout
+
+\begin_layout Standard
+In conclusion, we study the coupled dynamics of two colloidal particles
+ under near-field hydrodynamic interactions using optical tweezers.
+ We verify the fluctuation-response directly in a model-free approach initially
+ by measuring independently the auto and cross-correlations of the trapped
+ particles, and comparing those with the measured amplitude and phase response
+ when the particles are driven sinusoidally.
+ The experiment is carried out on two polystyrene beads of diameter 3 um
+ which are trapped in adjacent traps such that the surface-surface separation
+ of the beads is 1 micron.
+ The stiffness of the modulated bead is kept around 15 times higher than
+ the driven bead to eliminate back-flows on the former and to ensure maximum
+ amplitude response of the latter.
+ To understand the dynamics of the problem more quantitatively, we develop
+ a theoretical model where we solve the force balance equation invoking
+ the mobility tensors for the system when both particles are at rest, as
+ well as when is one of them is sinusoidally modulated.
+ We generate amplitude and phase relationships between the response of the
+ driving and driven particles with respect to the modulation frequency,
+ and obtain the exact statement of the fluctuation-response theorem, which
+ is rather non-trivial for a two particle system.
+ In the process, we observe that the phase response of the driven bead resembles
+ the current in an LCR circuit, and the amplitude actually undergoes a resonance
+ at a particular driving frequency where the transfer of energy is maximum
+ between drive and driven.
+ We note that the resonance position and width are sensitive function of
+ the ratio of the trap stiffnesses, so that a judicious choice of stiffness
+ is required to observe effects with good SNR.
+ Finally, the amplitude resonance frequency also depends on the fluid viscosity,
+ which promises a direct application of this technique as a sensitive two-point
+ microrheology probe of local viscosity.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%%FDT CALCULATION NOT NEEDED HERE%%%%%%%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename fig3.pdf
+	width 45text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Amplitude and phase response for driving (B1) and driven (B2) beads for
+ different trap stiffness ratios.
+ (a) and (b) demonstrate amplitude and phase responses (with respect to
+ driving frequency) of B1, while (c) and (d) demonstrate that of B2 as functions
+ of driving frequency, for trap stiffness ratios of 2.5:1 (black), 5.7:1 (red),
+ and 14.5:1 (blue).
+ The resonance frequency in (c) is 20 Hz (black), 35 Hz (red), and 111 Hz
+ (blue).
+ The solid spheres denote experimental data points while the solid lines
+ are corresponding theoretical fits.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "response"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
+>>>>>>> master
