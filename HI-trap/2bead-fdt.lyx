@@ -111,8 +111,8 @@
 \begin_body
 
 \begin_layout Title
-Direct verification of the fluctuation-response relation in dissipatively
- coupled oscillators
+Direct verification of the fluctuation-response relation in viscously coupled
+ oscillators
 \end_layout
 
 \begin_layout Author
@@ -150,7 +150,6 @@ Ronojoy Adhikari
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -164,7 +163,6 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -193,12 +191,12 @@ The fluctuation-response relation, a central result in non-equilibrium statistic
 al mechanics, relates equilibrium fluctuations in a system to its linear
  response to external forces.
  Here we provide a direct experimental verification of this relation for
- dissipatively coupled oscillators, as realized by a pair of optically trapped
+ viscously coupled oscillators, as realized by a pair of optically trapped
  colloidal particles.
- A theoretical analysis in which fluid-mediated interactions are represented
- by non-local friction tensors matches experimental results and reveals
- a frequency maximum in the amplitude of the mutual response function for
- suitably chosen ratios of optical trap stiffnesses.
+ A theoretical analysis in which forces mediated by slow viscous flow are
+ represented by non-local friction tensors matches experimental results
+ and reveals a frequency maximum in the amplitude of the mutual response
+ function for varying ratios of the optical trap stiffnesses.
  This amplitude 
 \begin_inset Quotes eld
 \end_inset
@@ -207,9 +205,8 @@ resonance
 \begin_inset Quotes erd
 \end_inset
 
- is a sensitive function of the fluid viscosity and can be tuned by the
- trap stiffnesses suggesting the utility of the trap setup for accurate
- two-point microrheology.
+ is a sensitive function of the fluid viscosity suggesting the utility of
+ the trap setup for accurate two-point microrheology.
 \end_layout
 
 \begin_layout PACS
@@ -395,26 +392,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Graphics
-	filename ../../../2016/twobeadhydro/fig1.pdf
-	width 45text%
-
-\end_inset
-
- 
+f
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
