@@ -150,7 +150,6 @@ Ronojoy Adhikari
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -164,7 +163,6 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -409,7 +407,7 @@ centering
 
  
 \begin_inset Graphics
-	filename ../../../2016/twobeadhydro/fig1.pdf
+	filename fig1.pdf
 	width 45text%
 
 \end_inset
@@ -1047,6 +1045,65 @@ reference "eq14"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename fig3.pdf
+	width 45text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Amplitude and phase response for driving (B1) and driven (B2) beads for
+ different trap stiffness ratios.
+ (a) and (b) demonstrate amplitude and phase responses (with respect to
+ driving frequency) of B1, while (c) and (d) demonstrate that of B2 as functions
+ of driving frequency, for trap stiffness ratios of 2.5:1 (black), 5.7:1 (red),
+ and 14.5:1 (blue).
+ The resonance frequency in (c) is 20 Hz (black), 35 Hz (red), and 111 Hz
+ (blue).
+ The solid spheres denote experimental data points while the solid lines
+ are corresponding theoretical fits.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "response"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 This is indeed what we validate in Fig.
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1158,79 +1215,6 @@ In conclusion, we study the coupled dynamics of two colloidal particles
  Finally, the amplitude resonance frequency also depends on the fluid viscosity,
  which promises a direct application of this technique as a sensitive two-point
  microrheology probe of local viscosity.
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%%%%FDT CALCULATION NOT NEEDED HERE%%%%%%%
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Graphics
-	filename fig3.pdf
-	width 45text%
-
-\end_inset
-
- 
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Amplitude and phase response for driving (B1) and driven (B2) beads for
- different trap stiffness ratios.
- (a) and (b) demonstrate amplitude and phase responses (with respect to
- driving frequency) of B1, while (c) and (d) demonstrate that of B2 as functions
- of driving frequency, for trap stiffness ratios of 2.5:1 (black), 5.7:1 (red),
- and 14.5:1 (blue).
- The resonance frequency in (c) is 20 Hz (black), 35 Hz (red), and 111 Hz
- (blue).
- The solid spheres denote experimental data points while the solid lines
- are corresponding theoretical fits.
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "response"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_body
