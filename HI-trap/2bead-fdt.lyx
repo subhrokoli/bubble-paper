@@ -197,8 +197,7 @@ al mechanics, relates equilibrium fluctuations in a system to its linear
  colloidal particles.
  A theoretical analysis in which interactions mediated by slow viscous flow
  are represented by non-local friction tensors matches experimental results
- and reveals a frequency maximum in the amplitude of the mutual response
- function with varying optical trap stiffnesses.
+ and reveals a frequency maximum in the amplitude of the mutual response.
  This amplitude 
 \begin_inset Quotes eld
 \end_inset
@@ -207,8 +206,8 @@ resonance
 \begin_inset Quotes erd
 \end_inset
 
- is a sensitive function of the fluid viscosity suggesting the utility of
- the trap setup for accurate two-point microrheology.
+ is a sensitive function of the trap stiffnesses and the fluid viscosity
+ suggesting the utility of the trap setup for accurate two-point microrheology.
 \end_layout
 
 \begin_layout PACS
@@ -659,12 +658,9 @@ e forces mediated by the fluid,
 In the limit of slow viscous flow in the fluid, the friction tensors can
  be calculated from the Stokes equation using a variety of methods.
  To leading order the result is 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{\gamma}_{ij}=\gamma_{i}\delta_{ij}+(1-\delta_{ij})\gamma_{i}\gamma_{j}\mathcal{F}_{i}\mathcal{F}_{j}\boldsymbol{G}(\boldsymbol{r}_{i},\boldsymbol{r}_{j})
+\boldsymbol{\gamma}_{ij}=\gamma_{i}\boldsymbol{I}\,\delta_{ij}+(1-\delta_{ij})\gamma_{i}\gamma_{j}\mathcal{F}_{i}\mathcal{F}_{j}\boldsymbol{G}(\boldsymbol{r}_{i},\boldsymbol{r}_{j})
 \end{equation}
 
 \end_inset
@@ -685,17 +681,20 @@ where
 \begin_inset Formula $\mathcal{F}_{i}=1+\frac{a_{i}^{2}}{6}\nabla_{i}^{2}$
 \end_inset
 
- are the Faxen corrections that account for the finite radius 
+ are the Faxen corrections that account for the finite radius, 
 \begin_inset Formula $a_{i}$
 \end_inset
 
- of the colloids.
+, of the colloids.
  We emphasize that this expression is not limited to the translationally
  invariant Green's function of unbounded flow, 
 \begin_inset Formula $8\pi\eta\,\boldsymbol{G}(\boldsymbol{r})=(\nabla^{2}\boldsymbol{I}-\boldsymbol{\nabla\nabla})r$
 \end_inset
 
-, but holds generally for any Green's function.
+, but holds generally for any Green's function and is both symmetric and
+ positive-definite.
+ The mutual friction tensors decay inversely with distance in an unbounded
+ fluid and more rapidly in the proximity of boundaries.
  The assumption of slow viscous flow is valid at frequencies 
 \begin_inset Formula $\omega\tau_{\nu}\ll1$
 \end_inset
@@ -709,42 +708,42 @@ where
 \end_layout
 
 \begin_layout Standard
-The optical potential is given by 
-\begin_inset Formula $U_{i}(t)=\frac{1}{2}k_{i}({\bf \boldsymbol{r}}_{i}-{\bf \boldsymbol{r}}_{i}^{0})^{2}$
+The harmonic optical potentials are given by 
+\begin_inset Formula $U_{i}(t)=\frac{1}{2}k_{i}|{\bf \boldsymbol{r}}_{i}-{\bf \boldsymbol{r}}_{i}^{0}|^{2}$
 \end_inset
 
  where 
 \begin_inset Formula $\boldsymbol{r}_{i}^{0}$
 \end_inset
 
- is center of the 
-\begin_inset Formula $i$
-\end_inset
-
--th optical trap and 
+ are the centers and 
 \begin_inset Formula $k_{i}$
 \end_inset
 
- is its stiffness.
- We note that there is no conservative coupling between the colloids and
- their only coupling is mediated by the flow-induced forces in the solvent.
- Correlations are measured when the trap centers are stationary and responses
- are measured by modulating one of the trap centers keeping the other fixed.
+ are the stiffnesses of the optical traps.
+ There is no conservative coupling between the colloids.
+ The system remains in equilibrium when the trap centers are stationary
+ but is driven into non-equilibrium when they are modulated in time 
+\begin_inset Formula $\boldsymbol{r}_{i}^{0}(t)$
+\end_inset
+
+.
+ For small modulations the response is linear.
  
 \end_layout
 
 \begin_layout Standard
-At times longer than the momentum relaxation scales 
-\begin_inset Formula $m_{i}/\gamma_{i}$
+For modulation frequencies 
+\begin_inset Formula $\omega\ll\gamma_{i}/m_{i}$
 \end_inset
 
- the velocities can be adiabatically eliminated from the Langevin equations
- to yield over-damped Langevin equations for the positions.
+ the velocities can be adiabatically eliminated from the inertial Langevin
+ equations to yield inertialess Langevin equations for the positions.
  The multiplicative noises in the resulting equations have clear interpretations
  within the adiabatic elimination procedure; there is no Ito-Stratonovich
  dilemma.
- We calculate both the correlation and response functions in this over-damped
- limit, linearizing about the equilibrium separation of the trap centers.
+ Both correlation and response functions can be calculated in this limit,
+ after linearizing about the mean separation between the trap centers.
  The results are 
 \end_layout
 
