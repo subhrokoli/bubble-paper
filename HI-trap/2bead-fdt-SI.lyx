@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass revtex4-1
 \begin_preamble
 % ****** Start of file apssamp.tex ******
@@ -48,16 +50,16 @@
 \language_package none
 \inputencoding auto
 \fontencoding default
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -179,6 +181,371 @@ Indian Institute of Science Education and Research, Kolkata
 Supplementary information
 \end_layout
 
+\begin_layout Section
+Theory
+\end_layout
+
+\begin_layout Standard
+The Langevin equations describing the stochastic trajectories of the colloids
+ are
+\begin_inset Formula 
+\begin{align}
+m_{i}\dot{\boldsymbol{v}_{i}} & +\boldsymbol{\gamma}_{ij}\cdot\boldsymbol{v}_{j}+{\bf \boldsymbol{\nabla}}_{i}U=\boldsymbol{{\bf \xi}}_{i}\label{eq1}
+\end{align}
+
+\end_inset
+
+where 
+\begin_inset Formula $i,j=1,2$
+\end_inset
+
+ refer to the driving and driven colloid, 
+\begin_inset Formula $m_{i}$
+\end_inset
+
+ are their masses, 
+\begin_inset Formula $\boldsymbol{v}_{i}$
+\end_inset
+
+ are their velocities, 
+\begin_inset Formula $\boldsymbol{\gamma}_{ij}$
+\end_inset
+
+ are the second-rank friction tensors encoding the velocity-dependent dissipativ
+e forces mediated by the fluid, 
+\begin_inset Formula $U=U_{1}+U_{2}$
+\end_inset
+
+ is the total potential of the conservative forces, and 
+\begin_inset Formula $\boldsymbol{\xi}_{i}$
+\end_inset
+
+, the Langevin noises, are zero-mean Gaussian random variables whose variance
+ is provided by the fluctuation-dissipation relation 
+\begin_inset Formula $\langle\boldsymbol{\xi}_{i}(t)\boldsymbol{\xi}_{j}(t^{\prime})\rangle=2k_{B}T\boldsymbol{\gamma}_{ij}\delta(t-t^{\prime})$
+\end_inset
+
+.
+ The bold-face notation, with Cartesian indices suppressed, is used for
+ both vectors and tensors.
+\end_layout
+
+\begin_layout Standard
+In the limit of slow viscous flow in the fluid, the friction tensors can
+ be calculated from the Stokes equation using a variety of methods.
+ To leading order the result is 
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{\gamma}_{ij}=\delta_{ij}\boldsymbol{I}\gamma_{i}-(1-\delta_{ij})\gamma_{i}\gamma_{j}\mathcal{F}_{i}\mathcal{F}_{j}\boldsymbol{G}(\boldsymbol{r}_{i},\boldsymbol{r}_{j})
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\gamma_{i}=6\pi\eta a_{i}$
+\end_inset
+
+ are the self-frictions, 
+\begin_inset Formula $\boldsymbol{G}$
+\end_inset
+
+ is a Green's function of the Stokes equation, 
+\begin_inset Formula $\boldsymbol{r}_{i}$
+\end_inset
+
+ are the centers of the colloids and 
+\begin_inset Formula $\mathcal{F}_{i}=1+\frac{a_{i}^{2}}{6}\nabla_{i}^{2}$
+\end_inset
+
+ are the Faxen corrections that account for the finite radius, 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+, of the colloids.
+ We emphasize that this expression is not limited to the translationally
+ invariant Green's function of unbounded flow, 
+\begin_inset Formula $8\pi\eta\,\boldsymbol{G}(\boldsymbol{r})=(\nabla^{2}\boldsymbol{I}-\boldsymbol{\nabla\nabla})r$
+\end_inset
+
+, but holds generally for any Green's function and is both symmetric and
+ positive-definite.
+ The mutual friction tensors decay inversely with distance in an unbounded
+ fluid and more rapidly in the proximity of boundaries.
+ The assumption of slow viscous flow is valid at frequencies 
+\begin_inset Formula $\omega\tau_{\nu}\ll1$
+\end_inset
+
+ where 
+\begin_inset Formula $\tau_{\nu}=\rho L^{2}/\eta$
+\end_inset
+
+ is the vorticity diffusion time scale.
+ 
+\end_layout
+
+\begin_layout Standard
+The harmonic optical potentials are given by 
+\begin_inset Formula $U_{i}(t)=\frac{1}{2}k_{i}|{\bf \boldsymbol{r}}_{i}-{\bf \boldsymbol{r}}_{i}^{0}|^{2}$
+\end_inset
+
+ where 
+\begin_inset Formula $\boldsymbol{r}_{i}^{0}$
+\end_inset
+
+ are the centers and 
+\begin_inset Formula $k_{i}$
+\end_inset
+
+ are the stiffnesses of the optical traps.
+ Note the absence of conservative mutual couplings.
+ The system remains in equilibrium when the trap centers are stationary
+ but is driven into non-equilibrium when they are modulated in time as 
+\begin_inset Formula $\boldsymbol{r}_{i}^{0}(t)$
+\end_inset
+
+.
+ For small modulations the response is linear.
+ 
+\end_layout
+
+\begin_layout Standard
+For modulation frequencies 
+\begin_inset Formula $\omega\ll\gamma_{i}/m_{i}$
+\end_inset
+
+ the velocities can be adiabatically eliminated from the inertial Langevin
+ equations to yield inertialess Langevin equations for the positions.
+ The multiplicative noises in the resulting equations have clear interpretations
+ within the adiabatic elimination procedure; there is no Ito-Stratonovich
+ dilemma.
+ Both correlation and response functions can be calculated in this limit.
+ Linearizing about the mean separation between the trap centers and decomposing
+ the motion into components parallel and perpendicular to the separation
+ vector, the result for the parallel response function is 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Add\qquad correlation\quad result
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the experimental set-up, we have two such optical traps with the minimum
+ of one of them is being shifted with an external periodic signal, and the
+ response of the two beads studied.
+ Assuming momentum to be rapidly relaxing on the time scale of the trap
+ motion, we neglect inertia and average over the noise to get, 
+\begin_inset Formula 
+\begin{align}
+-\gamma_{ij}{\bf \dot{R}}_{j}-{\bf \nabla_{i}U}=0\label{eq2}
+\end{align}
+
+\end_inset
+
+Eq.
+\begin_inset Formula $\ref{eq2}$
+\end_inset
+
+ can be inverted and presented in terms of mobility matrices as, 
+\begin_inset Formula 
+\begin{align}
+{\bf \dot{R}}_{1} & =-\mu{\bf \delta}k_{1}({\bf R}_{1}-{\bf R}_{1}^{0})-{\bf \mu_{12}}k_{2}({\bf R}_{2}-{\bf R}_{2}^{0})\label{eq3}\\
+{\bf \dot{R}}_{2} & =-{\bf \mu_{21}}k_{1}({\bf R}_{1}-{\bf R}_{1}^{0})-\mu{\bf \delta}k_{2}({\bf R}_{2}-{\bf R}_{2}^{0})\nonumber 
+\end{align}
+
+\end_inset
+
+We re-frame this equation using approximate mobility matrices with the separatio
+n vector to be the average distance between the two minima of the optical
+ traps.
+ Thus, one obtains, 
+\begin_inset Formula 
+\begin{align}
+\frac{d}{dt}\begin{bmatrix}{\bf R}_{1}\\
+{\bf R}_{2}
+\end{bmatrix}=-\begin{bmatrix}\mu k_{1}{\bf \delta} & {\bf \mu}_{12}k_{2}\\
+{\bf \mu}_{21}k_{1} & \mu k_{2}{\bf \delta}
+\end{bmatrix}\begin{bmatrix}{\bf R}_{1}\\
+{\bf R}_{2}
+\end{bmatrix}+\begin{bmatrix}\mu{\bf \delta} & {\bf \mu}_{12}\\
+{\bf \mu}_{21} & \mu\delta
+\end{bmatrix}\begin{bmatrix}{\bf F}_{1}^{0}\\
+{\bf F}_{2}^{0}
+\end{bmatrix}\label{eq4}
+\end{align}
+
+\end_inset
+
+The steady state solution of the Eq.
+\begin_inset Formula $\ref{eq4}$
+\end_inset
+
+ can easily be calculated by taking its Fourier transform.
+ Assuming 
+\begin_inset Formula ${\bf A}=\begin{bmatrix}\mu k_{1}{\bf \delta} & {\bf \mu}_{12}k_{2}\\
+{\bf \mu}_{21}k_{1} & \mu k_{2}{\bf \delta}
+\end{bmatrix}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\bf M}=\begin{bmatrix}\mu{\bf \delta} & {\bf \mu}_{12}\\
+{\bf \mu}_{21} & \mu\delta
+\end{bmatrix}$
+\end_inset
+
+, the solution in frequency domain is given by, 
+\begin_inset Formula 
+\begin{align}
+{\bf R}_{i}(\omega)=[-i\omega{\bf \delta}+{\bf A}]_{ij}^{-1}{\bf M}{\bf F}_{j}^{0}(\omega)={\bf \chi_{ij}}(\omega){\bf F}_{j}^{0}(\omega)\label{eq5}
+\end{align}
+
+\end_inset
+
+which defines the response for 
+\begin_inset Formula ${\chi}$
+\end_inset
+
+.
+ As the minimum of one of the optical traps is modulated by a sinusoidal
+ signal of driving frequency 
+\begin_inset Formula $\Omega$
+\end_inset
+
+, 
+\begin_inset Formula ${\bf F}_{j}^{0}(\omega)=\frac{X_{j}}{2}(\delta(\omega-\Omega)+\delta(\omega+\Omega))$
+\end_inset
+
+.
+ Further, 
+\begin_inset Formula ${\bf \chi}$
+\end_inset
+
+ is a block-diagonal matrix in cartesian indices.
+ Now, for a given experimental set-up, 
+\begin_inset Formula ${\bf \chi}$
+\end_inset
+
+ can be decomposed into 
+\begin_inset Formula ${\bf \chi_{\parallel}}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\bf \chi_{\perp}}$
+\end_inset
+
+, which correspond to motion along the trap separation and that perpendicular
+ to it, respectively.
+ Inserting this form of the signal into Eq.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq5"
+
+\end_inset
+
+, and reverting to the time domain, we find 
+\begin_inset Formula 
+\begin{align}
+R_{\parallel i}(t)=\chi'_{\parallel ij}\cos(\Omega t)X_{j}+\chi"_{\parallel ij}\sin(\Omega t)X_{j}\label{eq6}
+\end{align}
+
+\end_inset
+
+The two time scales from the two traps can be calculated to be 
+\begin_inset Formula $\tau_{i}=\frac{1}{\mu k_{i}}$
+\end_inset
+
+, so that, 
+\begin_inset Formula 
+\begin{align*}
+{\bf \chi}_{\parallel}(\Omega)=\frac{1}{DetA_{\parallel}-\Omega^{2}-i\Omega TrA_{\parallel}}\times\\
+\begin{bmatrix}(\mu k_{1}-i\Omega) & \mu_{12}k_{2}\\
+\mu_{21}k_{1} & (\mu k_{2}-i\Omega)
+\end{bmatrix}^{-1}\begin{bmatrix}\mu & \mu_{12}\\
+\mu_{21} & \mu
+\end{bmatrix}\\
+=\frac{1}{DetA_{\parallel}-\Omega^{2}-i\Omega TrA_{\parallel}}\times\\
+\begin{bmatrix}(\mu k_{2}-i\Omega) & -\mu_{12}k_{2}\\
+-\mu_{21}k_{1} & (\mu k_{1}-i\Omega)
+\end{bmatrix}\begin{bmatrix}\mu & \mu_{12}\\
+\mu_{21} & \mu
+\end{bmatrix}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+=\frac{DetA_{\parallel}-\Omega^{2}+i\Omega TrA_{\parallel}}{(DetA_{\parallel}-\Omega^{2})^{2}+\Omega^{2}(TrA_{\parallel})^{2}}\times\nonumber \\
+\begin{bmatrix}k_{2}DetM_{\parallel}-i\mu\Omega & -i\Omega\mu_{12}\\
+-i\Omega\mu_{21} & k_{1}DetM_{\parallel}-i\mu\Omega
+\end{bmatrix}\label{eq7}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+=(DetA_{\parallel}-\Omega^{2})^{2}+\Omega^{2}(TrA_{\parallel})^{2}\times\nonumber \\
+\begin{bmatrix}\mu k_{2}^{2}DetM_{\parallel}+\mu\Omega^{2} & -(DetA_{\parallel}-\Omega^{2})\mu_{12}\\
+-(DetA_{\parallel}-\Omega^{2})\mu_{21} & \mu k_{1}^{2}DetM_{\parallel}+\mu\Omega^{2}
+\end{bmatrix}\label{eq8}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note that we are interested in the resonance in amplitude of the second
+ bead due to the forcing of the first bead that is given by maximizing the
+ modulus of 
+\begin_inset Formula $\chi_{21\parallel}$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\begin{align}
+\mid\chi_{21\parallel}\mid & =\mid\frac{-i\Omega\mu_{21}}{DetA_{\parallel}-\Omega^{2}-i\Omega TrA_{\parallel}}\mid\nonumber \\
+ & =\frac{\Omega\mu_{21}}{\sqrt{(DetA_{\parallel}-\Omega^{2})^{2}+\Omega^{2}(TrA_{\parallel})^{2}}}\label{eq9}
+\end{align}
+
+\end_inset
+
+Clearly the resonance frequency in dimensionless unit is 
+\begin_inset Formula $\tau_{1}\Omega_{res}=\sqrt{\frac{DetA_{\parallel}}{\mu^{2}k_{1}^{2}}}=\sqrt{\frac{k_{2}}{k_{1}}\left(1-\frac{\mu_{\parallel12}^{2}}{\mu^{2}}\right)}$
+\end_inset
+
+ when 
+\begin_inset Formula $\mu_{21}\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Experiment
+\end_layout
+
 \begin_layout Standard
 We set up a dual-beam optical tweezers (Fig.
  
@@ -281,6 +648,11 @@ PRL 107, 248101 (2011)
  SR830).
  To get large signal to noise, we use balanced detection using photodiode
  pairs PA1, PB1 and PA2, PB2, for the driving and driven particles, respectively.
+ The two beams for balanced detection are prepared by edge mirrors E1, E3
+ (E2, E4) for the driving (driven) particle, respectively.
+ Polarizers P1 (P2) are aligned in such a way so as select the desired polarizat
+ion component of the detection beams that are prepared, as mentioned above,
+ in orthogonal polarization states for the driving (driven) particle.
  The voltage-amplitude calibration of our detection system reveals that
  we can resolve motion of around 12 nm with an SNR of 2.
 \end_layout
@@ -306,31 +678,35 @@ centering
 
  
 \begin_inset Graphics
-	filename fig1.pdf
+	filename ../../../2016/twobeadhydro/fig1si.pdf
 	width 45text%
 
 \end_inset
 
  
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-A schematic of the setup is shown.
- Where 
+A detailed schematic of the setup is shown.
+ Key:
 \begin_inset Formula $\frac{\lambda}{2}$
 \end_inset
 
- is half wave plate, L, M are lens and mirror respectively.
- AOM is the accousto optical modulator which is working taking signal from
- the signal generator.
- PBS and DC are polarising beam splitter and dicroic mirror respectively.
- E, P are edge mirror and polariser respectively.
- PA, PB are photodiods (Thorlabs PDA100A-EC).
+: half-wave plate, L: lens, M: mirror, AOM: accousto optical modulator,
+ PBS: polarising beam splitter, DC: dicroic mirror respectively, E: edge
+ mirror, P: polariser, PA, PB: photodiodes.
+ 
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset CommandInset label
 LatexCommand label
 name "Setup"
@@ -343,6 +719,25 @@ name "Setup"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "hist"
+
+\end_inset
+
+ (a) and (b) shows the histogram of position coordinate data that we acquire
+ for the Brownian motion of B1 and B2, respectively.
+ As is clear, the data are normally distributed in both traps and fit very
+ well to Gaussians (shown in bold lines).
+ As a consistency check, we also plot the position cross-correlation function
+ in time domain for B1 and B2 - this is shown in Fig.
+ The data fits well to Eq.xx in Sec 1, with the constant parameters calculate
+ with appropriate values for our case.
 \end_layout
 
 \begin_layout Standard
@@ -366,7 +761,7 @@ centering
 
  
 \begin_inset Graphics
-	filename histograms1.png
+	filename ../../../2016/twobeadhydro/fig2si.pdf
 	width 45text%
 
 \end_inset
@@ -375,10 +770,9 @@ centering
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Position histograms of the first (left) and the second (right) trap are
- shown here.
- The solid black lines in each are there corresponding Gaussian fits which
- shows that the potentials are harmonic in nature.
+Position histograms of (a) B1 (driving particle) and (b) B2 (driven particle).
+ The solid black lines are corresponding Gaussian fits which show that the
+ potentials are harmonic in nature.
 \end_layout
 
 \end_inset
@@ -391,6 +785,40 @@ name "hist"
 \end_inset
 
  
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../../../2016/twobeadhydro/fig3si.pdf
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cross-correlation function in time domain for B1 and B2.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
