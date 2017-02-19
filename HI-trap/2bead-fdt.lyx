@@ -150,7 +150,6 @@ Ronojoy Adhikari
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -164,7 +163,6 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -660,7 +658,7 @@ In the limit of slow viscous flow in the fluid, the friction tensors can
  To leading order the result is 
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{\gamma}_{ij}=\gamma_{i}\boldsymbol{I}\,\delta_{ij}+(1-\delta_{ij})\gamma_{i}\gamma_{j}\mathcal{F}_{i}\mathcal{F}_{j}\boldsymbol{G}(\boldsymbol{r}_{i},\boldsymbol{r}_{j})
+\boldsymbol{\gamma}_{ij}=\delta_{ij}\boldsymbol{I}\gamma_{i}-(1-\delta_{ij})\gamma_{i}\gamma_{j}\mathcal{F}_{i}\mathcal{F}_{j}\boldsymbol{G}(\boldsymbol{r}_{i},\boldsymbol{r}_{j})
 \end{equation}
 
 \end_inset
@@ -721,9 +719,9 @@ The harmonic optical potentials are given by
 \end_inset
 
  are the stiffnesses of the optical traps.
- There is no conservative coupling between the colloids.
+ Note the absence of conservative mutual couplings.
  The system remains in equilibrium when the trap centers are stationary
- but is driven into non-equilibrium when they are modulated in time 
+ but is driven into non-equilibrium when they are modulated in time as 
 \begin_inset Formula $\boldsymbol{r}_{i}^{0}(t)$
 \end_inset
 
