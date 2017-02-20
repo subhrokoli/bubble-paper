@@ -667,5 +667,151 @@ reference "eq:map_sigma"
  covariance matrix respectively.
 \end_layout
 
+\begin_layout Section
+Underdamped brownian harmonic oscillator
+\end_layout
+
+\begin_layout Standard
+The Langevin equation for the Brownian motion of a damped harmonic oscillator
+ of potential 
+\begin_inset Formula $U$
+\end_inset
+
+ is given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+m\dot{v}+\gamma v+\nabla U=\xi\label{eq:langevin}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here 
+\begin_inset Formula $v\left(t\right)$
+\end_inset
+
+ is the instantaneous velocity of the Brownian particle as a function of
+ time, 
+\begin_inset Formula $m$
+\end_inset
+
+ its inertial mass, 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ its friction coefficient.
+ The harmonic potential is given by 
+\begin_inset Formula $U=\dfrac{1}{2}kx^{2}$
+\end_inset
+
+, where 
+\begin_inset Formula $k$
+\end_inset
+
+ is Hooke's constant and 
+\begin_inset Formula $x\left(t\right)$
+\end_inset
+
+ is the coordinate of the oscillator as a function of time.
+ 
+\begin_inset Formula $\xi\left(t\right)$
+\end_inset
+
+is a zero-mean Gaussian white noise with variance 
+\begin_inset Formula $\langle\xi\left(t\right)\xi\left(t'\right)\rangle=2k_{B}T\gamma\delta\left(t-t'\right)$
+\end_inset
+
+ as required by the fluctuation-dissipation theorem.
+\end_layout
+
+\begin_layout Standard
+Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:langevin"
+
+\end_inset
+
+ can be rewitten as two-coupled first order differential equations in position-v
+elocity phase space,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\dfrac{d}{dt}\begin{pmatrix}x\left(t\right)\\
+v\left(t\right)
+\end{pmatrix}=-\bm{\lambda}\begin{pmatrix}x\left(t\right)\\
+v\left(t\right)
+\end{pmatrix}+\dfrac{\sqrt{2D}}{\tau}\begin{pmatrix}0\\
+\zeta\left(t\right)
+\end{pmatrix}\label{eq:phase_space}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\zeta\left(t\right)$
+\end_inset
+
+is now a zero-mean Gaussian white noise with unit variance.
+ We have introduced Einstein's relation 
+\begin_inset Formula $D=k_{B}T\gamma^{-1}$
+\end_inset
+
+ and the 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\bm{\lambda=}\begin{pmatrix}0 & -1\\
+\dfrac{k}{m} & \dfrac{\gamma}{m}
+\end{pmatrix}=\begin{pmatrix}0 & -1\\
+\omega_{0}^{2} & \dfrac{1}{\tau}
+\end{pmatrix}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here 
+\begin_inset Formula $\omega_{0}=\sqrt{\nicefrac{k}{m}}$
+\end_inset
+
+ is the cyclic frequency of the underdamped oscillator, and 
+\begin_inset Formula $\tau=\nicefrac{m}{\gamma}$
+\end_inset
+
+ is the characteristic time scale of momentum dissipation of the particle
+ in the presence of viscous forces.
+ The cyclic frequency of the damped oscillator is 
+\begin_inset Formula $\omega=\sqrt{\nicefrac{k}{m}-\nicefrac{\gamma^{2}}{\left(4m^{2}\right)}}$
+\end_inset
+
+, which is real for less than critical damping, 
+\begin_inset Formula $\gamma^{2}<4mk$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
