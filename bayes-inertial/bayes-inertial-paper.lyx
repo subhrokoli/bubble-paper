@@ -109,7 +109,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -418,7 +417,7 @@ The matrix operator
 \begin_inset Formula 
 \begin{align}
 \ln P\left(\bm{\lambda},\bm{C}\vert\bm{X}\right) & =\dfrac{N-1}{2}\ln\left(\dfrac{1}{4\pi^{2}\vert\bm{\Sigma}\vert}\right)-\dfrac{1}{2}\sum_{n=1}^{N-1}\bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}\nonumber \\
- & +\dfrac{1}{2}\ln\left(\dfrac{1}{4\pi^{2}|\bm{C}|}\right)-\dfrac{1}{2}\bm{y_{1}^{T}C^{-1}y_{1}}
+ & +\dfrac{1}{2}\ln\left(\dfrac{1}{4\pi^{2}|\bm{C}|}\right)-\dfrac{1}{2}\bm{x_{1}^{T}C^{-1}x_{1}}
 \end{align}
 
 \end_inset
@@ -500,8 +499,8 @@ Thus, we have formulated a set of matrix sufficient statistics for the problem
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\bm{T_{1}} & =\sum_{n=1}^{N-1}\bm{y_{n+1}y_{n+1}^{T}},\;\;\;\bm{T_{2}}=\sum_{n=1}^{N-1}\bm{y_{n+1}y_{n}^{T}},\\
-\qquad & \qquad\qquad\bm{T_{3}}=\sum_{n=1}^{N-1}\bm{y_{n}y_{n}^{T}}.
+\bm{T_{1}} & =\sum_{n=1}^{N-1}\bm{x_{n+1}x_{n+1}^{T}},\;\;\;\bm{T_{2}}=\sum_{n=1}^{N-1}\bm{x_{n+1}x_{n}^{T}},\\
+\qquad & \qquad\qquad\bm{T_{3}}=\sum_{n=1}^{N-1}\bm{x_{n}x_{n}^{T}}.
 \end{align*}
 
 \end_inset
