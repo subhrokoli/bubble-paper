@@ -43,11 +43,11 @@
 %%height=10in,a5paper,hmargin={3cm,0.8in},
 %]{geometry}
 \end_preamble
-\options reprint,amsmath,amssymb,aps,
+\options reprint,amsmath,amssymb,aps,superscriptaddress
 \use_default_options false
 \maintain_unincluded_children false
 \language english
-\language_package none
+\language_package babel
 \inputencoding auto
 \fontencoding default
 \font_roman "default" "default"
@@ -98,7 +98,7 @@
 \paragraph_separation indent
 \paragraph_indentation default
 \quotes_language english
-\papercolumns 1
+\papercolumns 2
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
@@ -110,62 +110,57 @@
 
 \begin_body
 
-\begin_layout Preprint
-APS/123-QED
-\end_layout
-
 \begin_layout Title
-Direct verification of the fluctuation-response theorem in two optically
- trapped and hydrodynamically coupled colloidal particles
+Direct verification of the fluctuation-response relation in viscously coupled
+ oscillators
 \end_layout
 
 \begin_layout Author
 Shuvojit Paul
-\begin_inset Formula $^{1}$
+\begin_inset Formula $ $
 \end_inset
 
 
+\end_layout
+
+\begin_layout Affiliation
+Indian Institute of Science Education and Research, Kolkata
 \end_layout
 
 \begin_layout Author
 Abhrajit Laskar
-\begin_inset Formula $^{2}$
-\end_inset
+\end_layout
 
-
+\begin_layout Affiliation
+The Institute of Mathematical Sciences-HBNI, CIT Campus, Tarmani, Chennai
+ 600113, India
 \end_layout
 
 \begin_layout Author
 Basudev Roy
-\begin_inset Formula $^{1}$
-\end_inset
+\end_layout
 
-
+\begin_layout Affiliation
+Department of Physics, Indian Institute of Technology Madras, Chennai 600036,
+ India
 \end_layout
 
 \begin_layout Author
 Ronojoy Adhikari
-\begin_inset Formula $^{1}$
-\end_inset
-
-
 \end_layout
 
 \begin_layout Author Email
 
-ronojoy.adhikari@gmail.com
+rjoy@imsc.res.in
 \end_layout
 
 \begin_layout Affiliation
-Institute of Mathematical Sciences, Chennai
+The Institute of Mathematical Sciences-HBNI, CIT Campus, Tarmani, Chennai
+ 600113, India
 \end_layout
 
 \begin_layout Author
 Ayan Banerjee
-\begin_inset Formula $^{1}$
-\end_inset
-
-
 \end_layout
 
 \begin_layout Author Email
@@ -175,6 +170,22 @@ ayan@iiserkol.ac.in
 
 \begin_layout Affiliation
 Indian Institute of Science Education and Research, Kolkata
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -678,7 +689,7 @@ centering
 
  
 \begin_inset Graphics
-	filename ../../../2016/twobeadhydro/fig1si.pdf
+	filename fig1si.pdf
 	width 45text%
 
 \end_inset
@@ -761,7 +772,7 @@ centering
 
  
 \begin_inset Graphics
-	filename ../../../2016/twobeadhydro/fig2si.pdf
+	filename fig2si.pdf
 	width 45text%
 
 \end_inset
@@ -804,7 +815,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename ../../../2016/twobeadhydro/fig3si.pdf
+	filename fig3si.pdf
 	scale 30
 
 \end_inset
