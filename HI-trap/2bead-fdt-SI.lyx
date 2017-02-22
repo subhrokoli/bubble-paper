@@ -361,10 +361,12 @@ reference "eq:gamma-first-reflection"
 
 \end_inset
 
-The above equations then becomes
-\end_layout
+Here 
+\begin_inset Formula $\hat{\mathbf{r}}=\mathbf{R}_{i}^{0}-\mathbf{R}_{j}^{0}/|\mathbf{R}_{i}^{0}-\mathbf{R}_{j}^{0}|$
+\end_inset
 
-\begin_layout Standard
+.
+ The above equation then becomes
 \begin_inset Formula 
 \begin{equation}
 \gamma_{ij}^{||}\cdot\dot{u}_{j}^{||}+k_{i}u_{i}^{||}=f_{i}^{||}(t)
@@ -380,47 +382,22 @@ The above equations then becomes
 
 \end_inset
 
-We now Fourier tranform the above in time to obtain
+The perpendicular modes can be further decoupled in two equivalent directions.
+ Thus we have thee decoupled 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ systems.
+ We now just find the response to the parallel modes.
+ To proceed, we Fourier tranform the above in time to obtain
 \begin_inset Formula 
 \begin{align}
-\left(-i\omega\boldsymbol{\gamma}_{ij}+k_{i}\delta_{ij}\boldsymbol{I}\right)\cdot{\bf u}_{j} & =\boldsymbol{f}_{i}(\omega)
+\left(-i\omega\gamma_{ij}^{\parallel}+k_{i}\delta_{ij}\right)u_{j}^{\parallel} & =f_{i}^{\parallel}(\omega)
 \end{align}
 
 \end_inset
 
-The above equations can be written in terms of the 
-\begin_inset Formula $3\times3$
-\end_inset
-
- friction tensors as
-\begin_inset Formula 
-\begin{align*}
-\left(\begin{array}{cc}
--i\omega\boldsymbol{\gamma}_{11}+k_{1}\boldsymbol{I} & -i\omega\boldsymbol{\gamma}_{12}\\
--i\omega\boldsymbol{\gamma}_{21} & -i\omega\boldsymbol{\gamma}_{22}+k_{2}\boldsymbol{I}
-\end{array}\right)\cdot\left(\begin{array}{c}
-{\bf u}_{1}\\
-{\bf u}_{2}
-\end{array}\right) & =\left(\begin{array}{c}
-{\bf F}_{1}^{0}(\omega)\\
-{\bf F}_{2}^{0}(\omega)
-\end{array}\right).
-\end{align*}
-
-\end_inset
-
-We now decouple displacement in direction parallel and perpendicular to
- the line joining trap-centers, such that 
-\begin_inset Formula $\mathbf{u}_{i}=u_{i}^{\parallel}\hat{\mathbf{r}}\hat{\mathbf{r}}+u_{i}^{\perp}(1-\hat{\mathbf{r}}\hat{\mathbf{r}})$
-\end_inset
-
-.
- Here 
-\begin_inset Formula $\hat{\mathbf{r}}=\mathbf{R}_{i}^{0}-\mathbf{R}_{j}^{0}/|\mathbf{R}_{i}^{0}-\mathbf{R}_{j}^{0}|$
-\end_inset
-
-.
- The above equation then becomes
+This can be written as, 
 \begin_inset Formula 
 \begin{align*}
 \left(\begin{array}{cc}
@@ -430,26 +407,8 @@ We now decouple displacement in direction parallel and perpendicular to
 u_{1}^{\parallel}\\
 u_{2}^{\parallel}
 \end{array}\right) & =\left(\begin{array}{c}
-F_{1}^{0\parallel}(\omega)\\
-F_{2}^{0\parallel}(\omega)
-\end{array}\right).
-\end{align*}
-
-\end_inset
-
-for direction parallel to the separation of the traps.
- The corresponding equations for perpendicular directions 
-\begin_inset Formula 
-\begin{align*}
-\left(\begin{array}{ccc}
--i\omega\boldsymbol{\gamma}_{11}^{\perp}+k_{1} &  & -i\omega\boldsymbol{\gamma}_{12}^{\perp}\\
--i\omega\boldsymbol{\gamma}_{21}^{\perp} &  & -i\omega\boldsymbol{\gamma}_{22}^{\perp}+k_{2}
-\end{array}\right)\cdot\left(\begin{array}{c}
-u_{1}^{\perp}\\
-u_{2}^{\perp}
-\end{array}\right) & =\left(\begin{array}{c}
-F_{1}^{0\perp}(\omega)\\
-F_{2}^{0\perp}(\omega)
+f_{1}^{\parallel}(\omega)\\
+f_{2}^{\parallel}(\omega)
 \end{array}\right).
 \end{align*}
 
@@ -458,8 +417,7 @@ F_{2}^{0\perp}(\omega)
 The solution is then 
 \begin_inset Formula 
 \begin{align}
-u_{i}^{\parallel}(\omega)={\bf \boldsymbol{\chi}}_{ij}^{\parallel}(\omega)\cdot{\bf F}_{j}^{0\parallel}(\omega),\label{eq5-1}\\
-u_{i}^{\perp}(\omega)={\bf \boldsymbol{\chi}}_{ij}^{\perp}(\omega)\cdot{\bf F}_{j}^{0\perp}(\omega).
+u_{i}^{\parallel}(\omega)={\bf \chi}_{ij}^{\parallel}(\omega)f_{j}^{\parallel}(\omega),\label{eq5-1}
 \end{align}
 
 \end_inset
