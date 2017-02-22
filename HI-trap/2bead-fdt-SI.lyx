@@ -543,25 +543,25 @@ i\omega\boldsymbol{\gamma}_{12}^{\perp} &  & -i\omega\boldsymbol{\gamma}_{11}^{\
 \end_inset
 
 Here 
-\begin_inset Formula $\chi_{D}^{\alpha}=k_{1}k_{2}-\omega^{2}\lambda_{D}-i\omega\lambda_{k}$
+\begin_inset Formula $\chi_{D}^{\parallel}=\alpha^{||}+i\beta^{\parallel}$
 \end_inset
 
- with 
-\begin_inset Formula $\alpha=\parallel,\,\perp$
-\end_inset
-
-, and 
+ 
 \begin_inset Formula 
 \[
-\lambda_{D}=(\boldsymbol{\gamma}_{11}^{\parallel}\boldsymbol{\gamma}_{22}^{\parallel}-\boldsymbol{\gamma}_{12}^{\parallel}\boldsymbol{\gamma}_{21}^{\parallel}),\qquad\lambda_{k}=(\gamma_{11}^{\parallel}k_{2}+\gamma_{22}^{\parallel}k_{1}).
+\alpha^{\parallel}=k_{1}k_{2}-\omega^{2}(\boldsymbol{\gamma}_{11}^{\parallel}\boldsymbol{\gamma}_{22}^{\parallel}-\boldsymbol{\gamma}_{12}^{\parallel}\boldsymbol{\gamma}_{21}^{\parallel}),\qquad\beta^{\parallel}=-\omega(\gamma_{11}^{\parallel}k_{2}+\gamma_{22}^{\parallel}k_{1}),
 \]
 
+\end_inset
+
+and simlarly for 
+\begin_inset Formula $\chi_{D}^{\perp}.$
 \end_inset
 
  The resonance frequency is then 
 \begin_inset Formula 
 \[
-\omega_{{\scriptscriptstyle res}}^{2}=\frac{k_{1}k_{2}}{\lambda_{D}}=\frac{k_{1}k_{2}}{\gamma_{11}^{\parallel}\gamma_{22}^{\parallel}-\gamma_{12}^{\parallel}\gamma_{21}^{\parallel}}.
+\omega_{{\scriptscriptstyle res}}^{2}=\frac{k_{1}k_{2}}{\gamma_{11}^{\parallel}\gamma_{22}^{\parallel}-\gamma_{12}^{\parallel}\gamma_{21}^{\parallel}}.
 \]
 
 \end_inset
@@ -580,8 +580,8 @@ The real and the imaginary parts of the response function can be then obtained
 \begin_inset Formula 
 \begin{alignat*}{1}
 \boldsymbol{{\bf \chi}}_{ij}^{'\parallel}(\omega) & =\frac{1}{\Big|\chi_{D}^{\parallel}\Big|^{2}}\left(\begin{array}{cc}
--\omega^{2}\boldsymbol{\gamma}_{22}^{\parallel}\lambda_{k}+k_{1}k_{2}^{2} & \omega^{2}\boldsymbol{\gamma}_{21}^{\parallel}\lambda_{k}\\
-\omega^{2}\boldsymbol{\gamma}_{12}^{\parallel}\lambda_{k} & -\omega^{2}\boldsymbol{\gamma}_{11}^{\parallel}\lambda_{k}+k_{1}^{2}k_{2}
+-\omega\boldsymbol{\gamma}_{22}^{\parallel}\beta^{\parallel}+\alpha^{\parallel}k_{2} & \omega\boldsymbol{\gamma}_{21}^{\parallel}\beta\\
+\omega\boldsymbol{\gamma}_{12}^{\parallel}\beta & -\omega\boldsymbol{\gamma}_{11}^{\parallel}\beta^{\parallel}+\alpha^{\parallel}k_{1}
 \end{array}\right),
 \end{alignat*}
 
@@ -595,18 +595,14 @@ while the imaginary part
 \begin_inset Formula 
 \begin{alignat*}{1}
 \boldsymbol{{\bf \chi}}_{ij}^{''\parallel}(\omega) & =\frac{1}{\Big|\chi_{D}^{\parallel}\Big|^{2}}\left(\begin{array}{cc}
-\lambda''_{D}\boldsymbol{\gamma}_{22}^{\parallel}-\omega\lambda_{k}k_{2} & \boldsymbol{\gamma}_{21}^{\parallel}\lambda''_{D}\\
-\boldsymbol{\gamma}_{11}^{\parallel}\lambda''_{D} & \lambda''_{D}\boldsymbol{\gamma}_{11}^{\parallel}-\omega\lambda_{k}k_{2}
+-\omega\boldsymbol{\gamma}_{22}^{\parallel}\alpha^{\parallel}+\beta^{\parallel}k_{2} & \alpha^{\parallel}\omega\boldsymbol{\gamma}_{21}^{\parallel}\\
+\alpha^{\parallel}\omega\boldsymbol{\gamma}_{12}^{\parallel} & -\omega\boldsymbol{\gamma}_{11}^{\parallel}\alpha^{\parallel}+\beta^{\parallel}k_{1}
 \end{array}\right),
 \end{alignat*}
 
 \end_inset
 
-where 
-\begin_inset Formula $\lambda''_{D}=-\omega(k_{1}k_{2}-\omega^{2}\lambda_{D})$
-\end_inset
 
-.
 \end_layout
 
 \begin_layout Standard
