@@ -527,11 +527,7 @@ u_{i}^{\perp}(\omega)={\bf \boldsymbol{\chi}}_{ij}^{\perp}(\omega)\cdot{\bf F}_{
 
 \end_inset
 
-Since, this is in a 
-\begin_inset Formula $2\times2$
-\end_inset
-
- matrix, it can inverted analytically as
+This can inverted analytically to obtain
 \begin_inset Formula 
 \begin{align*}
 \boldsymbol{{\bf \chi}}_{ij}^{\parallel}(\omega) & =\frac{1}{\chi_{D}^{\parallel}}\left(\begin{array}{ccc}
@@ -547,40 +543,78 @@ i\omega\boldsymbol{\gamma}_{12}^{\perp} &  & -i\omega\boldsymbol{\gamma}_{11}^{\
 \end_inset
 
 Here 
-\begin_inset Formula $\chi_{D}^{\parallel}=(-i\omega\boldsymbol{\gamma}_{11}^{\parallel}+k_{1})(-i\omega\boldsymbol{\gamma}_{22}^{\parallel}+k_{2})+\omega^{2}\boldsymbol{\gamma}_{12}^{\parallel}\boldsymbol{\gamma}_{21}^{\parallel}$
+\begin_inset Formula $\chi_{D}^{\alpha}=k_{1}k_{2}-\omega^{2}\lambda_{D}-i\omega\lambda_{k}$
 \end_inset
 
- and 
-\begin_inset Formula $\chi_{D}^{\perp}=(-i\omega\boldsymbol{\gamma}_{11}^{\perp}+k_{1})(-i\omega\boldsymbol{\gamma}_{22}^{\perp}+k_{2})+\omega^{2}\boldsymbol{\gamma}_{12}^{\perp}\boldsymbol{\gamma}_{21}^{\perp}$
+ with 
+\begin_inset Formula $\alpha=\parallel,\,\perp$
 \end_inset
 
-.
- From this, we have
+, and 
 \begin_inset Formula 
 \[
-\chi_{21}^{\parallel}=\frac{i\omega\boldsymbol{\gamma}_{12}^{\parallel}}{k_{1}k_{2}-\omega^{2}(\boldsymbol{\gamma}_{11}^{\parallel}\boldsymbol{\gamma}_{22}^{\parallel}-\boldsymbol{\gamma}_{12}^{\parallel}\boldsymbol{\gamma}_{21}^{\parallel})-i\omega(\gamma_{11}^{\parallel}k_{2}+\gamma_{22}^{\parallel}k_{1})}.
+\lambda_{D}=(\boldsymbol{\gamma}_{11}^{\parallel}\boldsymbol{\gamma}_{22}^{\parallel}-\boldsymbol{\gamma}_{12}^{\parallel}\boldsymbol{\gamma}_{21}^{\parallel}),\qquad\lambda_{k}=(\gamma_{11}^{\parallel}k_{2}+\gamma_{22}^{\parallel}k_{1}).
 \]
 
 \end_inset
 
- The resonance frequency is at 
+ The resonance frequency is then 
 \begin_inset Formula 
 \[
-\omega_{{\scriptscriptstyle res}}=\sqrt{\frac{k_{1}k_{2}}{\gamma_{11}^{\parallel}\gamma_{22}^{\parallel}-\gamma_{12}^{\parallel}\gamma_{21}^{\parallel}}}.
+\omega_{{\scriptscriptstyle res}}^{2}=\frac{k_{1}k_{2}}{\lambda_{D}}=\frac{k_{1}k_{2}}{\gamma_{11}^{\parallel}\gamma_{22}^{\parallel}-\gamma_{12}^{\parallel}\gamma_{21}^{\parallel}}.
 \]
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-As the minimum of one of the optical traps is modulated by a sinusoidal
- signal of driving frequency 
-\begin_inset Formula $\Omega$
+The real and the imaginary parts of the response function can be then obtained
+ from above.
+ The real part of the 
+\begin_inset Formula $\boldsymbol{{\bf \chi}}_{ij}^{\parallel}(\omega)$
 \end_inset
 
 , 
+\begin_inset Formula $\boldsymbol{{\bf \chi}}_{ij}^{'\parallel}(\omega)$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{alignat*}{1}
+\boldsymbol{{\bf \chi}}_{ij}^{'\parallel}(\omega) & =\frac{1}{\Big|\chi_{D}^{\parallel}\Big|^{2}}\left(\begin{array}{cc}
+-\omega^{2}\boldsymbol{\gamma}_{22}^{\parallel}\lambda_{k}+k_{1}k_{2}^{2} & \omega^{2}\boldsymbol{\gamma}_{21}^{\parallel}\lambda_{k}\\
+\omega^{2}\boldsymbol{\gamma}_{12}^{\parallel}\lambda_{k} & -\omega^{2}\boldsymbol{\gamma}_{11}^{\parallel}\lambda_{k}+k_{1}^{2}k_{2}
+\end{array}\right),
+\end{alignat*}
+
+\end_inset
+
+while the imaginary part 
+\begin_inset Formula $\boldsymbol{{\bf \chi}}_{ij}^{''\parallel}(\omega)$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{alignat*}{1}
+\boldsymbol{{\bf \chi}}_{ij}^{''\parallel}(\omega) & =\frac{1}{\Big|\chi_{D}^{\parallel}\Big|^{2}}\left(\begin{array}{cc}
+\lambda''_{D}\boldsymbol{\gamma}_{22}^{\parallel}-\omega\lambda_{k}k_{2} & \boldsymbol{\gamma}_{21}^{\parallel}\lambda''_{D}\\
+\boldsymbol{\gamma}_{11}^{\parallel}\lambda''_{D} & \lambda''_{D}\boldsymbol{\gamma}_{11}^{\parallel}-\omega\lambda_{k}k_{2}
+\end{array}\right),
+\end{alignat*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\lambda''_{D}=-\omega(k_{1}k_{2}-\omega^{2}\lambda_{D})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Special case: 
+\shape default
+For a driving frequency on the traps of the form, 
 \begin_inset Formula ${\bf F}_{j}^{0}(\omega)=\frac{X_{j}}{2}(\delta(\omega-\Omega)+\delta(\omega+\Omega))$
 \end_inset
 
