@@ -150,6 +150,7 @@ Ronojoy Adhikari
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -163,6 +164,7 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -303,9 +305,9 @@ reference "eq1"
 
 ), to obtain
 \begin_inset Formula 
-\begin{align}
--\boldsymbol{\gamma}_{ij}\cdot\dot{{\bf R}}_{j}+{\bf F}_{i}=0\label{eq2-1}
-\end{align}
+\begin{equation}
+\boldsymbol{\gamma}_{ij}\cdot\dot{\boldsymbol{{\bf r}}}_{j}+k_{i}(\boldsymbol{r}_{i}-\boldsymbol{r}_{i}^{0})=k_{i}\boldsymbol{u}_{i}^{0}(t)\equiv\boldsymbol{f}_{i}(t)\label{eq2-1}
+\end{equation}
 
 \end_inset
 
@@ -313,24 +315,12 @@ We, now, consider a small displacement
 \begin_inset Formula $\mathbf{u}_{i}$
 \end_inset
 
- about the centre of the trap such that 
-\begin_inset Formula $\mathbf{R}_{i}=\mathbf{R}_{i}^{0}+\mathbf{u}_{i}$
-\end_inset
-
-.
- The expansion of the friction tensor about the separation 
+ about the centre of the trap such that The expansion of the friction tensor
+ about the separation 
 \begin_inset Formula $\mathbf{R}_{i}^{0}-\mathbf{R}_{j}^{0}$
 \end_inset
 
- is then
-\begin_inset Formula 
-\[
-\boldsymbol{\gamma}_{ij}^{TT}=\boldsymbol{\gamma}_{ij}^{TT}\big|_{0}+(\mathbf{u}_{i}\cdot\mathbf{\boldsymbol{\nabla}}_{{\scriptscriptstyle \mathbf{R}_{i}}}-\mathbf{u}_{j}\cdot\mathbf{\boldsymbol{\nabla}}_{{\scriptscriptstyle \mathbf{R}_{j}}})\mathbf{}\boldsymbol{\gamma}_{ij}^{TT}\big|_{0}+\mathcal{O}(\mathbf{u}^{2}).
-\]
-
-\end_inset
-
-Considering terms linear in the displacement, Eq.
+ is thenConsidering terms linear in the displacement, Eq.
  (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -340,16 +330,60 @@ reference "eq2-1"
 
 ) becomes
 \begin_inset Formula 
-\begin{align}
--\boldsymbol{\gamma}_{ij}\cdot\dot{{\bf u}}_{j}-k_{i}\mathbf{u}_{i}+\mathbf{F}_{i}^{0}=0\label{eq2-1-1}
-\end{align}
+\begin{equation}
+\boldsymbol{\gamma}_{ij}(\boldsymbol{r}_{ij}^{0})\cdot\dot{{\bf u}}_{j}+k_{i}\mathbf{u}_{i}=\boldsymbol{f}_{i}(t)\label{eq2-1-1}
+\end{equation}
+
+\end_inset
+
+Here 
+\begin_inset Formula $\gamma_{ij}^{\parallel}$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma_{ij}^{\parallel}$
+\end_inset
+
+ are scalar constructed out of Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:gamma-first-reflection"
+
+\end_inset
+
+) using 
+\begin_inset Formula 
+\begin{eqnarray}
+\boldsymbol{\gamma}_{ij} & = & \gamma_{ij}^{\parallel}\hat{\mathbf{r}}\hat{\mathbf{r}}+\gamma_{ij}^{\perp}(\boldsymbol{I}-\hat{\mathbf{r}}\hat{\mathbf{r}})\\
+\boldsymbol{\mathbf{u}}_{i} & = & u_{i}^{\parallel}\hat{\mathbf{r}}+\boldsymbol{u}_{i}^{\perp}\cdot(\boldsymbol{I}-\hat{\mathbf{r}}\hat{\mathbf{r}}).
+\end{eqnarray}
+
+\end_inset
+
+The above equations then becomes
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\gamma_{ij}^{||}\cdot\dot{u}_{j}^{||}+k_{i}u_{i}^{||}=f_{i}^{||}(t)
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\gamma_{ij}^{\perp}\cdot\dot{u}_{j}^{\perp}+k_{i}u_{i}^{\perp}=f_{i}^{\perp}(t)
+\end{equation}
 
 \end_inset
 
 We now Fourier tranform the above in time to obtain
 \begin_inset Formula 
 \begin{align}
-\left(-i\omega\boldsymbol{\gamma}_{ij}+k_{i}\boldsymbol{I}\right)\cdot{\bf u}_{j} & =\mathbf{F}_{i}^{0}(\omega)
+\left(-i\omega\boldsymbol{\gamma}_{ij}+k_{i}\delta_{ij}\boldsymbol{I}\right)\cdot{\bf u}_{j} & =\boldsymbol{f}_{i}(\omega)
 \end{align}
 
 \end_inset
@@ -421,37 +455,16 @@ F_{2}^{0\perp}(\omega)
 
 \end_inset
 
-Here 
-\begin_inset Formula $\gamma_{ij}^{\parallel}$
-\end_inset
-
- and 
-\begin_inset Formula $\gamma_{ij}^{\parallel}$
-\end_inset
-
- are scalar constructed out of Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:gamma-first-reflection"
-
-\end_inset
-
-) using 
-\begin_inset Formula $\boldsymbol{\gamma}_{ij}=\gamma_{ij}^{\parallel}\hat{\mathbf{r}}\hat{\mathbf{r}}+\gamma_{ij}^{\perp}(1-\hat{\mathbf{r}}\hat{\mathbf{r}})$
-\end_inset
-
-.
- The solution is then 
+The solution is then 
 \begin_inset Formula 
 \begin{align}
-u_{i}^{\parallel}(\omega)={\bf \chi}_{ij}^{\parallel}(\omega)\,F_{j}^{0\parallel}(\omega),\label{eq5-1}\\
-u_{i}^{\perp}(\omega)={\bf \chi}_{ij}^{\perp}(\omega)\,F_{j}^{0\perp}(\omega).
+u_{i}^{\parallel}(\omega)={\bf \boldsymbol{\chi}}_{ij}^{\parallel}(\omega)\cdot{\bf F}_{j}^{0\parallel}(\omega),\label{eq5-1}\\
+u_{i}^{\perp}(\omega)={\bf \boldsymbol{\chi}}_{ij}^{\perp}(\omega)\cdot{\bf F}_{j}^{0\perp}(\omega).
 \end{align}
 
 \end_inset
 
- Here 
+Here 
 \begin_inset Formula $\boldsymbol{\chi}$
 \end_inset
 
@@ -461,11 +474,7 @@ u_{i}^{\perp}(\omega)={\bf \chi}_{ij}^{\perp}(\omega)\,F_{j}^{0\perp}(\omega).
 \boldsymbol{{\bf \chi}}^{\parallel}(\omega)=\left(\begin{array}{ccc}
 -i\omega\boldsymbol{\gamma}_{11}^{\parallel}+k_{1} &  & -i\omega\boldsymbol{\gamma}_{12}^{\parallel}\\
 -i\omega\boldsymbol{\gamma}_{21}^{\parallel} &  & -i\omega\boldsymbol{\gamma}_{22}^{\parallel}+k_{2}
-\end{array}\right)^{-1} & ,\\
-\boldsymbol{{\bf \chi}}^{\perp}(\omega)=\left(\begin{array}{ccc}
--i\omega\boldsymbol{\gamma}_{11}^{\perp}+k_{1} &  & -i\omega\boldsymbol{\gamma}_{12}^{\perp}\\
--i\omega\boldsymbol{\gamma}_{21}^{\perp} &  & -i\omega\boldsymbol{\gamma}_{22}^{\perp}+k_{2}
-\end{array}\right)^{-1}.
+\end{array}\right)^{-1} & ,
 \end{align*}
 
 \end_inset
@@ -476,11 +485,7 @@ This can inverted analytically to obtain
 \boldsymbol{{\bf \chi}}^{\parallel}(\omega) & =\frac{1}{\chi_{D}^{\parallel}}\left(\begin{array}{ccc}
 -i\omega\boldsymbol{\gamma}_{22}^{\parallel}+k_{2} &  & i\omega\boldsymbol{\gamma}_{21}^{\parallel}\\
 i\omega\boldsymbol{\gamma}_{12}^{\parallel} &  & -i\omega\boldsymbol{\gamma}_{11}^{\parallel}+k_{1}
-\end{array}\right),\\
-\boldsymbol{{\bf \chi}}^{\perp}(\omega) & =\frac{1}{\chi_{D}^{\perp}}\left(\begin{array}{ccc}
--i\omega\boldsymbol{\gamma}_{22}^{\perp}+k_{2} &  & i\omega\boldsymbol{\gamma}_{21}^{\perp}\\
-i\omega\boldsymbol{\gamma}_{12}^{\perp} &  & -i\omega\boldsymbol{\gamma}_{11}^{\perp}+k_{1}
-\end{array}\right).
+\end{array}\right),
 \end{align*}
 
 \end_inset
@@ -498,11 +503,7 @@ Here
 
 \end_inset
 
-and simlarly for 
-\begin_inset Formula $\chi_{D}^{\perp}.$
-\end_inset
-
- This gives the resonance frequency
+This gives the resonance frequency
 \begin_inset Formula 
 \[
 \omega_{{\scriptscriptstyle res}}^{2}=\frac{k_{1}k_{2}}{\gamma_{11}^{\parallel}\gamma_{22}^{\parallel}-\gamma_{12}^{\parallel}\gamma_{21}^{\parallel}}.
