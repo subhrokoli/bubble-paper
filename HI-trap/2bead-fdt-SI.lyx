@@ -150,7 +150,6 @@ Ronojoy Adhikari
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -164,7 +163,6 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -502,24 +500,24 @@ reference "eq:gamma-first-reflection"
  The solution is then 
 \begin_inset Formula 
 \begin{align}
-u_{i}^{\parallel}(\omega)={\bf \boldsymbol{\chi}}_{ij}^{\parallel}(\omega)\cdot{\bf F}_{j}^{0\parallel}(\omega),\label{eq5-1}\\
-u_{i}^{\perp}(\omega)={\bf \boldsymbol{\chi}}_{ij}^{\perp}(\omega)\cdot{\bf F}_{j}^{0\perp}(\omega).
+u_{i}^{\parallel}(\omega)={\bf \chi}_{ij}^{\parallel}(\omega)\,F_{j}^{0\parallel}(\omega),\label{eq5-1}\\
+u_{i}^{\perp}(\omega)={\bf \chi}_{ij}^{\perp}(\omega)\,F_{j}^{0\perp}(\omega).
 \end{align}
 
 \end_inset
 
  Here 
-\begin_inset Formula $\boldsymbol{\chi}_{ij}$
+\begin_inset Formula $\boldsymbol{\chi}_{}$
 \end_inset
 
- is the response
+ is the response function 
 \begin_inset Formula 
 \begin{align*}
-\boldsymbol{{\bf \chi}}_{ij}^{\parallel}(\omega)=\left(\begin{array}{ccc}
+\boldsymbol{{\bf \chi}}^{\parallel}(\omega)=\left(\begin{array}{ccc}
 -i\omega\boldsymbol{\gamma}_{11}^{\parallel}+k_{1} &  & -i\omega\boldsymbol{\gamma}_{12}^{\parallel}\\
 -i\omega\boldsymbol{\gamma}_{21}^{\parallel} &  & -i\omega\boldsymbol{\gamma}_{22}^{\parallel}+k_{2}
 \end{array}\right)^{-1} & ,\\
-\boldsymbol{{\bf \chi}}_{ij}^{\perp}(\omega)=\left(\begin{array}{ccc}
+\boldsymbol{{\bf \chi}}^{\perp}(\omega)=\left(\begin{array}{ccc}
 -i\omega\boldsymbol{\gamma}_{11}^{\perp}+k_{1} &  & -i\omega\boldsymbol{\gamma}_{12}^{\perp}\\
 -i\omega\boldsymbol{\gamma}_{21}^{\perp} &  & -i\omega\boldsymbol{\gamma}_{22}^{\perp}+k_{2}
 \end{array}\right)^{-1}.
@@ -530,11 +528,11 @@ u_{i}^{\perp}(\omega)={\bf \boldsymbol{\chi}}_{ij}^{\perp}(\omega)\cdot{\bf F}_{
 This can inverted analytically to obtain
 \begin_inset Formula 
 \begin{align*}
-\boldsymbol{{\bf \chi}}_{ij}^{\parallel}(\omega) & =\frac{1}{\chi_{D}^{\parallel}}\left(\begin{array}{ccc}
+\boldsymbol{{\bf \chi}}^{\parallel}(\omega) & =\frac{1}{\chi_{D}^{\parallel}}\left(\begin{array}{ccc}
 -i\omega\boldsymbol{\gamma}_{22}^{\parallel}+k_{2} &  & i\omega\boldsymbol{\gamma}_{21}^{\parallel}\\
 i\omega\boldsymbol{\gamma}_{12}^{\parallel} &  & -i\omega\boldsymbol{\gamma}_{11}^{\parallel}+k_{1}
 \end{array}\right),\\
-\boldsymbol{{\bf \chi}}_{ij}^{\perp}(\omega) & =\frac{1}{\chi_{D}^{\perp}}\left(\begin{array}{ccc}
+\boldsymbol{{\bf \chi}}^{\perp}(\omega) & =\frac{1}{\chi_{D}^{\perp}}\left(\begin{array}{ccc}
 -i\omega\boldsymbol{\gamma}_{22}^{\perp}+k_{2} &  & i\omega\boldsymbol{\gamma}_{21}^{\perp}\\
 i\omega\boldsymbol{\gamma}_{12}^{\perp} &  & -i\omega\boldsymbol{\gamma}_{11}^{\perp}+k_{1}
 \end{array}\right).
@@ -546,11 +544,12 @@ Here
 \begin_inset Formula $\chi_{D}^{\parallel}=\alpha^{||}+i\beta^{\parallel}$
 \end_inset
 
- 
+ , with
 \begin_inset Formula 
-\[
-\alpha^{\parallel}=k_{1}k_{2}-\omega^{2}(\boldsymbol{\gamma}_{11}^{\parallel}\boldsymbol{\gamma}_{22}^{\parallel}-\boldsymbol{\gamma}_{12}^{\parallel}\boldsymbol{\gamma}_{21}^{\parallel}),\qquad\beta^{\parallel}=-\omega(\gamma_{11}^{\parallel}k_{2}+\gamma_{22}^{\parallel}k_{1}),
-\]
+\begin{align*}
+\alpha^{\parallel} & =k_{1}k_{2}-\omega^{2}(\boldsymbol{\gamma}_{11}^{\parallel}\boldsymbol{\gamma}_{22}^{\parallel}-\boldsymbol{\gamma}_{12}^{\parallel}\boldsymbol{\gamma}_{21}^{\parallel}),\\
+\,\beta^{\parallel} & =-\omega(\gamma_{11}^{\parallel}k_{2}+\gamma_{22}^{\parallel}k_{1}),
+\end{align*}
 
 \end_inset
 
@@ -558,7 +557,7 @@ and simlarly for
 \begin_inset Formula $\chi_{D}^{\perp}.$
 \end_inset
 
- The resonance frequency is then 
+ This gives the resonance frequency
 \begin_inset Formula 
 \[
 \omega_{{\scriptscriptstyle res}}^{2}=\frac{k_{1}k_{2}}{\gamma_{11}^{\parallel}\gamma_{22}^{\parallel}-\gamma_{12}^{\parallel}\gamma_{21}^{\parallel}}.
@@ -568,67 +567,33 @@ and simlarly for
 
 The real and the imaginary parts of the response function can be then obtained
  from above.
- The real part of the 
-\begin_inset Formula $\boldsymbol{{\bf \chi}}_{ij}^{\parallel}(\omega)$
+ The real part of the response function, 
+\begin_inset Formula $\boldsymbol{{\bf \chi}}^{'\parallel}(\omega)$
 \end_inset
 
-, 
-\begin_inset Formula $\boldsymbol{{\bf \chi}}_{ij}^{'\parallel}(\omega)$
-\end_inset
-
-
+, is then
 \begin_inset Formula 
 \begin{alignat*}{1}
-\boldsymbol{{\bf \chi}}_{ij}^{'\parallel}(\omega) & =\frac{1}{\Big|\chi_{D}^{\parallel}\Big|^{2}}\left(\begin{array}{cc}
--\omega\boldsymbol{\gamma}_{22}^{\parallel}\beta^{\parallel}+\alpha^{\parallel}k_{2} & \omega\boldsymbol{\gamma}_{21}^{\parallel}\beta\\
-\omega\boldsymbol{\gamma}_{12}^{\parallel}\beta & -\omega\boldsymbol{\gamma}_{11}^{\parallel}\beta^{\parallel}+\alpha^{\parallel}k_{1}
+\boldsymbol{{\bf \chi}}^{'\parallel}(\omega) & =\frac{1}{\Big|\chi_{D}^{\parallel}\Big|^{2}}\left(\begin{array}{cc}
+-\beta^{\parallel}\omega\boldsymbol{\gamma}_{22}^{\parallel}+\alpha^{\parallel}k_{2} & \beta^{\parallel}\omega\boldsymbol{\gamma}_{21}^{\parallel}\beta\\
+\beta^{\parallel}\omega\boldsymbol{\gamma}_{12}^{\parallel} & -\beta^{\parallel}\omega\boldsymbol{\gamma}_{11}^{\parallel}+\alpha^{\parallel}k_{1}
 \end{array}\right),
 \end{alignat*}
 
 \end_inset
 
 while the imaginary part 
-\begin_inset Formula $\boldsymbol{{\bf \chi}}_{ij}^{''\parallel}(\omega)$
+\begin_inset Formula $\boldsymbol{{\bf \chi}}^{''\parallel}(\omega)$
 \end_inset
 
  is
 \begin_inset Formula 
 \begin{alignat*}{1}
-\boldsymbol{{\bf \chi}}_{ij}^{''\parallel}(\omega) & =\frac{1}{\Big|\chi_{D}^{\parallel}\Big|^{2}}\left(\begin{array}{cc}
--\omega\boldsymbol{\gamma}_{22}^{\parallel}\alpha^{\parallel}+\beta^{\parallel}k_{2} & \alpha^{\parallel}\omega\boldsymbol{\gamma}_{21}^{\parallel}\\
-\alpha^{\parallel}\omega\boldsymbol{\gamma}_{12}^{\parallel} & -\omega\boldsymbol{\gamma}_{11}^{\parallel}\alpha^{\parallel}+\beta^{\parallel}k_{1}
-\end{array}\right),
+\boldsymbol{{\bf \chi}}^{''\parallel}(\omega) & =\frac{1}{\Big|\chi_{D}^{\parallel}\Big|^{2}}\left(\begin{array}{cc}
+-\alpha^{\parallel}\omega\boldsymbol{\gamma}_{22}^{\parallel}-\beta^{\parallel}k_{2} & \alpha^{\parallel}\omega\boldsymbol{\gamma}_{21}^{\parallel}\\
+\alpha^{\parallel}\omega\boldsymbol{\gamma}_{12}^{\parallel} & -\alpha^{\parallel}\omega\boldsymbol{\gamma}_{11}^{\parallel}-\beta^{\parallel}k_{1}
+\end{array}\right).
 \end{alignat*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\shape italic
-Special case: 
-\shape default
-For a driving frequency on the traps of the form, 
-\begin_inset Formula ${\bf F}_{j}^{0}(\omega)=\frac{X_{j}}{2}(\delta(\omega-\Omega)+\delta(\omega+\Omega))$
-\end_inset
-
-.
- 
-\begin_inset Formula 
-\begin{align*}
-u_{i}^{\parallel}(t)=\left({\bf \boldsymbol{\chi}}_{ij}^{\parallel}(\Omega)\,\exp(i\Omega t)+{\bf \boldsymbol{\chi}}_{ij}^{\parallel}(-\Omega)\,\exp(-i\Omega t)\right)\frac{X_{j}}{2} & .
-\end{align*}
-
-\end_inset
-
-Using the expression derived above, we have
-\begin_inset Formula 
-\begin{align}
-u_{i}^{\parallel}(t)=\Big( & \left[{\bf \boldsymbol{\chi}}_{ij}^{\parallel}(\Omega)+{\bf \boldsymbol{\chi}}_{ij}^{\parallel}(-\Omega)\right]\cos(\Omega t)\nonumber \\
-+ & i\left[{\bf \boldsymbol{\chi}}_{ij}^{\parallel}(\Omega)-{\bf \boldsymbol{\chi}}_{ij}^{\parallel}(-\Omega)\right]\sin(-i\Omega t)\Big)X_{j}.
-\end{align}
 
 \end_inset
 
