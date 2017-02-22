@@ -293,63 +293,8 @@ where
 \end_layout
 
 \begin_layout Standard
-The harmonic optical potentials are given by 
-\begin_inset Formula $U_{i}(t)=\frac{1}{2}k_{i}|{\bf \boldsymbol{r}}_{i}-{\bf \boldsymbol{r}}_{i}^{0}|^{2}$
-\end_inset
-
- where 
-\begin_inset Formula $\boldsymbol{r}_{i}^{0}$
-\end_inset
-
- are the centers and 
-\begin_inset Formula $k_{i}$
-\end_inset
-
- are the stiffnesses of the optical traps.
- Note the absence of conservative mutual couplings.
- The system remains in equilibrium when the trap centers are stationary
- but is driven into non-equilibrium when they are modulated in time as 
-\begin_inset Formula $\boldsymbol{r}_{i}^{0}(t)$
-\end_inset
-
-.
- For small modulations the response is linear.
- 
-\end_layout
-
-\begin_layout Standard
-For modulation frequencies 
-\begin_inset Formula $\omega\ll\gamma_{i}/m_{i}$
-\end_inset
-
- the velocities can be adiabatically eliminated from the inertial Langevin
- equations to yield inertialess Langevin equations for the positions.
- The multiplicative noises in the resulting equations have clear interpretations
- within the adiabatic elimination procedure; there is no Ito-Stratonovich
- dilemma.
- Both correlation and response functions can be calculated in this limit.
- Linearizing about the mean separation between the trap centers and decomposing
- the motion into components parallel and perpendicular to the separation
- vector, the result for the parallel response function is 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-Add\qquad correlation\quad result
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In the experimental set-up, we have two such optical traps with the minimum
- of one of them is being shifted with an external periodic signal, and the
- response of the two beads studied.
- Assuming momentum to be rapidly relaxing on the time scale of the trap
- motion, we neglect inertia and average over the noise in Eq (
+Assuming momentum to be rapidly relaxing on the time scale of the trap motion,
+ we neglect inertia and average over the noise in Eq (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq1"
@@ -507,7 +452,7 @@ u_{i}^{\perp}(\omega)={\bf \chi}_{ij}^{\perp}(\omega)\,F_{j}^{0\perp}(\omega).
 \end_inset
 
  Here 
-\begin_inset Formula $\boldsymbol{\chi}_{}$
+\begin_inset Formula $\boldsymbol{\chi}$
 \end_inset
 
  is the response function 
