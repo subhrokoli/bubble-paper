@@ -150,6 +150,7 @@ Ronojoy Adhikari
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -163,6 +164,7 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -556,7 +558,6 @@ Clearly the resonance frequency in dimensionless unit is
 \shape italic
 Derivation in terms of friction tensors:
 \shape default
- .
  Averaging over the noise and taking the overdamped limit of the Eq (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -567,78 +568,53 @@ reference "eq1"
 ), we have
 \begin_inset Formula 
 \begin{align}
--\boldsymbol{\gamma}_{ij}\cdot\dot{{\bf R}}_{j}(t)+{\bf F}_{i}=0\label{eq2-1}
+-\boldsymbol{\gamma}_{ij}\cdot\dot{{\bf R}}_{j}+{\bf F}_{i}=0\label{eq2-1}
 \end{align}
 
 \end_inset
 
-This equation can be written as
-\begin_inset ERT
-status open
+We, now, consider a small displacement 
+\begin_inset Formula $\mathbf{u}_{i}$
+\end_inset
 
-\begin_layout Plain Layout
+ about the centre of the trap such that 
+\begin_inset Formula $\mathbf{R}_{i}=\mathbf{R}_{i}^{0}+\mathbf{u}_{i}$
+\end_inset
 
+.
+ The expansion of the friction tensor about the separation 
+\begin_inset Formula $\mathbf{R}_{i}^{0}-\mathbf{R}_{j}^{0}$
+\end_inset
 
-\backslash
-begin{subequations}
-\end_layout
+ is then
+\begin_inset Formula 
+\[
+\boldsymbol{\gamma}_{ij}^{TT}=\boldsymbol{\gamma}_{ij}^{TT}\big|_{0}+(\mathbf{u}_{i}\cdot\mathbf{\boldsymbol{\nabla}}_{{\scriptscriptstyle \mathbf{R}_{i}}}-\mathbf{u}_{j}\cdot\mathbf{\boldsymbol{\nabla}}_{{\scriptscriptstyle \mathbf{R}_{j}}})\mathbf{}\boldsymbol{\gamma}_{ij}^{TT}\big|_{0}+\mathcal{O}(\mathbf{u}^{2}).
+\]
 
 \end_inset
 
+Considering terms linear in the displacement, Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq2-1"
 
+\end_inset
+
+) becomes
 \begin_inset Formula 
 \begin{align}
-\boldsymbol{\gamma}_{11}\cdot\dot{{\bf R}}_{1}(t) & +\boldsymbol{\gamma}_{12}\cdot\dot{{\bf R}}_{2}(t)=-k_{1}({\bf R}_{1}(t)-{\bf R}_{1}^{0}(t)\,)\\
-\boldsymbol{\gamma}_{21}\cdot\dot{{\bf R}}_{1}(t) & +\boldsymbol{\gamma}_{22}\cdot\dot{{\bf R}}_{2}(t)=-k_{2}({\bf R}_{2}(t)-{\bf R}_{2}^{0}(t)\,)
+-\boldsymbol{\gamma}_{ij}\cdot\dot{{\bf u}}_{j}-k_{i}\mathbf{u}_{i}+\mathbf{F}_{i}^{0}=0\label{eq2-1-1}
 \end{align}
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{subequations}
-\end_layout
 
 \end_inset
 
 We now Fourier tranform the above in time to obtain
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{subequations}
-\end_layout
-
-\end_inset
-
-
 \begin_inset Formula 
 \begin{align}
--i\omega\big(\boldsymbol{\gamma}_{11}\cdot{\bf R}_{1} & (\omega)+\boldsymbol{\gamma}_{12}\cdot{\bf R}_{2}\big)=-k_{1}({\bf R}_{1}-{\bf R}_{1}^{0}\,)\\
--i\omega\big(\boldsymbol{\gamma}_{21}\cdot{\bf R}_{1} & (\omega)+\boldsymbol{\gamma}_{22}\cdot{\bf R}_{2}\big)=-k_{2}({\bf R}_{2}-{\bf R}_{2}^{0}\,)
+\left(-i\omega\boldsymbol{\gamma}_{ij}+k_{i}\boldsymbol{I}\right)\cdot{\bf u}_{j} & =\mathbf{F}_{i}^{0}(\omega)
 \end{align}
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{subequations}
-\end_layout
 
 \end_inset
 
@@ -653,8 +629,8 @@ The above equations can be written in terms of the
 -i\omega\boldsymbol{\gamma}_{11}+k_{1}\boldsymbol{I} & -i\omega\boldsymbol{\gamma}_{12}\\
 -i\omega\boldsymbol{\gamma}_{21} & -i\omega\boldsymbol{\gamma}_{22}+k_{2}\boldsymbol{I}
 \end{array}\right)\cdot\left(\begin{array}{c}
-{\bf R}_{1}\\
-{\bf R}_{2}
+{\bf u}_{1}\\
+{\bf u}_{2}
 \end{array}\right) & =\left(\begin{array}{c}
 {\bf F}_{1}^{0}(\omega)\\
 {\bf F}_{2}^{0}(\omega)
@@ -663,22 +639,21 @@ The above equations can be written in terms of the
 
 \end_inset
 
-We now use the information that the trap centers are separated in 
-\begin_inset Formula $x-$
+We now decouple displacement in direction parallel and perpendicular to
+ the line joining trap-centers, such that 
+\begin_inset Formula $\mathbf{u}_{i}=u_{i}^{\parallel}\hat{\mathbf{r}}\hat{\mathbf{r}}+u_{i}^{\perp}(1-\hat{\mathbf{r}}\hat{\mathbf{r}})$
 \end_inset
 
-direction in the experiment to separate the above equation as,
+.
+ The above equation then becomes
 \begin_inset Formula 
 \begin{align*}
 \left(\begin{array}{cc}
 -i\omega\boldsymbol{\gamma}_{11}^{\parallel}+k_{1} & -i\omega\boldsymbol{\gamma}_{12}^{\parallel}\\
 -i\omega\boldsymbol{\gamma}_{21}^{\parallel} & -i\omega\boldsymbol{\gamma}_{22}^{\parallel}+k_{2}
-\end{array}\right)\cdot\left(\begin{array}{c}
-R_{1x}\\
-R_{2x}
-\end{array}\right) & =\left(\begin{array}{c}
-F_{1x}^{0}(\omega)\\
-F_{2x}^{0}(\omega)
+\end{array}\right)\cdot\left(\mathbf{u}_{1}^{\parallel}\right) & =\left(\begin{array}{c}
+F_{1}^{0\parallel}(\omega)\\
+F_{2}^{0\parallel}(\omega)
 \end{array}\right).
 \end{align*}
 
@@ -692,11 +667,11 @@ for direction parallel to the separation of the traps.
 -i\omega\boldsymbol{\gamma}_{11}^{\perp}+k_{1} &  & -i\omega\boldsymbol{\gamma}_{12}^{\perp}\\
 -i\omega\boldsymbol{\gamma}_{21}^{\perp} &  & -i\omega\boldsymbol{\gamma}_{22}^{\perp}+k_{2}
 \end{array}\right)\cdot\left(\begin{array}{c}
-R_{1y}\\
-R_{2y}
+u_{1}^{\perp}\\
+u_{2}^{\perp}
 \end{array}\right) & =\left(\begin{array}{c}
-F_{1y}^{0}(\omega)\\
-F_{2y}^{0}(\omega)
+F_{1}^{0\perp}(\omega)\\
+F_{2}^{0\perp}(\omega)
 \end{array}\right).
 \end{align*}
 
@@ -726,8 +701,8 @@ reference "eq:gamma-first-reflection"
  The solution is then 
 \begin_inset Formula 
 \begin{align}
-R_{ix}(\omega)={\bf \boldsymbol{\chi}}_{ij}^{\parallel}(\omega)\cdot{\bf F}_{jx}^{0}(\omega),\label{eq5-1}\\
-R_{iy}(\omega)={\bf \boldsymbol{\chi}}_{ij}^{\perp}(\omega)\cdot{\bf F}_{jy}^{0}(\omega).
+u_{i}^{\parallel}(\omega)={\bf \boldsymbol{\chi}}_{ij}^{\parallel}(\omega)\cdot{\bf F}_{j}^{0\parallel}(\omega),\label{eq5-1}\\
+u_{i}^{\perp}(\omega)={\bf \boldsymbol{\chi}}_{ij}^{\perp}(\omega)\cdot{\bf F}_{j}^{0\perp}(\omega).
 \end{align}
 
 \end_inset
@@ -782,7 +757,7 @@ Here
  From this, we have
 \begin_inset Formula 
 \[
-\chi_{21}^{\parallel}(\omega)=\frac{i\omega\boldsymbol{\gamma}_{12}^{\parallel}}{k_{1}k_{2}-\omega^{2}(\boldsymbol{\gamma}_{11}^{\parallel}\boldsymbol{\gamma}_{22}^{\parallel}-\boldsymbol{\gamma}_{12}^{\parallel}\boldsymbol{\gamma}_{21}^{\parallel})+-i\omega(\gamma_{11}k_{2}+\gamma_{22}k_{1})}.
+\chi_{21}^{\parallel}(\omega)=\frac{i\omega\boldsymbol{\gamma}_{12}^{\parallel}}{k_{1}k_{2}-\omega^{2}(\boldsymbol{\gamma}_{11}^{\parallel}\boldsymbol{\gamma}_{22}^{\parallel}-\boldsymbol{\gamma}_{12}^{\parallel}\boldsymbol{\gamma}_{21}^{\parallel})+-i\omega(\gamma_{11}^{\parallel}k_{2}+\gamma_{22}^{\parallel}k_{1})}.
 \]
 
 \end_inset
