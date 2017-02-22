@@ -150,7 +150,6 @@ Ronojoy Adhikari
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -164,7 +163,6 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -247,7 +245,7 @@ In the limit of slow viscous flow in the fluid, the friction tensors can
  To leading order the result is 
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{\gamma}_{ij}=\delta_{ij}\boldsymbol{I}\gamma_{i}-(1-\delta_{ij})\gamma_{i}\gamma_{j}\mathcal{F}_{i}\mathcal{F}_{j}\boldsymbol{G}(\boldsymbol{r}_{i},\boldsymbol{r}_{j})
+\boldsymbol{\gamma}_{ij}=\delta_{ij}\boldsymbol{I}\gamma_{i}-(1-\delta_{ij})\gamma_{i}\gamma_{j}\mathcal{F}_{i}\mathcal{F}_{j}\boldsymbol{G}(\boldsymbol{r}_{i},\boldsymbol{r}_{j})\label{eq:gamma-first-reflection}
 \end{equation}
 
 \end_inset
@@ -551,6 +549,249 @@ Clearly the resonance frequency in dimensionless unit is
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Derivation in terms of friction tensors:
+\shape default
+ .
+ Averaging over the noise and taking the overdamped limit of the Eq (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq1"
+
+\end_inset
+
+), we have
+\begin_inset Formula 
+\begin{align}
+-\boldsymbol{\gamma}_{ij}\cdot\dot{{\bf R}}_{j}(t)+{\bf F}_{i}=0\label{eq2-1}
+\end{align}
+
+\end_inset
+
+This equation can be written as
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\boldsymbol{\gamma}_{11}\cdot\dot{{\bf R}}_{1}(t) & +\boldsymbol{\gamma}_{12}\cdot\dot{{\bf R}}_{2}(t)=-k_{1}({\bf R}_{1}(t)-{\bf R}_{1}^{0}(t)\,)\\
+\boldsymbol{\gamma}_{21}\cdot\dot{{\bf R}}_{1}(t) & +\boldsymbol{\gamma}_{22}\cdot\dot{{\bf R}}_{2}(t)=-k_{2}({\bf R}_{2}(t)-{\bf R}_{2}^{0}(t)\,)
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+We now Fourier tranform the above in time to obtain
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+-i\omega\big(\boldsymbol{\gamma}_{11}\cdot{\bf R}_{1} & (\omega)+\boldsymbol{\gamma}_{12}\cdot{\bf R}_{2}\big)=-k_{1}({\bf R}_{1}-{\bf R}_{1}^{0}\,)\\
+-i\omega\big(\boldsymbol{\gamma}_{21}\cdot{\bf R}_{1} & (\omega)+\boldsymbol{\gamma}_{22}\cdot{\bf R}_{2}\big)=-k_{2}({\bf R}_{2}-{\bf R}_{2}^{0}\,)
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+The above equations can be written in terms of the 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ friction tensors as
+\begin_inset Formula 
+\begin{align*}
+\left(\begin{array}{cc}
+-i\omega\boldsymbol{\gamma}_{11}+k_{1}\boldsymbol{I} & -i\omega\boldsymbol{\gamma}_{12}\\
+-i\omega\boldsymbol{\gamma}_{21} & -i\omega\boldsymbol{\gamma}_{22}+k_{2}\boldsymbol{I}
+\end{array}\right)\cdot\left(\begin{array}{c}
+{\bf R}_{1}\\
+{\bf R}_{2}
+\end{array}\right) & =\left(\begin{array}{c}
+{\bf F}_{1}^{0}(\omega)\\
+{\bf F}_{2}^{0}(\omega)
+\end{array}\right).
+\end{align*}
+
+\end_inset
+
+We now use the information that the trap centers are separated in 
+\begin_inset Formula $x-$
+\end_inset
+
+direction in the experiment to separate the above equation as,
+\begin_inset Formula 
+\begin{align*}
+\left(\begin{array}{cc}
+-i\omega\boldsymbol{\gamma}_{11}^{\parallel}+k_{1} & -i\omega\boldsymbol{\gamma}_{12}^{\parallel}\\
+-i\omega\boldsymbol{\gamma}_{21}^{\parallel} & -i\omega\boldsymbol{\gamma}_{22}^{\parallel}+k_{2}
+\end{array}\right)\cdot\left(\begin{array}{c}
+R_{1x}\\
+R_{2x}
+\end{array}\right) & =\left(\begin{array}{c}
+F_{1x}^{0}(\omega)\\
+F_{2x}^{0}(\omega)
+\end{array}\right).
+\end{align*}
+
+\end_inset
+
+for direction parallel to the separation of the traps.
+ The corresponding equations for perpendicular directions 
+\begin_inset Formula 
+\begin{align*}
+\left(\begin{array}{ccc}
+-i\omega\boldsymbol{\gamma}_{11}^{\perp}+k_{1} &  & -i\omega\boldsymbol{\gamma}_{12}^{\perp}\\
+-i\omega\boldsymbol{\gamma}_{21}^{\perp} &  & -i\omega\boldsymbol{\gamma}_{22}^{\perp}+k_{2}
+\end{array}\right)\cdot\left(\begin{array}{c}
+R_{1y}\\
+R_{2y}
+\end{array}\right) & =\left(\begin{array}{c}
+F_{1y}^{0}(\omega)\\
+F_{2y}^{0}(\omega)
+\end{array}\right).
+\end{align*}
+
+\end_inset
+
+Here 
+\begin_inset Formula $\gamma_{ij}^{\parallel}$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma_{ij}^{\parallel}$
+\end_inset
+
+ are scalar constructed out of Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:gamma-first-reflection"
+
+\end_inset
+
+) using 
+\begin_inset Formula $\boldsymbol{\gamma}_{ij}=\gamma_{ij}^{\parallel}\hat{\mathbf{r}}\hat{\mathbf{r}}+\gamma_{ij}^{\perp}(1-\hat{\mathbf{r}}\hat{\mathbf{r}})$
+\end_inset
+
+.
+ The solution is then 
+\begin_inset Formula 
+\begin{align}
+R_{ix}(\omega)={\bf \boldsymbol{\chi}}_{ij}^{\parallel}(\omega)\cdot{\bf F}_{jx}^{0}(\omega),\label{eq5-1}\\
+R_{iy}(\omega)={\bf \boldsymbol{\chi}}_{ij}^{\perp}(\omega)\cdot{\bf F}_{jy}^{0}(\omega).
+\end{align}
+
+\end_inset
+
+ Here 
+\begin_inset Formula $\boldsymbol{\chi}_{ij}$
+\end_inset
+
+ is the response
+\begin_inset Formula 
+\begin{align*}
+\boldsymbol{{\bf \chi}}_{ij}^{\parallel}(\omega)=\left(\begin{array}{ccc}
+-i\omega\boldsymbol{\gamma}_{11}^{\parallel}+k_{1} &  & -i\omega\boldsymbol{\gamma}_{12}^{\parallel}\\
+-i\omega\boldsymbol{\gamma}_{21}^{\parallel} &  & -i\omega\boldsymbol{\gamma}_{22}^{\parallel}+k_{2}
+\end{array}\right)^{-1} & ,\\
+\boldsymbol{{\bf \chi}}_{ij}^{\perp}(\omega)=\left(\begin{array}{ccc}
+-i\omega\boldsymbol{\gamma}_{11}^{\perp}+k_{1} &  & -i\omega\boldsymbol{\gamma}_{12}^{\perp}\\
+-i\omega\boldsymbol{\gamma}_{21}^{\perp} &  & -i\omega\boldsymbol{\gamma}_{22}^{\perp}+k_{2}
+\end{array}\right)^{-1}.
+\end{align*}
+
+\end_inset
+
+Since, this is in a 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix, it can inverted analytically as
+\begin_inset Formula 
+\begin{align*}
+\boldsymbol{{\bf \chi}}_{ij}^{\parallel}(\omega) & =\frac{1}{\chi_{D}^{\parallel}}\left(\begin{array}{ccc}
+-i\omega\boldsymbol{\gamma}_{22}^{\parallel}+k_{2} &  & i\omega\boldsymbol{\gamma}_{21}^{\parallel}\\
+i\omega\boldsymbol{\gamma}_{12}^{\parallel} &  & -i\omega\boldsymbol{\gamma}_{11}^{\parallel}+k_{1}
+\end{array}\right),\\
+\boldsymbol{{\bf \chi}}_{ij}^{\perp}(\omega) & =\frac{1}{\chi_{D}^{\perp}}\left(\begin{array}{ccc}
+-i\omega\boldsymbol{\gamma}_{22}^{\perp}+k_{2} &  & i\omega\boldsymbol{\gamma}_{21}^{\perp}\\
+i\omega\boldsymbol{\gamma}_{12}^{\perp} &  & -i\omega\boldsymbol{\gamma}_{11}^{\perp}+k_{1}
+\end{array}\right).
+\end{align*}
+
+\end_inset
+
+Here 
+\begin_inset Formula $\chi_{D}^{\parallel}=(-i\omega\boldsymbol{\gamma}_{11}^{\parallel}+k_{1})(-i\omega\boldsymbol{\gamma}_{22}^{\parallel}+k_{2})+\omega^{2}\boldsymbol{\gamma}_{12}^{\parallel}\boldsymbol{\gamma}_{21}^{\parallel}$
+\end_inset
+
+ and 
+\begin_inset Formula $\chi_{D}^{\perp}=(-i\omega\boldsymbol{\gamma}_{11}^{\perp}+k_{1})(-i\omega\boldsymbol{\gamma}_{22}^{\perp}+k_{2})+\omega^{2}\boldsymbol{\gamma}_{12}^{\perp}\boldsymbol{\gamma}_{21}^{\perp}$
+\end_inset
+
+.
+ From this, we have
+\begin_inset Formula 
+\[
+\chi_{21}^{\parallel}(\omega)=\frac{i\omega\boldsymbol{\gamma}_{12}^{\parallel}}{k_{1}k_{2}-\omega^{2}(\boldsymbol{\gamma}_{11}^{\parallel}\boldsymbol{\gamma}_{22}^{\parallel}-\boldsymbol{\gamma}_{12}^{\parallel}\boldsymbol{\gamma}_{21}^{\parallel})+-i\omega(\gamma_{11}k_{2}+\gamma_{22}k_{1})}.
+\]
+
+\end_inset
+
+ The resonance frequency is at 
+\begin_inset Formula $\omega_{{\scriptscriptstyle res}}=\sqrt{\frac{k_{1}k_{2}}{\gamma_{11}^{\parallel}\gamma_{22}^{\parallel}-\gamma_{12}^{\parallel}\gamma_{21}^{\parallel}}}.$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
