@@ -645,13 +645,21 @@ We now decouple displacement in direction parallel and perpendicular to
 \end_inset
 
 .
+ Here 
+\begin_inset Formula $\hat{\mathbf{r}}=\mathbf{R}_{i}^{0}-\mathbf{R}_{j}^{0}/|\mathbf{R}_{i}^{0}-\mathbf{R}_{j}^{0}|$
+\end_inset
+
+.
  The above equation then becomes
 \begin_inset Formula 
 \begin{align*}
 \left(\begin{array}{cc}
 -i\omega\boldsymbol{\gamma}_{11}^{\parallel}+k_{1} & -i\omega\boldsymbol{\gamma}_{12}^{\parallel}\\
 -i\omega\boldsymbol{\gamma}_{21}^{\parallel} & -i\omega\boldsymbol{\gamma}_{22}^{\parallel}+k_{2}
-\end{array}\right)\cdot\left(\mathbf{u}_{1}^{\parallel}\right) & =\left(\begin{array}{c}
+\end{array}\right)\cdot\left(\begin{array}{c}
+u_{1}^{\parallel}\\
+u_{2}^{\parallel}
+\end{array}\right) & =\left(\begin{array}{c}
 F_{1}^{0\parallel}(\omega)\\
 F_{2}^{0\parallel}(\omega)
 \end{array}\right).
