@@ -686,7 +686,7 @@ centering
 
  
 \begin_inset Graphics
-	filename fig1si.pdf
+	filename ../../../2016/twobeadhydro/fig1si.pdf
 	width 45text%
 
 \end_inset
@@ -730,25 +730,6 @@ name "Setup"
 \end_layout
 
 \begin_layout Standard
-Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "hist"
-
-\end_inset
-
- (a) and (b) shows the histogram of position coordinate data that we acquire
- for the Brownian motion of B1 and B2, respectively.
- As is clear, the data are normally distributed in both traps and fit very
- well to Gaussians (shown in bold lines).
- As a consistency check, we also plot the position cross-correlation function
- in time domain for B1 and B2 - this is shown in Fig.
- The data fits well to Eq.xx in Sec 1, with the constant parameters calculate
- with appropriate values for our case.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -769,7 +750,7 @@ centering
 
  
 \begin_inset Graphics
-	filename fig2si.pdf
+	filename ../../../2016/twobeadhydro/fig2si.pdf
 	width 45text%
 
 \end_inset
@@ -807,13 +788,16 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Graphics
-	filename fig3si.pdf
-	scale 30
+	filename ../../../2016/twobeadhydro/fig3si.pdf
+	scale 40
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "psd"
 
 \end_inset
 
@@ -821,7 +805,118 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Cross-correlation function in time domain for B1 and B2.
+Calibration of traps for B1 and B2.
+ Experimentally measured data points are shown in filled gray circles, whereas
+ the Lorentzian fit is denoted by the solid black line.
+ (a) PSD for B1 which has a corner frequency 
+\begin_inset Formula $\mathit{f_{c1}=\mathrm{461}}$
+\end_inset
+
+Hz and stiffness 
+\begin_inset Formula $\mathit{k_{1}=\mathrm{69.6}\:\mu}$
+\end_inset
+
+N/m.
+ (b) PSD for B2 which has a corner frequency 
+\begin_inset Formula $\mathit{f_{c1}=\mathrm{32.2}}$
+\end_inset
+
+Hz and stiffness 
+\begin_inset Formula $\mathit{k_{1}=\mathrm{4.8}\:\mu}$
+\end_inset
+
+N/m.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "hist"
+
+\end_inset
+
+ (a) and (b) shows the histogram of position coordinate data that we acquire
+ for the Brownian motion of B1 and B2, respectively.
+ As is clear, the data are normally distributed in both traps and fit very
+ well to Gaussians (shown in bold lines).
+ To calibrate the traps and determine the trap stiffnesses, we measure the
+ power spectral density (PSD) of the Brownian motion of each particle in
+ the absence of the other.
+ The results are shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "psd"
+
+\end_inset
+
+(a) and (b).
+ Each PSD is obtained by data blocking 100 points in the manner described
+ in Ref.
+ 
+\backslash
+cite{flyvbjerg}.
+ The Lorentzian fits to the data are good, and we obtain corner frequencies
+ 
+\begin_inset Formula $\mathit{f_{c1}}=$
+\end_inset
+
+461 Hz and 
+\begin_inset Formula $\mathit{f_{c2}}=$
+\end_inset
+
+32.2 Hz for particles B1 and B2, which yield stiffnesses of 
+\begin_inset Formula $\mathit{k_{1}=}$
+\end_inset
+
+69.2 Hz and 
+\begin_inset Formula $\mathit{k_{2}}$
+\end_inset
+
+= 4.8 Hz, respectively.
+ For the two particle correlation experiments, as a consistency check, we
+ determine the position cross-correlation function in time domain for B1
+ and B2 as shown in Fig.
+ The data fits well to Eq.xx in Sec 1, with the constant parameters appropriately
+ calculated for our case.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../../../2016/twobeadhydro/fig4si.pdf
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Position cross-correlation in time domain.
+ The filled red squares are experimentally measured points, while the solid
+ line is the theoretically calculated cross-correlation.
 \end_layout
 
 \end_inset
