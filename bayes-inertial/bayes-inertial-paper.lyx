@@ -813,5 +813,63 @@ Here
 .
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figure_1.png
+	scale 22
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Positions (blue) and velocities (green) of harmonically trapped massive
+ particle.
+ The parameters used for simulation: 
+\begin_inset Formula $m=1$
+\end_inset
+
+ng, 
+\begin_inset Formula $k=225$
+\end_inset
+
+mg/
+\begin_inset Formula $s^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $T=275K$
+\end_inset
+
+, sampling frequency = 65,536 Hz, 
+\begin_inset Formula $\left(x\left(0\right),v\left(0\right)\right)=\left(0,0\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\gamma=\nicefrac{\sqrt{4mk}}{10}$
+\end_inset
+
+.
+ On the right, histograms show the distribution of the position and velocity
+ data with Gaussians overlaid.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
