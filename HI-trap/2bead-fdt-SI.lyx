@@ -744,7 +744,7 @@ instantaneous
 \color none
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{\gamma}_{ij}(\boldsymbol{\rho}_{ij})\cdot\dot{\boldsymbol{{\bf u}}}_{j}+k_{i}\boldsymbol{u}_{i}-k_{i}\boldsymbol{u}_{i}^{0}(t)=\boldsymbol{\xi}_{i}
+\boldsymbol{\gamma}_{ij}(\boldsymbol{\rho}_{ij})\cdot\dot{\boldsymbol{u}}_{j}+k_{i}\boldsymbol{u}_{i}-k_{i}\boldsymbol{u}_{i}^{0}(t)=\boldsymbol{\xi}_{i}
 \end{equation}
 
 \end_inset
@@ -761,9 +761,9 @@ instantaneous
 \uwave default
 \noun default
 \color inherit
-We note that this linearized equation remains valid even if the potential
- are anharmonic, provide the stiffnesses are interpreted as curvatures of
- the potentials at the stationary trap centers 
+This linearized equation remains valid when the potential are anharmonic
+ provided the stiffnesses are interpreted as curvatures of the potential
+ at the stationary trap centers 
 \begin_inset Formula $\boldsymbol{r}_{i}^{0}$
 \end_inset
 
