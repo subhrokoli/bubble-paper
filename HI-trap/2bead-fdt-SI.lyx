@@ -202,6 +202,389 @@ today
 Supplementary information
 \end_layout
 
+\begin_layout Standard
+ 
+\end_layout
+
+\begin_layout Section
+Experiment
+\end_layout
+
+\begin_layout Standard
+We set up a dual-beam optical tweezers (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Setup"
+
+\end_inset
+
+) by focusing two orthogonally polarized beams of wavelength 
+\begin_inset Formula $\lambda=1064$
+\end_inset
+
+ nm generated independently from two diode lasers using a high NA immersion-oil
+ microscope objective (Zeiss PlanApo,
+\begin_inset Formula $100\times1.4$
+\end_inset
+
+).
+ An AOM, located conjugate to the back-focal plane of the objective using
+ the telescopic lens pair L1-L2 (see Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Setup"
+
+\end_inset
+
+), is used for modulating one of the traps.
+ A long optical path after the AOM ensures that a minimal beam deflection
+ is enough to modulate one of the trapped beams, so that the intensity in
+ the first order remains constant to around 2%.
+ The modulated and unmodulated beams are independently steered using mirror
+ pairs M1, M2 and M3, M4, respectively, and coupled into a polarizing beam
+ splitter (PBS1).
+ For detection, we use a separate laser of wavelength 
+\begin_inset Formula $\lambda=671$
+\end_inset
+
+ nm, that is again divided into two beams of orthogonal polarization by
+ PBS2 and coupled into PBS3.
+ We then use a dichroic (DC1) to overlap the two pairs of trapping and detection
+ beams into the optical tweezers microscope (Zeiss Axiovert.A1).
+ The two trapped beads are imaged and their displacements measured by back-focal
+- plane-interferometry, while the white light for imaging and the detection
+ laser beams are separated by dichroics DC2 and DC3, respectively.
+ A very low volume fraction sample (
+\begin_inset Formula $\phi\approx0.01$
+\end_inset
+
+) is prepared with 3 
+\begin_inset Formula $\mu$
+\end_inset
+
+m diameter polystyrene latex beads in 1 M NaCl-water solution for avoiding
+ surface charges.
+ A single droplet of about 20 
+\begin_inset Formula $\mu$
+\end_inset
+
+l volume of the sample is introduced on a standard 10 mm square cover slip
+ so that the droplet radius is around 200 
+\begin_inset Formula $\mu$
+\end_inset
+
+m.
+ We trap two spherical polystyrene beads (Sigma LB-30) of mean size 3 
+\begin_inset Formula $\mu$
+\end_inset
+
+m each, in two calibrated optical traps which are separated by a distance
+ 
+\begin_inset Formula $4\pm0.1\:\mu$
+\end_inset
+
+m, so that the surface-surface distance of the trapped beads is 
+\begin_inset Formula $1\pm0.2\:\mu$
+\end_inset
+
+m, and the distance from the cover slip surface is 30 
+\begin_inset Formula $\mu$
+\end_inset
+
+m.
+ From the literature 
+\backslash
+cite{
+\series bold
+PRL 107, 248101 (2011)
+\series default
+}, this distance is still large enough to avoid optical cross talk and effects
+ due to surface charges.
+ In order to ensure that the trapping beams do not influence each other,
+ we measure the Brownian motion of one when the other is switched on (in
+ the absence of a particle), and check that there are no changes in the
+ Brownian motion.
+ One of the traps is sinusoidally modulated and the phase and amplitude
+ response of both the driving and driven particles with reference to the
+ sinusoidal drive are measured by lock-in detection (Stanford Research,
+ SR830).
+ To get large signal to noise, we use balanced detection using photodiode
+ pairs PA1, PB1 and PA2, PB2, for the driving and driven particles, respectively.
+ The two beams for balanced detection are prepared by edge mirrors E1, E3
+ (E2, E4) for the driving (driven) particle, respectively.
+ Polarizers P1 (P2) are aligned in such a way so as select the desired polarizat
+ion component of the detection beams that are prepared, as mentioned above,
+ in orthogonal polarization states for the driving (driven) particle.
+ The voltage-amplitude calibration of our detection system reveals that
+ we can resolve motion of around 12 nm with an SNR of 2.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename fig1si.pdf
+	width 45text%
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A detailed schematic of the setup is shown.
+ Key:
+\begin_inset Formula $\frac{\lambda}{2}$
+\end_inset
+
+: half-wave plate, L: lens, M: mirror, AOM: accousto optical modulator,
+ PBS: polarising beam splitter, DC: dicroic mirror respectively, E: edge
+ mirror, P: polariser, PA, PB: photodiodes.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "Setup"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename fig2si.pdf
+	width 45text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Position histograms of (a) B1 (driving particle) and (b) B2 (driven particle).
+ The solid black lines are corresponding Gaussian fits which show that the
+ potentials are harmonic in nature.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "hist"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename fig3si.pdf
+	scale 40
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "psd"
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Calibration of traps for B1 and B2.
+ Experimentally measured data points are shown in filled gray circles, whereas
+ the Lorentzian fit is denoted by the solid black line.
+ (a) PSD for B1 which has a corner frequency 
+\begin_inset Formula $\mathit{f_{c1}=\mathrm{461}}$
+\end_inset
+
+Hz and stiffness 
+\begin_inset Formula $\mathit{k_{1}=\mathrm{69.6}\:\mu}$
+\end_inset
+
+N/m.
+ (b) PSD for B2 which has a corner frequency 
+\begin_inset Formula $\mathit{f_{c1}=\mathrm{32.2}}$
+\end_inset
+
+Hz and stiffness 
+\begin_inset Formula $\mathit{k_{1}=\mathrm{4.8}\:\mu}$
+\end_inset
+
+N/m.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "hist"
+
+\end_inset
+
+ (a) and (b) shows the histogram of position coordinate data that we acquire
+ for the Brownian motion of B1 and B2, respectively.
+ As is clear, the data are normally distributed in both traps and fit very
+ well to Gaussians (shown in bold lines).
+ To calibrate the traps and determine the trap stiffnesses, we measure the
+ power spectral density (PSD) of the Brownian motion of each particle in
+ the absence of the other.
+ The results are shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "psd"
+
+\end_inset
+
+(a) and (b).
+ Each PSD is obtained by data blocking 100 points in the manner described
+ in Ref.
+ 
+\backslash
+cite{flyvbjerg}.
+ The Lorentzian fits to the data are good, and we obtain corner frequencies
+ 
+\begin_inset Formula $\mathit{f_{c1}}=$
+\end_inset
+
+461 Hz and 
+\begin_inset Formula $\mathit{f_{c2}}=$
+\end_inset
+
+32.2 Hz for particles B1 and B2, which yield stiffnesses of 
+\begin_inset Formula $\mathit{k_{1}=}$
+\end_inset
+
+69.2 Hz and 
+\begin_inset Formula $\mathit{k_{2}}$
+\end_inset
+
+= 4.8 Hz, respectively.
+ For the two particle correlation experiments, as a consistency check, we
+ determine the position cross-correlation function in time domain for B1
+ and B2 as shown in Fig.
+ The data fits well to Eq.xx in Sec 1, with the constant parameters appropriately
+ calculated for our case.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename fig4si.pdf
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Position cross-correlation in time domain.
+ The filled red squares are experimentally measured points, while the solid
+ line is the theoretically calculated cross-correlation.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Theory
 \end_layout
@@ -385,6 +768,8 @@ We note that this linearized equation remains valid even if the potential
 \end_inset
 
 .
+ Note that these are 6 coupled stochastic ordinary differential equations.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -397,7 +782,7 @@ iii
 decoupling through the use of symmetries
 \emph default
 : in this step, the translation symmetry of the friction tensors under translati
-on, assuming all boundaries are remote, is used to reduce them to the form
+on, assuming all boundaries are remote, is used to express them as
 \end_layout
 
 \begin_layout Standard
@@ -463,7 +848,7 @@ Defining the force due to the driving of the trap as
 \end_inset
 
 , averaging the equations over the noise, and using the two previous equations,
- we obtain decoupled equations for motion for each component of motion.
+ we obtain 3 decoupled pairs of equations for each component of motion.
  For motion along the trap, we obtain a pair of coupled ordinary differential
  equations
 \begin_inset Formula 
@@ -498,7 +883,7 @@ response function in the spectral basis
 
 \end_inset
 
-is most easily accomplished by the spectral decomposition of the friction
+is most easily accomplished through the spectral decomposition of the friction
  tensor.
  Assuming non-degenerate eigenvalues 
 \begin_inset Formula $\lambda_{\alpha}$
@@ -544,385 +929,6 @@ which gives the final expression for the imaginary part of the response
 \begin{equation}
 \mathrm{Im}(\chi_{ij}^{||})=....
 \end{equation}
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Section
-Experiment
-\end_layout
-
-\begin_layout Standard
-We set up a dual-beam optical tweezers (Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "Setup"
-
-\end_inset
-
-) by focusing two orthogonally polarized beams of wavelength 
-\begin_inset Formula $\lambda=1064$
-\end_inset
-
- nm generated independently from two diode lasers using a high NA immersion-oil
- microscope objective (Zeiss PlanApo,
-\begin_inset Formula $100\times1.4$
-\end_inset
-
-).
- An AOM, located conjugate to the back-focal plane of the objective using
- the telescopic lens pair L1-L2 (see Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "Setup"
-
-\end_inset
-
-), is used for modulating one of the traps.
- A long optical path after the AOM ensures that a minimal beam deflection
- is enough to modulate one of the trapped beams, so that the intensity in
- the first order remains constant to around 2%.
- The modulated and unmodulated beams are independently steered using mirror
- pairs M1, M2 and M3, M4, respectively, and coupled into a polarizing beam
- splitter (PBS1).
- For detection, we use a separate laser of wavelength 
-\begin_inset Formula $\lambda=671$
-\end_inset
-
- nm, that is again divided into two beams of orthogonal polarization by
- PBS2 and coupled into PBS3.
- We then use a dichroic (DC1) to overlap the two pairs of trapping and detection
- beams into the optical tweezers microscope (Zeiss Axiovert.A1).
- The two trapped beads are imaged and their displacements measured by back-focal
-- plane-interferometry, while the white light for imaging and the detection
- laser beams are separated by dichroics DC2 and DC3, respectively.
- A very low volume fraction sample (
-\begin_inset Formula $\phi\approx0.01$
-\end_inset
-
-) is prepared with 3 
-\begin_inset Formula $\mu$
-\end_inset
-
-m diameter polystyrene latex beads in 1 M NaCl-water solution for avoiding
- surface charges.
- A single droplet of about 20 
-\begin_inset Formula $\mu$
-\end_inset
-
-l volume of the sample is introduced on a standard 10 mm square cover slip
- so that the droplet radius is around 200 
-\begin_inset Formula $\mu$
-\end_inset
-
-m.
- We trap two spherical polystyrene beads (Sigma LB-30) of mean size 3 
-\begin_inset Formula $\mu$
-\end_inset
-
-m each, in two calibrated optical traps which are separated by a distance
- 
-\begin_inset Formula $4\pm0.1\:\mu$
-\end_inset
-
-m, so that the surface-surface distance of the trapped beads is 
-\begin_inset Formula $1\pm0.2\:\mu$
-\end_inset
-
-m, and the distance from the cover slip surface is 30 
-\begin_inset Formula $\mu$
-\end_inset
-
-m.
- From the literature 
-\backslash
-cite{
-\series bold
-PRL 107, 248101 (2011)
-\series default
-}, this distance is still large enough to avoid optical cross talk and effects
- due to surface charges.
- In order to ensure that the trapping beams do not influence each other,
- we measure the Brownian motion of one when the other is switched on (in
- the absence of a particle), and check that there are no changes in the
- Brownian motion.
- One of the traps is sinusoidally modulated and the phase and amplitude
- response of both the driving and driven particles with reference to the
- sinusoidal drive are measured by lock-in detection (Stanford Research,
- SR830).
- To get large signal to noise, we use balanced detection using photodiode
- pairs PA1, PB1 and PA2, PB2, for the driving and driven particles, respectively.
- The two beams for balanced detection are prepared by edge mirrors E1, E3
- (E2, E4) for the driving (driven) particle, respectively.
- Polarizers P1 (P2) are aligned in such a way so as select the desired polarizat
-ion component of the detection beams that are prepared, as mentioned above,
- in orthogonal polarization states for the driving (driven) particle.
- The voltage-amplitude calibration of our detection system reveals that
- we can resolve motion of around 12 nm with an SNR of 2.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Graphics
-	filename ../../../2016/twobeadhydro/fig1si.pdf
-	width 45text%
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-A detailed schematic of the setup is shown.
- Key:
-\begin_inset Formula $\frac{\lambda}{2}$
-\end_inset
-
-: half-wave plate, L: lens, M: mirror, AOM: accousto optical modulator,
- PBS: polarising beam splitter, DC: dicroic mirror respectively, E: edge
- mirror, P: polariser, PA, PB: photodiodes.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "Setup"
-
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Graphics
-	filename ../../../2016/twobeadhydro/fig2si.pdf
-	width 45text%
-
-\end_inset
-
- 
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Position histograms of (a) B1 (driving particle) and (b) B2 (driven particle).
- The solid black lines are corresponding Gaussian fits which show that the
- potentials are harmonic in nature.
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "hist"
-
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../../../2016/twobeadhydro/fig3si.pdf
-	scale 40
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "psd"
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Calibration of traps for B1 and B2.
- Experimentally measured data points are shown in filled gray circles, whereas
- the Lorentzian fit is denoted by the solid black line.
- (a) PSD for B1 which has a corner frequency 
-\begin_inset Formula $\mathit{f_{c1}=\mathrm{461}}$
-\end_inset
-
-Hz and stiffness 
-\begin_inset Formula $\mathit{k_{1}=\mathrm{69.6}\:\mu}$
-\end_inset
-
-N/m.
- (b) PSD for B2 which has a corner frequency 
-\begin_inset Formula $\mathit{f_{c1}=\mathrm{32.2}}$
-\end_inset
-
-Hz and stiffness 
-\begin_inset Formula $\mathit{k_{1}=\mathrm{4.8}\:\mu}$
-\end_inset
-
-N/m.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "hist"
-
-\end_inset
-
- (a) and (b) shows the histogram of position coordinate data that we acquire
- for the Brownian motion of B1 and B2, respectively.
- As is clear, the data are normally distributed in both traps and fit very
- well to Gaussians (shown in bold lines).
- To calibrate the traps and determine the trap stiffnesses, we measure the
- power spectral density (PSD) of the Brownian motion of each particle in
- the absence of the other.
- The results are shown in Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "psd"
-
-\end_inset
-
-(a) and (b).
- Each PSD is obtained by data blocking 100 points in the manner described
- in Ref.
- 
-\backslash
-cite{flyvbjerg}.
- The Lorentzian fits to the data are good, and we obtain corner frequencies
- 
-\begin_inset Formula $\mathit{f_{c1}}=$
-\end_inset
-
-461 Hz and 
-\begin_inset Formula $\mathit{f_{c2}}=$
-\end_inset
-
-32.2 Hz for particles B1 and B2, which yield stiffnesses of 
-\begin_inset Formula $\mathit{k_{1}=}$
-\end_inset
-
-69.2 Hz and 
-\begin_inset Formula $\mathit{k_{2}}$
-\end_inset
-
-= 4.8 Hz, respectively.
- For the two particle correlation experiments, as a consistency check, we
- determine the position cross-correlation function in time domain for B1
- and B2 as shown in Fig.
- The data fits well to Eq.xx in Sec 1, with the constant parameters appropriately
- calculated for our case.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename ../../../2016/twobeadhydro/fig4si.pdf
-	scale 30
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Position cross-correlation in time domain.
- The filled red squares are experimentally measured points, while the solid
- line is the theoretically calculated cross-correlation.
-\end_layout
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
