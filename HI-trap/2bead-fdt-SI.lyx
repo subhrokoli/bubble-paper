@@ -415,7 +415,7 @@ on, assuming all boundaries are remote, is used to reduce them to the form
 \color none
 \begin_inset Formula 
 \[
-\boldsymbol{\gamma}_{ij}=\gamma_{ij}^{\parallel}\hat{\mathbf{\boldsymbol{\rho}}}\hat{\mathbf{\boldsymbol{\rho}}}+\gamma_{ij}^{\perp}(\boldsymbol{I}-\hat{\mathbf{\boldsymbol{\rho}}}\hat{\mathbf{\boldsymbol{\rho}}})
+\boldsymbol{\gamma}_{ij}=\gamma_{ij}^{\parallel}(\rho)\hat{\mathbf{\boldsymbol{\rho}}}\hat{\mathbf{\boldsymbol{\rho}}}+\gamma_{ij}^{\perp}(\rho)(\boldsymbol{I}-\hat{\mathbf{\boldsymbol{\rho}}}\hat{\mathbf{\boldsymbol{\rho}}})
 \]
 
 \end_inset
@@ -433,7 +433,7 @@ on, assuming all boundaries are remote, is used to reduce them to the form
 \noun default
 \color inherit
 where 
-\begin_inset Formula $\gamma_{ij}^{||}$
+\begin_inset Formula $\gamma_{ij}^{||}(\rho)$
 \end_inset
 
  is a friction coefficient for relative motion along 
@@ -441,7 +441,7 @@ where
 \end_inset
 
 , the line joining the trap centers, and 
-\begin_inset Formula $\gamma_{ij}^{\perp}$
+\begin_inset Formula $\gamma_{ij}^{\perp}(\rho)$
 \end_inset
 
  is the corresponding quantity for motion perpendicular to it.
@@ -468,12 +468,13 @@ Defining the force due to the driving of the trap as
  equations
 \begin_inset Formula 
 \begin{equation}
-\gamma_{ij}^{||}\dot{u}_{j}^{||}+k_{i}u_{i}^{||}=f_{i}^{||}(t).
+\gamma_{ij}^{||}\dot{u}_{j}^{||}+k_{i}u_{i}^{||}=f_{i}^{||}(t),
 \end{equation}
 
 \end_inset
 
-
+where the dependence of the friction coefficients on distance has been suppresse
+d.
 \end_layout
 
 \begin_layout Standard
@@ -491,20 +492,24 @@ response function in the spectral basis
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\chi_{ij}^{||}=(-i\omega\gamma_{ij}^{||}+k_{i}\delta_{ij})^{-1}
-\]
+\begin{equation}
+\chi_{ij}^{||}(\omega)=(-i\omega\gamma_{ij}^{||}+k_{i}\delta_{ij})^{-1}
+\end{equation}
 
 \end_inset
 
 is most easily accomplished by the spectral decomposition of the friction
  tensor.
- Assuming a complete pair of eigenvectors 
+ Assuming non-degenerate eigenvalues 
+\begin_inset Formula $\lambda_{\alpha}$
+\end_inset
+
+ and a complete pair of eigenvectors 
 \begin_inset Formula $e_{i}^{\alpha}$
 \end_inset
 
- and non-degenerate eigenvalues 
-\begin_inset Formula $\lambda_{\alpha}$
+ (
+\begin_inset Formula $\alpha=1,2)$
 \end_inset
 
  the response function is given by
@@ -512,9 +517,9 @@ is most easily accomplished by the spectral decomposition of the friction
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
+\begin{equation}
 \chi_{ij}^{||}(\omega)=\sum_{\alpha}(-i\omega\lambda_{\alpha}+k_{\alpha})^{-1}e_{i}^{\alpha}e_{j}^{\alpha}
-\]
+\end{equation}
 
 \end_inset
 
@@ -536,9 +541,9 @@ e_{i}^{\alpha} & =...
 which gives the final expression for the imaginary part of the response
  to be 
 \begin_inset Formula 
-\[
+\begin{equation}
 \mathrm{Im}(\chi_{ij}^{||})=....
-\]
+\end{equation}
 
 \end_inset
 
