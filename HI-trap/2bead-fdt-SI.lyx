@@ -781,8 +781,8 @@ iii
 \emph on
 decoupling through the use of symmetries
 \emph default
-: in this step, the translation symmetry of the friction tensors under translati
-on, assuming all boundaries are remote, is used to express them as
+: in this step, the symmetry of the friction tensors under translation,
+ assuming all boundaries are remote, is used to express them as
 \end_layout
 
 \begin_layout Standard
@@ -860,6 +860,9 @@ Defining the force due to the driving of the trap as
 
 where the dependence of the friction coefficients on distance has been suppresse
 d.
+ The decoupling can be done before the linearization to give the same result;
+ the two operations commute.
+ 
 \end_layout
 
 \begin_layout Standard
