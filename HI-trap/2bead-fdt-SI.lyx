@@ -296,17 +296,17 @@ where
 
 \begin_layout Standard
 Assuming momentum to be rapidly relaxing on the time scale of the trap motion,
- we neglect inertia and average over the noise in Eq (
+ and averaging over the noise in Eq (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq1"
 
 \end_inset
 
-), to obtain
+), we obtain
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{\gamma}_{ij}\cdot\dot{\boldsymbol{{\bf r}}}_{j}+k_{i}(\boldsymbol{r}_{i}-\boldsymbol{r}_{i}^{0})=k_{i}\boldsymbol{u}_{i}^{0}(t)\equiv\boldsymbol{f}_{i}(t)\label{eq2-1}
+\boldsymbol{\gamma}_{ij}\cdot\dot{\boldsymbol{{\bf r}}}_{j}+k_{i}(\boldsymbol{r}_{i}-\boldsymbol{r}_{i}^{0})=k_{i}\boldsymbol{u}_{i}^{0}(t)\equiv\boldsymbol{f}_{i}(t).\label{eq2-1}
 \end{equation}
 
 \end_inset
@@ -315,24 +315,24 @@ We, now, consider a small displacement
 \begin_inset Formula $\mathbf{u}_{i}$
 \end_inset
 
- about the centre of the trap such that The expansion of the friction tensor
- about the separation 
-\begin_inset Formula $\mathbf{R}_{i}^{0}-\mathbf{R}_{j}^{0}$
+, such that 
+\begin_inset Formula $\boldsymbol{r}_{i}=\boldsymbol{r}_{i}^{0}+\boldsymbol{u}_{i}.$
 \end_inset
 
- is thenConsidering terms linear in the displacement, Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq2-1"
-
-\end_inset
-
-) becomes
+ The above equation is then
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{\gamma}_{ij}(\boldsymbol{r}_{ij}^{0})\cdot\dot{{\bf u}}_{j}+k_{i}\mathbf{u}_{i}=\boldsymbol{f}_{i}(t)\label{eq2-1-1}
+\boldsymbol{\gamma}_{ij}(\boldsymbol{r}_{ij}^{0})\cdot\dot{\boldsymbol{u}}_{i}+k_{i}\boldsymbol{u}_{i}=\boldsymbol{f}_{i}(t).\label{eq:linerarized-force-balance}
 \end{equation}
+
+\end_inset
+
+Here using
+\begin_inset Formula 
+\begin{eqnarray}
+\boldsymbol{\gamma}_{ij} & = & \gamma_{ij}^{\parallel}\hat{\mathbf{\boldsymbol{\rho}}}\hat{\mathbf{\boldsymbol{\rho}}}+\gamma_{ij}^{\perp}(\boldsymbol{I}-\hat{\mathbf{\boldsymbol{\rho}}}\hat{\mathbf{\boldsymbol{\rho}}}),\\
+\boldsymbol{u}_{i} & = & u_{i}^{\parallel}\hat{\mathbf{r}}+\boldsymbol{u}_{i}^{\perp}\cdot(\boldsymbol{I}-\hat{\mathbf{\boldsymbol{\rho}}}\hat{\mathbf{\boldsymbol{\rho}}}).
+\end{eqnarray}
 
 \end_inset
 
@@ -352,47 +352,43 @@ reference "eq:gamma-first-reflection"
 
 \end_inset
 
-) using 
+) and 
+\begin_inset Formula $\hat{\mathbf{\boldsymbol{\rho}}}$
+\end_inset
+
+ is a unit vector in the direction of separation between the traps.
+ Using the above definition, Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:linerarized-force-balance"
+
+\end_inset
+
+) becomes 
 \begin_inset Formula 
-\begin{eqnarray}
-\boldsymbol{\gamma}_{ij} & = & \gamma_{ij}^{\parallel}\hat{\mathbf{r}}\hat{\mathbf{r}}+\gamma_{ij}^{\perp}(\boldsymbol{I}-\hat{\mathbf{r}}\hat{\mathbf{r}})\\
-\boldsymbol{\mathbf{u}}_{i} & = & u_{i}^{\parallel}\hat{\mathbf{r}}+\boldsymbol{u}_{i}^{\perp}\cdot(\boldsymbol{I}-\hat{\mathbf{r}}\hat{\mathbf{r}}).
-\end{eqnarray}
+\[
+\boldsymbol{\gamma}_{ij}^{\parallel}\dot{u}_{j}^{\parallel}\hat{\mathbf{\boldsymbol{\rho}}}+\boldsymbol{\gamma}_{ij}^{\perp}(1-\hat{\mathbf{\boldsymbol{\rho}}}\hat{\mathbf{\boldsymbol{\rho}}})\cdot\mathbf{u}_{i}^{\perp}+k_{i}(\mathbf{u}_{i}^{\parallel}+\mathbf{u}_{i}^{\perp})=\boldsymbol{f}_{i}(t).
+\]
 
 \end_inset
 
-Here 
-\begin_inset Formula $\hat{\mathbf{r}}=\mathbf{R}_{i}^{0}-\mathbf{R}_{j}^{0}/|\mathbf{R}_{i}^{0}-\mathbf{R}_{j}^{0}|$
+We now concern ourself with the direction parallel to 
+\begin_inset Formula $\boldsymbol{\rho}^{\parallel}$
 \end_inset
 
-.
- The above equation then becomes
+, such that
 \begin_inset Formula 
 \begin{equation}
-\gamma_{ij}^{||}\cdot\dot{u}_{j}^{||}+k_{i}u_{i}^{||}=f_{i}^{||}(t)
+\gamma_{ij}^{||}\dot{u}_{j}^{||}+k_{i}u_{i}^{||}=f_{i}^{||}(t).
 \end{equation}
 
 \end_inset
 
-
-\begin_inset Formula 
-\begin{equation}
-\gamma_{ij}^{\perp}\cdot\dot{u}_{j}^{\perp}+k_{i}u_{i}^{\perp}=f_{i}^{\perp}(t)
-\end{equation}
-
-\end_inset
-
-The perpendicular modes can be further decoupled in two equivalent directions.
- Thus we have thee decoupled 
-\begin_inset Formula $2\times2$
-\end_inset
-
- systems.
- We now just find the response to the parallel modes.
- To proceed, we Fourier tranform the above in time to obtain
+To proceed, we Fourier tranform the above in time to obtain
 \begin_inset Formula 
 \begin{align}
-\left(-i\omega\gamma_{ij}^{\parallel}+k_{i}\delta_{ij}\right)u_{j}^{\parallel} & =f_{i}^{\parallel}(\omega)
+\left(-i\omega\gamma_{ij}^{\parallel}+k_{i}\delta_{ij}\right)u_{j}^{\parallel} & =f_{i}^{\parallel}(\omega).
 \end{align}
 
 \end_inset
@@ -422,22 +418,11 @@ u_{i}^{\parallel}(\omega)={\bf \chi}_{ij}^{\parallel}(\omega)f_{j}^{\parallel}(\
 
 \end_inset
 
-Here 
-\begin_inset Formula $\boldsymbol{\chi}$
+where 
+\begin_inset Formula $\boldsymbol{\chi}^{\parallel}$
 \end_inset
 
  is the response function 
-\begin_inset Formula 
-\begin{align*}
-\boldsymbol{{\bf \chi}}^{\parallel}(\omega)=\left(\begin{array}{ccc}
--i\omega\boldsymbol{\gamma}_{11}^{\parallel}+k_{1} &  & -i\omega\boldsymbol{\gamma}_{12}^{\parallel}\\
--i\omega\boldsymbol{\gamma}_{21}^{\parallel} &  & -i\omega\boldsymbol{\gamma}_{22}^{\parallel}+k_{2}
-\end{array}\right)^{-1} & ,
-\end{align*}
-
-\end_inset
-
-This can inverted analytically to obtain
 \begin_inset Formula 
 \begin{align*}
 \boldsymbol{{\bf \chi}}^{\parallel}(\omega) & =\frac{1}{\chi_{D}^{\parallel}}\left(\begin{array}{ccc}
@@ -449,14 +434,14 @@ i\omega\boldsymbol{\gamma}_{12}^{\parallel} &  & -i\omega\boldsymbol{\gamma}_{11
 \end_inset
 
 Here 
-\begin_inset Formula $\chi_{D}^{\parallel}=\alpha^{||}+i\beta^{\parallel}$
+\begin_inset Formula $\chi_{D}^{\parallel}=\chi_{a}+i\chi_{b}$
 \end_inset
 
  , with
 \begin_inset Formula 
 \begin{align*}
-\alpha^{\parallel} & =k_{1}k_{2}-\omega^{2}(\boldsymbol{\gamma}_{11}^{\parallel}\boldsymbol{\gamma}_{22}^{\parallel}-\boldsymbol{\gamma}_{12}^{\parallel}\boldsymbol{\gamma}_{21}^{\parallel}),\\
-\,\beta^{\parallel} & =-\omega(\gamma_{11}^{\parallel}k_{2}+\gamma_{22}^{\parallel}k_{1}),
+\chi_{a} & =k_{1}k_{2}-\omega^{2}(\boldsymbol{\gamma}_{11}^{\parallel}\boldsymbol{\gamma}_{22}^{\parallel}-\boldsymbol{\gamma}_{12}^{\parallel}\boldsymbol{\gamma}_{21}^{\parallel}),\\
+\,\chi_{b} & =-\omega(\gamma_{11}^{\parallel}k_{2}+\gamma_{22}^{\parallel}k_{1}).
 \end{align*}
 
 \end_inset
@@ -471,31 +456,12 @@ This gives the resonance frequency
 
 The real and the imaginary parts of the response function can be then obtained
  from above.
- The real part of the response function, 
-\begin_inset Formula $\boldsymbol{{\bf \chi}}^{'\parallel}(\omega)$
-\end_inset
-
-, is then
+ The real part of the response function is 
 \begin_inset Formula 
 \begin{alignat*}{1}
-\boldsymbol{{\bf \chi}}^{'\parallel}(\omega) & =\frac{1}{\Big|\chi_{D}^{\parallel}\Big|^{2}}\left(\begin{array}{cc}
--\beta^{\parallel}\omega\boldsymbol{\gamma}_{22}^{\parallel}+\alpha^{\parallel}k_{2} & \beta^{\parallel}\omega\boldsymbol{\gamma}_{21}^{\parallel}\beta\\
-\beta^{\parallel}\omega\boldsymbol{\gamma}_{12}^{\parallel} & -\beta^{\parallel}\omega\boldsymbol{\gamma}_{11}^{\parallel}+\alpha^{\parallel}k_{1}
-\end{array}\right),
-\end{alignat*}
-
-\end_inset
-
-while the imaginary part 
-\begin_inset Formula $\boldsymbol{{\bf \chi}}^{''\parallel}(\omega)$
-\end_inset
-
- is
-\begin_inset Formula 
-\begin{alignat*}{1}
-\boldsymbol{{\bf \chi}}^{''\parallel}(\omega) & =\frac{1}{\Big|\chi_{D}^{\parallel}\Big|^{2}}\left(\begin{array}{cc}
--\alpha^{\parallel}\omega\boldsymbol{\gamma}_{22}^{\parallel}-\beta^{\parallel}k_{2} & \alpha^{\parallel}\omega\boldsymbol{\gamma}_{21}^{\parallel}\\
-\alpha^{\parallel}\omega\boldsymbol{\gamma}_{12}^{\parallel} & -\alpha^{\parallel}\omega\boldsymbol{\gamma}_{11}^{\parallel}-\beta^{\parallel}k_{1}
+\text{Im}\Big[\boldsymbol{{\bf \chi}}^{\parallel}\Big] & =\frac{1}{\Big|\chi_{D}^{\parallel}\Big|^{2}}\left(\begin{array}{cc}
+-\chi_{a}\omega\boldsymbol{\gamma}_{22}^{\parallel}-\chi_{b}k_{2} & \chi_{a}\omega\boldsymbol{\gamma}_{21}^{\parallel}\\
+\chi_{a}\omega\boldsymbol{\gamma}_{12}^{\parallel} & -\alpha^{\parallel}\omega\boldsymbol{\gamma}_{11}^{\parallel}-\chi_{b}k_{1}
 \end{array}\right).
 \end{alignat*}
 
