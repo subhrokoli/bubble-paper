@@ -137,6 +137,15 @@ The Institute of Mathematical Sciences-HBNI, CIT Campus, Tarmani, Chennai
 \end_layout
 
 \begin_layout Author
+Rajesh Singh
+\end_layout
+
+\begin_layout Affiliation
+The Institute of Mathematical Sciences-HBNI, CIT Campus, Tarmani, Chennai
+ 600113, India
+\end_layout
+
+\begin_layout Author
 Basudev Roy
 \end_layout
 
@@ -146,7 +155,8 @@ Department of Physics, Indian Institute of Technology Madras, Chennai 600036,
 \end_layout
 
 \begin_layout Author
-Ronojoy Adhikari
+R.
+ Adhikari
 \end_layout
 
 \begin_layout Author Email
@@ -197,8 +207,8 @@ Theory
 \end_layout
 
 \begin_layout Standard
-The Langevin equations describing the stochastic trajectories of the colloids
- are
+We outline below key steps in deriving the correlation and response functions
+ in the overdamped limit, starting from the underdamped Langevin equations
 \begin_inset Formula 
 \begin{align}
 m_{i}\dot{\boldsymbol{v}_{i}} & +\boldsymbol{\gamma}_{ij}\cdot\boldsymbol{v}_{j}+{\bf \boldsymbol{\nabla}}_{i}U=\boldsymbol{{\bf \xi}}_{i}\label{eq1}
@@ -206,178 +216,256 @@ m_{i}\dot{\boldsymbol{v}_{i}} & +\boldsymbol{\gamma}_{ij}\cdot\boldsymbol{v}_{j}
 
 \end_inset
 
-where 
-\begin_inset Formula $i,j=1,2$
-\end_inset
-
- refer to the driving and driven colloid, 
-\begin_inset Formula $m_{i}$
-\end_inset
-
- are their masses, 
-\begin_inset Formula $\boldsymbol{v}_{i}$
-\end_inset
-
- are their velocities, 
-\begin_inset Formula $\boldsymbol{\gamma}_{ij}$
-\end_inset
-
- are the second-rank friction tensors encoding the velocity-dependent dissipativ
-e forces mediated by the fluid, 
-\begin_inset Formula $U=U_{1}+U_{2}$
-\end_inset
-
- is the total potential of the conservative forces, and 
-\begin_inset Formula $\boldsymbol{\xi}_{i}$
-\end_inset
-
-, the Langevin noises, are zero-mean Gaussian random variables whose variance
- is provided by the fluctuation-dissipation relation 
-\begin_inset Formula $\langle\boldsymbol{\xi}_{i}(t)\boldsymbol{\xi}_{j}(t^{\prime})\rangle=2k_{B}T\boldsymbol{\gamma}_{ij}\delta(t-t^{\prime})$
-\end_inset
-
-.
- The bold-face notation, with Cartesian indices suppressed, is used for
- both vectors and tensors.
-\end_layout
-
-\begin_layout Standard
-In the limit of slow viscous flow in the fluid, the friction tensors can
- be calculated from the Stokes equation using a variety of methods.
- To leading order the result is 
-\begin_inset Formula 
-\begin{equation}
-\boldsymbol{\gamma}_{ij}=\delta_{ij}\boldsymbol{I}\gamma_{i}-(1-\delta_{ij})\gamma_{i}\gamma_{j}\mathcal{F}_{i}\mathcal{F}_{j}\boldsymbol{G}(\boldsymbol{r}_{i},\boldsymbol{r}_{j})\label{eq:gamma-first-reflection}
-\end{equation}
-
-\end_inset
-
-where 
-\begin_inset Formula $\gamma_{i}=6\pi\eta a_{i}$
-\end_inset
-
- are the self-frictions, 
-\begin_inset Formula $\boldsymbol{G}$
-\end_inset
-
- is a Green's function of the Stokes equation, 
-\begin_inset Formula $\boldsymbol{r}_{i}$
-\end_inset
-
- are the centers of the colloids and 
-\begin_inset Formula $\mathcal{F}_{i}=1+\frac{a_{i}^{2}}{6}\nabla_{i}^{2}$
-\end_inset
-
- are the Faxen corrections that account for the finite radius, 
-\begin_inset Formula $a_{i}$
-\end_inset
-
-, of the colloids.
- We emphasize that this expression is not limited to the translationally
- invariant Green's function of unbounded flow, 
-\begin_inset Formula $8\pi\eta\,\boldsymbol{G}(\boldsymbol{r})=(\nabla^{2}\boldsymbol{I}-\boldsymbol{\nabla\nabla})r$
-\end_inset
-
-, but holds generally for any Green's function and is both symmetric and
- positive-definite.
- The mutual friction tensors decay inversely with distance in an unbounded
- fluid and more rapidly in the proximity of boundaries.
- The assumption of slow viscous flow is valid at frequencies 
-\begin_inset Formula $\omega\tau_{\nu}\ll1$
-\end_inset
-
- where 
-\begin_inset Formula $\tau_{\nu}=\rho L^{2}/\eta$
-\end_inset
-
- is the vorticity diffusion time scale.
+presented and explained in the main text.
  
 \end_layout
 
 \begin_layout Standard
-Assuming momentum to be rapidly relaxing on the time scale of the trap motion,
- and averaging over the noise in Eq (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq1"
-
+(
+\emph on
+i
+\emph default
+) 
+\emph on
+adiabatic elimination of momentum
+\emph default
+: in this step, the momenta 
+\begin_inset Formula $m_{i}\boldsymbol{v}_{i}$
 \end_inset
 
-), we obtain
+ are adibatically eliminated from the Langevin equations to obtain a contracted
+ description in terms of the positions alone.
+ The heuristic of setting 
+\begin_inset Formula $m_{i}\boldsymbol{v}_{i}$
+\end_inset
+
+ to zero in the Langevin equations yields the same result as the more careful
+ adiabatic elimination procedure, provided the noise is interpreted correctly
+ and the so-called 
+\begin_inset Quotes eld
+\end_inset
+
+spurious
+\begin_inset Quotes erd
+\end_inset
+
+ drift is included in the equation for the position increment.
+ This is the basis of the equation for increments given by Ermack and McCammon.
+ With these caveats the resulting over-damped Langevin equations are 
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{\gamma}_{ij}\cdot\dot{\boldsymbol{{\bf r}}}_{j}+k_{i}(\boldsymbol{r}_{i}-\boldsymbol{r}_{i}^{0})=k_{i}\boldsymbol{u}_{i}^{0}(t)\equiv\boldsymbol{f}_{i}(t).\label{eq2-1}
+\boldsymbol{\gamma}_{ij}\cdot\boldsymbol{\dot{r}}_{j}+{\bf \boldsymbol{\nabla}}_{i}U=\boldsymbol{{\bf \xi}}_{i}.
 \end{equation}
 
 \end_inset
 
-We, now, consider a small displacement 
-\begin_inset Formula $\mathbf{u}_{i}$
+
+\end_layout
+
+\begin_layout Standard
+(
+\emph on
+ii
+\emph default
+) 
+\emph on
+linearization
+\emph default
+: in the next step, the equations are linearized in the small displacements
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\boldsymbol{r}_{i}=\boldsymbol{r}_{i}^{0}+\boldsymbol{u}_{i}$
 \end_inset
 
-, such that 
-\begin_inset Formula $\boldsymbol{r}_{i}=\boldsymbol{r}_{i}^{0}+\boldsymbol{u}_{i}.$
+, where 
+\begin_inset Formula $\boldsymbol{r}_{i}^{0}+\boldsymbol{u}_{i}^{0}(t)$
 \end_inset
 
- The above equation is then
+ is the 
+\family default
+\series default
+\shape default
+\size default
+\emph on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+instantaneous
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ position of the trap center.
+ The mean distance between the trap centers is 
+\begin_inset Formula $\boldsymbol{\rho}_{ij}=\boldsymbol{r}_{i}^{0}-\boldsymbol{r}_{j}^{0}$
+\end_inset
+
+.
+ This yields a linear equation of motion for the small displacements 
+\begin_inset Formula $\boldsymbol{u}_{i}$
+\end_inset
+
+, where the friction tensors are now evaluated at the mean separation between
+ traps.
+ The resulting linearised Langevin equations are
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{\gamma}_{ij}(\boldsymbol{r}_{ij}^{0})\cdot\dot{\boldsymbol{u}}_{i}+k_{i}\boldsymbol{u}_{i}=\boldsymbol{f}_{i}(t).\label{eq:linerarized-force-balance}
+\boldsymbol{\gamma}_{ij}(\boldsymbol{\rho}_{ij})\cdot\dot{\boldsymbol{{\bf u}}}_{j}+k_{i}\boldsymbol{u}_{i}-k_{i}\boldsymbol{u}_{i}^{0}(t)=\boldsymbol{\xi}_{i}
 \end{equation}
 
 \end_inset
 
-Here using
-\begin_inset Formula 
-\begin{eqnarray}
-\boldsymbol{\gamma}_{ij} & = & \gamma_{ij}^{\parallel}\hat{\mathbf{\boldsymbol{\rho}}}\hat{\mathbf{\boldsymbol{\rho}}}+\gamma_{ij}^{\perp}(\boldsymbol{I}-\hat{\mathbf{\boldsymbol{\rho}}}\hat{\mathbf{\boldsymbol{\rho}}}),\\
-\boldsymbol{u}_{i} & = & u_{i}^{\parallel}\hat{\mathbf{r}}+\boldsymbol{u}_{i}^{\perp}\cdot(\boldsymbol{I}-\hat{\mathbf{\boldsymbol{\rho}}}\hat{\mathbf{\boldsymbol{\rho}}}).
-\end{eqnarray}
 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+We note that this linearized equation remains valid even if the potential
+ are anharmonic, provide the stiffnesses are interpreted as curvatures of
+ the potentials at the stationary trap centers 
+\begin_inset Formula $\boldsymbol{r}_{i}^{0}$
 \end_inset
 
-Here 
-\begin_inset Formula $\gamma_{ij}^{\parallel}$
-\end_inset
+.
+\end_layout
 
- and 
-\begin_inset Formula $\gamma_{ij}^{\parallel}$
-\end_inset
+\begin_layout Standard
+(
+\emph on
+iii
+\emph default
+) 
+\emph on
+decoupling through the use of symmetries
+\emph default
+: in this step, the translation symmetry of the friction tensors under translati
+on, assuming all boundaries are remote, is used to reduce them to the form
+\end_layout
 
- are scalar constructed out of Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:gamma-first-reflection"
+\begin_layout Standard
 
-\end_inset
-
-) and 
-\begin_inset Formula $\hat{\mathbf{\boldsymbol{\rho}}}$
-\end_inset
-
- is a unit vector in the direction of separation between the traps.
- Using the above definition, Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:linerarized-force-balance"
-
-\end_inset
-
-) becomes 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
 \begin_inset Formula 
 \[
-\boldsymbol{\gamma}_{ij}^{\parallel}\dot{u}_{j}^{\parallel}\hat{\mathbf{\boldsymbol{\rho}}}+\boldsymbol{\gamma}_{ij}^{\perp}(1-\hat{\mathbf{\boldsymbol{\rho}}}\hat{\mathbf{\boldsymbol{\rho}}})\cdot\mathbf{u}_{i}^{\perp}+k_{i}(\mathbf{u}_{i}^{\parallel}+\mathbf{u}_{i}^{\perp})=\boldsymbol{f}_{i}(t).
+\boldsymbol{\gamma}_{ij}=\gamma_{ij}^{\parallel}\hat{\mathbf{\boldsymbol{\rho}}}\hat{\mathbf{\boldsymbol{\rho}}}+\gamma_{ij}^{\perp}(\boldsymbol{I}-\hat{\mathbf{\boldsymbol{\rho}}}\hat{\mathbf{\boldsymbol{\rho}}})
 \]
 
 \end_inset
 
-We now concern ourself with the direction parallel to 
-\begin_inset Formula $\boldsymbol{\rho}^{\parallel}$
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+where 
+\begin_inset Formula $\gamma_{ij}^{||}$
 \end_inset
 
-, such that
+ is a friction coefficient for relative motion along 
+\begin_inset Formula $\boldsymbol{\rho}=\text{\boldsymbol{\rho}}_{ij}$
+\end_inset
+
+, the line joining the trap centers, and 
+\begin_inset Formula $\gamma_{ij}^{\perp}$
+\end_inset
+
+ is the corresponding quantity for motion perpendicular to it.
+ This motivates the decomposition of the displacement into components parallel
+ and perpendicular to 
+\begin_inset Formula $\boldsymbol{\rho},$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\boldsymbol{u}_{i}=u_{i}^{\parallel}\hat{\mathbf{\boldsymbol{\rho}}}+\boldsymbol{u}_{i}^{\perp}\cdot(\boldsymbol{I}-\hat{\mathbf{\boldsymbol{\rho}}}\hat{\mathbf{\boldsymbol{\rho}}}).
+\]
+
+\end_inset
+
+Defining the force due to the driving of the trap as 
+\begin_inset Formula $\boldsymbol{f}_{i}(t)=k_{i}\boldsymbol{u}_{i}^{0}(t)$
+\end_inset
+
+, averaging the equations over the noise, and using the two previous equations,
+ we obtain decoupled equations for motion for each component of motion.
+ For motion along the trap, we obtain a pair of coupled ordinary differential
+ equations
 \begin_inset Formula 
 \begin{equation}
 \gamma_{ij}^{||}\dot{u}_{j}^{||}+k_{i}u_{i}^{||}=f_{i}^{||}(t).
@@ -385,89 +473,76 @@ We now concern ourself with the direction parallel to
 
 \end_inset
 
-To proceed, we Fourier tranform the above in time to obtain
-\begin_inset Formula 
-\begin{align}
-\left(-i\omega\gamma_{ij}^{\parallel}+k_{i}\delta_{ij}\right)u_{j}^{\parallel} & =f_{i}^{\parallel}(\omega).
-\end{align}
 
-\end_inset
+\end_layout
 
-This can be written as, 
-\begin_inset Formula 
-\begin{align*}
-\left(\begin{array}{cc}
--i\omega\boldsymbol{\gamma}_{11}^{\parallel}+k_{1} & -i\omega\boldsymbol{\gamma}_{12}^{\parallel}\\
--i\omega\boldsymbol{\gamma}_{21}^{\parallel} & -i\omega\boldsymbol{\gamma}_{22}^{\parallel}+k_{2}
-\end{array}\right)\cdot\left(\begin{array}{c}
-u_{1}^{\parallel}\\
-u_{2}^{\parallel}
-\end{array}\right) & =\left(\begin{array}{c}
-f_{1}^{\parallel}(\omega)\\
-f_{2}^{\parallel}(\omega)
-\end{array}\right).
-\end{align*}
+\begin_layout Standard
 
-\end_inset
+\emph on
+(iv
+\emph default
+) 
+\emph on
+response function in the spectral basis
+\emph default
+: the final step of calculating the imaginary part of the response function
+ in the frequency domain 
+\end_layout
 
-The solution is then 
-\begin_inset Formula 
-\begin{align}
-u_{i}^{\parallel}(\omega)={\bf \chi}_{ij}^{\parallel}(\omega)f_{j}^{\parallel}(\omega),\label{eq5-1}
-\end{align}
-
-\end_inset
-
-where 
-\begin_inset Formula $\boldsymbol{\chi}^{\parallel}$
-\end_inset
-
- is the response function 
-\begin_inset Formula 
-\begin{align*}
-\boldsymbol{{\bf \chi}}^{\parallel}(\omega) & =\frac{1}{\chi_{D}^{\parallel}}\left(\begin{array}{ccc}
--i\omega\boldsymbol{\gamma}_{22}^{\parallel}+k_{2} &  & i\omega\boldsymbol{\gamma}_{21}^{\parallel}\\
-i\omega\boldsymbol{\gamma}_{12}^{\parallel} &  & -i\omega\boldsymbol{\gamma}_{11}^{\parallel}+k_{1}
-\end{array}\right),
-\end{align*}
-
-\end_inset
-
-Here 
-\begin_inset Formula $\chi_{D}^{\parallel}=\chi_{a}+i\chi_{b}$
-\end_inset
-
- , with
-\begin_inset Formula 
-\begin{align*}
-\chi_{a} & =k_{1}k_{2}-\omega^{2}(\boldsymbol{\gamma}_{11}^{\parallel}\boldsymbol{\gamma}_{22}^{\parallel}-\boldsymbol{\gamma}_{12}^{\parallel}\boldsymbol{\gamma}_{21}^{\parallel}),\\
-\,\chi_{b} & =-\omega(\gamma_{11}^{\parallel}k_{2}+\gamma_{22}^{\parallel}k_{1}).
-\end{align*}
-
-\end_inset
-
-This gives the resonance frequency
+\begin_layout Standard
 \begin_inset Formula 
 \[
-\omega_{{\scriptscriptstyle res}}^{2}=\frac{k_{1}k_{2}}{\gamma_{11}^{\parallel}\gamma_{22}^{\parallel}-\gamma_{12}^{\parallel}\gamma_{21}^{\parallel}}.
+\chi_{ij}^{||}=(-i\omega\gamma_{ij}^{||}+k_{i}\delta_{ij})^{-1}
 \]
 
 \end_inset
 
-The real and the imaginary parts of the response function can be then obtained
- from above.
- The real part of the response function is 
+is most easily accomplished by the spectral decomposition of the friction
+ tensor.
+ Assuming a complete pair of eigenvectors 
+\begin_inset Formula $e_{i}^{\alpha}$
+\end_inset
+
+ and non-degenerate eigenvalues 
+\begin_inset Formula $\lambda_{\alpha}$
+\end_inset
+
+ the response function is given by
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
-\begin{alignat*}{1}
-\text{Im}\Big[\boldsymbol{{\bf \chi}}^{\parallel}\Big] & =\frac{1}{\Big|\chi_{D}^{\parallel}\Big|^{2}}\left(\begin{array}{cc}
--\chi_{a}\omega\boldsymbol{\gamma}_{22}^{\parallel}-\chi_{b}k_{2} & \chi_{a}\omega\boldsymbol{\gamma}_{21}^{\parallel}\\
-\chi_{a}\omega\boldsymbol{\gamma}_{12}^{\parallel} & -\alpha^{\parallel}\omega\boldsymbol{\gamma}_{11}^{\parallel}-\chi_{b}k_{1}
-\end{array}\right).
-\end{alignat*}
+\[
+\chi_{ij}^{||}(\omega)=\sum_{\alpha}(-i\omega\lambda_{\alpha}+k_{\alpha})^{-1}e_{i}^{\alpha}e_{j}^{\alpha}
+\]
 
 \end_inset
 
+where the equality of the left and right eigenspaces of a symmetric matrix
+ has been used in obtaining the result above.
+ The eigenvalues and eigenvectors can be obtained explicitly in terms of
+ the matrix elements
+\end_layout
 
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\lambda_{\alpha} & =...\\
+e_{i}^{\alpha} & =...
+\end{align}
+
+\end_inset
+
+which gives the final expression for the imaginary part of the response
+ to be 
+\begin_inset Formula 
+\[
+\mathrm{Im}(\chi_{ij}^{||})=....
+\]
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Section
