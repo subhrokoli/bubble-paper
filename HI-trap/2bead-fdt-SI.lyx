@@ -907,7 +907,7 @@ begin{widetext}
 
 
 \begin_inset Formula 
-\begin{align*}
+\begin{align}
 \text{Im}\left[\chi_{ij}^{||}(\omega)\right]= & \frac{\omega}{(\text{det}A-\omega^{2})^{2}+(\omega\begin{tabular}{c}
  tr\end{tabular}A)^{2}}\left(\begin{array}{cc}
 \begin{tabular}{c}
@@ -916,7 +916,7 @@ begin{widetext}
 -\mu_{12}(\text{det}A-\omega^{2}) & \begin{tabular}{c}
  \tfrac{k_{1}}{k_{2}}\mu_{11}\end{tabular}\text{det}A+\mu\omega^{2}
 \end{array}\right).
-\end{align*}
+\end{align}
 
 \end_inset
 
@@ -939,10 +939,10 @@ end{widetext}
 The modulus of the response of the first bead to the driving of the second
  bead is 
 \begin_inset Formula 
-\begin{eqnarray*}
+\begin{eqnarray}
 |\chi_{21}^{||}| & =\Big| & \frac{i\omega\mu_{21}}{\text{det}A-\omega^{2}-i\omega\begin{tabular}{c}
  tr\end{tabular}A}\Big|
-\end{eqnarray*}
+\end{eqnarray}
 
 \end_inset
 
@@ -953,9 +953,9 @@ which in non-zero only if there is viscous coupling,
 .
  The modulus has a maximum at 
 \begin_inset Formula 
-\[
+\begin{equation}
 \omega_{res}=\sqrt{\text{det}A}=\sqrt{\mu_{11}\mu_{22}k_{1}k_{2}\left(1-\frac{\mu_{12}\mu_{21}}{\mu_{11}\mu_{22}}\right)}.
-\]
+\end{equation}
 
 \end_inset
 
