@@ -909,7 +909,7 @@ begin{widetext}
 
 \begin_inset Formula 
 \begin{align*}
-\chi_{ij}^{||}(\omega)= & \frac{}{\text{Det}A-\omega^{2}-i\omega\begin{tabular}{c}
+\chi_{ij}^{||}(\omega)= & \frac{1}{\text{Det}A-\omega^{2}-i\omega\begin{tabular}{c}
  Tr\end{tabular}A}\left(\begin{array}{cc}
 \tfrac{1}{k_{1}}\text{Det}A-i\omega\mu_{11} & -i\omega\mu_{12}\\
 \, & \,\\
@@ -922,7 +922,7 @@ begin{widetext}
 This expression for the imaginary part of the response is then 
 \begin_inset Formula 
 \begin{align*}
-\text{Im}\left[\chi_{ij}^{||}(\omega)\right]= & \frac{\omega}{(\text{Det}A-\omega^{2})^{2}-(\omega\begin{tabular}{c}
+\text{Im}\left[\chi_{ij}^{||}(\omega)\right]= & \frac{\omega}{(\text{Det}A-\omega^{2})^{2}+(\omega\begin{tabular}{c}
  Tr\end{tabular}A)^{2}}\left(\begin{array}{cc}
 \begin{tabular}{c}
  \tfrac{1}{k_{1}}Tr\end{tabular}A\,\text{Det}A-\mu_{11}(\text{Det}A-\omega^{2}) & -\mu_{12}(\text{Det}A-\omega^{2})\\
@@ -947,6 +947,38 @@ end{widetext}
 
 \end_inset
 
+From the expression of the response function, we consider 
+\begin_inset Formula $\chi_{12}^{\parallel}$
+\end_inset
+
+, which gives the response on the second bead due to the forcing of the
+ first bead
+\begin_inset Formula 
+\begin{eqnarray*}
+|\chi_{21}| & =\Big| & \frac{i\omega\mu_{21}}{\text{Det}A-\omega^{2}-i\omega\begin{tabular}{c}
+ Tr\end{tabular}A}\Big|\\
+ & = & \frac{\omega\mu_{21}}{\sqrt{(\text{Det}A-\omega^{2})^{2}+(\omega\begin{tabular}{c}
+ Tr\end{tabular}A)^{2}}}
+\end{eqnarray*}
+
+\end_inset
+
+The resonance frequency is then 
+\begin_inset Formula 
+\[
+\omega_{res}=\sqrt{\text{Det}A}=\sqrt{\mu_{11}\mu_{22}k_{1}k_{2}\left(1-\frac{\mu_{12}\mu_{21}}{\mu_{11}\mu_{22}}\right)}.
+\]
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+Correlation function: 
+\shape default
 We now calculate the correlation function using Eq.
  (
 \begin_inset CommandInset ref
@@ -1004,7 +1036,7 @@ reference "eq:overdamped"
 
 \end_inset
 
-) is then,
+) then reduces to,
 \family roman
 \series medium
 \shape up
@@ -1019,7 +1051,7 @@ reference "eq:overdamped"
 
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{\gamma}_{ij}^{\parallel}\boldsymbol{\dot{r}}_{j}^{\parallel}(t)+k_{i}\boldsymbol{r}_{i}^{\parallel}(t)=\xi_{i}^{\parallel}(t).\label{eq:overdamped-1}
+\boldsymbol{\gamma}_{ij}^{\parallel}\dot{r}_{j}^{\parallel}(t)+k_{i}r_{i}^{\parallel}(t)=\xi_{i}^{\parallel}(t).\label{eq:overdamped-1}
 \end{equation}
 
 \end_inset
@@ -1027,7 +1059,7 @@ reference "eq:overdamped"
 The solution to the above is obtained by Fourier transform in time
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{r}_{j}(\omega)=(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\xi_{i}^{\parallel}(\omega),
+r_{j}^{\parallel}(\omega)=(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\xi_{i}^{\parallel}(\omega),
 \end{equation}
 
 \end_inset
@@ -1062,27 +1094,17 @@ C_{ij}(\omega) & =\langle r_{i}^{\parallel}(\omega)r_{j}^{\parallel}(\omega)\ran
 
 \end_inset
 
-Using the expressions for the variance of the noise we have, 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{widetext}
-\end_layout
-
-\end_inset
-
-
+Using the expressions for the variance of the expression for correlation
+ function becomes 
 \begin_inset Formula 
 \begin{align*}
-\langle r_{i}^{\parallel}(\omega)r_{j}^{\parallel}(\omega)\rangle= & \frac{2k_{B}T}{(\text{Det}A-\omega^{2})^{2}+(\omega\begin{tabular}{c}
- Tr\end{tabular}A)^{2}}\left(\begin{array}{cc}
+C_{ij}(\omega)= & \frac{2k_{B}T}{(\text{Det}A-\omega^{2})^{2}+(\omega\begin{tabular}{c}
+ Tr\end{tabular}A)^{2}}\\
+\times & \left(\begin{array}{cc}
 \mu_{11}k_{2}-i\omega & -\mu_{12}k_{2}\\
 -\mu_{21}k_{1} & \mu_{11}k_{1}-i\omega
-\end{array}\right)\left(\begin{array}{cc}
+\end{array}\right)\\
+\times & \left(\begin{array}{cc}
 \mu_{11} & \mu_{12}\\
 \mu_{21} & \mu_{22}
 \end{array}\right)\left(\begin{array}{cc}
@@ -1093,43 +1115,15 @@ begin{widetext}
 
 \end_inset
 
-This expression for the correlation function is then
+Multiplying the matrices above, the correlation function comes out to be
 \begin_inset Formula 
 \begin{align*}
-\text{Im}\left[\chi_{ij}^{||}(\omega)\right]= & \frac{2k_{B}T}{(\text{Det}A-\omega^{2})^{2}-(\omega\begin{tabular}{c}
- Tr\end{tabular}A)^{2}}\left(\begin{array}{cc}
-\begin{tabular}{c}
- \tfrac{1}{k_{1}}Tr\end{tabular}A\,\text{Det}A-\mu_{11}(\text{Det}A-\omega^{2}) & -\mu_{12}(\text{Det}A-\omega^{2})\\
-\, & \,\\
--\mu_{12}(\text{Det}A-\omega^{2}) & \tfrac{1}{k_{2}}\begin{tabular}{c}
- Tr\end{tabular}A\,\text{Det}A-\mu_{22}(\text{Det}A-\omega^{2})
-\end{array}\right).
+C_{ij}(\omega)= & \frac{2k_{B}T}{\omega}\text{Im}\left[\chi_{ij}^{||}(\omega)\right].
 \end{align*}
 
 \end_inset
 
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{widetext}
-\end_layout
-
-\end_inset
-
-Thus we verify that the fluctuation-dissipation holds
-\begin_inset Formula 
-\begin{equation}
-\text{Im}\left[\chi_{ij}^{||}(\omega)\right]=\frac{\omega}{2k_{B}T}c_{ij}(\omega).
-\end{equation}
-
-\end_inset
-
-
+Thus we verify that the fluctuation-dissipation holds.
 \end_layout
 
 \end_body
