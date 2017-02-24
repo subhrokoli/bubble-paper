@@ -891,7 +891,8 @@ response
 
 \end_inset
 
-The inverse is then computed to give the expression for the response funtion
+Computing the inverse gives the following expression for the imaginary part
+ of the response:
 \begin_inset ERT
 status open
 
@@ -907,19 +908,6 @@ begin{widetext}
 
 \begin_inset Formula 
 \begin{align*}
-\chi_{ij}^{||}(\omega)= & \frac{1}{\text{det}A-\omega^{2}-i\omega\begin{tabular}{c}
- tr\end{tabular}A}\left(\begin{array}{cc}
-\tfrac{1}{k_{1}}\text{det}A-i\omega\mu_{22} & -i\omega\mu_{12}\\
-\, & \,\\
--i\omega\mu_{21} & \tfrac{1}{k_{2}}\text{det}A-i\omega\mu_{11}
-\end{array}\right).
-\end{align*}
-
-\end_inset
-
-This expression for the imaginary part of the response is
-\begin_inset Formula 
-\begin{align}
 \text{Im}\left[\chi_{ij}^{||}(\omega)\right]= & \frac{\omega}{(\text{det}A-\omega^{2})^{2}+(\omega\begin{tabular}{c}
  tr\end{tabular}A)^{2}}\left(\begin{array}{cc}
 \begin{tabular}{c}
@@ -928,11 +916,14 @@ This expression for the imaginary part of the response is
 -\mu_{12}(\text{det}A-\omega^{2}) & \begin{tabular}{c}
  \tfrac{k_{1}}{k_{2}}\mu_{11}\end{tabular}\text{det}A+\mu\omega^{2}
 \end{array}\right).
-\end{align}
+\end{align*}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -945,21 +936,22 @@ end{widetext}
 
 \end_inset
 
-From the expression of the response function, we consider 
-\begin_inset Formula $\chi_{12}^{\parallel}$
-\end_inset
-
-, which gives the response on the second bead due to the forcing of the
- first bead
+The modulus of the response of the first bead to the driving of the second
+ bead is 
 \begin_inset Formula 
 \begin{eqnarray*}
-|\chi_{21}| & =\Big| & \frac{i\omega\mu_{21}}{\text{det}A-\omega^{2}-i\omega\begin{tabular}{c}
+|\chi_{21}^{||}| & =\Big| & \frac{i\omega\mu_{21}}{\text{det}A-\omega^{2}-i\omega\begin{tabular}{c}
  tr\end{tabular}A}\Big|
 \end{eqnarray*}
 
 \end_inset
 
-The resonance frequency is then 
+which in non-zero only if there is viscous coupling, 
+\begin_inset Formula $\mu_{12}\neq0$
+\end_inset
+
+.
+ The modulus has a maximum at 
 \begin_inset Formula 
 \[
 \omega_{res}=\sqrt{\text{det}A}=\sqrt{\mu_{11}\mu_{22}k_{1}k_{2}\left(1-\frac{\mu_{12}\mu_{21}}{\mu_{11}\mu_{22}}\right)}.
@@ -971,37 +963,8 @@ The resonance frequency is then
 \end_layout
 
 \begin_layout Standard
-
-\shape italic
-Correlation function: 
-\shape default
-We now calculate the correlation function for two particles moving in the
- trap.
- 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-To proceed,
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
- we write the parallel component of linearized Langevin equation, Eq.
+We now calculate the correlation function.
+ We write the parallel component of linearized Langevin equation, Eq.
  (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1154,7 +1117,7 @@ C_{ij}(\omega)= & \frac{2k_{B}T}{(\text{det}A-\omega^{2})^{2}+(\omega\begin{tabu
 
 \end_inset
 
-Multiplying the matrices above, the correlation function comes out to be
+Multiplying the matrices above, the correlation function is 
 \begin_inset Formula 
 \begin{align}
 C_{ij}(\omega)= & \frac{2k_{B}T}{\omega}\text{Im}\left[\chi_{ij}^{||}(\omega)\right].
@@ -1162,7 +1125,9 @@ C_{ij}(\omega)= & \frac{2k_{B}T}{\omega}\text{Im}\left[\chi_{ij}^{||}(\omega)\ri
 
 \end_inset
 
-Thus we verify that the fluctuation-dissipation holds.
+This provides an explicit verification of the fluctuation-response relation
+ for a pair of viscously coupled oscillators.
+ 
 \end_layout
 
 \end_body
