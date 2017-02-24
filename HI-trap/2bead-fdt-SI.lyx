@@ -160,7 +160,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -174,7 +173,6 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -910,30 +908,25 @@ begin{widetext}
 \begin_inset Formula 
 \begin{align*}
 \chi_{ij}^{||}(\omega)= & \frac{1}{\text{det}A-\omega^{2}-i\omega\begin{tabular}{c}
- rr\end{tabular}A}\left(\begin{array}{cc}
-\tfrac{1}{k_{1}}\text{det}A-i\omega\mu & -i\omega\mu_{12}\\
+ tr\end{tabular}A}\left(\begin{array}{cc}
+\tfrac{1}{k_{1}}\text{det}A-i\omega\mu_{22} & -i\omega\mu_{12}\\
 \, & \,\\
--i\omega\mu_{21} & \tfrac{1}{k_{2}}\text{det}A-i\omega\mu
+-i\omega\mu_{21} & \tfrac{1}{k_{2}}\text{det}A-i\omega\mu_{11}
 \end{array}\right).
 \end{align*}
 
 \end_inset
 
-Here 
-\begin_inset Formula $\mu_{11}=\mu_{22}=\mu$
-\end_inset
-
-.
- This expression for the imaginary part of the response is
+This expression for the imaginary part of the response is
 \begin_inset Formula 
 \begin{align}
 \text{Im}\left[\chi_{ij}^{||}(\omega)\right]= & \frac{\omega}{(\text{det}A-\omega^{2})^{2}+(\omega\begin{tabular}{c}
  tr\end{tabular}A)^{2}}\left(\begin{array}{cc}
 \begin{tabular}{c}
- \tfrac{\mu k_{2}}{k_{1}}\end{tabular}\text{det}A+\mu\omega^{2} & -\mu_{12}(\text{det}A-\omega^{2})\\
+ \tfrac{k_{2}}{k_{1}}\mu_{22}\end{tabular}\text{det}A+\mu\omega^{2} & -\mu_{12}(\text{det}A-\omega^{2})\\
 \, & \,\\
 -\mu_{12}(\text{det}A-\omega^{2}) & \begin{tabular}{c}
- \tfrac{\mu k_{1}}{k_{2}}\end{tabular}\text{det}A+\mu\omega^{2}
+ \tfrac{k_{1}}{k_{2}}\mu_{11}\end{tabular}\text{det}A+\mu\omega^{2}
 \end{array}\right).
 \end{align}
 
@@ -969,7 +962,7 @@ From the expression of the response function, we consider
 The resonance frequency is then 
 \begin_inset Formula 
 \[
-\omega_{res}=\sqrt{\text{Det}A}=\sqrt{\mu_{11}\mu_{22}k_{1}k_{2}\left(1-\frac{\mu_{12}\mu_{21}}{\mu_{11}\mu_{22}}\right)}.
+\omega_{res}=\sqrt{\text{det}A}=\sqrt{\mu_{11}\mu_{22}k_{1}k_{2}\left(1-\frac{\mu_{12}\mu_{21}}{\mu_{11}\mu_{22}}\right)}.
 \]
 
 \end_inset
@@ -1144,17 +1137,17 @@ Using the expressions for the variance of the noise, the expression of correlati
 on function becomes 
 \begin_inset Formula 
 \begin{align*}
-C_{ij}(\omega)= & \frac{2k_{B}T}{(\text{Det}A-\omega^{2})^{2}+(\omega\begin{tabular}{c}
- Tr\end{tabular}A)^{2}}\\
+C_{ij}(\omega)= & \frac{2k_{B}T}{(\text{det}A-\omega^{2})^{2}+(\omega\begin{tabular}{c}
+ tr\end{tabular}A)^{2}}\\
 \times & \left(\begin{array}{cc}
-\mu_{11}k_{2}-i\omega & -\mu_{12}k_{2}\\
+\mu_{22}k_{2}-i\omega & -\mu_{12}k_{2}\\
 -\mu_{21}k_{1} & \mu_{11}k_{1}-i\omega
 \end{array}\right)\\
 \times & \left(\begin{array}{cc}
 \mu_{11} & \mu_{12}\\
 \mu_{21} & \mu_{22}
 \end{array}\right)\left(\begin{array}{cc}
-\mu_{11}k_{2}+i\omega & -\mu_{21}k_{2}\\
+\mu_{22}k_{2}+i\omega & -\mu_{21}k_{2}\\
 -\mu_{12}k_{1} & \mu_{11}k_{1}+i\omega
 \end{array}\right).
 \end{align*}

@@ -150,7 +150,6 @@ Ronojoy Adhikari
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -164,7 +163,6 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -751,27 +749,41 @@ For modulation frequencies
 \begin_layout Standard
 \begin_inset Formula 
 \begin{alignat*}{1}
-\text{Im}\Big[\boldsymbol{{\bf \chi}}^{\parallel}\Big] & =\frac{1}{\Big|\chi_{D}^{\parallel}\Big|^{2}}\left(\begin{array}{cc}
--\chi_{a}\omega\boldsymbol{\gamma}_{22}^{\parallel}-\chi_{b}k_{2} & \chi_{a}\omega\boldsymbol{\gamma}_{21}^{\parallel}\\
-\chi_{a}\omega\boldsymbol{\gamma}_{12}^{\parallel} & -\alpha^{\parallel}\omega\boldsymbol{\gamma}_{11}^{\parallel}-\chi_{b}k_{1}
+\text{Im}\left[\chi_{ij}^{||}(\omega)\right] & =\frac{\omega}{(\text{det}A-\omega^{2})^{2}+(\omega\begin{tabular}{c}
+ tr\end{tabular}A)^{2}}\times\\
+ & \left(\begin{array}{cc}
+\begin{tabular}{c}
+ \tfrac{k_{2}}{k_{1}}\mu_{22}\end{tabular}\text{det}A+\mu\omega^{2} & -\mu_{12}(\text{det}A-\omega^{2})\\
+\, & \,\\
+-\mu_{12}(\text{det}A-\omega^{2}) & \begin{tabular}{c}
+ \tfrac{k_{1}}{k_{2}}\mu_{11}\end{tabular}\text{det}A+\mu\omega^{2}
 \end{array}\right).
 \end{alignat*}
 
 \end_inset
 
-Here 
-\begin_inset Formula $\chi_{D}^{\parallel}=\chi_{a}+i\chi_{b}$
+where 
+\begin_inset Formula $A_{ij}=\mu_{ij}^{||}k_{j}$
 \end_inset
 
-, 
-\begin_inset Formula $\chi_{a}=k_{1}k_{2}-\omega^{2}(\boldsymbol{\gamma}_{11}^{\parallel}\boldsymbol{\gamma}_{22}^{\parallel}-\boldsymbol{\gamma}_{12}^{\parallel}\boldsymbol{\gamma}_{21}^{\parallel}),$
+ is a 
+\begin_inset Quotes eld
 \end_inset
 
- and 
-\begin_inset Formula $\chi_{b}=-\omega(\gamma_{11}^{\parallel}k_{2}+\gamma_{22}^{\parallel}k_{1})$
+response
+\begin_inset Quotes erd
+\end_inset
+
+ matrix and the mobility matrix and 
+\begin_inset Formula $\mu_{ij}^{||}$
+\end_inset
+
+ is the inverse of the friction matrix, 
+\begin_inset Formula $\text{\gamma_{ik}^{||}\mu_{kj}^{||}=\delta_{ij}}$
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Standard
