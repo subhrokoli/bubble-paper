@@ -160,6 +160,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -173,6 +174,7 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -632,7 +634,7 @@ spurious
 
  drift is included in the equation for the position increment.
  This is the basis of the equation for increments given by Ermack and McCammon.
- With these caveats the resulting over-damped Langevin equations are 
+ With these caveats the resulting over-damped Langevin equations are
 \end_layout
 
 \begin_layout Standard
@@ -725,21 +727,6 @@ instantaneous
 , where the friction tensors are now evaluated at the mean separation between
  traps.
  The resulting linearised Langevin equations are
-\end_layout
-
-\begin_layout Standard
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{\gamma}_{ij}(\boldsymbol{r}_{1}^{0},\boldsymbol{r}_{2}^{0})\cdot\dot{\boldsymbol{u}}_{j}+k_{i}\boldsymbol{u}_{i}-k_{i}\boldsymbol{u}_{i}^{0}(t)=\boldsymbol{\xi}_{i}
@@ -781,10 +768,6 @@ decoupling through the use of symmetries
 \emph default
 : in this step, the symmetry of the friction tensors under translation,
  assuming all boundaries are remote, is used to express them as
-\end_layout
-
-\begin_layout Standard
-
 \family roman
 \series medium
 \shape up
@@ -796,6 +779,7 @@ decoupling through the use of symmetries
 \uwave off
 \noun off
 \color none
+
 \begin_inset Formula 
 \[
 \boldsymbol{\gamma}_{ij}=\gamma_{ij}^{\parallel}(\rho)\hat{\mathbf{\boldsymbol{\rho}}}\hat{\mathbf{\boldsymbol{\rho}}}+\gamma_{ij}^{\perp}(\rho)(\boldsymbol{I}-\hat{\mathbf{\boldsymbol{\rho}}}\hat{\mathbf{\boldsymbol{\rho}}})
@@ -870,9 +854,9 @@ d.
 \emph default
 ) 
 \emph on
-response function in the spectral basis
+response function
 \emph default
-: in the final step the coupled equations are written as 
+: in the final step the coupled equations are written as
 \begin_inset Formula 
 \[
 \dot{u}_{i}^{||}+A_{ij}u_{j}^{||}=\mu_{ik}^{||}f_{k}
@@ -901,10 +885,7 @@ response
 \end_inset
 
 .
- The response function in the frequency domain, then, is 
-\end_layout
-
-\begin_layout Standard
+ The response function in the frequency domain, then, is
 \begin_inset Formula 
 \begin{equation}
 \chi_{ij}^{||}(\omega)=(-i\omega\delta_{ik}+A_{ik})^{-1}\mu_{kj}^{||}.
@@ -912,51 +893,63 @@ response
 
 \end_inset
 
-The inverse can written in the spectral basis of the response matrix.
- Assuming non-degenerate eigenvalues 
-\begin_inset Formula $\lambda_{\alpha}$
+The inverse is then computed to give the expression for the response funtion
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{widetext}
+\end_layout
+
 \end_inset
 
- and a complete pair of eigenvectors 
-\begin_inset Formula $e_{i}^{\alpha}$
+
+\begin_inset Formula 
+\begin{align*}
+\chi_{ij}^{||}(\omega)= & \frac{\text{Det}A-\omega^{2}+i\omega\begin{tabular}{c}
+ Tr\end{tabular}A}{(\text{Det}A-\omega^{2})^{2}-(\omega\begin{tabular}{c}
+Tr\end{tabular}A)^{2}}\left(\begin{array}{cc}
+\tfrac{1}{k_{1}}\text{Det}A-i\omega\mu_{11} & -i\omega\mu_{12}\\
+\, & \,\\
+-i\omega\mu_{21} & \tfrac{1}{k_{2}}\text{Det}A-i\omega\mu_{22}
+\end{array}\right).
+\end{align*}
+
 \end_inset
 
- (
-\begin_inset Formula $\alpha=1,2)$
-\end_inset
 
- the response function is given by
 \end_layout
 
 \begin_layout Standard
+This gives the final expression for the imaginary part of the response to
+ be 
 \begin_inset Formula 
-\begin{equation}
-\chi_{ij}^{||}(\omega)=\sum_{\alpha}(-i\omega+\lambda_{\alpha})^{-1}e_{i}^{\alpha}e_{k}^{\alpha}\mu_{kj}^{||}
-\end{equation}
+\begin{align*}
+\text{Im}\left[\chi_{ij}^{||}(\omega)\right]= & \frac{\omega}{(\text{Det}A-\omega^{2})^{2}-(\omega\begin{tabular}{c}
+Tr\end{tabular}A)^{2}}\left(\begin{array}{cc}
+\begin{tabular}{c}
+ \tfrac{1}{k_{1}}Tr\end{tabular}A\,\text{Det}A-\mu(\text{Det}A-\omega^{2}) & -\mu_{12}(\text{Det}A-\omega^{2})\\
+\, & \,\\
+-\mu_{12}(\text{Det}A-\omega^{2}) & \tfrac{1}{k_{2}}\begin{tabular}{c}
+ Tr\end{tabular}A\,\text{Det}A-\mu_{22}(\text{Det}A-\omega^{2})
+\end{array}\right).
+\end{align*}
 
 \end_inset
 
-where the equality of the left and right eigenspaces of a symmetric matrix
- has been used in obtaining the result above.
- The eigenvalues and eigenvectors can be obtained explicitly in terms of
- the matrix elements
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{widetext}
 \end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{align}
-\lambda_{\alpha} & =...\\
-e_{i}^{\alpha} & =...
-\end{align}
-
-\end_inset
-
-which gives the final expression for the imaginary part of the response
- to be 
-\begin_inset Formula 
-\begin{equation}
-\mathrm{Im}(\chi_{ij}^{||})=....
-\end{equation}
 
 \end_inset
 
