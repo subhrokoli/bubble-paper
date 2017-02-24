@@ -206,7 +206,7 @@ Supplementary information
  
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Experiment
 \end_layout
 
@@ -729,7 +729,7 @@ instantaneous
  The resulting linearised Langevin equations are
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{\gamma}_{ij}(\boldsymbol{r}_{1}^{0},\boldsymbol{r}_{2}^{0})\cdot\dot{\boldsymbol{u}}_{j}+k_{i}\boldsymbol{u}_{i}-k_{i}\boldsymbol{u}_{i}^{0}(t)=\boldsymbol{\xi}_{i}
+\boldsymbol{\gamma}_{ij}(\boldsymbol{r}_{1}^{0},\boldsymbol{r}_{2}^{0})\cdot\dot{\boldsymbol{u}}_{j}+k_{i}\boldsymbol{u}_{i}-k_{i}\boldsymbol{u}_{i}^{0}(t)=\boldsymbol{\xi}_{i}\label{eq:linearized-LE}
 \end{equation}
 
 \end_inset
@@ -909,28 +909,33 @@ begin{widetext}
 
 \begin_inset Formula 
 \begin{align*}
-\chi_{ij}^{||}(\omega)= & \frac{1}{\text{Det}A-\omega^{2}-i\omega\begin{tabular}{c}
- Tr\end{tabular}A}\left(\begin{array}{cc}
-\tfrac{1}{k_{1}}\text{Det}A-i\omega\mu_{11} & -i\omega\mu_{12}\\
+\chi_{ij}^{||}(\omega)= & \frac{1}{\text{det}A-\omega^{2}-i\omega\begin{tabular}{c}
+ rr\end{tabular}A}\left(\begin{array}{cc}
+\tfrac{1}{k_{1}}\text{det}A-i\omega\mu & -i\omega\mu_{12}\\
 \, & \,\\
--i\omega\mu_{21} & \tfrac{1}{k_{2}}\text{Det}A-i\omega\mu_{22}
+-i\omega\mu_{21} & \tfrac{1}{k_{2}}\text{det}A-i\omega\mu
 \end{array}\right).
 \end{align*}
 
 \end_inset
 
-This expression for the imaginary part of the response is
+Here 
+\begin_inset Formula $\mu_{11}=\mu_{22}=\mu$
+\end_inset
+
+.
+ This expression for the imaginary part of the response is
 \begin_inset Formula 
-\begin{align*}
-\text{Im}\left[\chi_{ij}^{||}(\omega)\right]= & \frac{\omega}{(\text{Det}A-\omega^{2})^{2}+(\omega\begin{tabular}{c}
- Tr\end{tabular}A)^{2}}\left(\begin{array}{cc}
+\begin{align}
+\text{Im}\left[\chi_{ij}^{||}(\omega)\right]= & \frac{\omega}{(\text{det}A-\omega^{2})^{2}+(\omega\begin{tabular}{c}
+ tr\end{tabular}A)^{2}}\left(\begin{array}{cc}
 \begin{tabular}{c}
- \tfrac{1}{k_{1}}Tr\end{tabular}A\,\text{Det}A-\mu_{11}(\text{Det}A-\omega^{2}) & -\mu_{12}(\text{Det}A-\omega^{2})\\
+ \tfrac{\mu k_{2}}{k_{1}}\end{tabular}\text{det}A+\mu\omega^{2} & -\mu_{12}(\text{det}A-\omega^{2})\\
 \, & \,\\
--\mu_{12}(\text{Det}A-\omega^{2}) & \tfrac{1}{k_{2}}\begin{tabular}{c}
- Tr\end{tabular}A\,\text{Det}A-\mu_{22}(\text{Det}A-\omega^{2})
+-\mu_{12}(\text{det}A-\omega^{2}) & \begin{tabular}{c}
+ \tfrac{\mu k_{1}}{k_{2}}\end{tabular}\text{det}A+\mu\omega^{2}
 \end{array}\right).
-\end{align*}
+\end{align}
 
 \end_inset
 
@@ -955,10 +960,8 @@ From the expression of the response function, we consider
  first bead
 \begin_inset Formula 
 \begin{eqnarray*}
-|\chi_{21}| & =\Big| & \frac{i\omega\mu_{21}}{\text{Det}A-\omega^{2}-i\omega\begin{tabular}{c}
- Tr\end{tabular}A}\Big|\\
- & = & \frac{\omega\mu_{21}}{\sqrt{(\text{Det}A-\omega^{2})^{2}+(\omega\begin{tabular}{c}
- Tr\end{tabular}A)^{2}}}.
+|\chi_{21}| & =\Big| & \frac{i\omega\mu_{21}}{\text{det}A-\omega^{2}-i\omega\begin{tabular}{c}
+ tr\end{tabular}A}\Big|
 \end{eqnarray*}
 
 \end_inset
@@ -979,15 +982,8 @@ The resonance frequency is then
 \shape italic
 Correlation function: 
 \shape default
-We now calculate the correlation function using Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:overdamped"
-
-\end_inset
-
-) for two particles moving in the trap.
+We now calculate the correlation function for two particles moving in the
+ trap.
  
 \family roman
 \series medium
@@ -1000,15 +996,7 @@ reference "eq:overdamped"
 \uwave off
 \noun off
 \color none
-To proceed, we recast it in parallel and perpendicular direction using Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:gamma-perp-parallel"
-
-\end_inset
-
-) and the identification that 
+To proceed,
 \family default
 \series default
 \shape default
@@ -1020,23 +1008,15 @@ reference "eq:gamma-perp-parallel"
 \uwave default
 \noun default
 \color inherit
-
-\begin_inset Formula 
-\[
-\boldsymbol{r}_{i}=r_{i}^{\parallel}\hat{\mathbf{\boldsymbol{\rho}}}+\boldsymbol{r}_{i}^{\perp}\cdot(\boldsymbol{I}-\hat{\mathbf{\boldsymbol{\rho}}}\hat{\mathbf{\boldsymbol{\rho}}}).
-\]
-
-\end_inset
-
-The parallel component of Eq.
+ we write the parallel component of linearized Langevin equation, Eq.
  (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:overdamped"
+reference "eq:linearized-LE"
 
 \end_inset
 
-) then reduces to,
+), 
 \family roman
 \series medium
 \shape up
@@ -1051,7 +1031,7 @@ reference "eq:overdamped"
 
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{\gamma}_{ij}^{\parallel}\dot{r}_{j}^{\parallel}(t)+k_{i}r_{i}^{\parallel}(t)=\xi_{i}^{\parallel}(t).\label{eq:overdamped-1}
+\boldsymbol{\gamma}_{ij}^{\parallel}\dot{u}_{j}^{\parallel}(t)+k_{i}u_{i}^{\parallel}(t)=\xi_{i}^{\parallel}(t).\label{eq:overdamped-1}
 \end{equation}
 
 \end_inset
@@ -1096,7 +1076,7 @@ begin{subequations}
 
 \begin_inset Formula 
 \begin{align}
-r_{j}^{\parallel}(\omega) & =(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\xi_{i}^{\parallel}(\omega),\\
+u_{i}^{\parallel}(\omega) & =(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega),\\
 \langle\xi_{i}^{\parallel}\rangle= & 0,\qquad\langle\xi_{i}^{\parallel}\xi_{j}^{\parallel}\rangle=2k_{B}T\gamma_{ij}^{\parallel}.
 \end{align}
 
@@ -1154,7 +1134,7 @@ The correlation function is then
 
 \begin_inset Formula 
 \begin{align}
-C_{ij}(\omega) & =\langle r_{i}^{\parallel}(\omega)r_{j}^{\parallel}(\omega)\rangle=(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\nonumber \\
+C_{ij}(\omega) & =\langle u_{i}^{\parallel}(\omega)u_{j}^{\parallel}(\omega)\rangle=(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\nonumber \\
  & \times(-i\omega\delta_{jm}+A_{jm}^{T})^{-1}\mu_{mk'}^{||}\langle\xi_{k}\xi_{k'}\rangle.
 \end{align}
 
@@ -1183,9 +1163,9 @@ C_{ij}(\omega)= & \frac{2k_{B}T}{(\text{Det}A-\omega^{2})^{2}+(\omega\begin{tabu
 
 Multiplying the matrices above, the correlation function comes out to be
 \begin_inset Formula 
-\begin{align*}
+\begin{align}
 C_{ij}(\omega)= & \frac{2k_{B}T}{\omega}\text{Im}\left[\chi_{ij}^{||}(\omega)\right].
-\end{align*}
+\end{align}
 
 \end_inset
 
