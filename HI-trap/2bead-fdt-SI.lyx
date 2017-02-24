@@ -919,7 +919,7 @@ begin{widetext}
 
 \end_inset
 
-This expression for the imaginary part of the response is then 
+This expression for the imaginary part of the response is
 \begin_inset Formula 
 \begin{align*}
 \text{Im}\left[\chi_{ij}^{||}(\omega)\right]= & \frac{\omega}{(\text{Det}A-\omega^{2})^{2}+(\omega\begin{tabular}{c}
@@ -958,7 +958,7 @@ From the expression of the response function, we consider
 |\chi_{21}| & =\Big| & \frac{i\omega\mu_{21}}{\text{Det}A-\omega^{2}-i\omega\begin{tabular}{c}
  Tr\end{tabular}A}\Big|\\
  & = & \frac{\omega\mu_{21}}{\sqrt{(\text{Det}A-\omega^{2})^{2}+(\omega\begin{tabular}{c}
- Tr\end{tabular}A)^{2}}}
+ Tr\end{tabular}A)^{2}}}.
 \end{eqnarray*}
 
 \end_inset
@@ -971,7 +971,7 @@ The resonance frequency is then
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -1057,23 +1057,89 @@ reference "eq:overdamped"
 \end_inset
 
 The solution to the above is obtained by Fourier transform in time
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
 \begin_inset Formula 
-\begin{equation}
-r_{j}^{\parallel}(\omega)=(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\xi_{i}^{\parallel}(\omega),
-\end{equation}
+\begin{align}
+r_{j}^{\parallel}(\omega) & =(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\xi_{i}^{\parallel}(\omega),\\
+\langle\xi_{i}^{\parallel}\rangle= & 0,\qquad\langle\xi_{i}^{\parallel}\xi_{j}^{\parallel}\rangle=2k_{B}T\gamma_{ij}^{\parallel}.
+\end{align}
 
 \end_inset
 
-with 
-\begin_inset Formula $\langle\xi_{i}^{\parallel}\rangle=0$
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
 \end_inset
 
- and 
-\begin_inset Formula $\langle\xi_{i}^{\parallel}\xi_{j}^{\parallel}\rangle=2k_{B}T\gamma_{ij}^{\parallel}$
-\end_inset
 
-.
- The correlation function is then
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+The correlation function is then
 \family default
 \series default
 \shape default
@@ -1094,8 +1160,8 @@ C_{ij}(\omega) & =\langle r_{i}^{\parallel}(\omega)r_{j}^{\parallel}(\omega)\ran
 
 \end_inset
 
-Using the expressions for the variance of the expression for correlation
- function becomes 
+Using the expressions for the variance of the noise, the expression of correlati
+on function becomes 
 \begin_inset Formula 
 \begin{align*}
 C_{ij}(\omega)= & \frac{2k_{B}T}{(\text{Det}A-\omega^{2})^{2}+(\omega\begin{tabular}{c}
