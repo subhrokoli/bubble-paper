@@ -160,7 +160,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -174,7 +173,6 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -716,7 +714,7 @@ instantaneous
 \color none
  position of the trap center.
  The mean distance between the trap centers is 
-\begin_inset Formula $\boldsymbol{\rho}_{ij}=\boldsymbol{r}_{i}^{0}-\boldsymbol{r}_{j}^{0}$
+\begin_inset Formula $\boldsymbol{\rho}=\boldsymbol{r}_{1}^{0}-\boldsymbol{r}_{2}^{0}$
 \end_inset
 
 .
@@ -744,7 +742,7 @@ instantaneous
 \color none
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{\gamma}_{ij}(\boldsymbol{\rho}_{ij})\cdot\dot{\boldsymbol{u}}_{j}+k_{i}\boldsymbol{u}_{i}-k_{i}\boldsymbol{u}_{i}^{0}(t)=\boldsymbol{\xi}_{i}
+\boldsymbol{\gamma}_{ij}(\boldsymbol{r}_{1}^{0},\boldsymbol{r}_{2}^{0})\cdot\dot{\boldsymbol{u}}_{j}+k_{i}\boldsymbol{u}_{i}-k_{i}\boldsymbol{u}_{i}^{0}(t)=\boldsymbol{\xi}_{i}
 \end{equation}
 
 \end_inset
@@ -821,8 +819,8 @@ where
 \begin_inset Formula $\gamma_{ij}^{||}(\rho)$
 \end_inset
 
- is a friction coefficient for relative motion along 
-\begin_inset Formula $\boldsymbol{\rho}=\text{\boldsymbol{\rho}}_{ij}$
+ is the friction coefficient for relative motion along 
+\begin_inset Formula $\boldsymbol{\rho}$
 \end_inset
 
 , the line joining the trap centers, and 
