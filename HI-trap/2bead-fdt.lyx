@@ -160,6 +160,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -173,6 +174,7 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -249,8 +251,13 @@ In this paper, we probe the coupled dynamics of a pair of colloidal particles
  of two colloidal spheres trapped in separate optical traps has earlier
  been used to study the effects on one of the spheres when the other is
  modulated sinusoidally 
-\backslash
-cite{pre, schmiddt}.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hough02,Atakh06"
+
+\end_inset
+
+.
  The results seemed to match the theory well - however, there seemed to
  be limited interest in the consequences of the results and the possibilities
  offered by this system as a whole to study interesting aspects of basic
@@ -350,15 +357,9 @@ name "Setup"
 \shape italic
 Experiment:
 \shape default
- The details of the experimental setup towards validation of Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq14"
-
-\end_inset
-
- are provided in Supplementary Information, here we provide a brief description.
+ The details of the experimental setup towards validation of the fluctuation
+ response theorem are provided in Supplementary Information - here we provide
+ a brief description.
  Thus, we set up a dual-beam optical tweezers (Fig.
  
 \begin_inset CommandInset ref
@@ -429,12 +430,13 @@ m, and the distance from the cover slip surface is 30
 
 m.
  From the literature 
-\backslash
-cite{
-\series bold
-PRL 107, 248101 (2011)
-\series default
-}, this distance is still large enough to avoid optical cross talk and effects
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Stilgoe11"
+
+\end_inset
+
+, this distance is still large enough to avoid optical cross talk and effects
  due to surface charges.
  In order to ensure that the trapping beams do not influence each other,
  we measure the Brownian motion of one when the other is switched on (in
@@ -516,7 +518,13 @@ Each of the optical traps are calibrated using equipartition and power spectrum
  of the Brownian motion which is satisfactorily Gaussian (Fig.
  1 in Supplementary Information).
  The sampling frequency is 2 kHz, while we performed data blocking at the
- level of 100 points in order to ensure good Lorentzian fits [flyvbjerg]
+ level of 100 points in order to ensure good Lorentzian fits 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "berg2004power"
+
+\end_inset
+
  for trap calibration.
  We maintain a considerably higher stiffness for the particle in the modulated
  trap so that it is not affected by the back-flow due to the driven particle.
@@ -573,7 +581,7 @@ reference "fdt"
 
 (b).
  The corresponding response functions (
-\begin_inset Formula $\mathit{\chi"_{11},\:\chi"_{22}}$
+\begin_inset Formula $\mathit{\chi_{11}^{||},\:\chi{}_{22}^{||}}$
 \end_inset
 
 ) are obtained by measuring the amplitude and phase of the individual particles
@@ -588,14 +596,14 @@ reference "fdt"
 
 (c) shows the cross-correlation function which is again compared with the
  corresponding response function 
-\begin_inset Formula $\mathit{\chi"_{12}}$
+\begin_inset Formula $\mathit{\chi_{12}^{||}}$
 \end_inset
 
 .
  This is obtained by measuring the amplitude and phase of B2 when B1 is
  driven.
  Note that we are not able to measure 
-\begin_inset Formula $\mathit{\chi"_{21}}$
+\begin_inset Formula $\mathit{\chi_{21}^{||}}$
 \end_inset
 
 which is the response of B1 when B2 is driven since the much larger stiffness
@@ -610,7 +618,14 @@ which is the response of B1 when B2 is driven since the much larger stiffness
  in the time domain (Fig.
  2 in Supplementary Information) and obtain qualitatively similar data as
  reported in Ref.
- [Meiners and Quake].
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Meiners99"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -966,6 +981,17 @@ In conclusion, we study the coupled dynamics of two colloidal particles
  Finally, the amplitude resonance frequency also depends on the fluid viscosity,
  which promises a direct application of this technique as a sensitive two-point
  microrheology probe of local viscosity.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "2bead-fdt"
+options "plain"
+
+\end_inset
+
+
 \end_layout
 
 \end_body
