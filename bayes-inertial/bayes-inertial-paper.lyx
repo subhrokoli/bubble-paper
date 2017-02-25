@@ -444,57 +444,51 @@ The logarithm of the posterior probability, after using the explicit forms
 \begin_inset Formula $P_{1\vert1}$
 \end_inset
 
- and , is
+ and 
+\begin_inset Formula $P_{1}$
+\end_inset
+
+, is
 \begin_inset Formula 
 \begin{align}
-\ln P\left(\bm{\lambda},\bm{C}\vert\bm{X}\right) & =\dfrac{N-1}{2}\ln\left(\dfrac{1}{4\pi^{2}\vert\bm{\Sigma}\vert}\right)-\dfrac{1}{2}\sum_{n=1}^{N-1}\bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}\nonumber \\
- & +\dfrac{1}{2}\ln\left(\dfrac{1}{4\pi^{2}|\bm{c}|}\right)-\dfrac{1}{2}\boldsymbol{x}_{1}^{T}\boldsymbol{c}\boldsymbol{x}
+\ln P\left(\bm{\lambda},\bm{C}\vert\bm{X}\right) & =\dfrac{N-1}{2}\ln\left(\dfrac{1}{4\pi^{2}\vert\bm{\Sigma}\vert}\right)-\dfrac{1}{2}\sum_{n=1}^{N-1}\boldsymbol{\Delta}_{n}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\Delta}_{n}\nonumber \\
+ & +\dfrac{1}{2}\ln\left(\dfrac{1}{4\pi^{2}|\bm{c}|}\right)-\dfrac{1}{2}\boldsymbol{x}_{1}^{T}\boldsymbol{c}\,\boldsymbol{x}_{1}
 \end{align}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-where we have defined the two quantities
+where the two quantities
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\bm{\Sigma} & \equiv\bm{C}-\bm{K}\bm{C}\bm{K}^{\bm{T}},\\
-\bm{\Delta_{n}} & \equiv\bm{x_{n+1}}-\bm{K}\bm{x_{n}}.
+\bm{\Sigma} & \equiv\boldsymbol{c}-e^{\boldsymbol{-\lambda}\Delta t}\boldsymbol{c}\,e^{\boldsymbol{-\lambda}^{T}\Delta t}\\
+\boldsymbol{\Delta}_{n} & \equiv\boldsymbol{x}_{n+1}-e^{\boldsymbol{-\lambda}\Delta t}\boldsymbol{x}_{n}.
 \end{align*}
 
 \end_inset
 
+With some elementary manipulations, detailed in the Appendix, the posterior
+ probability can be written in terms of the following four sufficient statistics
+ 
+\begin_inset Formula 
+\begin{flalign}
+\boldsymbol{T}^{(1)} & =\sum_{n=1}^{N-1}\boldsymbol{x}_{n+1}\boldsymbol{x}_{n+1}^{T},\quad\boldsymbol{T}^{(2)}=\sum_{n=1}^{N-1}\boldsymbol{x}_{n+1}\boldsymbol{x}_{n}^{T}\nonumber \\
+\boldsymbol{T}^{(3)} & =\sum_{n=1}^{N-1}\boldsymbol{x}_{n}\boldsymbol{x}_{n}^{T},\quad\quad\quad\boldsymbol{T}^{(4)}=\boldsymbol{x}_{1}\boldsymbol{x}_{1}^{T}
+\end{flalign}
 
-\end_layout
-
-\begin_layout Standard
-Consider the quantity 
-\begin_inset Formula $\bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}\equiv\left(\bm{x_{n+1}}-\bm{K}\bm{x_{n}}\right)^{\bm{T}}\bm{\Sigma^{-1}}\left(\bm{x_{n+1}}-\bm{K}\bm{x_{n}}\right)$
 \end_inset
 
-.
- Expanding the expression, we get the following four expressions in terms
- of a contracted product
+and the maximum a posteriori estimates for the matrix of mean regression
+ rates 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\bm{x_{n+1}^{T}\Sigma^{-1}x_{n+1}}\equiv\bm{\Sigma^{-1}:T_{1}},
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\bm{x_{n+1}^{T}\Sigma^{-1}}\bm{K}\bm{x_{n}}\equiv\left[\bm{\Sigma^{-1}}\bm{K}\right]:\bm{T_{2}},
-\]
+\begin{equation}
+\bm{\lambda^{\ast}}=-\dfrac{1}{\Delta t}\ln(\bm{T_{2}T_{3}^{-1}})\label{eq:map_lambda}
+\end{equation}
 
 \end_inset
 
@@ -503,49 +497,9 @@ Consider the quantity
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\left(\bm{K}\bm{x_{n}}\right)^{\bm{T}}\bm{\Sigma^{-1}}\bm{x_{n+1}}\equiv\left[\bm{K}^{\bm{T}}\bm{\Sigma^{-1}}\right]:\bm{T_{2}^{T}},
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\left[\bm{K}\bm{x_{n}}\right]^{\bm{T}}\bm{\Sigma^{-1}}\left[\bm{K}\bm{x_{n}}\right]\equiv\left[\bm{K^{\bm{T}}}\bm{\Sigma^{-1}}\bm{K}\right]:\bm{T_{3}}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Thus, we have formulated a set of matrix sufficient statistics for the problem
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{align*}
-\bm{T_{1}} & =\sum_{n=1}^{N-1}\bm{x_{n+1}x_{n+1}^{T}},\;\;\;\bm{T_{2}}=\sum_{n=1}^{N-1}\bm{x_{n+1}x_{n}^{T}},\\
-\qquad & \qquad\qquad\bm{T_{3}}=\sum_{n=1}^{N-1}\bm{x_{n}x_{n}^{T}}.
-\end{align*}
-
-\end_inset
-
-Completing the squares, we have the following identity
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{align}
- & \sum_{n=1}^{N-1}\bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}\nonumber \\
- & \equiv\bm{\Sigma^{-1}}:\Big[\left(\bm{K}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\big(\bm{K}-\bm{T_{2}T_{3}^{-1}}\big)^{\bm{T}}\nonumber \\
- & +\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big].
-\end{align}
+\begin{equation}
+\bm{\Sigma^{\ast}}=\dfrac{1}{N}\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\label{eq:map_sigma}
+\end{equation}
 
 \end_inset
 
@@ -568,9 +522,9 @@ We now make the assumption that the number of samples is large, we can make
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
- & \ln P\left(\bm{\lambda},\bm{\Sigma}\vert\bm{X}\right)\nonumber \\
- & =-\dfrac{1}{2}\bm{\Sigma^{-1}}:\Big[\left(\bm{K}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\left(\bm{K}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}\nonumber \\
- & +\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big]+\dfrac{N}{2}\ln\left(\dfrac{|\bm{\Sigma^{-1}}|}{4\pi^{2}}\right)\nonumber \\
+\nonumber \\
+\nonumber \\
+\nonumber \\
 \label{eq:lp}
 \end{align}
 
@@ -608,17 +562,6 @@ We recognize that the posterior is a Gaussian with respect to
  The mean of the Gaussian yields the maximum a posteriori (MAP) estimate
  of 
 \begin_inset Formula $\bm{\lambda}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\bm{\lambda^{\ast}}=-\dfrac{1}{\Delta t}\ln(\bm{T_{2}T_{3}^{-1}})\label{eq:map_lambda}
-\end{equation}
-
 \end_inset
 
 
@@ -666,17 +609,6 @@ Setting this derivative to zero, and noting that
 \end_inset
 
  as
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\bm{\Sigma^{\ast}}=\dfrac{1}{N}\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\label{eq:map_sigma}
-\end{equation}
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -848,7 +780,7 @@ Here
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -897,6 +829,95 @@ mg/
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consider the quantity 
+\begin_inset Formula $\bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}\equiv\left(\bm{x_{n+1}}-\bm{K}\bm{x_{n}}\right)^{\bm{T}}\bm{\Sigma^{-1}}\left(\bm{x_{n+1}}-\bm{K}\bm{x_{n}}\right)$
+\end_inset
+
+.
+ Expanding the expression, we get the following four expressions in terms
+ of a contracted product
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\bm{x_{n+1}^{T}\Sigma^{-1}x_{n+1}}\equiv\bm{\Sigma^{-1}:T_{1}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\bm{x_{n+1}^{T}\Sigma^{-1}}\bm{K}\bm{x_{n}}\equiv\left[\bm{\Sigma^{-1}}\bm{K}\right]:\bm{T_{2}},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\bm{K}\bm{x_{n}}\right)^{\bm{T}}\bm{\Sigma^{-1}}\bm{x_{n+1}}\equiv\left[\bm{K}^{\bm{T}}\bm{\Sigma^{-1}}\right]:\bm{T_{2}^{T}},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[\bm{K}\bm{x_{n}}\right]^{\bm{T}}\bm{\Sigma^{-1}}\left[\bm{K}\bm{x_{n}}\right]\equiv\left[\bm{K^{\bm{T}}}\bm{\Sigma^{-1}}\bm{K}\right]:\bm{T_{3}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\sum_{n=1}^{N-1}\bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}\equiv\bm{\Sigma^{-1}}:\Big[\left(\bm{K}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\big(\bm{K}-\bm{T_{2}T_{3}^{-1}}\big)^{\bm{T}}+\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big].$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\ln P\left(\bm{\lambda},\bm{\Sigma}\vert\bm{X}\right)=-\dfrac{1}{2}\bm{\Sigma}^{-1}:\Big[\left(\bm{K}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\left(\bm{K}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}+\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big]+\dfrac{N}{2}\ln\left(\dfrac{|\bm{\Sigma^{-1}}|}{4\pi^{2}}\right)$
 \end_inset
 
 
