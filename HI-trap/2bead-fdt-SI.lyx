@@ -160,6 +160,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -173,6 +174,7 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -588,8 +590,13 @@ Theory
 \end_layout
 
 \begin_layout Standard
-We outline below key steps in deriving the correlation and response functions
- in the overdamped limit, starting from the underdamped Langevin equations
+We outline below key steps in deriving the response and correlations functions
+ on the Smoluchowski time scale, 
+\emph on
+i.e.
+
+\emph default
+ the over-damped limit, starting from Langevin equations
 \begin_inset Formula 
 \begin{align}
 m_{i}\dot{\boldsymbol{v}_{i}} & +\boldsymbol{\gamma}_{ij}\cdot\boldsymbol{v}_{j}+{\bf \boldsymbol{\nabla}}_{i}U=\boldsymbol{{\bf \xi}}_{i}\label{eq1}
@@ -610,19 +617,24 @@ i
 \emph on
 adiabatic elimination of momentum
 \emph default
-: in this step, the momenta 
+: in the first step, the momenta 
 \begin_inset Formula $m_{i}\boldsymbol{v}_{i}$
 \end_inset
 
- are adibatically eliminated from the Langevin equations to obtain a contracted
+ are adiabatically eliminated from the Langevin equations to obtain a contracted
  description in terms of the positions alone.
+ This equation is valid on time scales 
+\begin_inset Formula $t\gg m_{i}/\gamma_{i}$
+\end_inset
+
+.
  The heuristic of setting 
 \begin_inset Formula $m_{i}\boldsymbol{v}_{i}$
 \end_inset
 
- to zero in the Langevin equations yields the same result as the more careful
- adiabatic elimination procedure, provided the noise is interpreted correctly
- and the so-called 
+ to zero in the Langevin equations yields the same result as the more systematic
+ adiabatic elimination procedure, provided the multiplicative noise is interpret
+ed correctly and the so-called 
 \begin_inset Quotes eld
 \end_inset
 
@@ -631,8 +643,7 @@ spurious
 \end_inset
 
  drift is included in the equation for the position increment.
- This is the basis of the equation for increments given by Ermack and McCammon.
- With these caveats the resulting over-damped Langevin equations are
+ With these caveats, the resulting over-damped Langevin equations are
 \end_layout
 
 \begin_layout Standard
@@ -681,7 +692,7 @@ linearization
 \noun off
 \color none
 
-\begin_inset Formula $\boldsymbol{r}_{i}=\boldsymbol{r}_{i}^{0}+\boldsymbol{u}_{i}$
+\begin_inset Formula $\boldsymbol{r}_{i}(t)=\boldsymbol{r}_{i}^{0}+\boldsymbol{u}_{i}(t)$
 \end_inset
 
 , where 
@@ -717,14 +728,14 @@ instantaneous
 \begin_inset Formula $\boldsymbol{\rho}=\boldsymbol{r}_{1}^{0}-\boldsymbol{r}_{2}^{0}$
 \end_inset
 
-.
+ is independent of time.
  This yields a linear equation of motion for the small displacements 
 \begin_inset Formula $\boldsymbol{u}_{i}$
 \end_inset
 
 , where the friction tensors are now evaluated at the mean separation between
- traps.
- The resulting linearised Langevin equations are
+ the traps.
+ The linearized Langevin equations are
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{\gamma}_{ij}(\boldsymbol{r}_{1}^{0},\boldsymbol{r}_{2}^{0})\cdot\dot{\boldsymbol{u}}_{j}+k_{i}\boldsymbol{u}_{i}-k_{i}\boldsymbol{u}_{i}^{0}(t)=\boldsymbol{\xi}_{i}\label{eq:linearized-LE}
@@ -744,14 +755,7 @@ instantaneous
 \uwave default
 \noun default
 \color inherit
-This linearized equation remains valid when the potential are anharmonic
- provided the stiffnesses are interpreted as curvatures of the potential
- at the stationary trap centers 
-\begin_inset Formula $\boldsymbol{r}_{i}^{0}$
-\end_inset
-
-.
- Note that these are 6 coupled stochastic ordinary differential equations.
+Note that these are 6 coupled stochastic ordinary differential equations.
  
 \end_layout
 
@@ -805,11 +809,15 @@ where
 \begin_inset Formula $\boldsymbol{\rho}$
 \end_inset
 
-, the line joining the trap centers, and 
+, the line joining the trap centers, while 
 \begin_inset Formula $\gamma_{ij}^{\perp}(\rho)$
 \end_inset
 
- is the corresponding quantity for motion perpendicular to it.
+ is the corresponding quantity for motion perpendicular to 
+\begin_inset Formula $\boldsymbol{\rho}$
+\end_inset
+
+.
  This motivates the decomposition of the displacement into components parallel
  and perpendicular to 
 \begin_inset Formula $\boldsymbol{\rho},$
@@ -828,9 +836,12 @@ Defining the force due to the driving of the trap as
 \end_inset
 
 , averaging the equations over the noise, and using the two previous equations,
- we obtain 3 decoupled pairs of equations for each component of motion.
- For motion along the trap, we obtain a pair of coupled ordinary differential
- equations
+ we obtain 3 decoupled 
+\emph on
+pairs
+\emph default
+ of equations for each component of motion.
+ For motion along the trap, the pair of coupled equations is
 \begin_inset Formula 
 \begin{equation}
 \gamma_{ij}^{||}\dot{u}_{j}^{||}+k_{i}u_{i}^{||}=f_{i}^{||}(t),
@@ -838,8 +849,8 @@ Defining the force due to the driving of the trap as
 
 \end_inset
 
-where the dependence of the friction coefficients on distance has been suppresse
-d.
+where the dependence of the friction coefficients on relative separation
+ has been suppressed.
  The decoupling can be done before the linearization to give the same result;
  the two operations commute.
  
@@ -963,16 +974,20 @@ which in non-zero only if there is viscous coupling,
 \end_layout
 
 \begin_layout Standard
-We now calculate the correlation function.
- We write the parallel component of linearized Langevin equation, Eq.
- (
+To calculate the correlation function, we set the modulation of the traps
+ to zero, 
+\begin_inset Formula $\boldsymbol{u}_{i}^{0}(t)=0,$
+\end_inset
+
+ in Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:linearized-LE"
 
 \end_inset
 
-), 
+) and project, as before, to obtain the Langevin equation for parallel displacem
+ent fluctuations 
 \family roman
 \series medium
 \shape up
@@ -986,13 +1001,14 @@ reference "eq:linearized-LE"
 \color none
 
 \begin_inset Formula 
-\begin{equation}
-\boldsymbol{\gamma}_{ij}^{\parallel}\dot{u}_{j}^{\parallel}(t)+k_{i}u_{i}^{\parallel}(t)=\xi_{i}^{\parallel}(t).\label{eq:overdamped-1}
-\end{equation}
+\begin{gather}
+\boldsymbol{\gamma}_{ij}^{\parallel}\dot{u}_{j}^{\parallel}(t)+k_{i}u_{i}^{\parallel}(t)=\xi_{i}^{\parallel}(t).\label{eq:overdamped-1}\\
+\langle\xi_{i}^{\parallel}(t)\xi_{j}^{\parallel}(t')\rangle=2k_{B}T\gamma_{ij}^{\parallel}\delta(t-t')
+\end{gather}
 
 \end_inset
 
-The solution to the above is obtained by Fourier transform in time
+The Fourier amplitudes of the displacements are 
 \family default
 \series default
 \shape default
@@ -1032,8 +1048,7 @@ begin{subequations}
 
 \begin_inset Formula 
 \begin{align}
-u_{i}^{\parallel}(\omega) & =(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega),\\
-\langle\xi_{i}^{\parallel}\rangle= & 0,\qquad\langle\xi_{i}^{\parallel}\xi_{j}^{\parallel}\rangle=2k_{B}T\gamma_{ij}^{\parallel}.
+u_{i}^{\parallel}(\omega) & =(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega),
 \end{align}
 
 \end_inset
