@@ -14,7 +14,7 @@
 \definecolor{myGreen}{rgb}{0.0, 1, 10.1}
 \definecolor{myBlue}{rgb}{0.9, 0.2, 0}
 \end_preamble
-\options aps, twocolumn, pre,superscriptaddress, notitlepage
+\options aps, twocolumn, pre,superscriptaddress, notitlepage, draft
 \use_default_options false
 \maintain_unincluded_children false
 \language english
@@ -109,6 +109,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -139,32 +140,39 @@ Multivariate Ornstein-Uhlenbeck Process
 \end_layout
 
 \begin_layout Standard
-This describes the Ornstein-Uhlenbeck process, whose sample paths obey the
- Ito stochastic differential equation 
+The multivariate Ornstein-Uhlenbeck is defined by the Ito stochastic differentia
+l equation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gardiner1985handbook"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-dx_{i}=-\lambda_{ij}x_{j}dt+\sigma_{ij}dW_{j},
+dx_{i}=-\lambda_{ij}x_{j}dt+(\sqrt{2D})_{ij}\cdot dW_{j}
 \end{equation}
 
 \end_inset
 
 where 
-\begin_inset Formula $\lambda$
+\begin_inset Formula $\lambda_{ij}$
 \end_inset
 
- is the mean-regression rate, 
-\begin_inset Formula $\sigma$
+ is a positive matrix of mean regression rates, 
+\begin_inset Formula $D_{ij}$
 \end_inset
 
- is the volatility and 
-\begin_inset Formula $W(t)$
+ is a symmetric positive-definite matrix of diffusion coefficients, 
+\begin_inset Formula $W_{i}(t)$
 \end_inset
 
- is the Wiener process 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "gardiner1985handbook"
-
+ are Wiener process and 
+\begin_inset Formula $i,j=1,\ldots,M$
 \end_inset
 
 .
@@ -172,12 +180,28 @@ key "gardiner1985handbook"
 \end_layout
 
 \begin_layout Standard
-The transition probability density 
+The probability density of a displacement from 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+ to 
+\begin_inset Formula $\boldsymbol{x}^{\prime}$
+\end_inset
+
+ at time 
+\begin_inset Formula $t^{\prime}$
+\end_inset
+
+, 
 \begin_inset Formula $P_{1|1}$
 \end_inset
 
 
-\begin_inset Formula $(x^{\prime}t^{\prime}|x\thinspace t$
+\begin_inset Formula $(\boldsymbol{x}^{\prime}t^{\prime}|\boldsymbol{x}\thinspace t$
 \end_inset
 
 
@@ -204,22 +228,6 @@ The transition probability density
 \uwave default
 \noun default
 \color inherit
-, the probability of a displacement from 
-\begin_inset Formula $x$
-\end_inset
-
- at time 
-\begin_inset Formula $t$
-\end_inset
-
- to 
-\begin_inset Formula $x^{\prime}$
-\end_inset
-
- at time 
-\begin_inset Formula $t^{\prime}$
-\end_inset
-
 , obeys the Fokker-Planck equation 
 \begin_inset Formula $\partial_{t}P_{1|1}=\mathcal{L}P_{1|1}$
 \end_inset
@@ -232,11 +240,11 @@ The transition probability density
 
 \end_inset
 
-The solution is a multivariate normal distribution,
+The solution is a multivariate normal distribution
 \begin_inset Formula 
-\[
+\begin{equation}
 \mathbf{\boldsymbol{x}}^{\prime}t^{\prime}|\boldsymbol{x}\thinspace t\sim\mathcal{N}\left(e^{\boldsymbol{-\lambda}\Delta t}\boldsymbol{x},\boldsymbol{c}-e^{\boldsymbol{-\lambda}\Delta t}\boldsymbol{c}\,e^{\boldsymbol{-\lambda}^{T}\Delta t}\right)
-\]
+\end{equation}
 
 \end_inset
 
@@ -258,7 +266,7 @@ where
 
 .
  This solution is exact and holds for arbitrary values of 
-\begin_inset Formula $|t-t^{\prime}|$
+\begin_inset Formula $|\Delta t|$
 \end_inset
 
 .
@@ -278,7 +286,32 @@ key "van1992stochastic"
 \end_inset
 
 .
- 
+ This shows that 
+\begin_inset Formula $\boldsymbol{c}$
+\end_inset
+
+ is the matrix of equal time variances.
+ The matrices 
+\begin_inset Formula $\boldsymbol{\lambda}$
+\end_inset
+
+, 
+\begin_inset Formula $\boldsymbol{D}$
+\end_inset
+
+ and 
+\begin_inset Formula $\boldsymbol{c}$
+\end_inset
+
+ are not all independent but are related by the stationarity condition
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{\lambda c}+(\boldsymbol{\lambda c})^{T}=2\boldsymbol{D}
+\end{equation}
+
+\end_inset
+
+
 \family roman
 \series medium
 \shape up
@@ -290,8 +323,20 @@ key "van1992stochastic"
 \uwave off
 \noun off
 \color none
-The PSD matrix, in terms of the linearised drift and diffusion matrices
- for a multivariate Ornstein-Uhlenbeck process is 
+This is a Lyapunov matrix equation for 
+\begin_inset Formula $\boldsymbol{c}$
+\end_inset
+
+ but when detailed balance, 
+\begin_inset Formula $\boldsymbol{\lambda c}=(\boldsymbol{\lambda c})^{T}$
+\end_inset
+
+, is satisfied the solution is simply obtained to be 
+\begin_inset Formula $\boldsymbol{c}=\boldsymbol{\lambda}^{-1}\boldsymbol{D}$
+\end_inset
+
+.
+ The power spectral density, 
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{P}(ω)=(\text{−}iω\mathbb{I}+\boldsymbol{\lambda})^{-1}\left(2\boldsymbol{D}\right)(iω\mathbb{I}+\boldsymbol{\lambda^{T}})^{-1}\label{eq:spectral-density}
@@ -299,22 +344,16 @@ The PSD matrix, in terms of the linearised drift and diffusion matrices
 
 \end_inset
 
-which is Lorentzian in the angular frequency 
+is a multivariate Lorentzian in the angular frequency 
 \begin_inset Formula $\omega$
 \end_inset
 
 .
- The corner frequency 
-\begin_inset Formula $f_{c}=\lambda/2\pi$
-\end_inset
-
- is proportional to the mean regression rate.
- 
 \end_layout
 
 \begin_layout Standard
 The stationary distribution 
-\begin_inset Formula $P_{1}(x)$
+\begin_inset Formula $P_{1}(\boldsymbol{x})$
 \end_inset
 
  obeys the steady state Fokker-Plank equation 
@@ -329,7 +368,16 @@ The stationary distribution
 
 \end_inset
 
+In the following, we shall assume that process is specified by the matrix
+ of mean regression rates 
+\begin_inset Formula $\boldsymbol{\lambda}$
+\end_inset
 
+ and the stationary covariance matrix 
+\begin_inset Formula $\boldsymbol{c}.$
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Section
@@ -337,12 +385,16 @@ Bayesian inference
 \end_layout
 
 \begin_layout Standard
-Consider, now the vector time series 
-\begin_inset Formula $\boldsymbol{X}=\left(\boldsymbol{x_{1}},\boldsymbol{x_{2}},...,\boldsymbol{x_{N}}\right)$
+Consider now the vector time series 
+\begin_inset Formula $\boldsymbol{X}=\left(\boldsymbol{x}_{1},\boldsymbol{x}_{2},...,\boldsymbol{x}_{N}\right)$
 \end_inset
 
- consisting of observations of the sample states of the multidimensional
- Ornstein-Uhlenbeck process at discrete times 
+ consisting of 
+\begin_inset Formula $N$
+\end_inset
+
+ observations of the sample path of the multidimensional Ornstein-Uhlenbeck
+ process at discrete times 
 \begin_inset Formula $t=n\Delta t$
 \end_inset
 
@@ -351,73 +403,52 @@ Consider, now the vector time series
 \end_inset
 
 .
- Then , using the Markov property of the sample path is given by
+ From the Markov property of the process, the probability of the path, given
+ the parameters 
+\begin_inset Formula $\boldsymbol{\lambda}$
+\end_inset
+
+ and 
+\begin_inset Formula $\boldsymbol{c}$
+\end_inset
+
+, is
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-P\left(\boldsymbol{X}\vert\boldsymbol{\lambda},\boldsymbol{C}\right)=\prod_{n=1}^{N-1}P_{1\vert1}\left(\boldsymbol{x_{n+1}}\vert\boldsymbol{x_{n}},\boldsymbol{\lambda},\boldsymbol{C}\right)P_{1}\left(\boldsymbol{x_{1}}\vert\boldsymbol{\lambda},\boldsymbol{C}\right)
+P\left(\boldsymbol{X}\vert\boldsymbol{\lambda},\boldsymbol{c}\right)=\prod_{n=1}^{N-1}P_{1\vert1}\left(\boldsymbol{x}_{n+1}\vert\boldsymbol{x}_{n},\boldsymbol{\lambda},\boldsymbol{c}\right)P_{1}\left(\boldsymbol{x}_{1}\vert\boldsymbol{\lambda},\boldsymbol{c}\right)
 \end{equation}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 The probability 
-\begin_inset Formula $P\left(\boldsymbol{\lambda},\boldsymbol{C}\vert\boldsymbol{X}\right)$
+\begin_inset Formula $P\left(\boldsymbol{\lambda},\boldsymbol{c}\vert\boldsymbol{X}\right)$
 \end_inset
 
- of the parameters, given the sample path, can now be computed using Bayes
- theorem, as
+ of the parameters, given the sample path, is given by Bayes theorem to
+ be
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-P\left(\boldsymbol{\lambda},\boldsymbol{C}\vert\boldsymbol{X}\right)=\dfrac{P\left(\bm{X}\vert\boldsymbol{\lambda},\boldsymbol{C}\right)P\left(\boldsymbol{\lambda},\boldsymbol{C}\right)}{P\left(\boldsymbol{X}\right)}
+P\left(\boldsymbol{\lambda},\boldsymbol{c}\vert\boldsymbol{X}\right)=\dfrac{P\left(\bm{X}\vert\boldsymbol{\lambda},\boldsymbol{c}\right)P\left(\boldsymbol{\lambda},\boldsymbol{c}\right)}{P\left(\boldsymbol{X}\right)}
 \]
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-The matrix operator 
-\begin_inset Formula $\bm{K}\left(\bm{x_{n+1},x_{n}}|\Delta t\right)\equiv\exp\left(\bm{-\lambda}\Delta t\right)$
-\end_inset
-
- serves as a propagator for the system as the system evolves from initial
- state 
-\begin_inset Formula $\bm{x_{n}}$
-\end_inset
-
- to final state 
-\begin_inset Formula $\bm{x_{n+1}}$
-\end_inset
-
- in time 
-\begin_inset Formula $\Delta t$
-\end_inset
-
- .
- The logarithm of the posterior probability, after using the explicit forms
+The logarithm of the posterior probability, after using the explicit forms
  of 
 \begin_inset Formula $P_{1\vert1}$
 \end_inset
 
- and 
-\begin_inset Formula $P_{1}$
-\end_inset
-
-, is
+ and , is
 \begin_inset Formula 
 \begin{align}
 \ln P\left(\bm{\lambda},\bm{C}\vert\bm{X}\right) & =\dfrac{N-1}{2}\ln\left(\dfrac{1}{4\pi^{2}\vert\bm{\Sigma}\vert}\right)-\dfrac{1}{2}\sum_{n=1}^{N-1}\bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}\nonumber \\
- & +\dfrac{1}{2}\ln\left(\dfrac{1}{4\pi^{2}|\bm{C}|}\right)-\dfrac{1}{2}\bm{x_{1}^{T}C^{-1}x_{1}}
+ & +\dfrac{1}{2}\ln\left(\dfrac{1}{4\pi^{2}|\bm{c}|}\right)-\dfrac{1}{2}\boldsymbol{x}_{1}^{T}\boldsymbol{c}\boldsymbol{x}
 \end{align}
 
 \end_inset
