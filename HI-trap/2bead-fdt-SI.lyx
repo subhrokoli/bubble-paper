@@ -728,7 +728,7 @@ instantaneous
 \begin_inset Formula $\boldsymbol{\rho}=\boldsymbol{r}_{1}^{0}-\boldsymbol{r}_{2}^{0}$
 \end_inset
 
-,  is independent of time.
+, is independent of time.
  This yields a linear equation of motion for the small displacements 
 \begin_inset Formula $\boldsymbol{u}_{i}$
 \end_inset
@@ -1140,7 +1140,7 @@ C_{ij}(\omega)= & \frac{2k_{B}T}{(\text{det}A-\omega^{2})^{2}+(\omega\begin{tabu
 
 \end_inset
 
-Carrying out the matrix multiplication the correlation function is 
+Carrying out the matrix multiplication give the final result 
 \begin_inset Formula 
 \begin{align}
 C_{ij}(\omega)= & \frac{2k_{B}T}{\omega}\text{Im}\left[\chi_{ij}^{||}(\omega)\right].
