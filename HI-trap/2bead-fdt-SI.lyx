@@ -1066,7 +1066,7 @@ C_{ij}(\omega)= & \frac{2k_{B}T}{(\text{det}A-\omega^{2})^{2}+(\omega\begin{tabu
 
 \end_inset
 
-Carrying out the matrix multiplication give the final result 
+Completing the matrix multiplications, the final result is
 \begin_inset Formula 
 \begin{align}
 C_{ij}(\omega)= & \frac{2k_{B}T}{\omega}\text{Im}\left[\chi_{ij}^{||}(\omega)\right].
