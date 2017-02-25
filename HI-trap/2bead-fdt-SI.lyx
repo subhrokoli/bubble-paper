@@ -974,7 +974,15 @@ which in non-zero only if there is viscous coupling,
 \end_layout
 
 \begin_layout Standard
-To calculate the correlation function, we set the modulation of the traps
+
+\emph on
+(v
+\emph default
+) 
+\emph on
+correlation function
+\emph default
+: To calculate the correlation function, we set the modulation of the traps
  to zero, 
 \begin_inset Formula $\boldsymbol{u}_{i}^{0}(t)=0,$
 \end_inset
