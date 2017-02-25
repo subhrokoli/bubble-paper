@@ -1104,15 +1104,14 @@ The correlation function is then
 \color inherit
 
 \begin_inset Formula 
-\begin{align}
-C_{ij}(\omega) & =\langle u_{i}^{\parallel}(\omega)u_{j}^{\parallel}(\omega)\rangle=(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\nonumber \\
- & \times(-i\omega\delta_{jm}+A_{jm}^{T})^{-1}\mu_{mk'}^{||}\langle\xi_{k}\xi_{k'}\rangle.
-\end{align}
+\begin{gather*}
+C_{ij}(\omega)=\langle u_{i}^{\parallel}(\omega)u_{j}^{\parallel}(\omega)\rangle=\\
+(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\langle\xi_{k}\xi_{k'}\rangle\mu_{k'm}^{||}(-i\omega\delta_{mj}+A_{mj}^{T})^{-1}
+\end{gather*}
 
 \end_inset
 
-Using the expressions for the variance of the noise, the expression of correlati
-on function becomes 
+Inserting the variance of the the noise, the correlation function is 
 \begin_inset Formula 
 \begin{align*}
 C_{ij}(\omega)= & \frac{2k_{B}T}{(\text{det}A-\omega^{2})^{2}+(\omega\begin{tabular}{c}
@@ -1124,7 +1123,8 @@ C_{ij}(\omega)= & \frac{2k_{B}T}{(\text{det}A-\omega^{2})^{2}+(\omega\begin{tabu
 \times & \left(\begin{array}{cc}
 \mu_{11} & \mu_{12}\\
 \mu_{21} & \mu_{22}
-\end{array}\right)\left(\begin{array}{cc}
+\end{array}\right)\\
+\times & \left(\begin{array}{cc}
 \mu_{22}k_{2}+i\omega & -\mu_{21}k_{2}\\
 -\mu_{12}k_{1} & \mu_{11}k_{1}+i\omega
 \end{array}\right).
@@ -1132,7 +1132,7 @@ C_{ij}(\omega)= & \frac{2k_{B}T}{(\text{det}A-\omega^{2})^{2}+(\omega\begin{tabu
 
 \end_inset
 
-Multiplying the matrices above, the correlation function is 
+Carrying out the matrix multiplication the correlation function is 
 \begin_inset Formula 
 \begin{align}
 C_{ij}(\omega)= & \frac{2k_{B}T}{\omega}\text{Im}\left[\chi_{ij}^{||}(\omega)\right].
