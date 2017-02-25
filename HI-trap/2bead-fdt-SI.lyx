@@ -825,9 +825,9 @@ where
 
 
 \begin_inset Formula 
-\[
+\begin{equation}
 \boldsymbol{u}_{i}=u_{i}^{\parallel}\hat{\mathbf{\boldsymbol{\rho}}}+\boldsymbol{u}_{i}^{\perp}\cdot(\boldsymbol{I}-\hat{\mathbf{\boldsymbol{\rho}}}\hat{\mathbf{\boldsymbol{\rho}}}).
-\]
+\end{equation}
 
 \end_inset
 
@@ -1016,89 +1016,15 @@ ent fluctuations
 
 \end_inset
 
-The Fourier amplitudes of the displacements are 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{subequations}
-\end_layout
-
-\end_inset
-
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
+The Fourier amplitudes of the displacements are
 \begin_inset Formula 
-\begin{align}
-u_{i}^{\parallel}(\omega) & =(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega),
-\end{align}
+\begin{align*}
+u_{i}^{\parallel}(\omega) & =(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega)
+\end{align*}
 
 \end_inset
 
-
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{subequations}
-\end_layout
-
-\end_inset
-
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-The correlation function is then
+and the correlation function is then
 \family default
 \series default
 \shape default
@@ -1114,29 +1040,29 @@ The correlation function is then
 \begin_inset Formula 
 \begin{gather*}
 C_{ij}(\omega)=\langle u_{i}^{\parallel}(\omega)u_{j}^{\parallel}(\omega)\rangle=\\
-(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\langle\xi_{k}\xi_{k'}\rangle\mu_{k'm}^{||}(-i\omega\delta_{mj}+A_{mj}^{T})^{-1}
+(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\langle\xi_{k}\xi_{k'}\rangle\mu_{k'm}^{||}(-i\omega\delta_{mj}+A_{mj}^{T})^{-1}.
 \end{gather*}
 
 \end_inset
 
 Inserting the variance of the the noise, the correlation function is 
 \begin_inset Formula 
-\begin{align*}
+\begin{align}
 C_{ij}(\omega)= & \frac{2k_{B}T}{(\text{det}A-\omega^{2})^{2}+(\omega\begin{tabular}{c}
- tr\end{tabular}A)^{2}}\\
+ tr\end{tabular}A)^{2}}\nonumber \\
 \times & \left(\begin{array}{cc}
 \mu_{22}k_{2}-i\omega & -\mu_{12}k_{2}\\
 -\mu_{21}k_{1} & \mu_{11}k_{1}-i\omega
-\end{array}\right)\\
+\end{array}\right)\nonumber \\
 \times & \left(\begin{array}{cc}
 \mu_{11} & \mu_{12}\\
 \mu_{21} & \mu_{22}
-\end{array}\right)\\
+\end{array}\right)\nonumber \\
 \times & \left(\begin{array}{cc}
 \mu_{22}k_{2}+i\omega & -\mu_{21}k_{2}\\
 -\mu_{12}k_{1} & \mu_{11}k_{1}+i\omega
 \end{array}\right).
-\end{align*}
+\end{align}
 
 \end_inset
 
