@@ -724,11 +724,11 @@ instantaneous
 \noun off
 \color none
  position of the trap center.
- The mean distance between the trap centers is 
+ The mean distance between the trap centers, 
 \begin_inset Formula $\boldsymbol{\rho}=\boldsymbol{r}_{1}^{0}-\boldsymbol{r}_{2}^{0}$
 \end_inset
 
- is independent of time.
+,  is independent of time.
  This yields a linear equation of motion for the small displacements 
 \begin_inset Formula $\boldsymbol{u}_{i}$
 \end_inset
