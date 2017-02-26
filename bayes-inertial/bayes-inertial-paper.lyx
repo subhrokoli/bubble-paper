@@ -270,6 +270,11 @@ where
 \end_inset
 
 .
+ The matrix 
+\begin_inset Formula $\boldsymbol{c}=\langle\boldsymbol{x}\boldsymbol{x}^{T}\rangle$
+\end_inset
+
+ contains the variances and covariances in the stationary state.
  The correlation function decays exponentially, 
 \begin_inset Formula 
 \begin{equation}
@@ -286,12 +291,35 @@ key "van1992stochastic"
 \end_inset
 
 .
- This shows that 
-\begin_inset Formula $\boldsymbol{c}$
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+The power spectral density
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{P}(ω)=(\text{−}iω\boldsymbol{I}+\boldsymbol{\lambda})^{-1}\left(2\boldsymbol{D}\right)(iω\boldsymbol{I}+\boldsymbol{\lambda^{T}})^{-1}\label{eq:spectral-density}
+\end{equation}
+
 \end_inset
 
- is the matrix of equal time variances.
- The matrices 
+is a multivariate Lorentzian in the angular frequency 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The matrices 
 \begin_inset Formula $\boldsymbol{\lambda}$
 \end_inset
 
@@ -324,31 +352,31 @@ key "van1992stochastic"
 \noun off
 \color none
 This is a Lyapunov matrix equation for 
-\begin_inset Formula $\boldsymbol{c}$
+\begin_inset Formula $\boldsymbol{c},$
 \end_inset
 
- but when detailed balance, 
+ given 
+\begin_inset Formula $\boldsymbol{\lambda}$
+\end_inset
+
+ and 
+\begin_inset Formula $\boldsymbol{D}$
+\end_inset
+
+.
+ When detailed balance, 
 \begin_inset Formula $\boldsymbol{\lambda c}=(\boldsymbol{\lambda c})^{T}$
 \end_inset
 
-, is satisfied the solution is simply obtained to be 
+, is satisfied, the solution is 
 \begin_inset Formula $\boldsymbol{c}=\boldsymbol{\lambda}^{-1}\boldsymbol{D}$
 \end_inset
 
 .
- The power spectral density, 
-\begin_inset Formula 
-\begin{equation}
-\boldsymbol{P}(ω)=(\text{−}iω\mathbb{I}+\boldsymbol{\lambda})^{-1}\left(2\boldsymbol{D}\right)(iω\mathbb{I}+\boldsymbol{\lambda^{T}})^{-1}\label{eq:spectral-density}
-\end{equation}
-
-\end_inset
-
-is a multivariate Lorentzian in the angular frequency 
-\begin_inset Formula $\omega$
-\end_inset
-
-.
+ Alternatively, if the covariance matrix is known, as is typically the case
+ in physical applications, the variance of the noise can be obtained given
+ the mean regression rates.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -448,34 +476,45 @@ The logarithm of the posterior probability, after using the explicit forms
 \begin_inset Formula $P_{1}$
 \end_inset
 
-, is
+, is 
 \begin_inset Formula 
 \begin{align}
-\ln P\left(\bm{\lambda},\bm{C}\vert\bm{X}\right) & =\dfrac{N-1}{2}\ln\left(\dfrac{1}{4\pi^{2}\vert\bm{\Sigma}\vert}\right)-\dfrac{1}{2}\sum_{n=1}^{N-1}\boldsymbol{\Delta}_{n}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\Delta}_{n}\nonumber \\
- & +\dfrac{1}{2}\ln\left(\dfrac{1}{4\pi^{2}|\bm{c}|}\right)-\dfrac{1}{2}\boldsymbol{x}_{1}^{T}\boldsymbol{c}\,\boldsymbol{x}_{1}
+\ln P\left(\bm{\lambda},\bm{c}\vert\bm{X}\right) & =\dfrac{N-1}{2}\ln\dfrac{1}{4\pi^{2}\vert\bm{\Sigma}\vert}+\dfrac{1}{2}\ln\dfrac{1}{4\pi^{2}|\bm{c}|}\nonumber \\
+ & -\dfrac{1}{2}\sum_{n=1}^{N-1}\boldsymbol{\Delta}_{n}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\Delta}_{n}-\dfrac{1}{2}\boldsymbol{x}_{1}^{T}\boldsymbol{c}\,\boldsymbol{x}_{1}
 \end{align}
 
 \end_inset
 
-where the two quantities
+where the two quantities 
+\begin_inset Formula $\boldsymbol{\Sigma}$
+\end_inset
+
+ and 
+\begin_inset Formula $\boldsymbol{\Delta}_{n}$
+\end_inset
+
+ are 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{align*}
-\bm{\Sigma} & \equiv\boldsymbol{c}-e^{\boldsymbol{-\lambda}\Delta t}\boldsymbol{c}\,e^{\boldsymbol{-\lambda}^{T}\Delta t}\\
-\boldsymbol{\Delta}_{n} & \equiv\boldsymbol{x}_{n+1}-e^{\boldsymbol{-\lambda}\Delta t}\boldsymbol{x}_{n}.
-\end{align*}
+\begin{equation}
+\bm{\Sigma}\equiv\boldsymbol{c}-e^{\boldsymbol{-\lambda}\Delta t}\boldsymbol{c}\,e^{\boldsymbol{-\lambda}^{T}\Delta t},\,\,\boldsymbol{\Delta}_{n}\equiv\boldsymbol{x}_{n+1}-e^{\boldsymbol{-\lambda}\Delta t}\boldsymbol{x}_{n}.
+\end{equation}
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 With some elementary manipulations, detailed in the Appendix, the posterior
  probability can be written in terms of the following four sufficient statistics
  
 \begin_inset Formula 
 \begin{flalign}
-\boldsymbol{T}^{(1)} & =\sum_{n=1}^{N-1}\boldsymbol{x}_{n+1}\boldsymbol{x}_{n+1}^{T},\quad\boldsymbol{T}^{(2)}=\sum_{n=1}^{N-1}\boldsymbol{x}_{n+1}\boldsymbol{x}_{n}^{T}\nonumber \\
-\boldsymbol{T}^{(3)} & =\sum_{n=1}^{N-1}\boldsymbol{x}_{n}\boldsymbol{x}_{n}^{T},\quad\quad\quad\boldsymbol{T}^{(4)}=\boldsymbol{x}_{1}\boldsymbol{x}_{1}^{T}
+\boldsymbol{T}_{1} & =\sum_{n=1}^{N-1}\boldsymbol{x}_{n+1}\boldsymbol{x}_{n+1}^{T},\quad\boldsymbol{T}_{2}=\sum_{n=1}^{N-1}\boldsymbol{x}_{n+1}\boldsymbol{x}_{n}^{T}\nonumber \\
+\boldsymbol{T}_{3} & =\sum_{n=1}^{N-1}\boldsymbol{x}_{n}\boldsymbol{x}_{n}^{T},\quad\quad\quad\boldsymbol{T}_{4}=\boldsymbol{x}_{1}\boldsymbol{x}_{1}^{T}
 \end{flalign}
 
 \end_inset
@@ -487,7 +526,7 @@ and the maximum a posteriori estimates for the matrix of mean regression
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\bm{\lambda^{\ast}}=-\dfrac{1}{\Delta t}\ln(\bm{T_{2}T_{3}^{-1}})\label{eq:map_lambda}
+\bm{\lambda^{\ast}}=-\dfrac{1}{\Delta t}\ln(\bm{T}_{2}\boldsymbol{T}_{3}^{-1})\label{eq:map_lambda}
 \end{equation}
 
 \end_inset
@@ -498,136 +537,14 @@ and the maximum a posteriori estimates for the matrix of mean regression
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\bm{\Sigma^{\ast}}=\dfrac{1}{N}\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\label{eq:map_sigma}
+\bm{\Sigma^{\ast}}=\dfrac{1}{N}\left(\bm{T}_{1}-\boldsymbol{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{T}_{2}^{T}\right)\label{eq:map_sigma}
 \end{equation}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-We now make the assumption that the number of samples is large, we can make
- the approximation 
-\begin_inset Formula $\left(N-1\right)\approx N$
-\end_inset
-
-.
- The large sample approximation also enables us to neglect the contribution
- made by the terms originating from the stationary distribution.
- Finally, we can approximate the logarithm of the posterior probability
- as
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{align}
-\nonumber \\
-\nonumber \\
-\nonumber \\
-\label{eq:lp}
-\end{align}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Writing only the terms containing 
-\begin_inset Formula $\lambda$
-\end_inset
-
-,
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{align*}
-P\left(\bm{\lambda},\bm{\Sigma}|\bm{X}\right) & \propto\exp\Bigg(-\dfrac{1}{2}\bm{\Sigma^{-1}}:\left(\bm{K}-\bm{T_{2}T_{3}^{-1}}\right)\\
- & \left(\bm{T_{3}}\right)\left(\bm{K}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}\Bigg)
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-We recognize that the posterior is a Gaussian with respect to 
-\begin_inset Formula $\exp\left(-\bm{\lambda}\Delta t\right)$
-\end_inset
-
-.
- The mean of the Gaussian yields the maximum a posteriori (MAP) estimate
- of 
-\begin_inset Formula $\bm{\lambda}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Taking the derivative of 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:lp"
-
-\end_inset
-
- with respect to 
-\begin_inset Formula $\Sigma^{-1}$
-\end_inset
-
- and using the matrix identity 
-\begin_inset Formula $\dfrac{\partial\ln\left(\det\bm{A}\right)}{\partial\bm{A}}=\left(\bm{A}^{T}\right)^{-1}$
-\end_inset
-
-, we obtain
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{align*}
- & \dfrac{\partial\ln P\left(\bm{\lambda},\bm{\Sigma}\vert\bm{X}\right)}{\partial\bm{\Sigma^{-1}}}\\
- & =-\dfrac{1}{2}\Big[\left(\bm{K}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\left(\bm{K}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}\\
- & +\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big]+\dfrac{N}{2}\left(\bm{\Sigma}\right)
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Setting this derivative to zero, and noting that 
-\begin_inset Formula $\boldsymbol{K^{\ast}=}\exp\left(-\bm{\lambda^{\ast}}\Delta t\right)=\bm{T_{2}T_{3}^{-1}}$
-\end_inset
-
- at the maximum a posteriori condition, we obtain the MAP estimate for 
-\begin_inset Formula $\bm{\Sigma}$
-\end_inset
-
- as
-\end_layout
-
-\begin_layout Standard
-Equations 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map_lambda"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map_sigma"
-
-\end_inset
-
- give the MAP estimates of the drift matrix and the transition variance
- covariance matrix respectively.
+The error bars can be derived by expanding the log posterior to quadratic
+ order around the MAP estimate.
+ 
 \end_layout
 
 \begin_layout Section
@@ -921,6 +838,103 @@ Consider the quantity
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Writing only the terms containing 
+\begin_inset Formula $\lambda$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+P\left(\bm{\lambda},\bm{\Sigma}|\bm{X}\right) & \propto\exp\Bigg(-\dfrac{1}{2}\bm{\Sigma^{-1}}:\left(\bm{K}-\bm{T_{2}T_{3}^{-1}}\right)\\
+ & \left(\bm{T_{3}}\right)\left(\bm{K}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}\Bigg)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We recognize that the posterior is a Gaussian with respect to 
+\begin_inset Formula $\exp\left(-\bm{\lambda}\Delta t\right)$
+\end_inset
+
+.
+ The mean of the Gaussian yields the maximum a posteriori (MAP) estimate
+ of 
+\begin_inset Formula $\bm{\lambda}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Taking the derivative of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:lp"
+
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\Sigma^{-1}$
+\end_inset
+
+ and using the matrix identity 
+\begin_inset Formula $\dfrac{\partial\ln\left(\det\bm{A}\right)}{\partial\bm{A}}=\left(\bm{A}^{T}\right)^{-1}$
+\end_inset
+
+, we obtain
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \dfrac{\partial\ln P\left(\bm{\lambda},\bm{\Sigma}\vert\bm{X}\right)}{\partial\bm{\Sigma^{-1}}}\\
+ & =-\dfrac{1}{2}\Big[\left(\bm{K}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\left(\bm{K}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}\\
+ & +\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big]+\dfrac{N}{2}\left(\bm{\Sigma}\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Setting this derivative to zero, and noting that 
+\begin_inset Formula $\boldsymbol{K^{\ast}=}\exp\left(-\bm{\lambda^{\ast}}\Delta t\right)=\bm{T_{2}T_{3}^{-1}}$
+\end_inset
+
+ at the maximum a posteriori condition, we obtain the MAP estimate for 
+\begin_inset Formula $\bm{\Sigma}$
+\end_inset
+
+ as
+\end_layout
+
+\begin_layout Standard
+Equations 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map_lambda"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map_sigma"
+
+\end_inset
+
+ give the MAP estimates of the drift matrix and the transition variance
+ covariance matrix respectively.
 \end_layout
 
 \end_body
