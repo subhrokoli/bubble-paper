@@ -930,6 +930,9 @@ begin{widetext}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -1033,10 +1036,10 @@ and the correlation function is then
 \color inherit
 
 \begin_inset Formula 
-\begin{gather*}
-C_{ij}(\omega)=\langle u_{i}^{\parallel}(\omega)u_{j}^{\parallel}(\omega)\rangle=\\
-(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\langle\xi_{k}\xi_{k'}\rangle\mu_{k'm}^{||}(-i\omega\delta_{mj}+A_{mj}^{T})^{-1}.
-\end{gather*}
+\begin{gather}
+C_{ij}(\omega)=\langle u_{i}^{\parallel}(\omega)u_{j}^{^{\dagger}\parallel}(\omega)\rangle=\\
+(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\langle\xi_{k}\xi_{k'}\rangle\mu_{k'm}^{||}(+i\omega\delta_{mj}+A_{mj}^{T})^{-1}.\nonumber 
+\end{gather}
 
 \end_inset
 
@@ -1047,15 +1050,20 @@ C_{ij}(\omega)= & \frac{2k_{B}T}{(\text{det}A-\omega^{2})^{2}+(\omega\begin{tabu
  tr\end{tabular}A)^{2}}\nonumber \\
 \times & \left(\begin{array}{cc}
 \mu_{22}^{\parallel}k_{2}-i\omega & -\mu_{12}^{\parallel}k_{2}\\
--\mu_{21}^{\parallel}k_{1} & \mu_{11}^{\parallel}k_{1}-i\omega
+\\
+-\mu_{21}^{\parallel}k_{1} & \mu_{11}^{\parallel}k_{1}-i\omega\\
+\\
 \end{array}\right)\nonumber \\
 \times & \left(\begin{array}{cc}
 \mu_{11}^{\parallel} & \mu_{12}^{\parallel}\\
-\mu_{21}^{\parallel} & \mu_{22}^{\parallel}
+\\
+\mu_{21}^{\parallel} & \mu_{22}^{\parallel}\\
+\\
 \end{array}\right)\nonumber \\
 \times & \left(\begin{array}{cc}
-\mu_{22}^{\parallel}k_{2}+i\omega & -\mu_{21}^{\parallel}k_{2}\\
--\mu_{12}^{\parallel}k_{1} & \mu_{11}^{\parallel}k_{1}+i\omega
+\mu_{22}^{\parallel}k_{2}+i\omega & -\mu_{21}^{\parallel}k_{1}\\
+\\
+-\mu_{12}^{\parallel}k_{2} & \mu_{11}^{\parallel}k_{1}+i\omega
 \end{array}\right).
 \end{align}
 
