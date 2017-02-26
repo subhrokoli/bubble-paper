@@ -160,6 +160,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -173,6 +174,7 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -214,8 +216,9 @@ resonance
 \begin_inset Quotes erd
 \end_inset
 
- is a sensitive function of the trap stiffnesses and the fluid viscosity
- suggesting the utility of the trap setup for accurate two-point microrheology.
+ is a sensitive function of the trap stiffnesses and the fluid viscosity,
+ and the position and width of the resonance can be tuned independently
+ - suggesting the utility of the trap setup for accurate two-point microrheology.
 \end_layout
 
 \begin_layout PACS
@@ -816,7 +819,7 @@ M_{ij}=\left(\begin{array}{cc}
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -845,13 +848,28 @@ centering
 Amplitude and phase response for driving (B1) and driven (B2) beads for
  different trap stiffness ratios.
  (a) and (b) demonstrate amplitude and phase responses (with respect to
- driving frequency) of B1, while (c) and (d) demonstrate that of B2 as functions
- of driving frequency, for trap stiffness ratios of 2.5:1 (black), 5.7:1 (red),
- and 14.5:1 (blue).
+ driving frequency) of B1, while (c), (d), and (e) demonstrate that of B2
+ as functions of driving frequency, for trap stiffness ratios of 2.5:1 (black),
+ 5.7:1 (red), and 14.5:1 (blue) for (c) and (e).
  The resonance frequency in (c) is 20 Hz (black), 35 Hz (red), and 111 Hz
  (blue).
  The solid spheres denote experimental data points while the solid lines
  are corresponding theoretical fits.
+ In (d), we demonstrate the independent tuning of the resonance in terms
+ of 
+\begin_inset Formula $\mathit{Q}$
+\end_inset
+
+-factor and center frequency.
+ The red, black and blue colors represent calculated amplitude responses
+ for trap stiffness ratios of 1, 4, and 9, with corresponding 
+\begin_inset Formula $\mathit{Q}$
+\end_inset
+
+-factors of 0.453, 0.362, and 0.27, respectively.
+ The solid lines, dashed-dotted, and dashed lines have resonance frequencies
+ of 5, 25, and 50 Hz, respectively.
+ (e) shows the phase response of B2.
 \end_layout
 
 \end_inset
@@ -919,14 +937,54 @@ reference "response"
 
  factor) is also dependent on this ratio, and increases as the stiffness
  ratio is lowered.
- The phase response in 
+ We also demonstrate that the resonance is independently tunable in terms
+ of center frequency and 
+\begin_inset Formula $\mathit{Q}$
+\end_inset
+
+-factor, as is demonstrated in Fig.
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "response"
 
 \end_inset
 
-(d) is easily explained: B2 lags 90 degrees in phase with respect to the
+(e).
+ Here we plot the amplitude response for three different trap stiffness
+ ratios of 1 (blue), 4 (black), and 9 (red), respectively.
+ The 
+\begin_inset Formula $\mathit{Q}$
+\end_inset
+
+-factor is dependent on this ratio, and is the lowest when the stiffness
+ ratio is 1 (
+\begin_inset Formula $\mathit{Q}$
+\end_inset
+
+ = 0.453), and lowest when it is 9 (
+\begin_inset Formula $\mathit{Q}$
+\end_inset
+
+ = 0.27).
+ The resonance frequency is determined by the absolute values of the trap
+ stiffnesses - here we choose values so that the frequency is 5 (solid line),
+ 25 (dashed-dotted line), and 50 (dashed line) Hz.
+ The value of the 
+\begin_inset Formula $\mathit{Q}$
+\end_inset
+
+-factor as well as the resonance frequency also depends on the damping,
+ and can be modified by changing the viscosity of the solution.
+ This property promises the measurement of this frequency shift as an accurate
+ two-point micro-rheology probe of local viscosity of a fluid.
+ Finally, the phase response in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "response"
+
+\end_inset
+
+(e) is easily explained: B2 lags 90 degrees in phase with respect to the
  drive at very low frequencies with the lag reducing until the drive and
  driven are in phase at resonance, after which the driven bead leads in
  phase, and asymptotically approaches 90 degrees at high frequencies.
@@ -934,17 +992,6 @@ reference "response"
  velocity and driving force for a forced damped harmonic oscillator.
  Note that we fit each graph with the calculated values of the responses
  for the experimental parameters used, and obtain very good fits.
- An interesting point that needs to be mentioned here is that the resonance
- frequency is dependent on the viscosity of the fluid as shown in Eq.
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq14"
-
-\end_inset
-
-, which implies that it would shift with changing viscosity.
- This property promises the measurement of this frequency shift as an accurate
- two-point micro-rheology probe of local viscosity of a fluid.
  
 \end_layout
 
@@ -973,12 +1020,12 @@ In conclusion, we study the coupled dynamics of two colloidal particles
  the current in an LCR circuit, and the amplitude actually undergoes a resonance
  at a particular driving frequency where the transfer of energy is maximum
  between drive and driven.
- We note that the resonance position and width are sensitive function of
- the ratio of the trap stiffnesses, so that a judicious choice of stiffness
- is required to observe effects with good SNR.
- Finally, the amplitude resonance frequency also depends on the fluid viscosity,
- which promises a direct application of this technique as a sensitive two-point
- microrheology probe of local viscosity.
+ We note that the resonance position and width are completely tunable by
+ changing the ratio of the trap stiffnesses, so that a judicious choice
+ of stiffness is required to observe effects with good SNR.
+ Finally, the amplitude resonance frequency and width also depend on the
+ fluid viscosity, which promises a direct application of this technique
+ as a sensitive two-point microrheology probe of local viscosity.
 \end_layout
 
 \begin_layout Standard
