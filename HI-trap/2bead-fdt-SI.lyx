@@ -865,9 +865,9 @@ response function
 \emph default
 : in the final step the coupled equations are written as
 \begin_inset Formula 
-\[
+\begin{equation}
 \dot{u}_{i}^{||}+A_{ij}u_{j}^{||}=\mu_{ik}^{||}f_{k}
-\]
+\end{equation}
 
 \end_inset
 
@@ -984,7 +984,7 @@ correlation function
 \begin_inset Formula $\boldsymbol{u}_{i}^{0}(t)$
 \end_inset
 
-,  of the traps to zero in Eq.(
+, of the traps to zero in Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:linearized-LE"
@@ -1015,9 +1015,9 @@ ent fluctuations
 
 The Fourier amplitudes of the displacements are
 \begin_inset Formula 
-\begin{align*}
+\begin{align}
 u_{i}^{\parallel}(\omega) & =(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega)
-\end{align*}
+\end{align}
 
 \end_inset
 
