@@ -920,19 +920,16 @@ begin{widetext}
 \text{Im}\left[\chi_{ij}^{||}(\omega)\right]= & \frac{\omega}{(\text{det}A-\omega^{2})^{2}+(\omega\begin{tabular}{c}
  tr\end{tabular}A)^{2}}\left(\begin{array}{cc}
 \begin{tabular}{c}
- \tfrac{k_{2}}{k_{1}}\mu_{22}\end{tabular}\text{det}A+\mu_{11}\omega^{2} & -\mu_{12}(\text{det}A-\omega^{2})\\
+ \tfrac{k_{2}}{k_{1}}\mu_{22}^{\parallel}\end{tabular}\text{det}A+\mu_{11}^{\parallel}\omega^{2} & -\mu_{12}^{\parallel}(\text{det}A-\omega^{2})\\
 \, & \,\\
--\mu_{21}(\text{det}A-\omega^{2}) & \begin{tabular}{c}
- \tfrac{k_{1}}{k_{2}}\mu_{11}\end{tabular}\text{det}A+\mu_{22}\omega^{2}
+-\mu_{21}^{\parallel}(\text{det}A-\omega^{2}) & \begin{tabular}{c}
+ \tfrac{k_{1}}{k_{2}}\mu_{11}^{\parallel}\end{tabular}\text{det}A+\mu_{22}\omega^{2}
 \end{array}\right).
 \end{align}
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -949,21 +946,21 @@ The modulus of the response of the first bead to the driving of the second
  bead is 
 \begin_inset Formula 
 \begin{eqnarray}
-|\chi_{21}^{||}| & =\Big| & \frac{i\omega\mu_{21}}{\text{det}A-\omega^{2}-i\omega\begin{tabular}{c}
- tr\end{tabular}A}\Big|
+|\chi_{21}^{||}| & =\Big| & \frac{i\omega\mu_{21}^{\parallel}}{\text{det}A-\omega^{2}-i\omega\begin{tabular}{c}
+ tr\end{tabular}A}\Big|,
 \end{eqnarray}
 
 \end_inset
 
 which in non-zero only if there is viscous coupling, 
-\begin_inset Formula $\mu_{12}\neq0$
+\begin_inset Formula $\mu_{12}^{\parallel}\neq0$
 \end_inset
 
 .
  The modulus has a maximum at 
 \begin_inset Formula 
 \begin{equation}
-\omega_{res}=\sqrt{\text{det}A}=\sqrt{\mu_{11}\mu_{22}k_{1}k_{2}\left(1-\frac{\mu_{12}\mu_{21}}{\mu_{11}\mu_{22}}\right)}.
+\omega_{res}=\sqrt{\text{det}A}=\sqrt{\mu_{11}^{\parallel}\mu_{22}^{\parallel}k_{1}k_{2}\left(1-\frac{\mu_{12}^{\parallel}\mu_{21}^{\parallel}}{\mu_{11}^{\parallel}\mu_{22}^{\parallel}}\right)}.
 \end{equation}
 
 \end_inset
@@ -1008,8 +1005,8 @@ ent fluctuations
 
 \begin_inset Formula 
 \begin{gather}
-\boldsymbol{\gamma}_{ij}^{\parallel}\dot{u}_{j}^{\parallel}(t)+k_{i}u_{i}^{\parallel}(t)=\xi_{i}^{\parallel}(t).\label{eq:overdamped-1}\\
-\langle\xi_{i}^{\parallel}(t)\xi_{j}^{\parallel}(t')\rangle=2k_{B}T\gamma_{ij}^{\parallel}\delta(t-t')
+\boldsymbol{\gamma}_{ij}^{\parallel}\dot{u}_{j}^{\parallel}(t)+k_{i}u_{i}^{\parallel}(t)=\xi_{i}^{\parallel}(t),\label{eq:overdamped-1}\\
+\langle\xi_{i}^{\parallel}(t)\xi_{j}^{\parallel}(t')\rangle=2k_{B}T\gamma_{ij}^{\parallel}\delta(t-t').
 \end{gather}
 
 \end_inset
@@ -1049,16 +1046,16 @@ Inserting the variance of the the noise, the correlation function is
 C_{ij}(\omega)= & \frac{2k_{B}T}{(\text{det}A-\omega^{2})^{2}+(\omega\begin{tabular}{c}
  tr\end{tabular}A)^{2}}\nonumber \\
 \times & \left(\begin{array}{cc}
-\mu_{22}k_{2}-i\omega & -\mu_{12}k_{2}\\
--\mu_{21}k_{1} & \mu_{11}k_{1}-i\omega
+\mu_{22}^{\parallel}k_{2}-i\omega & -\mu_{12}^{\parallel}k_{2}\\
+-\mu_{21}^{\parallel}k_{1} & \mu_{11}^{\parallel}k_{1}-i\omega
 \end{array}\right)\nonumber \\
 \times & \left(\begin{array}{cc}
-\mu_{11} & \mu_{12}\\
-\mu_{21} & \mu_{22}
+\mu_{11}^{\parallel} & \mu_{12}^{\parallel}\\
+\mu_{21}^{\parallel} & \mu_{22}^{\parallel}
 \end{array}\right)\nonumber \\
 \times & \left(\begin{array}{cc}
-\mu_{22}k_{2}+i\omega & -\mu_{21}k_{2}\\
--\mu_{12}k_{1} & \mu_{11}k_{1}+i\omega
+\mu_{22}^{\parallel}k_{2}+i\omega & -\mu_{21}^{\parallel}k_{2}\\
+-\mu_{12}^{\parallel}k_{1} & \mu_{11}^{\parallel}k_{1}+i\omega
 \end{array}\right).
 \end{align}
 
