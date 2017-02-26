@@ -160,6 +160,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -173,6 +174,7 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -1043,28 +1045,49 @@ C_{ij}(\omega)=\langle u_{i}^{\parallel}(\omega)u_{j}^{^{\dagger}\parallel}(\ome
 \end_inset
 
 Inserting the variance of the the noise, the correlation function is 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{widetext}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
-\begin{align}
+\begin{align*}
 C_{ij}(\omega)= & \frac{2k_{B}T}{(\text{det}A-\omega^{2})^{2}+(\omega\begin{tabular}{c}
- tr\end{tabular}A)^{2}}\nonumber \\
-\times & \left(\begin{array}{cc}
+ tr\end{tabular}A)^{2}}\left(\begin{array}{cc}
 \mu_{22}^{\parallel}k_{2}-i\omega & -\mu_{12}^{\parallel}k_{2}\\
 \\
--\mu_{21}^{\parallel}k_{1} & \mu_{11}^{\parallel}k_{1}-i\omega\\
-\\
-\end{array}\right)\nonumber \\
-\times & \left(\begin{array}{cc}
+-\mu_{21}^{\parallel}k_{1} & \mu_{11}^{\parallel}k_{1}-i\omega
+\end{array}\right)\left(\begin{array}{cc}
 \mu_{11}^{\parallel} & \mu_{12}^{\parallel}\\
 \\
-\mu_{21}^{\parallel} & \mu_{22}^{\parallel}\\
-\\
-\end{array}\right)\nonumber \\
-\times & \left(\begin{array}{cc}
+\mu_{21}^{\parallel} & \mu_{22}^{\parallel}
+\end{array}\right)\left(\begin{array}{cc}
 \mu_{22}^{\parallel}k_{2}+i\omega & -\mu_{21}^{\parallel}k_{1}\\
 \\
 -\mu_{12}^{\parallel}k_{2} & \mu_{11}^{\parallel}k_{1}+i\omega
 \end{array}\right).
-\end{align}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{widetext}
+\end_layout
 
 \end_inset
 
@@ -1079,6 +1102,62 @@ C_{ij}(\omega)= & \frac{2k_{B}T}{\omega}\text{Im}\left[\chi_{ij}^{||}(\omega)\ri
 This provides an explicit verification of the fluctuation-response relation
  for a pair of viscously coupled oscillators.
  
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+(v
+\emph default
+i) 
+\emph on
+Time scale of centre of mass and relative coordinates
+\emph default
+: We now convert Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:fourier-modes"
+
+\end_inset
+
+) to centre of mass (
+\begin_inset Formula $w_{1}=u_{1}+u_{2}$
+\end_inset
+
+) and relative coordinates (
+\begin_inset Formula $w_{2}=u_{1}-u_{2}$
+\end_inset
+
+) such that
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{alignat*}{1}
+w_{1}^{\parallel}(\omega) & =(-i\omega\delta_{1l}+A_{1l})^{-1}\mu_{lk}^{||}\xi_{k}^{\parallel}+(-i\omega\delta_{2l}+A_{2l})^{-1}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega)
+\end{alignat*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{alignat*}{1}
+w_{2}^{\parallel}(\omega) & =(-i\omega\delta_{1l}+A_{1l})^{-1}\mu_{lk}^{||}\xi_{k}^{\parallel}-(-i\omega\delta_{2l}+A_{2l})^{-1}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega)
+\end{alignat*}
+
+\end_inset
+
+
 \end_layout
 
 \end_body
