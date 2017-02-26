@@ -800,7 +800,7 @@ response
 \[
 M_{ij}=\left(\begin{array}{cc}
 \begin{tabular}{c}
- \tfrac{k_{2}}{k_{1}}\mu_{22}^{\parallel}\end{tabular}\text{det}A+\mu_{11}^{\parallel}\omega^{2} & -\mu\parallel_{12}(\text{det}A-\omega^{2})\\
+ \tfrac{k_{2}}{k_{1}}\mu_{22}^{\parallel}\end{tabular}\text{det}A+\mu_{11}^{\parallel}\omega^{2} & -\mu_{12}^{\parallel}(\text{det}A-\omega^{2})\\
 \, & \,\\
 -\mu_{21}^{\parallel}(\text{det}A-\omega^{2}) & \begin{tabular}{c}
  \tfrac{k_{1}}{k_{2}}\mu_{11}^{\parallel}\end{tabular}\text{det}A+\mu_{22}^{\parallel}\omega^{2}
@@ -809,7 +809,7 @@ M_{ij}=\left(\begin{array}{cc}
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
