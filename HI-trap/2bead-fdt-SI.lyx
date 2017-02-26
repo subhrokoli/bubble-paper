@@ -980,12 +980,11 @@ which in non-zero only if there is viscous coupling,
 \emph on
 correlation function
 \emph default
-: To calculate the correlation function, we set the modulation of the traps
- to zero, 
-\begin_inset Formula $\boldsymbol{u}_{i}^{0}(t)=0,$
+: To calculate the correlation function we set the modulation, 
+\begin_inset Formula $\boldsymbol{u}_{i}^{0}(t)$
 \end_inset
 
- in Eq.(
+,  of the traps to zero in Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:linearized-LE"
