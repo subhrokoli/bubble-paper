@@ -160,7 +160,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -174,7 +173,6 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -1035,40 +1033,12 @@ and the correlation function is then
 
 \begin_inset Formula 
 \begin{gather}
-C_{ij}(\omega)=\langle u_{i}^{\parallel}(\omega)u_{j}^{^{\dagger}\parallel}(\omega)\rangle=B_{il}\,\mu_{lk}^{||}\langle\xi_{k}\xi_{k'}\rangle\mu_{k'm}^{||}\,B_{mj}^{*},
+C_{ij}(\omega)=\langle u_{i}^{\parallel}(\omega)u_{j}^{^{\dagger}\parallel}(\omega)\rangle=\nonumber \\
+(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\langle\xi_{k}\xi_{k'}\rangle\mu_{k'm}^{||}(+i\omega\delta_{mj}+A_{mj}^{T})^{-1}.
 \end{gather}
 
 \end_inset
 
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-where 
-\begin_inset Formula $B_{il}=(-i\omega\delta_{il}+A_{il})^{-1}$
-\end_inset
-
-.
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
 Inserting the variance of the the noise, the correlation function is
 \begin_inset ERT
 status open
@@ -1127,105 +1097,6 @@ C_{ij}(\omega)= & \frac{2k_{B}T}{\omega}\text{Im}\left[\chi_{ij}^{||}(\omega)\ri
 This provides an explicit verification of the fluctuation-response relation
  for a pair of viscously coupled oscillators.
  
-\end_layout
-
-\begin_layout Standard
-
-\emph on
-(v
-\emph default
-i) 
-\emph on
-Time scale of centre of mass and relative coordinates
-\emph default
-: We now convert Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:fourier-modes"
-
-\end_inset
-
-) to centre of mass (
-\begin_inset Formula $w_{1}=u_{1}^{\parallel}+u_{2}^{\parallel}$
-\end_inset
-
-) and relative coordinates (
-\begin_inset Formula $w_{2}=u_{1}^{\parallel}-u_{2}^{\parallel}$
-\end_inset
-
-) such that
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{subequations}
-\end_layout
-
-\end_inset
-
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset Formula 
-\begin{alignat}{1}
-w_{1}^{\parallel}(\omega) & =B_{1l}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega)+B_{2l}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega),\\
-w_{2}^{\parallel}(\omega) & =B_{1l}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega)-B_{2l}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega).
-\end{alignat}
-
-\end_inset
-
-
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{subequations}
-\end_layout
-
-\end_inset
-
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-These equations can then used to show memory effects as we describe below.
 \end_layout
 
 \end_body

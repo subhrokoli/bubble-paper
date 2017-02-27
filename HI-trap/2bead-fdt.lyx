@@ -203,20 +203,13 @@ al mechanics, relates equilibrium fluctuations in a system to its linear
  Here we provide a direct experimental verification of this relation for
  viscously coupled oscillators, as realized by a pair of optically trapped
  colloidal particles.
- A theoretical analysis in which interactions mediated by slow viscous flow
- are represented by non-local friction tensors matches experimental results
- and reveals a frequency maximum in the amplitude of the mutual response.
- This amplitude 
-\begin_inset Quotes eld
-\end_inset
-
-resonance
-\begin_inset Quotes erd
-\end_inset
-
- is a sensitive function of the trap stiffnesses and the fluid viscosity
- and since its position and width can be varied independently the trap setup
- can be used for accurate two-point microrheology.
+ A theoretical analysis, in which interactions mediated by slow viscous
+ flow are represented by non-local friction tensors, matches experimental
+ results and reveals a frequency maximum in the amplitude of the mutual
+ response which is a sensitive function of the trap stiffnesses and the
+ friction tensors.
+ This allows for its location and width to be tuned independently and suggests
+ the utility of the trap setup for accurate two-point microrheology.
 \end_layout
 
 \begin_layout PACS
