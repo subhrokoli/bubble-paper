@@ -897,7 +897,7 @@ response
  The response function in the frequency domain, then, is
 \begin_inset Formula 
 \begin{equation}
-\chi_{ij}^{||}(\omega)=(-i\omega\delta_{ik}+A_{ik})^{-1}\mu_{kj}^{||}.
+\chi_{ij}^{||}(\omega)=(-i\omega\delta_{ik}+A_{ik})^{-1}\mu_{kj}^{||}.\label{eq:response-function}
 \end{equation}
 
 \end_inset
@@ -932,9 +932,6 @@ begin{widetext}
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -1018,7 +1015,7 @@ ent fluctuations
 The Fourier amplitudes of the displacements are
 \begin_inset Formula 
 \begin{align}
-u_{i}^{\parallel}(\omega) & =(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega)
+u_{i}^{\parallel}(\omega) & =(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega),\label{eq:fourier-modes}
 \end{align}
 
 \end_inset
@@ -1038,13 +1035,41 @@ and the correlation function is then
 
 \begin_inset Formula 
 \begin{gather}
-C_{ij}(\omega)=\langle u_{i}^{\parallel}(\omega)u_{j}^{^{\dagger}\parallel}(\omega)\rangle=\\
-(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\langle\xi_{k}\xi_{k'}\rangle\mu_{k'm}^{||}(+i\omega\delta_{mj}+A_{mj}^{T})^{-1}.\nonumber 
+C_{ij}(\omega)=\langle u_{i}^{\parallel}(\omega)u_{j}^{^{\dagger}\parallel}(\omega)\rangle=B_{il}\,\mu_{lk}^{||}\langle\xi_{k}\xi_{k'}\rangle\mu_{k'm}^{||}\,B_{mj}^{*},
 \end{gather}
 
 \end_inset
 
-Inserting the variance of the the noise, the correlation function is 
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+where 
+\begin_inset Formula $B_{il}=(-i\omega\delta_{il}+A_{il})^{-1}$
+\end_inset
+
+.
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+Inserting the variance of the the noise, the correlation function is
 \begin_inset ERT
 status open
 
@@ -1059,7 +1084,7 @@ begin{widetext}
 
 
 \begin_inset Formula 
-\begin{align*}
+\begin{align}
 C_{ij}(\omega)= & \frac{2k_{B}T}{(\text{det}A-\omega^{2})^{2}+(\omega\begin{tabular}{c}
  tr\end{tabular}A)^{2}}\left(\begin{array}{cc}
 \mu_{22}^{\parallel}k_{2}-i\omega & -\mu_{12}^{\parallel}k_{2}\\
@@ -1074,7 +1099,7 @@ C_{ij}(\omega)= & \frac{2k_{B}T}{(\text{det}A-\omega^{2})^{2}+(\omega\begin{tabu
 \\
 -\mu_{12}^{\parallel}k_{2} & \mu_{11}^{\parallel}k_{1}+i\omega
 \end{array}\right).
-\end{align*}
+\end{align}
 
 \end_inset
 
@@ -1122,14 +1147,27 @@ reference "eq:fourier-modes"
 \end_inset
 
 ) to centre of mass (
-\begin_inset Formula $w_{1}=u_{1}+u_{2}$
+\begin_inset Formula $w_{1}=u_{1}^{\parallel}+u_{2}^{\parallel}$
 \end_inset
 
 ) and relative coordinates (
-\begin_inset Formula $w_{2}=u_{1}-u_{2}$
+\begin_inset Formula $w_{2}=u_{1}^{\parallel}-u_{2}^{\parallel}$
 \end_inset
 
 ) such that
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
 \family roman
 \series medium
 \shape up
@@ -1143,21 +1181,51 @@ reference "eq:fourier-modes"
 \color none
 
 \begin_inset Formula 
-\begin{alignat*}{1}
-w_{1}^{\parallel}(\omega) & =(-i\omega\delta_{1l}+A_{1l})^{-1}\mu_{lk}^{||}\xi_{k}^{\parallel}+(-i\omega\delta_{2l}+A_{2l})^{-1}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega)
-\end{alignat*}
+\begin{alignat}{1}
+w_{1}^{\parallel}(\omega) & =B_{1l}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega)+B_{2l}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega),\\
+w_{2}^{\parallel}(\omega) & =B_{1l}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega)-B_{2l}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega).
+\end{alignat}
 
 \end_inset
 
 
-\begin_inset Formula 
-\begin{alignat*}{1}
-w_{2}^{\parallel}(\omega) & =(-i\omega\delta_{1l}+A_{1l})^{-1}\mu_{lk}^{||}\xi_{k}^{\parallel}-(-i\omega\delta_{2l}+A_{2l})^{-1}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega)
-\end{alignat*}
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
 
 \end_inset
 
 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+These equations can then used to show memory effects as we describe below.
 \end_layout
 
 \end_body
