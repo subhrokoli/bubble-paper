@@ -14,7 +14,7 @@
 \definecolor{myGreen}{rgb}{0.0, 1, 10.1}
 \definecolor{myBlue}{rgb}{0.9, 0.2, 0}
 \end_preamble
-\options aps, twocolumn, pre,superscriptaddress, notitlepage, draft
+\options aps, twocolumn, pre,superscriptaddress, notitlepage
 \use_default_options false
 \maintain_unincluded_children false
 \language english
@@ -122,16 +122,16 @@ The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
 The multivariate Ornstein-Uhlenbeck process is used in many branches of
  science and engineering to describe the regression of a system to its stationar
 y mean.
- Here we present a fast Bayesian method to infer the drift and diffusion
+ Here we present a fast Bayesian method to estimate the drift and diffusion
  coefficients of the process from discretely observed sample paths.
- We use exact likelihoods, expressed in terms of sufficient statistics,
- to derive simple expressions for the maximum a posteriori estimates.
+ We use exact likelihoods to derive simple expressions for the maximum a
+ posteriori estimates in terms four sufficient statistic matrices, .
  We show that the dimensionality of the estimation problem is reduced when
  microscopic reversibility enforces Onsager-Casimir symmetry on the process
  parameters.
- We apply our result to estimate the parameters of underdamped phonons in
- a colloidal crystal using video microscopy data.
- Other applications are indicated.
+ We apply the method to estimate the parameters of the Langevin equation
+ describing the inertial motion of a harmonically bound particle in a fluctuatin
+g Stokesian fluid.
  
 \end_layout
 
@@ -697,7 +697,7 @@ Here
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
