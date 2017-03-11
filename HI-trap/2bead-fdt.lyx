@@ -803,6 +803,26 @@ M_{ij}=\left(\begin{array}{cc}
 
 \end_inset
 
+The magnitude of the response of the driven bead to the driving bead is
+ maximum at the 
+\begin_inset Quotes eld
+\end_inset
+
+resonance
+\begin_inset Quotes erd
+\end_inset
+
+ frequency
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\omega_{res}=\sqrt{\text{det}A}=\sqrt{\mu_{11}^{\parallel}\mu_{22}^{\parallel}k_{1}k_{2}\left(1-\frac{\mu_{12}^{\parallel}\mu_{21}^{\parallel}}{\mu_{11}^{\parallel}\mu_{22}^{\parallel}}\right)}.
+\end{equation}
+
+\end_inset
+
 
 \end_layout
 
@@ -810,7 +830,7 @@ M_{ij}=\left(\begin{array}{cc}
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
