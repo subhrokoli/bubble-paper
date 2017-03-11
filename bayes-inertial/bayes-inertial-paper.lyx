@@ -14,7 +14,7 @@
 \definecolor{myGreen}{rgb}{0.0, 1, 10.1}
 \definecolor{myBlue}{rgb}{0.9, 0.2, 0}
 \end_preamble
-\options aps, twocolumn, pre,superscriptaddress, notitlepage, draft
+\options aps, twocolumn, pre,superscriptaddress, notitlepage
 \use_default_options false
 \maintain_unincluded_children false
 \language english
@@ -109,7 +109,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -697,7 +696,7 @@ Here
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
