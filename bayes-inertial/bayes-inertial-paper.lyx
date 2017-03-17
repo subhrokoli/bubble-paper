@@ -109,6 +109,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -519,7 +520,7 @@ With some elementary manipulations, detailed in the Appendix, the posterior
 \end_inset
 
 and the maximum a posteriori estimates for the matrix of mean regression
- rates 
+ rates and the transition variation-covariance matrix can be written as
 \end_layout
 
 \begin_layout Standard
@@ -548,6 +549,23 @@ The error bars can be derived by expanding the log posterior to quadratic
 
 \begin_layout Section
 Underdamped brownian harmonic oscillator
+\end_layout
+
+\begin_layout Standard
+In previous work, we have demonstrated the application of Bayesian inference
+ to determine the harmonic trap stiffness as well as the particle friction
+ coefficient from a time series of observed positions of an overdamped Brownian
+ harmonic oscillator.
+ In the overdamped limit, the inertia of the particle is neglected and hence
+ the mass of the particle cannot be considered as a parameter for Bayesian
+ inference.
+ In the underdamped harmonic oscillator however, the characteristic time
+ scale of momentum dissipation is finite and hence mass of the particle
+ can be treated as a physical parameter for the problem.
+ Thus, using the bivariate Ornstein Uhlenbeck process to model the position-velo
+city data of an underdamped Brownian harmonic oscillator, we can get a Bayesian
+ MAP estimate for the mass of the trapped particle, alongside the trap stiffness
+ and particle friction.
 \end_layout
 
 \begin_layout Standard
@@ -693,10 +711,114 @@ Here
 \end_layout
 
 \begin_layout Standard
+The stationary covariance matrix for the position-velocity phase space is
+ given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\bm{c}=\begin{pmatrix}\dfrac{k_{B}T}{k} & 0\\
+0 & \dfrac{k_{B}T}{m}
+\end{pmatrix}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where the diagonal elements are the familiar variances of the Gibbs distribution
+ and Maxwell-Boltzmann distributions, which respectively, correspond to
+ the equilibrium distributions of the position and velocity of the particle.
+ Representing the position-velocity data of the underdamped oscillator as
+ the vector time series 
+\begin_inset Formula $\bm{x_{n}=}\left[x\left(t=t_{n}\right)\;\;v\left(t=t_{n}\right)\right]^{T}$
+\end_inset
+
+, we can get the MAP estimates of 
+\begin_inset Formula $\bm{\lambda}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bm{c}$
+\end_inset
+
+, and subsequently get the scalar MAP estimates for the parameters of interest,
+ the mass of the particle, the trap stiffness and the particle friction
+ coefficient, using elementary algebraic manipulations.
+\end_layout
+
+\begin_layout Standard
+An alternative Bayesian procedure for directly estimating the mass of the
+ particle and the trap stiffness can be formulated by interpreting the time
+ series of positions and velocities as independent repeated samples from
+ the respective stationary distributions.
+ At equilibrium, the likelihood can be factored into the Gibbs distribution
+ for position and the Maxwell-Boltzmann distribution for the velocity as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+P\left(x,v|m,k\right) & =P\left(x|k\right)\times P\left(v|m\right)\\
+ & =\sqrt{\dfrac{k}{2\pi k_{B}T}}\exp\left(-\dfrac{kx^{2}}{2k_{B}T}\right)\times\sqrt{\dfrac{m}{2\pi k_{B}T}}\exp\left(-\dfrac{mv^{2}}{2k_{B}T}\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using uniform priors, the logarithms of the posterior probability can be
+ written as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ln P\left(k|x\right)=\dfrac{N}{2}\ln\left(\dfrac{k}{2\pi k_{B}T}\right)-\dfrac{1}{2}\dfrac{k}{k_{B}T}\sum x_{n}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ln P\left(m|v\right)=\dfrac{N}{2}\ln\left(\dfrac{m}{2\pi k_{B}T}\right)-\dfrac{1}{2}\dfrac{m}{k_{B}T}\sum v_{n}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The MAP estimates, from the equilibrium distribution of the position and
+ velocity, can be straightforwardly obtained as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{k^{\ast}}{k_{B}T}=\dfrac{N}{\sum x_{n}^{2}},\;\;\;\;\dfrac{m^{\ast}}{k_{B}T}=\dfrac{N}{\sum v_{n}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
