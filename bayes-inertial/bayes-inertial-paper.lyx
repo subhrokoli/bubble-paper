@@ -467,7 +467,17 @@ P\left(\boldsymbol{\lambda},\boldsymbol{c}\vert\boldsymbol{X}\right)=\dfrac{P\le
 
 \end_inset
 
-The logarithm of the posterior probability, after using the explicit forms
+The denominator 
+\begin_inset Formula $P\left(\bm{X}\right)$
+\end_inset
+
+ is an unimportant normalization, independent of the parameters and can
+ be ignored for the purpose of parameter estimation.
+ Using informative uniform priors for 
+\begin_inset Formula $P\left(\boldsymbol{\lambda},\boldsymbol{c}\right)$
+\end_inset
+
+, the logarithm of the posterior probability, after using the explicit forms
  of 
 \begin_inset Formula $P_{1\vert1}$
 \end_inset
@@ -734,7 +744,7 @@ where the diagonal elements are the familiar variances of the Gibbs distribution
  the equilibrium distributions of the position and velocity of the particle.
  Representing the position-velocity data of the underdamped oscillator as
  the vector time series 
-\begin_inset Formula $\bm{x_{n}=}\left[x\left(t=t_{n}\right)\;\;v\left(t=t_{n}\right)\right]^{T}$
+\begin_inset Formula $\bm{x_{n}=}\left[x\left(t=n\Delta t\right)\;\;v\left(t=n\Delta t\right)\right]^{T}$
 \end_inset
 
 , we can get the MAP estimates of 
@@ -762,7 +772,8 @@ An alternative Bayesian procedure for directly estimating the mass of the
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-P\left(x,v|m,k\right) & =P\left(x|k\right)\times P\left(v|m\right)\\
+ & P\left(x,v|m,k\right)\\
+ & =P\left(x|k\right)\times P\left(v|m\right)\\
  & =\sqrt{\dfrac{k}{2\pi k_{B}T}}\exp\left(-\dfrac{kx^{2}}{2k_{B}T}\right)\times\sqrt{\dfrac{m}{2\pi k_{B}T}}\exp\left(-\dfrac{mv^{2}}{2k_{B}T}\right)
 \end{align*}
 
@@ -945,19 +956,13 @@ Finally, the quantity
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \sum_{n=1}^{N-1}\bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}\\
+\equiv & \bm{\Sigma^{-1}}:\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\big(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\big)^{\bm{T}}\\
+ & +\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big].
+\end{align*}
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\begin_inset Formula $\sum_{n=1}^{N-1}\bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}\equiv\bm{\Sigma^{-1}}:\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\big(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\big)^{\bm{T}}+\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big].$
 \end_inset
 
 
@@ -968,19 +973,13 @@ Substituting this form in the expression for the log-posterior
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+ & \ln P\left(\bm{\lambda},\bm{\Sigma}\vert\bm{X}\right)\nonumber \\
+= & -\dfrac{1}{2}\bm{\Sigma}^{-1}:\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}\nonumber \\
+ & +\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big]+\dfrac{N}{2}\ln\left(\dfrac{|\bm{\Sigma^{-1}}|}{4\pi^{2}}\right)\label{eq:lp}
+\end{align}
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\begin_inset Formula $\ln P\left(\bm{\lambda},\bm{\Sigma}\vert\bm{X}\right)=-\dfrac{1}{2}\bm{\Sigma}^{-1}:\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}+\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big]+\dfrac{N}{2}\ln\left(\dfrac{|\bm{\Sigma^{-1}}|}{4\pi^{2}}\right)$
 \end_inset
 
 
