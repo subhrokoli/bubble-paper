@@ -109,7 +109,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -813,9 +812,9 @@ Using an informative prior that constrains
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\ln P\left(k|x\right)=\dfrac{N}{2}\ln\left(\dfrac{k}{2\pi k_{B}T}\right)-\dfrac{1}{2}\dfrac{k}{k_{B}T}\sum x_{n}^{2}
-\]
+\begin{equation}
+\ln P\left(k|x\right)=\dfrac{N}{2}\ln\left(\dfrac{k}{2\pi k_{B}T}\right)-\dfrac{1}{2}\dfrac{k}{k_{B}T}\sum x_{n}^{2}\label{eq:map_k_stat}
+\end{equation}
 
 \end_inset
 
@@ -824,9 +823,9 @@ Using an informative prior that constrains
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\ln P\left(m|v\right)=\dfrac{N}{2}\ln\left(\dfrac{m}{2\pi k_{B}T}\right)-\dfrac{1}{2}\dfrac{m}{k_{B}T}\sum v_{n}^{2}
-\]
+\begin{equation}
+\ln P\left(m|v\right)=\dfrac{N}{2}\ln\left(\dfrac{m}{2\pi k_{B}T}\right)-\dfrac{1}{2}\dfrac{m}{k_{B}T}\sum v_{n}^{2}\label{eq:map_m_stat}
+\end{equation}
 
 \end_inset
 
@@ -1020,6 +1019,159 @@ which, after elementary manipulations can be shown to be exactly equivalent
  harmonic oscillator constitute an univariate Ornstein Uhlenbeck process,
  whereas a physical example of the bivariate analogue is the position-velocity
  phase space for the underdamped Brownian harmonic oscillator.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figure_2.png
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Pairs plot for mass 
+\begin_inset Formula $m$
+\end_inset
+
+, trap stiffness 
+\begin_inset Formula $k$
+\end_inset
+
+ and particle drag coefficient 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ obtained from the MAP estimates in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map_lambda"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map_sigma"
+
+\end_inset
+
+.
+ The parameters have been 
+\begin_inset Formula $\emph{standardized }$
+\end_inset
+
+ by subtracting the mean and dividing by the standard deviation.
+ The MAP estimates are marked by the black dot.
+ The 
+\begin_inset Formula $1\sigma$
+\end_inset
+
+, 
+\begin_inset Formula $2\sigma$
+\end_inset
+
+ and 
+\begin_inset Formula $3\sigma$
+\end_inset
+
+ regions have been shaded.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figure_3.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Pairs plot for mass 
+\begin_inset Formula $m$
+\end_inset
+
+ and trap stiffness 
+\begin_inset Formula $k$
+\end_inset
+
+ obtained from the MAP estimates in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map_k_stat"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map_m_stat"
+
+\end_inset
+
+.
+ The parameters have been 
+\begin_inset Formula $\emph{standardized }$
+\end_inset
+
+ by subtracting the mean and dividing by the standard deviation.
+ The MAP estimates are marked by the black dot.
+ The 
+\begin_inset Formula $1\sigma$
+\end_inset
+
+, 
+\begin_inset Formula $2\sigma$
+\end_inset
+
+ and 
+\begin_inset Formula $3\sigma$
+\end_inset
+
+ regions have been shaded.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
