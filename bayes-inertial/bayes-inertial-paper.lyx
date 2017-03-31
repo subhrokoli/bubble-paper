@@ -125,7 +125,7 @@ y mean.
  Here we present a fast Bayesian method to estimate the drift and diffusion
  coefficients of the process from discretely observed sample paths.
  We use exact likelihoods to derive simple expressions for the maximum a
- posteriori estimates in terms four sufficient statistic matrices, .
+ posteriori estimates in terms of four sufficient statistic matrices, .
  We show that the dimensionality of the estimation problem is reduced when
  microscopic reversibility enforces Onsager-Casimir symmetry on the process
  parameters.
@@ -154,7 +154,7 @@ key "gardiner1985handbook"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-dx_{i}=-\lambda_{ij}x_{j}dt+(\sqrt{2D})_{ij}\cdot dW_{j}
+dx_{i}=-\lambda_{ij}x_{j}dt+(\sqrt{2D})_{ij}\cdot dW_{j}\label{eq:mvou}
 \end{equation}
 
 \end_inset
@@ -253,7 +253,7 @@ where
 \end_inset
 
  and 
-\begin_inset Formula $\mathcal{N}(\boldsymbol{\mu},\boldsymbol{\sigma})$
+\begin_inset Formula $\mathcal{N}(\boldsymbol{\mu},\boldsymbol{\sigma^{2}})$
 \end_inset
 
  is the multivariate normal distribution with mean 
@@ -261,7 +261,7 @@ where
 \end_inset
 
  and variance 
-\begin_inset Formula $\boldsymbol{\sigma}$
+\begin_inset Formula $\boldsymbol{\sigma^{2}}$
 \end_inset
 
 .
@@ -421,13 +421,29 @@ Consider now the vector time series
 \begin_inset Formula $N$
 \end_inset
 
- observations of the sample path of the multidimensional Ornstein-Uhlenbeck
- process at discrete times 
+ observations of the sample path of the multidimensional general 
+\begin_inset Formula $p$
+\end_inset
+
+-variate Ornstein-Uhlenbeck process at discrete times 
 \begin_inset Formula $t=n\Delta t$
 \end_inset
 
  with 
 \begin_inset Formula $n=1,2,...,N$
+\end_inset
+
+.
+ Each of the observations 
+\begin_inset Formula $\bm{x_{i}}$
+\end_inset
+
+ is a 
+\begin_inset Formula $p$
+\end_inset
+
+-dimensional vector, such that 
+\begin_inset Formula $\bm{x_{i}}=\left[x_{i}^{\left(1\right)},x_{i}^{\left(2\right)},...,x_{i}^{\left(p\right)}\right]^{T}$
 \end_inset
 
 .
@@ -489,7 +505,7 @@ The denominator
 , is 
 \begin_inset Formula 
 \begin{align}
-\ln P\left(\bm{\lambda},\bm{c}\vert\bm{X}\right) & =\dfrac{N-1}{2}\ln\dfrac{1}{4\pi^{2}\vert\bm{\Sigma}\vert}+\dfrac{1}{2}\ln\dfrac{1}{4\pi^{2}|\bm{c}|}\nonumber \\
+\ln P\left(\bm{\lambda},\bm{c}\vert\bm{X}\right) & =\dfrac{N-1}{2}\ln\dfrac{1}{\left(2\pi\right)^{p}\vert\bm{\Sigma}\vert}+\dfrac{1}{2}\ln\dfrac{1}{\left(2\pi\right)^{p}|\bm{c}|}\nonumber \\
  & -\dfrac{1}{2}\sum_{n=1}^{N-1}\boldsymbol{\Delta}_{n}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\Delta}_{n}-\dfrac{1}{2}\boldsymbol{x}_{1}^{T}\boldsymbol{c}\,\boldsymbol{x}_{1}
 \end{align}
 
@@ -519,8 +535,8 @@ where the two quantities
 
 \begin_layout Standard
 With some elementary manipulations, detailed in the Appendix, the posterior
- probability can be written in terms of the following four sufficient statistics
- 
+ probability can be written in terms of the following four matrix sufficient
+ statistics 
 \begin_inset Formula 
 \begin{flalign}
 \boldsymbol{T}_{1} & =\sum_{n=1}^{N-1}\boldsymbol{x}_{n+1}\boldsymbol{x}_{n+1}^{T},\quad\boldsymbol{T}_{2}=\sum_{n=1}^{N-1}\boldsymbol{x}_{n+1}\boldsymbol{x}_{n}^{T}\nonumber \\
@@ -783,7 +799,15 @@ An alternative Bayesian procedure for directly estimating the mass of the
 \end_layout
 
 \begin_layout Standard
-Using uniform priors, the logarithms of the posterior probability can be
+Using an informative prior that constrains 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ to positive values, the logarithms of the posterior probability can be
  written as
 \end_layout
 
@@ -817,7 +841,7 @@ The MAP estimates, from the equilibrium distribution of the position and
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\dfrac{k^{\ast}}{k_{B}T}=\dfrac{N}{\sum x_{n}^{2}},\;\;\;\;\dfrac{m^{\ast}}{k_{B}T}=\dfrac{N}{\sum v_{n}^{2}}
+\dfrac{k^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}x_{n}^{2}},\;\;\;\;\dfrac{m^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}v_{n}^{2}}
 \]
 
 \end_inset
@@ -881,6 +905,121 @@ mg/
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+UNIVARIATE CASE: OVERDAMPED BROWNIAN HARMONIC OSCILLATOR
+\end_layout
+
+\begin_layout Standard
+In the 
+\begin_inset Formula $\emph{optical trap limit}$
+\end_inset
+
+, the limit of vanishing particle mass is assumed and the Langevin equation
+ for the position of the Brownian particle reduces to
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\dot{x}=-\dfrac{k}{\gamma}x+\sqrt{\dfrac{2k_{B}T}{\gamma}}\xi\left(t\right)\label{eq:univariate-ou}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Defining 
+\begin_inset Formula $\lambda=\dfrac{k}{\gamma}$
+\end_inset
+
+ as the 
+\begin_inset Formula $\emph{drift coefficient}$
+\end_inset
+
+ and 
+\begin_inset Formula $D=\dfrac{k_{B}T}{\gamma}$
+\end_inset
+
+ as the 
+\begin_inset Formula $\emph{diffusion coefficient}$
+\end_inset
+
+, we readily identify 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:univariate-ou"
+
+\end_inset
+
+ as the univaraite analogue of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:mvou"
+
+\end_inset
+
+.
+ The application of Bayesian inference to estimate the parameters 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+ has been discussed at length in earlier work.
+ Here, we demonstrate that the methods described in {bayes-oup} are effectively
+ the univariate extension of the inference depicted in Section II.
+ Recycling the results from earlier sections, we see for the scalar position
+ variable 
+\begin_inset Formula $x$
+\end_inset
+
+, the 
+\begin_inset Formula $\emph{matrix}$
+\end_inset
+
+ sufficient statistics reduce to corresponding scalar analogues.
+ Finally, the MAP estimates for the drift and diffusion coefficients reduce
+ to
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lambda^{\ast}=\dfrac{1}{\Delta t}\ln\left(\dfrac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{k_{B}T}{k^{\ast}}\left(1-\exp\left(-2\lambda^{\ast}\Delta t\right)\right)=\sum x_{n+1}^{2}-\dfrac{\left(\sum x_{n+1}x_{n}\right)^{2}}{\sum x_{n}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which, after elementary manipulations can be shown to be exactly equivalent
+ to the expressions in {bayes-oup}.
+ Thus, we demonstrate that our method for finding the MAP estimates is valid
+ for arbitrary dimensionality of the data generating Ornstein Uhlenbeck
+ process.
+ Physically, the displacements of the Brownian particle in the overdamped
+ harmonic oscillator constitute an univariate Ornstein Uhlenbeck process,
+ whereas a physical example of the bivariate analogue is the position-velocity
+ phase space for the underdamped Brownian harmonic oscillator.
 \end_layout
 
 \begin_layout Section*
