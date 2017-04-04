@@ -109,6 +109,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -971,8 +972,15 @@ reference "eq:mvou"
 \end_inset
 
  has been discussed at length in earlier work.
- Here, we demonstrate that the methods described in {bayes-oup} are effectively
- the univariate extension of the inference depicted in Section II.
+ Here, we demonstrate that the methods described in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bera2017fast"
+
+\end_inset
+
+ are effectively the univariate extension of the inference depicted in Section
+ II.
  Recycling the results from earlier sections, we see for the scalar position
  variable 
 \begin_inset Formula $x$
@@ -1011,7 +1019,14 @@ reference "eq:mvou"
 
 \begin_layout Standard
 which, after elementary manipulations can be shown to be exactly equivalent
- to the expressions in {bayes-oup}.
+ to the expressions in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bera2017fast"
+
+\end_inset
+
+.
  Thus, we demonstrate that our method for finding the MAP estimates is valid
  for arbitrary dimensionality of the data generating Ornstein Uhlenbeck
  process.
@@ -1371,6 +1386,17 @@ reference "eq:map_sigma"
 
  give the MAP estimates of the drift matrix and the transition variance
  covariance matrix respectively.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "bayes-inertial-paper"
+options "plain"
+
+\end_inset
+
+
 \end_layout
 
 \end_body
