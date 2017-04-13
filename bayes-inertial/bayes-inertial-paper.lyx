@@ -109,7 +109,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -907,6 +906,50 @@ mg/
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figure_4.png
+	scale 23
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+(a) Normalized autocorrelation function for position, (b) Normalized autocorrela
+tion function for velocity, (c) Power Spectrum for position, (d) Power Spctrum
+ for velocity.
+ The curves in cyan and red represent the autocorrelation and power spectrum
+ computed from the position and velocity data respectively, while the black
+ curves represent the analytical expressions for autocorrelations and power
+ spectra, computed using the Bayesian MAP estimates.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 UNIVARIATE CASE: OVERDAMPED BROWNIAN HARMONIC OSCILLATOR
 \end_layout
@@ -1115,7 +1158,7 @@ reference "eq:map_sigma"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
