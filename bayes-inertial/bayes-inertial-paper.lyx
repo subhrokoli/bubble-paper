@@ -109,7 +109,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -410,6 +409,13 @@ In the following, we shall assume that process is specified by the matrix
 
 \begin_layout Section
 Bayesian inference
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Bayesian-inference"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -850,6 +856,34 @@ The MAP estimates, from the equilibrium distribution of the position and
 \end_layout
 
 \begin_layout Standard
+Following the notation used in our earlier paper, we refer to this alternative
+ method as 
+\begin_inset Quotes eld
+\end_inset
+
+Bayes- II
+\begin_inset Quotes erd
+\end_inset
+
+, to distinguish it from the framework described in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Bayesian-inference"
+
+\end_inset
+
+, which we refer to as 
+\begin_inset Quotes eld
+\end_inset
+
+Bayes-I
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -858,7 +892,7 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename figure_1.png
-	scale 22
+	scale 21
 
 \end_inset
 
@@ -923,7 +957,7 @@ status collapsed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename figure_4.png
-	scale 23
+	scale 22.5
 
 \end_inset
 
@@ -934,13 +968,35 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-(a) Normalized autocorrelation function for position, (b) Normalized autocorrela
-tion function for velocity, (c) Power Spectrum for position, (d) Power Spctrum
- for velocity.
- The curves in cyan and red represent the autocorrelation and power spectrum
- computed from the position and velocity data respectively, while the black
- curves represent the analytical expressions for autocorrelations and power
- spectra, computed using the Bayesian MAP estimates.
+(a) Normalized autocorrelation function for position, (b) Power Spectrum
+ for position, (c) Normalized autocorrelation function for velocity, (d)
+ Power Spctrum for velocity.
+ The autocorrelation and power spectra computed from the position and velocity
+ data are plotted in cyan and red respectively, while the black curves represent
+ the analytical expressions for autocorrelations and power spectra, given
+ in eqns.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:autocorr_mvou"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:xpsd_mvou"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vpsd_mvou"
+
+\end_inset
+
+, computed using the Bayesian MAP estimates.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -948,7 +1004,7 @@ name "fig:autocorrelation"
 
 \end_inset
 
-
+ 
 \end_layout
 
 \end_inset
@@ -1138,11 +1194,23 @@ reference "eq:map_sigma"
 \end_inset
 
 .
- The parameters have been 
-\begin_inset Formula $\emph{standardized }$
+ The variables have been scaled using 
+\begin_inset Formula $x^{\prime}=\nicefrac{\left(x-\mu_{x}\right)}{\sigma_{xx}^{2}}$
 \end_inset
 
- by subtracting the mean and dividing by the standard deviation.
+, where 
+\begin_inset Formula $\mu_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{xx}^{2}$
+\end_inset
+
+ are the MAP estimate and variance of 
+\begin_inset Formula $x$
+\end_inset
+
+ respectively.
  The MAP estimates are marked by the black dot.
  The 
 \begin_inset Formula $1\sigma$
@@ -1163,7 +1231,7 @@ name "fig:inference"
 
 \end_inset
 
-
+ 
 \end_layout
 
 \end_inset
@@ -1219,11 +1287,23 @@ reference "eq:map_m_stat"
 \end_inset
 
 .
- The parameters have been 
-\begin_inset Formula $\emph{standardized }$
+ The variables have been scaled using 
+\begin_inset Formula $x^{\prime}=\nicefrac{\left(x-\mu_{x}\right)}{\sigma_{xx}^{2}}$
 \end_inset
 
- by subtracting the mean and dividing by the standard deviation.
+, where 
+\begin_inset Formula $\mu_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{xx}^{2}$
+\end_inset
+
+ are the MAP estimate and variance of 
+\begin_inset Formula $x$
+\end_inset
+
+ respectively.
  The MAP estimates are marked by the black dot.
  The 
 \begin_inset Formula $1\sigma$
@@ -2051,7 +2131,14 @@ We now focus on the problem of model selection for optical trap data.
 \end_layout
 
 \begin_layout Standard
-According to Mackay, the evidence or the probability 
+According to Mackay
+\begin_inset CommandInset citation
+LatexCommand cite
+key "mackay1992bayesian"
+
+\end_inset
+
+, the evidence or the probability 
 \begin_inset Formula $P\left(D|H_{i}\right)$
 \end_inset
 
@@ -2240,7 +2327,7 @@ Results and Discussions
 \begin_layout Standard
 We now present the results of our Bayesian MAP estimates applied to underdamped
  Brownian harmonic oscillator data.
- In 
+ In Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:PositionsVelocity"
@@ -2268,7 +2355,7 @@ reference "fig:PositionsVelocity"
 \end_inset
 
  in the conventional equipartition method.
- In 
+ In Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:autocorrelation"
@@ -2297,7 +2384,7 @@ key "Bera:16"
  expressions to the autocorrelation or power spectral density and our Bayesian
  MAP estimates, we plot the analytical curves of autocorrelation function
  and power spectrum, using our Bayesian MAP estimates as parameter values
- in 
+ in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:autocorrelation"
@@ -2314,7 +2401,7 @@ The results of Bayesian inference are shown in the pairs-plots of
 \begin_inset Formula $\left(m,k,\gamma\right)$
 \end_inset
 
- in 
+ in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:inference"
@@ -2322,7 +2409,7 @@ reference "fig:inference"
 \end_inset
 
 .
- Similarly, 
+ Similarly, Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:stationary"
@@ -2382,7 +2469,7 @@ reference "tab:CovrianceMatrix"
 \end_layout
 
 \begin_layout Standard
-In 
+In Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Occam"
@@ -2506,11 +2593,11 @@ reference "eq:lp"
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{align*}
- & \dfrac{\partial\ln P\left(\bm{\lambda},\bm{\Sigma}\vert\bm{X}\right)}{\partial\bm{\Sigma^{-1}}}\\
- & =-\dfrac{1}{2}\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}\\
+\begin{align}
+ & \dfrac{\partial\ln P\left(\bm{\lambda},\bm{\Sigma}\vert\bm{X}\right)}{\partial\bm{\Sigma^{-1}}}\nonumber \\
+ & =-\dfrac{1}{2}\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}\nonumber \\
  & +\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big]+\dfrac{N}{2}\left(\bm{\Sigma}\right)
-\end{align*}
+\end{align}
 
 \end_inset
 
@@ -2531,9 +2618,9 @@ Setting this derivative to zero, and noting that
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
+\begin{equation}
 \bm{\Sigma^{\ast}}=\dfrac{1}{N}\left(\bm{T}_{1}-\boldsymbol{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{T}_{2}^{T}\right)
-\]
+\end{equation}
 
 \end_inset
 
@@ -2559,6 +2646,50 @@ reference "eq:map_sigma"
  covariance matrix respectively.
 \end_layout
 
+\begin_layout Standard
+Once we have the MAP estimates for 
+\begin_inset Formula $\bm{\Lambda^{\ast}}=\exp\left(-\bm{\lambda^{\ast}}\Delta t\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\bm{\Sigma^{\ast}}$
+\end_inset
+
+, we can get 
+\begin_inset Formula $m^{\ast},k^{\ast},\gamma^{\ast}$
+\end_inset
+
+ using the following algebraic manipulations
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{pmatrix}\dfrac{k_{B}T}{k^{\ast}}\\
+\dfrac{k_{B}T}{m^{\ast}}
+\end{pmatrix}=\begin{pmatrix}1-\Lambda_{11}^{\ast2} & -\Lambda_{12}^{\ast2}\\
+-\Lambda_{21}^{\ast2} & 1-\Lambda_{22}^{\ast2}
+\end{pmatrix}^{-1}\begin{pmatrix}\Sigma_{11}^{\ast}\\
+\Sigma_{22}^{\ast}
+\end{pmatrix}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\gamma^{\ast}=\dfrac{m^{\ast2}\Sigma_{12}^{\ast}}{k_{B}T\Lambda_{12}^{\ast2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection*
 Simulation of position-velocity data in underdamped Brownian harmonic oscillator
 \end_layout
@@ -2579,7 +2710,7 @@ key "norrelykke2011harmonic"
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
+\begin{equation}
 \begin{pmatrix}x_{j+1}\\
 v_{j+1}
 \end{pmatrix}=\exp\left(-\lambda\Delta t\right)\begin{pmatrix}x_{j}\\
@@ -2587,7 +2718,7 @@ v_{j}
 \end{pmatrix}+\begin{pmatrix}\Delta x_{j}\\
 \Delta v_{j}
 \end{pmatrix}
-\]
+\end{equation}
 
 \end_inset
 
@@ -2617,9 +2748,9 @@ It is shown that
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
+\begin{equation}
 \Delta x_{j}=\sigma_{xx}\xi
-\]
+\end{equation}
 
 \end_inset
 
@@ -2628,9 +2759,9 @@ It is shown that
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
+\begin{equation}
 \Delta v_{j}=\nicefrac{\sigma_{xv}^{2}}{\sigma_{xx}}\xi_{j}+\sqrt{\sigma_{vv}^{2}-\nicefrac{\sigma_{xv}^{4}}{\sigma_{xx}^{2}}}\zeta_{j}
-\]
+\end{equation}
 
 \end_inset
 
@@ -2643,10 +2774,10 @@ where
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{align*}
-\sigma_{xx}^{2} & =\dfrac{D}{4\omega^{2}\omega_{0}^{2}\tau^{3}}(4\omega^{2}\tau^{2}+\\
+\begin{align}
+\sigma_{xx}^{2} & =\dfrac{D}{4\omega^{2}\omega_{0}^{2}\tau^{3}}(4\omega^{2}\tau^{2}+\nonumber \\
  & \exp\left(-\dfrac{\Delta t}{\tau}\right)\left[\cos\left(2\omega\Delta t\right)-2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right])
-\end{align*}
+\end{align}
 
 \end_inset
 
@@ -2655,10 +2786,10 @@ where
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{align*}
-\sigma_{vv}^{2} & =\dfrac{D}{4\omega^{2}\tau^{3}}(4\omega^{2}\tau^{2}+\\
+\begin{align}
+\sigma_{vv}^{2} & =\dfrac{D}{4\omega^{2}\tau^{3}}(4\omega^{2}\tau^{2}+\nonumber \\
  & \exp\left(-\dfrac{\Delta t}{\tau}\right)\left[\cos\left(2\omega\Delta t\right)+2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right])
-\end{align*}
+\end{align}
 
 \end_inset
 
@@ -2667,9 +2798,9 @@ where
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
+\begin{equation}
 \sigma_{xv}^{2}=\dfrac{D}{\omega^{2}\tau^{2}}\exp\left(-\dfrac{\Delta t}{\tau}\right)\sin^{2}\left(\omega\Delta t\right)
-\]
+\end{equation}
 
 \end_inset
 
@@ -2682,14 +2813,14 @@ The autocorrelation matrix is given as
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{align*}
+\begin{align}
 \begin{pmatrix}\langle x\left(t\right)x\left(0\right)\rangle & \langle x\left(t\right)v\left(0\right)\rangle\\
 \langle v\left(t\right)x\left(0\right)\rangle & \langle v\left(t\right)v\left(0\right)\rangle
-\end{pmatrix}\\
+\end{pmatrix}\nonumber \\
 =\dfrac{D}{\tau}\exp\left(-\dfrac{t}{2\tau}\right) & \begin{pmatrix}\dfrac{\cos\omega t+\dfrac{\sin\omega t}{2\omega\tau}}{\omega_{0}^{2}} & \dfrac{\sin\omega t}{\omega}\\
 -\dfrac{\sin\omega t}{\omega} & \cos\omega t-\dfrac{\sin\omega t}{2\omega\tau}
-\end{pmatrix}
-\end{align*}
+\end{pmatrix}\label{eq:autocorr_mvou}
+\end{align}
 
 \end_inset
 
@@ -2702,9 +2833,9 @@ The power spectral density (PSD) for position and velocity are given as
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-P^{\left(x\right)}\left(f_{k}\right)=\dfrac{\nicefrac{D}{\left(2\pi^{2}\right)}}{\left(2\pi\tau\right)^{2}\left(f_{k}^{2}-f_{0}^{2}\right)^{2}+f_{k}^{2}}
-\]
+\begin{equation}
+P^{\left(x\right)}\left(f_{k}\right)=\dfrac{\nicefrac{D}{\left(2\pi^{2}\right)}}{\left(2\pi\tau\right)^{2}\left(f_{k}^{2}-f_{0}^{2}\right)^{2}+f_{k}^{2}}\label{eq:xpsd_mvou}
+\end{equation}
 
 \end_inset
 
@@ -2713,9 +2844,9 @@ P^{\left(x\right)}\left(f_{k}\right)=\dfrac{\nicefrac{D}{\left(2\pi^{2}\right)}}
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-P^{\left(v\right)}\left(f_{k}\right)=\dfrac{2D}{\left(2\pi\tau\right)^{2}\left(f_{k}-\nicefrac{f_{0}^{2}}{f_{k}}\right)^{2}+1}
-\]
+\begin{equation}
+P^{\left(v\right)}\left(f_{k}\right)=\dfrac{2D}{\left(2\pi\tau\right)^{2}\left(f_{k}-\nicefrac{f_{0}^{2}}{f_{k}}\right)^{2}+1}\label{eq:vpsd_mvou}
+\end{equation}
 
 \end_inset
 
