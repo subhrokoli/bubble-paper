@@ -109,7 +109,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -1283,7 +1282,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $m\left(ng\right)$
+\begin_inset Formula $m\;\left(ng\right)$
 \end_inset
 
 
