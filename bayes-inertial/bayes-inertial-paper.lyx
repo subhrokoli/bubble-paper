@@ -820,7 +820,7 @@ Using an informative prior that constrains
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\ln P\left(k|x\right)=\dfrac{N}{2}\ln\left(\dfrac{k}{2\pi k_{B}T}\right)-\dfrac{1}{2}\dfrac{k}{k_{B}T}\sum x_{n}^{2}\label{eq:map_k_stat}
+\ln P\left(k|x\right)=\dfrac{N}{2}\ln\dfrac{k}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{k}{k_{B}T}\sum x_{n}^{2}\label{eq:map_k_stat}
 \end{equation}
 
 \end_inset
@@ -831,7 +831,7 @@ Using an informative prior that constrains
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\ln P\left(m|v\right)=\dfrac{N}{2}\ln\left(\dfrac{m}{2\pi k_{B}T}\right)-\dfrac{1}{2}\dfrac{m}{k_{B}T}\sum v_{n}^{2}\label{eq:map_m_stat}
+\ln P\left(m|v\right)=\dfrac{N}{2}\ln\dfrac{m}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{m}{k_{B}T}\sum v_{n}^{2}\label{eq:map_m_stat}
 \end{equation}
 
 \end_inset
@@ -1112,7 +1112,7 @@ key "bera2017fast"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\lambda^{\ast}=\dfrac{1}{\Delta t}\ln\left(\dfrac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}}\right)
+\lambda^{\ast}=\dfrac{1}{\Delta t}\ln\dfrac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}}
 \]
 
 \end_inset
@@ -2208,7 +2208,7 @@ P\left(D|H_{i}\right)\simeq P\left(D|\bm{w}_{MP},H_{i}\right)P\left(\bm{w}_{MP}|
 
 \begin_layout Standard
 where 
-\begin_inset Formula $\bm{A}=-\nabla\nabla\log P\left(\bm{w}|D,H_{i}\right)$
+\begin_inset Formula $\bm{A}=-\nabla\nabla\ln P\left(\bm{w}|D,H_{i}\right)$
 \end_inset
 
  is the Hessian matrix.
@@ -2241,8 +2241,8 @@ We focus on the stationary Bayesian estimates (labelled Bayes II in our
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-\log P\left(D|H_{UD}\right) & =N\log\left(\dfrac{k^{\ast}}{2\pi k_{B}T}\right)+N\log\left(\dfrac{m^{\ast}}{2\pi k_{B}T}\right)\label{eq:ud_occ}\\
- & -2N+\log\left(\dfrac{4\pi m^{\ast}k^{\ast}}{N}\right)\nonumber 
+\ln P\left(D|H_{UD}\right) & =N\ln\dfrac{k^{\ast}}{2\pi k_{B}T}+N\ln\dfrac{m^{\ast}}{2\pi k_{B}T}\label{eq:ud_occ}\\
+ & -2N+\ln\dfrac{4\pi m^{\ast}k^{\ast}}{N}\nonumber 
 \end{align}
 
 \end_inset
@@ -2253,7 +2253,7 @@ We focus on the stationary Bayesian estimates (labelled Bayes II in our
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\log P\left(D|H_{OD}\right)=N\log\left(\dfrac{k^{\ast}}{2\pi k_{B}T}\right)-N+\log\left(\dfrac{2\pi k^{\ast}}{\sqrt{N}}\right)\label{eq:od_occ}
+\ln P\left(D|H_{OD}\right)=N\ln\dfrac{k^{\ast}}{2\pi k_{B}T}-N+\ln\dfrac{2\pi k^{\ast}}{\sqrt{N}}\label{eq:od_occ}
 \end{equation}
 
 \end_inset
@@ -2279,11 +2279,11 @@ reference "eq:map_stationary"
 
 .
  Thus, if our data generating model is underdamped, we will have 
-\begin_inset Formula $\log P\left(D|H_{UD}\right)>\log P\left(D|H_{OD}\right).$
+\begin_inset Formula $\ln P\left(D|H_{UD}\right)>\ln P\left(D|H_{OD}\right).$
 \end_inset
 
  Similarly, for overdamped data, we will have 
-\begin_inset Formula $\log P\left(D|H_{UD}\right)<\log P\left(D|H_{OD}\right)$
+\begin_inset Formula $\ln P\left(D|H_{UD}\right)<\ln P\left(D|H_{OD}\right)$
 \end_inset
 
 .
@@ -2293,12 +2293,12 @@ reference "eq:map_stationary"
 \end_inset
 
  and 
-\begin_inset Formula $\log m^{\ast}\rightarrow-\infty$
+\begin_inset Formula $\ln m^{\ast}\rightarrow-\infty$
 \end_inset
 
 .
  Thus the 
-\begin_inset Formula $\log m^{\ast}$
+\begin_inset Formula $\ln m^{\ast}$
 \end_inset
 
  in 
@@ -2530,7 +2530,7 @@ Substituting this form in the expression for the log-posterior
 \begin{align}
  & \ln P\left(\bm{\lambda},\bm{\Sigma}\vert\bm{X}\right)\nonumber \\
 = & -\dfrac{1}{2}\bm{\Sigma}^{-1}:\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}\nonumber \\
- & +\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big]+\dfrac{N}{2}\ln\left(\dfrac{|\bm{\Sigma^{-1}}|}{4\pi^{2}}\right)\label{eq:lp}
+ & +\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big]+\dfrac{N}{2}\ln\dfrac{|\bm{\Sigma^{-1}}|}{4\pi^{2}}\label{eq:lp}
 \end{align}
 
 \end_inset
