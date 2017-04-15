@@ -91,7 +91,11 @@ Dipanjan Ghosh
 \end_layout
 
 \begin_layout Affiliation
-Dept of Chemical Engineering, Jadavpur University, Kolkata 700032, India
+Dept of Chemical Engineering, Jadavpur
+\begin_inset Newline newline
+\end_inset
+
+ University, Kolkata 700032, India
 \end_layout
 
 \begin_layout Author
@@ -109,6 +113,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -153,7 +158,7 @@ key "gardiner1985handbook"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-dx_{i}=-\lambda_{ij}x_{j}dt+(\sqrt{2D})_{ij}\cdot dW_{j}\label{eq:mvou}
+dx_{i}=-\lambda_{ij}x_{j}dt+(\sqrt{2D})_{ij}\cdot dW_{j},\label{eq:mvou}
 \end{equation}
 
 \end_inset
@@ -242,7 +247,7 @@ The probability density of a displacement from
 The solution is a multivariate normal distribution
 \begin_inset Formula 
 \begin{equation}
-\mathbf{\boldsymbol{x}}^{\prime}t^{\prime}|\boldsymbol{x}\thinspace t\sim\mathcal{N}\left(e^{\boldsymbol{-\lambda}\Delta t}\boldsymbol{x},\boldsymbol{c}-e^{\boldsymbol{-\lambda}\Delta t}\boldsymbol{c}\,e^{\boldsymbol{-\lambda}^{T}\Delta t}\right)
+\mathbf{\boldsymbol{x}}^{\prime}t^{\prime}|\boldsymbol{x}\thinspace t\sim\mathcal{N}\left(e^{\boldsymbol{-\lambda}\Delta t}\boldsymbol{x},\boldsymbol{c}-e^{\boldsymbol{-\lambda}\Delta t}\boldsymbol{c}\,e^{\boldsymbol{-\lambda}^{T}\Delta t}\right),
 \end{equation}
 
 \end_inset
@@ -277,7 +282,7 @@ where
  The correlation function decays exponentially, 
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{C}(t-t^{\prime})\equiv\langle\boldsymbol{x}(t)\boldsymbol{x}^{T}(t^{\prime})\rangle=e^{-\boldsymbol{\lambda}|\Delta t|}\boldsymbol{c}\label{eq:autocorr}
+\boldsymbol{C}(t-t^{\prime})\equiv\langle\boldsymbol{x}(t)\boldsymbol{x}^{T}(t^{\prime})\rangle=e^{-\boldsymbol{\lambda}|\Delta t|}\boldsymbol{c}\mathbf{},\label{eq:autocorr}
 \end{equation}
 
 \end_inset
@@ -305,7 +310,7 @@ key "van1992stochastic"
 The power spectral density
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{P}(ω)=(\text{−}iω\boldsymbol{I}+\boldsymbol{\lambda})^{-1}\left(2\boldsymbol{D}\right)(iω\boldsymbol{I}+\boldsymbol{\lambda^{T}})^{-1}\label{eq:spectral-density}
+\boldsymbol{P}(ω)=(\text{−}iω\boldsymbol{I}+\boldsymbol{\lambda})^{-1}\left(2\boldsymbol{D}\right)(iω\boldsymbol{I}+\boldsymbol{\lambda^{T}})^{-1},\label{eq:spectral-density}
 \end{equation}
 
 \end_inset
@@ -333,7 +338,7 @@ The matrices
  are not all independent but are related by the stationarity condition
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{\lambda c}+(\boldsymbol{\lambda c})^{T}=2\boldsymbol{D}
+\boldsymbol{\lambda c}+(\boldsymbol{\lambda c})^{T}=2\boldsymbol{D}.
 \end{equation}
 
 \end_inset
@@ -468,7 +473,7 @@ Consider now the data matrix
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-P\left(\boldsymbol{X}\vert\boldsymbol{\lambda},\boldsymbol{c}\right)=\prod_{n=1}^{N-1}P_{1\vert1}\left(\boldsymbol{x}_{n+1}\vert\boldsymbol{x}_{n},\boldsymbol{\lambda},\boldsymbol{c}\right)P_{1}\left(\boldsymbol{x}_{1}\vert\boldsymbol{\lambda},\boldsymbol{c}\right)
+P\left(\boldsymbol{X}\vert\boldsymbol{\lambda},\boldsymbol{c}\right)=\prod_{n=1}^{N-1}P_{1\vert1}\left(\boldsymbol{x}_{n+1}\vert\boldsymbol{x}_{n},\boldsymbol{\lambda},\boldsymbol{c}\right)P_{1}\left(\boldsymbol{x}_{1}\vert\boldsymbol{\lambda},\boldsymbol{c}\right).
 \end{equation}
 
 \end_inset
@@ -484,7 +489,7 @@ The probability
 \begin_layout Standard
 \begin_inset Formula 
 \[
-P\left(\boldsymbol{\lambda},\boldsymbol{c}\vert\boldsymbol{X}\right)=\dfrac{P\left(\bm{X}\vert\boldsymbol{\lambda},\boldsymbol{c}\right)P\left(\boldsymbol{\lambda},\boldsymbol{c}\right)}{P\left(\boldsymbol{X}\right)}
+P\left(\boldsymbol{\lambda},\boldsymbol{c}\vert\boldsymbol{X}\right)=\dfrac{P\left(\bm{X}\vert\boldsymbol{\lambda},\boldsymbol{c}\right)P\left(\boldsymbol{\lambda},\boldsymbol{c}\right)}{P\left(\boldsymbol{X}\right)}.
 \]
 
 \end_inset
@@ -512,7 +517,7 @@ The denominator
 \begin_inset Formula 
 \begin{align}
 \ln P\left(\bm{\lambda},\bm{c}\vert\bm{X}\right) & =\dfrac{N-1}{2}\ln\dfrac{1}{\left(2\pi\right)^{p}\vert\bm{\Sigma}\vert}+\dfrac{1}{2}\ln\dfrac{1}{\left(2\pi\right)^{p}|\bm{c}|}\nonumber \\
- & -\dfrac{1}{2}\sum_{n=1}^{N-1}\boldsymbol{\Delta}_{n}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\Delta}_{n}-\dfrac{1}{2}\boldsymbol{x}_{1}^{T}\boldsymbol{c}\,\boldsymbol{x}_{1}
+ & -\dfrac{1}{2}\sum_{n=1}^{N-1}\boldsymbol{\Delta}_{n}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\Delta}_{n}-\dfrac{1}{2}\boldsymbol{x}_{1}^{T}\boldsymbol{c}\,\boldsymbol{x}_{1},
 \end{align}
 
 \end_inset
@@ -543,22 +548,61 @@ where the two quantities
 With some elementary manipulations, detailed in the Appendix, the posterior
  probability can be written in terms of the following four matrix sufficient
  statistics 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{flalign}
-\boldsymbol{T}_{1} & =\sum_{n=1}^{N-1}\boldsymbol{x}_{n+1}\boldsymbol{x}_{n+1}^{T},\quad\boldsymbol{T}_{2}=\sum_{n=1}^{N-1}\boldsymbol{x}_{n+1}\boldsymbol{x}_{n}^{T}\nonumber \\
-\boldsymbol{T}_{3} & =\sum_{n=1}^{N-1}\boldsymbol{x}_{n}\boldsymbol{x}_{n}^{T},\quad\quad\quad\boldsymbol{T}_{4}=\boldsymbol{x}_{1}\boldsymbol{x}_{1}^{T}
+\boldsymbol{T}_{1} & =\sum_{n=1}^{N-1}\boldsymbol{x}_{n+1}\boldsymbol{x}_{n+1}^{T},\quad\boldsymbol{T}_{2}=\sum_{n=1}^{N-1}\boldsymbol{x}_{n+1}\boldsymbol{x}_{n}^{T},\\
+\boldsymbol{T}_{3} & =\sum_{n=1}^{N-1}\boldsymbol{x}_{n}\boldsymbol{x}_{n}^{T},\quad\quad\quad\boldsymbol{T}_{4}=\boldsymbol{x}_{1}\boldsymbol{x}_{1}^{T}.
 \end{flalign}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
 
 \end_inset
 
 and the maximum a posteriori estimates for the matrix of mean regression
  rates and the transition variation-covariance matrix can be written as
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\bm{\lambda^{\ast}}=-\dfrac{1}{\Delta t}\ln(\bm{T}_{2}\boldsymbol{T}_{3}^{-1})\label{eq:map_lambda}
+\bm{\lambda^{\ast}}=-\dfrac{1}{\Delta t}\ln(\bm{T}_{2}\boldsymbol{T}_{3}^{-1}),\label{eq:map_lambda}
 \end{equation}
 
 \end_inset
@@ -569,8 +613,21 @@ and the maximum a posteriori estimates for the matrix of mean regression
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\bm{\Sigma^{\ast}}=\dfrac{1}{N}\left(\bm{T}_{1}-\boldsymbol{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{T}_{2}^{T}\right)\label{eq:map_sigma}
+\bm{\Sigma^{\ast}}=\dfrac{1}{N}\left(\bm{T}_{1}-\boldsymbol{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{T}_{2}^{T}\right).\label{eq:map_sigma}
 \end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
 
 \end_inset
 
@@ -612,15 +669,11 @@ The Langevin equation for the Brownian motion of a damped harmonic oscillator
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-m\dot{v}+\gamma v+\nabla U=\xi\label{eq:langevin}
+m\dot{v}+\gamma v+\nabla U=\xi.\label{eq:langevin}
 \end{equation}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 Here 
 \begin_inset Formula $v\left(t\right)$
 \end_inset
@@ -680,15 +733,11 @@ v\left(t\right)
 v\left(t\right)
 \end{pmatrix}+\dfrac{\sqrt{2D}}{\tau}\begin{pmatrix}0\\
 \zeta\left(t\right)
-\end{pmatrix}\label{eq:phase_space}
+\end{pmatrix},\label{eq:phase_space}
 \end{equation}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 where 
 \begin_inset Formula $\zeta\left(t\right)$
 \end_inset
@@ -712,15 +761,11 @@ is now a zero-mean Gaussian white noise with unit variance.
 \dfrac{k}{m} & \dfrac{\gamma}{m}
 \end{pmatrix}=\begin{pmatrix}0 & -1\\
 \omega_{0}^{2} & \dfrac{1}{\tau}
-\end{pmatrix}
+\end{pmatrix}.
 \end{equation}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 Here 
 \begin_inset Formula $\omega_{0}=\sqrt{\nicefrac{k}{m}}$
 \end_inset
@@ -752,15 +797,11 @@ The stationary covariance matrix for the position-velocity phase space is
 \begin{equation}
 \bm{c}=\begin{pmatrix}\dfrac{k_{B}T}{k} & 0\\
 0 & \dfrac{k_{B}T}{m}
-\end{pmatrix}
+\end{pmatrix},
 \end{equation}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 where the diagonal elements are the familiar variances of the Gibbs distribution
  and Maxwell-Boltzmann distributions, which respectively, correspond to
  the equilibrium distributions of the position and velocity of the particle.
@@ -796,7 +837,7 @@ An alternative Bayesian procedure for directly estimating the mass of the
 \begin{align*}
  & P\left(x,v|m,k\right)\\
  & =P\left(x|k\right)\times P\left(v|m\right)\\
- & =\sqrt{\dfrac{k}{2\pi k_{B}T}}\exp\left(-\dfrac{kx^{2}}{2k_{B}T}\right)\times\sqrt{\dfrac{m}{2\pi k_{B}T}}\exp\left(-\dfrac{mv^{2}}{2k_{B}T}\right)
+ & =\sqrt{\dfrac{k}{2\pi k_{B}T}}\exp\left(-\dfrac{kx^{2}}{2k_{B}T}\right)\times\sqrt{\dfrac{m}{2\pi k_{B}T}}\exp\left(-\dfrac{mv^{2}}{2k_{B}T}\right).
 \end{align*}
 
 \end_inset
@@ -815,12 +856,25 @@ Using an informative prior that constrains
 
  to positive values, the logarithms of the posterior probability can be
  written as
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\ln P\left(k|x\right)=\dfrac{N}{2}\ln\dfrac{k}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{k}{k_{B}T}\sum x_{n}^{2}\label{eq:map_k_stat}
+\ln P\left(k|x\right)=\dfrac{N}{2}\ln\dfrac{k}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{k}{k_{B}T}\sum x_{n}^{2},\label{eq:map_k_stat}
 \end{equation}
 
 \end_inset
@@ -831,8 +885,21 @@ Using an informative prior that constrains
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\ln P\left(m|v\right)=\dfrac{N}{2}\ln\dfrac{m}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{m}{k_{B}T}\sum v_{n}^{2}\label{eq:map_m_stat}
+\ln P\left(m|v\right)=\dfrac{N}{2}\ln\dfrac{m}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{m}{k_{B}T}\sum v_{n}^{2}.\label{eq:map_m_stat}
 \end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
 
 \end_inset
 
@@ -847,7 +914,7 @@ The MAP estimates, from the equilibrium distribution of the position and
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\dfrac{k^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}x_{n}^{2}},\;\;\;\;\dfrac{m^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}v_{n}^{2}}\label{eq:map_stationary}
+\dfrac{k^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}x_{n}^{2}},\;\;\;\;\dfrac{m^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}v_{n}^{2}}.\label{eq:map_stationary}
 \end{equation}
 
 \end_inset
@@ -1037,7 +1104,7 @@ In the
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\dot{x}=-\dfrac{k}{\gamma}x+\sqrt{\dfrac{2k_{B}T}{\gamma}}\xi\left(t\right)\label{eq:univariate-ou}
+\dot{x}=-\dfrac{k}{\gamma}x+\sqrt{\dfrac{2k_{B}T}{\gamma}}\xi\left(t\right).\label{eq:univariate-ou}
 \end{equation}
 
 \end_inset
@@ -1112,7 +1179,7 @@ key "bera2017fast"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\lambda^{\ast}=\dfrac{1}{\Delta t}\ln\dfrac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}}
+\lambda^{\ast}=\dfrac{1}{\Delta t}\ln\dfrac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}},
 \]
 
 \end_inset
@@ -1123,7 +1190,7 @@ key "bera2017fast"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\dfrac{k_{B}T}{k^{\ast}}\left(1-\exp\left(-2\lambda^{\ast}\Delta t\right)\right)=\sum x_{n+1}^{2}-\dfrac{\left(\sum x_{n+1}x_{n}\right)^{2}}{\sum x_{n}^{2}}
+\dfrac{k_{B}T}{k^{\ast}}\left(1-\exp\left(-2\lambda^{\ast}\Delta t\right)\right)=\sum x_{n+1}^{2}-\dfrac{\left(\sum x_{n+1}x_{n}\right)^{2}}{\sum x_{n}^{2}}.
 \]
 
 \end_inset
@@ -2153,15 +2220,11 @@ key "mackay1992bayesian"
  is given by
 \begin_inset Formula 
 \begin{equation}
-P\left(D|H_{i}\right)\simeq P\left(D|\bm{w}_{MP},H_{i}\right)P\left(\bm{w}_{MP}|H_{i}\right)\Delta\bm{w}\label{eq:logevidence}
+P\left(D|H_{i}\right)\simeq P\left(D|\bm{w}_{MP},H_{i}\right)P\left(\bm{w}_{MP}|H_{i}\right)\Delta\bm{w},\label{eq:logevidence}
 \end{equation}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 where 
 \begin_inset Formula $P\left(D|\bm{w}_{MP},H_{i}\right)$
 \end_inset
@@ -2198,15 +2261,11 @@ reference "eq:logevidence"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-P\left(D|H_{i}\right)\simeq P\left(D|\bm{w}_{MP},H_{i}\right)P\left(\bm{w}_{MP}|H_{i}\right)\left(2\pi\right)^{\nicefrac{k}{2}}\left(\det\left(\bm{A}\right)\right)^{\nicefrac{-1}{2}}
+P\left(D|H_{i}\right)\simeq P\left(D|\bm{w}_{MP},H_{i}\right)P\left(\bm{w}_{MP}|H_{i}\right)\left(2\pi\right)^{\nicefrac{k}{2}}\left(\det\bm{A}\right)^{\nicefrac{-1}{2}},
 \end{equation}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 where 
 \begin_inset Formula $\bm{A}=-\nabla\nabla\ln P\left(\bm{w}|D,H_{i}\right)$
 \end_inset
@@ -2236,32 +2295,44 @@ where
 We focus on the stationary Bayesian estimates (labelled Bayes II in our
  earlier paper).
  Using some elementary manipulations, it can be shown that
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
 \ln P\left(D|H_{UD}\right) & =N\ln\dfrac{k^{\ast}}{2\pi k_{B}T}+N\ln\dfrac{m^{\ast}}{2\pi k_{B}T}\label{eq:ud_occ}\\
- & -2N+\ln\dfrac{4\pi m^{\ast}k^{\ast}}{N}\nonumber 
+ & -2N+\ln\dfrac{4\pi m^{\ast}k^{\ast}}{N},\nonumber \\
+\ln P\left(D|H_{OD}\right) & =N\ln\dfrac{k^{\ast}}{2\pi k_{B}T}-N+\ln\dfrac{2\pi k^{\ast}}{\sqrt{N}}.\label{eq:od_occ}
 \end{align}
 
 \end_inset
 
 
-\end_layout
+\begin_inset ERT
+status open
 
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\ln P\left(D|H_{OD}\right)=N\ln\dfrac{k^{\ast}}{2\pi k_{B}T}-N+\ln\dfrac{2\pi k^{\ast}}{\sqrt{N}}\label{eq:od_occ}
-\end{equation}
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 where 
 \begin_inset Formula $m^{\ast}$
 \end_inset
@@ -2518,10 +2589,6 @@ We define the quantity
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 Substituting this form in the expression for the log-posterior
 \end_layout
 
@@ -2530,15 +2597,11 @@ Substituting this form in the expression for the log-posterior
 \begin{align}
  & \ln P\left(\bm{\lambda},\bm{\Sigma}\vert\bm{X}\right)\nonumber \\
 = & -\dfrac{1}{2}\bm{\Sigma}^{-1}:\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}\nonumber \\
- & +\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big]+\dfrac{N}{2}\ln\dfrac{|\bm{\Sigma^{-1}}|}{4\pi^{2}}\label{eq:lp}
+ & +\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big]+\dfrac{N}{2}\ln\dfrac{|\bm{\Sigma^{-1}}|}{4\pi^{2}}.\label{eq:lp}
 \end{align}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 Writing only the terms containing 
 \begin_inset Formula $\lambda$
 \end_inset
@@ -2550,15 +2613,11 @@ Writing only the terms containing
 \begin_inset Formula 
 \begin{align*}
 P\left(\bm{\lambda},\bm{\Sigma}|\bm{X}\right) & \propto\exp\Bigg(-\dfrac{1}{2}\bm{\Sigma^{-1}}:\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\\
- & \left(\bm{T_{3}}\right)\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}\Bigg)
+ & \left(\bm{T_{3}}\right)\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}\Bigg).
 \end{align*}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 We recognize that the posterior is a Gaussian with respect to 
 \begin_inset Formula $\exp\left(-\bm{\lambda}\Delta t\right)$
 \end_inset
@@ -2596,15 +2655,11 @@ reference "eq:lp"
 \begin{align}
  & \dfrac{\partial\ln P\left(\bm{\lambda},\bm{\Sigma}\vert\bm{X}\right)}{\partial\bm{\Sigma^{-1}}}\nonumber \\
  & =-\dfrac{1}{2}\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}\nonumber \\
- & +\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big]+\dfrac{N}{2}\left(\bm{\Sigma}\right)
+ & +\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big]+\dfrac{N}{2}\left(\bm{\Sigma}\right).
 \end{align}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 Setting this derivative to zero, and noting that 
 \begin_inset Formula $\boldsymbol{\Lambda^{\ast}=}\exp\left(-\bm{\lambda^{\ast}}\Delta t\right)=\bm{T_{2}T_{3}^{-1}}$
 \end_inset
@@ -2619,15 +2674,11 @@ Setting this derivative to zero, and noting that
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\bm{\Sigma^{\ast}}=\dfrac{1}{N}\left(\bm{T}_{1}-\boldsymbol{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{T}_{2}^{T}\right)
+\bm{\Sigma^{\ast}}=\dfrac{1}{N}\left(\bm{T}_{1}-\boldsymbol{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{T}_{2}^{T}\right).
 \end{equation}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 Equations 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2660,19 +2711,15 @@ Once we have the MAP estimates for
 \end_inset
 
  using the following algebraic manipulations
-\end_layout
+\begin_inset ERT
+status open
 
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\begin{pmatrix}\dfrac{k_{B}T}{k^{\ast}}\\
-\dfrac{k_{B}T}{m^{\ast}}
-\end{pmatrix}=\begin{pmatrix}1-\Lambda_{11}^{\ast2} & -\Lambda_{12}^{\ast2}\\
--\Lambda_{21}^{\ast2} & 1-\Lambda_{22}^{\ast2}
-\end{pmatrix}^{-1}\begin{pmatrix}\Sigma_{11}^{\ast}\\
-\Sigma_{22}^{\ast}
-\end{pmatrix}
-\end{equation}
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
 
 \end_inset
 
@@ -2681,9 +2728,29 @@ Once we have the MAP estimates for
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
-\gamma^{\ast}=\dfrac{m^{\ast2}\Sigma_{12}^{\ast}}{k_{B}T\Lambda_{12}^{\ast2}}
-\end{equation}
+\begin{align}
+\begin{pmatrix}\dfrac{k_{B}T}{k^{\ast}}\\
+\dfrac{k_{B}T}{m^{\ast}}
+\end{pmatrix} & =\begin{pmatrix}1-\Lambda_{11}^{\ast2} & -\Lambda_{12}^{\ast2}\\
+-\Lambda_{21}^{\ast2} & 1-\Lambda_{22}^{\ast2}
+\end{pmatrix}^{-1}\begin{pmatrix}\Sigma_{11}^{\ast}\\
+\Sigma_{22}^{\ast}
+\end{pmatrix}\\
+\gamma^{\ast} & =\dfrac{m^{\ast2}\Sigma_{12}^{\ast}}{k_{B}T\Lambda_{12}^{\ast2}}
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
 
 \end_inset
 
@@ -2717,15 +2784,11 @@ v_{j+1}
 v_{j}
 \end{pmatrix}+\begin{pmatrix}\Delta x_{j}\\
 \Delta v_{j}
-\end{pmatrix}
+\end{pmatrix}.
 \end{equation}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 It is shown that 
 \begin_inset Formula $\Delta x_{j}$
 \end_inset
@@ -2744,13 +2807,15 @@ It is shown that
 \end_inset
 
 
-\end_layout
+\begin_inset ERT
+status open
 
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\Delta x_{j}=\sigma_{xx}\xi
-\end{equation}
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
 
 \end_inset
 
@@ -2759,24 +2824,47 @@ It is shown that
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
-\Delta v_{j}=\nicefrac{\sigma_{xv}^{2}}{\sigma_{xx}}\xi_{j}+\sqrt{\sigma_{vv}^{2}-\nicefrac{\sigma_{xv}^{4}}{\sigma_{xx}^{2}}}\zeta_{j}
-\end{equation}
+\begin{align}
+\Delta x_{j} & =\sigma_{xx}\xi,\\
+\Delta v_{j} & =\nicefrac{\sigma_{xv}^{2}}{\sigma_{xx}}\xi_{j}+\sqrt{\sigma_{vv}^{2}-\nicefrac{\sigma_{xv}^{4}}{\sigma_{xx}^{2}}}\zeta_{j}.
+\end{align}
 
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
 \end_layout
 
-\begin_layout Standard
+\end_inset
+
 where
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-\sigma_{xx}^{2} & =\dfrac{D}{4\omega^{2}\omega_{0}^{2}\tau^{3}}(4\omega^{2}\tau^{2}+\nonumber \\
- & \exp\left(-\dfrac{\Delta t}{\tau}\right)\left[\cos\left(2\omega\Delta t\right)-2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right])
+\sigma_{xx}^{2} & =\dfrac{D}{4\omega^{2}\omega_{0}^{2}\tau^{3}}(4\omega^{2}\tau^{2}+\exp\left(-\dfrac{\Delta t}{\tau}\right)\nonumber \\
+ & \times\left[\cos\left(2\omega\Delta t\right)-2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right]),
 \end{align}
 
 \end_inset
@@ -2787,8 +2875,8 @@ where
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-\sigma_{vv}^{2} & =\dfrac{D}{4\omega^{2}\tau^{3}}(4\omega^{2}\tau^{2}+\nonumber \\
- & \exp\left(-\dfrac{\Delta t}{\tau}\right)\left[\cos\left(2\omega\Delta t\right)+2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right])
+\sigma_{vv}^{2} & =\dfrac{D}{4\omega^{2}\tau^{3}}(4\omega^{2}\tau^{2}+\exp\left(-\dfrac{\Delta t}{\tau}\right)\nonumber \\
+ & \times\left[\cos\left(2\omega\Delta t\right)+2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right]),
 \end{align}
 
 \end_inset
@@ -2799,8 +2887,21 @@ where
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\sigma_{xv}^{2}=\dfrac{D}{\omega^{2}\tau^{2}}\exp\left(-\dfrac{\Delta t}{\tau}\right)\sin^{2}\left(\omega\Delta t\right)
+\sigma_{xv}^{2}=\dfrac{D}{\omega^{2}\tau^{2}}\exp\left(-\dfrac{\Delta t}{\tau}\right)\sin^{2}\left(\omega\Delta t\right).
 \end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
 
 \end_inset
 
@@ -2814,12 +2915,12 @@ The autocorrelation matrix is given as
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-\begin{pmatrix}\langle x\left(t\right)x\left(0\right)\rangle & \langle x\left(t\right)v\left(0\right)\rangle\\
+ & \begin{pmatrix}\langle x\left(t\right)x\left(0\right)\rangle & \langle x\left(t\right)v\left(0\right)\rangle\\
 \langle v\left(t\right)x\left(0\right)\rangle & \langle v\left(t\right)v\left(0\right)\rangle
-\end{pmatrix}\nonumber \\
-=\dfrac{D}{\tau}\exp\left(-\dfrac{t}{2\tau}\right) & \begin{pmatrix}\dfrac{\cos\omega t+\dfrac{\sin\omega t}{2\omega\tau}}{\omega_{0}^{2}} & \dfrac{\sin\omega t}{\omega}\\
+\end{pmatrix}=\dfrac{D}{\tau}\exp\left(-\dfrac{t}{2\tau}\right)\nonumber \\
+\times & \begin{pmatrix}\dfrac{\cos\omega t+\dfrac{\sin\omega t}{2\omega\tau}}{\omega_{0}^{2}} & \dfrac{\sin\omega t}{\omega}\\
 -\dfrac{\sin\omega t}{\omega} & \cos\omega t-\dfrac{\sin\omega t}{2\omega\tau}
-\end{pmatrix}\label{eq:autocorr_mvou}
+\end{pmatrix}.\label{eq:autocorr_mvou}
 \end{align}
 
 \end_inset
@@ -2829,13 +2930,15 @@ The autocorrelation matrix is given as
 
 \begin_layout Standard
 The power spectral density (PSD) for position and velocity are given as
-\end_layout
+\begin_inset ERT
+status open
 
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-P^{\left(x\right)}\left(f_{k}\right)=\dfrac{\nicefrac{D}{\left(2\pi^{2}\right)}}{\left(2\pi\tau\right)^{2}\left(f_{k}^{2}-f_{0}^{2}\right)^{2}+f_{k}^{2}}\label{eq:xpsd_mvou}
-\end{equation}
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
 
 \end_inset
 
@@ -2844,9 +2947,23 @@ P^{\left(x\right)}\left(f_{k}\right)=\dfrac{\nicefrac{D}{\left(2\pi^{2}\right)}}
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
-P^{\left(v\right)}\left(f_{k}\right)=\dfrac{2D}{\left(2\pi\tau\right)^{2}\left(f_{k}-\nicefrac{f_{0}^{2}}{f_{k}}\right)^{2}+1}\label{eq:vpsd_mvou}
-\end{equation}
+\begin{align}
+P^{\left(x\right)}\left(f_{k}\right) & =\dfrac{D/(2\pi^{2})}{\left(2\pi\tau\right)^{2}\left(f_{k}^{2}-f_{0}^{2}\right)^{2}+f_{k}^{2}},\label{eq:xpsd_mvou}\\
+P^{\left(v\right)}\left(f_{k}\right) & =\dfrac{2D}{\left(2\pi\tau\right)^{2}\left(f_{k}-\nicefrac{f_{0}^{2}}{f_{k}}\right)^{2}+1}.\label{eq:vpsd_mvou}
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
 
 \end_inset
 
