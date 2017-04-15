@@ -113,7 +113,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -2864,31 +2863,11 @@ begin{subequations}
 \begin_inset Formula 
 \begin{align}
 \sigma_{xx}^{2} & =\dfrac{D}{4\omega^{2}\omega_{0}^{2}\tau^{3}}(4\omega^{2}\tau^{2}+\exp\left(-\dfrac{\Delta t}{\tau}\right)\nonumber \\
- & \times\left[\cos\left(2\omega\Delta t\right)-2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right]),
+ & \times\left[\cos\left(2\omega\Delta t\right)-2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right]),\\
+\sigma_{vv}^{2} & =\dfrac{D}{4\omega^{2}\tau^{3}}(4\omega^{2}\tau^{2}+\exp\left(-\dfrac{\Delta t}{\tau}\right)\\
+ & \times\left[\cos\left(2\omega\Delta t\right)+2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right]),\\
+\sigma_{xv}^{2} & =\dfrac{D}{\omega^{2}\tau^{2}}\exp\left(-\dfrac{\Delta t}{\tau}\right)\sin^{2}\left(\omega\Delta t\right).
 \end{align}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{align}
-\sigma_{vv}^{2} & =\dfrac{D}{4\omega^{2}\tau^{3}}(4\omega^{2}\tau^{2}+\exp\left(-\dfrac{\Delta t}{\tau}\right)\nonumber \\
- & \times\left[\cos\left(2\omega\Delta t\right)+2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right]),
-\end{align}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\sigma_{xv}^{2}=\dfrac{D}{\omega^{2}\tau^{2}}\exp\left(-\dfrac{\Delta t}{\tau}\right)\sin^{2}\left(\omega\Delta t\right).
-\end{equation}
 
 \end_inset
 
@@ -2917,8 +2896,8 @@ The autocorrelation matrix is given as
 \begin{align}
  & \begin{pmatrix}\langle x\left(t\right)x\left(0\right)\rangle & \langle x\left(t\right)v\left(0\right)\rangle\\
 \langle v\left(t\right)x\left(0\right)\rangle & \langle v\left(t\right)v\left(0\right)\rangle
-\end{pmatrix}=\dfrac{D}{\tau}\exp\left(-\dfrac{t}{2\tau}\right)\nonumber \\
-\times & \begin{pmatrix}\dfrac{\cos\omega t+\dfrac{\sin\omega t}{2\omega\tau}}{\omega_{0}^{2}} & \dfrac{\sin\omega t}{\omega}\\
+\end{pmatrix}=\nonumber \\
+\dfrac{D}{\tau}\exp\left(\dfrac{-t}{2\tau}\right) & \begin{pmatrix}\dfrac{\cos\omega t+\dfrac{\sin\omega t}{2\omega\tau}}{\omega_{0}^{2}} & \dfrac{\sin\omega t}{\omega}\\
 -\dfrac{\sin\omega t}{\omega} & \cos\omega t-\dfrac{\sin\omega t}{2\omega\tau}
 \end{pmatrix}.\label{eq:autocorr_mvou}
 \end{align}
