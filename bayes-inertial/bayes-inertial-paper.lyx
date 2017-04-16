@@ -1966,17 +1966,18 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="3">
+<lyxtabular version="3" rows="4" columns="4">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\sigma_{mm}^{2}=1.341\times10^{-27}$
+\begin_inset Formula $\sigma^{2}$
 \end_inset
 
 
@@ -1988,7 +1989,19 @@ status collapsed
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\sigma_{mk}^{2}=3.015\times10^{-19}$
+\begin_inset Formula $m$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k$
 \end_inset
 
 
@@ -2000,7 +2013,7 @@ status collapsed
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\sigma_{m\gamma}^{2}=8.069\times10^{-24}$
+\begin_inset Formula $\gamma$
 \end_inset
 
 
@@ -2014,7 +2027,7 @@ status collapsed
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\sigma_{km}^{2}=3.015\times10^{-19}$
+\begin_inset Formula $m$
 \end_inset
 
 
@@ -2026,7 +2039,19 @@ status collapsed
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\sigma_{kk}^{2}=7.143\times10^{-11}$
+\begin_inset Formula $1.341\times10^{-27}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.015\times10^{-19}$
 \end_inset
 
 
@@ -2038,7 +2063,57 @@ status collapsed
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\sigma_{k\gamma}^{2}=1.815\times10^{-15}$
+\begin_inset Formula $8.069\times10^{-24}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.015\times10^{-19}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7.143\times10^{-11}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.815\times10^{-15}$
 \end_inset
 
 
@@ -2052,7 +2127,7 @@ status collapsed
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\sigma_{\gamma m}^{2}=8.069\times10^{-24}$
+\begin_inset Formula $\gamma$
 \end_inset
 
 
@@ -2064,7 +2139,19 @@ status collapsed
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\sigma_{\gamma k}^{2}=1.815\times10^{-15}$
+\begin_inset Formula $8.069\times10^{-24}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.815\times10^{-15}$
 \end_inset
 
 
@@ -2076,7 +2163,7 @@ status collapsed
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\sigma_{\gamma\gamma}^{2}=4.928\times10^{-20}$
+\begin_inset Formula $4.928\times10^{-20}$
 \end_inset
 
 
