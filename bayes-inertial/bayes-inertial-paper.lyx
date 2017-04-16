@@ -2951,7 +2951,7 @@ begin{subequations}
 \begin{align}
 \sigma_{xx}^{2} & =\dfrac{D}{4\omega^{2}\omega_{0}^{2}\tau^{3}}(4\omega^{2}\tau^{2}+\exp\left(-\dfrac{\Delta t}{\tau}\right)\nonumber \\
  & \times\left[\cos\left(2\omega\Delta t\right)-2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right]),\\
-\sigma_{vv}^{2} & =\dfrac{D}{4\omega^{2}\tau^{3}}(4\omega^{2}\tau^{2}+\exp\left(-\dfrac{\Delta t}{\tau}\right)\\
+\sigma_{vv}^{2} & =\dfrac{D}{4\omega^{2}\tau^{3}}(4\omega^{2}\tau^{2}+\exp\left(-\dfrac{\Delta t}{\tau}\right)\nonumber \\
  & \times\left[\cos\left(2\omega\Delta t\right)+2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right]),\\
 \sigma_{xv}^{2} & =\dfrac{D}{\omega^{2}\tau^{2}}\exp\left(-\dfrac{\Delta t}{\tau}\right)\sin^{2}\left(\omega\Delta t\right).
 \end{align}
