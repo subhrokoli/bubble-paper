@@ -113,6 +113,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -136,6 +137,25 @@ y mean.
  describing the inertial motion of a harmonically bound particle in a fluctuatin
 g Stokesian fluid.
  
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+The multivariate Ornstein-Uhlenbeck process is widely used in many branches
+ of science and engineering to describe the regression of a system to its
+ stationary mean.
+ The importance of the process arises from the fact that it is both Markovian
+ and Gaussian and, hence, is fully characterized by its stationary and condition
+al distribution, which are multivariate normals.
+ This simplicity implies that joint distribution functions can be obtained
+ from a product of stationary and conditional distributions and the probabilitie
+s of discretely sampled paths can, thereby, be directly calculated in terms
+ of the process parameters, the drift and diffusion matrices.
+ The estimation of these matrices from a set of discrete observations of
+ the Ornstein-Uhlenbeck process is the problem we address here.
 \end_layout
 
 \begin_layout Section
