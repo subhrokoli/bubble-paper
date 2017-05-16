@@ -113,7 +113,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -2183,7 +2182,8 @@ Pairs plot for mass
 \begin_inset Formula $\gamma$
 \end_inset
 
- obtained from the MAP estimates in 
+ .
+ The top panel shows the pairs plot obtained from the MAP estimates in 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:map_lambda"
@@ -2389,14 +2389,21 @@ reference "fig:inference"
 \end_inset
 
 .
- Similarly, Figure 
+ The upper panel shows the MAP estimates obtained from 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:stationary"
+reference "eq:map_lambda"
 
 \end_inset
 
- represents posterior distribution in the 
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map_sigma"
+
+\end_inset
+
+ while the lower panel represents posterior distribution in the 
 \begin_inset Formula $\left(m,k\right)$
 \end_inset
 
