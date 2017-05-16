@@ -296,7 +296,7 @@ where
  and the mean and variance are
 \begin_inset Formula 
 \[
-\boldsymbol{\mu}_{\Delta t}=e^{\boldsymbol{-\lambda}\Delta t}\boldsymbol{x},\quad\boldsymbol{\sigma}^{2}=\boldsymbol{c}-e^{\boldsymbol{-\lambda}\Delta t}\boldsymbol{c}\,e^{\boldsymbol{-\lambda}^{T}\Delta t}.
+\boldsymbol{\mu}_{\Delta t}=e^{\boldsymbol{-\lambda}\Delta t}\boldsymbol{x},\quad\boldsymbol{\sigma}_{\Delta t}^{2}=\boldsymbol{c}-e^{\boldsymbol{-\lambda}\Delta t}\boldsymbol{c}\,e^{\boldsymbol{-\lambda}^{T}\Delta t}.
 \]
 
 \end_inset
@@ -306,56 +306,32 @@ This solution is exact and holds for arbitrary values of
 \end_inset
 
 .
- The matrix 
+ The stationary distribution 
+\begin_inset Formula $P_{1}(\boldsymbol{x})$
+\end_inset
+
+ obeys the steady state Fokker-Plank equation 
+\begin_inset Formula $\mathcal{L}P_{1}=0$
+\end_inset
+
+ and the solution is, again, a normal distribution,
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{x}\sim\mathcal{N}\left(\boldsymbol{0},\boldsymbol{c}\right).
+\end{equation}
+
+\end_inset
+
+Then, 
 \begin_inset Formula $\boldsymbol{c}=\langle\boldsymbol{x}\boldsymbol{x}^{T}\rangle$
 \end_inset
 
- contains the variances and covariances in the stationary state.
- The correlation function decays exponentially, 
-\begin_inset Formula 
-\begin{equation}
-\boldsymbol{C}(t-t^{\prime})\equiv\langle\boldsymbol{x}(t)\boldsymbol{x}^{T}(t^{\prime})\rangle=e^{-\boldsymbol{\lambda}|\Delta t|}\boldsymbol{c}\mathbf{},\label{eq:autocorr}
-\end{equation}
-
+ is identified as the matrix of variances and covariances in the stationary
+ state and 
+\begin_inset Formula $\mathcal{L}P_{1}=0$
 \end_inset
 
-a property guaranteed by Doob's theorem for any Gauss-Markov processes 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "van1992stochastic"
-
-\end_inset
-
-.
- 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-The power spectral density
-\begin_inset Formula 
-\begin{equation}
-\boldsymbol{P}(ω)=(\text{−}iω\boldsymbol{I}+\boldsymbol{\lambda})^{-1}\left(2\boldsymbol{D}\right)(iω\boldsymbol{I}+\boldsymbol{\lambda^{T}})^{-1},\label{eq:spectral-density}
-\end{equation}
-
-\end_inset
-
-is a multivariate Lorentzian in the angular frequency 
-\begin_inset Formula $\omega$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-The matrices 
+ implies that the matrices 
 \begin_inset Formula $\boldsymbol{\lambda}$
 \end_inset
 
@@ -387,7 +363,100 @@ The matrices
 \uwave off
 \noun off
 \color none
-obtained by setting 
+This is a Lyapunov matrix equation for 
+\begin_inset Formula $\boldsymbol{c},$
+\end_inset
+
+ given 
+\begin_inset Formula $\boldsymbol{\lambda}$
+\end_inset
+
+ and 
+\begin_inset Formula $\boldsymbol{D}$
+\end_inset
+
+.
+ Solutions are considerably simplified when the Fokker-Planck operator obeys
+ detailed balance 
+\begin_inset Formula $\mathcal{L}P_{1}(\boldsymbol{x})=\mathcal{L}^{\dagger}P_{1}(\boldsymbol{\epsilon x})$
+\end_inset
+
+, where 
+\begin_inset Formula $\mathcal{L^{\dagger}}$
+\end_inset
+
+ is the adjoint operator and 
+\begin_inset Formula $\epsilon_{i}=\pm1$
+\end_inset
+
+ is the parity, under time-reversal, of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ We shall return to a more detailed discussion of this below.
+ 
+\end_layout
+
+\begin_layout Standard
+The Gauss-Markov property of the Ornstein-Uhlenbeck process ensures that
+ the correlation function 
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{C}(t-t^{\prime})\equiv\langle\boldsymbol{x}(t)\boldsymbol{x}^{T}(t^{\prime})\rangle=e^{-\boldsymbol{\lambda}|\Delta t|}\boldsymbol{c}\mathbf{}\label{eq:autocorr}
+\end{equation}
+
+\end_inset
+
+decays exponentially and that its Fourier transform, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+the power spectral density,
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{P}(ω)=(\text{−}iω\boldsymbol{I}+\boldsymbol{\lambda})^{-1}\left(2\boldsymbol{D}\right)(iω\boldsymbol{I}+\boldsymbol{\lambda^{T}})^{-1}\label{eq:spectral-density}
+\end{equation}
+
+\end_inset
+
+is a multivariate Lorentzian in the angular frequency 
+\begin_inset Formula $\omega$
+\end_inset
+
+ 
 \family default
 \series default
 \shape default
@@ -400,7 +469,10 @@ obtained by setting
 \noun default
 \color inherit
 
-\begin_inset Formula $\partial_{t}P_{1|1}=0$
+\begin_inset CommandInset citation
+LatexCommand cite
+key "van1992stochastic"
+
 \end_inset
 
 
@@ -416,63 +488,18 @@ obtained by setting
 \noun off
 \color none
 .
- This is a Lyapunov matrix equation for 
-\begin_inset Formula $\boldsymbol{c},$
-\end_inset
 
- given 
-\begin_inset Formula $\boldsymbol{\lambda}$
-\end_inset
-
- and 
-\begin_inset Formula $\boldsymbol{D}$
-\end_inset
-
-.
- When the dynamics is microscopically reversible, the mean regression rates
- are constrained by the Onsager symmetry relation 
-\begin_inset Formula $\boldsymbol{\lambda c}=(\boldsymbol{\lambda c})^{T}$
-\end_inset
-
- and the solution of the Lyapunov matrix equation is then easily obtained
- to be 
-\begin_inset Formula $\boldsymbol{c}=\boldsymbol{\lambda}^{-1}\boldsymbol{D}$
-\end_inset
-
-.
- This result is known as the fluctuation-dissipation relation.
- In physical and chemical applications, the covariance matrix is typically
- known from statistical mechanics and the above relation maybe be used to
- determine the amplitude of the noise, given the mean regression rates.
- 
-\end_layout
-
-\begin_layout Standard
-The stationary distribution 
-\begin_inset Formula $P_{1}(\boldsymbol{x})$
-\end_inset
-
- obeys the steady state Fokker-Plank equation 
-\begin_inset Formula $\mathcal{L}P_{1}=0$
-\end_inset
-
- and the solution is, again, a normal distribution,
-\begin_inset Formula 
-\begin{equation}
-\boldsymbol{x}\sim\mathcal{N}\left(\boldsymbol{0},\boldsymbol{c}\right).
-\end{equation}
-
-\end_inset
-
-In the following, we shall assume that process is specified by the matrix
- of mean regression rates 
-\begin_inset Formula $\boldsymbol{\lambda}$
-\end_inset
-
- and the stationary covariance matrix 
-\begin_inset Formula $\boldsymbol{c}.$
-\end_inset
-
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
  
 \end_layout
 
