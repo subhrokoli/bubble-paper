@@ -384,7 +384,7 @@ This is a Lyapunov matrix equation for
 \begin_inset Formula $\mathcal{L^{\dagger}}$
 \end_inset
 
- is the adjoint operator and 
+ is the adjoint Fokker-Planck operator and 
 \begin_inset Formula $\epsilon_{i}=\pm1$
 \end_inset
 
@@ -749,7 +749,7 @@ hlenbeck process.
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{c}^{\ast}=\left[\boldsymbol{1}-e^{-2(\boldsymbol{\lambda}^{\ast})^{T}\Delta t}\right]^{-1}\boldsymbol{\Sigma}^{\ast}.
+\boldsymbol{c}^{\ast}=\left[\boldsymbol{1}-\epsilon_{i}\epsilon_{j}e^{-2(\boldsymbol{\lambda}^{\ast})^{T}\Delta t}\right]^{-1}\boldsymbol{\Sigma}^{\ast}.
 \end{equation}
 
 \end_inset
