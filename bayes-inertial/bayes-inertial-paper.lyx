@@ -14,7 +14,7 @@
 \definecolor{myGreen}{rgb}{0.0, 1, 10.1}
 \definecolor{myBlue}{rgb}{0.9, 0.2, 0}
 \end_preamble
-\options aps, twocolumn, pre,superscriptaddress, notitlepage
+\options aps, twocolumn, pre,superscriptaddress, notitlepage, draft
 \use_default_options false
 \maintain_unincluded_children false
 \language english
@@ -129,13 +129,14 @@ y mean.
  Here we present a fast Bayesian method to estimate the drift and diffusion
  coefficients of the process from discretely observed sample paths.
  We use exact likelihoods to derive simple expressions for the maximum a
- posteriori estimates in terms of four sufficient statistic matrices, .
+ posteriori estimates in terms of four sufficient statistic matrices.
  We show that the dimensionality of the estimation problem is reduced when
  microscopic reversibility enforces Onsager-Casimir symmetry on the process
  parameters.
  We apply the method to estimate the parameters of the Langevin equation
  describing the inertial motion of a harmonically bound particle in a fluctuatin
-g Stokesian fluid.
+g Stokesian fluid, a problem relevant to colloidal particles in optical
+ traps.
  
 \end_layout
 
@@ -199,6 +200,23 @@ where
 \end_inset
 
 .
+ We denote 
+\begin_inset Formula $(x_{1},\ldots,x_{M})$
+\end_inset
+
+ by the vector 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{ij}$
+\end_inset
+
+ by the matrix 
+\begin_inset Formula $\boldsymbol{\lambda}$
+\end_inset
+
+, with similar notation for other vectors and matrices, when convenient.
  
 \end_layout
 
@@ -266,7 +284,7 @@ The probability density of a displacement from
 The solution is a multivariate normal distribution
 \begin_inset Formula 
 \begin{equation}
-\mathbf{\boldsymbol{x}}^{\prime}t^{\prime}|\boldsymbol{x}\thinspace t\sim\mathcal{N}\left(e^{\boldsymbol{-\lambda}\Delta t}\boldsymbol{x},\boldsymbol{c}-e^{\boldsymbol{-\lambda}\Delta t}\boldsymbol{c}\,e^{\boldsymbol{-\lambda}^{T}\Delta t}\right),
+\mathbf{\boldsymbol{x}}^{\prime}t^{\prime}|\boldsymbol{x}\thinspace t\sim\mathcal{N}\left(\boldsymbol{\mu}_{\Delta t}\,,\boldsymbol{\sigma}_{\Delta t}^{2}\right)
 \end{equation}
 
 \end_inset
@@ -275,20 +293,15 @@ where
 \begin_inset Formula $\Delta t=t-t'$
 \end_inset
 
- and 
-\begin_inset Formula $\mathcal{N}(\boldsymbol{\mu},\boldsymbol{\sigma^{2}})$
+ and the mean and variance are
+\begin_inset Formula 
+\[
+\boldsymbol{\mu}_{\Delta t}=e^{\boldsymbol{-\lambda}\Delta t}\boldsymbol{x},\quad\boldsymbol{\sigma}^{2}=\boldsymbol{c}-e^{\boldsymbol{-\lambda}\Delta t}\boldsymbol{c}\,e^{\boldsymbol{-\lambda}^{T}\Delta t}.
+\]
+
 \end_inset
 
- is the multivariate normal distribution with mean 
-\begin_inset Formula $\boldsymbol{\mu}$
-\end_inset
-
- and variance 
-\begin_inset Formula $\boldsymbol{\sigma^{2}}$
-\end_inset
-
-.
- This solution is exact and holds for arbitrary values of 
+This solution is exact and holds for arbitrary values of 
 \begin_inset Formula $|\Delta t|$
 \end_inset
 
@@ -354,7 +367,7 @@ The matrices
 \begin_inset Formula $\boldsymbol{c}$
 \end_inset
 
- are not all independent but are related by the stationarity condition
+ are not all independent but are related by the stationarity condition 
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{\lambda c}+(\boldsymbol{\lambda c})^{T}=2\boldsymbol{D}.
@@ -374,7 +387,36 @@ The matrices
 \uwave off
 \noun off
 \color none
-This is a Lyapunov matrix equation for 
+obtained by setting 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\partial_{t}P_{1|1}=0$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+.
+ This is a Lyapunov matrix equation for 
 \begin_inset Formula $\boldsymbol{c},$
 \end_inset
 
@@ -387,18 +429,18 @@ This is a Lyapunov matrix equation for
 \end_inset
 
 .
- When detailed balance, 
+ When the dynamics is microscopically reversible, 
 \begin_inset Formula $\boldsymbol{\lambda c}=(\boldsymbol{\lambda c})^{T}$
 \end_inset
 
-, is satisfied, the solution is 
+, and the solution is 
 \begin_inset Formula $\boldsymbol{c}=\boldsymbol{\lambda}^{-1}\boldsymbol{D}$
 \end_inset
 
 .
- Alternatively, if the covariance matrix is known, as is typically the case
- in physical applications, the variance of the noise can be obtained given
- the mean regression rates.
+ In physical and chemical applications, the covariance matrix is typically
+ known from statistical mechanics and the above relation maybe be used to
+ determine the amplitude of the noise, given the mean regression rates.
  
 \end_layout
 
@@ -443,40 +485,36 @@ name "sec:Bayesian-inference"
 \end_layout
 
 \begin_layout Standard
-Consider now the data matrix 
+Consider now the discrete time series 
 \begin_inset Formula $\boldsymbol{X}=\left(\boldsymbol{x}_{1},\boldsymbol{x}_{2},...,\boldsymbol{x}_{N}\right)$
 \end_inset
 
-, which is a time series consisting of 
+, consisting of 
 \begin_inset Formula $N$
 \end_inset
 
- observations of the sample path of the multidimensional general 
-\begin_inset Formula $p$
+ observations of the sample path 
+\begin_inset Formula $\boldsymbol{x}(t)$
 \end_inset
 
--variate Ornstein-Uhlenbeck process at discrete times 
+ at the discrete times 
 \begin_inset Formula $t=n\Delta t$
 \end_inset
 
  with 
-\begin_inset Formula $n=1,2,...,N$
+\begin_inset Formula $n=1,\ldots,N.$
 \end_inset
 
-.
- Each of the observations 
-\begin_inset Formula $\bm{x_{i}}$
+ Each observation 
+\begin_inset Formula $\boldsymbol{x}_{n}$
 \end_inset
 
- is a 
-\begin_inset Formula $p$
+ is an 
+\begin_inset Formula $M$
 \end_inset
 
--dimensional vector, such that 
-\begin_inset Formula $\bm{x_{i}}=\left[x_{i}^{\left(1\right)},x_{i}^{\left(2\right)},...,x_{i}^{\left(p\right)}\right]^{T}$
-\end_inset
-
-.
+-dimensional vector corresponding to the number of components of the multivariat
+e Ornstein-Uhlenbeck process.
  From the Markov property of the process, the probability of the path, given
  the parameters 
 \begin_inset Formula $\boldsymbol{\lambda}$
@@ -517,7 +555,7 @@ The denominator
 \begin_inset Formula $P\left(\bm{X}\right)$
 \end_inset
 
- is an unimportant normalization, independent of the parameters and can
+ is an unimportant normalization, independent of the parameters, which can
  be ignored for the purpose of parameter estimation.
  Using informative uniform priors for 
 \begin_inset Formula $P\left(\boldsymbol{\lambda},\boldsymbol{c}\right)$
@@ -602,7 +640,7 @@ end{subequations}
 \end_inset
 
 and the maximum a posteriori estimates for the matrix of mean regression
- rates and the transition variation-covariance matrix can be written as
+ rates and the covariances can be written as
 \begin_inset ERT
 status open
 
