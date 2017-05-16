@@ -14,7 +14,7 @@
 \definecolor{myGreen}{rgb}{0.0, 1, 10.1}
 \definecolor{myBlue}{rgb}{0.9, 0.2, 0}
 \end_preamble
-\options aps, twocolumn, pre,superscriptaddress, notitlepage, draft
+\options aps, twocolumn, pre,superscriptaddress, notitlepage
 \use_default_options false
 \maintain_unincluded_children false
 \language english
@@ -642,8 +642,8 @@ end{subequations}
 
 \end_inset
 
-and the maximum a posteriori estimates for the matrix of mean regression
- rates and the covariances can be written as
+and the maximum a posteriori estimates for mean regression rates and the
+ covariances come out to be
 \begin_inset ERT
 status open
 
@@ -751,7 +751,7 @@ In the absence of Onsager symmetry such explicit expressions can no longer
 \begin_inset Formula $\boldsymbol{\Sigma}$
 \end_inset
 
- and then to relate it to the matrix of diffusion coefficients.
+ and, then, to relate it to the matrix of diffusion coefficients.
  We shall pursue this elsewhere.
  
 \end_layout
@@ -2769,70 +2769,39 @@ Derivation of MAP Estimates
 \end_layout
 
 \begin_layout Standard
-We define the quantity 
-\begin_inset Formula $\bm{\Lambda=}\exp\left(-\bm{\lambda}\Delta t\right)$
+Define 
+\begin_inset Formula $\bm{\Lambda=}e^{-\bm{\lambda}\Delta t}$
 \end_inset
 
-.
- Consider the quantity 
+ and consider the sum of the quadratic form 
 \begin_inset Formula $\bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}\equiv\left(\bm{x_{n+1}}-\bm{\Lambda}\bm{x_{n}}\right)^{\bm{T}}\bm{\Sigma^{-1}}\left(\bm{x_{n+1}}-\bm{\Lambda}\bm{x_{n}}\right)$
 \end_inset
 
-.
- Expanding the expression, the quantity 
-\begin_inset Formula $\sum_{n=1}^{N-1}\bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}$
-\end_inset
-
- can be written as
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{align*}
- & \sum_{n=1}^{N-1}\bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}\\
-\equiv & \bm{\Sigma^{-1}}:\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\big(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\big)^{\bm{T}}\\
- & +\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big].
-\end{align*}
-
-\end_inset
-
-Substituting this form in the expression for the log-posterior
+ that occurs in the expression for the posterior probability.
+ Expanding terms and completing the summation we have the identity
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
  & \ln P\left(\bm{\lambda},\bm{\Sigma}\vert\bm{X}\right)\nonumber \\
-= & -\dfrac{1}{2}\bm{\Sigma}^{-1}:\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}\nonumber \\
+= & -\dfrac{1}{2}\bm{\Sigma}^{-1}:\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\bm{T_{3}}\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}\nonumber \\
  & +\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big]+\dfrac{N}{2}\ln\dfrac{|\bm{\Sigma^{-1}}|}{4\pi^{2}}.\label{eq:lp}
 \end{align}
 
 \end_inset
 
-Writing only the terms containing 
-\begin_inset Formula $\lambda$
+Inspecting the terms that contain 
+\begin_inset Formula $\boldsymbol{\lambda}$
 \end_inset
 
- in the posterior probability density,
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{align*}
-P\left(\bm{\lambda},\bm{\Sigma}|\bm{X}\right) & \propto\exp\Bigg(-\dfrac{1}{2}\bm{\Sigma^{-1}}:\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\\
- & \left(\bm{T_{3}}\right)\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}\Bigg).
-\end{align*}
-
+ we recognize that the posterior is normal in 
+\begin_inset Formula $\bm{\Lambda=}e^{-\bm{\lambda}\Delta t}$
 \end_inset
 
-We recognize that the posterior is a Gaussian with respect to 
-\begin_inset Formula $\exp\left(-\bm{\lambda}\Delta t\right)$
-\end_inset
-
-.
- The mean of the Gaussian yields the maximum a posteriori (MAP) estimate
- of 
-\begin_inset Formula $\bm{\lambda}$
+ and the matrix logarithm of the mean of the normal then directly yields
+ the MAP estimate for 
+\begin_inset Formula $\boldsymbol{\lambda}.$
 \end_inset
 
 
@@ -2871,7 +2840,7 @@ Setting this derivative to zero, and noting that
 \begin_inset Formula $\boldsymbol{\Lambda^{\ast}=}\exp\left(-\bm{\lambda^{\ast}}\Delta t\right)=\bm{T_{2}T_{3}^{-1}}$
 \end_inset
 
- at the maximum a posteriori condition, we obtain the MAP estimate for 
+ at the maximum, we obtain the MAP estimate for 
 \begin_inset Formula $\bm{\Sigma}$
 \end_inset
 
@@ -2905,7 +2874,7 @@ reference "eq:map_sigma"
 \end_layout
 
 \begin_layout Standard
-Once we have the MAP estimates for 
+The estimates of the parameters of the underdamped oscillator follow 
 \begin_inset Formula $\bm{\Lambda^{\ast}}=\exp\left(-\bm{\lambda^{\ast}}\Delta t\right)$
 \end_inset
 
