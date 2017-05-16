@@ -377,7 +377,7 @@ This is a Lyapunov matrix equation for
 .
  Solutions are considerably simplified when the Fokker-Planck operator obeys
  detailed balance 
-\begin_inset Formula $\mathcal{L}P_{1}(\boldsymbol{x})=\mathcal{L}^{\dagger}P_{1}(\boldsymbol{\epsilon x})$
+\begin_inset Formula $\mathcal{L}(\boldsymbol{x)}P_{1}(\boldsymbol{x})=P_{1}(\boldsymbol{x})\mathcal{L}^{\dagger}(\boldsymbol{\epsilon x})$
 \end_inset
 
 , where 
