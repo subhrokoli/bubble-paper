@@ -370,7 +370,7 @@ The matrices
  are not all independent but are related by the stationarity condition 
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{\lambda c}+(\boldsymbol{\lambda c})^{T}=2\boldsymbol{D}.
+\boldsymbol{\lambda c}+(\boldsymbol{\lambda c})^{T}=2\boldsymbol{D}.\label{eq:stationarity}
 \end{equation}
 
 \end_inset
@@ -704,7 +704,7 @@ hlenbeck process.
 \begin_inset Formula $\boldsymbol{c}$
 \end_inset
 
-can be obtained from that of 
+ can be obtained from that of 
 \begin_inset Formula $\boldsymbol{\Sigma}$
 \end_inset
 
@@ -723,7 +723,7 @@ can be obtained from that of
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{c}^{\ast}=\left[\boldsymbol{1}-e^{-2(\boldsymbol{\lambda}^{\ast})^{T}\Delta t}\right]^{-1}\boldsymbol{\Sigma}^{\ast}
+\boldsymbol{c}^{\ast}=\left[\boldsymbol{1}-e^{-2(\boldsymbol{\lambda}^{\ast})^{T}\Delta t}\right]^{-1}\boldsymbol{\Sigma}^{\ast}.
 \end{equation}
 
 \end_inset
@@ -757,70 +757,46 @@ In the absence of Onsager symmetry such explicit expressions can no longer
 \end_layout
 
 \begin_layout Section
-Underdamped brownian harmonic oscillator
+brownian harmonic oscillator
 \end_layout
 
 \begin_layout Standard
-In previous work, we have demonstrated the application of Bayesian inference
- to determine the harmonic trap stiffness as well as the particle friction
- coefficient from a time series of observed positions of an overdamped Brownian
- harmonic oscillator.
- In the overdamped limit, the inertia of the particle is neglected and hence
- the mass of the particle cannot be considered as a parameter for Bayesian
- inference.
- In the underdamped harmonic oscillator however, the characteristic time
- scale of momentum dissipation is finite and hence mass of the particle
- can be treated as a physical parameter for the problem.
- Thus, using the bivariate Ornstein Uhlenbeck process to model the position-velo
-city data of an underdamped Brownian harmonic oscillator, we can get a Bayesian
- MAP estimate for the mass of the trapped particle, alongside the trap stiffness
- and particle friction.
-\end_layout
-
-\begin_layout Standard
-The Langevin equation for the Brownian motion of a damped harmonic oscillator
- of potential 
-\begin_inset Formula $U$
-\end_inset
-
- is given by
+We now apply the results above to the physically important case of a massive
+ Brownian particle confined in a harmonic potential described by the Langevin
+ equation
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-m\dot{v}+\gamma v+\nabla U=\xi.\label{eq:langevin}
+m\dot{v}+\gamma v+\nabla U(x)=\xi.\label{eq:langevin}
 \end{equation}
 
 \end_inset
 
-Here 
-\begin_inset Formula $v\left(t\right)$
+Here the pair 
+\begin_inset Formula $(x,v)$
 \end_inset
 
- is the instantaneous velocity of the Brownian particle as a function of
- time, 
+ describes the location of the particle in its phase space of position and
+ velocity, while 
 \begin_inset Formula $m$
 \end_inset
 
- its inertial mass, 
+ and 
 \begin_inset Formula $\gamma$
 \end_inset
 
- its friction coefficient.
- The harmonic potential is given by 
-\begin_inset Formula $U=\dfrac{1}{2}kx^{2}$
+ are the particle mass and friction coefficient respectively.
+ The potential 
+\begin_inset Formula $U=\frac{1}{2}kx^{2}$
 \end_inset
 
-, where 
+ is harmonic with a stiffness 
 \begin_inset Formula $k$
 \end_inset
 
- is Hooke's constant and 
-\begin_inset Formula $x\left(t\right)$
-\end_inset
-
- is the coordinate of the oscillator as a function of time.
+.
  
 \begin_inset Formula $\xi\left(t\right)$
 \end_inset
@@ -829,103 +805,142 @@ is a zero-mean Gaussian white noise with variance
 \begin_inset Formula $\langle\xi\left(t\right)\xi\left(t'\right)\rangle=2k_{B}T\gamma\delta\left(t-t'\right)$
 \end_inset
 
- as required by the fluctuation-dissipation theorem.
+ that satisfies the fluctuation-dissipation relation.
+ The inference problem is to jointly estimate the triplet of parameters
+ 
+\begin_inset Formula $(m,\gamma,k)$
+\end_inset
+
+ from discrete observations of the position and velocity.
+ 
 \end_layout
 
 \begin_layout Standard
-Equation 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:langevin"
-
-\end_inset
-
- can be rewitten as two-coupled first order differential equations in position-v
-elocity phase space,
+The Langevin equation can be recast as bivariate Ornstein-Uhlenbeck process
+ in phase space
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\dfrac{d}{dt}\begin{pmatrix}x\left(t\right)\\
-v\left(t\right)
-\end{pmatrix}=-\bm{\lambda}\begin{pmatrix}x\left(t\right)\\
-v\left(t\right)
-\end{pmatrix}+\dfrac{\sqrt{2D}}{\tau}\begin{pmatrix}0\\
-\zeta\left(t\right)
-\end{pmatrix},\label{eq:phase_space}
+\frac{d}{dt}\left(\begin{array}{c}
+x\\
+v
+\end{array}\right)=-\bm{\lambda}\left(\begin{array}{c}
+x\\
+v
+\end{array}\right)+\sqrt{2\boldsymbol{D}}\left(\begin{array}{c}
+0\\
+\zeta
+\end{array}\right)\label{eq:phase_space}
 \end{equation}
 
 \end_inset
 
-where 
-\begin_inset Formula $\zeta\left(t\right)$
-\end_inset
-
-is now a zero-mean Gaussian white noise with unit variance.
- We have introduced Einstein's relation 
-\begin_inset Formula $D=k_{B}T\gamma^{-1}$
-\end_inset
-
- and the 
-\begin_inset Formula $2\times2$
-\end_inset
-
- matrix
+where the mean regression and diffusion matrices are 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 \bm{\lambda=}\begin{pmatrix}0 & -1\\
-\dfrac{k}{m} & \dfrac{\gamma}{m}
+k/m & \gamma/m
 \end{pmatrix}=\begin{pmatrix}0 & -1\\
-\omega_{0}^{2} & \dfrac{1}{\tau}
-\end{pmatrix}.
+\omega_{0}^{2} & 1/\tau
+\end{pmatrix}
 \end{equation}
 
 \end_inset
 
-Here 
-\begin_inset Formula $\omega_{0}=\sqrt{\nicefrac{k}{m}}$
+and 
+\begin_inset Formula 
+\begin{equation}
+\bm{D=}\begin{pmatrix}0 & 0\\
+0 & D/\tau^{2}
+\end{pmatrix}
+\end{equation}
+
 \end_inset
 
- is the cyclic frequency of the underdamped oscillator, and 
-\begin_inset Formula $\tau=\nicefrac{m}{\gamma}$
+respectively.
+ Here 
+\begin_inset Formula $\omega_{0}=\sqrt{k/m}$
 \end_inset
 
- is the characteristic time scale of momentum dissipation of the particle
- in the presence of viscous forces.
- The cyclic frequency of the damped oscillator is 
-\begin_inset Formula $\omega=\sqrt{\nicefrac{k}{m}-\nicefrac{\gamma^{2}}{\left(4m^{2}\right)}}$
+ is the natural frequency of the undamped harmonic oscillator and 
+\begin_inset Formula $\tau=m/\gamma$
 \end_inset
 
-, which is real for less than critical damping, 
-\begin_inset Formula $\gamma^{2}<4mk$
+ is the characteristic time scale associated with the thermalization of
+ the momentum due to viscous dissipation.
+ The diffusion coefficient of the particle is defined, as usual, by the
+ Einstein relation 
+\begin_inset Formula $D=k_{B}T\gamma^{-1}$
 \end_inset
 
-.
+ and 
+\begin_inset Formula $\zeta(t)$
+\end_inset
+
+ is now a zero-mean Gaussian white noise with unit variance.
+ 
 \end_layout
 
 \begin_layout Standard
-The stationary covariance matrix for the position-velocity phase space is
- given by
+At thermal equilibrium, the joint distribution of position and velocity
+ factorize into the Gibbs distribution for the position and the Maxwell-Boltzman
+n distribution for the velocity to give a diagonal covariance matrix
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\bm{c}=\begin{pmatrix}\dfrac{k_{B}T}{k} & 0\\
-0 & \dfrac{k_{B}T}{m}
-\end{pmatrix},
+\bm{c}=\begin{pmatrix}k_{B}T/k & 0\\
+0 & k_{B}T/m
+\end{pmatrix}.
 \end{equation}
 
 \end_inset
 
-where the diagonal elements are the familiar variances of the Gibbs distribution
- and Maxwell-Boltzmann distributions, which respectively, correspond to
- the equilibrium distributions of the position and velocity of the particle.
- Representing the position-velocity data of the underdamped oscillator as
+It is easily verified that the stationarity condition, Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:stationarity"
+
+\end_inset
+
+), is satisfied by the above matrices.
+ The condition of micro-reversibility translates, here, into Onsager-Casimir
+ symmetry, 
+\begin_inset Formula $\boldsymbol{\lambda}^{\mathrm{ir}}\boldsymbol{c}=\boldsymbol{D}$
+\end_inset
+
+, where 
+\begin_inset Formula $\lambda_{ij}^{\mathrm{ir}}=\frac{1}{2}(\lambda_{ij}+\epsilon_{i}\epsilon_{j}\lambda_{ij})$
+\end_inset
+
+ is the irreversible part of the drift coefficient with 
+\begin_inset Formula $\epsilon_{i}=\pm1$
+\end_inset
+
+ for variables that are, respectively, even or odd under time reversal.
+ Then, the only non-zero entry of 
+\begin_inset Formula $\boldsymbol{\lambda}^{\mathrm{ir}}$
+\end_inset
+
+ is 
+\begin_inset Formula $\lambda_{22}^{\mathrm{ir}}=\tau^{-1}$
+\end_inset
+
+ and it trivial to verify the Onsager-Casimir symmetry.
+ 
+\series bold
+STOP HERE!
+\end_layout
+
+\begin_layout Standard
+Representing the position-velocity data of the underdamped oscillator as
  the vector time series 
 \begin_inset Formula $\bm{x_{n}=}\left[x\left(t=n\Delta t\right)\;\;v\left(t=n\Delta t\right)\right]^{T}$
 \end_inset
@@ -940,7 +955,16 @@ where the diagonal elements are the familiar variances of the Gibbs distribution
 
 , and subsequently get the scalar MAP estimates for the parameters of interest,
  the mass of the particle, the trap stiffness and the particle friction
- coefficient, using elementary algebraic manipulations.
+ coefficient, using elementary algebraic manipulations.The cyclic frequency
+ of the damped oscillator is 
+\begin_inset Formula $\omega=\sqrt{\nicefrac{k}{m}-\nicefrac{\gamma^{2}}{\left(4m^{2}\right)}}$
+\end_inset
+
+, which is real for less than critical damping, 
+\begin_inset Formula $\gamma^{2}<4mk$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -2774,7 +2798,7 @@ Define
 \end_inset
 
  and consider the sum of the quadratic form 
-\begin_inset Formula $\bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}\equiv\left(\bm{x_{n+1}}-\bm{\Lambda}\bm{x_{n}}\right)^{\bm{T}}\bm{\Sigma^{-1}}\left(\bm{x_{n+1}}-\bm{\Lambda}\bm{x_{n}}\right)$
+\begin_inset Formula $\bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}=\left(\bm{x_{n+1}}-\bm{\Lambda}\bm{x_{n}}\right)^{\bm{T}}\bm{\Sigma^{-1}}\left(\bm{x_{n+1}}-\bm{\Lambda}\bm{x_{n}}\right)$
 \end_inset
 
  that occurs in the expression for the posterior probability.
@@ -2871,6 +2895,7 @@ reference "eq:map_sigma"
 
  give the MAP estimates of the drift matrix and the transition variance
  covariance matrix respectively.
+ 
 \end_layout
 
 \begin_layout Standard
