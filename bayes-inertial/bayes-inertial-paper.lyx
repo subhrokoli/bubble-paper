@@ -429,15 +429,18 @@ obtained by setting
 \end_inset
 
 .
- When the dynamics is microscopically reversible, 
+ When the dynamics is microscopically reversible, the mean regression rates
+ are constrained by the Onsager symmetry relation 
 \begin_inset Formula $\boldsymbol{\lambda c}=(\boldsymbol{\lambda c})^{T}$
 \end_inset
 
-, and the solution is 
+ and the solution of the Lyapunov matrix equation is then easily obtained
+ to be 
 \begin_inset Formula $\boldsymbol{c}=\boldsymbol{\lambda}^{-1}\boldsymbol{D}$
 \end_inset
 
 .
+ This result is known as the fluctuation-dissipation relation.
  In physical and chemical applications, the covariance matrix is typically
  known from statistical mechanics and the above relation maybe be used to
  determine the amplitude of the noise, given the mean regression rates.
@@ -690,6 +693,66 @@ end{subequations}
 
 The error bars can be derived by expanding the log posterior to quadratic
  order around the MAP estimate.
+ 
+\end_layout
+
+\begin_layout Standard
+The estimate for the mean regression rate is easily recognized to be the
+ multivariate generalization of our earlier result for the univariate Ornstein-U
+hlenbeck process.
+ An explicit estimate for the matrix 
+\begin_inset Formula $\boldsymbol{c}$
+\end_inset
+
+can be obtained from that of 
+\begin_inset Formula $\boldsymbol{\Sigma}$
+\end_inset
+
+ only when the dynamics is microscopically reversible.
+ Then, Onsager symmetry implies 
+\begin_inset Formula $e^{-\boldsymbol{\lambda}\Delta t}\boldsymbol{c}=\boldsymbol{c}e^{-\boldsymbol{\lambda}^{T}\Delta t}$
+\end_inset
+
+ and, from the definition of 
+\begin_inset Formula $\boldsymbol{\Sigma}$
+\end_inset
+
+, it follows that the MAP estimate for the variance matrix is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{c}^{\ast}=\left[\boldsymbol{1}-e^{-2(\boldsymbol{\lambda}^{\ast})^{T}\Delta t}\right]^{-1}\boldsymbol{\Sigma}^{\ast}
+\end{equation}
+
+\end_inset
+
+The MAP estimate for the matrix of diffusion coefficients then follows from
+ the fluctuation-dissipation relation to be 
+\begin_inset Formula $\boldsymbol{D}^{\ast}=\boldsymbol{\lambda}^{\ast}\boldsymbol{c}^{\ast}$
+\end_inset
+
+.
+ This is the multivariate generalization of our earlier result for the diffusion
+ coefficient for the univariate Ornstein-Uhlenbeck process.
+ The three preceding equations are the central results of this paper.
+ 
+\end_layout
+
+\begin_layout Standard
+In the absence of Onsager symmetry such explicit expressions can no longer
+ be found and linear systems have to be solved to obtain the MAP estimate
+ of 
+\begin_inset Formula $\boldsymbol{c}$
+\end_inset
+
+ from that of 
+\begin_inset Formula $\boldsymbol{\Sigma}$
+\end_inset
+
+ and then to relate it to the matrix of diffusion coefficients.
+ We shall pursue this elsewhere.
  
 \end_layout
 
