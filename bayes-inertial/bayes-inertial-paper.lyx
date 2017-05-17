@@ -113,6 +113,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -393,7 +394,7 @@ This is a Lyapunov matrix equation for
 \begin_inset Formula $x_{i}$
 \end_inset
 
- under time reversal  and the stationary distribution is time-reversal invariant
+ under time reversal, and the stationary distribution is time-reversal invariant
 , 
 \begin_inset Formula $P(\boldsymbol{x})=P(\boldsymbol{\epsilon x})$
 \end_inset
@@ -590,8 +591,8 @@ The denominator
 \begin_inset Formula $P\left(\bm{X}\right)$
 \end_inset
 
- is an unimportant normalization, independent of the parameters, which can
- be ignored for the purpose of parameter estimation.
+ is a normalization independent of the parameters and can, so, be ignored
+ in parameter estimation.
  Using informative uniform priors for 
 \begin_inset Formula $P\left(\boldsymbol{\lambda},\boldsymbol{c}\right)$
 \end_inset
@@ -732,7 +733,7 @@ The error bars can be derived by expanding the log posterior to quadratic
 The estimate for the mean regression rate is easily recognized to be the
  multivariate generalization of our earlier result for the univariate Ornstein-U
 hlenbeck process.
- An explicit estimate for the matrix 
+ An explicit estimate for 
 \begin_inset Formula $\boldsymbol{c}$
 \end_inset
 
@@ -740,16 +741,24 @@ hlenbeck process.
 \begin_inset Formula $\boldsymbol{\Sigma}$
 \end_inset
 
- only when the dynamics is microscopically reversible.
- Then, Onsager symmetry implies 
-\begin_inset Formula $e^{-\boldsymbol{\lambda}\Delta t}\boldsymbol{c}=\boldsymbol{c}e^{-\boldsymbol{\lambda}^{T}\Delta t}$
+ when the Fokker-Planck operator obeys detailed balance.
+ Then Onsager-Casimir symmetry 
+\begin_inset Formula $\boldsymbol{\epsilon}(\boldsymbol{\lambda c})=(\boldsymbol{\lambda c})^{T}\boldsymbol{\epsilon}$
+\end_inset
+
+ implies 
+\begin_inset Formula $e^{-\boldsymbol{\lambda}\Delta t}\boldsymbol{c}=\boldsymbol{c}\boldsymbol{\epsilon}e^{-\boldsymbol{\lambda}^{T}\Delta t}\boldsymbol{\epsilon}$
 \end_inset
 
  and, from the definition of 
 \begin_inset Formula $\boldsymbol{\Sigma}$
 \end_inset
 
-, it follows that the MAP estimate for the variance matrix is
+, it follows that the MAP estimate for 
+\begin_inset Formula $\boldsymbol{c}$
+\end_inset
+
+ is
 \end_layout
 
 \begin_layout Standard
@@ -761,11 +770,7 @@ hlenbeck process.
 \end_inset
 
 The MAP estimate for the matrix of diffusion coefficients then follows from
- the fluctuation-dissipation relation to be 
-\begin_inset Formula $\boldsymbol{D}^{\ast}=\boldsymbol{\lambda}^{\ast}\boldsymbol{c}^{\ast}$
-\end_inset
-
-.
+ the stationarity condition.
  This is the multivariate generalization of our earlier result for the diffusion
  coefficient for the univariate Ornstein-Uhlenbeck process.
  The three preceding equations are the central results of this paper.
@@ -773,7 +778,7 @@ The MAP estimate for the matrix of diffusion coefficients then follows from
 \end_layout
 
 \begin_layout Standard
-In the absence of Onsager symmetry such explicit expressions can no longer
+In the absence of detailed balance such explicit expressions can no longer
  be found and linear systems have to be solved to obtain the MAP estimate
  of 
 \begin_inset Formula $\boldsymbol{c}$
@@ -1124,6 +1129,7 @@ Bayes-I
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1189,9 +1195,6 @@ name "fig:PositionsVelocity"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -1199,64 +1202,146 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename figure_4.png
-	scale 22.5
+	filename figure_3a.png
+	scale 30
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-(a) Normalized autocorrelation function for position, (b) Power Spectrum
- for position, (c) Normalized autocorrelation function for velocity, (d)
- Power Spctrum for velocity.
- The autocorrelation and power spectra computed from the position and velocity
- data are plotted in cyan and red respectively, while the black curves represent
- the analytical expressions for autocorrelations and power spectra, given
- in eqns.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:autocorr_mvou"
-
+Pairs plot for mass 
+\begin_inset Formula $m$
 \end_inset
 
-, 
+, trap stiffness 
+\begin_inset Formula $k$
+\end_inset
+
+ and particle drag coefficient 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ .
+ The top panel shows the pairs plot obtained from the MAP estimates in 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:xpsd_mvou"
+reference "eq:map_lambda"
 
 \end_inset
 
  and 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:vpsd_mvou"
+reference "eq:map_sigma"
 
 \end_inset
 
-, computed using the Bayesian MAP estimates.
- 
+.
+ The variables have been scaled using 
+\begin_inset Formula $x^{\prime}=\nicefrac{\left(x-\mu_{x}\right)}{\sigma_{xx}^{2}}$
+\end_inset
+
+, where 
+\begin_inset Formula $\mu_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{xx}^{2}$
+\end_inset
+
+ are the MAP estimate and variance of 
+\begin_inset Formula $x$
+\end_inset
+
+ respectively.
+ The MAP estimates are marked by the black dot.
+ The 
+\begin_inset Formula $1\sigma$
+\end_inset
+
+, 
+\begin_inset Formula $2\sigma$
+\end_inset
+
+ and 
+\begin_inset Formula $3\sigma$
+\end_inset
+
+ regions have been shaded.
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:autocorrelation"
+name "fig:inference"
+
+\end_inset
+
+ Pairs plot for mass 
+\begin_inset Formula $m$
+\end_inset
+
+ and trap stiffness 
+\begin_inset Formula $k$
+\end_inset
+
+ obtained from the MAP estimates in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map_k_stat"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map_m_stat"
+
+\end_inset
+
+.
+ The variables have been scaled using 
+\begin_inset Formula $x^{\prime}=\nicefrac{\left(x-\mu_{x}\right)}{\sigma_{xx}^{2}}$
+\end_inset
+
+, where 
+\begin_inset Formula $\mu_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{xx}^{2}$
+\end_inset
+
+ are the MAP estimate and variance of 
+\begin_inset Formula $x$
+\end_inset
+
+ respectively.
+ The MAP estimates are marked by the black dot.
+ The 
+\begin_inset Formula $1\sigma$
+\end_inset
+
+, 
+\begin_inset Formula $2\sigma$
+\end_inset
+
+ and 
+\begin_inset Formula $3\sigma$
+\end_inset
+
+ regions have been shaded.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:stationary"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
  
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \end_inset
@@ -1391,6 +1476,72 @@ key "bera2017fast"
  harmonic oscillator constitute an univariate Ornstein Uhlenbeck process,
  whereas a physical example of the bivariate analogue is the position-velocity
  phase space for the underdamped Brownian harmonic oscillator.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figure_4.png
+	scale 22.5
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+(a) Normalized autocorrelation function for position, (b) Power Spectrum
+ for position, (c) Normalized autocorrelation function for velocity, (d)
+ Power Spctrum for velocity.
+ The autocorrelation and power spectra computed from the position and velocity
+ data are plotted in cyan and red respectively, while the black curves represent
+ the analytical expressions for autocorrelations and power spectra, given
+ in eqns.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:autocorr_mvou"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:xpsd_mvou"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vpsd_mvou"
+
+\end_inset
+
+, computed using the Bayesian MAP estimates.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:autocorrelation"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2187,157 +2338,6 @@ Results and Discussions
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename figure_3a.png
-	scale 30
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Pairs plot for mass 
-\begin_inset Formula $m$
-\end_inset
-
-, trap stiffness 
-\begin_inset Formula $k$
-\end_inset
-
- and particle drag coefficient 
-\begin_inset Formula $\gamma$
-\end_inset
-
- .
- The top panel shows the pairs plot obtained from the MAP estimates in 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map_lambda"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map_sigma"
-
-\end_inset
-
-.
- The variables have been scaled using 
-\begin_inset Formula $x^{\prime}=\nicefrac{\left(x-\mu_{x}\right)}{\sigma_{xx}^{2}}$
-\end_inset
-
-, where 
-\begin_inset Formula $\mu_{x}$
-\end_inset
-
- and 
-\begin_inset Formula $\sigma_{xx}^{2}$
-\end_inset
-
- are the MAP estimate and variance of 
-\begin_inset Formula $x$
-\end_inset
-
- respectively.
- The MAP estimates are marked by the black dot.
- The 
-\begin_inset Formula $1\sigma$
-\end_inset
-
-, 
-\begin_inset Formula $2\sigma$
-\end_inset
-
- and 
-\begin_inset Formula $3\sigma$
-\end_inset
-
- regions have been shaded.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:inference"
-
-\end_inset
-
- Pairs plot for mass 
-\begin_inset Formula $m$
-\end_inset
-
- and trap stiffness 
-\begin_inset Formula $k$
-\end_inset
-
- obtained from the MAP estimates in 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map_k_stat"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map_m_stat"
-
-\end_inset
-
-.
- The variables have been scaled using 
-\begin_inset Formula $x^{\prime}=\nicefrac{\left(x-\mu_{x}\right)}{\sigma_{xx}^{2}}$
-\end_inset
-
-, where 
-\begin_inset Formula $\mu_{x}$
-\end_inset
-
- and 
-\begin_inset Formula $\sigma_{xx}^{2}$
-\end_inset
-
- are the MAP estimate and variance of 
-\begin_inset Formula $x$
-\end_inset
-
- respectively.
- The MAP estimates are marked by the black dot.
- The 
-\begin_inset Formula $1\sigma$
-\end_inset
-
-, 
-\begin_inset Formula $2\sigma$
-\end_inset
-
- and 
-\begin_inset Formula $3\sigma$
-\end_inset
-
- regions have been shaded.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:stationary"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
 We now present the results of our Bayesian MAP estimates applied to underdamped
  Brownian harmonic oscillator data.
  In Figure 
