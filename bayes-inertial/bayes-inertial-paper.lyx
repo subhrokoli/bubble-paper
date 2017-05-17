@@ -186,11 +186,12 @@ where
 \begin_inset Formula $\lambda_{ij}$
 \end_inset
 
- is a positive matrix of mean regression rates, 
+ is a stable matrix of mean regression rates, 
 \begin_inset Formula $D_{ij}$
 \end_inset
 
- is a symmetric positive-definite matrix of diffusion coefficients, 
+ is a symmetric positive semi-definite matrix of diffusion coefficients,
+ 
 \begin_inset Formula $W_{i}(t)$
 \end_inset
 
@@ -377,19 +378,23 @@ This is a Lyapunov matrix equation for
 .
  Solutions are considerably simplified when the Fokker-Planck operator obeys
  detailed balance 
-\begin_inset Formula $\mathcal{L}(\boldsymbol{x)}P_{1}(\boldsymbol{x})=P_{1}(\boldsymbol{x})\mathcal{L}^{\dagger}(\boldsymbol{\epsilon x})$
+\begin_inset Formula $\mathcal{L}(\boldsymbol{x)}P_{1}(\boldsymbol{x})=P_{1}(\boldsymbol{\epsilon x})\mathcal{L}^{\dagger}(\boldsymbol{\epsilon x})$
 \end_inset
 
 , where 
 \begin_inset Formula $\mathcal{L^{\dagger}}$
 \end_inset
 
- is the adjoint Fokker-Planck operator and 
+ is the adjoint Fokker-Planck operator, 
 \begin_inset Formula $\epsilon_{i}=\pm1$
 \end_inset
 
  is the parity, under time-reversal, of 
 \begin_inset Formula $x_{i}$
+\end_inset
+
+ and the stationary distribution is time-reversal invariant, 
+\begin_inset Formula $P(\boldsymbol{x})=P(\boldsymbol{\epsilon x})$
 \end_inset
 
 .
