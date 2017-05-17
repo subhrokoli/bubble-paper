@@ -276,7 +276,7 @@ The probability density of a displacement from
 , where the Fokker-Planck operator is
 \begin_inset Formula 
 \begin{equation}
-\mathcal{L}=-\frac{\partial}{\partial x_{i}}\lambda_{ij}x_{j}+\frac{\partial^{2}}{\partial x_{i}\partial x_{j}}D_{ij}.
+\mathcal{L}(\boldsymbol{x})=-\frac{\partial}{\partial x_{i}}\lambda_{ij}x_{j}+\frac{\partial^{2}}{\partial x_{i}\partial x_{j}}D_{ij}.
 \end{equation}
 
 \end_inset
@@ -386,14 +386,15 @@ This is a Lyapunov matrix equation for
 \end_inset
 
  is the adjoint Fokker-Planck operator, 
-\begin_inset Formula $\epsilon_{i}=\pm1$
+\begin_inset Formula $\text{\boldsymbol{\epsilon} is a diagonal matrix of the parities  }\epsilon_{i}=\pm1$
 \end_inset
 
- is the parity, under time-reversal, of 
+ of 
 \begin_inset Formula $x_{i}$
 \end_inset
 
- and the stationary distribution is time-reversal invariant, 
+ under time reversal  and the stationary distribution is time-reversal invariant
+, 
 \begin_inset Formula $P(\boldsymbol{x})=P(\boldsymbol{\epsilon x})$
 \end_inset
 
@@ -754,7 +755,7 @@ hlenbeck process.
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{c}^{\ast}=\left[\boldsymbol{1}-\epsilon_{i}\epsilon_{j}e^{-2(\boldsymbol{\lambda}^{\ast})^{T}\Delta t}\right]^{-1}\boldsymbol{\Sigma}^{\ast}.
+\boldsymbol{c}^{\ast}=\left[\boldsymbol{1}-\boldsymbol{\epsilon}e^{-2(\boldsymbol{\lambda}^{\ast})^{T}\Delta t}\boldsymbol{\epsilon}\right]^{-1}\boldsymbol{\Sigma}^{\ast}.
 \end{equation}
 
 \end_inset
