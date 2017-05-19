@@ -122,6 +122,10 @@ The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
  600113, India
 \end_layout
 
+\begin_layout Affiliation
+DAMTP, Center for Mathematical Sciences, 
+\end_layout
+
 \begin_layout Abstract
 The multivariate Ornstein-Uhlenbeck process is used in many branches of
  science and engineering to describe the regression of a system to its stationar
@@ -130,13 +134,12 @@ y mean.
  coefficients of the process from discretely observed sample paths.
  We use exact likelihoods to derive simple expressions for the maximum a
  posteriori estimates in terms of four sufficient statistic matrices.
- We show that the dimensionality of the estimation problem is reduced when
- microscopic reversibility enforces Onsager-Casimir symmetry on the process
- parameters.
- We apply the method to estimate the parameters of the Langevin equation
- describing the inertial motion of a harmonically bound particle in a fluctuatin
-g Stokesian fluid, a problem relevant to colloidal particles in optical
- traps.
+ Explicit expressions are obtained for systems obeying detailed balance.
+ We apply the method to jointly estimate the mass, damping and stiffness
+ of a Brownian harmonic oscillator, a problem relevant to the inertial motion
+ of optically trapped colloids.
+ Bayesian estimates of the correlation function and power spectral density
+ are provided and the problem of model choice is addressed.
  
 \end_layout
 
@@ -285,7 +288,7 @@ The probability density of a displacement from
 The solution is a multivariate normal distribution
 \begin_inset Formula 
 \begin{equation}
-\mathbf{\boldsymbol{x}}^{\prime}t^{\prime}|\boldsymbol{x}\thinspace t\sim\mathcal{N}\left(\boldsymbol{\mu}_{\Delta t}\,,\boldsymbol{\sigma}_{\Delta t}^{2}\right)
+\mathbf{\boldsymbol{x}}^{\prime}t^{\prime}|\boldsymbol{x}\thinspace t\sim\mathcal{N}\left(\boldsymbol{\mu}_{\Delta t}\,,\boldsymbol{\sigma}_{\Delta t}^{2}\right)\label{eq:conditional-probability}
 \end{equation}
 
 \end_inset
@@ -387,7 +390,7 @@ This is a Lyapunov matrix equation for
 \end_inset
 
  is the adjoint Fokker-Planck operator, 
-\begin_inset Formula $\text{\boldsymbol{\epsilon} is a diagonal matrix of the parities  }\epsilon_{i}=\pm1$
+\begin_inset Formula $\text{\boldsymbol{\epsilon} is a diagonal matrix of the parities }\epsilon_{i}=\pm1$
 \end_inset
 
  of 
@@ -400,8 +403,15 @@ This is a Lyapunov matrix equation for
 \end_inset
 
 .
- We shall return to a more detailed discussion of this below.
- 
+ This implies Onsager-Casimir symmetry 
+\begin_inset Formula $\boldsymbol{\epsilon}(\boldsymbol{\lambda c})=(\boldsymbol{\lambda c})^{T}\boldsymbol{\epsilon}$
+\end_inset
+
+ for the regression matrix and 
+\begin_inset Formula $\boldsymbol{\epsilon c}=\boldsymbol{c\epsilon}$
+\end_inset
+
+ for the variance matrix.
 \end_layout
 
 \begin_layout Standard
@@ -794,6 +804,96 @@ In the absence of detailed balance such explicit expressions can no longer
 \end_layout
 
 \begin_layout Section
+Sampling paths
+\end_layout
+
+\begin_layout Standard
+The solution of the Fokker-Planck equation, Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:conditional-probability"
+
+\end_inset
+
+), provides a method for sampling paths of the multivariate Ornstein-Uhlenbeck
+ process 
+\emph on
+exactly
+\emph default
+.
+ Given an initial state 
+\begin_inset Formula $\boldsymbol{x}$
+\end_inset
+
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+, the condition distribution for a final state 
+\begin_inset Formula $\boldsymbol{x}^{\prime}$
+\end_inset
+
+ at time 
+\begin_inset Formula $t^{\prime}$
+\end_inset
+
+ is normally distributed with known mean 
+\begin_inset Formula $\boldsymbol{\mu}_{\Delta t}$
+\end_inset
+
+ and variance 
+\begin_inset Formula $\boldsymbol{\sigma}_{\Delta t}^{2}$
+\end_inset
+
+.
+ Therefore, a sequence of states at times 
+\begin_inset Formula $t=n\Delta t$
+\end_inset
+
+, where 
+\begin_inset Formula $n$
+\end_inset
+
+ is a positive integer, forming a discrete sampling of a path can be obtained
+ from the following iteration 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{x}_{n+1}=e^{-\boldsymbol{\lambda}\Delta t}\boldsymbol{x}_{n}+\boldsymbol{\sigma}_{\Delta t}\boldsymbol{y}_{n}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\boldsymbol{\sigma}_{\Delta t}$
+\end_inset
+
+ is a Cholesky factor of the variance 
+\begin_inset Formula $\boldsymbol{\sigma}_{\Delta t}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\boldsymbol{y}\sim\mathcal{N}(\boldsymbol{0},\boldsymbol{I})$
+\end_inset
+
+ is an 
+\begin_inset Formula $M$
+\end_inset
+
+-dimensional uncorrelated normal variate with zero mean and unit variance.
+ The exponential of the regression matrix and the Cholesky factor of the
+ variance matrix are the two key quantities in the iteration.
+ They can be obtained analytically in low dimensional problems but for high
+ dimensional problems they will, in general, have to be obtained numerically.
+ In the following section we use the method above to sample paths of the
+ Brownian harmonic oscillator, which is equivalent to a bivariate Ornstein-Uhlen
+beck process, to test the efficacy of our estimation method.
+ 
+\end_layout
+
+\begin_layout Section
 brownian harmonic oscillator
 \end_layout
 
@@ -880,9 +980,7 @@ where the mean regression and diffusion matrices are
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\bm{\lambda=}\begin{pmatrix}0 & -1\\
-k/m & \gamma/m
-\end{pmatrix}=\begin{pmatrix}0 & -1\\
+\bm{\lambda}=\begin{pmatrix}0 & -1\\
 \omega_{0}^{2} & 1/\tau
 \end{pmatrix}
 \end{equation}
@@ -921,6 +1019,64 @@ respectively.
 
  is now a zero-mean Gaussian white noise with unit variance.
  
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figure_1.png
+	scale 21
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sample paths (left) and histograms (right) of the position and velocity
+ of a Brownian harmonic oscillator obtained from Langevin simulations.
+ The parameters used are 
+\begin_inset Formula $m=1$
+\end_inset
+
+ng, 
+\begin_inset Formula $k=225$
+\end_inset
+
+mg/
+\begin_inset Formula $s^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\gamma=\frac{1}{10}\sqrt{4mk}$
+\end_inset
+
+, and 
+\begin_inset Formula $k_{B}T=275K$
+\end_inset
+
+.
+ Data is sampled at 65,536 Hz.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:PositionsVelocity"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -973,227 +1129,8 @@ reference "eq:stationarity"
  and it trivial to verify the Onsager-Casimir symmetry.
  
 \series bold
-STOP HERE!
-\end_layout
-
-\begin_layout Standard
-Representing the position-velocity data of the underdamped oscillator as
- the vector time series 
-\begin_inset Formula $\bm{x_{n}=}\left[x\left(t=n\Delta t\right)\;\;v\left(t=n\Delta t\right)\right]^{T}$
-\end_inset
-
-, we can get the MAP estimates of 
-\begin_inset Formula $\bm{\lambda}$
-\end_inset
-
- and 
-\begin_inset Formula $\bm{c}$
-\end_inset
-
-, and subsequently get the scalar MAP estimates for the parameters of interest,
- the mass of the particle, the trap stiffness and the particle friction
- coefficient, using elementary algebraic manipulations.The cyclic frequency
- of the damped oscillator is 
-\begin_inset Formula $\omega=\sqrt{\nicefrac{k}{m}-\nicefrac{\gamma^{2}}{\left(4m^{2}\right)}}$
-\end_inset
-
-, which is real for less than critical damping, 
-\begin_inset Formula $\gamma^{2}<4mk$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-An alternative Bayesian procedure for directly estimating the mass of the
- particle and the trap stiffness can be formulated by interpreting the time
- series of positions and velocities as independent repeated samples from
- the respective stationary distributions.
- At equilibrium, the likelihood can be factored into the Gibbs distribution
- for position and the Maxwell-Boltzmann distribution for the velocity as
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{align*}
- & P\left(x,v|m,k\right)\\
- & =P\left(x|k\right)\times P\left(v|m\right)\\
- & =\sqrt{\dfrac{k}{2\pi k_{B}T}}\exp\left(-\dfrac{kx^{2}}{2k_{B}T}\right)\times\sqrt{\dfrac{m}{2\pi k_{B}T}}\exp\left(-\dfrac{mv^{2}}{2k_{B}T}\right).
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Using an informative prior that constrains 
-\begin_inset Formula $m$
-\end_inset
-
- and 
-\begin_inset Formula $k$
-\end_inset
-
- to positive values, the logarithms of the posterior probability can be
- written as
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{subequations}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\ln P\left(k|x\right)=\dfrac{N}{2}\ln\dfrac{k}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{k}{k_{B}T}\sum x_{n}^{2},\label{eq:map_k_stat}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\ln P\left(m|v\right)=\dfrac{N}{2}\ln\dfrac{m}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{m}{k_{B}T}\sum v_{n}^{2}.\label{eq:map_m_stat}
-\end{equation}
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{subequations}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The MAP estimates, from the equilibrium distribution of the position and
- velocity, can be straightforwardly obtained as
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\dfrac{k^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}x_{n}^{2}},\;\;\;\;\dfrac{m^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}v_{n}^{2}}.\label{eq:map_stationary}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Following the notation used in our earlier paper, we refer to this alternative
- method as 
-\begin_inset Quotes eld
-\end_inset
-
-Bayes- II
-\begin_inset Quotes erd
-\end_inset
-
-, to distinguish it from the framework described in Section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Bayesian-inference"
-
-\end_inset
-
-, which we refer to as 
-\begin_inset Quotes eld
-\end_inset
-
-Bayes-I
-\begin_inset Quotes erd
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename figure_1.png
-	scale 21
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Positions (blue) and velocities (green) of harmonically trapped massive
- particle.
- The parameters used for simulation: 
-\begin_inset Formula $m=1$
-\end_inset
-
-ng, 
-\begin_inset Formula $k=225$
-\end_inset
-
-mg/
-\begin_inset Formula $s^{2}$
-\end_inset
-
-, 
-\begin_inset Formula $T=275K$
-\end_inset
-
-, sampling frequency = 65,536 Hz, 
-\begin_inset Formula $\left(x\left(0\right),v\left(0\right)\right)=\left(0,0\right)$
-\end_inset
-
-, 
-\begin_inset Formula $\gamma=\nicefrac{\sqrt{4mk}}{10}$
-\end_inset
-
-.
- On the right, histograms show the distribution of the position and velocity
- data with Gaussians overlaid.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:PositionsVelocity"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
+STOP HERE! 
+\series default
 
 \begin_inset Float figure
 wide false
@@ -1349,473 +1286,33 @@ name "fig:stationary"
 
 \end_layout
 
-\begin_layout Section
-UNIVARIATE CASE: OVERDAMPED BROWNIAN HARMONIC OSCILLATOR
-\end_layout
-
 \begin_layout Standard
-In the 
-\begin_inset Formula $\emph{optical trap limit}$
+Representing the position-velocity data of the underdamped oscillator as
+ the vector time series 
+\begin_inset Formula $\bm{x_{n}=}\left[x\left(t=n\Delta t\right)\;\;v\left(t=n\Delta t\right)\right]^{T}$
 \end_inset
 
-, the limit of vanishing particle mass is assumed and the Langevin equation
- for the position of the Brownian particle reduces to
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\dot{x}=-\dfrac{k}{\gamma}x+\sqrt{\dfrac{2k_{B}T}{\gamma}}\xi\left(t\right).\label{eq:univariate-ou}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Defining 
-\begin_inset Formula $\lambda=\dfrac{k}{\gamma}$
-\end_inset
-
- as the 
-\begin_inset Formula $\emph{drift coefficient}$
+, we can get the MAP estimates of 
+\begin_inset Formula $\bm{\lambda}$
 \end_inset
 
  and 
-\begin_inset Formula $D=\dfrac{k_{B}T}{\gamma}$
+\begin_inset Formula $\bm{c}$
 \end_inset
 
- as the 
-\begin_inset Formula $\emph{diffusion coefficient}$
+, and subsequently get the scalar MAP estimates for the parameters of interest,
+ the mass of the particle, the trap stiffness and the particle friction
+ coefficient, using elementary algebraic manipulations.The cyclic frequency
+ of the damped oscillator is 
+\begin_inset Formula $\omega=\sqrt{\nicefrac{k}{m}-\nicefrac{\gamma^{2}}{\left(4m^{2}\right)}}$
 \end_inset
 
-, we readily identify 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:univariate-ou"
-
-\end_inset
-
- as the univaraite analogue of 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:mvou"
-
+, which is real for less than critical damping, 
+\begin_inset Formula $\gamma^{2}<4mk$
 \end_inset
 
 .
- The application of Bayesian inference to estimate the parameters 
-\begin_inset Formula $\lambda$
-\end_inset
-
- and 
-\begin_inset Formula $D$
-\end_inset
-
- has been discussed at length in earlier work.
- Here, we demonstrate that the methods described in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "bera2017fast"
-
-\end_inset
-
- are effectively the univariate extension of the inference depicted in Section
- II.
- Recycling the results from earlier sections, we see for the scalar position
- variable 
-\begin_inset Formula $x$
-\end_inset
-
-, the 
-\begin_inset Formula $\emph{matrix}$
-\end_inset
-
- sufficient statistics reduce to corresponding scalar analogues.
- Finally, the MAP estimates for the drift and diffusion coefficients reduce
- to
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\lambda^{\ast}=\dfrac{1}{\Delta t}\ln\dfrac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}},
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\dfrac{k_{B}T}{k^{\ast}}\left(1-\exp\left(-2\lambda^{\ast}\Delta t\right)\right)=\sum x_{n+1}^{2}-\dfrac{\left(\sum x_{n+1}x_{n}\right)^{2}}{\sum x_{n}^{2}}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-which, after elementary manipulations can be shown to be exactly equivalent
- to the expressions in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "bera2017fast"
-
-\end_inset
-
-.
- Thus, we demonstrate that our method for finding the MAP estimates is valid
- for arbitrary dimensionality of the data generating Ornstein Uhlenbeck
- process.
- Physically, the displacements of the Brownian particle in the overdamped
- harmonic oscillator constitute an univariate Ornstein Uhlenbeck process,
- whereas a physical example of the bivariate analogue is the position-velocity
- phase space for the underdamped Brownian harmonic oscillator.
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename figure_4.png
-	scale 22.5
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-(a) Normalized autocorrelation function for position, (b) Power Spectrum
- for position, (c) Normalized autocorrelation function for velocity, (d)
- Power Spctrum for velocity.
- The autocorrelation and power spectra computed from the position and velocity
- data are plotted in cyan and red respectively, while the black curves represent
- the analytical expressions for autocorrelations and power spectra, given
- in eqns.
  
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:autocorr_mvou"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:xpsd_mvou"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:vpsd_mvou"
-
-\end_inset
-
-, computed using the Bayesian MAP estimates.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:autocorrelation"
-
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename figure_5.png
-	scale 30
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Relative magnitudes of the logarithm of the 
-\begin_inset Formula $\emph{evidence}$
-\end_inset
-
- for data being generated by an overdamped model 
-\begin_inset Formula $\left(H_{OD}\right)$
-\end_inset
-
- and an underdamped model 
-\begin_inset Formula $\left(H_{UD}\right)$
-\end_inset
-
-.
- The panels on the left show the results of our model selection algorithm
- for overdamped data, while those on the right correspond to underdamped
- data.
- The Occam factor penalizes the reduntant parameter of mass 
-\begin_inset Formula $(m)$
-\end_inset
-
- when the data generating model is overdamped.
- It is seen that the 
-\begin_inset Formula $\emph{evidence}$
-\end_inset
-
- for the overdamped model is higher when the data is generated from an overdampe
-d system, and the same is true for the underdamped case.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Occam"
-
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Occam's razor
-\end_layout
-
-\begin_layout Standard
-We now focus on the problem of model selection for optical trap data.
- In previous work, we had demonstrated parameter inference from overdamped
- harmonic Brownian oscillator data.
- In this section, the selection of the most probable data generating model
- between overdamped and underdamped harmonic Brownian oscillators is considered.
- 
-\end_layout
-
-\begin_layout Standard
-According to Mackay
-\begin_inset CommandInset citation
-LatexCommand cite
-key "mackay1992bayesian"
-
-\end_inset
-
-, the evidence or the probability 
-\begin_inset Formula $P\left(D|H_{i}\right)$
-\end_inset
-
-, of obtaining data 
-\begin_inset Formula $D$
-\end_inset
-
- given the hypothesis 
-\begin_inset Formula $H_{i}$
-\end_inset
-
- is given by
-\begin_inset Formula 
-\begin{equation}
-P\left(D|H_{i}\right)\simeq P\left(D|\bm{w}_{MP},H_{i}\right)P\left(\bm{w}_{MP}|H_{i}\right)\Delta\bm{w},\label{eq:logevidence}
-\end{equation}
-
-\end_inset
-
-where 
-\begin_inset Formula $P\left(D|\bm{w}_{MP},H_{i}\right)$
-\end_inset
-
- is the 'best fit likelihood' and 
-\begin_inset Formula $P\left(\bm{w}_{MP}|H_{i}\right)\Delta\bm{w}$
-\end_inset
-
- is known as the Occam factor.
- The latter term penalizes 
-\begin_inset Formula $H_{i}$
-\end_inset
-
- for having the parameter 
-\begin_inset Formula $\bm{w}$
-\end_inset
-
-.
- In the above expression, 
-\begin_inset Formula $\bm{w}_{MP}$
-\end_inset
-
- corrsponds to the MAP estimates of the parameters.
- For multiple parameters, 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:logevidence"
-
-\end_inset
-
- reduces to 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-P\left(D|H_{i}\right)\simeq P\left(D|\bm{w}_{MP},H_{i}\right)P\left(\bm{w}_{MP}|H_{i}\right)\left(2\pi\right)^{\nicefrac{k}{2}}\left(\det\bm{A}\right)^{\nicefrac{-1}{2}},
-\end{equation}
-
-\end_inset
-
-where 
-\begin_inset Formula $\bm{A}=-\nabla\nabla\ln P\left(\bm{w}|D,H_{i}\right)$
-\end_inset
-
- is the Hessian matrix.
- We can recast the problem in terms of optical trap, that is we have a given
- position-velocity dataset, we would like to determine if the underlying
- Brownian motion is overdamped (
-\begin_inset Formula $H_{OD}$
-\end_inset
-
-) or underdamped (
-\begin_inset Formula $H_{UD}$
-\end_inset
-
-).
- Thus, based on the relative magnitude of the evidence 
-\begin_inset Formula $P\left(D|H_{i}\right)$
-\end_inset
-
-, we can determine whether the data generating process is overdamped Brownian
- motion or underdamped Brownian motion.
- 
-\end_layout
-
-\begin_layout Standard
-We focus on the stationary Bayesian estimates (labelled Bayes II in our
- earlier paper).
- Using some elementary manipulations, it can be shown that
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{subequations}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{align}
-\ln P\left(D|H_{UD}\right) & =N\ln\dfrac{k^{\ast}}{2\pi k_{B}T}+N\ln\dfrac{m^{\ast}}{2\pi k_{B}T}\label{eq:ud_occ}\\
- & -2N+\ln\dfrac{4\pi m^{\ast}k^{\ast}}{N},\nonumber \\
-\ln P\left(D|H_{OD}\right) & =N\ln\dfrac{k^{\ast}}{2\pi k_{B}T}-N+\ln\dfrac{2\pi k^{\ast}}{\sqrt{N}}.\label{eq:od_occ}
-\end{align}
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{subequations}
-\end_layout
-
-\end_inset
-
-where 
-\begin_inset Formula $m^{\ast}$
-\end_inset
-
- and 
-\begin_inset Formula $k^{\ast}$
-\end_inset
-
- can be obtained from 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map_stationary"
-
-\end_inset
-
-.
- Thus, if our data generating model is underdamped, we will have 
-\begin_inset Formula $\ln P\left(D|H_{UD}\right)>\ln P\left(D|H_{OD}\right).$
-\end_inset
-
- Similarly, for overdamped data, we will have 
-\begin_inset Formula $\ln P\left(D|H_{UD}\right)<\ln P\left(D|H_{OD}\right)$
-\end_inset
-
-.
- Consider the case of overdamped data, where, the particle is considered
- inertia-less and 
-\begin_inset Formula $m^{\ast}\rightarrow0$
-\end_inset
-
- and 
-\begin_inset Formula $\ln m^{\ast}\rightarrow-\infty$
-\end_inset
-
-.
- Thus the 
-\begin_inset Formula $\ln m^{\ast}$
-\end_inset
-
- in 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:ud_occ"
-
-\end_inset
-
- is severely penalized.
- Hence Occam's razor indicates that the single parameter 
-\begin_inset Formula $k$
-\end_inset
-
- is better suited than the parameter vector 
-\begin_inset Formula $\left(k,m\right)$
-\end_inset
-
- for overdamped motion.
 \begin_inset Float table
 wide true
 sideways false
@@ -2333,6 +1830,598 @@ name "tab:springconstant"
 
 \end_layout
 
+\begin_layout Standard
+An alternative Bayesian procedure for directly estimating the mass of the
+ particle and the trap stiffness can be formulated by interpreting the time
+ series of positions and velocities as independent repeated samples from
+ the respective stationary distributions.
+ At equilibrium, the likelihood can be factored into the Gibbs distribution
+ for position and the Maxwell-Boltzmann distribution for the velocity as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & P\left(x,v|m,k\right)\\
+ & =P\left(x|k\right)\times P\left(v|m\right)\\
+ & =\sqrt{\dfrac{k}{2\pi k_{B}T}}\exp\left(-\dfrac{kx^{2}}{2k_{B}T}\right)\times\sqrt{\dfrac{m}{2\pi k_{B}T}}\exp\left(-\dfrac{mv^{2}}{2k_{B}T}\right).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using an informative prior that constrains 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ to positive values, the logarithms of the posterior probability can be
+ written as
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\ln P\left(k|x\right)=\dfrac{N}{2}\ln\dfrac{k}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{k}{k_{B}T}\sum x_{n}^{2},\label{eq:map_k_stat}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\ln P\left(m|v\right)=\dfrac{N}{2}\ln\dfrac{m}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{m}{k_{B}T}\sum v_{n}^{2}.\label{eq:map_m_stat}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The MAP estimates, from the equilibrium distribution of the position and
+ velocity, can be straightforwardly obtained as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\dfrac{k^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}x_{n}^{2}},\;\;\;\;\dfrac{m^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}v_{n}^{2}}.\label{eq:map_stationary}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Following the notation used in our earlier paper, we refer to this alternative
+ method as 
+\begin_inset Quotes eld
+\end_inset
+
+Bayes- II
+\begin_inset Quotes erd
+\end_inset
+
+, to distinguish it from the framework described in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Bayesian-inference"
+
+\end_inset
+
+, which we refer to as 
+\begin_inset Quotes eld
+\end_inset
+
+Bayes-I
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+In the 
+\begin_inset Formula $\emph{optical trap limit}$
+\end_inset
+
+, the limit of vanishing particle mass is assumed and the Langevin equation
+ for the position of the Brownian particle reduces to
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\dot{x}=-\dfrac{k}{\gamma}x+\sqrt{\dfrac{2k_{B}T}{\gamma}}\xi\left(t\right).\label{eq:univariate-ou}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Defining 
+\begin_inset Formula $\lambda=\dfrac{k}{\gamma}$
+\end_inset
+
+ as the 
+\begin_inset Formula $\emph{drift coefficient}$
+\end_inset
+
+ and 
+\begin_inset Formula $D=\dfrac{k_{B}T}{\gamma}$
+\end_inset
+
+ as the 
+\begin_inset Formula $\emph{diffusion coefficient}$
+\end_inset
+
+, we readily identify 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:univariate-ou"
+
+\end_inset
+
+ as the univaraite analogue of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:mvou"
+
+\end_inset
+
+.
+ The application of Bayesian inference to estimate the parameters 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+ has been discussed at length in earlier work.
+ Here, we demonstrate that the methods described in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bera2017fast"
+
+\end_inset
+
+ are effectively the univariate extension of the inference depicted in Section
+ II.
+ Recycling the results from earlier sections, we see for the scalar position
+ variable 
+\begin_inset Formula $x$
+\end_inset
+
+, the 
+\begin_inset Formula $\emph{matrix}$
+\end_inset
+
+ sufficient statistics reduce to corresponding scalar analogues.
+ Finally, the MAP estimates for the drift and diffusion coefficients reduce
+ to
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lambda^{\ast}=\dfrac{1}{\Delta t}\ln\dfrac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dfrac{k_{B}T}{k^{\ast}}\left(1-\exp\left(-2\lambda^{\ast}\Delta t\right)\right)=\sum x_{n+1}^{2}-\dfrac{\left(\sum x_{n+1}x_{n}\right)^{2}}{\sum x_{n}^{2}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which, after elementary manipulations can be shown to be exactly equivalent
+ to the expressions in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bera2017fast"
+
+\end_inset
+
+.
+ Thus, we demonstrate that our method for finding the MAP estimates is valid
+ for arbitrary dimensionality of the data generating Ornstein Uhlenbeck
+ process.
+ Physically, the displacements of the Brownian particle in the overdamped
+ harmonic oscillator constitute an univariate Ornstein Uhlenbeck process,
+ whereas a physical example of the bivariate analogue is the position-velocity
+ phase space for the underdamped Brownian harmonic oscillator.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figure_4.png
+	lyxscale 25
+	scale 22.5
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+(a) Normalized autocorrelation function for position, (b) Power Spectrum
+ for position, (c) Normalized autocorrelation function for velocity, (d)
+ Power Spctrum for velocity.
+ The autocorrelation and power spectra computed from the position and velocity
+ data are plotted in cyan and red respectively, while the black curves represent
+ the analytical expressions for autocorrelations and power spectra, given
+ in eqns.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:autocorr_mvou"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:xpsd_mvou"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:vpsd_mvou"
+
+\end_inset
+
+, computed using the Bayesian MAP estimates.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:autocorrelation"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Model selection
+\end_layout
+
+\begin_layout Standard
+We now focus on the problem of model selection for optical trap data.
+ In previous work, we had demonstrated parameter inference from overdamped
+ harmonic Brownian oscillator data.
+ In this section, the selection of the most probable data generating model
+ between overdamped and underdamped harmonic Brownian oscillators is considered.
+ 
+\end_layout
+
+\begin_layout Standard
+According to Mackay
+\begin_inset CommandInset citation
+LatexCommand cite
+key "mackay1992bayesian"
+
+\end_inset
+
+, the evidence or the probability 
+\begin_inset Formula $P\left(D|H_{i}\right)$
+\end_inset
+
+, of obtaining data 
+\begin_inset Formula $D$
+\end_inset
+
+ given the hypothesis 
+\begin_inset Formula $H_{i}$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\begin{equation}
+P\left(D|H_{i}\right)\simeq P\left(D|\bm{w}_{MP},H_{i}\right)P\left(\bm{w}_{MP}|H_{i}\right)\Delta\bm{w},\label{eq:logevidence}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $P\left(D|\bm{w}_{MP},H_{i}\right)$
+\end_inset
+
+ is the 'best fit likelihood' and 
+\begin_inset Formula $P\left(\bm{w}_{MP}|H_{i}\right)\Delta\bm{w}$
+\end_inset
+
+ is known as the Occam factor.
+ The latter term penalizes 
+\begin_inset Formula $H_{i}$
+\end_inset
+
+ for having the parameter 
+\begin_inset Formula $\bm{w}$
+\end_inset
+
+.
+ In the above expression, 
+\begin_inset Formula $\bm{w}_{MP}$
+\end_inset
+
+ corrsponds to the MAP estimates of the parameters.
+ For multiple parameters, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:logevidence"
+
+\end_inset
+
+ reduces to 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P\left(D|H_{i}\right)\simeq P\left(D|\bm{w}_{MP},H_{i}\right)P\left(\bm{w}_{MP}|H_{i}\right)\left(2\pi\right)^{\nicefrac{k}{2}}\left(\det\bm{A}\right)^{\nicefrac{-1}{2}},
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\bm{A}=-\nabla\nabla\ln P\left(\bm{w}|D,H_{i}\right)$
+\end_inset
+
+ is the Hessian matrix.
+ We can recast the problem in terms of optical trap, that is we have a given
+ position-velocity dataset, we would like to determine if the underlying
+ Brownian motion is overdamped (
+\begin_inset Formula $H_{OD}$
+\end_inset
+
+) or underdamped (
+\begin_inset Formula $H_{UD}$
+\end_inset
+
+).
+ Thus, based on the relative magnitude of the evidence 
+\begin_inset Formula $P\left(D|H_{i}\right)$
+\end_inset
+
+, we can determine whether the data generating process is overdamped Brownian
+ motion or underdamped Brownian motion.
+ 
+\end_layout
+
+\begin_layout Standard
+We focus on the stationary Bayesian estimates (labelled Bayes II in our
+ earlier paper).
+ Using some elementary manipulations, it can be shown that
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\ln P\left(D|H_{UD}\right) & =N\ln\dfrac{k^{\ast}}{2\pi k_{B}T}+N\ln\dfrac{m^{\ast}}{2\pi k_{B}T}\label{eq:ud_occ}\\
+ & -2N+\ln\dfrac{4\pi m^{\ast}k^{\ast}}{N},\nonumber \\
+\ln P\left(D|H_{OD}\right) & =N\ln\dfrac{k^{\ast}}{2\pi k_{B}T}-N+\ln\dfrac{2\pi k^{\ast}}{\sqrt{N}}.\label{eq:od_occ}
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+where 
+\begin_inset Formula $m^{\ast}$
+\end_inset
+
+ and 
+\begin_inset Formula $k^{\ast}$
+\end_inset
+
+ can be obtained from 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map_stationary"
+
+\end_inset
+
+.
+ Thus, if our data generating model is underdamped, we will have 
+\begin_inset Formula $\ln P\left(D|H_{UD}\right)>\ln P\left(D|H_{OD}\right).$
+\end_inset
+
+ Similarly, for overdamped data, we will have 
+\begin_inset Formula $\ln P\left(D|H_{UD}\right)<\ln P\left(D|H_{OD}\right)$
+\end_inset
+
+.
+ Consider the case of overdamped data, where, the particle is considered
+ inertia-less and 
+\begin_inset Formula $m^{\ast}\rightarrow0$
+\end_inset
+
+ and 
+\begin_inset Formula $\ln m^{\ast}\rightarrow-\infty$
+\end_inset
+
+.
+ Thus the 
+\begin_inset Formula $\ln m^{\ast}$
+\end_inset
+
+ in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ud_occ"
+
+\end_inset
+
+ is severely penalized.
+ Hence Occam's razor indicates that the single parameter 
+\begin_inset Formula $k$
+\end_inset
+
+ is better suited than the parameter vector 
+\begin_inset Formula $\left(k,m\right)$
+\end_inset
+
+ for overdamped motion.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figure_5.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Relative magnitudes of the logarithm of the 
+\begin_inset Formula $\emph{evidence}$
+\end_inset
+
+ for data being generated by an overdamped model 
+\begin_inset Formula $\left(H_{OD}\right)$
+\end_inset
+
+ and an underdamped model 
+\begin_inset Formula $\left(H_{UD}\right)$
+\end_inset
+
+.
+ The panels on the left show the results of our model selection algorithm
+ for overdamped data, while those on the right correspond to underdamped
+ data.
+ The Occam factor penalizes the reduntant parameter of mass 
+\begin_inset Formula $(m)$
+\end_inset
+
+ when the data generating model is overdamped.
+ It is seen that the 
+\begin_inset Formula $\emph{evidence}$
+\end_inset
+
+ for the overdamped model is higher when the data is generated from an overdampe
+d system, and the same is true for the underdamped case.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Occam"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Results and Discussions
 \end_layout
@@ -2742,7 +2831,7 @@ appendix
 \end_layout
 
 \begin_layout Subsection*
-Derivation of MAP Estimates
+MAP estimates
 \end_layout
 
 \begin_layout Standard
@@ -2891,199 +2980,6 @@ begin{subequations}
 \Sigma_{22}^{\ast}
 \end{pmatrix}\\
 \gamma^{\ast} & =\dfrac{m^{\ast2}\Sigma_{12}^{\ast}}{k_{B}T\Lambda_{12}^{\ast2}}
-\end{align}
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{subequations}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection*
-Simulation of position-velocity data in underdamped Brownian harmonic oscillator
-\end_layout
-
-\begin_layout Standard
-The position and velocity data for underdamped Brownian harmonic oscillator
- were simulated using the exact statistics described in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "norrelykke2011harmonic"
-
-\end_inset
-
-.
- A brief overview of the method is outlined here.
- The recursive relation of position and velocity is given as
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\begin{pmatrix}x_{j+1}\\
-v_{j+1}
-\end{pmatrix}=\exp\left(-\lambda\Delta t\right)\begin{pmatrix}x_{j}\\
-v_{j}
-\end{pmatrix}+\begin{pmatrix}\Delta x_{j}\\
-\Delta v_{j}
-\end{pmatrix}.
-\end{equation}
-
-\end_inset
-
-It is shown that 
-\begin_inset Formula $\Delta x_{j}$
-\end_inset
-
- and 
-\begin_inset Formula $\Delta v_{j}$
-\end_inset
-
- are two correlated random numbers from zero-mean Gaussian distributions
- following the given relation for 
-\begin_inset Formula $\xi\sim\mathcal{N}\left(0,1\right)$
-\end_inset
-
- and 
-\begin_inset Formula $\zeta\sim\mathcal{N}\left(0,1\right)$
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{subequations}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{align}
-\Delta x_{j} & =\sigma_{xx}\xi,\\
-\Delta v_{j} & =\nicefrac{\sigma_{xv}^{2}}{\sigma_{xx}}\xi_{j}+\sqrt{\sigma_{vv}^{2}-\nicefrac{\sigma_{xv}^{4}}{\sigma_{xx}^{2}}}\zeta_{j}.
-\end{align}
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{subequations}
-\end_layout
-
-\end_inset
-
-where
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{subequations}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{align}
-\sigma_{xx}^{2} & =\dfrac{D}{4\omega^{2}\omega_{0}^{2}\tau^{3}}(4\omega^{2}\tau^{2}+\exp\left(-\dfrac{\Delta t}{\tau}\right)\nonumber \\
- & \times\left[\cos\left(2\omega\Delta t\right)-2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right]),\\
-\sigma_{vv}^{2} & =\dfrac{D}{4\omega^{2}\tau^{3}}(4\omega^{2}\tau^{2}+\exp\left(-\dfrac{\Delta t}{\tau}\right)\nonumber \\
- & \times\left[\cos\left(2\omega\Delta t\right)+2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right]),\\
-\sigma_{xv}^{2} & =\dfrac{D}{\omega^{2}\tau^{2}}\exp\left(-\dfrac{\Delta t}{\tau}\right)\sin^{2}\left(\omega\Delta t\right).
-\end{align}
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{subequations}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The autocorrelation matrix is given as
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{align}
- & \begin{pmatrix}\langle x\left(t\right)x\left(0\right)\rangle & \langle x\left(t\right)v\left(0\right)\rangle\\
-\langle v\left(t\right)x\left(0\right)\rangle & \langle v\left(t\right)v\left(0\right)\rangle
-\end{pmatrix}=\nonumber \\
-\dfrac{D}{\tau}\exp\left(\dfrac{-t}{2\tau}\right) & \begin{pmatrix}\dfrac{\cos\omega t+\dfrac{\sin\omega t}{2\omega\tau}}{\omega_{0}^{2}} & \dfrac{\sin\omega t}{\omega}\\
--\dfrac{\sin\omega t}{\omega} & \cos\omega t-\dfrac{\sin\omega t}{2\omega\tau}
-\end{pmatrix}.\label{eq:autocorr_mvou}
-\end{align}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The power spectral density (PSD) for position and velocity are given as
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{subequations}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{align}
-P^{\left(x\right)}\left(f_{k}\right) & =\dfrac{D/(2\pi^{2})}{\left(2\pi\tau\right)^{2}\left(f_{k}^{2}-f_{0}^{2}\right)^{2}+f_{k}^{2}},\label{eq:xpsd_mvou}\\
-P^{\left(v\right)}\left(f_{k}\right) & =\dfrac{2D}{\left(2\pi\tau\right)^{2}\left(f_{k}-\nicefrac{f_{0}^{2}}{f_{k}}\right)^{2}+1}.\label{eq:vpsd_mvou}
 \end{align}
 
 \end_inset
