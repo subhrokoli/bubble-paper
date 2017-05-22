@@ -148,15 +148,30 @@ Introduction
 The multivariate Ornstein-Uhlenbeck process is widely used in many branches
  of science and engineering to describe the regression of a system to its
  stationary mean.
- The importance of the process arises from the fact that it is both Markovian
- and Gaussian and, hence, is fully characterized by its stationary and condition
-al distribution, which are multivariate normals.
+ Its importance arises from the fact that it is the only process that is
+ simultaneously Markovian, Gaussian and stationary and, hence, is fully
+ characterized by its stationary and conditional distribution, which are
+ multivariate normals.
  This simplicity implies that joint distribution functions can be obtained
  from a product of stationary and conditional distributions and the probabilitie
 s of discretely sampled paths can, thereby, be directly calculated in terms
  of the process parameters, the drift and diffusion matrices.
- The estimation of these matrices from a set of discrete observations of
- the Ornstein-Uhlenbeck process is the problem we address here.
+ 
+\end_layout
+
+\begin_layout Standard
+Here we apply Bayesian inference to estimate the drift and diffusion matrices
+ of an Ornstein-Uhlenbeck process from a time series of discrete observations.
+ We illustrate how Bayesian model selection can be used to chose a model
+ with the least number of parameters that best summarizes the data.
+ We apply the method to a Brownian harmonic oscillator, which is a bivariate
+ Ornstein-Uhlenbeck process, to estimate the mass, damping and stiffness
+ of the oscillator.
+ We show how Bayesian model selection can unambiguously choose between underdamp
+ed and overdamped models.
+ These results are of relevance to the calibration of optical traps and
+ their use in force measurements as we discuss at greater length below.
+ 
 \end_layout
 
 \begin_layout Section
@@ -588,9 +603,9 @@ The probability
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-P\left(\boldsymbol{\lambda},\boldsymbol{c}\vert\boldsymbol{X}\right)=\dfrac{P\left(\bm{X}\vert\boldsymbol{\lambda},\boldsymbol{c}\right)P\left(\boldsymbol{\lambda},\boldsymbol{c}\right)}{P\left(\boldsymbol{X}\right)}.
-\]
+\begin{equation}
+P\left(\boldsymbol{\lambda},\boldsymbol{c}\vert\boldsymbol{X}\right)=\dfrac{P\left(\bm{X}\vert\boldsymbol{\lambda},\boldsymbol{c}\right)P\left(\boldsymbol{\lambda},\boldsymbol{c}\right)}{P\left(\boldsymbol{X}\right)}.\label{eq:bayes-theorem}
+\end{equation}
 
 \end_inset
 
@@ -801,9 +816,86 @@ In the absence of detailed balance such explicit expressions can no longer
 \end_layout
 
 \begin_layout Standard
+In the above, it is assumed that the data generating model is given, and
+ only the parameters of the model need to be estimated.
+ In certain circumstances, though, the model itself may be uncertain and
+ it becomes necessary to estimate the probability of different models 
+\begin_inset Formula $\mathcal{M}_{\alpha}$
+\end_inset
 
-\series bold
-Need to add model comparison part here.
+, given the data.
+ The probability of a model, given the data, is 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P(\mathcal{M}_{\alpha}|\boldsymbol{X})\propto P(\boldsymbol{X}|\mathcal{M}_{\alpha})P(\mathcal{M}_{\alpha})
+\end{equation}
+
+\end_inset
+
+where the first term on the right is the 
+\begin_inset Quotes eld
+\end_inset
+
+evidence
+\begin_inset Quotes erd
+\end_inset
+
+ of the model and the second term is the prior probability of the model.
+ The evidence is the normalizing constant in Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:bayes-theorem"
+
+\end_inset
+
+), given as an integral over the space of parameters 
+\begin_inset Formula $\boldsymbol{\theta}$
+\end_inset
+
+ contained in the drift and diffusion matrices:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P(\boldsymbol{X}|\mathcal{M}_{\alpha})=\int P(\boldsymbol{X}|\boldsymbol{\theta},\mathcal{M}_{\alpha})P(\boldsymbol{\theta}|\mathcal{M}_{\alpha})d\boldsymbol{\theta}
+\end{equation}
+
+\end_inset
+
+For unimodal posterior distributions, the height at the MAP value 
+\begin_inset Formula $\boldsymbol{\theta}^{\ast}$
+\end_inset
+
+ times the width 
+\begin_inset Formula $\Delta\boldsymbol{\theta}$
+\end_inset
+
+ of the distribution is, often, a very good approximation for the evidence,
+ 
+\begin_inset Formula 
+\begin{equation}
+P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta}^{\ast},\mathcal{M}_{\alpha})P(\boldsymbol{\theta}^{\ast}|\mathcal{M}_{\alpha})\Delta\boldsymbol{\theta}
+\end{equation}
+
+\end_inset
+
+The first term is the best fit likelihood while the second term, the product
+ of the prior for the MAP estimate and the standard error of this estimate
+ is called the Ockham factor.
+ Thus models which achieve a compromise between the degree of fit to the
+ data and the number of parameters required for the fit are ones which are
+ favoured by the Bayesian model selection procedure.
+ This avoids the overfitting that would occur if the degree of fit was made
+ the sole criterion for model selection and encodes the commonsense that
+ between two models that fit the data equally well, the simpler one is more
+ plausible.
+ Both the evidence and the Ockham factor can be obtained straightforwardly
+ for the Ornstein-Uhlenbeck models and we shall make use of this below for
+ model selection within a family of Ornstein-Uhlenbeck models.
  
 \end_layout
 
@@ -901,7 +993,7 @@ where
 \end_inset
 
  of the regression matrix, is resolved in the samples.
-  In the following section we use the method above to sample paths of the
+ In the following section we use the method above to sample paths of the
  Brownian harmonic oscillator, which is equivalent to a bivariate Ornstein-Uhlen
 beck process, to test the accuracy of our Bayesian estimates.
 \end_layout
