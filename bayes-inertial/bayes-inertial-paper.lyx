@@ -109,7 +109,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -161,16 +160,24 @@ s of discretely sampled paths can, thereby, be directly calculated in terms
 
 \begin_layout Standard
 Here we apply Bayesian inference to estimate the drift and diffusion matrices
- of an Ornstein-Uhlenbeck process from a time series of discrete observations.
- We illustrate how Bayesian model selection can be used to chose a model
- with the least number of parameters that best summarizes the data.
- We apply the method to a Brownian harmonic oscillator, which is a bivariate
- Ornstein-Uhlenbeck process, to estimate the mass, damping and stiffness
- of the oscillator.
+ of an 
+\begin_inset Formula $M$
+\end_inset
+
+-dimensional Ornstein-Uhlenbeck process from a time series of discrete observati
+ons.
+ We illustrate how Bayesian model selection can be used to choose the model
+ with the least number of parameters that best fits the data.
+ 
+\end_layout
+
+\begin_layout Standard
+We apply the method to a Brownian harmonic oscillator, which is a bivariate
+ Ornstein-Uhlenbeck process, to estimate its mass, damping and stiffness.
  We show how Bayesian model selection can unambiguously choose between underdamp
 ed and overdamped models.
  These results are of relevance to the calibration of optical traps and
- their use in force measurements as we discuss at greater length below.
+ their use in force measurements, as we discuss at greater length below.
  
 \end_layout
 
@@ -890,9 +897,16 @@ The first term is the best fit likelihood while the second term, the product
  data and the number of parameters required for the fit are ones which are
  favoured by the Bayesian model selection procedure.
  This avoids the overfitting that would occur if the degree of fit was made
- the sole criterion for model selection and encodes the commonsense that
- between two models that fit the data equally well, the simpler one is more
- plausible.
+ the sole criterion for model selection and encodes the commonsense 
+\begin_inset Quotes eld
+\end_inset
+
+principle of parsimony
+\begin_inset Quotes erd
+\end_inset
+
+,  attributed to William of Ockham, that between two models that fit the
+ data equally well, the simpler one is more plausible.
  Both the evidence and the Ockham factor can be obtained straightforwardly
  for the Ornstein-Uhlenbeck models and we shall make use of this below for
  model selection within a family of Ornstein-Uhlenbeck models.
