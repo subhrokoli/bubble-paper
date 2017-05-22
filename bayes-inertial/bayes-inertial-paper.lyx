@@ -91,11 +91,7 @@ Dipanjan Ghosh
 \end_layout
 
 \begin_layout Affiliation
-Dept of Chemical Engineering, Jadavpur
-\begin_inset Newline newline
-\end_inset
-
- University, Kolkata 700032, India
+Dept of Chemical Engineering, Jadavpur University, Kolkata 700032, India
 \end_layout
 
 \begin_layout Author
@@ -123,7 +119,8 @@ The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
 \end_layout
 
 \begin_layout Affiliation
-DAMTP, Center for Mathematical Sciences, 
+DAMTP, Centre for Mathematical Sciences, University of Cambridge, Wilberforce
+ Road, Cambridge CB3 0WA, UK
 \end_layout
 
 \begin_layout Abstract
@@ -411,7 +408,7 @@ This is a Lyapunov matrix equation for
 \begin_inset Formula $\boldsymbol{\epsilon c}=\boldsymbol{c\epsilon}$
 \end_inset
 
- for the variance matrix.
+ for the variance matrix.g
 \end_layout
 
 \begin_layout Standard
@@ -803,6 +800,13 @@ In the absence of detailed balance such explicit expressions can no longer
  
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+Need to add model comparison part here.
+ 
+\end_layout
+
 \begin_layout Section
 Sampling paths
 \end_layout
@@ -861,7 +865,7 @@ exactly
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{x}_{n+1}=e^{-\boldsymbol{\lambda}\Delta t}\boldsymbol{x}_{n}+\boldsymbol{\sigma}_{\Delta t}\boldsymbol{y}_{n}
+\boldsymbol{x}_{n+1}=e^{-\boldsymbol{\lambda}\Delta t}\boldsymbol{x}_{n}+\boldsymbol{\sigma}_{\Delta t}\boldsymbol{y}_{n},
 \end{equation}
 
 \end_inset
@@ -875,7 +879,7 @@ where
 \end_inset
 
  and 
-\begin_inset Formula $\boldsymbol{y}\sim\mathcal{N}(\boldsymbol{0},\boldsymbol{I})$
+\begin_inset Formula $\boldsymbol{y}_{n}\sim\mathcal{N}(\boldsymbol{0},\boldsymbol{I})$
 \end_inset
 
  is an 
@@ -887,10 +891,19 @@ where
  variance matrix are the two key quantities in the iteration.
  They can be obtained analytically in low dimensional problems but for high
  dimensional problems they will, in general, have to be obtained numerically.
- In the following section we use the method above to sample paths of the
+ The sampling interval must satisfy 
+\begin_inset Formula $\lambda_{\mathrm{max}}\Delta t\ll1$
+\end_inset
+
+ such that the shortest time scale in the dynamics, corresponding to the
+ inverse of the largest eigenvalue 
+\begin_inset Formula $\lambda_{\mathrm{max}}$
+\end_inset
+
+ of the regression matrix, is resolved in the samples.
+  In the following section we use the method above to sample paths of the
  Brownian harmonic oscillator, which is equivalent to a bivariate Ornstein-Uhlen
-beck process, to test the efficacy of our estimation method.
- 
+beck process, to test the accuracy of our Bayesian estimates.
 \end_layout
 
 \begin_layout Section
