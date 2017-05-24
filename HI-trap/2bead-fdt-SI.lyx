@@ -627,7 +627,14 @@ adiabatic elimination of momentum
 \end_inset
 
  are adiabatically eliminated from the Langevin equations to obtain a contracted
- description in terms of the positions alone.
+ description in terms of the positions alone 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gardiner1984adiabatic,gardiner1985handbook"
+
+\end_inset
+
+.
  This equation is valid on time scales 
 \begin_inset Formula $t\gg m_{i}/\gamma_{i}$
 \end_inset
@@ -647,7 +654,14 @@ spurious
 \begin_inset Quotes erd
 \end_inset
 
- drift is included in the equation for the position increment.
+ drift is included in the equation for the position increment 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "van1981ito,van1992stochastic"
+
+\end_inset
+
+.
  With these caveats, the resulting over-damped Langevin equations are
 \end_layout
 
@@ -899,7 +913,14 @@ response
 \end_inset
 
 .
- The response function in the frequency domain, then, is
+ The response function in the frequency domain, then, is 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "chaikin2000principles"
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{equation}
 \chi_{ij}^{||}(\omega)=(-i\omega\delta_{ik}+A_{ik})^{-1}\mu_{kj}^{||}.\label{eq:response-function}
@@ -1102,8 +1123,23 @@ C_{ij}(\omega)= & \frac{2k_{B}T}{\omega}\text{Im}\left[\chi_{ij}^{||}(\omega)\ri
 \end_inset
 
 This provides an explicit verification of the fluctuation-response relation
- for a pair of viscously coupled oscillators.
+ for a pair of viscously coupled oscillators 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "kubo1966fluctuation"
+
+\end_inset
+
+.
  
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "2bead-fdt"
+options "plain"
+
+\end_inset
+
+
 \end_layout
 
 \end_body

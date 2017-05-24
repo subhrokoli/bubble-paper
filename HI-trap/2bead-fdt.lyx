@@ -264,7 +264,14 @@ key "Hough02,Atakh06"
  For example, a trapped particle under optical tweezers undergoes Brownian
  motion, which is a Markovian process and thus obeys detailed balance, so
  that the fluctuation dissipation relation is almost trivially satisfied
- in this case.
+ in this case 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "kubo1966fluctuation"
+
+\end_inset
+
+.
  However, the situation becomes more complicated when two particles are
  trapped in separate optical tweezers that are coupled by near-field hydrodynami
 c interactions with the entrained fluid.
@@ -633,7 +640,14 @@ key "Meiners99"
 Theory:
 \shape default
  The Langevin equations describing the stochastic trajectories of the colloids
- are
+ are 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gardiner1985handbook"
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{align}
 m_{i}\dot{\boldsymbol{v}_{i}} & +\boldsymbol{\gamma}_{ij}\cdot\boldsymbol{v}_{j}+{\bf \boldsymbol{\nabla}}_{i}U=\boldsymbol{{\bf \xi}}_{i}\label{eq1}
@@ -680,6 +694,13 @@ e forces mediated by the fluid,
 In the limit of slow viscous flow in the fluid, the friction tensors can
  be calculated from the Stokes equation using a variety of methods.
  To leading order the result is 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "brenner1964stokes,singh2016crystallization,singh2016traction"
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{\gamma}_{ij}=\delta_{ij}\boldsymbol{I}\gamma_{i}-(1-\delta_{ij})\gamma_{i}\gamma_{j}\mathcal{F}_{i}\mathcal{F}_{j}\boldsymbol{G}(\boldsymbol{r}_{i},\boldsymbol{r}_{j})
@@ -695,7 +716,14 @@ where
 \begin_inset Formula $\boldsymbol{G}$
 \end_inset
 
- is a Green's function of the Stokes equation, 
+ is a Green's function of the Stokes equation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "pozrikidis1992"
+
+\end_inset
+
+, 
 \begin_inset Formula $\boldsymbol{r}_{i}$
 \end_inset
 
@@ -714,7 +742,14 @@ where
 \end_inset
 
 , but holds generally for any Green's function and is both symmetric and
- positive-definite.
+ positive-definite 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "singh2016crystallization,singh2016traction"
+
+\end_inset
+
+.
  The mutual friction tensors decay inversely with distance in an unbounded
  fluid and more rapidly in the proximity of boundaries.
  The assumption of slow viscous flow is valid at frequencies 
@@ -760,10 +795,24 @@ For modulation frequencies
 \end_inset
 
  the velocities can be adiabatically eliminated from the inertial Langevin
- equations to yield inertialess Langevin equations for the positions.
+ equations to yield inertialess Langevin equations for the positions 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gardiner1984adiabatic"
+
+\end_inset
+
+.
  The multiplicative noises in the resulting equations have clear interpretations
  within the adiabatic elimination procedure; there is no Ito-Stratonovich
- dilemma.
+ dilemma 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "van1981ito,van1992stochastic"
+
+\end_inset
+
+.
  Both correlation and response functions can be calculated in this limit.
  Linearizing about the mean separation between the trap centers and decomposing
  the motion into components parallel and perpendicular to the separation
