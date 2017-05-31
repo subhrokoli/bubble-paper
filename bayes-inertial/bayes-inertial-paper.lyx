@@ -109,6 +109,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -753,9 +754,31 @@ end{subequations}
 
 \end_inset
 
-The error bars can be derived by expanding the log posterior to quadratic
- order around the MAP estimate.
- 
+The error bars can be obtained from the Hessian matrix 
+\begin_inset Formula $\bm{A}=-\nabla\nabla\ln P\left(\bm{\lambda},\bm{c}\vert\bm{X}\right)$
+\end_inset
+
+ evaluated at the maximum 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jeffreys1998theory,jaynes2003probability,sivia2006data"
+
+\end_inset
+
+.
+ Its explicit form, as derived in appendix, is
+\begin_inset Formula 
+\begin{align}
+ & \mathbf{A}=\left(\begin{array}{cc}
+\tfrac{N}{2}(\bm{\Sigma}^{*})^{2} & 0\\
+\\
+0 & \bm{\Sigma}^{*-1}\bm{T_{3}}
+\end{array}\right).\label{eq:hessianMatrix}
+\end{align}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2351,12 +2374,7 @@ P\left(D|H_{i}\right)\simeq P\left(D|\bm{w}_{MP},H_{i}\right)P\left(\bm{w}_{MP}|
 
 \end_inset
 
-where 
-\begin_inset Formula $\bm{A}=-\nabla\nabla\ln P\left(\bm{w}|D,H_{i}\right)$
-\end_inset
-
- is the Hessian matrix.
- We can recast the problem in terms of optical trap, that is we have a given
+We can recast the problem in terms of optical trap, that is we have a given
  position-velocity dataset, we would like to determine if the underlying
  Brownian motion is overdamped (
 \begin_inset Formula $H_{OD}$
@@ -3113,6 +3131,74 @@ status open
 \backslash
 end{subequations}
 \end_layout
+
+\end_inset
+
+The second derivatives of the log posterior w.r.t 
+\begin_inset Formula $\boldsymbol{\Sigma}^{-1}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{align}
+ & \dfrac{\partial^{2}\ln P\left(\bm{\lambda},\bm{\Sigma}\vert\bm{X}\right)}{\partial(\bm{\Sigma^{-1}})^{2}}=-\dfrac{N}{2}\left(\bm{\Sigma}^{2}\right).
+\end{align}
+
+\end_inset
+
+Other derivatives of the log posterior are
+\begin_inset Formula 
+\begin{align}
+\dfrac{\partial\ln P\left(\bm{\lambda},\bm{\Sigma}\vert\bm{X}\right)}{\partial\bm{\Lambda}}= & -\dfrac{1}{2}\bm{\Sigma}^{-1}:\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\bm{T_{3}}\nonumber \\
++ & \bm{T_{3}}\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}\Big],
+\end{align}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\dfrac{\partial^{2}\ln P\left(\bm{\lambda},\bm{\Sigma}\vert\bm{X}\right)}{\partial\bm{\Lambda}\partial\bm{\Sigma^{-1}}} & =-\dfrac{1}{2}\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\bm{T_{3}}\nonumber \\
+ & +\bm{T_{3}}\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}\Big],
+\end{align}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+ & \dfrac{\partial^{2}\ln P\left(\bm{\lambda},\bm{\Sigma}\vert\bm{X}\right)}{\partial\bm{\Lambda}^{2}}=-\bm{\Sigma}^{-1}\bm{T_{3}}.
+\end{align}
+
+\end_inset
+
+These results have been used in constructing the Hessian matrix of Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:hessianMatrix"
+
+\end_inset
+
+).
+ This has been used to obtain the evidence for a given model 
+\begin_inset Formula $\mathcal{M}_{\alpha}$
+\end_inset
+
+ as
+\begin_inset Formula 
+\begin{equation}
+P\left(D|\mathcal{M}_{\alpha}\right)\simeq P(\boldsymbol{X}|\boldsymbol{\theta}^{\ast},\mathcal{M}_{\alpha})P(\boldsymbol{\theta}^{\ast}|\mathcal{M}_{\alpha})2\pi\left(\det\bm{A}\right)^{\nicefrac{-1}{2}},
+\end{equation}
+
+\end_inset
+
+With explicit forms, this becomes
+\begin_inset Formula 
+\begin{align}
+\ln P\left(D|\mathcal{M}_{\alpha}\right) & \simeq\frac{1}{2}\left(-1-N\ln\dfrac{|\bm{\Sigma}^{*}|}{4\pi^{2}}\right)+\ln2\pi.\nonumber \\
+ & -\frac{1}{2}\ln\left[\det(\tfrac{N}{2}\bm{\Sigma}^{*2})+\det(\bm{\Sigma}^{*-1}\bm{T_{3}})\right]
+\end{align}
 
 \end_inset
 
