@@ -109,7 +109,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -128,10 +127,9 @@ The multivariate Ornstein-Uhlenbeck process is used in many branches of
  science and engineering to describe the regression of a system to its stationar
 y mean.
  Here we present a fast Bayesian method to estimate the drift and diffusion
- coefficients of the process from discretely observed sample paths.
- We use exact likelihoods to derive simple expressions for the maximum a
- posteriori estimates in terms of four sufficient statistic matrices.
- Explicit expressions are obtained for systems obeying detailed balance.
+ matrices of the process from discretely observed sample paths.
+ We use exact likelihoods to derive the maximum a posteriori estimates in
+ terms of four sufficient statistic matrices.
  We apply the method to jointly estimate the mass, damping and stiffness
  of a Brownian harmonic oscillator, a problem relevant to the inertial motion
  of optically trapped colloids.
@@ -937,7 +935,7 @@ principle of parsimony
 \end_layout
 
 \begin_layout Section
-Sampling paths
+Path sampling
 \end_layout
 
 \begin_layout Standard
