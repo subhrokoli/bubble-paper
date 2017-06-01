@@ -3053,85 +3053,56 @@ At the maximum, we obtain the MAP estimate for
 \begin_inset Formula $\bm{\Sigma}$
 \end_inset
 
- as
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\bm{\Sigma^{\ast}}=\dfrac{1}{N}\left(\bm{T}_{1}-\boldsymbol{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{T}_{2}^{T}\right).
-\end{equation}
-
+ as 
+\begin_inset Formula $\bm{\Sigma^{\ast}}=\dfrac{1}{N}\left(\bm{T}_{1}-\boldsymbol{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{T}_{2}^{T}\right).$
 \end_inset
 
-Equations 
+ Equations (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:map_lambda"
 
 \end_inset
 
- and 
+) and (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:map_sigma"
 
 \end_inset
 
- give the MAP estimates of the drift matrix and the transition variance
+) give the MAP estimates of the drift matrix and the transition variance
  covariance matrix respectively.
  The estimates of the parameters of the underdamped oscillator follow 
-\begin_inset Formula $\bm{\Lambda^{\ast}}=\exp\left(-\bm{\lambda^{\ast}}\Delta t\right)$
+\begin_inset Formula $\bm{\Lambda^{\ast}}$
 \end_inset
 
  and 
 \begin_inset Formula $\bm{\Sigma^{\ast}}$
 \end_inset
 
-, we can get 
-\begin_inset Formula $m^{\ast},k^{\ast},\gamma^{\ast}$
+.
+ We can get 
+\begin_inset Formula $m^{\ast},k^{\ast},$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma^{\ast}$
 \end_inset
 
  using the following algebraic manipulations
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{subequations}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{align}
 \begin{pmatrix}\dfrac{k_{B}T}{k^{\ast}}\\
 \dfrac{k_{B}T}{m^{\ast}}
 \end{pmatrix} & =\begin{pmatrix}1-\Lambda_{11}^{\ast2} & -\Lambda_{12}^{\ast2}\\
+\\
 -\Lambda_{21}^{\ast2} & 1-\Lambda_{22}^{\ast2}
 \end{pmatrix}^{-1}\begin{pmatrix}\Sigma_{11}^{\ast}\\
+\\
 \Sigma_{22}^{\ast}
-\end{pmatrix},\qquad\gamma^{\ast}=\dfrac{m^{\ast2}\Sigma_{12}^{\ast}}{k_{B}T\Lambda_{12}^{\ast2}}
+\end{pmatrix},\qquad\gamma^{\ast}=\dfrac{m^{\ast2}}{k_{B}T}\dfrac{\Sigma_{12}^{\ast}}{\Lambda_{12}^{\ast2}}.
 \end{align}
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{subequations}
-\end_layout
 
 \end_inset
 
