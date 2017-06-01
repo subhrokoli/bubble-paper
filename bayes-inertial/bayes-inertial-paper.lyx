@@ -815,7 +815,7 @@ hlenbeck process.
  is
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{c}^{\ast}=\boldsymbol{\Sigma}^{\ast}\left[\boldsymbol{1}-\boldsymbol{\epsilon}\boldsymbol{\Lambda}^{*}\boldsymbol{\epsilon}\boldsymbol{\Lambda}^{*T}\right]^{-1}.
+\boldsymbol{c}^{\ast}=\boldsymbol{\Sigma}^{\ast}\left[\boldsymbol{1}-(\boldsymbol{\epsilon}\boldsymbol{\Lambda}^{\ast})^{T}(\boldsymbol{\epsilon}\boldsymbol{\Lambda}^{\ast})^{T}\right]^{-1}.
 \end{equation}
 
 \end_inset
@@ -3101,7 +3101,7 @@ reference "eq:map_sigma"
 \end_layout
 
 \begin_layout Subsection*
-Hessian matrix
+Hessian at the MAP estimate
 \end_layout
 
 \begin_layout Standard
