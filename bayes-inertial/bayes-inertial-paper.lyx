@@ -644,7 +644,7 @@ The denominator
 
 \end_inset
 
-where the two quantities 
+where the quantities 
 \begin_inset Formula $\boldsymbol{\Sigma}$
 \end_inset
 
@@ -653,10 +653,38 @@ where the two quantities
 \end_inset
 
  are
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
-\begin{equation}
-\bm{\Sigma}\equiv\boldsymbol{c}-\boldsymbol{\Lambda}\,\boldsymbol{c}\,\boldsymbol{\Lambda}^{T},\,\,\,\,\boldsymbol{\Delta}_{n}\equiv\boldsymbol{x}_{n+1}-\boldsymbol{\Lambda}\,\boldsymbol{x}_{n},\,\,\,\,\bm{\Lambda}\equiv e^{-\bm{\lambda}\Delta t}.
-\end{equation}
+\begin{align}
+\bm{\Sigma} & \equiv\boldsymbol{c}-\boldsymbol{\Lambda}\,\boldsymbol{c}\,\boldsymbol{\Lambda}^{T},\\
+\boldsymbol{\Delta}_{n} & \equiv\boldsymbol{x}_{n+1}-\boldsymbol{\Lambda}\,\boldsymbol{x}_{n},\\
+\bm{\Lambda} & \equiv e^{-\bm{\lambda}\Delta t}.
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
 
 \end_inset
 
@@ -796,7 +824,7 @@ hlenbeck process.
  is
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{c}^{\ast}=\boldsymbol{\Sigma}^{\ast}\left[\boldsymbol{1}-\boldsymbol{\epsilon}\boldsymbol{\Lambda}^{T}\boldsymbol{\epsilon}\boldsymbol{\Lambda}^{T}\right]^{-1}.
+\boldsymbol{c}^{\ast}=\boldsymbol{\Sigma}^{\ast}\left[\boldsymbol{1}-\boldsymbol{\epsilon}\boldsymbol{\Lambda}^{*T}\boldsymbol{\epsilon}\boldsymbol{\Lambda}^{*T}\right]^{-1}.
 \end{equation}
 
 \end_inset
