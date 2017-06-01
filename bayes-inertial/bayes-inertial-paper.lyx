@@ -109,7 +109,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -644,15 +643,7 @@ The denominator
 
 \end_inset
 
-where the quantities 
-\begin_inset Formula $\boldsymbol{\Sigma}$
-\end_inset
-
- and 
-\begin_inset Formula $\boldsymbol{\Delta}_{n}$
-\end_inset
-
- are
+where the following definitions are made:
 \begin_inset ERT
 status open
 
@@ -668,9 +659,9 @@ begin{subequations}
 
 \begin_inset Formula 
 \begin{align}
+\bm{\Lambda} & \equiv e^{-\bm{\lambda}\Delta t}.\\
 \bm{\Sigma} & \equiv\boldsymbol{c}-\boldsymbol{\Lambda}\,\boldsymbol{c}\,\boldsymbol{\Lambda}^{T},\\
-\boldsymbol{\Delta}_{n} & \equiv\boldsymbol{x}_{n+1}-\boldsymbol{\Lambda}\,\boldsymbol{x}_{n},\\
-\bm{\Lambda} & \equiv e^{-\bm{\lambda}\Delta t}.
+\boldsymbol{\Delta}_{n} & \equiv\boldsymbol{x}_{n+1}-\boldsymbol{\Lambda}\,\boldsymbol{x}_{n}.
 \end{align}
 
 \end_inset
@@ -824,7 +815,7 @@ hlenbeck process.
  is
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{c}^{\ast}=\boldsymbol{\Sigma}^{\ast}\left[\boldsymbol{1}-\boldsymbol{\epsilon}\boldsymbol{\Lambda}^{*T}\boldsymbol{\epsilon}\boldsymbol{\Lambda}^{*T}\right]^{-1}.
+\boldsymbol{c}^{\ast}=\boldsymbol{\Sigma}^{\ast}\left[\boldsymbol{1}-\boldsymbol{\epsilon}\boldsymbol{\Lambda}^{*}\boldsymbol{\epsilon}\boldsymbol{\Lambda}^{*T}\right]^{-1}.
 \end{equation}
 
 \end_inset
