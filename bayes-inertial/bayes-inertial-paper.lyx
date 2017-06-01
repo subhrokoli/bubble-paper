@@ -429,7 +429,7 @@ This is a Lyapunov matrix equation for
 \begin_inset Formula $\boldsymbol{\epsilon c}=\boldsymbol{c\epsilon}$
 \end_inset
 
- for the variance matrix.g
+ for the variance matrix.
 \end_layout
 
 \begin_layout Standard
@@ -814,7 +814,7 @@ hlenbeck process.
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{c}^{\ast}=\left[\boldsymbol{1}-\boldsymbol{\epsilon}e^{-2(\boldsymbol{\lambda}^{\ast})^{T}\Delta t}\boldsymbol{\epsilon}\right]^{-1}\boldsymbol{\Sigma}^{\ast}.
+\boldsymbol{c}^{\ast}=\boldsymbol{\Sigma}^{\ast}\left[\boldsymbol{1}-\boldsymbol{\epsilon}e^{-2(\boldsymbol{\lambda}^{\ast})^{T}\Delta t}\boldsymbol{\epsilon}\right]^{-1}.
 \end{equation}
 
 \end_inset
