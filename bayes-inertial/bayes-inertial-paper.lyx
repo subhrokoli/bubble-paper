@@ -109,7 +109,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -3154,7 +3153,7 @@ P\left(D|\mathcal{M}_{\alpha}\right)\simeq P(\boldsymbol{X}|\boldsymbol{\theta}^
 With explicit forms, this becomes
 \begin_inset Formula 
 \begin{align}
-\ln P\left(D|\mathcal{M}_{\alpha}\right) & \simeq\frac{1}{2}\left(-1-N\ln\dfrac{|\bm{\Sigma}^{*}|}{4\pi^{2}}\right)+\ln2\pi-\frac{1}{2}\ln\Bigg[\det(\boldsymbol{A}_{22})\det[(\bm{\Lambda}^{*}\boldsymbol{c}^{*}+\boldsymbol{c}^{*}\bm{\Lambda}^{*T})\boldsymbol{A}_{22}^{-1}(\bm{\Lambda}^{*}\boldsymbol{c}^{*}+\boldsymbol{c}^{*}\bm{\Lambda}^{*T})\Bigg].
+\ln P\left(D|\mathcal{M}_{\alpha}\right) & \simeq\frac{1}{2}\left(-1-N\ln\dfrac{|\bm{\Sigma}^{*}|}{4\pi^{2}}\right)+\ln2\pi-\frac{1}{2}\ln\Bigg[\det(\boldsymbol{A}_{22})\det[\tfrac{N}{2}(\bm{\Sigma}^{*})^{2}-(\bm{\Lambda}^{*}\boldsymbol{c}^{*}+\boldsymbol{c}^{*}\bm{\Lambda}^{*T})\boldsymbol{A}_{22}^{-1}(\bm{\Lambda}^{*}\boldsymbol{c}^{*}+\boldsymbol{c}^{*}\bm{\Lambda}^{*T})\Bigg].
 \end{align}
 
 \end_inset
