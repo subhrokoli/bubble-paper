@@ -109,6 +109,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -365,7 +366,7 @@ Then,
 \begin_inset Formula $\boldsymbol{c}$
 \end_inset
 
- are not all independent but are related by the stationarity condition 
+ are not all independent but are related by the stationarity condition
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{\lambda c}+(\boldsymbol{\lambda c})^{T}=2\boldsymbol{D}.\label{eq:stationarity}
@@ -434,7 +435,7 @@ This is a Lyapunov matrix equation for
 
 \begin_layout Standard
 The Gauss-Markov property of the Ornstein-Uhlenbeck process ensures that
- the correlation function 
+ the correlation function
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{C}(t-t^{\prime})\equiv\langle\boldsymbol{x}(t)\boldsymbol{x}^{T}(t^{\prime})\rangle=e^{-\boldsymbol{\lambda}|\Delta t|}\boldsymbol{c}\mathbf{}\label{eq:autocorr}
@@ -634,7 +635,7 @@ The denominator
 \begin_inset Formula $P_{1}$
 \end_inset
 
-, is 
+, is
 \begin_inset Formula 
 \begin{align}
 \ln P\left(\bm{\lambda},\bm{c}\vert\bm{X}\right) & =\dfrac{N-1}{2}\ln\dfrac{1}{\left(2\pi\right)^{p}\vert\bm{\Sigma}\vert}+\dfrac{1}{2}\ln\dfrac{1}{\left(2\pi\right)^{p}|\bm{c}|}\nonumber \\
@@ -695,6 +696,13 @@ status open
 \backslash
 begin{subequations}
 \end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "eq:sufficientStatistics"
 
 \end_inset
 
@@ -889,7 +897,6 @@ For unimodal posterior distributions, the height at the MAP value
 \end_inset
 
  of the distribution is, often, a very good approximation for the evidence,
- 
 \begin_inset Formula 
 \begin{equation}
 P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta}^{\ast},\mathcal{M}_{\alpha})P(\boldsymbol{\theta}^{\ast}|\mathcal{M}_{\alpha})\Delta\boldsymbol{\theta}
@@ -1017,16 +1024,13 @@ beck process, to test the accuracy of our Bayesian estimates.
 \end_layout
 
 \begin_layout Section
-brownian harmonic oscillator
+Brownian harmonic oscillator
 \end_layout
 
 \begin_layout Standard
 We now apply the results above to the physically important case of a massive
  Brownian particle confined in a harmonic potential described by the Langevin
  equation
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 m\dot{v}+\gamma v+\nabla U(x)=\xi.\label{eq:langevin}
@@ -1047,7 +1051,14 @@ Here the pair
 \begin_inset Formula $\gamma$
 \end_inset
 
- are the particle mass and friction coefficient respectively.
+ are the particle mass and friction coefficient respectively 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "chandrasekhar1943stochastic"
+
+\end_inset
+
+.
  The potential 
 \begin_inset Formula $U=\frac{1}{2}kx^{2}$
 \end_inset
@@ -1078,9 +1089,6 @@ is a zero-mean Gaussian white noise with variance
 \begin_layout Standard
 The Langevin equation can be recast as bivariate Ornstein-Uhlenbeck process
  in phase space
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 \frac{d}{dt}\left(\begin{array}{c}
@@ -1097,7 +1105,7 @@ v
 
 \end_inset
 
-where the mean regression and diffusion matrices are 
+where the mean regression and diffusion matrices are
 \end_layout
 
 \begin_layout Standard
@@ -1110,7 +1118,7 @@ where the mean regression and diffusion matrices are
 
 \end_inset
 
-and 
+and
 \begin_inset Formula 
 \begin{equation}
 \bm{D=}\begin{pmatrix}0 & 0\\
@@ -1206,9 +1214,6 @@ name "fig:PositionsVelocity"
 At thermal equilibrium, the joint distribution of position and velocity
  factorize into the Gibbs distribution for the position and the Maxwell-Boltzman
 n distribution for the velocity to give a diagonal covariance matrix
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 \bm{c}=\begin{pmatrix}k_{B}T/k & 0\\
@@ -2198,10 +2203,10 @@ key "bera2017fast"
 
 .
  Thus, we demonstrate that our method for finding the MAP estimates is valid
- for arbitrary dimensionality of the data generating Ornstein Uhlenbeck
+ for arbitrary dimensionality of the data generating Ornstein-Uhlenbeck
  process.
  Physically, the displacements of the Brownian particle in the overdamped
- harmonic oscillator constitute an univariate Ornstein Uhlenbeck process,
+ harmonic oscillator constitute an univariate Ornstein-Uhlenbeck process,
  whereas a physical example of the bivariate analogue is the position-velocity
  phase space for the underdamped Brownian harmonic oscillator.
 \begin_inset Float figure
@@ -2318,7 +2323,7 @@ where
 \begin_inset Formula $P\left(D|\bm{w}_{MP},H_{i}\right)$
 \end_inset
 
- is the 'best fit likelihood' and 
+ is the `best fit likelihood' and 
 \begin_inset Formula $P\left(\bm{w}_{MP}|H_{i}\right)\Delta\bm{w}$
 \end_inset
 
@@ -2376,8 +2381,8 @@ We can recast the problem in terms of optical trap, that is we have a given
 \end_layout
 
 \begin_layout Standard
-We focus on the stationary Bayesian estimates (labelled Bayes II in our
- earlier paper).
+We focus on the stationary Bayesian estimates (labeled Bayes II in our earlier
+ paper).
  Using some elementary manipulations, it can be shown that
 \begin_inset ERT
 status open
@@ -2969,23 +2974,8 @@ MAP estimates
 \end_layout
 
 \begin_layout Standard
-Consider the sum of the quadratic form 
-\begin_inset Formula $\bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}=\left(\bm{x_{n+1}}-\bm{\Lambda}\bm{x_{n}}\right)^{\bm{T}}\bm{\Sigma^{-1}}\left(\bm{x_{n+1}}-\bm{\Lambda}\bm{x_{n}}\right)$
-\end_inset
-
- that occurs in the expression for the posterior probability.
- Expanding terms and completing the summation we have the identity
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{align}
- & \bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}=-\dfrac{1}{2}\bm{\Sigma}^{-1}:\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}+\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big].\label{eq:lp}
-\end{align}
-
-\end_inset
-
-With this identification the expression of Eq.
+In this appendix, we obtain Bayesian MAP estimates from the expression of
+ the logarithm of the posterior probability, Eq.
  (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2993,7 +2983,32 @@ reference "eq:logProb"
 
 \end_inset
 
-) in terms of sufficient statistics is 
+).
+ Consider the sum of the quadratic form 
+\begin_inset Formula $\bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}=\left(\bm{x_{n+1}}-\bm{\Lambda}\bm{x_{n}}\right)^{\bm{T}}\bm{\Sigma^{-1}}\left(\bm{x_{n+1}}-\bm{\Lambda}\bm{x_{n}}\right)$
+\end_inset
+
+ that occurs in the expression for the posterior probability.
+ Expanding terms in the expression and completing the summation we have
+ the following identity
+\begin_inset Formula 
+\begin{align}
+ & \bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}=-\dfrac{1}{2}\bm{\Sigma}^{-1}:\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}+\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big].\label{eq:lp}
+\end{align}
+
+\end_inset
+
+Here we have used the definitions of sufficient statistics in Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:sufficientStatistics"
+
+\end_inset
+
+).
+ With this identification, the expression logarithm of the posterior probability
+ in terms of sufficient statistics is
 \begin_inset Formula 
 \begin{align}
 \ln P\left(\bm{\lambda},\bm{\Sigma}\vert\bm{X}\right)= & -\dfrac{1}{2}\bm{\Sigma}^{-1}:\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\bm{T_{3}}\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}+\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big]+\dfrac{N}{2}\ln\dfrac{|\bm{\Sigma^{-1}}|}{4\pi^{2}}.
