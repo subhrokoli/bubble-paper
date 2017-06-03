@@ -10,9 +10,9 @@
 \usepackage{subfigure}
 \usepackage{graphicx, mathtools}
 \usepackage[normalem]{ulem}
-\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue,anchorcolor=blue]{hyperref}\usepackage[dvipsnames]{xcolor}
-\definecolor{myGreen}{rgb}{0.0, 1, 10.1}
-\definecolor{myBlue}{rgb}{0.9, 0.2, 0}
+\usepackage[colorlinks=true,linktocpage=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,citecolor=MidnightBlue,anchorcolor=MidnightBlue]{hyperref}
+\usepackage[dvipsnames]{xcolor}
+ 
 \end_preamble
 \options aps, twocolumn, pre,superscriptaddress, notitlepage
 \use_default_options false
@@ -312,7 +312,7 @@ The solution is a multivariate normal distribution
 \end_inset
 
 where 
-\begin_inset Formula $\Delta t=t-t'$
+\begin_inset Formula $\Delta t=t'-t$
 \end_inset
 
  and the mean and variance are
@@ -637,7 +637,7 @@ The denominator
 , is
 \begin_inset Formula 
 \begin{align}
-\ln P\left(\bm{\lambda},\bm{c}\vert\bm{X}\right) & =\dfrac{N-1}{2}\ln\dfrac{1}{\left(2\pi\right)^{p}\vert\bm{\Sigma}\vert}+\dfrac{1}{2}\ln\dfrac{1}{\left(2\pi\right)^{p}|\bm{c}|}\nonumber \\
+\ln P\left(\bm{\lambda},\bm{c}\vert\bm{X}\right) & =\dfrac{N-1}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}\vert\bm{\Sigma}\vert}+\dfrac{1}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}|\bm{c}|}\nonumber \\
  & -\dfrac{1}{2}\sum_{n=1}^{N-1}\boldsymbol{\Delta}_{n}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\Delta}_{n}-\dfrac{1}{2}\boldsymbol{x}_{1}^{T}\boldsymbol{c}\,\boldsymbol{x}_{1},\label{eq:logProb}
 \end{align}
 
@@ -3159,7 +3159,7 @@ This has been used to obtain the evidence for a given model
  as
 \begin_inset Formula 
 \begin{equation}
-P\left(D|\mathcal{M}_{\alpha}\right)\simeq P(\boldsymbol{X}|\boldsymbol{\theta}^{\ast},\mathcal{M}_{\alpha})P(\boldsymbol{\theta}^{\ast}|\mathcal{M}_{\alpha})(2\pi)^{p/2}\left(\det\bm{A}\right)^{\nicefrac{-1}{2}},
+P\left(D|\mathcal{M}_{\alpha}\right)\simeq P(\boldsymbol{X}|\boldsymbol{\theta}^{\ast},\mathcal{M}_{\alpha})P(\boldsymbol{\theta}^{\ast}|\mathcal{M}_{\alpha})(2\pi)^{M/2}\left(\det\bm{A}\right)^{\nicefrac{-1}{2}},
 \end{equation}
 
 \end_inset
@@ -3167,7 +3167,7 @@ P\left(D|\mathcal{M}_{\alpha}\right)\simeq P(\boldsymbol{X}|\boldsymbol{\theta}^
 With explicit forms, this becomes
 \begin_inset Formula 
 \begin{align}
-\ln P\left(D|\mathcal{M}_{\alpha}\right) & \simeq\frac{N}{2}\left(\ln\dfrac{1}{(2\pi)^{p}\,|\bm{\Sigma}^{*}|}-\bm{\Sigma}^{*^{-1}}:\bm{\Sigma}^{*}\right)+\tfrac{p}{2}\ln2\pi-\frac{1}{2}\ln\Bigg[\det(\boldsymbol{A}_{22})\det[\boldsymbol{A}_{11}-\boldsymbol{A}_{12}\boldsymbol{A}_{22}^{-1}\boldsymbol{A}_{21}\Bigg].
+\ln P\left(D|\mathcal{M}_{\alpha}\right) & \simeq\frac{N}{2}\left(\ln\dfrac{1}{(2\pi)^{M}\,|\bm{\Sigma}^{*}|}-\bm{\Sigma}^{*^{-1}}:\bm{\Sigma}^{*}\right)+\tfrac{M}{2}\ln2\pi-\frac{1}{2}\ln\Bigg[\det(\boldsymbol{A}_{22})\det[\boldsymbol{A}_{11}-\boldsymbol{A}_{12}\boldsymbol{A}_{22}^{-1}\boldsymbol{A}_{21}\Bigg].
 \end{align}
 
 \end_inset
