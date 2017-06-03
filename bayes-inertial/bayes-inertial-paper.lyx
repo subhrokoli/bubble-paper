@@ -6,13 +6,8 @@
 \origin unavailable
 \textclass revtex4-1
 \begin_preamble
-\usepackage{amsmath}
-\usepackage{subfigure}
-\usepackage{graphicx, mathtools}
-\usepackage[normalem]{ulem}
 \usepackage[colorlinks=true,linktocpage=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,citecolor=MidnightBlue,anchorcolor=MidnightBlue]{hyperref}
 \usepackage[dvipsnames]{xcolor}
- 
 \end_preamble
 \options aps, twocolumn, pre,superscriptaddress, notitlepage
 \use_default_options false
@@ -109,6 +104,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -223,7 +219,7 @@ where
 
 .
  We denote 
-\begin_inset Formula $(x_{1},\ldots,x_{M})$
+\begin_inset Formula $(x_{1},\ldots,x_{M})^{T}$
 \end_inset
 
  by the vector 
@@ -454,43 +450,7 @@ decays exponentially and that its Fourier transform,
 \uwave off
 \noun off
 \color none
-the power spectral density,
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
- 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset Formula 
-\begin{equation}
-\boldsymbol{P}(ω)=(\text{−}iω\boldsymbol{I}+\boldsymbol{\lambda})^{-1}\left(2\boldsymbol{D}\right)(iω\boldsymbol{I}+\boldsymbol{\lambda^{T}})^{-1}\label{eq:spectral-density}
-\end{equation}
-
-\end_inset
-
-is a multivariate Lorentzian in the angular frequency 
-\begin_inset Formula $\omega$
-\end_inset
-
- 
+the power spectral density 
 \family default
 \series default
 \shape default
@@ -521,8 +481,7 @@ key "van1992stochastic"
 \uwave off
 \noun off
 \color none
-.
-
+,
 \family default
 \series default
 \shape default
@@ -535,6 +494,30 @@ key "van1992stochastic"
 \noun default
 \color inherit
  
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{C}(ω)=(\text{−}iω\boldsymbol{I}+\boldsymbol{\lambda})^{-1}\left(2\boldsymbol{D}\right)(iω\boldsymbol{I}+\boldsymbol{\lambda^{T}})^{-1}\label{eq:spectral-density}
+\end{equation}
+
+\end_inset
+
+is a multivariate Lorentzian in the angular frequency 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -589,9 +572,6 @@ e Ornstein-Uhlenbeck process.
 \end_inset
 
 , is
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 P\left(\boldsymbol{X}\vert\boldsymbol{\lambda},\boldsymbol{c}\right)=\prod_{n=1}^{N-1}P_{1\vert1}\left(\boldsymbol{x}_{n+1}\vert\boldsymbol{x}_{n},\boldsymbol{\lambda},\boldsymbol{c}\right)P_{1}\left(\boldsymbol{x}_{1}\vert\boldsymbol{\lambda},\boldsymbol{c}\right).
@@ -905,7 +885,14 @@ P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta
 
 The first term is the best fit likelihood while the second term, the product
  of the prior for the MAP estimate and the standard error of this estimate
- is called the Ockham factor.
+ is called the Ockham factor 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "mackay1992bayesian,mackay2003information,gregory2005bayesian"
+
+\end_inset
+
+.
  Thus models which achieve a compromise between the degree of fit to the
  data and the number of parameters required for the fit are ones which are
  favoured by the Bayesian model selection procedure.
@@ -3184,7 +3171,7 @@ Here
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "bayes-inertial-paper"
-options "plain"
+options "unsrt"
 
 \end_inset
 
