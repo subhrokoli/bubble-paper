@@ -104,6 +104,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -1619,6 +1620,136 @@ Bayes-I
 \end_layout
 
 \begin_layout Standard
+In the 
+\begin_inset Formula $\emph{optical trap limit}$
+\end_inset
+
+, the limit of vanishing particle mass is assumed and the Langevin equation
+ for the position of the Brownian particle reduces to
+\begin_inset Formula 
+\begin{equation}
+\dot{x}=-\dfrac{k}{\gamma}x+\sqrt{\dfrac{2k_{B}T}{\gamma}}\xi\left(t\right).\label{eq:univariate-ou}
+\end{equation}
+
+\end_inset
+
+Defining 
+\begin_inset Formula $\lambda=\dfrac{k}{\gamma}$
+\end_inset
+
+ as the 
+\begin_inset Formula $\emph{drift coefficient}$
+\end_inset
+
+ and 
+\begin_inset Formula $D=\dfrac{k_{B}T}{\gamma}$
+\end_inset
+
+ as the 
+\begin_inset Formula $\emph{diffusion coefficient}$
+\end_inset
+
+, we readily identify Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:univariate-ou"
+
+\end_inset
+
+) as the univariate analogue of Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:mvou"
+
+\end_inset
+
+).
+ The application of Bayesian inference to estimate the parameters 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+ has been discussed at length in earlier work 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bera2017fast"
+
+\end_inset
+
+.
+ Here, we demonstrate that the methods described in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bera2017fast"
+
+\end_inset
+
+ are effectively the univariate extension of the inference depicted in Section
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Bayesian-inference"
+
+\end_inset
+
+.
+ In the optical trap limit, we only have the dynamics for position variable
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ and the 
+\begin_inset Formula $\emph{matrix}$
+\end_inset
+
+ sufficient statistics reduce to corresponding scalar analogues of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bera2017fast"
+
+\end_inset
+
+.
+ Finally, the MAP estimates of Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map-estimates"
+
+\end_inset
+
+), after elementary manipulations, can be shown to be exactly equivalent
+ to the expressions in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bera2017fast"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Thus, we demonstrate that our method for finding the MAP estimates is valid
+ for arbitrary dimensionality of the data generating Ornstein-Uhlenbeck
+ process.
+ Physically, the displacements of the Brownian particle in the overdamped
+ harmonic oscillator constitute an univariate Ornstein-Uhlenbeck process,
+ whereas a physical example of the bivariate analogue is the position-velocity
+ phase space for the underdamped Brownian harmonic oscillator.
+\end_layout
+
+\begin_layout Section
+Bayesian MAP estimates of Brownian harmonic oscillator
+\end_layout
+
+\begin_layout Standard
 We now present the results of our Bayesian MAP estimates applied to underdamped
  Brownian harmonic oscillator data.
  In Fig.
@@ -1773,129 +1904,6 @@ al fitting based methods.
 \end_layout
 
 \begin_layout Standard
-In the 
-\begin_inset Formula $\emph{optical trap limit}$
-\end_inset
-
-, the limit of vanishing particle mass is assumed and the Langevin equation
- for the position of the Brownian particle reduces to
-\begin_inset Formula 
-\begin{equation}
-\dot{x}=-\dfrac{k}{\gamma}x+\sqrt{\dfrac{2k_{B}T}{\gamma}}\xi\left(t\right).\label{eq:univariate-ou}
-\end{equation}
-
-\end_inset
-
-Defining 
-\begin_inset Formula $\lambda=\dfrac{k}{\gamma}$
-\end_inset
-
- as the 
-\begin_inset Formula $\emph{drift coefficient}$
-\end_inset
-
- and 
-\begin_inset Formula $D=\dfrac{k_{B}T}{\gamma}$
-\end_inset
-
- as the 
-\begin_inset Formula $\emph{diffusion coefficient}$
-\end_inset
-
-, we readily identify Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:univariate-ou"
-
-\end_inset
-
-) as the univariate analogue of Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:mvou"
-
-\end_inset
-
-).
- The application of Bayesian inference to estimate the parameters 
-\begin_inset Formula $\lambda$
-\end_inset
-
- and 
-\begin_inset Formula $D$
-\end_inset
-
- has been discussed at length in earlier work 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "bera2017fast"
-
-\end_inset
-
-.
- Here, we demonstrate that the methods described in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "bera2017fast"
-
-\end_inset
-
- are effectively the univariate extension of the inference depicted in Section
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Bayesian-inference"
-
-\end_inset
-
-.
- In the optical trap limit, we only have the dynamics for position variable
- 
-\begin_inset Formula $x$
-\end_inset
-
- and the 
-\begin_inset Formula $\emph{matrix}$
-\end_inset
-
- sufficient statistics reduce to corresponding scalar analogues of 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "bera2017fast"
-
-\end_inset
-
-.
- Finally, the MAP estimates of Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map-estimates"
-
-\end_inset
-
-), after elementary manipulations, can be shown to be exactly equivalent
- to the expressions in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "bera2017fast"
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-Thus, we demonstrate that our method for finding the MAP estimates is valid
- for arbitrary dimensionality of the data generating Ornstein-Uhlenbeck
- process.
- Physically, the displacements of the Brownian particle in the overdamped
- harmonic oscillator constitute an univariate Ornstein-Uhlenbeck process,
- whereas a physical example of the bivariate analogue is the position-velocity
- phase space for the underdamped Brownian harmonic oscillator.
 \begin_inset Float figure
 wide false
 sideways false
@@ -2651,8 +2659,8 @@ Finally, we have provided a method of model selection based on the estimation
  of evidence.
  The evidence is obtained in terms of the posterior probability and Ockham
  factor which penalizes for more parameters.
- We find that the evidence clearly shows the true model generating the data.
- 
+ Thus the interplay of posterior probability and the Ockham factor determine
+ the best model for a given data.
 \end_layout
 
 \begin_layout Standard
