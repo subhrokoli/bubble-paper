@@ -722,6 +722,13 @@ begin{subequations}
 \end_inset
 
 
+\begin_inset CommandInset label
+LatexCommand label
+name "eq:map-estimates"
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{align}
 \bm{\bm{\Lambda}^{\ast}} & =\bm{T}_{2}\boldsymbol{T}_{3}^{-1},\label{eq:map_lambda}\\
@@ -1249,7 +1256,7 @@ STOP HERE!
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1394,6 +1401,52 @@ name "fig:stationary"
 \end_inset
 
  
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figure_4.png
+	lyxscale 25
+	display false
+	scale 22.5
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+(a) Normalized autocorrelation function for position, (b) Power Spectrum
+ for position, (c) Normalized autocorrelation function for velocity, (d)
+ Power Spctrum for velocity.
+ The autocorrelation and power spectra computed from the position and velocity
+ data are plotted in cyan and red respectively, while the black curves represent
+ the analytical expressions for autocorrelations and power spectra are computed
+ using the Bayesian MAP estimates.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:autocorrelation"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1547,9 +1600,6 @@ In the
 
 , the limit of vanishing particle mass is assumed and the Langevin equation
  for the position of the Brownian particle reduces to
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 \dot{x}=-\dfrac{k}{\gamma}x+\sqrt{\dfrac{2k_{B}T}{\gamma}}\xi\left(t\right).\label{eq:univariate-ou}
@@ -1557,10 +1607,6 @@ In the
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 Defining 
 \begin_inset Formula $\lambda=\dfrac{k}{\gamma}$
 \end_inset
@@ -1577,21 +1623,23 @@ Defining
 \begin_inset Formula $\emph{diffusion coefficient}$
 \end_inset
 
-, we readily identify 
+, we readily identify Eq.
+ (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:univariate-ou"
 
 \end_inset
 
- as the univariate analogue of 
+) as the univariate analogue of Eq.
+ (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:mvou"
 
 \end_inset
 
-.
+).
  The application of Bayesian inference to estimate the parameters 
 \begin_inset Formula $\lambda$
 \end_inset
@@ -1600,7 +1648,14 @@ reference "eq:mvou"
 \begin_inset Formula $D$
 \end_inset
 
- has been discussed at length in earlier work.
+ has been discussed at length in earlier work 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bera2017fast"
+
+\end_inset
+
+.
  Here, we demonstrate that the methods described in 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1609,45 +1664,40 @@ key "bera2017fast"
 \end_inset
 
  are effectively the univariate extension of the inference depicted in Section
- II.
- Recycling the results from earlier sections, we see for the scalar position
- variable 
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Bayesian-inference"
+
+\end_inset
+
+.
+ In the optical trap limit, we only have the dynamics for position variable
+ 
 \begin_inset Formula $x$
 \end_inset
 
-, the 
+ and the 
 \begin_inset Formula $\emph{matrix}$
 \end_inset
 
- sufficient statistics reduce to corresponding scalar analogues.
- Finally, the MAP estimates for the drift and diffusion coefficients reduce
- to
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\lambda^{\ast}=\dfrac{1}{\Delta t}\ln\dfrac{\sum x_{n}^{2}}{\sum x_{n+1}x_{n}},
-\]
+ sufficient statistics reduce to corresponding scalar analogues of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bera2017fast"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\dfrac{k_{B}T}{k^{\ast}}\left(1-\exp\left(-2\lambda^{\ast}\Delta t\right)\right)=\sum x_{n+1}^{2}-\dfrac{\left(\sum x_{n+1}x_{n}\right)^{2}}{\sum x_{n}^{2}}.
-\]
+.
+ Finally, the MAP estimates of Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map-estimates"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-which, after elementary manipulations can be shown to be exactly equivalent
+), after elementary manipulations, can be shown to be exactly equivalent
  to the expressions in 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1656,7 +1706,11 @@ key "bera2017fast"
 \end_inset
 
 .
- Thus, we demonstrate that our method for finding the MAP estimates is valid
+ 
+\end_layout
+
+\begin_layout Standard
+Thus, we demonstrate that our method for finding the MAP estimates is valid
  for arbitrary dimensionality of the data generating Ornstein-Uhlenbeck
  process.
  Physically, the displacements of the Brownian particle in the overdamped
@@ -2326,14 +2380,15 @@ Results and Discussions
 \begin_layout Standard
 We now present the results of our Bayesian MAP estimates applied to underdamped
  Brownian harmonic oscillator data.
- In Figure 
+ In Fig.
+ (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:PositionsVelocity"
 
 \end_inset
 
- we show a typical sample path of positions and velocities of one component
+) we show a typical sample path of positions and velocities of one component
  of motion in the plane of an optical trap, together with its histogram.
  From the histogram it can be seen that the distributions of positions and
  velocities are stationary and are independently well-approximated by Gaussians.
@@ -2354,20 +2409,21 @@ reference "fig:PositionsVelocity"
 \end_inset
 
  in the conventional equipartition method.
- In Figure 
+ In Fig.
+ (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:autocorrelation"
 
 \end_inset
 
-, we show the position and velocity autocorrelation functions and the correspond
-ing power spectral densities.
+), we show the position and velocity autocorrelation functions and the correspon
+ding power spectral densities.
  An alternate procedure for estimating mass, trap stiffness and particle
  friction in optical traps has been explored by 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Bera:16"
+key "bera2017fast"
 
 \end_inset
 
@@ -2383,14 +2439,15 @@ key "Bera:16"
  expressions to the autocorrelation or power spectral density and our Bayesian
  MAP estimates, we plot the analytical curves of autocorrelation function
  and power spectrum, using our Bayesian MAP estimates as parameter values
- in Figure 
+ in Fig.
+ (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:autocorrelation"
 
 \end_inset
 
-.
+).
  It can be seen that the results of our Bayesian method agree with the tradition
 al fitting based methods.
 \end_layout
@@ -2400,47 +2457,50 @@ The results of Bayesian inference are shown in the pairs-plots of
 \begin_inset Formula $\left(m,k,\gamma\right)$
 \end_inset
 
- in Figure 
+ in Fig.
+ (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:inference"
 
 \end_inset
 
-.
- The upper panel shows the MAP estimates obtained from 
+).
+ The upper panel shows the MAP estimates obtained from Eq.
+ (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:map_lambda"
 
 \end_inset
 
- and 
+) and  (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:map_sigma"
 
 \end_inset
 
- while the lower panel represents posterior distribution in the 
+) while the lower panel represents posterior distribution in the 
 \begin_inset Formula $\left(m,k\right)$
 \end_inset
 
- plane with the stationary assumption in 
+ plane with the stationary assumption in Eq.
+ (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:map_k_stat"
 
 \end_inset
 
- and 
+) and (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:map_m_stat"
 
 \end_inset
 
-.
+).
  Projections of the posterior distribution are shown with filled contours
  representing the error-bars.
  There is a single maximum at 
@@ -2468,14 +2528,15 @@ reference "tab:CovrianceMatrix"
 \end_layout
 
 \begin_layout Standard
-In Figure 
+In Fig.
+ (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:modelSelection"
 
 \end_inset
 
-, we have compared the logarithm of the evidence for overdamped and underdamped
+), we have compared the logarithm of the evidence for overdamped and underdamped
  data sets.
  In each case, it is clearly seen that the relative magnitude of the evidence
  indicates which is the true data generating model.
@@ -2961,51 +3022,6 @@ Here
 
  are the elements of the Hessian matrix.
  
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename figure_4.png
-	lyxscale 25
-	scale 22.5
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-(a) Normalized autocorrelation function for position, (b) Power Spectrum
- for position, (c) Normalized autocorrelation function for velocity, (d)
- Power Spctrum for velocity.
- The autocorrelation and power spectra computed from the position and velocity
- data are plotted in cyan and red respectively, while the black curves represent
- the analytical expressions for autocorrelations and power spectra are computed
- using the Bayesian MAP estimates.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:autocorrelation"
-
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
