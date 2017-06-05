@@ -1259,207 +1259,6 @@ reference "eq:stationarity"
  
 \series bold
 STOP HERE! 
-\series default
-
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename figure_3a.png
-	display false
-	width 40text%
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Pairs plot for mass 
-\begin_inset Formula $m$
-\end_inset
-
-, trap stiffness 
-\begin_inset Formula $k$
-\end_inset
-
- and particle drag coefficient 
-\begin_inset Formula $\gamma$
-\end_inset
-
- .
- The top panel shows the pairs plot obtained from the MAP estimates in 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map_lambda"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map_sigma"
-
-\end_inset
-
-.
- The variables have been scaled using 
-\begin_inset Formula $x^{\prime}=\nicefrac{\left(x-\mu_{x}\right)}{\sigma_{xx}^{2}}$
-\end_inset
-
-, where 
-\begin_inset Formula $\mu_{x}$
-\end_inset
-
- and 
-\begin_inset Formula $\sigma_{xx}^{2}$
-\end_inset
-
- are the MAP estimate and variance of 
-\begin_inset Formula $x$
-\end_inset
-
- respectively.
- The MAP estimates are marked by the black dot.
- The 
-\begin_inset Formula $1\sigma$
-\end_inset
-
-, 
-\begin_inset Formula $2\sigma$
-\end_inset
-
- and 
-\begin_inset Formula $3\sigma$
-\end_inset
-
- regions have been shaded.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:inference"
-
-\end_inset
-
- Pairs plot for mass 
-\begin_inset Formula $m$
-\end_inset
-
- and trap stiffness 
-\begin_inset Formula $k$
-\end_inset
-
- obtained from the MAP estimates in 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map_k_stat"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map_m_stat"
-
-\end_inset
-
-.
- The variables have been scaled using 
-\begin_inset Formula $x^{\prime}=\nicefrac{\left(x-\mu_{x}\right)}{\sigma_{xx}^{2}}$
-\end_inset
-
-, where 
-\begin_inset Formula $\mu_{x}$
-\end_inset
-
- and 
-\begin_inset Formula $\sigma_{xx}^{2}$
-\end_inset
-
- are the MAP estimate and variance of 
-\begin_inset Formula $x$
-\end_inset
-
- respectively.
- The MAP estimates are marked by the black dot.
- The 
-\begin_inset Formula $1\sigma$
-\end_inset
-
-, 
-\begin_inset Formula $2\sigma$
-\end_inset
-
- and 
-\begin_inset Formula $3\sigma$
-\end_inset
-
- regions have been shaded.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:stationary"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename figure_4.png
-	lyxscale 25
-	display false
-	width 46text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-(a) Normalized autocorrelation function for position, (b) Power Spectrum
- for position, (c) Normalized autocorrelation function for velocity, (d)
- Power Spctrum for velocity.
- The autocorrelation and power spectra computed from the position and velocity
- data are plotted in cyan and red respectively, while the black curves represent
- the analytical expressions for autocorrelations and power spectra are computed
- using the Bayesian MAP estimates.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:autocorrelation"
-
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1781,7 +1580,205 @@ reference "fig:PositionsVelocity"
 \end_inset
 
  in the conventional equipartition method.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figure_3a.png
+	display false
+	width 40text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Pairs plot for mass 
+\begin_inset Formula $m$
+\end_inset
+
+, trap stiffness 
+\begin_inset Formula $k$
+\end_inset
+
+ and particle drag coefficient 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ .
+ The top panel shows the pairs plot obtained from the MAP estimates in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map_lambda"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map_sigma"
+
+\end_inset
+
+.
+ The variables have been scaled using 
+\begin_inset Formula $x^{\prime}=\nicefrac{\left(x-\mu_{x}\right)}{\sigma_{xx}^{2}}$
+\end_inset
+
+, where 
+\begin_inset Formula $\mu_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{xx}^{2}$
+\end_inset
+
+ are the MAP estimate and variance of 
+\begin_inset Formula $x$
+\end_inset
+
+ respectively.
+ The MAP estimates are marked by the black dot.
+ The 
+\begin_inset Formula $1\sigma$
+\end_inset
+
+, 
+\begin_inset Formula $2\sigma$
+\end_inset
+
+ and 
+\begin_inset Formula $3\sigma$
+\end_inset
+
+ regions have been shaded.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:inference"
+
+\end_inset
+
+ Pairs plot for mass 
+\begin_inset Formula $m$
+\end_inset
+
+ and trap stiffness 
+\begin_inset Formula $k$
+\end_inset
+
+ obtained from the MAP estimates in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map_k_stat"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map_m_stat"
+
+\end_inset
+
+.
+ The variables have been scaled using 
+\begin_inset Formula $x^{\prime}=\nicefrac{\left(x-\mu_{x}\right)}{\sigma_{xx}^{2}}$
+\end_inset
+
+, where 
+\begin_inset Formula $\mu_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{xx}^{2}$
+\end_inset
+
+ are the MAP estimate and variance of 
+\begin_inset Formula $x$
+\end_inset
+
+ respectively.
+ The MAP estimates are marked by the black dot.
+ The 
+\begin_inset Formula $1\sigma$
+\end_inset
+
+, 
+\begin_inset Formula $2\sigma$
+\end_inset
+
+ and 
+\begin_inset Formula $3\sigma$
+\end_inset
+
+ regions have been shaded.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:stationary"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
  
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figure_4.png
+	lyxscale 25
+	display false
+	width 46text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+(a) Normalized autocorrelation function for position, (b) Power Spectrum
+ for position, (c) Normalized autocorrelation function for velocity, (d)
+ Power Spctrum for velocity.
+ The autocorrelation and power spectra computed from the position and velocity
+ data are plotted in cyan and red respectively, while the black curves represent
+ the analytical expressions for autocorrelations and power spectra are computed
+ using the Bayesian MAP estimates.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:autocorrelation"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1903,69 +1900,6 @@ reference "fig:autocorrelation"
 al fitting based methods.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename modelSelection.jpg
-	display false
-	width 45text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Natural logarithm of the evidence 
-\begin_inset Formula $\ln P(\boldsymbol{X}|\mathcal{M_{\alpha}})$
-\end_inset
-
- for data from an overdamped model 
-\begin_inset Formula $\left(\mathcal{M}_{OD}\right)$
-\end_inset
-
- and an underdamped model 
-\begin_inset Formula $\left(\mathcal{M}_{UD}\right)$
-\end_inset
-
- in natural log units (nits).
- The panel on the left show the results of our model selection algorithm
- for overdamped data 
-\begin_inset Formula $(\gamma=10\gamma_{c})$
-\end_inset
-
-, while the one on the right correspond to underdamped data 
-\begin_inset Formula $(\gamma=0.1\gamma_{c})$
-\end_inset
-
-.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:modelSelection"
-
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Model selection
 \begin_inset CommandInset label
@@ -2029,7 +1963,66 @@ The problem of model selection is then reduced to obtain the evidence given
 
 , we can determine whether the data generating process is overdamped Brownian
  motion or underdamped Brownian motion.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename modelSelection.jpg
+	display false
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Natural logarithm of the evidence 
+\begin_inset Formula $\ln P(\boldsymbol{X}|\mathcal{M_{\alpha}})$
+\end_inset
+
+ for data from an overdamped model 
+\begin_inset Formula $\left(\mathcal{M}_{OD}\right)$
+\end_inset
+
+ and an underdamped model 
+\begin_inset Formula $\left(\mathcal{M}_{UD}\right)$
+\end_inset
+
+ in natural log units (nits).
+ The panel on the left show the results of our model selection algorithm
+ for overdamped data 
+\begin_inset Formula $(\gamma=10\gamma_{c})$
+\end_inset
+
+, while the one on the right correspond to underdamped data 
+\begin_inset Formula $(\gamma=0.1\gamma_{c})$
+\end_inset
+
+.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:modelSelection"
+
+\end_inset
+
  
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2604,66 +2597,6 @@ name "tab:springconstant"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section
-Discussions and summary
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Results-and-Discussions"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In this work, we have provided exact Bayesian methods for estimating the
- parameters of a multivariate Ornstein-Uhlenbeck process from discreetly
- observed time series.
- The parameters of the model generating the data are obtained from the MAP
- estimates which are derived using exact likelihood and sufficient statistics.
- The MAP estimates are obtained exactly, and thus the procedure does not
- require numerical minimization or Monte Carlo sampling, making it faster
- than the conventional Bayesian method.
- 
-\end_layout
-
-\begin_layout Standard
-We have provided two Bayesian methods for estimation of parameters.
- The first method uses exact expression for the likelihood, which is valid
- for any 
-\begin_inset Formula $\Delta t$
-\end_inset
-
-, and is obtained in terms four of sufficient statistics.
- This method is then reliable for low frequency of time series and provides
- large computational gains as we do not have to work with the entire time
- series but with four sufficient statistics.
- The second method uses the fact that, in equilibrium, only trap stiffness
- and mass can determine the fluctuations of position and velocity.
- Here, Gibbs distribution is then used to obtain the MAP estimates and the
- error bars.
-\end_layout
-
-\begin_layout Standard
-We have then applied the method to case of an underdamped Harmonics oscillator,
- which is a bivariate Ornstein-Uhlenbeck process.
- We find excellent agreements of the two methods and the simulation.
- We also compare our results with the traditional fitting methods.
- 
-\end_layout
-
-\begin_layout Standard
-Finally, we have provided a method of model selection based on the estimation
- of evidence.
- The evidence is obtained in terms of the posterior probability and Ockham
- factor which penalizes for more parameters.
- Thus the interplay of posterior probability and the Ockham factor determine
- the best model for a given data.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
@@ -2888,7 +2821,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Variance Covriance Matrix
+Variance Covariance Matrix
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:CovrianceMatrix"
@@ -2906,6 +2839,63 @@ name "tab:CovrianceMatrix"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Discussions and summary
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Results-and-Discussions"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this work, we have provided exact Bayesian methods for estimating the
+ parameters of a multivariate Ornstein-Uhlenbeck process from discreetly
+ observed time series.
+ The parameters of the model generating the data are obtained from the MAP
+ estimates which are derived using exact likelihood and sufficient statistics.
+ The MAP estimates are obtained exactly, and thus the procedure does not
+ require numerical minimization or Monte Carlo sampling, making it faster
+ than the conventional Bayesian method.
+ 
+\end_layout
+
+\begin_layout Standard
+We have provided two Bayesian methods for estimation of parameters.
+ The first method uses exact expression for the likelihood, which is valid
+ for any 
+\begin_inset Formula $\Delta t$
+\end_inset
+
+, and is obtained in terms four of sufficient statistics.
+ This method is then reliable for low frequency of time series and provides
+ large computational gains as we do not have to work with the entire time
+ series but with four sufficient statistics.
+ The second method uses the fact that, in equilibrium, only trap stiffness
+ and mass can determine the fluctuations of position and velocity.
+ Here, Gibbs distribution is then used to obtain the MAP estimates and the
+ error bars.
+\end_layout
+
+\begin_layout Standard
+We have then applied the method to case of an underdamped Harmonics oscillator,
+ which is a bivariate Ornstein-Uhlenbeck process.
+ We find excellent agreements of the two methods and the simulation.
+ We also compare our results with the traditional fitting methods.
+ 
+\end_layout
+
+\begin_layout Standard
+Finally, we have provided a method of model selection based on the estimation
+ of evidence.
+ The evidence is obtained in terms of the posterior probability and Ockham
+ factor which penalizes for more parameters.
+ Thus the interplay of posterior probability and the Ockham factor determine
+ the best model for a given data.
 \end_layout
 
 \begin_layout Standard
