@@ -104,7 +104,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -1348,15 +1347,51 @@ end{subequations}
 
 \end_inset
 
-The MAP estimates is obtained straightforwardly as
-\begin_inset Formula 
-\begin{equation}
-\dfrac{k^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}x_{n}^{2}},\;\;\;\;\dfrac{m^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}v_{n}^{2}}.\label{eq:map_stationary}
-\end{equation}
+The MAP estimates and the error bar are obtained straightforwardly from
+ the posterior probability
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
 
 \end_inset
 
-Following the notation used in our earlier paper 
+
+\begin_inset CommandInset label
+LatexCommand label
+name "eq:map_stationary"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\dfrac{k^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}x_{n}^{2}} & ,\qquad\sigma_{k}=\frac{\sqrt{2}}{\sqrt{N}}k^{\ast},\label{eq:map_k}\\
+\dfrac{m^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}v_{n}^{2}}, & \qquad\,\,\sigma_{m}=\frac{\sqrt{2}}{\sqrt{N}}m^{\ast}.\label{eq:map_v}
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+The error-bar decreases as the number of points in the time series.
+ Following the notation used in our earlier paper 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "bera2017fast"
@@ -1391,13 +1426,13 @@ Bayes-I
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename figure_3a.png
 	display false
-	width 41text%
+	width 40text%
 
 \end_inset
 
@@ -1507,14 +1542,14 @@ name "fig:stationary"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename figure_4.png
 	lyxscale 25
 	display false
-	width 46text%
+	width 42text%
 
 \end_inset
 
@@ -2410,16 +2445,15 @@ name "tab:CovrianceMatrix"
 \end_layout
 
 \begin_layout Standard
-In Fig.
- (
+In Fig.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:autocorrelation"
 
 \end_inset
 
-), we show the position and velocity autocorrelation functions and the correspon
-ding power spectral densities.
+), the position and velocity autocorrelation functions and the corresponding
+ power spectral densities have plotted.
  To demonstrate the convergence of the results obtained from fitting analytical
  expressions to the autocorrelation or power spectral density and our Bayesian
  MAP estimates, we plot the analytical curves of autocorrelation function
@@ -2607,15 +2641,6 @@ reference "fig:modelSelection"
  We find that the for an underdamped data, the evidence is higher while
  the Ockham factor penalized the additional parameter for an underdamped
  data.
- The ratio of the logarithm of the evidence for underdamped data is 
-\begin_inset Formula $\ln P(\boldsymbol{X}|\mathcal{M}_{OD})/\ln P(\boldsymbol{X}|\mathcal{M}_{UD})\sim2.4$
-\end_inset
-
-, while that of overdamped data is 
-\begin_inset Formula $\ln P(\boldsymbol{X}|\mathcal{M}_{UD})/\ln P(\boldsymbol{X}|\mathcal{M}_{OD})\sim-2$
-\end_inset
-
-.
  The comparison of evidence clearly shows that the evidence is higher for
  the true data generating model.
 \begin_inset Float figure
@@ -2990,56 +3015,6 @@ Here
 \end_inset
 
  are the elements of the Hessian matrix.
- The cyclic frequency of the Brownian harmonic oscillator is 
-\begin_inset Formula $\omega$
-\end_inset
-
-
-\begin_inset Formula $\,=\,$
-\end_inset
-
-
-\begin_inset Formula $\sqrt{(\gamma_{c}^{2}-\gamma^{2})/4m^{2}}$
-\end_inset
-
-, where 
-\begin_inset Formula $\gamma_{c}$
-\end_inset
-
-
-\begin_inset Formula $\,=\,$
-\end_inset
-
-
-\begin_inset Formula $\sqrt{4mk}$
-\end_inset
-
-.
- The resulting Brownian motion is underdamped for 
-\begin_inset Formula $\gamma$
-\end_inset
-
-
-\begin_inset Formula $\,<\,$
-\end_inset
-
-
-\begin_inset Formula $\gamma_{c}$
-\end_inset
-
- while overdamped for 
-\begin_inset Formula $\gamma$
-\end_inset
-
-
-\begin_inset Formula $\,>\,$
-\end_inset
-
-
-\begin_inset Formula $\gamma_{c}$
-\end_inset
-
-.
  
 \end_layout
 
