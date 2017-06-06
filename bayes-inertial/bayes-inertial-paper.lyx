@@ -2742,14 +2742,14 @@ We have provided two Bayesian methods for estimation of parameters.
 \end_layout
 
 \begin_layout Standard
-Finally, we have provided a method of model selection based on the estimation
- of evidence.
- The evidence is obtained in terms of the best fit likelihood and the Ockham
- factor.
- The best fir likelihood favor a specialized model while the Ockham factor
- penalizes for more parameters.
- Thus the interplay of posterior probability and the Ockham factor determine
- the best model for a given data.
+Finally, we present a Bayesian model selection method for choice of a model
+ which best fits the data with the least number of parameters.
+ The Bayesian model selection involves estimation of the evidence, which
+ is obtained in terms of the best fit likelihood and the Ockham factor.
+ The best fit likelihood favors a specialized model for the data, while
+ the Ockham factor penalizes for more parameters.
+ Thus the interplay of best-fit likelihood and the Ockham factor determines
+ the choice of the model.
 \end_layout
 
 \begin_layout Standard
