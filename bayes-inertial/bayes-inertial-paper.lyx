@@ -1149,11 +1149,15 @@ mg/
 \end_inset
 
 , 
-\begin_inset Formula $\gamma=0.1\sqrt{4mk}$
+\begin_inset Formula $\gamma=\gamma_{c}/10$
 \end_inset
 
-, and 
-\begin_inset Formula $k_{B}T=275K$
+, 
+\begin_inset Formula $\gamma_{c}=\sqrt{4mk}$
+\end_inset
+
+ and 
+\begin_inset Formula $T=275K$
 \end_inset
 
 .
@@ -1344,8 +1348,7 @@ end{subequations}
 
 \end_inset
 
-The MAP estimates, from the equilibrium distribution of the position and
- velocity, can be straightforwardly obtained as
+The MAP estimates is obtained straightforwardly as
 \begin_inset Formula 
 \begin{equation}
 \dfrac{k^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}x_{n}^{2}},\;\;\;\;\dfrac{m^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}v_{n}^{2}}.\label{eq:map_stationary}
@@ -2097,7 +2100,7 @@ reference "fig:PositionsVelocity"
 \begin_inset Formula $\langle x^{2}\rangle$
 \end_inset
 
- in the conventional equipartition method.
+ in the conventional equipartition method or Bayes-I.
 \end_layout
 
 \begin_layout Standard
@@ -2113,41 +2116,32 @@ reference "fig:inference"
 \end_inset
 
 ).
- The upper panel shows the MAP estimates obtained from Eq.(
+ Panel (a) contains the results from Bayes-I while (b) contains results
+ from Bayes-II method.
+ The MAP estimates in panel (a) of Fig.(
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:map_lambda"
+reference "fig:inference"
 
 \end_inset
 
-) and (
+) are obtained from Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:map_sigma"
+reference "eq:map-estimates"
 
 \end_inset
 
-) while the lower panel represents posterior distribution in the 
-\begin_inset Formula $\left(m,k\right)$
-\end_inset
-
- plane with the stationary assumption in Eq.(
+), while MAP estimates of panel (b) are obtained from Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:map_k_stat"
-
-\end_inset
-
-) and (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map_m_stat"
+reference "eq:map_stationary"
 
 \end_inset
 
 ).
- Projections of the posterior distribution are shown with filled contours
- representing the error-bars.
+ Projections of the posterior distribution are shown for each case with
+ filled contours representing the error-bars.
  There is a single maximum at 
 \begin_inset Formula $\left(m^{\ast},k^{\ast},\gamma^{\ast}\right)$
 \end_inset
@@ -2426,6 +2420,20 @@ reference "fig:autocorrelation"
 
 ), we show the position and velocity autocorrelation functions and the correspon
 ding power spectral densities.
+ To demonstrate the convergence of the results obtained from fitting analytical
+ expressions to the autocorrelation or power spectral density and our Bayesian
+ MAP estimates, we plot the analytical curves of autocorrelation function
+ and power spectrum, using our Bayesian MAP estimates as parameter values
+ in Fig.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:autocorrelation"
+
+\end_inset
+
+).
+ It can be seen that the results of our Bayesian method agree with the tradition
+al fitting based methods.
  An alternate procedure for estimating mass, trap stiffness and particle
  friction in optical traps has been explored by 
 \begin_inset CommandInset citation
@@ -2439,24 +2447,13 @@ key "Bera:16"
  obtained.
  However, the error bars for these fitting based methods were as high as
  15%.
- We demonstrate that our methods are more accurate then conventional fitting
- based methods, as well as order of magnitude faster than Bayesian MCMC
- based methods.
- To demonstrate the convergence of the results obtained from fitting analytical
- expressions to the autocorrelation or power spectral density and our Bayesian
- MAP estimates, we plot the analytical curves of autocorrelation function
- and power spectrum, using our Bayesian MAP estimates as parameter values
- in Fig.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:autocorrelation"
-
-\end_inset
-
-).
- It can be seen that the results of our Bayesian method agree with the tradition
-al fitting based methods.
+ Thus, our Bayesian inference methods are more accurate then conventional
+ fitting based methods.
+ Moreover, our MAP estimates are obtained in terms of sufficient statistics
+ and the entire information relevant to Bayesian inference is contained
+ in them.
+ This leads to massive computation gains as we do not have to work with
+ entire time series but with four matrices.
 \end_layout
 
 \begin_layout Section
@@ -2607,56 +2604,6 @@ reference "fig:modelSelection"
 
  in the natural log units (nits) for overdamped and underdamped Brownian
  motion.
- The cyclic frequency of the Brownian harmonic oscillator is 
-\begin_inset Formula $\omega$
-\end_inset
-
-
-\begin_inset Formula $\,=\,$
-\end_inset
-
-
-\begin_inset Formula $\sqrt{(\gamma_{c}-\gamma^{2})/4m^{2}}$
-\end_inset
-
-, where 
-\begin_inset Formula $\gamma_{c}$
-\end_inset
-
-
-\begin_inset Formula $\,=\,$
-\end_inset
-
-
-\begin_inset Formula $4mk$
-\end_inset
-
-.
- The resulting Brownian motion is underdamped for 
-\begin_inset Formula $\gamma$
-\end_inset
-
-
-\begin_inset Formula $\,<\,$
-\end_inset
-
-
-\begin_inset Formula $\gamma_{c}$
-\end_inset
-
- while overdamped for 
-\begin_inset Formula $\gamma$
-\end_inset
-
-
-\begin_inset Formula $\,>\,$
-\end_inset
-
-
-\begin_inset Formula $\gamma_{c}$
-\end_inset
-
-.
  We find that the for an underdamped data, the evidence is higher while
  the Ockham factor penalized the additional parameter for an underdamped
  data.
@@ -2674,7 +2621,7 @@ reference "fig:modelSelection"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2706,7 +2653,7 @@ Logarithm of Bayesian evidence for model selection
  in natural log units (nits).
  The panel on the left show the results of our model selection algorithm
  for underdamped data 
-\begin_inset Formula $(\gamma=0.1\gamma_{c})$
+\begin_inset Formula $(\gamma=\gamma_{c}/10)$
 \end_inset
 
 , while the one on the right corresponds to overdamped data 
@@ -3043,6 +2990,56 @@ Here
 \end_inset
 
  are the elements of the Hessian matrix.
+ The cyclic frequency of the Brownian harmonic oscillator is 
+\begin_inset Formula $\omega$
+\end_inset
+
+
+\begin_inset Formula $\,=\,$
+\end_inset
+
+
+\begin_inset Formula $\sqrt{(\gamma_{c}^{2}-\gamma^{2})/4m^{2}}$
+\end_inset
+
+, where 
+\begin_inset Formula $\gamma_{c}$
+\end_inset
+
+
+\begin_inset Formula $\,=\,$
+\end_inset
+
+
+\begin_inset Formula $\sqrt{4mk}$
+\end_inset
+
+.
+ The resulting Brownian motion is underdamped for 
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\begin_inset Formula $\,<\,$
+\end_inset
+
+
+\begin_inset Formula $\gamma_{c}$
+\end_inset
+
+ while overdamped for 
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\begin_inset Formula $\,>\,$
+\end_inset
+
+
+\begin_inset Formula $\gamma_{c}$
+\end_inset
+
+.
  
 \end_layout
 
