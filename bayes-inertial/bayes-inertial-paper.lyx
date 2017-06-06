@@ -104,7 +104,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -1341,7 +1340,7 @@ end{subequations}
 
 \end_inset
 
-The MAP estimates and the error bar are obtained straightforwardly from
+The MAP estimates and the error bars are obtained straightforwardly from
  the posterior probability
 \begin_inset ERT
 status open
@@ -2471,7 +2470,7 @@ key "Bera:16"
 \end_inset
 
 , where the analytical expressions of the autocorrelation function and power
- spectral density have been fitted to the data, and best-fit estimates are
+ spectral density have been fitted to the data, and best fit estimates are
  obtained.
  However, the error bars for these fitting based methods were as high as
  15%.
@@ -2716,7 +2715,7 @@ In this work, we have provided exact Bayesian methods for estimating the
  The parameters - mass, friction, and stiffness of a Brownian harmonic oscillato
 r - are obtained jointly from the MAP estimates.
  The MAP estimates are obtained exactly, and thus the procedure does not
- require numerical minimization or Monte Carlo sampling which makes the
+ require numerical minimization or Monte Carlo sampling, which makes the
  method accurate and efficient.
 \end_layout
 
@@ -2748,7 +2747,7 @@ Finally, we present a Bayesian model selection method for choice of a model
  is obtained in terms of the best fit likelihood and the Ockham factor.
  The best fit likelihood favors a specialized model for the data, while
  the Ockham factor penalizes for more parameters.
- Thus the interplay of best-fit likelihood and the Ockham factor determines
+ Thus the interplay of best fit likelihood and the Ockham factor determines
  the choice of the model.
 \end_layout
 
@@ -2794,7 +2793,7 @@ reference "eq:logProb"
 \end_inset
 
 ).
- Consider the sum of the quadratic form 
+ Consider the quadratic form 
 \begin_inset Formula $\bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}=\left(\bm{x_{n+1}}-\bm{\Lambda}\bm{x_{n}}\right)^{\bm{T}}\bm{\Sigma^{-1}}\left(\bm{x_{n+1}}-\bm{\Lambda}\bm{x_{n}}\right)$
 \end_inset
 
@@ -2860,22 +2859,6 @@ At the maximum, we obtain the MAP estimate for
 \begin_inset Formula $\bm{\Sigma^{\ast}}=\dfrac{1}{N}\left(\bm{T}_{1}-\boldsymbol{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{T}_{2}^{T}\right).$
 \end_inset
 
- Equations (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map_lambda"
-
-\end_inset
-
-) and (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map_sigma"
-
-\end_inset
-
-) give the MAP estimates of the drift matrix and the transition variance
- covariance matrix respectively.
  The estimates of the parameters of the underdamped oscillator follow from
  
 \begin_inset Formula $\bm{\Lambda^{\ast}}$
