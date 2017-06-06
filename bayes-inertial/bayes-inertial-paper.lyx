@@ -561,9 +561,6 @@ The probability
 
  of the parameters, given the sample path, is given by Bayes theorem to
  be
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 P\left(\boldsymbol{\lambda},\boldsymbol{c}\vert\boldsymbol{X}\right)=\dfrac{P\left(\bm{X}\vert\boldsymbol{\lambda},\boldsymbol{c}\right)P\left(\boldsymbol{\lambda},\boldsymbol{c}\right)}{P\left(\boldsymbol{X}\right)}.\label{eq:bayes-theorem}
@@ -683,8 +680,8 @@ end{subequations}
 
 \end_inset
 
-and the maximum a posteriori estimates for mean regression rates and the
- covariances come out to be
+and the maximum a posteriori (MAP) estimates for mean regression rates and
+ the covariances come out to be
 \begin_inset ERT
 status open
 
@@ -1293,18 +1290,17 @@ reference "eq:covariance-OC"
 An alternative Bayesian procedure for directly estimating the mass of the
  particle and the trap stiffness can be formulated by interpreting the time
  series of positions and velocities as independent repeated samples from
- the respective stationary distributions.
- At equilibrium, the likelihood can be factored into the Gibbs distribution
- for position and the Maxwell-Boltzmann distribution for the velocity as
-\begin_inset Formula 
-\begin{align*}
-P\left(x,v|m,k\right)= & P\left(x|k\right)\times P\left(v|m\right)\\
-= & \sqrt{\dfrac{k}{2\pi k_{B}T}\dfrac{m}{2\pi k_{B}T}}\exp\left(-\dfrac{kx^{2}}{2k_{B}T}-\dfrac{mv^{2}}{2k_{B}T}\right)
-\end{align*}
+ the respective stationary distributions 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jaynes2003probability"
 
 \end_inset
 
-Using an informative prior that constrains 
+.
+ At equilibrium, the likelihood can be factored into the Gibbs distribution
+ for position and the Maxwell-Boltzmann distribution for the velocity.
+ Using an informative prior that constrains 
 \begin_inset Formula $m$
 \end_inset
 
