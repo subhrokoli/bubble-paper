@@ -104,6 +104,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -861,14 +862,7 @@ P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta
 
 The first term is the best fit likelihood while the second term, the product
  of the prior for the MAP estimate and the standard error of this estimate
- is called the Ockham factor 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "mackay1992bayesian,mackay2003information,gregory2005bayesian"
-
-\end_inset
-
-.
+ is called the Ockham factor.
  Thus models which achieve a compromise between the degree of fit to the
  data and the number of parameters required for the fit are ones which are
  favoured by the Bayesian model selection procedure.
@@ -2502,8 +2496,8 @@ name "sec:Model-selection"
 \end_layout
 
 \begin_layout Standard
-In this section, the selection of the most probable data generating model
- between overdamped and underdamped harmonic Brownian oscillators is considered.
+Bayesian inference of underdamped Brownian motion was considered in previous
+ section.
  The overdamped limit corresponds to the case of vanishing particle mass
  in Eq.(
 \begin_inset CommandInset ref
@@ -2513,12 +2507,6 @@ reference "eq:langevin"
 \end_inset
 
 ).
- Thus, we only have a non-trivial dynamics of position alone and the correspondi
-ng data 
-\begin_inset Formula $x$
-\end_inset
-
- is a scalar.
  Physically, the displacements of the Brownian particle in the overdamped
  harmonic oscillator constitute an univariate Ornstein-Uhlenbeck process.
  The matrix sufficient statistics of Eq.(
@@ -2570,19 +2558,25 @@ reference "sec:Bayesian-inference"
 \end_inset
 
 .
- We now focus on the problem of model selection for a given set of data.
  
 \end_layout
 
 \begin_layout Standard
-In section 
+In this section, we consider the problem of Bayesian model selection for
+ a given time series data.
+ For definiteness, we only consider data from underdamped and overdamped
+ Brownian motion.
+ The problem of model selection is tackled by estimating the Bayesian evidence
+ for a given model, as was explained earlier in section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Bayesian-inference"
 
 \end_inset
 
-, we have discussed the Bayesian evidence for model selection.
+.
+ The expression for the evidence is obtained in terms of the best fit likelihood
+ and the Ockham factor.
  Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2590,38 +2584,33 @@ reference "eq:evidence"
 
 \end_inset
 
-) gives the Bayesian evidence for a model 
+) contains the form of the evidence for a model.
+ This expression is generalized for a model 
 \begin_inset Formula $\mathcal{M}_{\alpha}$
 \end_inset
 
- given the data.
- For a model with several parameters, this generalizes to 
+ with several parameters as 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "mackay1992bayesian"
+key "mackay1992bayesian,mackay2003information,gregory2005bayesian"
 
 \end_inset
 
 
 \begin_inset Formula 
 \begin{equation}
-P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta}^{\ast},\mathcal{M}_{\alpha})\,P(\boldsymbol{\theta}^{\ast}|\mathcal{M}_{\alpha})\,(\det(\bm{A}/2\pi))^{-1/2}\label{eq:evidence-1}
+P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta}^{\ast},\mathcal{M}_{\alpha})\,P(\boldsymbol{\theta}^{\ast}|\mathcal{M}_{\alpha})\,(\det(\bm{A}/2\pi))^{-1/2}.\label{eq:evidence-1}
 \end{equation}
 
 \end_inset
 
-The expression for the Hessian matrix at the maximum is provided in the
- appendix, along with the resulting expression for the logarithm of the
- Bayesian evidence.
- The problem of model selection is then reduced to obtain the evidence given
- the data of the position and velocity of the Brownian particle at the MAP
- value.
- Thus, based on the relative magnitude of the evidence 
-\begin_inset Formula $P(\boldsymbol{X}|\mathcal{M}_{\alpha})$
-\end_inset
-
-, we can determine whether the data generating process is overdamped Brownian
- motion or underdamped Brownian motion.
+Explicit forms of the Hessian matrix and the evidence have been provided
+ in the appendix.
+ Thus, the problem of model selection is reduced to obtaining evidence at
+ the maximum given the data of the position and velocity of the Brownian
+ particle.
+ A model with a relatively higher magnitude of the evidence is then more
+ likely to be the true data generating model.
 \end_layout
 
 \begin_layout Standard
@@ -2638,15 +2627,18 @@ reference "fig:modelSelection"
 
  in the natural log units (nits) for overdamped and underdamped Brownian
  motion.
- We find that the for an underdamped data, the evidence is higher while
- the Ockham factor penalized the additional parameter for an underdamped
- data.
+ The panel on the left has logarithm of the evidence for the modes for an
+ underdamped data while the panel on the right contains the same for an
+ overdamped data.
  The comparison of evidence clearly shows that the evidence is higher for
  the true data generating model.
+ Thus, we have shown that one can discern the model generating the data
+ by estimating the Bayesian evidence.
+ 
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2703,15 +2695,6 @@ name "fig:modelSelection"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-In this section, we have shown that our method of multivariate Ornstein-Uhlenbec
-k process can be used to discern the model generating the data by estimating
- the Bayesian evidence.
- In particular, we have shown the clear difference in the evidence for data-sets
- from overdamped (univariate) and underdamped (bivariate) Brownian motion.
- 
 \end_layout
 
 \begin_layout Section
@@ -3005,7 +2988,7 @@ With explicit forms, the expression of the evidence of a given model
 -dimensional multivariate Ornstein-Uhlenbeck process is
 \begin_inset Formula 
 \begin{align}
-\ln P\left(D|\mathcal{M}_{\alpha}\right) & \simeq-\frac{N}{2}\left(\bm{\Sigma}^{*^{-1}}:\bm{\Sigma}^{*}+\ln((2\pi)^{M}\,|\bm{\Sigma}^{*}|)\right)+\ln\Bigg[\det(\boldsymbol{A}_{22})\det[\boldsymbol{A}_{11}-\boldsymbol{A}_{12}\boldsymbol{A}_{22}^{-1}\boldsymbol{A}_{21}\Bigg]^{-1/2}+\tfrac{M}{2}\ln2\pi-\ln P(\boldsymbol{X}).
+\ln P\left(D|\mathcal{M}_{\alpha}\right) & \simeq-\frac{N}{2}\left(\bm{\Sigma}^{*^{-1}}:\bm{\Sigma}^{*}+\ln((2\pi)^{M}\,|\bm{\Sigma}^{*}|)\right)+\ln\Bigg[\det(\boldsymbol{A}_{22})\det[\boldsymbol{A}_{11}-\boldsymbol{A}_{12}\boldsymbol{A}_{22}^{-1}\boldsymbol{A}_{21}\Bigg]^{-1/2}+\tfrac{M}{2}\ln2\pi.
 \end{align}
 
 \end_inset
