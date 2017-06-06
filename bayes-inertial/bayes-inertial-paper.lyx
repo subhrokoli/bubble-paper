@@ -1265,6 +1265,10 @@ reference "eq:stationarity"
 STOP HERE! 
 \end_layout
 
+\begin_layout Section
+Bayesian MAP estimates of Brownian harmonic oscillator
+\end_layout
+
 \begin_layout Standard
 Bayesian inference of section 
 \begin_inset CommandInset ref
@@ -1420,174 +1424,10 @@ Bayes-I
 
 .
  
-\end_layout
-
-\begin_layout Standard
-In the 
-\begin_inset Formula $\emph{optical trap limit}$
-\end_inset
-
-, the limit of vanishing particle mass is assumed and the Langevin equation
- for the position of the Brownian particle reduces to
-\begin_inset Formula 
-\begin{equation}
-\dot{x}=-\dfrac{k}{\gamma}x+\sqrt{\dfrac{2k_{B}T}{\gamma}}\xi\left(t\right).\label{eq:univariate-ou}
-\end{equation}
-
-\end_inset
-
-Defining 
-\begin_inset Formula $\lambda=\dfrac{k}{\gamma}$
-\end_inset
-
- as the 
-\begin_inset Formula $\emph{drift coefficient}$
-\end_inset
-
- and 
-\begin_inset Formula $D=\dfrac{k_{B}T}{\gamma}$
-\end_inset
-
- as the 
-\begin_inset Formula $\emph{diffusion coefficient}$
-\end_inset
-
-, we readily identify Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:univariate-ou"
-
-\end_inset
-
-) as the univariate analogue of Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:mvou"
-
-\end_inset
-
-).
- The application of Bayesian inference to estimate the parameters 
-\begin_inset Formula $\lambda$
-\end_inset
-
- and 
-\begin_inset Formula $D$
-\end_inset
-
- has been discussed at length in earlier work 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "bera2017fast"
-
-\end_inset
-
-.
- Here, we demonstrate that the methods described in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "bera2017fast"
-
-\end_inset
-
- are effectively the univariate extension of the inference depicted in Section
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Bayesian-inference"
-
-\end_inset
-
-.
- In the optical trap limit, we only have the dynamics for position variable
- 
-\begin_inset Formula $x$
-\end_inset
-
- and the 
-\begin_inset Formula $\emph{matrix}$
-\end_inset
-
- sufficient statistics reduce to corresponding scalar analogues of 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "bera2017fast"
-
-\end_inset
-
-.
- Finally, the MAP estimates of Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map-estimates"
-
-\end_inset
-
-), after elementary manipulations, can be shown to be exactly equivalent
- to the expressions in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "bera2017fast"
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-Thus, we demonstrate that our method for finding the MAP estimates is valid
- for arbitrary dimensionality of the data generating Ornstein-Uhlenbeck
- process.
- Physically, the displacements of the Brownian particle in the overdamped
- harmonic oscillator constitute an univariate Ornstein-Uhlenbeck process,
- whereas a physical example of the bivariate analogue is the position-velocity
- phase space for the underdamped Brownian harmonic oscillator.
-\end_layout
-
-\begin_layout Section
-Bayesian MAP estimates of Brownian harmonic oscillator
-\end_layout
-
-\begin_layout Standard
-We now present the results of our Bayesian MAP estimates applied to underdamped
- Brownian harmonic oscillator data.
- In Fig.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:PositionsVelocity"
-
-\end_inset
-
-) we show a typical sample path of positions and velocities of one component
- of motion in the plane of an optical trap, together with its histogram.
- From the histogram it can be seen that the distributions of positions and
- velocities are stationary and are independently well-approximated by Gaussians.
- This fact can be utilized to estimate the mass 
-\begin_inset Formula $m$
-\end_inset
-
- from the stationary velocity variance 
-\begin_inset Formula $\langle v^{2}\rangle$
-\end_inset
-
-, and spring constant 
-\begin_inset Formula $k$
-\end_inset
-
- from the stationary position variance 
-\begin_inset Formula $\langle x^{2}\rangle$
-\end_inset
-
- in the conventional equipartition method.
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1645,7 +1485,7 @@ reference "eq:map_stationary"
 \end_inset
 
 ).
- The variables have been scaled using 
+ The variables have been scaled by 
 \begin_inset Formula $x^{\prime}=\left(x-\mu_{x}\right)/\sigma_{xx}^{2}$
 \end_inset
 
@@ -1662,7 +1502,7 @@ reference "eq:map_stationary"
 \end_inset
 
  respectively.
- The MAP estimates are marked by the black dot, and the 
+ The MAP estimate is marked by a black dot, and the 
 \begin_inset Formula $1\sigma$
 \end_inset
 
@@ -1670,7 +1510,7 @@ reference "eq:map_stationary"
 \begin_inset Formula $2\sigma$
 \end_inset
 
- and 
+, and 
 \begin_inset Formula $3\sigma$
 \end_inset
 
@@ -1703,14 +1543,14 @@ name "fig:stationary"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename figure_4.png
 	lyxscale 25
 	display false
-	width 46text%
+	width 48text%
 
 \end_inset
 
@@ -1746,332 +1586,6 @@ name "fig:autocorrelation"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-The results of Bayesian inference are shown in the pairs-plots of 
-\begin_inset Formula $\left(m,k,\gamma\right)$
-\end_inset
-
- in Fig.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:inference"
-
-\end_inset
-
-).
- The upper panel shows the MAP estimates obtained from Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map_lambda"
-
-\end_inset
-
-) and (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map_sigma"
-
-\end_inset
-
-) while the lower panel represents posterior distribution in the 
-\begin_inset Formula $\left(m,k\right)$
-\end_inset
-
- plane with the stationary assumption in Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map_k_stat"
-
-\end_inset
-
-) and (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map_m_stat"
-
-\end_inset
-
-).
- Projections of the posterior distribution are shown with filled contours
- representing the error-bars.
- There is a single maximum at 
-\begin_inset Formula $\left(m^{\ast},k^{\ast},\gamma^{\ast}\right)$
-\end_inset
-
-, and the results of both the Bayesian methods are in excellent agreement
- with our simulation parameters, as demonstrated in Tables 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:springconstant"
-
-\end_inset
-
-.
- We characterize the error bars for our Bayesian method by the variance-covarian
-ce matrix for the posterior distribution in Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:CovrianceMatrix"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-In Fig.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:autocorrelation"
-
-\end_inset
-
-), we show the position and velocity autocorrelation functions and the correspon
-ding power spectral densities.
- An alternate procedure for estimating mass, trap stiffness and particle
- friction in optical traps has been explored by 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Bera:16"
-
-\end_inset
-
-, where the analytical expressions of the autocorrelation function and power
- spectral density have been fitted to the data, and best-fit estimates are
- obtained.
- However, the error bars for these fitting based methods were as high as
- 15%.
- We demonstrate that our methods are more accurate then conventional fitting
- based methods, as well as order of magnitude faster than Bayesian MCMC
- based methods.
- To demonstrate the convergence of the results obtained from fitting analytical
- expressions to the autocorrelation or power spectral density and our Bayesian
- MAP estimates, we plot the analytical curves of autocorrelation function
- and power spectrum, using our Bayesian MAP estimates as parameter values
- in Fig.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:autocorrelation"
-
-\end_inset
-
-).
- It can be seen that the results of our Bayesian method agree with the tradition
-al fitting based methods.
-\end_layout
-
-\begin_layout Section
-Model selection
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Model-selection"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-We now focus on the problem of model selection for optical trap data.
- In previous work, we had demonstrated parameter inference from overdamped
- harmonic Brownian oscillator data.
- In this section, the selection of the most probable data generating model
- between overdamped and underdamped harmonic Brownian oscillators is considered.
- 
-\end_layout
-
-\begin_layout Standard
-In section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Bayesian-inference"
-
-\end_inset
-
-, we have discussed the Bayesian evidence for model selection.
- Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:evidence"
-
-\end_inset
-
-) gives the evidence for a model 
-\begin_inset Formula $\mathcal{M}_{\alpha}$
-\end_inset
-
- given the data.
- For a model with several parameters, this generalized to
-\begin_inset Formula 
-\begin{equation}
-P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta}^{\ast},\mathcal{M}_{\alpha})\,P(\boldsymbol{\theta}^{\ast}|\mathcal{M}_{\alpha})\,(\det(\bm{A}/2\pi))^{-1/2}\label{eq:evidence-1}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The problem of model selection is then reduced to obtain the evidence given
- the data of the position and velocity of the Brownian particle at the MAP
- value.
- Thus, based on the relative magnitude of the evidence 
-\begin_inset Formula $P(\boldsymbol{X}|\mathcal{M}_{\alpha})$
-\end_inset
-
-, we can determine whether the data generating process is overdamped Brownian
- motion or underdamped Brownian motion.
-\end_layout
-
-\begin_layout Standard
-In Fig.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:modelSelection"
-
-\end_inset
-
-), we plot the relative magnitudes of the logarithm of the evidence, 
-\begin_inset Formula $\ln P(\boldsymbol{X}|\mathcal{M}_{\alpha})$
-\end_inset
-
- for overdamped and underdamped Brownian motion described in section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Brownian-harmonic-oscillator"
-
-\end_inset
-
-.
- The cyclic frequency of the Brownian harmonics oscillator is 
-\begin_inset Formula $\omega=\sqrt{k/m-\gamma^{2}/4m^{2}}$
-\end_inset
-
-, which is real for less than critical damping, 
-\begin_inset Formula $\gamma<\gamma_{c}$
-\end_inset
-
-, where 
-\begin_inset Formula $\gamma_{c}=4mk$
-\end_inset
-
-.
- The resulting Brownian motion is overdamped for 
-\begin_inset Formula $\gamma>\gamma_{c}$
-\end_inset
-
- while underdamped for 
-\begin_inset Formula $\gamma<\gamma_{c}$
-\end_inset
-
-.
- We find that the for an underdamped data, the evidence is higher while
- the Ockham factor penalized the additional parameter for an underdamped
- data.
- The ratio of the logarithm of the evidence for overdamped data is 
-\begin_inset Formula $\ln P(\boldsymbol{X}|\mathcal{M}_{OD})/\ln P(\boldsymbol{X}|\mathcal{M}_{UD})\sim2$
-\end_inset
-
-, while that of underdamped data is 
-\begin_inset Formula $\ln P(\boldsymbol{X}|\mathcal{M}_{UD})/\ln P(\boldsymbol{X}|\mathcal{M}_{OD})\sim3$
-\end_inset
-
-.
- The comparison of evidence clearly shows that the evidence is higher for
- the true data generating model.
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename modelSelection.jpg
-	display false
-	width 45text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Logarithm of Bayesian evidence for model selection 
-\begin_inset Formula $\ln P(\boldsymbol{X}|\mathcal{M_{\alpha}})$
-\end_inset
-
- for data from an underdamped model 
-\begin_inset Formula $\left(\mathcal{M}_{UD}\right)$
-\end_inset
-
- and an overdamped model 
-\begin_inset Formula $\left(\mathcal{M}_{OD}\right)$
-\end_inset
-
- in natural log units (nits).
- The panel on the left show the results of our model selection algorithm
- for underdamped data 
-\begin_inset Formula $(\gamma=0.1\gamma_{c})$
-\end_inset
-
-, while the one on the right corresponds to overdamped data 
-\begin_inset Formula $(\gamma=10\gamma_{c})$
-\end_inset
-
-.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:modelSelection"
-
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Discussions and summary
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Results-and-Discussions"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In this work, we have provided exact Bayesian methods for estimating the
- parameters of a multivariate Ornstein-Uhlenbeck process from discreetly
- observed time series.
- The parameters of the model generating the data are obtained from the MAP
- estimates which are derived using exact likelihood and sufficient statistics.
- The MAP estimates are obtained exactly, and thus the procedure does not
- require numerical minimization or Monte Carlo sampling, making it faster
- than the conventional Bayesian method.
- 
 \begin_inset Float table
 wide true
 sideways false
@@ -2587,6 +2101,115 @@ name "tab:springconstant"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+We now present the results of our Bayesian MAP estimates applied to underdamped
+ Brownian harmonic oscillator data.
+ In Fig.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:PositionsVelocity"
+
+\end_inset
+
+) we show a typical sample path of positions and velocities of one component
+ of motion in the plane of an optical trap, together with its histogram.
+ From the histogram it can be seen that the distributions of positions and
+ velocities are stationary and are independently well-approximated by Gaussians.
+ This fact can be utilized to estimate the mass 
+\begin_inset Formula $m$
+\end_inset
+
+ from the stationary velocity variance 
+\begin_inset Formula $\langle v^{2}\rangle$
+\end_inset
+
+, and spring constant 
+\begin_inset Formula $k$
+\end_inset
+
+ from the stationary position variance 
+\begin_inset Formula $\langle x^{2}\rangle$
+\end_inset
+
+ in the conventional equipartition method.
+\end_layout
+
+\begin_layout Standard
+The results of Bayesian inference are shown in the pairs-plots of 
+\begin_inset Formula $\left(m,k,\gamma\right)$
+\end_inset
+
+ in Fig.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:inference"
+
+\end_inset
+
+).
+ The upper panel shows the MAP estimates obtained from Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map_lambda"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map_sigma"
+
+\end_inset
+
+) while the lower panel represents posterior distribution in the 
+\begin_inset Formula $\left(m,k\right)$
+\end_inset
+
+ plane with the stationary assumption in Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map_k_stat"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map_m_stat"
+
+\end_inset
+
+).
+ Projections of the posterior distribution are shown with filled contours
+ representing the error-bars.
+ There is a single maximum at 
+\begin_inset Formula $\left(m^{\ast},k^{\ast},\gamma^{\ast}\right)$
+\end_inset
+
+, and the results of both the Bayesian methods are in excellent agreement
+ with our simulation parameters, as demonstrated in Tables 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:springconstant"
+
+\end_inset
+
+.
+ We characterize the error bars for our Bayesian method by the variance-covarian
+ce matrix for the posterior distribution in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:CovrianceMatrix"
+
+\end_inset
+
+.
 \begin_inset Float table
 wide false
 sideways false
@@ -2829,6 +2452,383 @@ name "tab:CovrianceMatrix"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+In Fig.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:autocorrelation"
+
+\end_inset
+
+), we show the position and velocity autocorrelation functions and the correspon
+ding power spectral densities.
+ An alternate procedure for estimating mass, trap stiffness and particle
+ friction in optical traps has been explored by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bera:16"
+
+\end_inset
+
+, where the analytical expressions of the autocorrelation function and power
+ spectral density have been fitted to the data, and best-fit estimates are
+ obtained.
+ However, the error bars for these fitting based methods were as high as
+ 15%.
+ We demonstrate that our methods are more accurate then conventional fitting
+ based methods, as well as order of magnitude faster than Bayesian MCMC
+ based methods.
+ To demonstrate the convergence of the results obtained from fitting analytical
+ expressions to the autocorrelation or power spectral density and our Bayesian
+ MAP estimates, we plot the analytical curves of autocorrelation function
+ and power spectrum, using our Bayesian MAP estimates as parameter values
+ in Fig.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:autocorrelation"
+
+\end_inset
+
+).
+ It can be seen that the results of our Bayesian method agree with the tradition
+al fitting based methods.
+\end_layout
+
+\begin_layout Standard
+In the 
+\begin_inset Formula $\emph{optical trap limit}$
+\end_inset
+
+, the limit of vanishing particle mass is assumed and the Langevin equation
+ for the position of the Brownian particle reduces to
+\begin_inset Formula 
+\begin{equation}
+\dot{x}=-\dfrac{k}{\gamma}x+\sqrt{\dfrac{2k_{B}T}{\gamma}}\xi\left(t\right).\label{eq:univariate-ou}
+\end{equation}
+
+\end_inset
+
+Defining 
+\begin_inset Formula $\lambda=\dfrac{k}{\gamma}$
+\end_inset
+
+ as the 
+\begin_inset Formula $\emph{drift coefficient}$
+\end_inset
+
+ and 
+\begin_inset Formula $D=\dfrac{k_{B}T}{\gamma}$
+\end_inset
+
+ as the 
+\begin_inset Formula $\emph{diffusion coefficient}$
+\end_inset
+
+, we readily identify Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:univariate-ou"
+
+\end_inset
+
+) as the univariate analogue of Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:mvou"
+
+\end_inset
+
+).
+ The application of Bayesian inference to estimate the parameters 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+ has been discussed at length in earlier work 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bera2017fast"
+
+\end_inset
+
+.
+ Here, we demonstrate that the methods described in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bera2017fast"
+
+\end_inset
+
+ are effectively the univariate extension of the inference depicted in Section
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Bayesian-inference"
+
+\end_inset
+
+.
+ In the optical trap limit, we only have the dynamics for position variable
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ and the 
+\begin_inset Formula $\emph{matrix}$
+\end_inset
+
+ sufficient statistics reduce to corresponding scalar analogues of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bera2017fast"
+
+\end_inset
+
+.
+ Finally, the MAP estimates of Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map-estimates"
+
+\end_inset
+
+), after elementary manipulations, can be shown to be exactly equivalent
+ to the expressions in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bera2017fast"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Thus, we demonstrate that our method for finding the MAP estimates is valid
+ for arbitrary dimensionality of the data generating Ornstein-Uhlenbeck
+ process.
+ Physically, the displacements of the Brownian particle in the overdamped
+ harmonic oscillator constitute an univariate Ornstein-Uhlenbeck process,
+ whereas a physical example of the bivariate analogue is the position-velocity
+ phase space for the underdamped Brownian harmonic oscillator.
+\end_layout
+
+\begin_layout Section
+Model selection
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Model-selection"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We now focus on the problem of model selection for optical trap data.
+ In previous work, we had demonstrated parameter inference from overdamped
+ harmonic Brownian oscillator data.
+ In this section, the selection of the most probable data generating model
+ between overdamped and underdamped harmonic Brownian oscillators is considered.
+ 
+\end_layout
+
+\begin_layout Standard
+In section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Bayesian-inference"
+
+\end_inset
+
+, we have discussed the Bayesian evidence for model selection.
+ Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:evidence"
+
+\end_inset
+
+) gives the evidence for a model 
+\begin_inset Formula $\mathcal{M}_{\alpha}$
+\end_inset
+
+ given the data.
+ For a model with several parameters, this generalized to
+\begin_inset Formula 
+\begin{equation}
+P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta}^{\ast},\mathcal{M}_{\alpha})\,P(\boldsymbol{\theta}^{\ast}|\mathcal{M}_{\alpha})\,(\det(\bm{A}/2\pi))^{-1/2}\label{eq:evidence-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The problem of model selection is then reduced to obtain the evidence given
+ the data of the position and velocity of the Brownian particle at the MAP
+ value.
+ Thus, based on the relative magnitude of the evidence 
+\begin_inset Formula $P(\boldsymbol{X}|\mathcal{M}_{\alpha})$
+\end_inset
+
+, we can determine whether the data generating process is overdamped Brownian
+ motion or underdamped Brownian motion.
+\end_layout
+
+\begin_layout Standard
+In Fig.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:modelSelection"
+
+\end_inset
+
+), we plot the relative magnitudes of the logarithm of the evidence, 
+\begin_inset Formula $\ln P(\boldsymbol{X}|\mathcal{M}_{\alpha})$
+\end_inset
+
+ for overdamped and underdamped Brownian motion described in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Brownian-harmonic-oscillator"
+
+\end_inset
+
+.
+ The cyclic frequency of the Brownian harmonics oscillator is 
+\begin_inset Formula $\omega=\sqrt{k/m-\gamma^{2}/4m^{2}}$
+\end_inset
+
+, which is real for less than critical damping, 
+\begin_inset Formula $\gamma<\gamma_{c}$
+\end_inset
+
+, where 
+\begin_inset Formula $\gamma_{c}=4mk$
+\end_inset
+
+.
+ The resulting Brownian motion is overdamped for 
+\begin_inset Formula $\gamma>\gamma_{c}$
+\end_inset
+
+ while underdamped for 
+\begin_inset Formula $\gamma<\gamma_{c}$
+\end_inset
+
+.
+ We find that the for an underdamped data, the evidence is higher while
+ the Ockham factor penalized the additional parameter for an underdamped
+ data.
+ The ratio of the logarithm of the evidence for overdamped data is 
+\begin_inset Formula $\ln P(\boldsymbol{X}|\mathcal{M}_{OD})/\ln P(\boldsymbol{X}|\mathcal{M}_{UD})\sim2$
+\end_inset
+
+, while that of underdamped data is 
+\begin_inset Formula $\ln P(\boldsymbol{X}|\mathcal{M}_{UD})/\ln P(\boldsymbol{X}|\mathcal{M}_{OD})\sim3$
+\end_inset
+
+.
+ The comparison of evidence clearly shows that the evidence is higher for
+ the true data generating model.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename modelSelection.jpg
+	display false
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Logarithm of Bayesian evidence for model selection 
+\begin_inset Formula $\ln P(\boldsymbol{X}|\mathcal{M_{\alpha}})$
+\end_inset
+
+ for data from an underdamped model 
+\begin_inset Formula $\left(\mathcal{M}_{UD}\right)$
+\end_inset
+
+ and an overdamped model 
+\begin_inset Formula $\left(\mathcal{M}_{OD}\right)$
+\end_inset
+
+ in natural log units (nits).
+ The panel on the left show the results of our model selection algorithm
+ for underdamped data 
+\begin_inset Formula $(\gamma=0.1\gamma_{c})$
+\end_inset
+
+, while the one on the right corresponds to overdamped data 
+\begin_inset Formula $(\gamma=10\gamma_{c})$
+\end_inset
+
+.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:modelSelection"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Discussions and summary
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Results-and-Discussions"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this work, we have provided exact Bayesian methods for estimating the
+ parameters of a multivariate Ornstein-Uhlenbeck process from discreetly
+ observed time series.
+ The parameters of the model generating the data are obtained from the MAP
+ estimates which are derived using exact likelihood and sufficient statistics.
+ The MAP estimates are obtained exactly, and thus the procedure does not
+ require numerical minimization or Monte Carlo sampling, making it faster
+ than the conventional Bayesian method.
+ 
 \end_layout
 
 \begin_layout Standard
