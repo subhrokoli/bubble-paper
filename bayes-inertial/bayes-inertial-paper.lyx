@@ -1182,7 +1182,7 @@ mg/
 \end_inset
 
 , 
-\begin_inset Formula $\gamma=\frac{1}{10}\sqrt{4mk}$
+\begin_inset Formula $\gamma=0.1\sqrt{4mk}$
 \end_inset
 
 , and 
@@ -1190,7 +1190,11 @@ mg/
 \end_inset
 
 .
- Data is sampled at 65,536 Hz.
+ Data is sampled at 
+\begin_inset Formula $2^{16}$
+\end_inset
+
+ Hz.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -1609,60 +1613,23 @@ Pairs plot for mass
 \begin_inset Formula $\gamma$
 \end_inset
 
- .
- The top panel shows the pairs plot obtained from the MAP estimates in 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map_lambda"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map_sigma"
-
-\end_inset
-
 .
- The variables have been scaled using 
-\begin_inset Formula $x^{\prime}=\nicefrac{\left(x-\mu_{x}\right)}{\sigma_{xx}^{2}}$
+ Panel 
+\begin_inset Formula $(a)$
 \end_inset
 
-, where 
-\begin_inset Formula $\mu_{x}$
-\end_inset
-
- and 
-\begin_inset Formula $\sigma_{xx}^{2}$
-\end_inset
-
- are the MAP estimate and variance of 
-\begin_inset Formula $x$
-\end_inset
-
- respectively.
- The MAP estimates are marked by the black dot.
- The 
-\begin_inset Formula $1\sigma$
-\end_inset
-
-, 
-\begin_inset Formula $2\sigma$
-\end_inset
-
- and 
-\begin_inset Formula $3\sigma$
-\end_inset
-
- regions have been shaded.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:inference"
+ shows the pairs plot obtained from the MAP estimates in Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map-estimates"
 
 \end_inset
 
- Pairs plot for mass 
+), while 
+\begin_inset Formula $(b)$
+\end_inset
+
+ contains pairs plot for mass 
 \begin_inset Formula $m$
 \end_inset
 
@@ -1670,23 +1637,16 @@ name "fig:inference"
 \begin_inset Formula $k$
 \end_inset
 
- obtained from the MAP estimates in 
+ obtained from the MAP estimates in Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:map_k_stat"
+reference "eq:map_stationary"
 
 \end_inset
 
- and 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map_m_stat"
-
-\end_inset
-
-.
+).
  The variables have been scaled using 
-\begin_inset Formula $x^{\prime}=\nicefrac{\left(x-\mu_{x}\right)}{\sigma_{xx}^{2}}$
+\begin_inset Formula $x^{\prime}=\left(x-\mu_{x}\right)/\sigma_{xx}^{2}$
 \end_inset
 
 , where 
@@ -1702,8 +1662,7 @@ reference "eq:map_m_stat"
 \end_inset
 
  respectively.
- The MAP estimates are marked by the black dot.
- The 
+ The MAP estimates are marked by the black dot, and the 
 \begin_inset Formula $1\sigma$
 \end_inset
 
@@ -1716,6 +1675,14 @@ reference "eq:map_m_stat"
 \end_inset
 
  regions have been shaded.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:inference"
+
+\end_inset
+
+
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:stationary"
@@ -1963,66 +1930,6 @@ The problem of model selection is then reduced to obtain the evidence given
 
 , we can determine whether the data generating process is overdamped Brownian
  motion or underdamped Brownian motion.
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename modelSelection.jpg
-	display false
-	width 45text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Natural logarithm of the evidence 
-\begin_inset Formula $\ln P(\boldsymbol{X}|\mathcal{M_{\alpha}})$
-\end_inset
-
- for data from an overdamped model 
-\begin_inset Formula $\left(\mathcal{M}_{OD}\right)$
-\end_inset
-
- and an underdamped model 
-\begin_inset Formula $\left(\mathcal{M}_{UD}\right)$
-\end_inset
-
- in natural log units (nits).
- The panel on the left show the results of our model selection algorithm
- for overdamped data 
-\begin_inset Formula $(\gamma=10\gamma_{c})$
-\end_inset
-
-, while the one on the right correspond to underdamped data 
-\begin_inset Formula $(\gamma=0.1\gamma_{c})$
-\end_inset
-
-.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:modelSelection"
-
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -2082,6 +1989,89 @@ reference "sec:Brownian-harmonic-oscillator"
 .
  The comparison of evidence clearly shows that the evidence is higher for
  the true data generating model.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename modelSelection.jpg
+	display false
+	width 45text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Logarithm of Bayesian evidence for model selection 
+\begin_inset Formula $\ln P(\boldsymbol{X}|\mathcal{M_{\alpha}})$
+\end_inset
+
+ for data from an underdamped model 
+\begin_inset Formula $\left(\mathcal{M}_{UD}\right)$
+\end_inset
+
+ and an overdamped model 
+\begin_inset Formula $\left(\mathcal{M}_{OD}\right)$
+\end_inset
+
+ in natural log units (nits).
+ The panel on the left show the results of our model selection algorithm
+ for underdamped data 
+\begin_inset Formula $(\gamma=0.1\gamma_{c})$
+\end_inset
+
+, while the one on the right corresponds to overdamped data 
+\begin_inset Formula $(\gamma=10\gamma_{c})$
+\end_inset
+
+.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:modelSelection"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Discussions and summary
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Results-and-Discussions"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this work, we have provided exact Bayesian methods for estimating the
+ parameters of a multivariate Ornstein-Uhlenbeck process from discreetly
+ observed time series.
+ The parameters of the model generating the data are obtained from the MAP
+ estimates which are derived using exact likelihood and sufficient statistics.
+ The MAP estimates are obtained exactly, and thus the procedure does not
+ require numerical minimization or Monte Carlo sampling, making it faster
+ than the conventional Bayesian method.
+ 
 \begin_inset Float table
 wide true
 sideways false
@@ -2839,29 +2829,6 @@ name "tab:CovrianceMatrix"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section
-Discussions and summary
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Results-and-Discussions"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In this work, we have provided exact Bayesian methods for estimating the
- parameters of a multivariate Ornstein-Uhlenbeck process from discreetly
- observed time series.
- The parameters of the model generating the data are obtained from the MAP
- estimates which are derived using exact likelihood and sufficient statistics.
- The MAP estimates are obtained exactly, and thus the procedure does not
- require numerical minimization or Monte Carlo sampling, making it faster
- than the conventional Bayesian method.
- 
 \end_layout
 
 \begin_layout Standard
