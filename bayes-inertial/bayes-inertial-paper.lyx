@@ -735,7 +735,7 @@ key "jeffreys1998theory,jaynes2003probability,sivia2006data"
 \end_inset
 
 .
- Its explicit form is provided in the appendix.
+ Its explicit form is provided in the Appendix.
 \end_layout
 
 \begin_layout Standard
@@ -1278,7 +1278,7 @@ reference "eq:covariance-OC"
 
 .
  These estimates can be used to obtain the scalar MAP estimates, after algebraic
- manipulation as shown in appendix, for the parameters of interest: the
+ manipulation as shown in Appendix, for the parameters of interest: the
  mass of the particle, the trap stiffness and the particle friction coefficient.
  
 \end_layout
@@ -1420,7 +1420,7 @@ Bayes-I
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1536,7 +1536,7 @@ name "fig:stationary"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2496,7 +2496,10 @@ name "sec:Model-selection"
 \end_layout
 
 \begin_layout Standard
-Bayesian inference of underdamped Brownian motion was considered in previous
+In this section, we consider the problem of Bayesian model selection for
+ a given time series data.
+ For definiteness, we data from underdamped and overdamped Brownian motion.
+ Bayesian inference of underdamped Brownian motion was considered in previous
  section.
  The overdamped limit corresponds to the case of vanishing particle mass
  in Eq.(
@@ -2506,9 +2509,7 @@ reference "eq:langevin"
 
 \end_inset
 
-).
- Physically, the displacements of the Brownian particle in the overdamped
- harmonic oscillator constitute an univariate Ornstein-Uhlenbeck process.
+), and this correspond to an univariate Ornstein-Uhlenbeck process.
  The matrix sufficient statistics of Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2516,9 +2517,9 @@ reference "eq:sufficientStatistics"
 
 \end_inset
 
-), then, reduce to corresponding scalar analogues.
- The application of Bayesian inference to estimate the parameters of an
- overdamped harmonic oscillator has been described in earlier work 
+), then, reduce to scalars.
+ Bayesian estimation of the parameters of an overdamped harmonic oscillator
+ has been described in earlier work 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "bera2017fast"
@@ -2562,12 +2563,8 @@ reference "sec:Bayesian-inference"
 \end_layout
 
 \begin_layout Standard
-In this section, we consider the problem of Bayesian model selection for
- a given time series data.
- For definiteness, we only consider data from underdamped and overdamped
- Brownian motion.
- The problem of model selection is tackled by estimating the Bayesian evidence
- for a given model, as was explained earlier in section 
+The problem of model selection is tackled by estimating the evidence, as
+ was explained earlier in section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Bayesian-inference"
@@ -2575,17 +2572,15 @@ reference "sec:Bayesian-inference"
 \end_inset
 
 .
- The expression for the evidence is obtained in terms of the best fit likelihood
- and the Ockham factor.
- Eq.(
+ The expression for the evidence, Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:evidence"
 
 \end_inset
 
-) contains the form of the evidence for a model.
- This expression is generalized for a model 
+), is obtained in terms of the best fit likelihood and the Ockham factor.
+ This expression generalizes for a model 
 \begin_inset Formula $\mathcal{M}_{\alpha}$
 \end_inset
 
@@ -2605,12 +2600,12 @@ P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta
 \end_inset
 
 Explicit forms of the Hessian matrix and the evidence have been provided
- in the appendix.
+ in the Appendix.
  Thus, the problem of model selection is reduced to obtaining evidence at
  the maximum given the data of the position and velocity of the Brownian
  particle.
  A model with a relatively higher magnitude of the evidence is then more
- likely to be the true data generating model.
+ likely to be the model from which the time series is obtained.
 \end_layout
 
 \begin_layout Standard
@@ -2621,24 +2616,33 @@ reference "fig:modelSelection"
 
 \end_inset
 
-), we plot the logarithm of the Bayesian evidence 
+), we plot the the logarithm of the Bayesian evidence 
 \begin_inset Formula $\ln P(\boldsymbol{X}|\mathcal{M}_{\alpha})$
 \end_inset
 
  in the natural log units (nits) for overdamped and underdamped Brownian
  motion.
- The panel on the left has logarithm of the evidence for the modes for an
- underdamped data while the panel on the right contains the same for an
- overdamped data.
- The comparison of evidence clearly shows that the evidence is higher for
- the true data generating model.
- Thus, we have shown that one can discern the model generating the data
+ The panel on the left contains the plot of the logarithm of the evidence
+ for an underdamped data while the right panel is for an overdamped data.
+ The comparison of the 
+\begin_inset Formula $\ln P(\boldsymbol{X}|\mathcal{M}_{\alpha})$
+\end_inset
+
+ for overdamped and underdamped model clearly shows that the evidence is
+ higher in each case for the true model of the data.
+ 
+\end_layout
+
+\begin_layout Standard
+To summarize, we have shown that one can discern the model from a time series
  by estimating the Bayesian evidence.
+ The method presented for a choice of model is valid for an arbitrary dimension
+ of the Ornstein-Uhlenbeck process.
  
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2655,11 +2659,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Logarithm of Bayesian evidence for model selection 
-\begin_inset Formula $\ln P(\boldsymbol{X}|\mathcal{M_{\alpha}})$
-\end_inset
-
- for data from an underdamped model 
+Plots of the logarithm of Bayesian evidence for model selection for data
+ from an underdamped model 
 \begin_inset Formula $\left(\mathcal{M}_{UD}\right)$
 \end_inset
 
@@ -2712,44 +2713,41 @@ name "sec:Results-and-Discussions"
 In this work, we have provided exact Bayesian methods for estimating the
  parameters of a multivariate Ornstein-Uhlenbeck process from discreetly
  observed time series.
- The parameters of the model generating the data are obtained from the MAP
- estimates which are derived using exact likelihood and sufficient statistics.
+ The parameters - mass, friction, and stiffness of a Brownian harmonic oscillato
+r - are obtained jointly from the MAP estimates.
  The MAP estimates are obtained exactly, and thus the procedure does not
- require numerical minimization or Monte Carlo sampling, making it faster
- than the conventional Bayesian method.
- 
+ require numerical minimization or Monte Carlo sampling which makes the
+ method accurate and efficient.
 \end_layout
 
 \begin_layout Standard
 We have provided two Bayesian methods for estimation of parameters.
- The first method uses exact expression for the likelihood, which is valid
- for any 
+ The first method uses an exact expression for the likelihood, which is
+ valid for any 
 \begin_inset Formula $\Delta t$
 \end_inset
 
 , and is obtained in terms four of sufficient statistics.
- This method is then reliable for low frequency of time series and provides
+ This method is then reliable for a low frequency of time series and provides
  large computational gains as we do not have to work with the entire time
  series but with four sufficient statistics.
+ This makes our method much faster than the tradition Bayesian techniques.
  The second method uses the fact that, in equilibrium, only trap stiffness
  and mass can determine the fluctuations of position and velocity.
- Here, Gibbs distribution is then used to obtain the MAP estimates and the
- error bars.
-\end_layout
-
-\begin_layout Standard
-We have then applied the method to case of an underdamped Harmonics oscillator,
- which is a bivariate Ornstein-Uhlenbeck process.
- We find excellent agreements of the two methods and the simulation.
- We also compare our results with the traditional fitting methods.
+ Here, Gibbs and Maxwell-Boltzmann distributions are used to obtain the
+ MAP estimates and the error bars.
+ We find excellent agreements of the two methods and the simulation of the
+ Brownian harmonic oscillator.
  
 \end_layout
 
 \begin_layout Standard
 Finally, we have provided a method of model selection based on the estimation
  of evidence.
- The evidence is obtained in terms of the posterior probability and Ockham
- factor which penalizes for more parameters.
+ The evidence is obtained in terms of the best fit likelihood and the Ockham
+ factor.
+ The best fir likelihood favor a specialized model while the Ockham factor
+ penalizes for more parameters.
  Thus the interplay of posterior probability and the Ockham factor determine
  the best model for a given data.
 \end_layout
@@ -2819,8 +2817,8 @@ reference "eq:sufficientStatistics"
 \end_inset
 
 ).
- With this identification, the expression logarithm of the posterior probability
- in terms of sufficient statistics is
+ With this identification, the expression of the logarithm of the posterior
+ probability in terms of sufficient statistics is
 \begin_inset Formula 
 \begin{align}
 \ln P\left(\bm{\Lambda},\bm{\Sigma}\vert\bm{X}\right)= & -\dfrac{1}{2}\bm{\Sigma}^{-1}:\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\bm{T_{3}}\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}+\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big]+\dfrac{N}{2}\ln\dfrac{|\bm{\Sigma^{-1}}|}{(2\pi)^{M}}.
@@ -2833,8 +2831,7 @@ Inspecting the above expression, we recognize that the posterior is normal
 \begin_inset Formula $\boldsymbol{\Lambda}$
 \end_inset
 
- and matrix logarithm of the mean of the normal then directly yields the
- MAP estimate 
+, and then directly yields the MAP estimate 
 \begin_inset Formula $\boldsymbol{\Lambda^{\ast}=}\exp\left(-\bm{\lambda^{\ast}}\Delta t\right)=\bm{T_{2}T_{3}^{-1}}$
 \end_inset
 
@@ -2975,7 +2972,8 @@ reference "eq:evidence-multivariate"
 \end_inset
 
 ).
- With explicit forms, the expression of logarithm of the evidence is 
+ With explicit forms, the expression of the logarithm of the evidence is
+ 
 \begin_inset Formula 
 \begin{align}
 \ln P\left(D|\mathcal{M}_{\alpha}\right) & \simeq-\frac{N}{2}\left(\bm{\Sigma}^{*^{-1}}:\bm{\Sigma}^{*}+\ln((2\pi)^{M}\,|\bm{\Sigma}^{*}|)\right)+\ln\Bigg[\det(\boldsymbol{A}_{22})\det[\boldsymbol{A}_{11}-\boldsymbol{A}_{12}\boldsymbol{A}_{22}^{-1}\boldsymbol{A}_{21}\Bigg]^{-1/2}+\tfrac{M}{2}\ln2\pi.
