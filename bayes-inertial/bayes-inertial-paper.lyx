@@ -302,7 +302,7 @@ The probability density of a displacement from
 The solution is a multivariate normal distribution
 \begin_inset Formula 
 \begin{equation}
-\mathbf{\boldsymbol{x}}^{\prime}t^{\prime}|\boldsymbol{x}\thinspace t\sim\mathcal{N}\left(\boldsymbol{\mu}_{\Delta t}\,,\boldsymbol{\sigma}_{\Delta t}^{2}\right)\label{eq:conditional-probability}
+\mathbf{\boldsymbol{x}}^{\prime}t^{\prime}|\boldsymbol{x}\thinspace t\sim\mathcal{N}\left(\boldsymbol{\mu}_{\Delta t}\,,\boldsymbol{\sigma}_{\Delta t}^{2}\right),\label{eq:conditional-probability}
 \end{equation}
 
 \end_inset
@@ -433,7 +433,7 @@ The Gauss-Markov property of the Ornstein-Uhlenbeck process ensures that
  the correlation function
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{C}(t-t^{\prime})\equiv\langle\boldsymbol{x}(t)\boldsymbol{x}^{T}(t^{\prime})\rangle=e^{-\boldsymbol{\lambda}|\Delta t|}\boldsymbol{c}\mathbf{}\label{eq:autocorr}
+\boldsymbol{C}(t-t^{\prime})\equiv\langle\boldsymbol{x}(t)\boldsymbol{x}^{T}(t^{\prime})\rangle=e^{-\boldsymbol{\lambda}|\Delta t|}\boldsymbol{c},\mathbf{}\label{eq:autocorr}
 \end{equation}
 
 \end_inset
@@ -484,7 +484,7 @@ key "van1992stochastic"
 ,
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{C}(ω)=(\text{−}iω\boldsymbol{I}+\boldsymbol{\lambda})^{-1}\left(2\boldsymbol{D}\right)(iω\boldsymbol{I}+\boldsymbol{\lambda^{T}})^{-1}\label{eq:spectral-density}
+\boldsymbol{C}(ω)=(\text{−}iω\boldsymbol{I}+\boldsymbol{\lambda})^{-1}\left(2\boldsymbol{D}\right)(iω\boldsymbol{I}+\boldsymbol{\lambda^{T}})^{-1},\label{eq:spectral-density}
 \end{equation}
 
 \end_inset
@@ -612,7 +612,7 @@ begin{subequations}
 
 \begin_inset Formula 
 \begin{align}
-\bm{\Lambda} & \equiv e^{-\bm{\lambda}\Delta t}.\\
+\bm{\Lambda} & \equiv e^{-\bm{\lambda}\Delta t},\\
 \bm{\Sigma} & \equiv\boldsymbol{c}-\boldsymbol{\Lambda}\,\boldsymbol{c}\,\boldsymbol{\Lambda}^{T},\\
 \boldsymbol{\Delta}_{n} & \equiv\boldsymbol{x}_{n+1}-\boldsymbol{\Lambda}\,\boldsymbol{x}_{n}.
 \end{align}
@@ -811,7 +811,7 @@ In the above, it is assumed that the data generating model is given, and
  The probability of a model, given the data, is
 \begin_inset Formula 
 \begin{equation}
-P(\mathcal{M}_{\alpha}|\boldsymbol{X})\propto P(\boldsymbol{X}|\mathcal{M}_{\alpha})P(\mathcal{M}_{\alpha})
+P(\mathcal{M}_{\alpha}|\boldsymbol{X})\propto P(\boldsymbol{X}|\mathcal{M}_{\alpha})P(\mathcal{M}_{\alpha}),
 \end{equation}
 
 \end_inset
@@ -839,7 +839,7 @@ reference "eq:bayes-theorem"
  contained in the drift and diffusion matrices:
 \begin_inset Formula 
 \begin{equation}
-P(\boldsymbol{X}|\mathcal{M}_{\alpha})=\int P(\boldsymbol{X}|\boldsymbol{\theta},\mathcal{M}_{\alpha})P(\boldsymbol{\theta}|\mathcal{M}_{\alpha})d\boldsymbol{\theta}
+P(\boldsymbol{X}|\mathcal{M}_{\alpha})=\int P(\boldsymbol{X}|\boldsymbol{\theta},\mathcal{M}_{\alpha})P(\boldsymbol{\theta}|\mathcal{M}_{\alpha})d\boldsymbol{\theta}.
 \end{equation}
 
 \end_inset
@@ -855,7 +855,7 @@ For unimodal posterior distributions, the height at the MAP value
  of the distribution is, often, a very good approximation for the evidence,
 \begin_inset Formula 
 \begin{equation}
-P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta}^{\ast},\mathcal{M}_{\alpha})P(\boldsymbol{\theta}^{\ast}|\mathcal{M}_{\alpha})\Delta\boldsymbol{\theta}\label{eq:evidence}
+P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta}^{\ast},\mathcal{M}_{\alpha})P(\boldsymbol{\theta}^{\ast}|\mathcal{M}_{\alpha})\Delta\boldsymbol{\theta}.\label{eq:evidence}
 \end{equation}
 
 \end_inset
@@ -1063,7 +1063,7 @@ v
 \end{array}\right)+\sqrt{2\boldsymbol{D}}\left(\begin{array}{c}
 0\\
 \zeta
-\end{array}\right)\label{eq:phase_space}
+\end{array}\right),\label{eq:phase_space}
 \end{equation}
 
 \end_inset
@@ -1073,7 +1073,7 @@ where the mean regression and diffusion matrices are
 \begin{equation}
 \bm{\lambda}=\begin{pmatrix}0 & -1\\
 \omega_{0}^{2} & 1/\tau
-\end{pmatrix}
+\end{pmatrix},
 \end{equation}
 
 \end_inset
@@ -1083,7 +1083,7 @@ and
 \begin{equation}
 \bm{D=}\begin{pmatrix}0 & 0\\
 0 & D/\tau^{2}
-\end{pmatrix}
+\end{pmatrix},
 \end{equation}
 
 \end_inset
@@ -2599,7 +2599,7 @@ key "mackay1992bayesian,mackay2003information,gregory2005bayesian"
 
 \begin_inset Formula 
 \begin{equation}
-P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta}^{\ast},\mathcal{M}_{\alpha})\,P(\boldsymbol{\theta}^{\ast}|\mathcal{M}_{\alpha})\,(\det(\bm{A}/2\pi))^{-1/2}.\label{eq:evidence-1}
+P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta}^{\ast},\mathcal{M}_{\alpha})\,P(\boldsymbol{\theta}^{\ast}|\mathcal{M}_{\alpha})\,(\det(\bm{A}/2\pi))^{-1/2}.\label{eq:evidence-multivariate}
 \end{equation}
 
 \end_inset
@@ -2897,7 +2897,7 @@ reference "eq:map_sigma"
 \begin_inset Formula $\gamma^{\ast}$
 \end_inset
 
- are 
+ are
 \begin_inset Formula 
 \begin{align}
 \begin{pmatrix}\dfrac{k_{B}T}{k^{\ast}}\\
@@ -2932,23 +2932,16 @@ The second derivatives of the log posterior w.r.t
  at the maximum is
 \begin_inset Formula 
 \begin{align}
- & \dfrac{\partial^{2}\ln P\left(\bm{\Lambda},\bm{\Sigma}\vert\bm{X}\right)}{\partial(\bm{\Sigma^{-1}})^{2}}=-\dfrac{N}{2}\left(\bm{\Sigma}^{*}\right)^{2}.
+\dfrac{\partial^{2}\ln P\left(\bm{\Lambda},\bm{\Sigma}\vert\bm{X}\right)}{\partial(\bm{\Sigma^{-1}})^{2}}= & -\dfrac{N}{2}\left(\bm{\Sigma}^{*}\right)^{2}.\\
+\dfrac{\partial^{2}\ln P\left(\bm{\Lambda},\bm{\Sigma}\vert\bm{X}\right)}{\partial\bm{\Lambda}^{2}}= & -\bm{\Sigma}^{*-1}(\bm{T_{3}}+N\boldsymbol{c}*)-\frac{N}{2}\bm{\Sigma}^{*-2}((\bm{\Lambda}^{*}\boldsymbol{c}^{*}+\boldsymbol{c}^{*}\bm{\Lambda}^{*T}))^{2}.
 \end{align}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{align*}
-\dfrac{\partial^{2}\ln P\left(\bm{\Lambda},\bm{\Sigma}\vert\bm{X}\right)}{\partial\bm{\Lambda}^{2}} & =-\bm{\Sigma}^{*-1}(\bm{T_{3}}+N\boldsymbol{c}*)-\frac{N}{2}\bm{\Sigma}^{*-2}((\bm{\Lambda}^{*}\boldsymbol{c}^{*}+\boldsymbol{c}^{*}\bm{\Lambda}^{*T}))^{2}
-\end{align*}
 
 \end_inset
 
 The mixed derivative at the maximum is
 \begin_inset Formula 
 \begin{align*}
-\dfrac{\partial^{2}\ln P\left(\bm{\Lambda},\bm{\Sigma}\vert\bm{X}\right)}{\partial\bm{\Lambda}\partial\bm{\Sigma^{-1}}} & \eqsim-\frac{N}{2}(\bm{\Lambda}^{*}\boldsymbol{c}^{*}+\boldsymbol{c}^{*}\bm{\Lambda}^{*T})
+\dfrac{\partial^{2}\ln P\left(\bm{\Lambda},\bm{\Sigma}\vert\bm{X}\right)}{\partial\bm{\Lambda}\partial\bm{\Sigma^{-1}}} & \eqsim-\frac{N}{2}(\bm{\Lambda}^{*}\boldsymbol{c}^{*}+\boldsymbol{c}^{*}\bm{\Lambda}^{*T}).
 \end{align*}
 
 \end_inset
@@ -2965,27 +2958,24 @@ The Hessian matrix at the maximum is then
 
 \end_inset
 
-This has been used to obtain the evidence for a given model 
-\begin_inset Formula $\mathcal{M}_{\alpha}$
-\end_inset
-
- as
-\begin_inset Formula 
-\begin{equation}
-P\left(D|\mathcal{M}_{\alpha}\right)\simeq P(\boldsymbol{X}|\boldsymbol{\theta}^{\ast},\mathcal{M}_{\alpha})P(\boldsymbol{\theta}^{\ast}|\mathcal{M}_{\alpha})(2\pi)^{M/2}\left(\det\bm{A}\right)^{\nicefrac{-1}{2}},
-\end{equation}
-
-\end_inset
-
-With explicit forms, the expression of the evidence of a given model 
-\begin_inset Formula $\mathcal{M}_{\alpha}$
-\end_inset
-
- of 
+The above expression of the Hessian matrix matrix at the MAP values has
+ been used to obtain the evidence for a 
 \begin_inset Formula $M$
 \end_inset
 
--dimensional multivariate Ornstein-Uhlenbeck process is
+-dimensional multivariate Ornstein-Uhlenbeck model 
+\begin_inset Formula $\mathcal{M}_{\alpha}$
+\end_inset
+
+ in Eq (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:evidence-multivariate"
+
+\end_inset
+
+).
+ With explicit forms, the expression of logarithm of the evidence is 
 \begin_inset Formula 
 \begin{align}
 \ln P\left(D|\mathcal{M}_{\alpha}\right) & \simeq-\frac{N}{2}\left(\bm{\Sigma}^{*^{-1}}:\bm{\Sigma}^{*}+\ln((2\pi)^{M}\,|\bm{\Sigma}^{*}|)\right)+\ln\Bigg[\det(\boldsymbol{A}_{22})\det[\boldsymbol{A}_{11}-\boldsymbol{A}_{12}\boldsymbol{A}_{22}^{-1}\boldsymbol{A}_{21}\Bigg]^{-1/2}+\tfrac{M}{2}\ln2\pi.
