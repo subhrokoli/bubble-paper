@@ -2029,9 +2029,9 @@ name "tab:springconstant"
 
 \begin_layout Standard
 Bayes II is applied to Brownian harmonic oscillator by using the fact that
- the posterior distribution can be factored into the Gibbs distribution
- for position and the Maxwell-Boltzmann distribution for the velocity at
- the equilibrium to give a diagonal covariance matrix, as given in Eq.
+ the likelihood can be factored into the Gibbs distribution for position
+ and the Maxwell-Boltzmann distribution for the velocity at the equilibrium
+ to give a diagonal covariance matrix, as given in Eq.
  (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2091,7 +2091,16 @@ end{subequations}
 
 \end_inset
 
-The MAP estimates and the error bars are obtained straightforwardly from
+Here we have informative uniform prior for 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+, which constrain them to take only positive values.
+ The MAP estimates and the error bars are obtained straightforwardly from
  the posterior probability
 \begin_inset ERT
 status open
