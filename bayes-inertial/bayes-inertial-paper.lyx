@@ -104,7 +104,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -862,7 +861,7 @@ P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta
 
 The first term is the best fit likelihood while the second term, the product
  of the prior for the MAP estimate and the standard error of this estimate
- is called the Ockham factor .
+ is called the Ockham factor.
  Thus models which achieve a compromise between the degree of fit to the
  data and the number of parameters required for the fit are ones which are
  favoured by the Bayesian model selection procedure.
@@ -2172,7 +2171,7 @@ reference "eq:map_stationary"
 \end_inset
 
 , and the results of both the Bayesian methods are in excellent agreement
- with our simulation parameters, as shown in Tables 
+ with our simulation parameters, as shown in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:springconstant"
@@ -2727,7 +2726,7 @@ r - are obtained jointly from the MAP estimates.
 \end_layout
 
 \begin_layout Standard
-We have provided two Bayesian methods for estimation of parameters.
+We have provided two Bayesian methods for the estimation of parameters.
  The first method, Bayes I, uses an exact expression for the likelihood,
  which is valid for any 
 \begin_inset Formula $\Delta t$
