@@ -104,6 +104,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -863,6 +864,23 @@ Bayes I
 \end_inset
 
  below.
+ 
+\end_layout
+
+\begin_layout Standard
+In the absence of detailed balance such explicit expressions can no longer
+ be found and linear systems have to be solved to obtain the MAP estimate
+ of 
+\begin_inset Formula $\boldsymbol{c}$
+\end_inset
+
+ from that of 
+\begin_inset Formula $\boldsymbol{\Sigma}$
+\end_inset
+
+ and, then, to relate it to the matrix of diffusion coefficients.
+ We shall pursue this elsewhere.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -888,8 +906,8 @@ key "jaynes2003probability"
 \end_inset
 
 .
- Using an informative prior that constrains the parameters to positive values,
- the logarithms of the posterior probability is
+ Using informative uniform prior, the logarithms of the posterior probability
+ is then
 \begin_inset Formula 
 \begin{align}
 \ln P\left(\boldsymbol{X}|\boldsymbol{c}\right) & =\dfrac{N}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}|\bm{c}|}-\dfrac{1}{2}\sum_{n=1}^{N}\boldsymbol{x}_{n}^{T}\boldsymbol{c}^{-1}\,\boldsymbol{x}_{n}.\label{eq:posteriorEqm}
@@ -907,22 +925,6 @@ The MAP estimates are obtained straightforwardly from the posterior probability
 
 The Bayesian inference method described above, using stationary distribution,
  is referred as “Bayes II”.
- 
-\end_layout
-
-\begin_layout Standard
-In the absence of detailed balance such explicit expressions can no longer
- be found and linear systems have to be solved to obtain the MAP estimate
- of 
-\begin_inset Formula $\boldsymbol{c}$
-\end_inset
-
- from that of 
-\begin_inset Formula $\boldsymbol{\Sigma}$
-\end_inset
-
- and, then, to relate it to the matrix of diffusion coefficients.
- We shall pursue this elsewhere.
  
 \end_layout
 
