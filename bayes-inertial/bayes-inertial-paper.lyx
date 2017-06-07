@@ -800,6 +800,135 @@ In the absence of detailed balance such explicit expressions can no longer
 \end_layout
 
 \begin_layout Standard
+An alternative Bayesian procedure for directly estimating the mass of the
+ particle and the trap stiffness can be formulated by interpreting the time
+ series of positions and velocities as independent repeated samples from
+ the respective stationary distributions 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jaynes2003probability"
+
+\end_inset
+
+.
+ At equilibrium, the likelihood can be factored into the Gibbs distribution
+ for position and the Maxwell-Boltzmann distribution for the velocity.
+ Using an informative prior that constrains 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ to positive values, the logarithms of the posterior probability can be
+ written as
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\ln P\left(k|x\right) & =\dfrac{N}{2}\ln\dfrac{k}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{k}{k_{B}T}\sum x_{n}^{2},\label{eq:map_k_stat}\\
+\ln P\left(m|v\right) & =\dfrac{N}{2}\ln\dfrac{m}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{m}{k_{B}T}\sum v_{n}^{2}.\label{eq:map_m_stat}
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+The MAP estimates and the error bars are obtained straightforwardly from
+ the posterior probability
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "eq:map_stationary"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\dfrac{k^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}x_{n}^{2}} & ,\qquad\sigma_{k}=\frac{\sqrt{2}}{\sqrt{N}}k^{\ast},\label{eq:map_k}\\
+\dfrac{m^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}v_{n}^{2}}, & \qquad\,\,\sigma_{m}=\frac{\sqrt{2}}{\sqrt{N}}m^{\ast}.\label{eq:map_v}
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+The error bars decrease as the number of points in the time series increase,
+ as expected.
+ Following the notation used in our earlier paper 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bera2017fast"
+
+\end_inset
+
+, we refer to this method as 
+\begin_inset Quotes eld
+\end_inset
+
+Bayes II
+\begin_inset Quotes erd
+\end_inset
+
+.
+ The Bayesian inference method described in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Bayesian-inference"
+
+\end_inset
+
+, on the other hand, is referred as “Bayes I”.
+\end_layout
+
+\begin_layout Standard
 In the above, it is assumed that the data generating model is given, and
  only the parameters of the model need to be estimated.
  In certain circumstances, though, the model itself may be uncertain and
@@ -1046,74 +1175,10 @@ is a zero-mean Gaussian white noise with variance
 \end_inset
 
  from discrete observations of the position and velocity.
- 
-\end_layout
-
-\begin_layout Standard
-The Langevin equation can be recast as bivariate Ornstein-Uhlenbeck process
- in phase space
-\begin_inset Formula 
-\begin{equation}
-\frac{d}{dt}\left(\begin{array}{c}
-x\\
-v
-\end{array}\right)=-\bm{\lambda}\left(\begin{array}{c}
-x\\
-v
-\end{array}\right)+\sqrt{2\boldsymbol{D}}\left(\begin{array}{c}
-0\\
-\zeta
-\end{array}\right),\label{eq:phase_space}
-\end{equation}
-
-\end_inset
-
-where the mean regression and diffusion matrices are
-\begin_inset Formula 
-\begin{equation}
-\bm{\lambda}=\begin{pmatrix}0 & -1\\
-\omega_{0}^{2} & 1/\tau
-\end{pmatrix},
-\end{equation}
-
-\end_inset
-
-and
-\begin_inset Formula 
-\begin{equation}
-\bm{D=}\begin{pmatrix}0 & 0\\
-0 & D/\tau^{2}
-\end{pmatrix},
-\end{equation}
-
-\end_inset
-
-respectively.
- Here 
-\begin_inset Formula $\omega_{0}=\sqrt{k/m}$
-\end_inset
-
- is the natural frequency of the undamped harmonic oscillator and 
-\begin_inset Formula $\tau=m/\gamma$
-\end_inset
-
- is the characteristic time scale associated with the thermalization of
- the momentum due to viscous dissipation.
- The diffusion coefficient of the particle is defined, as usual, by the
- Einstein relation 
-\begin_inset Formula $D=k_{B}T\gamma^{-1}$
-\end_inset
-
- and 
-\begin_inset Formula $\zeta(t)$
-\end_inset
-
- is now a zero-mean Gaussian white noise with unit variance.
- 
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1177,6 +1242,69 @@ name "fig:PositionsVelocity"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The Langevin equation can be recast as bivariate Ornstein-Uhlenbeck process
+ in phase space
+\begin_inset Formula 
+\begin{equation}
+\frac{d}{dt}\left(\begin{array}{c}
+x\\
+v
+\end{array}\right)=-\bm{\lambda}\left(\begin{array}{c}
+x\\
+v
+\end{array}\right)+\sqrt{2\boldsymbol{D}}\left(\begin{array}{c}
+0\\
+\zeta
+\end{array}\right),\label{eq:phase_space}
+\end{equation}
+
+\end_inset
+
+where the mean regression and diffusion matrices are
+\begin_inset Formula 
+\begin{equation}
+\bm{\lambda}=\begin{pmatrix}0 & -1\\
+\omega_{0}^{2} & 1/\tau
+\end{pmatrix},
+\end{equation}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{equation}
+\bm{D=}\begin{pmatrix}0 & 0\\
+0 & D/\tau^{2}
+\end{pmatrix},
+\end{equation}
+
+\end_inset
+
+respectively.
+ Here 
+\begin_inset Formula $\omega_{0}=\sqrt{k/m}$
+\end_inset
+
+ is the natural frequency of the undamped harmonic oscillator and 
+\begin_inset Formula $\tau=m/\gamma$
+\end_inset
+
+ is the characteristic time scale associated with the thermalization of
+ the momentum due to viscous dissipation.
+ The diffusion coefficient of the particle is defined, as usual, by the
+ Einstein relation 
+\begin_inset Formula $D=k_{B}T\gamma^{-1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\zeta(t)$
+\end_inset
+
+ is now a zero-mean Gaussian white noise with unit variance.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1279,139 +1407,6 @@ reference "eq:covariance-OC"
  manipulations detailed in the Appendix, for the parameters of interest:
  the mass of the particle, the trap stiffness and the particle friction
  coefficient.
- 
-\end_layout
-
-\begin_layout Standard
-An alternative Bayesian procedure for directly estimating the mass of the
- particle and the trap stiffness can be formulated by interpreting the time
- series of positions and velocities as independent repeated samples from
- the respective stationary distributions 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "jaynes2003probability"
-
-\end_inset
-
-.
- At equilibrium, the likelihood can be factored into the Gibbs distribution
- for position and the Maxwell-Boltzmann distribution for the velocity.
- Using an informative prior that constrains 
-\begin_inset Formula $m$
-\end_inset
-
- and 
-\begin_inset Formula $k$
-\end_inset
-
- to positive values, the logarithms of the posterior probability can be
- written as
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{subequations}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{align}
-\ln P\left(k|x\right) & =\dfrac{N}{2}\ln\dfrac{k}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{k}{k_{B}T}\sum x_{n}^{2},\label{eq:map_k_stat}\\
-\ln P\left(m|v\right) & =\dfrac{N}{2}\ln\dfrac{m}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{m}{k_{B}T}\sum v_{n}^{2}.\label{eq:map_m_stat}
-\end{align}
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{subequations}
-\end_layout
-
-\end_inset
-
-The MAP estimates and the error bars are obtained straightforwardly from
- the posterior probability
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{subequations}
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "eq:map_stationary"
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{align}
-\dfrac{k^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}x_{n}^{2}} & ,\qquad\sigma_{k}=\frac{\sqrt{2}}{\sqrt{N}}k^{\ast},\label{eq:map_k}\\
-\dfrac{m^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}v_{n}^{2}}, & \qquad\,\,\sigma_{m}=\frac{\sqrt{2}}{\sqrt{N}}m^{\ast}.\label{eq:map_v}
-\end{align}
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{subequations}
-\end_layout
-
-\end_inset
-
-The error bars decrease as the number of points in the time series increase,
- as expected.
- Following the notation used in our earlier paper 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "bera2017fast"
-
-\end_inset
-
-, we refer to this method as 
-\begin_inset Quotes eld
-\end_inset
-
-Bayes II
-\begin_inset Quotes erd
-\end_inset
-
-.
- The Bayesian inference method described in Section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Bayesian-inference"
-
-\end_inset
-
-, on the other hand, is referred as “Bayes I”.
- We now use both the methods, Bayes I and Bayes II, to perform Bayesian
- inference of the time series data from the underdamped Brownian harmonic
- oscillator.
  
 \begin_inset Float figure
 wide false
@@ -1532,7 +1527,7 @@ name "fig:stationary"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2094,7 +2089,9 @@ name "tab:springconstant"
 \end_layout
 
 \begin_layout Standard
-In Fig.
+We now use both the methods, Bayes I and Bayes II, to perform Bayesian inference
+ of the time series data from the underdamped Brownian harmonic oscillator.
+ In Fig.
  (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2204,7 +2201,7 @@ reference "eq:map_stationary"
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
