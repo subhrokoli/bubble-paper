@@ -1228,7 +1228,7 @@ reference "eq:stationarity"
 \end_layout
 
 \begin_layout Section
-Bayesian MAP estimates of Brownian harmonic oscillator
+Bayesian inference of the Brownian harmonic oscillator
 \end_layout
 
 \begin_layout Standard
@@ -1582,7 +1582,7 @@ name "fig:autocorrelation"
 \begin_inset Float table
 wide true
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -2111,9 +2111,9 @@ reference "fig:PositionsVelocity"
 
 ) we show a typical sample path of positions and velocities of one component
  of motion in the plane of an optical trap, together with its histogram.
- From the histogram it can be seen that the distributions of positions and
- velocities are stationary and are well-approximated by normal distribution.
- This fact has be utilized to estimate the mass 
+ From the histogram, it can be seen that the distributions of positions
+ and velocities are well-approximated by the Gaussian distribution.
+ This fact has been utilized to estimate the mass 
 \begin_inset Formula $m$
 \end_inset
 
@@ -2133,7 +2133,8 @@ reference "fig:PositionsVelocity"
 \end_layout
 
 \begin_layout Standard
-The results of Bayesian inference are shown in the pairs-plots of 
+The results of Bayesian MAP estimates of underdamped harmonic oscillator
+ are shown in the pairs-plots of 
 \begin_inset Formula $\left(m,k,\gamma\right)$
 \end_inset
 
