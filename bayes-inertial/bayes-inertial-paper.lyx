@@ -104,7 +104,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -221,7 +220,7 @@ reference "sec:BIBHO"
  The problem of model selection is addressed in section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:Model-selection"
+reference "sec:conclusion"
 
 \end_inset
 
@@ -2856,7 +2855,7 @@ name "fig:modelSelection"
 Discussions and summary
 \begin_inset CommandInset label
 LatexCommand label
-name "sec:Results-and-Discussions"
+name "sec:conclusion"
 
 \end_inset
 
