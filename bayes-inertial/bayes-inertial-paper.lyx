@@ -1240,9 +1240,9 @@ reference "sec:Bayesian-inference"
 
 \end_inset
 
- provides a principled way of estimating the parameters of the Brownian
+ provides a principled way of jointly estimating the parameters of the Brownian
  harmonic oscillators from discrete time series.
- The MAP estimates of the multivariate Ornstein-Uhlenbeck process is provided
+ The MAP estimates of the multivariate Ornstein-Uhlenbeck process are provided
  in Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1258,7 +1258,7 @@ reference "eq:covariance-OC"
 \end_inset
 
 ).
- These equation can be used to obtain the the MAP estimates of 
+ These equation can be used to obtain the MAP estimates of 
 \begin_inset Formula $\bm{\Sigma}$
 \end_inset
 
@@ -1277,8 +1277,9 @@ reference "eq:covariance-OC"
 
 .
  These estimates can be used to obtain the scalar MAP estimates, after algebraic
- manipulation as shown in Appendix, for the parameters of interest: the
- mass of the particle, the trap stiffness and the particle friction coefficient.
+ manipulations detailed in the Appendix, for the parameters of interest:
+ the mass of the particle, the trap stiffness and the particle friction
+ coefficient.
  
 \end_layout
 
@@ -1383,7 +1384,8 @@ end{subequations}
 
 \end_inset
 
-The error-bar decreases as the number of points in the time series.
+The error bars decrease as the number of points in the time series increase,
+ as expected.
  Following the notation used in our earlier paper 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2112,8 +2114,8 @@ reference "fig:PositionsVelocity"
 ) we show a typical sample path of positions and velocities of one component
  of motion in the plane of an optical trap, together with its histogram.
  From the histogram it can be seen that the distributions of positions and
- velocities are stationary and are independently well-approximated by Gaussians.
- This fact can be utilized to estimate the mass 
+ velocities are stationary and are well-approximated by normal distribution.
+ This fact has be utilized to estimate the mass 
 \begin_inset Formula $m$
 \end_inset
 
@@ -2129,7 +2131,7 @@ reference "fig:PositionsVelocity"
 \begin_inset Formula $\langle x^{2}\rangle$
 \end_inset
 
- in the conventional equipartition method or Bayes-I.
+ in the conventional equipartition method.
 \end_layout
 
 \begin_layout Standard
@@ -2616,7 +2618,7 @@ reference "fig:modelSelection"
 
 \end_inset
 
-), we plot the the logarithm of the Bayesian evidence 
+), we plot the logarithm of the Bayesian evidence 
 \begin_inset Formula $\ln P(\boldsymbol{X}|\mathcal{M}_{\alpha})$
 \end_inset
 
@@ -2759,9 +2761,9 @@ key "bera2017fast"
 \end_layout
 
 \begin_layout Standard
-The method presented here relies on the exact expression for the likelihood,
- which is possible if the friction does not depend on the position of the
- particle.
+The methods presented here depend on the exact expressions for the likelihood,
+ which is possible only if the friction does not depend on the position
+ of the particle.
  The friction is, in general, configuration dependent, for example, a particle
  near a wall.
  In such cases, exact analytical solutions are not available and one has
