@@ -2842,9 +2842,6 @@ The methods presented here depend on the exact expressions for the likelihood,
  The Bayesian model selection, described here, can then be used to obtain
  the best possible model.
  We will explore these directions in a future work.
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status open
 
