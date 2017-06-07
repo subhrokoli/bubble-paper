@@ -104,6 +104,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -2729,19 +2730,23 @@ We have provided two Bayesian methods for estimation of parameters.
 , and is obtained in terms four of sufficient statistics.
  This method is then reliable for a low frequency of time series and provides
  large computational gains as we do not have to work with the entire time
- series but with four sufficient statistics.
- This makes our method much faster than the tradition Bayesian techniques.
+ series but with only four matrices.
+ This makes our method orders of magnitude faster than the tradition Bayesian
+ techniques 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bera2017fast"
+
+\end_inset
+
+.
  The second method uses the fact that, in equilibrium, only trap stiffness
  and mass can determine the fluctuations of position and velocity.
  Here, Gibbs and Maxwell-Boltzmann distributions are used to obtain the
  MAP estimates and the error bars.
  We find excellent agreements of the two methods and the simulation of the
  Brownian harmonic oscillator.
- 
-\end_layout
-
-\begin_layout Standard
-Finally, we present a Bayesian model selection method for choice of a model
+ Finally, we present a Bayesian model selection method for choice of a model
  which best fits the data with the least number of parameters.
  The Bayesian model selection involves estimation of the evidence, which
  is obtained in terms of the best fit likelihood and the Ockham factor.
@@ -2749,6 +2754,18 @@ Finally, we present a Bayesian model selection method for choice of a model
  the Ockham factor penalizes for more parameters.
  Thus the interplay of best fit likelihood and the Ockham factor determines
  the choice of the model.
+\end_layout
+
+\begin_layout Standard
+In this work, we have assumed that friction does not depend on the position
+ of the particle, and thus obtained exact expressions of the likelihood.
+ The friction is, in general, configuration dependent, for example, a particle
+ near a wall.
+ In such cases, exact analytical solutions are not available and one has
+ to resort to approximations to obtain the likelihood.
+ The Bayesian model selection, described here, can then be used to obtain
+ the best possible model.
+ We will explore these directions in a future work.
 \end_layout
 
 \begin_layout Standard
@@ -2831,7 +2848,7 @@ Inspecting the above expression, we recognize that the posterior is normal
 \end_inset
 
 , and then directly yields the MAP estimate 
-\begin_inset Formula $\boldsymbol{\Lambda^{\ast}=}\exp\left(-\bm{\lambda^{\ast}}\Delta t\right)=\bm{T_{2}T_{3}^{-1}}$
+\begin_inset Formula $\boldsymbol{\Lambda^{\ast}}=\bm{T_{2}T_{3}^{-1}}$
 \end_inset
 
 .
@@ -2869,7 +2886,7 @@ At the maximum, we obtain the MAP estimate for
 \end_inset
 
  after algebraic manipulations.
- The resulting estimates of 
+ The resulting joint estimates of 
 \begin_inset Formula $m^{\ast},k^{\ast},$
 \end_inset
 
