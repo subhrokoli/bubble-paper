@@ -868,7 +868,14 @@ In the above, it is assumed that the data generating model is given, and
 \begin_inset Formula $\mathcal{M}_{\alpha}$
 \end_inset
 
-, given the data.
+, given the data 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jeffreys1998theory,mackay2003information,gregory2005bayesian"
+
+\end_inset
+
+.
  The probability of a model, given the data, is
 \begin_inset Formula 
 \begin{equation}
@@ -2021,11 +2028,10 @@ name "tab:springconstant"
 \end_layout
 
 \begin_layout Standard
-Bayes II is applied to Brownian harmonic oscillator by using the fact that,
- at equilibrium, the posterior distribution can be factored into the Gibbs
- distribution for position and the Maxwell-Boltzmann distribution for the
- velocity.
- The expression of covariance matrix then reduces to Eq.
+Bayes II is applied to Brownian harmonic oscillator by using the fact that
+ the posterior distribution can be factored into the Gibbs distribution
+ for position and the Maxwell-Boltzmann distribution for the velocity at
+ the equilibrium to give a diagonal covariance matrix, as given in Eq.
  (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2050,7 +2056,7 @@ reference "eq:posteriorEqm"
 \begin_inset Formula $k$
 \end_inset
 
-  as
+ as
 \begin_inset ERT
 status open
 
@@ -2634,15 +2640,7 @@ reference "eq:evidence"
 
 \end_inset
 
-), is obtained in terms of the best fit likelihood and the Ockham factor
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "jeffreys1998theory,mackay2003information,gregory2005bayesian"
-
-\end_inset
-
-.
+), is obtained in terms of the best fit likelihood and the Ockham factor.
  This expression generalizes for a model 
 \begin_inset Formula $\mathcal{M}_{\alpha}$
 \end_inset
