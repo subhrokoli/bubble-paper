@@ -173,11 +173,78 @@ We apply the method to a Brownian harmonic oscillator, which is a bivariate
 ed and overdamped models.
  These results are of relevance to the calibration of optical traps and
  their use in force measurements, as we discuss at greater length below.
+\end_layout
+
+\begin_layout Standard
+In section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:mvoup"
+
+\end_inset
+
+, we obtain key expression for the multivariate Ornstein-Uhlenbeck process.
+ The Bayesian inference for a given time series data is discussed in section
  
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Bayesian-inference"
+
+\end_inset
+
+.
+ Path sampling and the equations of a Brownian harmonic oscillator has been
+ discussed in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Path-sampling"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Brownian-harmonic-oscillator"
+
+\end_inset
+
+ respectively.
+ Bayesian inference of the time series data generated from underdamped Brownian
+ harmonic oscillator has been presented in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:BIBHO"
+
+\end_inset
+
+.
+ The problem of model selection is addressed in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Model-selection"
+
+\end_inset
+
+.
+ Finally, we conclude in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:mvoup"
+
+\end_inset
+
+, by summarizing our main results.
 \end_layout
 
 \begin_layout Section
 Multivariate Ornstein-Uhlenbeck Process
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:mvoup"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -953,6 +1020,13 @@ principle of parsimony
 
 \begin_layout Section
 Path sampling
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Path-sampling"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1296,6 +1370,13 @@ reference "eq:stationarity"
 
 \begin_layout Section
 Bayesian inference of the Brownian harmonic oscillator
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:BIBHO"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2621,7 +2702,7 @@ key "bera2017fast"
 \end_inset
 
  are effectively the univariate special case of the inference depicted in
- Section 
+ section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Bayesian-inference"
