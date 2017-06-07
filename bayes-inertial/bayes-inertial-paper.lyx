@@ -104,6 +104,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -2637,12 +2638,13 @@ reference "fig:modelSelection"
 To summarize, we have shown that one can discern the model from a time series
  by estimating the Bayesian evidence.
  The method presented for a choice of model is valid for an arbitrary dimension
- of the Ornstein-Uhlenbeck process.
+ of the Ornstein-Uhlenbeck process, and not limited to the example of univariate
+ and bivariate case pursued here.
  
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2728,10 +2730,10 @@ We have provided two Bayesian methods for estimation of parameters.
 \begin_inset Formula $\Delta t$
 \end_inset
 
-, and is obtained in terms four of sufficient statistics.
+, and is obtained in terms of four matrix sufficient statistics.
  This method is then reliable for a low frequency of time series and provides
  large computational gains as we do not have to work with the entire time
- series but with only four matrices.
+ series but only with four matrices.
  This makes our method orders of magnitude faster than the tradition Bayesian
  techniques 
 \begin_inset CommandInset citation
@@ -2758,8 +2760,8 @@ key "bera2017fast"
 \end_layout
 
 \begin_layout Standard
-In this work, we have assumed that friction does not depend on the position
- of the particle, and thus obtained exact expressions of the likelihood.
+The method presented here lies on exact expression for the likelihood, which
+ is possible if the friction does not depend on the position of the particle.
  The friction is, in general, configuration dependent, for example, a particle
  near a wall.
  In such cases, exact analytical solutions are not available and one has
