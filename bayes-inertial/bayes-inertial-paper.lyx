@@ -104,6 +104,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -2179,8 +2180,8 @@ reference "tab:springconstant"
 \end_inset
 
 .
- We characterize the error bars for our Bayesian method by the variance-covarian
-ce matrix for the posterior distribution in Table 
+ We characterize the error bars for Bayes I by the variance-covariance matrix
+ for the posterior distribution in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:CovrianceMatrix"
@@ -2188,6 +2189,18 @@ reference "tab:CovrianceMatrix"
 \end_inset
 
 .
+ The error bars of Bayes II follow trivially from Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map_stationary"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
@@ -2434,15 +2447,15 @@ name "tab:CovrianceMatrix"
 \end_layout
 
 \begin_layout Standard
-In Fig.(
+The autocorrelation functions and the power spectral densities of position
+ and velocity have plotted in Fig.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:autocorrelation"
 
 \end_inset
 
-), the position and velocity autocorrelation functions and the corresponding
- power spectral densities have plotted.
+).
  To demonstrate the convergence of the results obtained from fitting analytical
  expressions to the autocorrelation or power spectral density and our Bayesian
  MAP estimates, we plot the analytical curves of autocorrelation function
@@ -2457,26 +2470,32 @@ reference "fig:autocorrelation"
 ).
  It can be seen that the results of our Bayesian method agree with the tradition
 al fitting based methods.
- An alternate procedure for estimating mass, trap stiffness and particle
- friction in optical traps has been explored by 
+ 
+\end_layout
+
+\begin_layout Standard
+A fitting procedure for estimating mass, trap stiffness and particle friction
+ in optical traps has been explored by 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Bera:16"
 
 \end_inset
 
-, where the analytical expressions of the autocorrelation function and power
- spectral density have been fitted to the data, and best fit estimates are
- obtained.
+.
+ Here, the analytical expressions of the autocorrelation functions and the
+ power spectral densities have been fitted to the time series data to obtain
+ the best fit estimates.
  However, the error bars for these fitting based methods were as high as
  15%.
- Thus, our Bayesian inference methods are more accurate then conventional
+ Thus, our Bayesian inference methods are more accurate than conventional
  fitting based methods.
  Moreover, our MAP estimates are obtained in terms of sufficient statistics
  and the entire information relevant to Bayesian inference is contained
  in them.
  This leads to massive computation gains as we do not have to work with
- entire time series but with four matrices.
+ the entire time series, but with four matrices, to obtain the estimates
+ of relevant parameters.
 \end_layout
 
 \begin_layout Section
