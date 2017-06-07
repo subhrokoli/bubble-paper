@@ -104,6 +104,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -1224,8 +1225,6 @@ reference "eq:stationarity"
 
  and it trivial to verify the Onsager-Casimir symmetry.
  
-\series bold
-STOP HERE! 
 \end_layout
 
 \begin_layout Section
@@ -2078,9 +2077,8 @@ Bayes-I
 
 \begin_layout Plain Layout
 Bayesian MAP estimates of mass, trap stiffness and friction from a time
- series obtained from simulation of underdamped harmonic oscillator.
- The MAP estimates of two Bayesian methods are in agreement with the parameters
- used in the simulation.
+ series obtained from the simulation of underdamped harmonic oscillator.
+ The parameters used in the simulation are also shown.
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:springconstant"
