@@ -591,7 +591,7 @@ The denominator
 \begin_inset Formula 
 \begin{align}
 \ln P\left(\bm{\lambda},\bm{c}\vert\bm{X}\right) & =\dfrac{N-1}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}\vert\bm{\Sigma}\vert}+\dfrac{1}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}|\bm{c}|}\nonumber \\
- & -\dfrac{1}{2}\sum_{n=1}^{N-1}\boldsymbol{\Delta}_{n}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\Delta}_{n}-\dfrac{1}{2}\boldsymbol{x}_{1}^{T}\boldsymbol{c}\,\boldsymbol{x}_{1},\label{eq:logProb}
+ & -\dfrac{1}{2}\sum_{n=1}^{N-1}\boldsymbol{\Delta}_{n}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\Delta}_{n}-\dfrac{1}{2}\boldsymbol{x}_{1}^{T}\boldsymbol{c}^{-1}\,\boldsymbol{x}_{1},\label{eq:logProb}
 \end{align}
 
 \end_inset
@@ -800,10 +800,16 @@ In the absence of detailed balance such explicit expressions can no longer
 \end_layout
 
 \begin_layout Standard
-An alternative Bayesian procedure for directly estimating the mass of the
- particle and the trap stiffness can be formulated by interpreting the time
- series of positions and velocities as independent repeated samples from
- the respective stationary distributions 
+An alternative Bayesian procedure for directly estimating 
+\begin_inset Formula $\boldsymbol{c}$
+\end_inset
+
+ can be formulated by interpreting the time series 
+\begin_inset Formula $\boldsymbol{X}$
+\end_inset
+
+ as independent repeated samples from the respective stationary distributions
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "jaynes2003probability"
@@ -811,98 +817,29 @@ key "jaynes2003probability"
 \end_inset
 
 .
- At equilibrium, the likelihood can be factored into the Gibbs distribution
- for position and the Maxwell-Boltzmann distribution for the velocity.
- Using an informative prior that constrains 
-\begin_inset Formula $m$
+ At equilibrium, the likelihood can be factored into 
+\begin_inset Formula $\mathcal{N}\left(\boldsymbol{0},\boldsymbol{c}\right)$
 \end_inset
 
- and 
-\begin_inset Formula $k$
-\end_inset
-
- to positive values, the logarithms of the posterior probability can be
- written as
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{subequations}
-\end_layout
-
-\end_inset
-
-
+.
+ Using an informative prior that constrains the parameters to positive values,
+ the logarithms of the posterior probability can be written as
 \begin_inset Formula 
 \begin{align}
-\ln P\left(k|x\right) & =\dfrac{N}{2}\ln\dfrac{k}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{k}{k_{B}T}\sum x_{n}^{2},\label{eq:map_k_stat}\\
-\ln P\left(m|v\right) & =\dfrac{N}{2}\ln\dfrac{m}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{m}{k_{B}T}\sum v_{n}^{2}.\label{eq:map_m_stat}
+\ln P\left(\boldsymbol{X}|\boldsymbol{c}\right) & =\dfrac{N}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}|\bm{c}|}-\dfrac{1}{2}\sum_{n=1}^{N}\boldsymbol{x}_{n}^{T}\boldsymbol{c}^{-1}\,\boldsymbol{x}_{n},\label{eq:map_k_stat}
 \end{align}
 
 \end_inset
 
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{subequations}
-\end_layout
-
-\end_inset
-
-The MAP estimates and the error bars are obtained straightforwardly from
- the posterior probability
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{subequations}
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "eq:map_stationary"
-
-\end_inset
-
-
+The MAP estimates are obtained straightforwardly from the posterior probability
 \begin_inset Formula 
 \begin{align}
-\dfrac{k^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}x_{n}^{2}} & ,\qquad\sigma_{k}=\frac{\sqrt{2}}{\sqrt{N}}k^{\ast},\label{eq:map_k}\\
-\dfrac{m^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}v_{n}^{2}}, & \qquad\,\,\sigma_{m}=\frac{\sqrt{2}}{\sqrt{N}}m^{\ast}.\label{eq:map_v}
+\boldsymbol{c}^{\ast}=\frac{1}{N}\sum_{n=1}^{N}\boldsymbol{x}_{n}\,\boldsymbol{x}_{n}^{T}=\frac{1}{N}\boldsymbol{T}_{3} & ,\label{eq:mapStationary-c}
 \end{align}
 
 \end_inset
 
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{subequations}
-\end_layout
-
-\end_inset
-
-The error bars decrease as the number of points in the time series increase,
- as expected.
- Following the notation used in our earlier paper 
+Following the notation used in our earlier paper 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "bera2017fast"
@@ -918,14 +855,8 @@ Bayes II
 \end_inset
 
 .
- The Bayesian inference method described in Section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Bayesian-inference"
-
-\end_inset
-
-, on the other hand, is referred as “Bayes I”.
+ The Bayesian inference method described earlier, on the other hand, is
+ referred as “Bayes I”.
 \end_layout
 
 \begin_layout Standard
@@ -3011,6 +2942,135 @@ Here
 
  are the elements of the Hessian matrix.
  
+\end_layout
+
+\begin_layout Standard
+An alternative Bayesian procedure for directly estimating the mass of the
+ particle and the trap stiffness can be formulated by interpreting the time
+ series of positions and velocities as independent repeated samples from
+ the respective stationary distributions 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jaynes2003probability"
+
+\end_inset
+
+.
+ At equilibrium, the likelihood can be factored into the Gibbs distribution
+ for position and the Maxwell-Boltzmann distribution for the velocity.
+ Using an informative prior that constrains 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ to positive values, the logarithms of the posterior probability can be
+ written as
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\ln P\left(k|x\right) & =\dfrac{N}{2}\ln\dfrac{k}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{k}{k_{B}T}\sum x_{n}^{2},\label{eq:map_k_stat-1}\\
+\ln P\left(m|v\right) & =\dfrac{N}{2}\ln\dfrac{m}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{m}{k_{B}T}\sum v_{n}^{2}.\label{eq:map_m_stat-1}
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+The MAP estimates and the error bars are obtained straightforwardly from
+ the posterior probability
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "eq:map_stationary-1"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\dfrac{k^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}x_{n}^{2}} & ,\qquad\sigma_{k}=\frac{\sqrt{2}}{\sqrt{N}}k^{\ast},\label{eq:map_k-1}\\
+\dfrac{m^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}v_{n}^{2}}, & \qquad\,\,\sigma_{m}=\frac{\sqrt{2}}{\sqrt{N}}m^{\ast}.\label{eq:map_v-1}
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+The error bars decrease as the number of points in the time series increase,
+ as expected.
+ Following the notation used in our earlier paper 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bera2017fast"
+
+\end_inset
+
+, we refer to this method as 
+\begin_inset Quotes eld
+\end_inset
+
+Bayes II
+\begin_inset Quotes erd
+\end_inset
+
+.
+ The Bayesian inference method described in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Bayesian-inference"
+
+\end_inset
+
+, on the other hand, is referred as “Bayes I”.
 \end_layout
 
 \begin_layout Standard
