@@ -2072,8 +2072,8 @@ begin{subequations}
 
 \begin_inset Formula 
 \begin{align}
-\ln P\left(k|x\right) & =\dfrac{N}{2}\ln\dfrac{k}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{k}{k_{B}T}\sum x_{n}^{2},\label{eq:map_k_stat-1}\\
-\ln P\left(m|v\right) & =\dfrac{N}{2}\ln\dfrac{m}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{m}{k_{B}T}\sum v_{n}^{2}.\label{eq:map_m_stat-1}
+\ln P\left(k|x\right) & =\dfrac{N}{2}\ln\dfrac{k}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{k}{k_{B}T}\sum x_{n}^{2},\label{eq:map_k_stat}\\
+\ln P\left(m|v\right) & =\dfrac{N}{2}\ln\dfrac{m}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{m}{k_{B}T}\sum v_{n}^{2}.\label{eq:map_m_stat}
 \end{align}
 
 \end_inset
@@ -2091,7 +2091,7 @@ end{subequations}
 
 \end_inset
 
-.The MAP estimates and the error bars are obtained straightforwardly from
+The MAP estimates and the error bars are obtained straightforwardly from
  the posterior probability
 \begin_inset ERT
 status open
@@ -2108,15 +2108,15 @@ begin{subequations}
 
 \begin_inset CommandInset label
 LatexCommand label
-name "eq:map_stationary-1"
+name "eq:map_stationary"
 
 \end_inset
 
 
 \begin_inset Formula 
 \begin{align}
-\dfrac{k^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}x_{n}^{2}} & ,\qquad\sigma_{k}=\frac{\sqrt{2}}{\sqrt{N}}k^{\ast},\label{eq:map_k-1}\\
-\dfrac{m^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}v_{n}^{2}}, & \qquad\,\,\sigma_{m}=\frac{\sqrt{2}}{\sqrt{N}}m^{\ast}.\label{eq:map_v-1}
+\dfrac{k^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}x_{n}^{2}} & ,\qquad\sigma_{k}=\frac{\sqrt{2}}{\sqrt{N}}k^{\ast},\label{eq:map_k}\\
+\dfrac{m^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}v_{n}^{2}}, & \qquad\,\,\sigma_{m}=\frac{\sqrt{2}}{\sqrt{N}}m^{\ast}.\label{eq:map_v}
 \end{align}
 
 \end_inset
@@ -2640,19 +2640,20 @@ reference "eq:evidence"
 
 \end_inset
 
-), is obtained in terms of the best fit likelihood and the Ockham factor.
- This expression generalizes for a model 
-\begin_inset Formula $\mathcal{M}_{\alpha}$
-\end_inset
-
- with several parameters as 
+), is obtained in terms of the best fit likelihood and the Ockham factor
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "mackay1992bayesian"
 
 \end_inset
 
+.
+ This expression generalizes for a model 
+\begin_inset Formula $\mathcal{M}_{\alpha}$
+\end_inset
 
+ with several parameters as
 \begin_inset Formula 
 \begin{equation}
 P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta}^{\ast},\mathcal{M}_{\alpha})\,P(\boldsymbol{\theta}^{\ast}|\mathcal{M}_{\alpha})\,(\det(\bm{A}/2\pi))^{-1/2}.\label{eq:evidence-multivariate}
