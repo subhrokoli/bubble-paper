@@ -104,7 +104,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -2760,8 +2759,9 @@ key "bera2017fast"
 \end_layout
 
 \begin_layout Standard
-The method presented here lies on exact expression for the likelihood, which
- is possible if the friction does not depend on the position of the particle.
+The method presented here relies on the exact expression for the likelihood,
+ which is possible if the friction does not depend on the position of the
+ particle.
  The friction is, in general, configuration dependent, for example, a particle
  near a wall.
  In such cases, exact analytical solutions are not available and one has
