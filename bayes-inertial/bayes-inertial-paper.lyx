@@ -862,7 +862,7 @@ P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta
 
 The first term is the best fit likelihood while the second term, the product
  of the prior for the MAP estimate and the standard error of this estimate
- is called the Ockham factor.
+ is called the Ockham factor .
  Thus models which achieve a compromise between the degree of fit to the
  data and the number of parameters required for the fit are ones which are
  favoured by the Bayesian model selection procedure.
@@ -1392,30 +1392,26 @@ key "bera2017fast"
 
 \end_inset
 
-, we refer to this alternative method as 
+, we refer to this method as 
 \begin_inset Quotes eld
 \end_inset
 
-Bayes- II
+Bayes II
 \begin_inset Quotes erd
 \end_inset
 
-, to distinguish it from the framework described in Section 
+.
+ The Bayesian inference method described in Section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Bayesian-inference"
 
 \end_inset
 
-, which we refer to as 
-\begin_inset Quotes eld
-\end_inset
-
-Bayes-I
-\begin_inset Quotes erd
-\end_inset
-
-.
+, on the other hand, is referred as “Bayes I”.
+ We now use both the methods, Bayes I and Bayes II, to perform Bayesian
+ inference of the time series data from the underdamped Brownian harmonic
+ oscillator.
  
 \begin_inset Float figure
 wide false
@@ -1536,14 +1532,14 @@ name "fig:stationary"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename figure_4.png
 	lyxscale 25
 	display false
-	width 42text%
+	width 46text%
 
 \end_inset
 
@@ -1554,13 +1550,12 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-(a) Normalized autocorrelation function for position, (b) Power Spectrum
- for position, (c) Normalized autocorrelation function for velocity, (d)
- Power Spectrum for velocity.
+(a) Normalized autocorrelation function, and (b) power Spectrum for position.
+ (c) Normalized autocorrelation function, and (d) power Spectrum for velocity.
  The autocorrelation and power spectra, computed from the position and velocity
  data, are plotted in cyan and red respectively.
- The black curves, on the other hand, represent the analytical expressions
- for autocorrelations and power spectra in terms of the Bayesian MAP estimates.
+ The black curves denote the analytical form of autocorrelations and power
+ spectra in terms of the Bayesian MAP estimates.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -1637,7 +1632,7 @@ Simulation
 \begin_inset Text
 
 \begin_layout Plain Layout
-Bayes-I
+Bayes I
 \end_layout
 
 \end_inset
@@ -1646,7 +1641,7 @@ Bayes-I
 \begin_inset Text
 
 \begin_layout Plain Layout
-Bayes-II
+Bayes II
 \end_layout
 
 \end_inset
@@ -1846,7 +1841,7 @@ Simulation
 \begin_inset Text
 
 \begin_layout Plain Layout
-Bayes-I
+Bayes I
 \end_layout
 
 \end_inset
@@ -1855,7 +1850,7 @@ Bayes-I
 \begin_inset Text
 
 \begin_layout Plain Layout
-Bayes-II
+Bayes II
 \end_layout
 
 \end_inset
@@ -1873,7 +1868,7 @@ Simulation
 \begin_inset Text
 
 \begin_layout Plain Layout
-Bayes-I
+Bayes I
 \end_layout
 
 \end_inset
@@ -2099,9 +2094,7 @@ name "tab:springconstant"
 \end_layout
 
 \begin_layout Standard
-We now present the results of our Bayesian MAP estimates applied to underdamped
- Brownian harmonic oscillator data.
- In Fig.
+In Fig.
  (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2110,10 +2103,12 @@ reference "fig:PositionsVelocity"
 \end_inset
 
 ) we show a typical sample path of positions and velocities of one component
- of motion in the plane of an optical trap, together with its histogram.
+ of motion in the plane of an optical trap.
+ The distribution of the positions and the velocities are also shown by
+ histograms.
  From the histogram, it can be seen that the distributions of positions
  and velocities are well-approximated by the Gaussian distribution.
- This fact has been utilized to estimate the mass 
+ This fact can be utilized to estimate the mass 
 \begin_inset Formula $m$
 \end_inset
 
@@ -2133,12 +2128,12 @@ reference "fig:PositionsVelocity"
 \end_layout
 
 \begin_layout Standard
-The results of Bayesian MAP estimates of underdamped harmonic oscillator
- are shown in the pairs-plots of 
+The joint Bayesian MAP estimates of the parameters 
 \begin_inset Formula $\left(m,k,\gamma\right)$
 \end_inset
 
- in Fig.(
+ of the underdamped harmonic oscillator and the projections of posterior
+ distribution are shown in in Fig.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:inference"
@@ -2146,8 +2141,8 @@ reference "fig:inference"
 \end_inset
 
 ).
- Panel (a) contains the results from Bayes-I while (b) contains results
- from Bayes-II method.
+ Panel (a) contains the results from Bayes I while panel (b) contains results
+ from Bayes II method.
  The MAP estimates in panel (a) of Fig.(
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2171,13 +2166,13 @@ reference "eq:map_stationary"
 
 ).
  Projections of the posterior distribution are shown for each case with
- filled contours representing the error-bars.
+ filled contours representing the error bars.
  There is a single maximum at 
 \begin_inset Formula $\left(m^{\ast},k^{\ast},\gamma^{\ast}\right)$
 \end_inset
 
 , and the results of both the Bayesian methods are in excellent agreement
- with our simulation parameters, as demonstrated in Tables 
+ with our simulation parameters, as shown in Tables 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:springconstant"
@@ -2580,7 +2575,15 @@ reference "eq:evidence"
 
 \end_inset
 
-), is obtained in terms of the best fit likelihood and the Ockham factor.
+), is obtained in terms of the best fit likelihood and the Ockham factor
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jeffreys1998theory,mackay2003information,gregory2005bayesian"
+
+\end_inset
+
+.
  This expression generalizes for a model 
 \begin_inset Formula $\mathcal{M}_{\alpha}$
 \end_inset
@@ -2588,7 +2591,7 @@ reference "eq:evidence"
  with several parameters as 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "mackay1992bayesian,mackay2003information,gregory2005bayesian"
+key "mackay1992bayesian"
 
 \end_inset
 
@@ -2725,8 +2728,8 @@ r - are obtained jointly from the MAP estimates.
 
 \begin_layout Standard
 We have provided two Bayesian methods for estimation of parameters.
- The first method uses an exact expression for the likelihood, which is
- valid for any 
+ The first method, Bayes I, uses an exact expression for the likelihood,
+ which is valid for any 
 \begin_inset Formula $\Delta t$
 \end_inset
 
@@ -2743,10 +2746,12 @@ key "bera2017fast"
 \end_inset
 
 .
- The second method uses the fact that, in equilibrium, only trap stiffness
- and mass can determine the fluctuations of position and velocity.
+ The second method, Bayes II, uses the fact that, in equilibrium, only trap
+ stiffness and mass can determine the fluctuations of position and velocity.
  Here, Gibbs and Maxwell-Boltzmann distributions are used to obtain the
  MAP estimates and the error bars.
+ Bayes II is essentially a Bayesian inference applied to the conventional
+ equipartition method.
  We find excellent agreements of the two methods and the simulation of the
  Brownian harmonic oscillator.
  Finally, we present a Bayesian model selection method for choice of a model
