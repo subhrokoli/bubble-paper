@@ -736,6 +736,7 @@ key "jeffreys1998theory,jaynes2003probability,sivia2006data"
 
 .
  Its explicit form is provided in the Appendix.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -780,23 +781,22 @@ The MAP estimate for the matrix of diffusion coefficients then follows from
  This is the multivariate generalization of our earlier result for the diffusion
  coefficient for the univariate Ornstein-Uhlenbeck process.
  The three preceding equations are the central results of this paper.
- 
-\end_layout
+ Following the notation used in our earlier paper 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bera2017fast"
 
-\begin_layout Standard
-In the absence of detailed balance such explicit expressions can no longer
- be found and linear systems have to be solved to obtain the MAP estimate
- of 
-\begin_inset Formula $\boldsymbol{c}$
 \end_inset
 
- from that of 
-\begin_inset Formula $\boldsymbol{\Sigma}$
+, we refer to this method as 
+\begin_inset Quotes eld
 \end_inset
 
- and, then, to relate it to the matrix of diffusion coefficients.
- We shall pursue this elsewhere.
- 
+Bayes I
+\begin_inset Quotes erd
+\end_inset
+
+ below.
 \end_layout
 
 \begin_layout Standard
@@ -823,10 +823,10 @@ key "jaynes2003probability"
 
 .
  Using an informative prior that constrains the parameters to positive values,
- the logarithms of the posterior probability can be written as
+ the logarithms of the posterior probability is
 \begin_inset Formula 
 \begin{align}
-\ln P\left(\boldsymbol{X}|\boldsymbol{c}\right) & =\dfrac{N}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}|\bm{c}|}-\dfrac{1}{2}\sum_{n=1}^{N}\boldsymbol{x}_{n}^{T}\boldsymbol{c}^{-1}\,\boldsymbol{x}_{n},\label{eq:map_k_stat}
+\ln P\left(\boldsymbol{X}|\boldsymbol{c}\right) & =\dfrac{N}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}|\bm{c}|}-\dfrac{1}{2}\sum_{n=1}^{N}\boldsymbol{x}_{n}^{T}\boldsymbol{c}^{-1}\,\boldsymbol{x}_{n}.\label{eq:posteriorEqm}
 \end{align}
 
 \end_inset
@@ -834,29 +834,30 @@ key "jaynes2003probability"
 The MAP estimates are obtained straightforwardly from the posterior probability
 \begin_inset Formula 
 \begin{align}
-\boldsymbol{c}^{\ast}=\frac{1}{N}\sum_{n=1}^{N}\boldsymbol{x}_{n}\,\boldsymbol{x}_{n}^{T}=\frac{1}{N}\boldsymbol{T}_{3} & ,\label{eq:mapStationary-c}
+\boldsymbol{c}^{\ast}=\frac{1}{N}\sum_{n=1}^{N}\boldsymbol{x}_{n}\boldsymbol{x}_{n}^{T}=\frac{1}{N}\boldsymbol{T}_{3} & .\label{eq:mapStationary-c}
 \end{align}
 
 \end_inset
 
-Following the notation used in our earlier paper 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "bera2017fast"
+The Bayesian inference method described above, using stationary distribution,
+ is referred as “Bayes II”.
+ 
+\end_layout
 
+\begin_layout Standard
+In the absence of detailed balance such explicit expressions can no longer
+ be found and linear systems have to be solved to obtain the MAP estimate
+ of 
+\begin_inset Formula $\boldsymbol{c}$
 \end_inset
 
-, we refer to this method as 
-\begin_inset Quotes eld
+ from that of 
+\begin_inset Formula $\boldsymbol{\Sigma}$
 \end_inset
 
-Bayes II
-\begin_inset Quotes erd
-\end_inset
-
-.
- The Bayesian inference method described earlier, on the other hand, is
- referred as “Bayes I”.
+ and, then, to relate it to the matrix of diffusion coefficients.
+ We shall pursue this elsewhere.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1246,7 +1247,7 @@ n distribution for the velocity to give a diagonal covariance matrix
 \begin{equation}
 \bm{c}=\begin{pmatrix}k_{B}T/k & 0\\
 0 & k_{B}T/m
-\end{pmatrix}.
+\end{pmatrix}.\label{eq:covarianceDiagonal}
 \end{equation}
 
 \end_inset
@@ -1300,8 +1301,8 @@ reference "sec:Bayesian-inference"
 
  provides a principled way of jointly estimating the parameters of the Brownian
  harmonic oscillators from discrete time series.
- The MAP estimates of the multivariate Ornstein-Uhlenbeck process are provided
- in Eq.(
+ The MAP estimates of the multivariate Ornstein-Uhlenbeck process using
+ Bayes I are provided in Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:map-estimates"
@@ -2017,6 +2018,118 @@ name "tab:springconstant"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Bayes II is applied to Brownian harmonic oscillator by using the fact that,
+ at equilibrium, the posterior distribution can be factored into the Gibbs
+ distribution for position and the Maxwell-Boltzmann distribution for the
+ velocity.
+ The expression of covariance matrix then reduces to Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:covarianceDiagonal"
+
+\end_inset
+
+).
+ Thus the logarithms of the posterior probability of Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:posteriorEqm"
+
+\end_inset
+
+) reduces to equation for mass 
+\begin_inset Formula $m$
+\end_inset
+
+ and stiffness 
+\begin_inset Formula $k$
+\end_inset
+
+  as
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\ln P\left(k|x\right) & =\dfrac{N}{2}\ln\dfrac{k}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{k}{k_{B}T}\sum x_{n}^{2},\label{eq:map_k_stat-1}\\
+\ln P\left(m|v\right) & =\dfrac{N}{2}\ln\dfrac{m}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{m}{k_{B}T}\sum v_{n}^{2}.\label{eq:map_m_stat-1}
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+.The MAP estimates and the error bars are obtained straightforwardly from
+ the posterior probability
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "eq:map_stationary-1"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\dfrac{k^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}x_{n}^{2}} & ,\qquad\sigma_{k}=\frac{\sqrt{2}}{\sqrt{N}}k^{\ast},\label{eq:map_k-1}\\
+\dfrac{m^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}v_{n}^{2}}, & \qquad\,\,\sigma_{m}=\frac{\sqrt{2}}{\sqrt{N}}m^{\ast}.\label{eq:map_v-1}
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+The error bars decrease as the number of points in the time series increase,
+ as expected.
 \end_layout
 
 \begin_layout Standard
@@ -2942,138 +3055,6 @@ Here
 
  are the elements of the Hessian matrix.
  
-\end_layout
-
-\begin_layout Standard
-An alternative Bayesian procedure for directly estimating the mass of the
- particle and the trap stiffness can be formulated by interpreting the time
- series of positions and velocities as independent repeated samples from
- the respective stationary distributions 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "jaynes2003probability"
-
-\end_inset
-
-.
- At equilibrium, the likelihood can be factored into the Gibbs distribution
- for position and the Maxwell-Boltzmann distribution for the velocity.
- Using an informative prior that constrains 
-\begin_inset Formula $m$
-\end_inset
-
- and 
-\begin_inset Formula $k$
-\end_inset
-
- to positive values, the logarithms of the posterior probability can be
- written as
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{subequations}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{align}
-\ln P\left(k|x\right) & =\dfrac{N}{2}\ln\dfrac{k}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{k}{k_{B}T}\sum x_{n}^{2},\label{eq:map_k_stat-1}\\
-\ln P\left(m|v\right) & =\dfrac{N}{2}\ln\dfrac{m}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{m}{k_{B}T}\sum v_{n}^{2}.\label{eq:map_m_stat-1}
-\end{align}
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{subequations}
-\end_layout
-
-\end_inset
-
-The MAP estimates and the error bars are obtained straightforwardly from
- the posterior probability
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{subequations}
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "eq:map_stationary-1"
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{align}
-\dfrac{k^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}x_{n}^{2}} & ,\qquad\sigma_{k}=\frac{\sqrt{2}}{\sqrt{N}}k^{\ast},\label{eq:map_k-1}\\
-\dfrac{m^{\ast}}{k_{B}T}=\dfrac{N}{\sum_{n=1}^{N}v_{n}^{2}}, & \qquad\,\,\sigma_{m}=\frac{\sqrt{2}}{\sqrt{N}}m^{\ast}.\label{eq:map_v-1}
-\end{align}
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{subequations}
-\end_layout
-
-\end_inset
-
-The error bars decrease as the number of points in the time series increase,
- as expected.
- Following the notation used in our earlier paper 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "bera2017fast"
-
-\end_inset
-
-, we refer to this method as 
-\begin_inset Quotes eld
-\end_inset
-
-Bayes II
-\begin_inset Quotes erd
-\end_inset
-
-.
- The Bayesian inference method described in Section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Bayesian-inference"
-
-\end_inset
-
-, on the other hand, is referred as “Bayes I”.
-\end_layout
-
-\begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "bayes-inertial-paper"
