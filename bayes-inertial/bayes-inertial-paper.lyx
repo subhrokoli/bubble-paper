@@ -1582,7 +1582,7 @@ name "fig:autocorrelation"
 \begin_inset Float table
 wide true
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -2076,9 +2076,10 @@ Bayes-I
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Bayesian MAP estimates of mass, trap stiffness and friction.
- The values of parameters in the simulation are in agreement with the Bayesian
- MAP estimates of the two Bayes methods.
+Bayesian MAP estimates of mass, trap stiffness and friction from a time
+ series obtained from simulation of underdamped harmonic oscillator.
+ The MAP estimates of two Bayesian methods are in agreement with the parameters
+ used in the simulation.
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:springconstant"
@@ -2648,7 +2649,7 @@ status open
 \begin_inset Graphics
 	filename modelSelection.jpg
 	display false
-	width 45text%
+	width 46text%
 
 \end_inset
 
@@ -2659,22 +2660,23 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Plots of the logarithm of Bayesian evidence for model selection for data
- from an underdamped model 
-\begin_inset Formula $\left(\mathcal{M}_{UD}\right)$
+Bayesian model selection procedure for time series data from underdamped
+ (
+\begin_inset Formula $\mathcal{M}_{UD}$
 \end_inset
 
- and an overdamped model 
-\begin_inset Formula $\left(\mathcal{M}_{OD}\right)$
+) and overdamped (
+\begin_inset Formula $\mathcal{M}_{OD}$
 \end_inset
 
- in natural log units (nits).
- The panel on the left show the results of our model selection algorithm
- for underdamped data 
+) Brownian harmonic oscillator.
+ The logarithm of Bayesian evidence has been plotted in the natural log
+ units (nits).
+ The plot for underdamped data 
 \begin_inset Formula $(\gamma=\gamma_{c}/10)$
 \end_inset
 
-, while the one on the right corresponds to overdamped data 
+ is shown on the left, while the right panel is for overdamped data 
 \begin_inset Formula $(\gamma=10\gamma_{c})$
 \end_inset
 
@@ -2863,7 +2865,7 @@ Inspecting the above expression, we recognize that the posterior is normal
 , we obtain
 \begin_inset Formula 
 \begin{align}
- & \dfrac{\partial\ln P\left(\bm{\Lambda},\bm{\Sigma}\vert\bm{X}\right)}{\partial\bm{\Sigma^{-1}}}=-\dfrac{1}{2}\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}+\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big]+\dfrac{N}{2}\left(\bm{\Sigma}\right).
+ & \dfrac{\partial\ln P\left(\bm{\Lambda},\bm{\Sigma}\vert\bm{X}\right)}{\partial\bm{\Sigma^{-1}}}=-\dfrac{1}{2}\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}+\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big]+\dfrac{N}{2}\bm{\Sigma}.
 \end{align}
 
 \end_inset
@@ -2976,7 +2978,7 @@ reference "eq:evidence-multivariate"
  
 \begin_inset Formula 
 \begin{align}
-\ln P\left(D|\mathcal{M}_{\alpha}\right) & \simeq-\frac{N}{2}\left(\bm{\Sigma}^{*^{-1}}:\bm{\Sigma}^{*}+\ln((2\pi)^{M}\,|\bm{\Sigma}^{*}|)\right)+\ln\Bigg[\det(\boldsymbol{A}_{22})\det[\boldsymbol{A}_{11}-\boldsymbol{A}_{12}\boldsymbol{A}_{22}^{-1}\boldsymbol{A}_{21}\Bigg]^{-1/2}+\tfrac{M}{2}\ln2\pi.
+\ln P\left(D|\mathcal{M}_{\alpha}\right) & \simeq-\frac{N}{2}\left(\bm{\Sigma}^{*^{-1}}:\bm{\Sigma}^{*}+\ln((2\pi)^{M}\,|\bm{\Sigma}^{*}|)\right)+\ln\Bigg[\det(\boldsymbol{A}_{22})\det[\boldsymbol{A}_{11}-\boldsymbol{A}_{12}\boldsymbol{A}_{22}^{-1}\boldsymbol{A}_{21}\Bigg]^{-1/2}.
 \end{align}
 
 \end_inset
