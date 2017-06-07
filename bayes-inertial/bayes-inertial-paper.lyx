@@ -183,7 +183,7 @@ reference "sec:mvoup"
 \end_inset
 
 , we obtain key expression for the multivariate Ornstein-Uhlenbeck process.
- The Bayesian inference for a given time series data is discussed in section
+ The Bayesian inference for a given time series is discussed in section
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -220,7 +220,7 @@ reference "sec:BIBHO"
  The problem of model selection is addressed in section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:conclusion"
+reference "sec:Model-selection"
 
 \end_inset
 
@@ -228,7 +228,7 @@ reference "sec:conclusion"
  Finally, we conclude in section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:mvoup"
+reference "sec:conclusion"
 
 \end_inset
 
