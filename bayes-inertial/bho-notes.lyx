@@ -1,0 +1,258 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass revtex4-1
+\begin_preamble
+\usepackage[colorlinks=true,linktocpage=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,citecolor=MidnightBlue,anchorcolor=MidnightBlue]{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\end_preamble
+\options aps, onecolumn, pre,superscriptaddress, notitlepage
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\output_sync_macro "\usepackage[active]{srcltx}"
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+A sequence of states at times 
+\begin_inset Formula $t=n\Delta t$
+\end_inset
+
+, where 
+\begin_inset Formula $n$
+\end_inset
+
+ is a positive integer, forming a discrete sampling of a path can be obtained
+ from the following iteration
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{x}_{n+1}=\boldsymbol{\Lambda}\boldsymbol{x}_{n}+\sqrt{\boldsymbol{\Sigma}}\,\boldsymbol{\xi}_{n},
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\sqrt{\boldsymbol{\Sigma}}$
+\end_inset
+
+ is a matrix square-root (usually the Cholesky factor) of 
+\begin_inset Formula $\boldsymbol{\Sigma}$
+\end_inset
+
+ and 
+\begin_inset Formula $\boldsymbol{\xi}_{n}\sim\mathcal{N}(\boldsymbol{0},\boldsymbol{I})$
+\end_inset
+
+ is an 
+\begin_inset Formula $M$
+\end_inset
+
+-dimensional uncorrelated normal variate with zero mean and unit variance.
+ 
+\end_layout
+
+\begin_layout Standard
+We now consider the case of a Brownian harmonic oscillator where the position
+ and the velocity are determined from the above recursion relation.
+ The form of the 
+\begin_inset Formula $\boldsymbol{\Lambda}$
+\end_inset
+
+ and 
+\begin_inset Formula $\boldsymbol{\Sigma}$
+\end_inset
+
+ matrices can then be obtained following the expressions in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "norrelykke2011harmonic"
+
+\end_inset
+
+.
+ Their explicit forms are
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{\Lambda}=\exp\left(-\Delta t/2\tau\right)\left[\cos(\omega\Delta t)\mathbf{I}+\sin(\omega\Delta t)\mathbf{J}\right],
+\end{equation}
+
+\end_inset
+
+where the matrices 
+\begin_inset Formula $\mathbf{I}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{J}$
+\end_inset
+
+ are
+\begin_inset Formula 
+\begin{equation}
+\bm{I}=\begin{pmatrix}1 & 0\\
+0 & 1
+\end{pmatrix},\qquad\bm{J}=\frac{1}{\omega}\begin{pmatrix}\tfrac{1}{2\tau} & 1\\
+-\omega_{0}^{2} & -1/2\tau
+\end{pmatrix},
+\end{equation}
+
+\end_inset
+
+Here 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ are the particle mass and friction coefficient.
+ 
+\begin_inset Formula $\omega_{0}=\sqrt{k/m}$
+\end_inset
+
+ is the cyclic frequency of the underdamped oscillation, 
+\begin_inset Formula $\tau=m/\gamma$
+\end_inset
+
+ is the characteristic time scale and 
+\begin_inset Formula $\omega=\sqrt{k/m-\gamma^{2}/(4m^{2})}$
+\end_inset
+
+ is the frequency of the damped oscillator.
+\end_layout
+
+\begin_layout Standard
+The form of the matrix square-root 
+\begin_inset Formula $\boldsymbol{L}=\sqrt{\boldsymbol{\Sigma}}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{L}=\begin{pmatrix}L_{1} & 0\\
+L_{3}/L_{1} & \sqrt{L_{2}^{2}-L_{3}^{3}/L_{1}^{2}}
+\end{pmatrix},
+\end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+L_{1} & =\left(\dfrac{D}{4\omega^{2}\omega_{0}^{2}\tau^{3}}(4\omega^{2}\tau^{2}+\exp\left(-\dfrac{\Delta t}{\tau}\right)\left[\cos\left(2\omega\Delta t\right)-2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right]\right)^{1/2},\\
+L_{2} & =\left(\dfrac{D}{4\omega^{2}\tau^{3}}(4\omega^{2}\tau^{2}+\exp\left(-\dfrac{\Delta t}{\tau}\right)\left[\cos\left(2\omega\Delta t\right)+2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right]\right)^{1/2},\\
+L_{3} & =\left(\dfrac{D}{\omega^{2}\tau^{2}}\exp\left(-\dfrac{\Delta t}{\tau}\right)\sin^{2}\left(\omega\Delta t\right)\right)^{1/2}.
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "bayes-inertial-paper"
+options "unsrt"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
