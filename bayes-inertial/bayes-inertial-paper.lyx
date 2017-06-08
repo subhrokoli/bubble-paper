@@ -104,7 +104,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -906,8 +905,8 @@ key "jaynes2003probability"
 \end_inset
 
 .
- Using informative uniform prior, the logarithms of the posterior probability
- is then
+ Using informative uniform prior, the expression of the logarithms of the
+ posterior probability in this approach is given as
 \begin_inset Formula 
 \begin{align}
 \ln P\left(\boldsymbol{X}|\boldsymbol{c}\right) & =\dfrac{N}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}|\bm{c}|}-\dfrac{1}{2}\sum_{n=1}^{N}\boldsymbol{x}_{n}^{T}\boldsymbol{c}^{-1}\,\boldsymbol{x}_{n}.\label{eq:posteriorEqm}
@@ -923,8 +922,8 @@ The MAP estimates are obtained straightforwardly from the posterior probability
 
 \end_inset
 
-The Bayesian inference method described above, using stationary distribution,
- is referred as “Bayes II”.
+The Bayesian inference method described above, using the stationary distribution
+ of the time series, is referred as “Bayes II”.
  
 \end_layout
 
@@ -1192,13 +1191,13 @@ is a zero-mean Gaussian white noise with variance
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename figure_1.png
 	display false
-	width 46text%
+	width 48text%
 
 \end_inset
 
@@ -2122,7 +2121,7 @@ reference "eq:covarianceDiagonal"
 \end_inset
 
 ).
- Thus the logarithms of the posterior probability of Eq.
+ Thus the logarithm of the posterior probability of Eq.
  (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2173,7 +2172,7 @@ end{subequations}
 
 \end_inset
 
-Here we have informative uniform prior for 
+Here we have used informative uniform prior for 
 \begin_inset Formula $m$
 \end_inset
 
@@ -2955,9 +2954,14 @@ MAP estimates
 \end_layout
 
 \begin_layout Standard
-In this appendix, we obtain Bayesian MAP estimates from the expression of
- the logarithm of the posterior probability, Eq.
- (
+We now provide an explicit derivation of the Bayesian MAP estimates from
+ the logarithm of the posterior probability.
+ Consider the quadratic form 
+\begin_inset Formula $\bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}=\left(\bm{x_{n+1}}-\bm{\Lambda}\bm{x_{n}}\right)^{\bm{T}}\bm{\Sigma^{-1}}\left(\bm{x_{n+1}}-\bm{\Lambda}\bm{x_{n}}\right)$
+\end_inset
+
+ that occurs in the expression of the logarithm of the posterior probability
+ in Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:logProb"
@@ -2965,13 +2969,7 @@ reference "eq:logProb"
 \end_inset
 
 ).
- Consider the quadratic form 
-\begin_inset Formula $\bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}=\left(\bm{x_{n+1}}-\bm{\Lambda}\bm{x_{n}}\right)^{\bm{T}}\bm{\Sigma^{-1}}\left(\bm{x_{n+1}}-\bm{\Lambda}\bm{x_{n}}\right)$
-\end_inset
-
- that occurs in the expression for the posterior probability.
- Expanding terms in the expression and completing the summation we have
- the following identity
+ Expanding terms and completing the summation we have the following identity
 \begin_inset Formula 
 \begin{align}
  & \bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}=-\dfrac{1}{2}\bm{\Sigma}^{-1}:\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}+\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big].\label{eq:lp}
@@ -2979,7 +2977,7 @@ reference "eq:logProb"
 
 \end_inset
 
-Here we have used the definitions of sufficient statistics in Eq.
+Here, we have used the definitions of sufficient statistics in Eq.
  (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3082,19 +3080,45 @@ The second derivatives of the log posterior w.r.t
 \end_inset
 
  at the maximum is
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{align}
-\dfrac{\partial^{2}\ln P\left(\bm{\Lambda},\bm{\Sigma}\vert\bm{X}\right)}{\partial(\bm{\Sigma^{-1}})^{2}}= & -\dfrac{N}{2}\left(\bm{\Sigma}^{*}\right)^{2}.\\
+\dfrac{\partial^{2}\ln P\left(\bm{\Lambda},\bm{\Sigma}\vert\bm{X}\right)}{\partial(\bm{\Sigma^{-1}})^{2}}= & -\dfrac{N}{2}\left(\bm{\Sigma}^{*}\right)^{2},\\
 \dfrac{\partial^{2}\ln P\left(\bm{\Lambda},\bm{\Sigma}\vert\bm{X}\right)}{\partial\bm{\Lambda}^{2}}= & -\bm{\Sigma}^{*-1}(\bm{T_{3}}+N\boldsymbol{c}*)-\frac{N}{2}\bm{\Sigma}^{*-2}((\bm{\Lambda}^{*}\boldsymbol{c}^{*}+\boldsymbol{c}^{*}\bm{\Lambda}^{*T}))^{2}.
 \end{align}
 
 \end_inset
 
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
 The mixed derivative at the maximum is
 \begin_inset Formula 
-\begin{align*}
+\begin{align}
 \dfrac{\partial^{2}\ln P\left(\bm{\Lambda},\bm{\Sigma}\vert\bm{X}\right)}{\partial\bm{\Lambda}\partial\bm{\Sigma^{-1}}} & \eqsim-\frac{N}{2}(\bm{\Lambda}^{*}\boldsymbol{c}^{*}+\boldsymbol{c}^{*}\bm{\Lambda}^{*T}).
-\end{align*}
+\end{align}
 
 \end_inset
 
@@ -3110,8 +3134,9 @@ The Hessian matrix at the maximum is then
 
 \end_inset
 
-The above expression of the Hessian matrix matrix at the MAP values has
- been used to obtain the evidence for a 
+The above expression of the Hessian matrix and the logarithm of the posterior
+ probability at the MAP estimates have been used to obtain the logarithm
+ of the evidence for a 
 \begin_inset Formula $M$
 \end_inset
 
@@ -3127,11 +3152,10 @@ reference "eq:evidence-multivariate"
 \end_inset
 
 ).
- With explicit forms, the expression of the logarithm of the evidence is
- 
+ The explicit form of the logarithm of the evidence is then
 \begin_inset Formula 
 \begin{align}
-\ln P\left(D|\mathcal{M}_{\alpha}\right) & \simeq-\frac{N}{2}\left(\bm{\Sigma}^{*^{-1}}:\bm{\Sigma}^{*}+\ln((2\pi)^{M}\,|\bm{\Sigma}^{*}|)\right)+\ln\Bigg[\det(\boldsymbol{A}_{22})\det[\boldsymbol{A}_{11}-\boldsymbol{A}_{12}\boldsymbol{A}_{22}^{-1}\boldsymbol{A}_{21}\Bigg]^{-1/2}+\tfrac{M}{2}\ln2\pi.
+\ln P\left(\bm{X}|\mathcal{M}_{\alpha}\right) & \simeq-\frac{N}{2}\left(\bm{\Sigma}^{*^{-1}}:\bm{\Sigma}^{*}+\ln((2\pi)^{M}\,|\bm{\Sigma}^{*}|)\right)+\ln\Bigg[\det(\boldsymbol{A}_{22})\det[\boldsymbol{A}_{11}-\boldsymbol{A}_{12}\boldsymbol{A}_{22}^{-1}\boldsymbol{A}_{21}\Bigg]^{-1/2}+\tfrac{M}{2}\ln2\pi.
 \end{align}
 
 \end_inset
