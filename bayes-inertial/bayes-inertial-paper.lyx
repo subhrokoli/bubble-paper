@@ -104,7 +104,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -670,10 +669,10 @@ The denominator
 
 , is
 \begin_inset Formula 
-\begin{align}
-\ln P\left(\boldsymbol{\theta}\vert\bm{X}\right) & =\dfrac{N-1}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}\vert\bm{\Sigma}\vert}+\dfrac{1}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}|\bm{c}|}\nonumber \\
- & -\dfrac{1}{2}\sum_{n=1}^{N-1}\boldsymbol{\Delta}_{n}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\Delta}_{n}-\dfrac{1}{2}\boldsymbol{x}_{1}^{T}\boldsymbol{c}^{-1}\,\boldsymbol{x}_{1},\label{eq:logProb}
-\end{align}
+\begin{align*}
+\ln P\left(\boldsymbol{\theta}\vert\bm{X}\right) & =-\frac{1}{2}\sum_{n=1}^{N-1}\boldsymbol{\Delta}_{n}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\Delta}_{n}-\dfrac{1}{2}\boldsymbol{x}_{1}^{T}\boldsymbol{c}^{-1}\,\boldsymbol{x}_{1}\\
+ & +\dfrac{N-1}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}\vert\bm{\Sigma}\vert}+\dfrac{1}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}|\bm{c}|}
+\end{align*}
 
 \end_inset
 
@@ -1155,73 +1154,6 @@ is a zero-mean Gaussian white noise with variance
 \end_inset
 
  from discrete observations of the position and velocity.
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename figure_1.png
-	display false
-	width 48text%
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Sample paths (left) and histograms (right) of the position and velocity
- of a Brownian harmonic oscillator obtained from Langevin simulations.
- The parameters used are 
-\begin_inset Formula $m=1$
-\end_inset
-
-ng, 
-\begin_inset Formula $k=225$
-\end_inset
-
-mg/
-\begin_inset Formula $s^{2}$
-\end_inset
-
-, 
-\begin_inset Formula $\gamma=\gamma_{c}/10$
-\end_inset
-
-, 
-\begin_inset Formula $\gamma_{c}=\sqrt{4mk}$
-\end_inset
-
- and 
-\begin_inset Formula $T=275K$
-\end_inset
-
-.
- Data is sampled at 
-\begin_inset Formula $2^{16}$
-\end_inset
-
- Hz.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:PositionsVelocity"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1229,15 +1161,15 @@ The Langevin equation can be recast as bivariate Ornstein-Uhlenbeck process
  in phase space
 \begin_inset Formula 
 \begin{equation}
-\frac{d}{dt}\left(\begin{array}{c}
+d\left(\begin{array}{c}
 x\\
 v
 \end{array}\right)=-\bm{\lambda}\left(\begin{array}{c}
 x\\
 v
-\end{array}\right)+\sqrt{2\boldsymbol{D}}\left(\begin{array}{c}
-0\\
-\zeta
+\end{array}\right)dt+\sqrt{2\boldsymbol{D}}\left(\begin{array}{c}
+dW_{x}\\
+dW_{v}
 \end{array}\right),\label{eq:phase_space}
 \end{equation}
 
@@ -1333,6 +1265,73 @@ reference "eq:stationarity"
 
  and it trivial to verify the Onsager-Casimir symmetry.
  
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figure_1.png
+	display false
+	width 48text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sample paths (left) and histograms (right) of the position and velocity
+ of a Brownian harmonic oscillator obtained from Langevin simulations.
+ The parameters used are 
+\begin_inset Formula $m=1$
+\end_inset
+
+ng, 
+\begin_inset Formula $k=225$
+\end_inset
+
+mg/
+\begin_inset Formula $s^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\gamma=\gamma_{c}/10$
+\end_inset
+
+, 
+\begin_inset Formula $\gamma_{c}=\sqrt{4mk}$
+\end_inset
+
+ and 
+\begin_inset Formula $T=275K$
+\end_inset
+
+.
+ Data is sampled at 
+\begin_inset Formula $2^{16}$
+\end_inset
+
+ Hz.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:PositionsVelocity"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
