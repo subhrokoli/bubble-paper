@@ -104,6 +104,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -592,6 +593,10 @@ name "sec:Bayesian-inference"
 \end_layout
 
 \begin_layout Standard
+
+\emph on
+Model Fitting: 
+\emph default
 Consider now the discrete time series 
 \begin_inset Formula $\boldsymbol{X}=\left(\boldsymbol{x}_{1},\boldsymbol{x}_{2},...,\boldsymbol{x}_{N}\right)$
 \end_inset
@@ -894,6 +899,10 @@ eck process as the data generating model.
 \end_layout
 
 \begin_layout Standard
+
+\emph on
+Model comparison: 
+\emph default
 Thus far we assumed that the data generating model was given, and only the
  parameters of the model need to be estimated.
  In certain circumstances, though, the model itself may be uncertain and
@@ -1264,7 +1273,104 @@ reference "eq:stationarity"
 \end_inset
 
  and it trivial to verify the Onsager-Casimir symmetry.
- 
+\end_layout
+
+\begin_layout Standard
+Their explicit forms are
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{\Lambda}=e^{\Delta t/2\tau}\left[\cos(\omega\Delta t)\mathbf{I}+\sin(\omega\Delta t)\mathbf{J}\right],
+\end{equation}
+
+\end_inset
+
+where the matrices 
+\begin_inset Formula $\mathbf{I}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{J}$
+\end_inset
+
+ are
+\begin_inset Formula 
+\begin{equation}
+\bm{I}=\begin{pmatrix}1 & 0\\
+0 & 1
+\end{pmatrix},\qquad\bm{J}=\frac{1}{\omega}\begin{pmatrix}1/2\tau & 1\\
+-\omega_{0}^{2} & -1/2\tau
+\end{pmatrix},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The form of the matrix square-root 
+\begin_inset Formula $\boldsymbol{L}=\sqrt{\boldsymbol{\Sigma}}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{L}=\begin{pmatrix}L_{1} & 0\\
+L_{3}^{2}/L_{1} & \sqrt{L_{2}^{2}-L_{3}^{4}/L_{1}^{2}}
+\end{pmatrix},
+\end{equation}
+
+\end_inset
+
+The expression of the elements of the matrix for 
+\begin_inset Formula $\omega\neq0$
+\end_inset
+
+ are
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+L_{1}^{2} & =\dfrac{D}{4\omega^{2}\omega_{0}^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\Delta t/\tau)\nonumber \\
+ & \times\left[\cos\left(2\omega\Delta t\right)-2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right]\Big),\\
+L_{2}^{2} & =\dfrac{D}{4\omega^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\Delta t/\tau)\nonumber \\
+ & \times\left[\cos\left(2\omega\Delta t\right)+2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right]\Big),\\
+L_{3}^{2} & =\dfrac{D}{\omega^{2}\tau^{2}}\exp(-\Delta t/\tau)\sin^{2}\left(\omega\Delta t\right).
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
