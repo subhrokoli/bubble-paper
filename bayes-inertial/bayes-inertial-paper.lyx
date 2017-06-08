@@ -150,46 +150,71 @@ The multivariate Ornstein-Uhlenbeck process is widely used in many branches
  simultaneously Markovian, Gaussian and stationary and, hence, is fully
  characterized by its stationary and conditional distribution, which are
  multivariate normals.
- This simplicity implies that joint distribution functions can be obtained
- from a product of stationary and conditional distributions and the probabilitie
-s of discretely sampled paths can, thereby, be directly calculated in terms
- of the process parameters, the drift and diffusion matrices.
+ This simplicity implies that the probabilities of discretely sampled paths
+ can be calculated exactly and explicitly in terms of the process parameters,
+ the drift and diffusion matrices.
+ This, in turn, allows for exact Bayesian inference of the process parameters
+ without the need for techniques of approximation inference such as variational
+ or Monte Carlo methods.
  
 \end_layout
 
 \begin_layout Standard
-Here we apply Bayesian inference to estimate the drift and diffusion matrices
- of an 
+Here we present the details of such an exact Bayesian estimation method
+ for the 
 \begin_inset Formula $M$
 \end_inset
 
--dimensional Ornstein-Uhlenbeck process from a time series of discrete observati
-ons.
- We illustrate how Bayesian model selection can be used to choose the model
- with the least number of parameters that best fits the data.
+-dimensional Ornstein-Uhlenbeck process.
+ In addition to the problem of estimating the parameters of the 
+\begin_inset Formula $M\times M$
+\end_inset
+
+ drift, diffusion and covariance matrices, we examine the problem of model
+ selection, that is, of choosing the Ornstein-Uhlenbeck model with the least
+ number of parameters that best explains the data.
+ Both these aspects are illustrated using the Brownian harmonic oscillator,
+ a bivariate Ornstein-Uhlenbeck process, as an example.
+ Inter alia, this provides a Bayesian method for estimating the mass, friction,
+ spring constant, correlation functions and power spectral densities of
+ colloidal particles in optical traps.
  
 \end_layout
 
 \begin_layout Standard
-We apply the method to a Brownian harmonic oscillator, which is a bivariate
- Ornstein-Uhlenbeck process, to estimate its mass, damping and stiffness.
- We show how Bayesian model selection can unambiguously choose between underdamp
-ed and overdamped models.
- These results are of relevance to the calibration of optical traps and
- their use in force measurements, as we discuss at greater length below.
-\end_layout
-
-\begin_layout Standard
-In section 
+The remainder of the paper is organized as follows.
+ In section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:mvoup"
 
 \end_inset
 
-, we obtain key expression for the multivariate Ornstein-Uhlenbeck process.
- The Bayesian inference for a given time series is discussed in section
- 
+, we briefly review key properties of the Ornstein-Uhlenbeck process and
+ make use of them in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Bayesian-inference"
+
+\end_inset
+
+ to obtain MAP estimates for the parameters and the model odds.
+ In section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Path-sampling"
+
+\end_inset
+
+ we present an exact path sampling algorithm which is used in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Brownian-harmonic-oscillator"
+
+\end_inset
+
+ to generate sample paths of the Brownian harmonic oscillator and to validate
+ the results of section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Bayesian-inference"
@@ -197,47 +222,15 @@ reference "sec:Bayesian-inference"
 \end_inset
 
 .
- Path sampling and the equations of a Brownian harmonic oscillator has been
- discussed in section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Path-sampling"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Brownian-harmonic-oscillator"
-
-\end_inset
-
- respectively.
- Bayesian inference of the time series data generated from underdamped Brownian
- harmonic oscillator has been presented in section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:BIBHO"
-
-\end_inset
-
-.
- The problem of model selection is addressed in section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Model-selection"
-
-\end_inset
-
-.
- Finally, we conclude in section 
+ We conclude in section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:conclusion"
 
 \end_inset
 
-, by summarizing our main results.
+ with a discussion on further applications.
+ 
 \end_layout
 
 \begin_layout Section
