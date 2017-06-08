@@ -366,24 +366,25 @@ The probability density of a displacement from
 The solution is a multivariate normal distribution
 \begin_inset Formula 
 \begin{equation}
-\mathbf{\boldsymbol{x}}^{\prime}t^{\prime}|\boldsymbol{x}\thinspace t\sim\mathcal{N}\left(\boldsymbol{\mu}_{\Delta t}\,,\boldsymbol{\sigma}_{\Delta t}^{2}\right),\label{eq:conditional-probability}
+\mathbf{\boldsymbol{x}}^{\prime}t^{\prime}|\boldsymbol{x}\thinspace t\sim\mathcal{N}\left(\boldsymbol{\mu}\,,\boldsymbol{\Sigma}\right),\label{eq:conditional-probability}
 \end{equation}
 
 \end_inset
 
 where 
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{\mu}=\boldsymbol{\Lambda}\boldsymbol{x},\quad\boldsymbol{\Sigma}=\boldsymbol{c}-\boldsymbol{\Lambda}\boldsymbol{c}\,\boldsymbol{\Lambda}^{T},\quad\boldsymbol{\Lambda}=e^{-\boldsymbol{\lambda}\Delta t}
+\end{equation}
+
+\end_inset
+
+and 
 \begin_inset Formula $\Delta t=t'-t$
 \end_inset
 
- and the mean and variance are
-\begin_inset Formula 
-\[
-\boldsymbol{\mu}_{\Delta t}=e^{\boldsymbol{-\lambda}\Delta t}\boldsymbol{x},\quad\boldsymbol{\sigma}_{\Delta t}^{2}=\boldsymbol{c}-e^{\boldsymbol{-\lambda}\Delta t}\boldsymbol{c}\,e^{\boldsymbol{-\lambda}^{T}\Delta t}.
-\]
-
-\end_inset
-
-This solution is exact and holds for arbitrary values of 
+.
+ This solution is exact and holds for arbitrary values of 
 \begin_inset Formula $|\Delta t|$
 \end_inset
 
@@ -408,8 +409,8 @@ Then,
 \begin_inset Formula $\boldsymbol{c}=\langle\boldsymbol{x}\boldsymbol{x}^{T}\rangle$
 \end_inset
 
- is identified as the matrix of variances and covariances in the stationary
- state and 
+ is identified as the matrix of covariances in the stationary state and
+ 
 \begin_inset Formula $\mathcal{L}P_{1}=0$
 \end_inset
 
@@ -489,7 +490,7 @@ This is a Lyapunov matrix equation for
 \begin_inset Formula $\boldsymbol{\epsilon c}=\boldsymbol{c\epsilon}$
 \end_inset
 
- for the variance matrix.
+ for the covariance matrix.
 \end_layout
 
 \begin_layout Standard
@@ -558,6 +559,26 @@ is a multivariate Lorentzian in the angular frequency
 \end_inset
 
 .
+ 
+\end_layout
+
+\begin_layout Standard
+In what follows, we shall assume that the independent parameters are contained
+ in the matrix exponential 
+\begin_inset Formula $\boldsymbol{\Lambda}$
+\end_inset
+
+ of the mean regressions rates and in the covariance matrix 
+\begin_inset Formula $\boldsymbol{c}.$
+\end_inset
+
+ The stationarity condition will be used to estimate the diffusion matrix.
+ For brevity, we collect all parameters to be estimated in the vector 
+\begin_inset Formula $\boldsymbol{\theta}=(\boldsymbol{\Lambda},\boldsymbol{c})$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Section
@@ -603,31 +624,27 @@ Consider now the discrete time series
 -dimensional vector corresponding to the number of components of the multivariat
 e Ornstein-Uhlenbeck process.
  From the Markov property of the process, the probability of the path, given
- the parameters 
-\begin_inset Formula $\boldsymbol{\lambda}$
-\end_inset
-
- and 
-\begin_inset Formula $\boldsymbol{c}$
+ the parameters in 
+\begin_inset Formula $\boldsymbol{\theta}=(\boldsymbol{\Lambda},\boldsymbol{c})$
 \end_inset
 
 , is
 \begin_inset Formula 
 \begin{equation}
-P\left(\boldsymbol{X}\vert\boldsymbol{\lambda},\boldsymbol{c}\right)=\prod_{n=1}^{N-1}P_{1\vert1}\left(\boldsymbol{x}_{n+1}\vert\boldsymbol{x}_{n},\boldsymbol{\lambda},\boldsymbol{c}\right)P_{1}\left(\boldsymbol{x}_{1}\vert\boldsymbol{\lambda},\boldsymbol{c}\right).
+P\left(\boldsymbol{X}\vert\boldsymbol{\theta}\right)=\prod_{n=1}^{N-1}P_{1\vert1}\left(\boldsymbol{x}_{n+1}\vert\boldsymbol{x}_{n},\boldsymbol{\theta}\right)P_{1}\left(\boldsymbol{x}_{1}\vert\boldsymbol{\theta}\right).
 \end{equation}
 
 \end_inset
 
 The probability 
-\begin_inset Formula $P\left(\boldsymbol{\lambda},\boldsymbol{c}\vert\boldsymbol{X}\right)$
+\begin_inset Formula $P\left(\boldsymbol{\theta}\vert\boldsymbol{X}\right)$
 \end_inset
 
  of the parameters, given the sample path, is given by Bayes theorem to
  be
 \begin_inset Formula 
 \begin{equation}
-P\left(\boldsymbol{\lambda},\boldsymbol{c}\vert\boldsymbol{X}\right)=\dfrac{P\left(\bm{X}\vert\boldsymbol{\lambda},\boldsymbol{c}\right)P\left(\boldsymbol{\lambda},\boldsymbol{c}\right)}{P\left(\boldsymbol{X}\right)}.\label{eq:bayes-theorem}
+P\left(\boldsymbol{\theta}\vert\boldsymbol{X}\right)=\dfrac{P\left(\bm{X}\vert\boldsymbol{\theta}\right)P\left(\boldsymbol{\theta}\right)}{P\left(\boldsymbol{X}\right)}.\label{eq:bayes-theorem}
 \end{equation}
 
 \end_inset
@@ -639,7 +656,7 @@ The denominator
  is a normalization independent of the parameters and can, so, be ignored
  in parameter estimation.
  Using informative uniform priors for 
-\begin_inset Formula $P\left(\boldsymbol{\lambda},\boldsymbol{c}\right)$
+\begin_inset Formula $P\left(\boldsymbol{\theta}\right)$
 \end_inset
 
 , the logarithm of the posterior probability, after using the explicit forms
@@ -654,52 +671,20 @@ The denominator
 , is
 \begin_inset Formula 
 \begin{align}
-\ln P\left(\bm{\lambda},\bm{c}\vert\bm{X}\right) & =\dfrac{N-1}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}\vert\bm{\Sigma}\vert}+\dfrac{1}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}|\bm{c}|}\nonumber \\
+\ln P\left(\boldsymbol{\theta}\vert\bm{X}\right) & =\dfrac{N-1}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}\vert\bm{\Sigma}\vert}+\dfrac{1}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}|\bm{c}|}\nonumber \\
  & -\dfrac{1}{2}\sum_{n=1}^{N-1}\boldsymbol{\Delta}_{n}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\Delta}_{n}-\dfrac{1}{2}\boldsymbol{x}_{1}^{T}\boldsymbol{c}^{-1}\,\boldsymbol{x}_{1},\label{eq:logProb}
 \end{align}
 
 \end_inset
 
-where the following definitions are made:
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{subequations}
-\end_layout
-
-\end_inset
-
-
+where 
 \begin_inset Formula 
 \begin{align}
-\bm{\Lambda} & \equiv e^{-\bm{\lambda}\Delta t},\\
-\bm{\Sigma} & \equiv\boldsymbol{c}-\boldsymbol{\Lambda}\,\boldsymbol{c}\,\boldsymbol{\Lambda}^{T},\\
 \boldsymbol{\Delta}_{n} & \equiv\boldsymbol{x}_{n+1}-\boldsymbol{\Lambda}\,\boldsymbol{x}_{n}.
 \end{align}
 
 \end_inset
 
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{subequations}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 With some elementary manipulations, detailed in the Appendix, the posterior
  probability can be written in terms of the following four matrix sufficient
  statistics 
@@ -787,11 +772,11 @@ end{subequations}
 
 \end_inset
 
-The error bars can be obtained from the Hessian matrix 
-\begin_inset Formula $\bm{A}=-\nabla\nabla\ln P\left(\bm{\lambda},\bm{c}\vert\bm{X}\right)$
+The error bars are obtained from the Hessian matrix 
+\begin_inset Formula $\bm{A}$
 \end_inset
 
- evaluated at the maximum 
+ of the posterior probability evaluated at the maximum 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "jeffreys1998theory,jaynes2003probability,sivia2006data"
@@ -844,15 +829,7 @@ The MAP estimate for the matrix of diffusion coefficients then follows from
  the stationarity condition.
  This is the multivariate generalization of our earlier result for the diffusion
  coefficient for the univariate Ornstein-Uhlenbeck process.
- The three preceding equations are the central results of this paper.
- Following the notation used in our earlier paper 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "bera2017fast"
-
-\end_inset
-
-, we refer to this method as 
+ We refer to this method as 
 \begin_inset Quotes eld
 \end_inset
 
@@ -860,8 +837,14 @@ Bayes I
 \begin_inset Quotes erd
 \end_inset
 
- below.
- 
+, following the terminology of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bera2017fast"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -885,34 +868,17 @@ An alternative Bayesian procedure for directly estimating
 \begin_inset Formula $\boldsymbol{c}$
 \end_inset
 
- can be formulated by interpreting the time series 
+ is arrived at by interpreting the time series 
 \begin_inset Formula $\boldsymbol{X}$
 \end_inset
 
- as independent repeated samples from the respective stationary distributions
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "jaynes2003probability"
-
-\end_inset
-
-.
- At equilibrium, the likelihood can be factored into 
+ as independent repeated samples from the stationary distribution 
 \begin_inset Formula $\mathcal{N}\left(\boldsymbol{0},\boldsymbol{c}\right)$
 \end_inset
 
 .
- Using informative uniform prior, the expression of the logarithms of the
- posterior probability in this approach is given as
-\begin_inset Formula 
-\begin{align}
-\ln P\left(\boldsymbol{X}|\boldsymbol{c}\right) & =\dfrac{N}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}|\bm{c}|}-\dfrac{1}{2}\sum_{n=1}^{N}\boldsymbol{x}_{n}^{T}\boldsymbol{c}^{-1}\,\boldsymbol{x}_{n}.\label{eq:posteriorEqm}
-\end{align}
-
-\end_inset
-
-The MAP estimates are obtained straightforwardly from the posterior probability
+ Using non-informative priors, the MAP estimate is obtained straightforwardly
+ to be
 \begin_inset Formula 
 \begin{align}
 \boldsymbol{c}^{\ast}=\frac{1}{N}\sum_{n=1}^{N}\boldsymbol{x}_{n}\boldsymbol{x}_{n}^{T}=\frac{1}{N}\boldsymbol{T}_{3} & .\label{eq:mapStationary-c}
@@ -922,12 +888,15 @@ The MAP estimates are obtained straightforwardly from the posterior probability
 
 The Bayesian inference method described above, using the stationary distribution
  of the time series, is referred as “Bayes II”.
- 
+ Numerical consistency between the above two methods of estimating the covarianc
+e matrix provides a stringent test of the appropriateness of the Ornstein-Uhlenb
+eck process as the data generating model.
+ The preceding four equations are the central results of this paper.
 \end_layout
 
 \begin_layout Standard
-In the above, it is assumed that the data generating model is given, and
- only the parameters of the model need to be estimated.
+Thus far we assumed that the data generating model was given, and only the
+ parameters of the model need to be estimated.
  In certain circumstances, though, the model itself may be uncertain and
  it becomes necessary to estimate the probability of different models 
 \begin_inset Formula $\mathcal{M}_{\alpha}$
@@ -1078,21 +1047,21 @@ exactly
  from the following iteration
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{x}_{n+1}=e^{-\boldsymbol{\lambda}\Delta t}\boldsymbol{x}_{n}+\boldsymbol{\sigma}_{\Delta t}\boldsymbol{y}_{n},
+\boldsymbol{x}_{n+1}=\boldsymbol{\Lambda}\boldsymbol{x}_{n}+\sqrt{\boldsymbol{\Sigma}}\,\boldsymbol{\xi}_{n},
 \end{equation}
 
 \end_inset
 
 where 
-\begin_inset Formula $\boldsymbol{\sigma}_{\Delta t}$
+\begin_inset Formula $\sqrt{\boldsymbol{\Sigma}}$
 \end_inset
 
- is a Cholesky factor of the variance 
-\begin_inset Formula $\boldsymbol{\sigma}_{\Delta t}^{2}$
+ is a matrix square-root (usually the Cholesky factor) of 
+\begin_inset Formula $\boldsymbol{\Sigma}$
 \end_inset
 
  and 
-\begin_inset Formula $\boldsymbol{y}_{n}\sim\mathcal{N}(\boldsymbol{0},\boldsymbol{I})$
+\begin_inset Formula $\boldsymbol{\xi}_{n}\sim\mathcal{N}(\boldsymbol{0},\boldsymbol{I})$
 \end_inset
 
  is an 
