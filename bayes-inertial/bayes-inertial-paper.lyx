@@ -104,6 +104,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -123,13 +124,17 @@ The multivariate Ornstein-Uhlenbeck process is used in many branches of
 y mean.
  Here we present a fast Bayesian method to estimate the drift and diffusion
  matrices of the process from discretely observed sample paths.
- We use exact likelihoods to derive the maximum a posteriori estimates in
- terms of four sufficient statistic matrices.
- We apply the method to jointly estimate the mass, damping and stiffness
- of a Brownian harmonic oscillator, a problem relevant to the inertial motion
- of optically trapped colloids.
- Bayesian estimates of the correlation function and power spectral density
- are provided and the problem of model choice is addressed.
+ We use exact likelihoods, expressed in terms of four sufficient statistic
+ matrices, to derive explicit maximum a posteriori estimates and their error
+ bars.
+ We apply the method to the Brownian harmonic oscillator, a bivariate Ornstein-U
+hlenbeck process, to jointly estimate its mass, damping and stiffness and
+ to provide Bayesian estimates of the correlation functions and power spectral
+ densities.
+ A data-driven comparison between underdamped and overdamped oscillators
+ is made by approximating the evidence as a product of the best fit likelihood
+ and the Ockham factor, a problem relevant to the inertial motion of colloidal
+ particles in optical traps.
  
 \end_layout
 
