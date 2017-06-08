@@ -198,7 +198,7 @@ The form of the matrix square-root
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{L}=\begin{pmatrix}L_{1} & 0\\
-L_{3}^{2}/L_{1} & \sqrt{L_{2}^{2}-L_{3}^{3}/L_{1}^{2}}
+L_{3}^{2}/L_{1} & \sqrt{L_{2}^{2}-L_{3}^{4}/L_{1}^{2}}
 \end{pmatrix},
 \end{equation}
 
