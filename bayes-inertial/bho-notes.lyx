@@ -9,7 +9,7 @@
 \usepackage[colorlinks=true,linktocpage=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,citecolor=MidnightBlue,anchorcolor=MidnightBlue]{hyperref}
 \usepackage[dvipsnames]{xcolor}
 \end_preamble
-\options aps, onecolumn, pre,superscriptaddress, notitlepage
+\options aps, twocolumn, pre,superscriptaddress, notitlepage
 \use_default_options false
 \maintain_unincluded_children false
 \language english
@@ -158,7 +158,7 @@ where the matrices
 \begin{equation}
 \bm{I}=\begin{pmatrix}1 & 0\\
 0 & 1
-\end{pmatrix},\qquad\bm{J}=\frac{1}{\omega}\begin{pmatrix}\tfrac{1}{2\tau} & 1\\
+\end{pmatrix},\qquad\bm{J}=\frac{1}{\omega}\begin{pmatrix}1/2\tau & 1\\
 -\omega_{0}^{2} & -1/2\tau
 \end{pmatrix},
 \end{equation}
@@ -223,9 +223,11 @@ begin{subequations}
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-L_{1} & =\left(\dfrac{D}{4\omega^{2}\omega_{0}^{2}\tau^{3}}(4\omega^{2}\tau^{2}+\exp\left(-\dfrac{\Delta t}{\tau}\right)\left[\cos\left(2\omega\Delta t\right)-2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right]\right)^{1/2},\\
-L_{2} & =\left(\dfrac{D}{4\omega^{2}\tau^{3}}(4\omega^{2}\tau^{2}+\exp\left(-\dfrac{\Delta t}{\tau}\right)\left[\cos\left(2\omega\Delta t\right)+2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right]\right)^{1/2},\\
-L_{3} & =\left(\dfrac{D}{\omega^{2}\tau^{2}}\exp\left(-\dfrac{\Delta t}{\tau}\right)\sin^{2}\left(\omega\Delta t\right)\right)^{1/2}.
+L_{1}^{2} & =\dfrac{D}{4\omega^{2}\omega_{0}^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\Delta t/\tau)\nonumber \\
+ & \times\left[\cos\left(2\omega\Delta t\right)-2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right]\Big),\\
+L_{2}^{2} & =\dfrac{D}{4\omega^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\Delta t/\tau)\nonumber \\
+ & \times\left[\cos\left(2\omega\Delta t\right)+2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right]\Big),\\
+L_{3}^{2} & =\dfrac{D}{\omega^{2}\tau^{2}}\exp\left(-\dfrac{\Delta t}{\tau}\right)\sin^{2}\left(\omega\Delta t\right).
 \end{align}
 
 \end_inset
