@@ -118,54 +118,7 @@ where
 \begin_layout Standard
 We now consider the case of a Brownian harmonic oscillator where the position
  and the velocity are determined from the above recursion relation.
- The form of the 
-\begin_inset Formula $\boldsymbol{\Lambda}$
-\end_inset
-
- and 
-\begin_inset Formula $\boldsymbol{\Sigma}$
-\end_inset
-
- matrices can then be obtained following the expressions in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "norrelykke2011harmonic"
-
-\end_inset
-
-.
- Their explicit forms are
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\boldsymbol{\Lambda}=\exp\left(-\Delta t/2\tau\right)\left[\cos(\omega\Delta t)\mathbf{I}+\sin(\omega\Delta t)\mathbf{J}\right],
-\end{equation}
-
-\end_inset
-
-where the matrices 
-\begin_inset Formula $\mathbf{I}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathbf{J}$
-\end_inset
-
- are
-\begin_inset Formula 
-\begin{equation}
-\bm{I}=\begin{pmatrix}1 & 0\\
-0 & 1
-\end{pmatrix},\qquad\bm{J}=\frac{1}{\omega}\begin{pmatrix}1/2\tau & 1\\
--\omega_{0}^{2} & -1/2\tau
-\end{pmatrix},
-\end{equation}
-
-\end_inset
-
-Here 
+ Here 
 \begin_inset Formula $m$
 \end_inset
 
@@ -183,10 +136,82 @@ Here
 \end_inset
 
  is the characteristic time scale and 
-\begin_inset Formula $\omega=\sqrt{k/m-\gamma^{2}/(4m^{2})}$
+\begin_inset Formula $\omega=\sqrt{k/m-\gamma^{2}/(2m)^{2}}=\sqrt{\omega_{0}^{2}-1/(2\tau)^{2}}$
 \end_inset
 
  is the frequency of the damped oscillator.
+\end_layout
+
+\begin_layout Standard
+The form of the 
+\begin_inset Formula $\boldsymbol{\Lambda}$
+\end_inset
+
+ and 
+\begin_inset Formula $\boldsymbol{\Sigma}$
+\end_inset
+
+ matrices can then be analytically as we describe now.
+ Explicit form of 
+\begin_inset Formula $\boldsymbol{\Lambda}=e^{-\boldsymbol{\lambda}\Delta t}$
+\end_inset
+
+ can be obtained by similarity transformation.
+ The expression of the 
+\begin_inset Formula $\boldsymbol{\lambda}$
+\end_inset
+
+ for a 2x2 system is
+\begin_inset Formula 
+\begin{equation}
+\bm{\lambda}=\begin{pmatrix}0 & -1\\
+\omega_{0}^{2} & 1/\tau
+\end{pmatrix},
+\end{equation}
+
+\end_inset
+
+The eigenvalues of the matrix are 
+\begin_inset Formula $\frac{1}{2\tau}\pm i\omega$
+\end_inset
+
+.
+ The corresponding matrix of eigenvectors is
+\begin_inset Formula 
+\begin{equation}
+\bm{\lambda}_{1}=\begin{pmatrix}-(\frac{1}{2\tau}-i\omega)/\omega_{0}^{2}\\
+1
+\end{pmatrix},\,\,\bm{\lambda}_{2}=\frac{1}{\omega_{0}^{2}}\begin{pmatrix}-(\frac{1}{2\tau}+i\omega)/\omega_{0}^{2}\\
+1
+\end{pmatrix},
+\end{equation}
+
+\end_inset
+
+The expression of the 
+\begin_inset Formula $\boldsymbol{\Lambda}$
+\end_inset
+
+ matrix is then
+\begin_inset Formula 
+\begin{align}
+\bm{\Lambda} & =\left(\bm{\lambda}_{1}\,\,\bm{\lambda}_{2}\right)\begin{pmatrix}e^{-\frac{\Delta t}{2\tau}+i\omega\Delta t} & 0\\
+\\
+0 & e^{-\frac{\Delta t}{2\tau}-i\omega\Delta t}
+\end{pmatrix}\begin{pmatrix}\bm{\lambda}_{1}^{T}\\
+\\
+\bm{\lambda}_{2}^{T}
+\end{pmatrix},\\
+ & =\exp\left(-\Delta t/2\tau\right)\left[e^{i\omega\Delta t}\bm{\lambda}_{1}\bm{\lambda}_{1}^{T}+e^{-i\omega\Delta t}\bm{\lambda}_{2}\bm{\lambda}_{2}^{T}\right].
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Standard
@@ -263,14 +288,6 @@ L_{1}^{2} & =4D\tau\Big(1-\exp(-\Delta t/\tau)\left[1+\Delta t/\tau+\tfrac{1}{2}
 L_{2}^{2} & =\frac{D}{\tau}\Big(1-\exp(-\Delta t/\tau)\left[1-\Delta t/\tau+\tfrac{1}{2}(\Delta t/\tau)^{2}\right]\Big),\\
 L_{3}^{2} & =D\exp(-\Delta t/\tau)(\Delta t/\tau)^{2}.
 \end{align*}
-
-\end_inset
-
-
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-bibfiles "bayes-inertial-paper"
-options "unsrt"
 
 \end_inset
 
