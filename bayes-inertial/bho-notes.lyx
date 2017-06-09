@@ -9,7 +9,7 @@
 \usepackage[colorlinks=true,linktocpage=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,citecolor=MidnightBlue,anchorcolor=MidnightBlue]{hyperref}
 \usepackage[dvipsnames]{xcolor}
 \end_preamble
-\options aps, onecolumn, pre,superscriptaddress, notitlepage
+\options aps, twocolumn, pre,superscriptaddress, notitlepage
 \use_default_options false
 \maintain_unincluded_children false
 \language english
@@ -211,56 +211,96 @@ Here
 \end{pmatrix}\begin{pmatrix}1 & -a_{2}\\
 -1 & a_{1}
 \end{pmatrix}\\
- & =e^{-\frac{\Delta t}{2\tau}}\begin{pmatrix}\cos(\omega\Delta t)+\tfrac{1}{2\tau\omega}\sin(\omega\Delta t) & \tfrac{1}{\omega}\sin(\omega\Delta t)\\
--\tfrac{\omega_{0}^{2}}{\omega}\sin(\omega\Delta t) & \cos(\omega\Delta t)-\tfrac{1}{2\tau\omega}\sin(\omega\Delta t)
-\end{pmatrix}
+ & =e^{-\frac{\Delta t}{2\tau}}\begin{pmatrix}\cos\phi+\tfrac{1}{2\tau\omega}\sin\phi & \tfrac{1}{\omega}\sin\phi\\
+-\tfrac{\omega_{0}^{2}}{\omega}\sin\phi & \cos\phi-\tfrac{1}{2\tau\omega}\sin\phi
+\end{pmatrix}.
 \end{align*}
 
 \end_inset
 
+where 
+\begin_inset Formula $\phi=\omega\Delta t$
+\end_inset
 
-\end_layout
-
-\begin_layout Standard
-The expression 
+.
+ The expression 
 \begin_inset Formula $\boldsymbol{\Sigma}=\boldsymbol{c}-\boldsymbol{\Lambda}\boldsymbol{c}\,\boldsymbol{\Lambda}^{T}$
 \end_inset
 
- can then be obtained in explicit form, 
+ can then be obtained in explicit form,
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{widetext}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{align*}
 \boldsymbol{\Sigma}/k_{B}T= & \begin{pmatrix}1/k & 0\\
 0 & 1/m
-\end{pmatrix}-e^{-\frac{\Delta t}{\tau}}\begin{pmatrix}\cos+\tfrac{1}{2\tau\omega}\sin & \tfrac{1}{\omega}\sin\\
--\tfrac{\omega_{0}^{2}}{\omega}\sin & \cos-\tfrac{1}{2\tau\omega}\sin
-\end{pmatrix}\begin{pmatrix}\tfrac{1}{k}\cos+\tfrac{1}{2\tau k\omega}\sin & -\tfrac{\omega_{0}^{2}}{\omega k}\sin\\
-\tfrac{1}{\omega m}\sin & \tfrac{1}{m}\cos-\tfrac{1}{2\tau\omega m}\sin
-\end{pmatrix}=\begin{pmatrix}1/k & 0\\
-0 & 1/m
+\end{pmatrix}-e^{-\frac{\Delta t}{\tau}}\begin{pmatrix}\cos\phi+\tfrac{1}{2\tau\omega}\sin\phi & \tfrac{1}{\omega}\sin\phi\\
+-\tfrac{\omega_{0}^{2}}{\omega}\sin\phi & \cos-\tfrac{1}{2\tau\omega}\sin\phi
+\end{pmatrix}\begin{pmatrix}\tfrac{1}{k}\cos\phi+\tfrac{1}{2\tau k\omega}\sin\phi & -\tfrac{\omega_{0}^{2}}{\omega k}\sin\phi\\
+\tfrac{1}{\omega m}\sin\phi & \tfrac{1}{m}\cos\phi-\tfrac{1}{2\tau\omega m}\sin\phi
 \end{pmatrix}\\
-- & e^{-\frac{\Delta t}{\tau}}\begin{pmatrix}\tfrac{1}{k}(\cos+\tfrac{1}{2\tau\omega}\sin)^{2}+\tfrac{1}{\omega^{2}m}\sin^{2} & -\tfrac{\omega_{0}^{2}}{\omega k}(\cos+\tfrac{1}{2\tau\omega}\sin)\sin+(\tfrac{1}{\omega m}\cos-\tfrac{1}{2\tau\omega^{2}m}\sin)\sin\\
--\tfrac{\omega_{0}^{2}}{\omega k}(\cos+\tfrac{1}{2\tau\omega}\sin)\sin+(\tfrac{1}{\omega m}\cos-\tfrac{1}{2\tau\omega^{2}m}\sin)\sin & \tfrac{1}{m}(\cos-\tfrac{1}{2\tau\omega}\sin)(\cos-\tfrac{1}{2\tau\omega}\sin)
+= & e^{-\frac{\Delta t}{\tau}}\begin{pmatrix}\tfrac{1}{ke^{-\frac{\Delta t}{\tau}}}-\tfrac{1}{k}(\cos\phi+\tfrac{1}{2\tau\omega}\sin\phi)^{2}+\tfrac{1}{\omega^{2}m}\sin^{2}\phi & -\tfrac{\omega_{0}^{2}}{\omega k}(\cos+\tfrac{1}{2\tau\omega}\sin)\sin+(\tfrac{1}{\omega m}\cos-\tfrac{1}{2\tau\omega^{2}m}\sin)\sin\\
+-\tfrac{\omega_{0}^{2}}{\omega k}(\cos\phi+\tfrac{1}{2\tau\omega}\sin\phi)\sin\phi+(\tfrac{1}{\omega m}\cos\phi-\tfrac{1}{2\tau\omega^{2}m}\sin\phi)\sin\phi & \tfrac{1}{me^{-\frac{\Delta t}{\tau}}}-\tfrac{1}{m}(\cos\phi-\tfrac{1}{2\tau\omega}\sin\phi)(\cos\phi-\tfrac{1}{2\tau\omega}\sin\phi)
 \end{pmatrix}
 \end{align*}
 
 \end_inset
 
-The expression obtained can be used to calculate matrix square-root 
-\begin_inset Formula $\boldsymbol{L}=\sqrt{\boldsymbol{\Sigma}}$
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{widetext}
+\end_layout
+
+\end_inset
+
+The above expression has been used to obtain analytical form of the matrix
+ square-root of 
+\begin_inset Formula $\boldsymbol{\boldsymbol{\Sigma}}$
+\end_inset
+
+ using Cholesky decomposition.
+ To this end, we consider a lower triangular matrix 
+\begin_inset Formula $\boldsymbol{L}$
+\end_inset
+
+, which satisfies 
+\begin_inset Formula $\boldsymbol{\Sigma}=\boldsymbol{L}\boldsymbol{L}^{T}$
 \end_inset
 
 .
+ The expression of 
+\begin_inset Formula $\boldsymbol{L}$
+\end_inset
+
+ is then given as
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{L}=\begin{pmatrix}L_{1} & 0\\
-L_{3}^{2}/L_{1} & \sqrt{L_{2}^{2}-L_{3}^{4}/L_{1}^{2}}
+L_{2} & L_{3}
 \end{pmatrix},
 \end{equation}
 
 \end_inset
 
-The expression of the elements of the matrix for 
-\begin_inset Formula $\omega\neq0$
+where the elements of the matrix 
+\begin_inset Formula $\boldsymbol{L}$
 \end_inset
 
  are
@@ -282,11 +322,11 @@ begin{subequations}
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-L_{1}^{2} & =\dfrac{D}{4\omega^{2}\omega_{0}^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\Delta t/\tau)\nonumber \\
- & \times\left[\cos\left(2\omega\Delta t\right)-2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right]\Big),\\
-L_{2}^{2} & =\dfrac{D}{4\omega^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\Delta t/\tau)\nonumber \\
- & \times\left[\cos\left(2\omega\Delta t\right)+2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right]\Big),\\
-L_{3}^{2} & =\dfrac{D}{\omega^{2}\tau^{2}}\exp(-\Delta t/\tau)\sin^{2}\left(\omega\Delta t\right).
+L_{1} & =\left(\dfrac{k_{B}T}{4\gamma\omega^{2}\omega_{0}^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\Delta t/\tau)\right)^{1/2},\nonumber \\
+ & \times\left[\cos2\phi-2\omega\tau\sin2\phi-4\omega_{0}^{2}\tau^{2}\right]\Big),\\
+L_{2} & =\left(\dfrac{k_{B}T}{\gamma\omega^{2}\tau^{2}}\exp(-\Delta t/\tau)\sin^{2}\phi\right)/L_{1}.\\
+L_{3} & =\bigg[\dfrac{k_{B}T}{4\gamma\omega^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\Delta t/\tau)\nonumber \\
+ & \times\left[\cos2\phi+2\omega\tau\sin2\phi-4\omega_{0}^{2}\tau^{2}\right]\Big)-L_{2}^{4}/L_{1}^{2}\bigg]^{1/2}.
 \end{align}
 
 \end_inset
