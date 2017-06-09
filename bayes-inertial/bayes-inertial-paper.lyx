@@ -595,7 +595,7 @@ name "sec:Bayesian-inference"
 \begin_layout Standard
 
 \emph on
-Model Fitting: 
+Parameter Estimation: 
 \emph default
 Consider now the discrete time series 
 \begin_inset Formula $\boldsymbol{X}=\left(\boldsymbol{x}_{1},\boldsymbol{x}_{2},...,\boldsymbol{x}_{N}\right)$
@@ -976,8 +976,9 @@ The first term is the best fit likelihood while the second term, the product
  Thus models which achieve a compromise between the degree of fit to the
  data and the number of parameters required for the fit are ones which are
  favoured by the Bayesian model selection procedure.
- This avoids the overfitting that would occur if the degree of fit was made
- the sole criterion for model selection and encodes the commonsense 
+ This avoids the over-fitting that would occur if the degree of fit was
+ made the sole criterion for model selection and encodes the commonsense
+ 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1305,9 +1306,13 @@ To sample paths of the Brownian harmonic oscillator exactly, it is necessary
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula $\\$
+\end_inset
+
+
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{\Lambda}=e^{-\boldsymbol{\lambda}\Delta t}=\Lambda_{1}(\Delta t)\boldsymbol{I}+\Lambda_{2}(\Delta t)\boldsymbol{\lambda}
+\boldsymbol{\Lambda=}e^{-\boldsymbol{\lambda}\Delta t}=\Lambda_{1}(\Delta t)\boldsymbol{1}+\Lambda_{2}(\Delta t)\boldsymbol{\lambda}
 \end{equation}
 
 \end_inset
@@ -1321,7 +1326,7 @@ where
 
 \end_inset
 
-The latter is obtained from the a Cholesky factorization of 
+The latter is obtained from a Cholesky factorization of 
 \begin_inset Formula $\boldsymbol{\Sigma}$
 \end_inset
 
@@ -1376,7 +1381,7 @@ end{subequations}
 
 \end_inset
 
-Exactly sampled trajectories can now be obtained using Eq.
+We use the above to explicit results in Eq.
  (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1384,7 +1389,15 @@ reference "eq:path-sampling"
 
 \end_inset
 
-).
+) to obtain exact ly sampled trajectories of the Brownian harmonic oscillator.
+ The results of section (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Bayesian-inference"
+
+\end_inset
+
+) are then applied to these trajectories to compare.
  
 \begin_inset Float figure
 wide false
@@ -1455,18 +1468,11 @@ name "fig:PositionsVelocity"
 
 \end_layout
 
-\begin_layout Section
-Bayesian inference of the Brownian harmonic oscillator
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:BIBHO"
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
+
+\emph on
+Parameter estimation: 
+\emph default
 Bayesian inference of section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2196,6 +2202,33 @@ name "tab:springconstant"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\begin{pmatrix}\dfrac{k_{B}T}{k^{\ast}}\\
+\dfrac{k_{B}T}{m^{\ast}}
+\end{pmatrix} & =\begin{pmatrix}1-\Lambda_{11}^{\ast2} & -\Lambda_{12}^{\ast2}\\
+\\
+-\Lambda_{21}^{\ast2} & 1-\Lambda_{22}^{\ast2}
+\end{pmatrix}^{-1}\begin{pmatrix}\Sigma_{11}^{\ast}\\
+\\
+\Sigma_{22}^{\ast}
+\end{pmatrix}
+\end{align}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\gamma^{\ast}=\dfrac{m^{\ast2}}{k_{B}T}\dfrac{\Sigma_{12}^{\ast}}{\Lambda_{12}^{\ast2}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Bayes II is applied to Brownian harmonic oscillator by using the fact that
  the likelihood can be factored into the Gibbs distribution for position
  and the Maxwell-Boltzmann distribution for the velocity at the equilibrium
@@ -2671,6 +2704,10 @@ name "tab:CovrianceMatrix"
 \end_layout
 
 \begin_layout Standard
+
+\emph on
+Correlation functions and spectral densities: 
+\emph default
 The autocorrelation functions and the power spectral densities of position
  and velocity have plotted in Fig.(
 \begin_inset CommandInset ref
@@ -2722,18 +2759,11 @@ key "Bera:16"
  of relevant parameters.
 \end_layout
 
-\begin_layout Section
-Model selection
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Model-selection"
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
+
+\emph on
+Model comparison: 
+\emph default
 In this section, we consider the problem of Bayesian model selection for
  a given time series data.
  For definiteness, we data from underdamped and overdamped Brownian motion.
@@ -3041,9 +3071,7 @@ MAP estimates
 \end_layout
 
 \begin_layout Standard
-We now provide an explicit derivation of the Bayesian MAP estimates from
- the logarithm of the posterior probability.
- Consider the quadratic form 
+Consider the quadratic form 
 \begin_inset Formula $\bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}=\left(\bm{x_{n+1}}-\bm{\Lambda}\bm{x_{n}}\right)^{\bm{T}}\bm{\Sigma^{-1}}\left(\bm{x_{n+1}}-\bm{\Lambda}\bm{x_{n}}\right)$
 \end_inset
 
@@ -3087,17 +3115,17 @@ Inspecting the above expression, we recognize that the posterior is normal
 \begin_inset Formula $\boldsymbol{\Lambda}$
 \end_inset
 
-, and then directly yields the MAP estimate 
+ which directly yields its MAP estimate 
 \begin_inset Formula $\boldsymbol{\Lambda^{\ast}}=\bm{T_{2}T_{3}^{-1}}$
 \end_inset
 
 .
  Taking the derivative of above equation with respect to 
-\begin_inset Formula $\Sigma^{-1}$
+\begin_inset Formula $\boldsymbol{\Sigma}^{-1}$
 \end_inset
 
  and using the matrix identity 
-\begin_inset Formula $\dfrac{\partial\ln\left(\det\bm{A}\right)}{\partial\bm{A}}=\left(\bm{A}^{T}\right)^{-1}$
+\begin_inset Formula $\partial\ln\left(\det\bm{A}\right)/\partial\bm{A}=\left(\bm{A}^{T}\right)^{-1}$
 \end_inset
 
 , we obtain
@@ -3108,11 +3136,7 @@ Inspecting the above expression, we recognize that the posterior is normal
 
 \end_inset
 
-At the maximum, we obtain the MAP estimate for 
-\begin_inset Formula $\bm{\Sigma}$
-\end_inset
-
- as 
+At the maximum, we obtain the MAP estimate as 
 \begin_inset Formula $\bm{\Sigma^{\ast}}=\dfrac{1}{N}\left(\bm{T}_{1}-\boldsymbol{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{T}_{2}^{T}\right).$
 \end_inset
 
@@ -3135,22 +3159,6 @@ At the maximum, we obtain the MAP estimate for
 \end_inset
 
  are
-\begin_inset Formula 
-\begin{align}
-\begin{pmatrix}\dfrac{k_{B}T}{k^{\ast}}\\
-\dfrac{k_{B}T}{m^{\ast}}
-\end{pmatrix} & =\begin{pmatrix}1-\Lambda_{11}^{\ast2} & -\Lambda_{12}^{\ast2}\\
-\\
--\Lambda_{21}^{\ast2} & 1-\Lambda_{22}^{\ast2}
-\end{pmatrix}^{-1}\begin{pmatrix}\Sigma_{11}^{\ast}\\
-\\
-\Sigma_{22}^{\ast}
-\end{pmatrix},\qquad\gamma^{\ast}=\dfrac{m^{\ast2}}{k_{B}T}\dfrac{\Sigma_{12}^{\ast}}{\Lambda_{12}^{\ast2}}.
-\end{align}
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection*
@@ -3158,7 +3166,7 @@ Hessian at the MAP estimate
 \end_layout
 
 \begin_layout Standard
-The second derivatives of the log posterior w.r.t 
+The second partial derivatives of the log posterior with respect to 
 \begin_inset Formula $\boldsymbol{\Sigma}^{-1}$
 \end_inset
 
@@ -3166,7 +3174,7 @@ The second derivatives of the log posterior w.r.t
 \begin_inset Formula $\boldsymbol{\Lambda}$
 \end_inset
 
- at the maximum is
+ at the maximum are
 \begin_inset ERT
 status open
 
@@ -3201,7 +3209,7 @@ end{subequations}
 
 \end_inset
 
-The mixed derivative at the maximum is
+The mixed partial derivative at the maximum is
 \begin_inset Formula 
 \begin{align}
 \dfrac{\partial^{2}\ln P\left(\bm{\Lambda},\bm{\Sigma}\vert\bm{X}\right)}{\partial\bm{\Lambda}\partial\bm{\Sigma^{-1}}} & \eqsim-\frac{N}{2}(\bm{\Lambda}^{*}\boldsymbol{c}^{*}+\boldsymbol{c}^{*}\bm{\Lambda}^{*T}).
