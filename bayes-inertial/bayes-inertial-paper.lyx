@@ -1055,7 +1055,7 @@ exactly
  from the following iteration
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{x}_{n+1}=\boldsymbol{\Lambda}\boldsymbol{x}_{n}+\sqrt{\boldsymbol{\Sigma}}\,\boldsymbol{\xi}_{n},
+\boldsymbol{x}_{n+1}=\boldsymbol{\Lambda}\boldsymbol{x}_{n}+\sqrt{\boldsymbol{\Sigma}}\,\boldsymbol{\xi}_{n},\label{eq:path-sampling}
 \end{equation}
 
 \end_inset
@@ -1108,6 +1108,10 @@ name "sec:Brownian-harmonic-oscillator"
 \end_layout
 
 \begin_layout Standard
+
+\emph on
+Inference problem: 
+\emph default
 We now apply the results above to the physically important case of a massive
  Brownian particle confined in a harmonic potential described by the Langevin
  equation
@@ -1162,11 +1166,17 @@ is a zero-mean Gaussian white noise with variance
 \begin_inset Formula $(m,\gamma,k)$
 \end_inset
 
- from discrete observations of the position and velocity.
+ from discrete observations of the position and velocity and to estimate
+ the correlation functions and the spectral densities from these observations.
+ 
 \end_layout
 
 \begin_layout Standard
-The Langevin equation can be recast as bivariate Ornstein-Uhlenbeck process
+
+\emph on
+Bivariate Ornstein-Uhlenbeck process: 
+\emph default
+The Langevin equation can be recast as a bivariate Ornstein-Uhlenbeck process
  in phase space
 \begin_inset Formula 
 \begin{equation}
@@ -1184,7 +1194,7 @@ dW_{v}
 
 \end_inset
 
-where the mean regression and diffusion matrices are
+where the mean regression is
 \begin_inset Formula 
 \begin{equation}
 \bm{\lambda}=\begin{pmatrix}0 & -1\\
@@ -1194,18 +1204,17 @@ where the mean regression and diffusion matrices are
 
 \end_inset
 
-and
+and the diffusion matrix is
 \begin_inset Formula 
 \begin{equation}
 \bm{D=}\begin{pmatrix}0 & 0\\
 0 & D/\tau^{2}
-\end{pmatrix},
+\end{pmatrix}.
 \end{equation}
 
 \end_inset
 
-respectively.
- Here 
+Here 
 \begin_inset Formula $\omega_{0}=\sqrt{k/m}$
 \end_inset
 
@@ -1220,11 +1229,13 @@ respectively.
 \begin_inset Formula $D=k_{B}T\gamma^{-1}$
 \end_inset
 
- and 
-\begin_inset Formula $\zeta(t)$
+.
+ The structure of the diffusion matrix ensures that the positional Wiener
+ process 
+\begin_inset Formula $dW_{x}$
 \end_inset
 
- is now a zero-mean Gaussian white noise with unit variance.
+ does not enter the dynamics.
  
 \end_layout
 
@@ -1276,7 +1287,21 @@ reference "eq:stationarity"
 \end_layout
 
 \begin_layout Standard
-Their explicit forms are
+
+\emph on
+Path sampling: 
+\emph default
+To sample paths of the Brownian harmonic oscillator exactly, it is necessary
+ to obtain the exponential of the regression matrix 
+\begin_inset Formula $\boldsymbol{\lambda}$
+\end_inset
+
+ and the square-root of the variance matrix 
+\begin_inset Formula $\boldsymbol{\Sigma}$
+\end_inset
+
+.
+ From the Cayley-Hamilton theorem the former is easily found to be 
 \end_layout
 
 \begin_layout Standard
@@ -1287,28 +1312,20 @@ Their explicit forms are
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 where 
 \begin_inset Formula 
-\begin{eqnarray*}
-\Lambda_{1}(t) & = & e^{-\frac{\Delta t}{2\tau}}[\cos(\omega\Delta t)+\frac{1}{2\omega\tau}\sin(\omega\Delta t)]\\
-\Lambda_{2}(t) & = & e^{-\frac{\Delta t}{2\tau}}\sin(\omega\Delta t)/\omega
-\end{eqnarray*}
+\begin{eqnarray}
+\Lambda_{1}(t) & = & \exp(-\tfrac{\Delta t}{2\tau})\left[\cos(\omega\Delta t)+\frac{1}{2\omega\tau}\sin(\omega\Delta t)\right]\nonumber \\
+\Lambda_{2}(t) & = & \exp(-\tfrac{\Delta t}{2\tau})\left[\frac{1}{\omega}\sin(\omega\Delta t)\right]
+\end{eqnarray}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-The expression of 
-\begin_inset Formula $\boldsymbol{L}$
+The latter is obtained from the a Cholesky factorization of 
+\begin_inset Formula $\boldsymbol{\Sigma}$
 \end_inset
 
- is then given as
+ into a lower triangular matrix and its transpose, 
 \begin_inset Formula 
 \begin{equation}
 \sqrt{\boldsymbol{\Sigma}}=\begin{pmatrix}s_{1} & 0\\
@@ -1318,11 +1335,7 @@ s_{2} & s_{3}
 
 \end_inset
 
-where the elements of the matrix 
-\begin_inset Formula $\boldsymbol{L}$
-\end_inset
-
- are
+where the elements are 
 \begin_inset ERT
 status open
 
@@ -1363,7 +1376,16 @@ end{subequations}
 
 \end_inset
 
+Exactly sampled trajectories can now be obtained using Eq.
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:path-sampling"
 
+\end_inset
+
+).
+ 
 \begin_inset Float figure
 wide false
 sideways false
