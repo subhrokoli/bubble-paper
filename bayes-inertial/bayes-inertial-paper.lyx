@@ -1282,27 +1282,7 @@ Their explicit forms are
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{\Lambda}=e^{\Delta t/2\tau}\left[\cos(\omega\Delta t)\mathbf{I}+\sin(\omega\Delta t)\mathbf{J}\right],
-\end{equation}
-
-\end_inset
-
-where the matrices 
-\begin_inset Formula $\mathbf{I}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathbf{J}$
-\end_inset
-
- are
-\begin_inset Formula 
-\begin{equation}
-\bm{I}=\begin{pmatrix}1 & 0\\
-0 & 1
-\end{pmatrix},\qquad\bm{J}=\frac{1}{\omega}\begin{pmatrix}1/2\tau & 1\\
--\omega_{0}^{2} & -1/2\tau
-\end{pmatrix},
+\boldsymbol{\Lambda}=e^{-\boldsymbol{\lambda}\Delta t}=\Lambda_{1}(\Delta t)\boldsymbol{I}+\Lambda_{2}(\Delta t)\boldsymbol{\lambda}
 \end{equation}
 
 \end_inset
@@ -1311,22 +1291,35 @@ where the matrices
 \end_layout
 
 \begin_layout Standard
-The form of the matrix square-root 
-\begin_inset Formula $\boldsymbol{L}=\sqrt{\boldsymbol{\Sigma}}$
+where 
+\begin_inset Formula 
+\begin{eqnarray*}
+\Lambda_{1}(t) & = & e^{-\frac{\Delta t}{2\tau}}[\cos(\omega\Delta t)+\frac{1}{2\omega\tau}\sin(\omega\Delta t)]\\
+\Lambda_{2}(t) & = & e^{-\frac{\Delta t}{2\tau}}\sin(\omega\Delta t)/\omega
+\end{eqnarray*}
+
 \end_inset
 
- is
+
+\end_layout
+
+\begin_layout Standard
+The expression of 
+\begin_inset Formula $\boldsymbol{L}$
+\end_inset
+
+ is then given as
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{L}=\begin{pmatrix}L_{1} & 0\\
-L_{3}^{2}/L_{1} & \sqrt{L_{2}^{2}-L_{3}^{4}/L_{1}^{2}}
+\sqrt{\boldsymbol{\Sigma}}=\begin{pmatrix}s_{1} & 0\\
+s_{2} & s_{3}
 \end{pmatrix},
 \end{equation}
 
 \end_inset
 
-The expression of the elements of the matrix for 
-\begin_inset Formula $\omega\neq0$
+where the elements of the matrix 
+\begin_inset Formula $\boldsymbol{L}$
 \end_inset
 
  are
@@ -1348,11 +1341,11 @@ begin{subequations}
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-L_{1}^{2} & =\dfrac{D}{4\omega^{2}\omega_{0}^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\Delta t/\tau)\nonumber \\
- & \times\left[\cos\left(2\omega\Delta t\right)-2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right]\Big),\\
-L_{2}^{2} & =\dfrac{D}{4\omega^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\Delta t/\tau)\nonumber \\
- & \times\left[\cos\left(2\omega\Delta t\right)+2\omega\tau\sin\left(2\omega\Delta t\right)-4\omega_{0}^{2}\tau^{2}\right]\Big),\\
-L_{3}^{2} & =\dfrac{D}{\omega^{2}\tau^{2}}\exp(-\Delta t/\tau)\sin^{2}\left(\omega\Delta t\right).
+s_{1} & =\bigg[\dfrac{k_{B}T}{4\gamma\omega^{2}\omega_{0}^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\Delta t/\tau)\nonumber \\
+ & \times\left[\cos2\phi-2\omega\tau\sin2\phi-4\omega_{0}^{2}\tau^{2}\right]\Big)\bigg]^{1/2},\\
+s_{2} & =\left(\dfrac{k_{B}T}{\gamma\omega^{2}\tau^{2}}\exp(-\Delta t/\tau)\sin^{2}\phi\right)/s_{1},\\
+s_{3} & =\bigg[\dfrac{k_{B}T}{4\gamma\omega^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\Delta t/\tau)\nonumber \\
+ & \times\left[\cos2\phi+2\omega\tau\sin2\phi-4\omega_{0}^{2}\tau^{2}\right]\Big)-s_{2}^{4}/s_{1}^{2}\bigg]^{1/2}.
 \end{align}
 
 \end_inset
