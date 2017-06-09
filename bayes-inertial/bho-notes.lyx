@@ -179,9 +179,9 @@ The eigenvalues of the matrix are
  The corresponding eigenvectors are
 \begin_inset Formula 
 \[
-\bm{\lambda}_{1}=\begin{pmatrix}a_{1}\\
+\bm{\lambda}_{1}=\begin{pmatrix}u+iw\\
 1
-\end{pmatrix},\,\,\bm{\lambda}_{2}=\begin{pmatrix}a_{2}\\
+\end{pmatrix},\,\,\bm{\lambda}_{2}=\begin{pmatrix}u-iw\\
 1
 \end{pmatrix}.
 \]
@@ -189,11 +189,11 @@ The eigenvalues of the matrix are
 \end_inset
 
 Here 
-\begin_inset Formula $a_{1}=-(\frac{1}{2\tau}-i\omega)/\omega_{0}^{2}$
+\begin_inset Formula $u=-\frac{1}{2\tau\omega_{0}^{2}}$
 \end_inset
 
  and 
-\begin_inset Formula $a_{2}=-(\frac{1}{2\tau}+i\omega)/\omega_{0}^{2}$
+\begin_inset Formula $w=-\tfrac{\omega}{\omega_{0}^{2}}$
 \end_inset
 
 .
@@ -204,12 +204,12 @@ Here
  matrix is then
 \begin_inset Formula 
 \begin{align*}
-\bm{\Lambda} & =\tfrac{\omega_{0}^{2}e^{-\frac{\Delta t}{2\tau}}}{2i\omega}\begin{pmatrix}a_{1} & a_{2}\\
-1 & 1
-\end{pmatrix}\begin{pmatrix}\exp(\omega\Delta t) & 0\\
-0 & \exp(-\omega\Delta t)
-\end{pmatrix}\begin{pmatrix}1 & -a_{2}\\
--1 & a_{1}
+\bm{\Lambda} & =e^{-\frac{\Delta t}{2\tau}}\begin{pmatrix}u & w\\
+1 & 0
+\end{pmatrix}\begin{pmatrix}\cos\phi & \sin\phi\\
+-\sin\phi & \cos\phi
+\end{pmatrix}\begin{pmatrix}0 & 1\\
+\tfrac{1}{w} & -\tfrac{u}{w}
 \end{pmatrix}\\
  & =e^{-\frac{\Delta t}{2\tau}}\begin{pmatrix}\cos\phi+\tfrac{1}{2\tau\omega}\sin\phi & \tfrac{1}{\omega}\sin\phi\\
 -\tfrac{\omega_{0}^{2}}{\omega}\sin\phi & \cos\phi-\tfrac{1}{2\tau\omega}\sin\phi
