@@ -223,7 +223,19 @@ where
 \end_inset
 
 .
- The expression 
+ Using Cayley-Hamilton theorem, we should be able to write
+\begin_inset Formula 
+\begin{equation}
+e^{-\boldsymbol{\lambda}\Delta t}=e^{-\frac{\Delta t}{2\tau}}(\cos\phi+\tfrac{1}{2\tau\omega}\sin\phi)\boldsymbol{I}-e^{-\frac{\Delta t}{2\tau}}\tfrac{1}{\omega}\sin\phi\boldsymbol{\lambda}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The expression 
 \begin_inset Formula $\boldsymbol{\Sigma}=\boldsymbol{c}-\boldsymbol{\Lambda}\boldsymbol{c}\,\boldsymbol{\Lambda}^{T}$
 \end_inset
 
@@ -340,6 +352,47 @@ status open
 
 \backslash
 end{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{widetext}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{pmatrix}\frac{k_{B}T}{k^{*}} & 0\\
+0 & \frac{k_{B}T}{m^{*}}
+\end{pmatrix}=\begin{pmatrix}\Sigma_{11}^{\ast} & \Sigma_{12}^{\ast}\\
+\Sigma_{21}^{\ast} & \Sigma_{22}^{\ast}
+\end{pmatrix}\begin{pmatrix}1-\Lambda_{11}^{\ast2}+\Lambda_{12}^{\ast}\Lambda_{21}^{\ast} & \Lambda_{21}^{\ast}\Lambda_{22}^{\ast}-\Lambda_{11}^{\ast}\Lambda_{21}^{\ast}\\
+\\
+\Lambda_{11}^{\ast}\Lambda_{12}^{\ast}-\Lambda_{22}^{\ast}\Lambda_{12}^{\ast} & 1-\Lambda_{22}^{\ast2}+\Lambda_{12}^{\ast}\Lambda_{21}^{\ast}
+\end{pmatrix}^{-1}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{widetext}
 \end_layout
 
 \end_inset

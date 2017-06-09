@@ -1306,7 +1306,7 @@ To sample paths of the Brownian harmonic oscillator exactly, it is necessary
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\\$
+\begin_inset Formula $ $
 \end_inset
 
 
@@ -1360,10 +1360,10 @@ begin{subequations}
 \begin_inset Formula 
 \begin{align}
 s_{1} & =\bigg[\dfrac{k_{B}T}{4\gamma\omega^{2}\omega_{0}^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\Delta t/\tau)\nonumber \\
- & \times\left[\cos2\phi-2\omega\tau\sin2\phi-4\omega_{0}^{2}\tau^{2}\right]\Big)\bigg]^{1/2},\\
-s_{2} & =\left(\dfrac{k_{B}T}{\gamma\omega^{2}\tau^{2}}\exp(-\Delta t/\tau)\sin^{2}\phi\right)/s_{1},\\
+ & \times\left[\cos(2\omega\Delta t)-2\omega\tau\sin(2\omega\Delta t)-4\omega_{0}^{2}\tau^{2}\right]\Big)\bigg]^{1/2}\\
+s_{2} & =\left(\dfrac{k_{B}T}{\gamma\omega^{2}\tau^{2}}\exp(-\Delta t/\tau)\sin^{2}(\omega\Delta t)\right)/s_{1}\\
 s_{3} & =\bigg[\dfrac{k_{B}T}{4\gamma\omega^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\Delta t/\tau)\nonumber \\
- & \times\left[\cos2\phi+2\omega\tau\sin2\phi-4\omega_{0}^{2}\tau^{2}\right]\Big)-s_{2}^{4}/s_{1}^{2}\bigg]^{1/2}.
+ & \times\left[\cos(2\omega\Delta t)+2\omega\tau\sin(2\omega\Delta t)-4\omega_{0}^{2}\tau^{2}\right]\Big)-s_{2}^{4}/s_{1}^{2}\bigg]^{1/2}.
 \end{align}
 
 \end_inset
@@ -2199,9 +2199,6 @@ name "tab:springconstant"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{align}
 \begin{pmatrix}\dfrac{k_{B}T}{k^{\ast}}\\
