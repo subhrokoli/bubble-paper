@@ -206,8 +206,8 @@ Here
 \begin{align*}
 \bm{\Lambda} & =\tfrac{\omega_{0}^{2}e^{-\frac{\Delta t}{2\tau}}}{2i\omega}\begin{pmatrix}a_{1} & a_{2}\\
 1 & 1
-\end{pmatrix}\begin{pmatrix}\cos(\omega\Delta t) & -\sin(\omega\Delta t)\\
-\sin(\omega\Delta t) & \cos(\omega\Delta t)
+\end{pmatrix}\begin{pmatrix}\exp(\omega\Delta t) & 0\\
+0 & \exp(-\omega\Delta t)
 \end{pmatrix}\begin{pmatrix}1 & -a_{2}\\
 -1 & a_{1}
 \end{pmatrix}\\
