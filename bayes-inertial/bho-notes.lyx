@@ -9,7 +9,7 @@
 \usepackage[colorlinks=true,linktocpage=true,linkcolor=MidnightBlue,urlcolor=MidnightBlue,citecolor=MidnightBlue,anchorcolor=MidnightBlue]{hyperref}
 \usepackage[dvipsnames]{xcolor}
 \end_preamble
-\options aps, twocolumn, pre,superscriptaddress, notitlepage
+\options aps, onecolumn, pre,superscriptaddress, notitlepage
 \use_default_options false
 \maintain_unincluded_children false
 \language english
@@ -161,12 +161,12 @@ The form of the
 \begin_inset Formula $\boldsymbol{\lambda}$
 \end_inset
 
- for a 2x2 system is
+ for a Brownian harmonic oscillator is
 \begin_inset Formula 
 \begin{equation}
 \bm{\lambda}=\begin{pmatrix}0 & -1\\
 \omega_{0}^{2} & 1/\tau
-\end{pmatrix},
+\end{pmatrix}.
 \end{equation}
 
 \end_inset
@@ -176,34 +176,45 @@ The eigenvalues of the matrix are
 \end_inset
 
 .
- The corresponding matrix of eigenvectors is
+ The corresponding eigenvectors are
 \begin_inset Formula 
-\begin{equation}
-\bm{\lambda}_{1}=\begin{pmatrix}-(\frac{1}{2\tau}-i\omega)/\omega_{0}^{2}\\
+\[
+\bm{\lambda}_{1}=\begin{pmatrix}a_{1}\\
 1
-\end{pmatrix},\,\,\bm{\lambda}_{2}=\frac{1}{\omega_{0}^{2}}\begin{pmatrix}-(\frac{1}{2\tau}+i\omega)/\omega_{0}^{2}\\
+\end{pmatrix},\,\,\bm{\lambda}_{2}=\begin{pmatrix}a_{2}\\
 1
-\end{pmatrix},
-\end{equation}
+\end{pmatrix}.
+\]
 
 \end_inset
 
-The expression of the 
+Here 
+\begin_inset Formula $a_{1}=-(\frac{1}{2\tau}-i\omega)/\omega_{0}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{2}=-(\frac{1}{2\tau}+i\omega)/\omega_{0}^{2}$
+\end_inset
+
+.
+ The expression of the 
 \begin_inset Formula $\boldsymbol{\Lambda}$
 \end_inset
 
  matrix is then
 \begin_inset Formula 
-\begin{align}
-\bm{\Lambda} & =\left(\bm{\lambda}_{1}\,\,\bm{\lambda}_{2}\right)\begin{pmatrix}e^{-\frac{\Delta t}{2\tau}+i\omega\Delta t} & 0\\
-\\
-0 & e^{-\frac{\Delta t}{2\tau}-i\omega\Delta t}
-\end{pmatrix}\begin{pmatrix}\bm{\lambda}_{1}^{T}\\
-\\
-\bm{\lambda}_{2}^{T}
-\end{pmatrix},\\
- & =\exp\left(-\Delta t/2\tau\right)\left[e^{i\omega\Delta t}\bm{\lambda}_{1}\bm{\lambda}_{1}^{T}+e^{-i\omega\Delta t}\bm{\lambda}_{2}\bm{\lambda}_{2}^{T}\right].
-\end{align}
+\begin{align*}
+\bm{\Lambda} & =\tfrac{\omega_{0}^{2}e^{-\frac{\Delta t}{2\tau}}}{2i\omega}\begin{pmatrix}a_{1} & a_{2}\\
+1 & 1
+\end{pmatrix}\begin{pmatrix}\cos(\omega\Delta t) & -\sin(\omega\Delta t)\\
+\sin(\omega\Delta t) & \cos(\omega\Delta t)
+\end{pmatrix}\begin{pmatrix}1 & -a_{2}\\
+-1 & a_{1}
+\end{pmatrix}\\
+ & =e^{-\frac{\Delta t}{2\tau}}\begin{pmatrix}\cos(\omega\Delta t)+\tfrac{1}{2\tau\omega}\sin(\omega\Delta t) & \tfrac{1}{\omega}\sin(\omega\Delta t)\\
+-\tfrac{\omega_{0}^{2}}{\omega}\sin(\omega\Delta t) & \cos(\omega\Delta t)-\tfrac{1}{2\tau\omega}\sin(\omega\Delta t)
+\end{pmatrix}
+\end{align*}
 
 \end_inset
 
@@ -211,15 +222,34 @@ The expression of the
 \end_layout
 
 \begin_layout Standard
+The expression 
+\begin_inset Formula $\boldsymbol{\Sigma}=\boldsymbol{c}-\boldsymbol{\Lambda}\boldsymbol{c}\,\boldsymbol{\Lambda}^{T}$
+\end_inset
 
-\end_layout
+ can then be obtained in explicit form, 
+\begin_inset Formula 
+\begin{align*}
+\boldsymbol{\Sigma}/k_{B}T= & \begin{pmatrix}1/k & 0\\
+0 & 1/m
+\end{pmatrix}-e^{-\frac{\Delta t}{\tau}}\begin{pmatrix}\cos+\tfrac{1}{2\tau\omega}\sin & \tfrac{1}{\omega}\sin\\
+-\tfrac{\omega_{0}^{2}}{\omega}\sin & \cos-\tfrac{1}{2\tau\omega}\sin
+\end{pmatrix}\begin{pmatrix}\tfrac{1}{k}\cos+\tfrac{1}{2\tau k\omega}\sin & -\tfrac{\omega_{0}^{2}}{\omega k}\sin\\
+\tfrac{1}{\omega m}\sin & \tfrac{1}{m}\cos-\tfrac{1}{2\tau\omega m}\sin
+\end{pmatrix}=\begin{pmatrix}1/k & 0\\
+0 & 1/m
+\end{pmatrix}\\
+- & e^{-\frac{\Delta t}{\tau}}\begin{pmatrix}\tfrac{1}{k}(\cos+\tfrac{1}{2\tau\omega}\sin)^{2}+\tfrac{1}{\omega^{2}m}\sin^{2} & -\tfrac{\omega_{0}^{2}}{\omega k}(\cos+\tfrac{1}{2\tau\omega}\sin)\sin+(\tfrac{1}{\omega m}\cos-\tfrac{1}{2\tau\omega^{2}m}\sin)\sin\\
+-\tfrac{\omega_{0}^{2}}{\omega k}(\cos+\tfrac{1}{2\tau\omega}\sin)\sin+(\tfrac{1}{\omega m}\cos-\tfrac{1}{2\tau\omega^{2}m}\sin)\sin & \tfrac{1}{m}(\cos-\tfrac{1}{2\tau\omega}\sin)(\cos-\tfrac{1}{2\tau\omega}\sin)
+\end{pmatrix}
+\end{align*}
 
-\begin_layout Standard
-The form of the matrix square-root 
+\end_inset
+
+The expression obtained can be used to calculate matrix square-root 
 \begin_inset Formula $\boldsymbol{L}=\sqrt{\boldsymbol{\Sigma}}$
 \end_inset
 
- is
+.
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{L}=\begin{pmatrix}L_{1} & 0\\
@@ -271,23 +301,6 @@ status open
 \backslash
 end{subequations}
 \end_layout
-
-\end_inset
-
-while the expressions at the critical damping, 
-\begin_inset Formula $\omega\neq0$
-\end_inset
-
- are
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{align*}
-L_{1}^{2} & =4D\tau\Big(1-\exp(-\Delta t/\tau)\left[1+\Delta t/\tau+\tfrac{1}{2}(\Delta t/\tau)^{2}\right]\Big),\\
-L_{2}^{2} & =\frac{D}{\tau}\Big(1-\exp(-\Delta t/\tau)\left[1-\Delta t/\tau+\tfrac{1}{2}(\Delta t/\tau)^{2}\right]\Big),\\
-L_{3}^{2} & =D\exp(-\Delta t/\tau)(\Delta t/\tau)^{2}.
-\end{align*}
 
 \end_inset
 
