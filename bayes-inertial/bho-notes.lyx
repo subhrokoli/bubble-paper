@@ -322,9 +322,9 @@ begin{subequations}
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-L_{1} & =\left(\dfrac{k_{B}T}{4\gamma\omega^{2}\omega_{0}^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\Delta t/\tau)\right)^{1/2},\nonumber \\
- & \times\left[\cos2\phi-2\omega\tau\sin2\phi-4\omega_{0}^{2}\tau^{2}\right]\Big),\\
-L_{2} & =\left(\dfrac{k_{B}T}{\gamma\omega^{2}\tau^{2}}\exp(-\Delta t/\tau)\sin^{2}\phi\right)/L_{1}.\\
+L_{1} & =\bigg[\dfrac{k_{B}T}{4\gamma\omega^{2}\omega_{0}^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\Delta t/\tau)\nonumber \\
+ & \times\left[\cos2\phi-2\omega\tau\sin2\phi-4\omega_{0}^{2}\tau^{2}\right]\Big)\bigg]^{1/2},\\
+L_{2} & =\left(\dfrac{k_{B}T}{\gamma\omega^{2}\tau^{2}}\exp(-\Delta t/\tau)\sin^{2}\phi\right)/L_{1},\\
 L_{3} & =\bigg[\dfrac{k_{B}T}{4\gamma\omega^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\Delta t/\tau)\nonumber \\
  & \times\left[\cos2\phi+2\omega\tau\sin2\phi-4\omega_{0}^{2}\tau^{2}\right]\Big)-L_{2}^{4}/L_{1}^{2}\bigg]^{1/2}.
 \end{align}
