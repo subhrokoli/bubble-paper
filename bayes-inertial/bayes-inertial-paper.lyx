@@ -1359,11 +1359,11 @@ begin{subequations}
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-s_{1} & =\bigg[\dfrac{k_{B}T}{4\gamma\omega^{2}\omega_{0}^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\Delta t/\tau)\nonumber \\
+s_{1} & =\bigg[\dfrac{k_{B}T}{4\gamma\omega^{2}\omega_{0}^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\tfrac{\Delta t}{\tau})\nonumber \\
  & \times\left[\cos(2\omega\Delta t)-2\omega\tau\sin(2\omega\Delta t)-4\omega_{0}^{2}\tau^{2}\right]\Big)\bigg]^{1/2}\\
-s_{2} & =\left(\dfrac{k_{B}T}{\gamma\omega^{2}\tau^{2}}\exp(-\Delta t/\tau)\sin^{2}(\omega\Delta t)\right)/s_{1}\\
-s_{3} & =\bigg[\dfrac{k_{B}T}{4\gamma\omega^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\Delta t/\tau)\nonumber \\
- & \times\left[\cos(2\omega\Delta t)+2\omega\tau\sin(2\omega\Delta t)-4\omega_{0}^{2}\tau^{2}\right]\Big)-s_{2}^{4}/s_{1}^{2}\bigg]^{1/2}.
+s_{2} & =\left(\dfrac{k_{B}T}{\gamma\omega^{2}\tau^{2}}\exp(-\tfrac{\Delta t}{\tau})\sin^{2}(\omega\Delta t)\right)/s_{1}\\
+s_{3} & =\bigg[\dfrac{k_{B}T}{4\gamma\omega^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\tfrac{\Delta t}{2\tau})\nonumber \\
+ & \times\left[\cos(2\omega\Delta t)+2\omega\tau\sin(2\omega\Delta t)-4\omega_{0}^{2}\tau^{2}\right]\Big)-\frac{s_{2}^{4}}{s_{1}^{2}}\bigg]^{1/2}.
 \end{align}
 
 \end_inset
@@ -1389,7 +1389,7 @@ reference "eq:path-sampling"
 
 \end_inset
 
-) to obtain exact ly sampled trajectories of the Brownian harmonic oscillator.
+) to obtain exactly sampled trajectories of the Brownian harmonic oscillator.
  The results of section (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1685,7 +1685,7 @@ name "fig:autocorrelation"
 \begin_inset Float table
 wide true
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -1772,7 +1772,7 @@ Bayes II
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $0.994$
+\begin_inset Formula $0.994\pm0.006$
 \end_inset
 
 
@@ -1784,7 +1784,7 @@ Bayes II
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $0.993$
+\begin_inset Formula $0.993\pm0.008$
 \end_inset
 
 
@@ -1810,7 +1810,7 @@ Bayes II
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $1.521$
+\begin_inset Formula $1.521\pm0.014$
 \end_inset
 
 
@@ -1822,7 +1822,7 @@ Bayes II
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $1.517$
+\begin_inset Formula $1.517\pm0.012$
 \end_inset
 
 
@@ -1848,7 +1848,7 @@ Bayes II
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $2.107$
+\begin_inset Formula $2.107\pm0.015$
 \end_inset
 
 
@@ -1860,7 +1860,7 @@ Bayes II
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $2.092$
+\begin_inset Formula $2.092\pm0.016$
 \end_inset
 
 
@@ -1999,7 +1999,7 @@ Bayes I
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $224.81$
+\begin_inset Formula $224.81\pm1.72$
 \end_inset
 
 
@@ -2011,7 +2011,7 @@ Bayes I
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $224.49$
+\begin_inset Formula $224.49\pm1.75$
 \end_inset
 
 
@@ -2035,7 +2035,7 @@ Bayes I
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $2.966$
+\begin_inset Formula $2.966\pm0.021$
 \end_inset
 
 
@@ -2061,7 +2061,7 @@ Bayes I
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $251.97$
+\begin_inset Formula $251.97\pm1.93$
 \end_inset
 
 
@@ -2073,7 +2073,7 @@ Bayes I
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $251.82$
+\begin_inset Formula $251.82\pm1.97$
 \end_inset
 
 
@@ -2097,7 +2097,7 @@ Bayes I
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $1.974$
+\begin_inset Formula $1.974\pm0.016$
 \end_inset
 
 
@@ -2123,7 +2123,7 @@ Bayes I
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $316.41$
+\begin_inset Formula $316.41\pm2.37$
 \end_inset
 
 
@@ -2135,7 +2135,7 @@ Bayes I
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $314.88$
+\begin_inset Formula $314.88\pm2.46$
 \end_inset
 
 
@@ -2159,7 +2159,7 @@ Bayes I
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $1.788$
+\begin_inset Formula $1.788\pm0.015$
 \end_inset
 
 
@@ -2181,7 +2181,8 @@ Bayes I
 \begin_layout Plain Layout
 Bayesian MAP estimates of mass, trap stiffness and friction from a time
  series obtained from the simulation of underdamped harmonic oscillator.
- The parameters used in the simulation are also shown.
+ The parameters used in the simulation and Bayesian error bars have also
+ been included.
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:springconstant"
@@ -2434,15 +2435,8 @@ reference "tab:springconstant"
 \end_inset
 
 .
- We characterize the error bars for Bayes I by the variance-covariance matrix
- for the posterior distribution in Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:CovrianceMatrix"
-
-\end_inset
-
-.
+ The error bars have been calculated from the Hessian matrix, whose expression
+ is provided in the appendix.
  The error bars of Bayes II follow trivially from Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2451,253 +2445,6 @@ reference "eq:map_stationary"
 \end_inset
 
 ).
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="4">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\sigma^{2}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $m$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $k$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\gamma$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $m$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $1.341\times10^{-27}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $3.015\times10^{-19}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $8.069\times10^{-24}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $k$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $3.015\times10^{-19}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $7.143\times10^{-11}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $1.815\times10^{-15}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\gamma$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $8.069\times10^{-24}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $1.815\times10^{-15}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $4.928\times10^{-20}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Variance-covariance matrix for the posterior distribution.
- These gives the error bars for our Bayesian method.
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:CovrianceMatrix"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
