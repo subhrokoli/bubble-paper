@@ -1224,7 +1224,11 @@ Here
 \end_inset
 
  is the characteristic time scale associated with the thermalization of
- the momentum due to viscous dissipation.
+ the momentum due to viscous dissipation, and 
+\begin_inset Formula $\omega=\sqrt{k/m-\gamma^{2}/(2m)^{2}}=\sqrt{\omega_{0}^{2}-1/(2\tau)^{2}}$
+\end_inset
+
+ is the frequency of the damped oscillator.
  The diffusion coefficient of the particle is defined, as usual, by the
  Einstein relation 
 \begin_inset Formula $D=k_{B}T\gamma^{-1}$
@@ -1361,7 +1365,7 @@ begin{subequations}
 \begin{align}
 s_{1} & =\bigg[\dfrac{k_{B}T}{4\gamma\omega^{2}\omega_{0}^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\tfrac{\Delta t}{\tau})\nonumber \\
  & \times\left[\cos(2\omega\Delta t)-2\omega\tau\sin(2\omega\Delta t)-4\omega_{0}^{2}\tau^{2}\right]\Big)\bigg]^{1/2}\\
-s_{2} & =\left(\dfrac{k_{B}T}{\gamma\omega^{2}\tau^{2}}\exp(-\tfrac{\Delta t}{\tau})\sin^{2}(\omega\Delta t)\right)/s_{1}\\
+s_{2} & =\frac{1}{s_{1}}\dfrac{k_{B}T}{\gamma\omega^{2}\tau^{2}}\exp(-\tfrac{\Delta t}{\tau})\sin^{2}(\omega\Delta t)\\
 s_{3} & =\bigg[\dfrac{k_{B}T}{4\gamma\omega^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\tfrac{\Delta t}{2\tau})\nonumber \\
  & \times\left[\cos(2\omega\Delta t)+2\omega\tau\sin(2\omega\Delta t)-4\omega_{0}^{2}\tau^{2}\right]\Big)-\frac{s_{2}^{4}}{s_{1}^{2}}\bigg]^{1/2}.
 \end{align}
@@ -2179,10 +2183,14 @@ Bayes I
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Bayesian MAP estimates of mass, trap stiffness and friction from a time
- series obtained from the simulation of underdamped harmonic oscillator.
- The parameters used in the simulation and Bayesian error bars have also
- been included.
+Bayesian MAP estimates of mass, trap stiffness and friction from time series
+ obtained from the simulation of underdamped harmonic oscillator, along
+ with the error bars.
+ The error bars are less than 
+\begin_inset Formula $1\%$
+\end_inset
+
+ for each case.
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:springconstant"
