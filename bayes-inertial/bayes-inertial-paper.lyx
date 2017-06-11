@@ -1353,8 +1353,8 @@ To sample paths of the Brownian harmonic oscillator exactly, it is necessary
 where 
 \begin_inset Formula 
 \begin{eqnarray}
-\Lambda_{1}(t) & = & \exp(-\tfrac{\Delta t}{2\tau})\left[\cos(\omega\Delta t)+\frac{1}{2\omega\tau}\sin(\omega\Delta t)\right]\nonumber \\
-\Lambda_{2}(t) & = & \exp(-\tfrac{\Delta t}{2\tau})\left[\frac{1}{\omega}\sin(\omega\Delta t)\right]
+\Lambda_{1}(t) & = & \exp(\tfrac{-\Delta t}{2\tau})\left[\cos(\omega\Delta t)+\frac{1}{2\omega\tau}\sin(\omega\Delta t)\right]\nonumber \\
+\Lambda_{2}(t) & = & \exp(\tfrac{-\Delta t}{2\tau})\left[\frac{1}{\omega}\sin(\omega\Delta t)\right]
 \end{eqnarray}
 
 \end_inset
@@ -1392,11 +1392,11 @@ begin{subequations}
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-s_{1} & =\bigg[\dfrac{k_{B}T}{4\gamma\omega^{2}\omega_{0}^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\tfrac{\Delta t}{\tau})\nonumber \\
- & \times\left[\cos(2\omega\Delta t)-2\omega\tau\sin(2\omega\Delta t)-4\omega_{0}^{2}\tau^{2}\right]\Big)\bigg]^{1/2}\\
-s_{2} & =\frac{1}{s_{1}}\dfrac{k_{B}T}{\gamma\omega^{2}\tau^{2}}\exp(-\tfrac{\Delta t}{\tau})\sin^{2}(\omega\Delta t)\\
-s_{3} & =\bigg[\dfrac{k_{B}T}{4\gamma\omega^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\tfrac{\Delta t}{2\tau})\nonumber \\
- & \times\left[\cos(2\omega\Delta t)+2\omega\tau\sin(2\omega\Delta t)-4\omega_{0}^{2}\tau^{2}\right]\Big)-\frac{s_{2}^{4}}{s_{1}^{2}}\bigg]^{1/2}.
+s_{1} & =\bigg[\frac{k_{B}T}{k}-k_{B}T\exp(\tfrac{-\Delta t}{\tau})\Big(\frac{1}{m\omega^{2}}\sin^{2}(\omega\Delta t)\nonumber \\
+ & +\big[\cos(\omega\Delta t)+\tfrac{1}{2\omega\tau}\sin(\omega\Delta t)\big]^{2}\Big)\bigg]^{1/2},\\
+s_{2} & =\frac{1}{s_{1}}\dfrac{k_{B}T}{\gamma\omega^{2}\tau^{2}}\exp(\tfrac{-\Delta t}{\tau})\sin^{2}(\omega\Delta t),\\
+s_{3} & =\bigg[\frac{k_{B}T}{m}-k_{B}T\exp(\tfrac{-\Delta t}{\tau})\Big(\frac{1}{m\omega^{2}}\sin^{2}(\omega\Delta t)\nonumber \\
+ & +\big[\cos(\omega\Delta t)-\tfrac{1}{2\omega\tau}\sin(\omega\Delta t)\big]^{2}\Big)-\frac{s_{2}^{4}}{s_{1}^{2}}\bigg]^{1/2}.
 \end{align}
 
 \end_inset

@@ -303,8 +303,8 @@ The above expression has been used to obtain analytical form of the matrix
  is then given as
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{L}=\begin{pmatrix}L_{1} & 0\\
-L_{2} & L_{3}
+\boldsymbol{L}=\begin{pmatrix}s & 0\\
+s_{2} & s_{3}
 \end{pmatrix},
 \end{equation}
 
@@ -333,9 +333,9 @@ begin{subequations}
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-L_{1} & =\bigg[\dfrac{k_{B}T}{4\gamma\omega^{2}\omega_{0}^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\Delta t/\tau)\left[\cos2\phi-2\omega\tau\sin2\phi-4\omega_{0}^{2}\tau^{2}\right]\Big)\bigg]^{1/2},\\
-L_{2} & =\left(\dfrac{k_{B}T}{\gamma\omega^{2}\tau^{2}}\exp(-\Delta t/\tau)\sin^{2}\phi\right)/L_{1},\\
-L_{3} & =\bigg[\dfrac{k_{B}T}{4\gamma\omega^{2}\tau^{3}}\Big(4\omega^{2}\tau^{2}+\exp(-\Delta t/\tau)\left[\cos2\phi+2\omega\tau\sin2\phi-4\omega_{0}^{2}\tau^{2}\right]\Big)-L_{2}^{4}/L_{1}^{2}\bigg]^{1/2}.
+s_{1} & =\bigg[\frac{k_{B}T}{k}-k_{B}T\exp(-\Delta t/\tau)\Big(\frac{1}{m\omega^{2}}\sin^{2}\phi+(\cos\phi+\tfrac{1}{2\omega\tau}\sin\phi)^{2}\Big)\bigg]^{1/2},\\
+s_{2} & =\dfrac{k_{B}T}{\gamma\omega^{2}\tau^{2}}\exp(-\Delta t/\tau)\sin^{2}\phi/L_{1},\\
+s_{3} & =\bigg[\frac{k_{B}T}{m}-k_{B}T\exp(-\Delta t/\tau)\Big(\frac{1}{m\omega^{2}}\sin^{2}\phi+(\cos\phi-\tfrac{1}{2\omega\tau}\sin\phi)^{2}\Big)-\frac{s_{2}^{4}}{s_{1}^{2}}\bigg]^{1/2}.
 \end{align}
 
 \end_inset
@@ -416,7 +416,7 @@ where the matrices
  are obtained in terms of the four sufficient statistics matrices as
 \begin_inset Formula 
 \begin{align}
-\bm{T}^{c} & =\dfrac{N}{k_{B}T}\Big(1-(\epsilon\,\boldsymbol{T}_{{\scriptscriptstyle \Lambda}}^{T})^{2}\Big)\left(\bm{T}_{1}-\boldsymbol{T}_{{\scriptscriptstyle \Lambda}}\boldsymbol{T}_{2}^{T}\right)^{-1},\\
+\bm{T}^{c} & =Nk_{B}T\Big(1-(\epsilon\,\boldsymbol{T}_{{\scriptscriptstyle \Lambda}}^{T})^{2}\Big)\left(\bm{T}_{1}-\boldsymbol{T}_{{\scriptscriptstyle \Lambda}}\boldsymbol{T}_{2}^{T}\right)^{-1},\\
 \bm{T}^{\lambda} & =-\dfrac{1}{\Delta t}\ln\boldsymbol{T}_{{\scriptscriptstyle \Lambda}},\qquad\boldsymbol{T}_{{\scriptscriptstyle \Lambda}}=\boldsymbol{T}_{2}\boldsymbol{T}_{3}^{-1}.
 \end{align}
 
