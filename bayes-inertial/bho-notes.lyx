@@ -391,8 +391,34 @@ We also have
  Then, we can write,
 \begin_inset Formula 
 \begin{equation}
-k^{*}=k_{B}T/c_{11}^{*},\qquad m^{*}=k_{B}T/c_{22}^{*},\qquad\gamma^{*}=m^{*}\lambda^{*}{}_{22}
+k^{*}=k_{B}T/c_{{\scriptscriptstyle 11}}^{*},\qquad m^{*}=k_{B}T/c_{{\scriptscriptstyle 22}}^{*},\qquad\gamma^{*}=m^{*}\lambda^{*}{}_{{\scriptscriptstyle 22}}
 \end{equation}
+
+\end_inset
+
+The MAP estimates of the parameters for the Brownian harmonic oscillator
+ can also be written as
+\begin_inset Formula 
+\begin{equation}
+k^{*}=T_{{\scriptscriptstyle 11}}^{c},\qquad m^{*}=T_{{\scriptscriptstyle 22}}^{c},\qquad\gamma^{*}=T_{{\scriptscriptstyle 22}}^{c}T_{{\scriptscriptstyle 22}}^{\lambda},
+\end{equation}
+
+\end_inset
+
+where the matrices 
+\begin_inset Formula $\boldsymbol{T}^{c}$
+\end_inset
+
+ and 
+\begin_inset Formula $\boldsymbol{T}^{\lambda}$
+\end_inset
+
+ are obtained in terms of the four sufficient statistics matrices as
+\begin_inset Formula 
+\begin{align}
+\bm{T}^{c} & =\dfrac{N}{k_{B}T}\Big(1-(\epsilon\,\boldsymbol{T}_{{\scriptscriptstyle \Lambda}}^{T})^{2}\Big)\left(\bm{T}_{1}-\boldsymbol{T}_{{\scriptscriptstyle \Lambda}}\boldsymbol{T}_{2}^{T}\right)^{-1},\\
+\bm{T}^{\lambda} & =-\dfrac{1}{\Delta t}\ln\boldsymbol{T}_{{\scriptscriptstyle \Lambda}},\qquad\boldsymbol{T}_{{\scriptscriptstyle \Lambda}}=\boldsymbol{T}_{2}\boldsymbol{T}_{3}^{-1}.
+\end{align}
 
 \end_inset
 

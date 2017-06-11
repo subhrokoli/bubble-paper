@@ -881,8 +881,16 @@ An alternative Bayesian procedure for directly estimating
 \end_inset
 
 .
- Using non-informative priors, the MAP estimate is obtained straightforwardly
- to be
+ Using non-informative priors, the expression of the logarithms of the posterior
+ probability in this approach is given as
+\begin_inset Formula 
+\begin{align}
+\ln P\left(\boldsymbol{X}|\boldsymbol{c}\right) & =\dfrac{N}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}|\bm{c}|}-\dfrac{1}{2}\sum_{n=1}^{N}\boldsymbol{x}_{n}^{T}\boldsymbol{c}^{-1}\,\boldsymbol{x}_{n}.\label{eq:posteriorEqm}
+\end{align}
+
+\end_inset
+
+The MAP estimates are obtained straightforwardly from the posterior probability
 \begin_inset Formula 
 \begin{align}
 \boldsymbol{c}^{\ast}=\frac{1}{N}\sum_{n=1}^{N}\boldsymbol{x}_{n}\boldsymbol{x}_{n}^{T}=\frac{1}{N}\boldsymbol{T}_{3} & .\label{eq:mapStationary-c}
@@ -895,7 +903,28 @@ The Bayesian inference method described above, using the stationary distribution
  Numerical consistency between the above two methods of estimating the covarianc
 e matrix provides a stringent test of the appropriateness of the Ornstein-Uhlenb
 eck process as the data generating model.
- The preceding four equations are the central results of this paper.
+ The preceding equations (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map-estimates"
+
+\end_inset
+
+), (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:covariance-OC"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:mapStationary-c"
+
+\end_inset
+
+) are the central results of this paper.
 \end_layout
 
 \begin_layout Standard
@@ -1219,7 +1248,7 @@ Here
 \begin_inset Formula $\omega_{0}=\sqrt{k/m}$
 \end_inset
 
- is the natural frequency of the undamped harmonic oscillator and 
+ is the natural frequency of the undamped harmonic oscillator, 
 \begin_inset Formula $\tau=m/\gamma$
 \end_inset
 
@@ -1525,171 +1554,10 @@ reference "eq:covariance-OC"
  the mass of the particle, the trap stiffness and the particle friction
  coefficient.
  
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename figure_3a.png
-	display false
-	width 40text%
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Pairs plot for mass 
-\begin_inset Formula $m$
-\end_inset
-
-, trap stiffness 
-\begin_inset Formula $k$
-\end_inset
-
- and particle drag coefficient 
-\begin_inset Formula $\gamma$
-\end_inset
-
-.
- Panel 
-\begin_inset Formula $(a)$
-\end_inset
-
- shows the pairs plot obtained from the MAP estimates in Eq.(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map-estimates"
-
-\end_inset
-
-), while 
-\begin_inset Formula $(b)$
-\end_inset
-
- contains pairs plot for mass 
-\begin_inset Formula $m$
-\end_inset
-
- and trap stiffness 
-\begin_inset Formula $k$
-\end_inset
-
- obtained from the MAP estimates in Eq.(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map_stationary"
-
-\end_inset
-
-).
- The variables have been scaled by 
-\begin_inset Formula $x^{\prime}=\left(x-\mu_{x}\right)/\sigma_{xx}^{2}$
-\end_inset
-
-, where 
-\begin_inset Formula $\mu_{x}$
-\end_inset
-
- and 
-\begin_inset Formula $\sigma_{xx}^{2}$
-\end_inset
-
- are the MAP estimate and variance of 
-\begin_inset Formula $x$
-\end_inset
-
- respectively.
- The MAP estimate is marked by a black dot, and the 
-\begin_inset Formula $1\sigma$
-\end_inset
-
-, 
-\begin_inset Formula $2\sigma$
-\end_inset
-
-, and 
-\begin_inset Formula $3\sigma$
-\end_inset
-
- regions have been shaded.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:inference"
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:stationary"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename figure_4.png
-	lyxscale 25
-	display false
-	width 46text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-(a) Normalized autocorrelation function, and (b) power Spectrum for position.
- (c) Normalized autocorrelation function, and (d) power Spectrum for velocity.
- The autocorrelation and power spectra, computed from the position and velocity
- data, are plotted in cyan and red respectively.
- The black curves denote the analytical form of autocorrelations and power
- spectra in terms of the Bayesian MAP estimates.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:autocorrelation"
-
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \begin_inset Float table
 wide true
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -2235,11 +2103,16 @@ name "tab:springconstant"
 \end_layout
 
 \begin_layout Standard
-Bayes II is applied to Brownian harmonic oscillator by using the fact that
- the likelihood can be factored into the Gibbs distribution for position
- and the Maxwell-Boltzmann distribution for the velocity at the equilibrium
- to give a diagonal covariance matrix, as given in Eq.
- (
+Bayes II is applied to Brownian harmonic oscillator by using the bivariate
+ analogue of Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:posteriorEqm"
+
+\end_inset
+
+) for the logarithm of the posterior probability for stationary distributions.
+ We also use the expression of diagonal covariance matrix of Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:covarianceDiagonal"
@@ -2247,58 +2120,7 @@ reference "eq:covarianceDiagonal"
 \end_inset
 
 ).
- Thus the logarithm of the posterior probability of Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:posteriorEqm"
-
-\end_inset
-
-) reduces to equation for mass 
-\begin_inset Formula $m$
-\end_inset
-
- and stiffness 
-\begin_inset Formula $k$
-\end_inset
-
- as
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{subequations}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{align}
-\ln P\left(k|x\right) & =\dfrac{N}{2}\ln\dfrac{k}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{k}{k_{B}T}\sum x_{n}^{2},\label{eq:map_k_stat}\\
-\ln P\left(m|v\right) & =\dfrac{N}{2}\ln\dfrac{m}{2\pi k_{B}T}-\dfrac{1}{2}\dfrac{m}{k_{B}T}\sum v_{n}^{2}.\label{eq:map_m_stat}
-\end{align}
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{subequations}
-\end_layout
-
-\end_inset
-
-Here we have used informative uniform prior for 
+ The posterior is obtained with uniform prior for 
 \begin_inset Formula $m$
 \end_inset
 
@@ -2307,8 +2129,14 @@ Here we have used informative uniform prior for
 \end_inset
 
 , which constrain them to take only positive values.
- The MAP estimates and the error bars are obtained straightforwardly from
- the posterior probability
+ The MAP estimates and error bars for Bayes II, then, follows from Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:mapStationary-c"
+
+\end_inset
+
+) as
 \begin_inset ERT
 status open
 
@@ -2388,6 +2216,167 @@ reference "fig:PositionsVelocity"
 \end_inset
 
  in the conventional equipartition method.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figure_3a.png
+	display false
+	width 38text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Pairs plot for mass 
+\begin_inset Formula $m$
+\end_inset
+
+, trap stiffness 
+\begin_inset Formula $k$
+\end_inset
+
+ and particle drag coefficient 
+\begin_inset Formula $\gamma$
+\end_inset
+
+.
+ Panel 
+\begin_inset Formula $(a)$
+\end_inset
+
+ shows the pairs plot obtained from the MAP estimates in Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map-estimates"
+
+\end_inset
+
+), while 
+\begin_inset Formula $(b)$
+\end_inset
+
+ contains pairs plot for mass 
+\begin_inset Formula $m$
+\end_inset
+
+ and trap stiffness 
+\begin_inset Formula $k$
+\end_inset
+
+ obtained from the MAP estimates in Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map_stationary"
+
+\end_inset
+
+).
+ The variables have been scaled by 
+\begin_inset Formula $x^{\prime}=\left(x-\mu_{x}\right)/\sigma_{xx}^{2}$
+\end_inset
+
+, where 
+\begin_inset Formula $\mu_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{xx}^{2}$
+\end_inset
+
+ are the MAP estimate and variance of 
+\begin_inset Formula $x$
+\end_inset
+
+ respectively.
+ The MAP estimate is marked by a black dot, and the 
+\begin_inset Formula $1\sigma$
+\end_inset
+
+, 
+\begin_inset Formula $2\sigma$
+\end_inset
+
+, and 
+\begin_inset Formula $3\sigma$
+\end_inset
+
+ regions have been shaded.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:inference"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:stationary"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figure_4.png
+	lyxscale 25
+	display false
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+(a) Normalized autocorrelation function, and (b) power Spectrum for position.
+ (c) Normalized autocorrelation function, and (d) power Spectrum for velocity.
+ The autocorrelation and power spectra, computed from the position and velocity
+ data, are plotted in cyan and red respectively.
+ The black curves denote the analytical form of autocorrelations and power
+ spectra in terms of the Bayesian MAP estimates.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:autocorrelation"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
