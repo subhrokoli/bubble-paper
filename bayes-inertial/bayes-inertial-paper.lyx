@@ -1499,61 +1499,6 @@ name "fig:PositionsVelocity"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-
-\emph on
-Parameter estimation: 
-\emph default
-Bayesian inference of section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Bayesian-inference"
-
-\end_inset
-
- provides a principled way of jointly estimating the parameters of the Brownian
- harmonic oscillators from discrete time series.
- The MAP estimates of the multivariate Ornstein-Uhlenbeck process using
- Bayes I are provided in Eq.(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map-estimates"
-
-\end_inset
-
-) and (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:covariance-OC"
-
-\end_inset
-
-).
- These equation can be used to obtain the MAP estimates of 
-\begin_inset Formula $\bm{\Sigma}$
-\end_inset
-
-, 
-\begin_inset Formula $\bm{\Lambda}$
-\end_inset
-
- and 
-\begin_inset Formula $\bm{c}$
-\end_inset
-
- by representing the position-velocity data of the underdamped oscillator
- as the vector time series 
-\begin_inset Formula $\bm{x_{n}=}\left[x\left(t=n\Delta t\right)\;\;v\left(t=n\Delta t\right)\right]^{T}$
-\end_inset
-
-.
- These estimates can be used to obtain the scalar MAP estimates, after algebraic
- manipulations detailed in the Appendix, for the parameters of interest:
- the mass of the particle, the trap stiffness and the particle friction
- coefficient.
- 
 \begin_inset Float table
 wide true
 sideways false
@@ -2076,26 +2021,107 @@ name "tab:springconstant"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Parameter estimation: 
+\emph default
+Bayesian inference of section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Bayesian-inference"
+
+\end_inset
+
+ provides a principled way of jointly estimating the parameters of the Brownian
+ harmonic oscillators from discrete time series.
+ The MAP estimates of the multivariate Ornstein-Uhlenbeck process using
+ Bayes I are provided in Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:map-estimates"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:covariance-OC"
+
+\end_inset
+
+).
+ These equation can be used to obtain the MAP estimates of 
+\begin_inset Formula $\bm{\Sigma}$
+\end_inset
+
+, 
+\begin_inset Formula $\bm{\Lambda}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bm{c}$
+\end_inset
+
+ by representing the position-velocity data of the underdamped oscillator
+ as the vector time series 
+\begin_inset Formula $\bm{x_{n}=}\left[x\left(t=n\Delta t\right)\;\;v\left(t=n\Delta t\right)\right]^{T}$
+\end_inset
+
+.
+ These estimates can be used to obtain the scalar MAP estimates, after algebraic
+ manipulations detailed in the Appendix, for the parameters of interest:
+ the mass of the particle, the trap stiffness and the particle friction
+ coefficient 
 \begin_inset Formula 
-\begin{align}
-\begin{pmatrix}\dfrac{k_{B}T}{k^{\ast}}\\
-\dfrac{k_{B}T}{m^{\ast}}
-\end{pmatrix} & =\begin{pmatrix}1-\Lambda_{11}^{\ast2} & -\Lambda_{12}^{\ast2}\\
-\\
--\Lambda_{21}^{\ast2} & 1-\Lambda_{22}^{\ast2}
-\end{pmatrix}^{-1}\begin{pmatrix}\Sigma_{11}^{\ast}\\
-\\
-\Sigma_{22}^{\ast}
-\end{pmatrix}
-\end{align}
+\begin{equation}
+k^{*}=T_{{\scriptscriptstyle 11}}^{c},\qquad m^{*}=T_{{\scriptscriptstyle 22}}^{c},\qquad\gamma^{*}=T_{{\scriptscriptstyle 22}}^{c}T_{{\scriptscriptstyle 22}}^{\lambda},
+\end{equation}
+
+\end_inset
+
+where the matrices 
+\begin_inset Formula $\boldsymbol{T}^{c}$
+\end_inset
+
+ and 
+\begin_inset Formula $\boldsymbol{T}^{\lambda}$
+\end_inset
+
+ are obtained in terms of the four sufficient statistics matrices as
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-\gamma^{\ast}=\dfrac{m^{\ast2}}{k_{B}T}\dfrac{\Sigma_{12}^{\ast}}{\Lambda_{12}^{\ast2}}.
-\]
+\begin{align}
+\bm{T}^{c} & =Nk_{B}T\Big(1-(\epsilon\,\boldsymbol{T}_{{\scriptscriptstyle \Lambda}}^{T})^{2}\Big)\left(\bm{T}_{1}-\boldsymbol{T}_{{\scriptscriptstyle \Lambda}}\boldsymbol{T}_{2}^{T}\right)^{-1},\\
+\bm{T}^{\lambda} & =-\dfrac{1}{\Delta t}\ln\boldsymbol{T}_{{\scriptscriptstyle \Lambda}},\qquad\boldsymbol{T}_{{\scriptscriptstyle \Lambda}}=\boldsymbol{T}_{2}\boldsymbol{T}_{3}^{-1}.
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
 
 \end_inset
 
