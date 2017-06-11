@@ -104,7 +104,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -1396,7 +1395,7 @@ s_{1} & =\bigg[\frac{k_{B}T}{k}-k_{B}T\exp(\tfrac{-\Delta t}{\tau})\Big(\frac{1}
  & +\big[\cos(\omega\Delta t)+\tfrac{1}{2\omega\tau}\sin(\omega\Delta t)\big]^{2}\Big)\bigg]^{1/2},\\
 s_{2} & =\frac{1}{s_{1}}\dfrac{k_{B}T}{\gamma\omega^{2}\tau^{2}}\exp(\tfrac{-\Delta t}{\tau})\sin^{2}(\omega\Delta t),\\
 s_{3} & =\bigg[\frac{k_{B}T}{m}-k_{B}T\exp(\tfrac{-\Delta t}{\tau})\Big(\frac{1}{m\omega^{2}}\sin^{2}(\omega\Delta t)\nonumber \\
- & +\big[\cos(\omega\Delta t)-\tfrac{1}{2\omega\tau}\sin(\omega\Delta t)\big]^{2}\Big)-\frac{s_{2}^{4}}{s_{1}^{2}}\bigg]^{1/2}.
+ & +\big[\cos(\omega\Delta t)-\tfrac{1}{2\omega\tau}\sin(\omega\Delta t)\big]^{2}\Big)-s_{2}^{2}\bigg]^{1/2}.
 \end{align}
 
 \end_inset

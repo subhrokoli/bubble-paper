@@ -335,7 +335,7 @@ begin{subequations}
 \begin{align}
 s_{1} & =\bigg[\frac{k_{B}T}{k}-k_{B}T\exp(-\Delta t/\tau)\Big(\frac{1}{m\omega^{2}}\sin^{2}\phi+(\cos\phi+\tfrac{1}{2\omega\tau}\sin\phi)^{2}\Big)\bigg]^{1/2},\\
 s_{2} & =\dfrac{k_{B}T}{\gamma\omega^{2}\tau^{2}}\exp(-\Delta t/\tau)\sin^{2}\phi/L_{1},\\
-s_{3} & =\bigg[\frac{k_{B}T}{m}-k_{B}T\exp(-\Delta t/\tau)\Big(\frac{1}{m\omega^{2}}\sin^{2}\phi+(\cos\phi-\tfrac{1}{2\omega\tau}\sin\phi)^{2}\Big)-\frac{s_{2}^{4}}{s_{1}^{2}}\bigg]^{1/2}.
+s_{3} & =\bigg[\frac{k_{B}T}{m}-k_{B}T\exp(-\Delta t/\tau)\Big(\frac{1}{m\omega^{2}}\sin^{2}\phi+(\cos\phi-\tfrac{1}{2\omega\tau}\sin\phi)^{2}\Big)-s_{2}^{2}\bigg]^{1/2}.
 \end{align}
 
 \end_inset
