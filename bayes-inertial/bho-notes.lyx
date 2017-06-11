@@ -361,43 +361,50 @@ MAP estimates
 \end_layout
 
 \begin_layout Standard
-For a Brownian Harmonic oscillator, we have,
+We now use the following definitions
 \begin_inset Formula 
 \begin{equation}
 \bm{c}=\begin{pmatrix}k_{B}T/k & 0\\
 0 & k_{B}T/m
 \end{pmatrix},\qquad\bm{\lambda}=\begin{pmatrix}0 & -1\\
 \omega_{0}^{2} & \gamma/m
-\end{pmatrix},
+\end{pmatrix},\qquad\boldsymbol{\Sigma}=\boldsymbol{c}-\boldsymbol{\Lambda}\boldsymbol{c}\,\boldsymbol{\Lambda}^{T},\quad\boldsymbol{\Lambda}=e^{-\boldsymbol{\lambda}\Delta t}
 \end{equation}
 
 \end_inset
 
-The MAP estimates are
+to obtain the map estimates of the parameters 
+\begin_inset Formula $k,m$
+\end_inset
+
+ and gamma in terms of sufficient statistics.
+ The MAP estimates of these matrices are
 \begin_inset Formula 
 \begin{align}
-\bm{\bm{\Lambda}^{\ast}} & =\bm{T}_{2}\boldsymbol{T}_{3}^{-1},\label{eq:map_lambda}\\
-\bm{\Sigma^{\ast}} & =\dfrac{1}{N}\left(\bm{T}_{1}-\boldsymbol{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{T}_{2}^{T}\right),\label{eq:map_sigma}\\
-\boldsymbol{c}^{\ast} & =\boldsymbol{\Sigma}^{\ast}\left[\boldsymbol{1}-(\boldsymbol{\Lambda}^{\ast}\boldsymbol{\epsilon})^{T}(\boldsymbol{\Lambda}^{\ast}\boldsymbol{\epsilon})^{T}\right]^{-1}.
+\bm{\bm{\Lambda}^{\ast}} & =\boldsymbol{T}_{{\scriptscriptstyle \Lambda}}=\bm{T}_{2}\boldsymbol{T}_{3}^{-1},\label{eq:map_lambda}\\
+\bm{\Sigma^{\ast}} & =\dfrac{1}{N}\left(\bm{T}_{1}-\boldsymbol{T}_{{\scriptscriptstyle \Lambda}}\boldsymbol{T}_{2}^{T}\right),\label{eq:map_sigma}\\
+\boldsymbol{c}^{\ast} & =\boldsymbol{\Sigma}^{\ast}\left[\boldsymbol{1}-(\boldsymbol{\epsilon}\boldsymbol{T}_{{\scriptscriptstyle \Lambda}}^{T})^{2}\right]^{-1}.
 \end{align}
 
 \end_inset
 
-We also have 
-\begin_inset Formula $\boldsymbol{\lambda}^{*}=-\frac{1}{\Delta t}\log\boldsymbol{\Lambda}^{*}$
-\end_inset
-
-.
- Then, we can write,
+From the last expression above, we have
 \begin_inset Formula 
-\begin{equation}
-k^{*}=k_{B}T/c_{{\scriptscriptstyle 11}}^{*},\qquad m^{*}=k_{B}T/c_{{\scriptscriptstyle 22}}^{*},\qquad\gamma^{*}=m^{*}\lambda^{*}{}_{{\scriptscriptstyle 22}}
-\end{equation}
+\[
+(\boldsymbol{c}^{\ast})^{-1}=\left[\boldsymbol{1}-(\boldsymbol{\epsilon}\boldsymbol{T}_{{\scriptscriptstyle \Lambda}}^{T})^{2}\right](\boldsymbol{\Sigma}^{\ast})^{-1}=N\left[\boldsymbol{1}-(\boldsymbol{\epsilon}\boldsymbol{T}_{{\scriptscriptstyle \Lambda}}^{T})^{2}\right]\left(\bm{T}_{1}-\boldsymbol{T}_{{\scriptscriptstyle \Lambda}}\boldsymbol{T}_{2}^{T}\right)^{-1}.
+\]
 
 \end_inset
 
-The MAP estimates of the parameters for the Brownian harmonic oscillator
- can also be written as
+We now use of the form of 
+\begin_inset Formula $\boldsymbol{c}$
+\end_inset
+
+ and 
+\begin_inset Formula $\boldsymbol{\lambda}$
+\end_inset
+
+ matrices to obtain
 \begin_inset Formula 
 \begin{equation}
 k^{*}=T_{{\scriptscriptstyle 11}}^{c},\qquad m^{*}=T_{{\scriptscriptstyle 22}}^{c},\qquad\gamma^{*}=T_{{\scriptscriptstyle 22}}^{c}T_{{\scriptscriptstyle 22}}^{\lambda},
@@ -417,7 +424,7 @@ where the matrices
 \begin_inset Formula 
 \begin{align}
 \bm{T}^{c} & =Nk_{B}T\Big(1-(\epsilon\,\boldsymbol{T}_{{\scriptscriptstyle \Lambda}}^{T})^{2}\Big)\left(\bm{T}_{1}-\boldsymbol{T}_{{\scriptscriptstyle \Lambda}}\boldsymbol{T}_{2}^{T}\right)^{-1},\\
-\bm{T}^{\lambda} & =-\dfrac{1}{\Delta t}\ln\boldsymbol{T}_{{\scriptscriptstyle \Lambda}},\qquad\boldsymbol{T}_{{\scriptscriptstyle \Lambda}}=\boldsymbol{T}_{2}\boldsymbol{T}_{3}^{-1}.
+\bm{T}^{\lambda} & =-\dfrac{1}{\Delta t}\ln\boldsymbol{T}_{{\scriptscriptstyle \Lambda}}.
 \end{align}
 
 \end_inset
