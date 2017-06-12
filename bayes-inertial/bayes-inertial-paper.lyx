@@ -683,7 +683,7 @@ The denominator
 where 
 \begin_inset Formula 
 \begin{align}
-\boldsymbol{\Delta}_{n} & \equiv\boldsymbol{x}_{n+1}-\boldsymbol{\Lambda}\,\boldsymbol{x}_{n}.
+\boldsymbol{\Delta}_{n} & \equiv\boldsymbol{x}_{n+1}-\boldsymbol{\Lambda}\,\boldsymbol{x}_{n}.\label{eq:posteriorBayesI}
 \end{align}
 
 \end_inset
@@ -749,7 +749,7 @@ begin{subequations}
 
 \begin_inset CommandInset label
 LatexCommand label
-name "eq:map-estimates"
+name "eq:mapBayesI"
 
 \end_inset
 
@@ -884,7 +884,7 @@ An alternative Bayesian procedure for directly estimating
  probability in this approach is given as
 \begin_inset Formula 
 \begin{align}
-\ln P\left(\boldsymbol{X}|\boldsymbol{c}\right) & =\dfrac{N}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}|\bm{c}|}-\dfrac{1}{2}\sum_{n=1}^{N}\boldsymbol{x}_{n}^{T}\boldsymbol{c}^{-1}\,\boldsymbol{x}_{n}.\label{eq:posteriorEqm}
+\ln P\left(\boldsymbol{X}|\boldsymbol{c}\right) & =\dfrac{N}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}|\bm{c}|}-\dfrac{1}{2}\sum_{n=1}^{N}\boldsymbol{x}_{n}^{T}\boldsymbol{c}^{-1}\,\boldsymbol{x}_{n}.\label{eq:posteriorBayesII}
 \end{align}
 
 \end_inset
@@ -892,7 +892,7 @@ An alternative Bayesian procedure for directly estimating
 The MAP estimates are obtained straightforwardly from the posterior probability
 \begin_inset Formula 
 \begin{align}
-\boldsymbol{c}^{\ast}=\frac{1}{N}\sum_{n=1}^{N}\boldsymbol{x}_{n}\boldsymbol{x}_{n}^{T}=\frac{1}{N}\boldsymbol{T}_{3} & .\label{eq:mapStationary-c}
+\boldsymbol{c}^{\ast}=\frac{1}{N}\sum_{n=1}^{N}\boldsymbol{x}_{n}\boldsymbol{x}_{n}^{T}=\frac{1}{N}\boldsymbol{T}_{3} & .\label{eq:mapBayesII}
 \end{align}
 
 \end_inset
@@ -905,7 +905,7 @@ eck process as the data generating model.
  The preceding equations (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:map-estimates"
+reference "eq:mapBayesI"
 
 \end_inset
 
@@ -919,7 +919,7 @@ reference "eq:covariance-OC"
 ) and (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:mapStationary-c"
+reference "eq:mapBayesII"
 
 \end_inset
 
@@ -1349,12 +1349,38 @@ To sample paths of the Brownian harmonic oscillator exactly, it is necessary
 
 \end_inset
 
-where 
+where
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{eqnarray}
-\Lambda_{1} & = & \exp(\tfrac{-\Delta t}{2\tau})\left[\cos(\omega\Delta t)+\frac{1}{2\omega\tau}\sin(\omega\Delta t)\right]\nonumber \\
-\Lambda_{2} & = & \exp(\tfrac{-\Delta t}{2\tau})\left[\frac{1}{\omega}\sin(\omega\Delta t)\right]
+\Lambda_{1} & = & \exp(\tfrac{-\Delta t}{2\tau})\left[\cos(\omega\Delta t)+\frac{1}{2\omega\tau}\sin(\omega\Delta t)\right],\\
+\Lambda_{2} & = & \exp(\tfrac{-\Delta t}{2\tau})\left[\frac{1}{\omega}\sin(\omega\Delta t)\right].
 \end{eqnarray}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
 
 \end_inset
 
@@ -1372,7 +1398,7 @@ s_{2} & s_{3}
 
 \end_inset
 
-where the elements are 
+where the elements are
 \begin_inset ERT
 status open
 
@@ -2040,7 +2066,7 @@ reference "sec:Bayesian-inference"
  Bayes I are provided in Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:map-estimates"
+reference "eq:mapBayesI"
 
 \end_inset
 
@@ -2132,7 +2158,7 @@ Bayes II is applied to Brownian harmonic oscillator by using the bivariate
  analogue of Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:posteriorEqm"
+reference "eq:posteriorBayesII"
 
 \end_inset
 
@@ -2154,10 +2180,17 @@ reference "eq:covarianceDiagonal"
 \end_inset
 
 , which constrain them to take only positive values.
- The MAP estimates and error bars for Bayes II, then, follows from Eq.(
+ The MAP estimates and error bars for Bayes II, then, follow from Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:mapStationary-c"
+reference "eq:posteriorBayesII"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:mapBayesII"
 
 \end_inset
 
@@ -2278,7 +2311,7 @@ Pairs plot for mass
  shows the pairs plot obtained from the MAP estimates in Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:map-estimates"
+reference "eq:mapBayesI"
 
 \end_inset
 
@@ -2430,7 +2463,7 @@ reference "fig:inference"
 ) are obtained from Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:map-estimates"
+reference "eq:mapBayesI"
 
 \end_inset
 
@@ -2474,7 +2507,36 @@ reference "eq:map_stationary"
 \emph on
 Correlation functions and spectral densities: 
 \emph default
-The autocorrelation functions and the power spectral densities of position
+We now compare the autocorrelation function and power spectral densities
+ obtained from the time series data of the underdamped Brownian harmonic
+ oscillator and the analytical expression using the Bayesian MAP estimates.
+ The analytical expression of autocorrelation functions can be obtained
+ from Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:phase_space"
+
+\end_inset
+
+).
+ It's explicit expression is
+\begin_inset Formula 
+\begin{align*}
+\langle x\left(t\right)x\left(0\right)\rangle= & \dfrac{k_{B}T}{k}\exp\left(\dfrac{-t}{2\tau}\right)\dfrac{(2\omega\tau\cos\omega t+\sin\omega t)}{2\omega\tau},\\
+\langle v\left(t\right)v\left(0\right)\rangle= & \dfrac{k_{B}T}{k}\exp\left(\dfrac{-t}{2\tau}\right)\dfrac{\omega_{0}^{2}(2\omega\tau\cos\omega t-\sin\omega t)}{2\omega\tau}.
+\end{align*}
+
+\end_inset
+
+The expression of power spectral densities follow from Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:spectral-density"
+
+\end_inset
+
+).
+ The autocorrelation functions and the power spectral densities of position
  and velocity have plotted in Fig.(
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2564,7 +2626,7 @@ key "bera2017fast"
  The Bayesian MAP estimates of Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:map-estimates"
+reference "eq:mapBayesI"
 
 \end_inset
 
@@ -2845,7 +2907,7 @@ Consider the quadratic form
  in Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:logProb"
+reference "eq:posteriorBayesI"
 
 \end_inset
 
