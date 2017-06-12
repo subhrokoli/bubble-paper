@@ -913,7 +913,7 @@ An alternative Bayesian procedure for directly estimating
  probability in this approach is given as
 \begin_inset Formula 
 \begin{align}
-\ln P\left(\boldsymbol{X}|\boldsymbol{c}\right) & =\dfrac{N}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}|\bm{c}|}-\dfrac{1}{2}\sum_{n=1}^{N}\boldsymbol{x}_{n}^{T}\boldsymbol{c}^{-1}\,\boldsymbol{x}_{n}\label{eq:posteriorBayesII}
+\ln P\left(\boldsymbol{X}|\boldsymbol{c}\right) & =\dfrac{N}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}|\bm{c}|}-\dfrac{1}{2}\sum_{n=1}^{N}\boldsymbol{x}_{n}^{T}\boldsymbol{c}^{-1}\,\boldsymbol{x}_{n},\label{eq:posteriorBayesII}
 \end{align}
 
 \end_inset
@@ -921,7 +921,7 @@ An alternative Bayesian procedure for directly estimating
 from which the MAP estimate
 \begin_inset Formula 
 \begin{align}
-\boldsymbol{c}^{\ast}=\frac{1}{N}\sum_{n=1}^{N}\boldsymbol{x}_{n}\boldsymbol{x}_{n}^{T}=\frac{1}{N}\boldsymbol{T}_{3} & .\label{eq:mapBayesII}
+\boldsymbol{c}^{\ast}=\frac{1}{N}\sum_{n=1}^{N}\boldsymbol{x}_{n}\boldsymbol{x}_{n}^{T}=\frac{1}{N}\boldsymbol{T}_{3},\label{eq:mapBayesII}
 \end{align}
 
 \end_inset
@@ -1447,10 +1447,10 @@ begin{subequations}
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-s_{1} & =\bigg[\frac{k_{B}T}{k}-k_{B}T\exp(\tfrac{-\Delta t}{\tau})\Big(\frac{1}{m\omega^{2}}\sin^{2}(\omega\Delta t)\nonumber \\
+s_{1} & =\bigg[\frac{k_{B}T}{k}-\frac{k_{B}T}{k}\exp(\tfrac{-\Delta t}{\tau})\Big(\frac{k}{m\omega^{2}}\sin^{2}(\omega\Delta t)\nonumber \\
  & +\big[\cos(\omega\Delta t)+\tfrac{1}{2\omega\tau}\sin(\omega\Delta t)\big]^{2}\Big)\bigg]^{1/2},\\
 s_{2} & =\frac{1}{s_{1}}\dfrac{k_{B}T}{\gamma\omega^{2}\tau^{2}}\exp(\tfrac{-\Delta t}{\tau})\sin^{2}(\omega\Delta t),\\
-s_{3} & =\bigg[\frac{k_{B}T}{m}-k_{B}T\exp(\tfrac{-\Delta t}{\tau})\Big(\frac{1}{m\omega^{2}}\sin^{2}(\omega\Delta t)\nonumber \\
+s_{3} & =\bigg[\frac{k_{B}T}{m}-\frac{k_{B}T}{m}\exp(\tfrac{-\Delta t}{\tau})\Big(\frac{k}{m\omega^{2}}\sin^{2}(\omega\Delta t)\nonumber \\
  & +\big[\cos(\omega\Delta t)-\tfrac{1}{2\omega\tau}\sin(\omega\Delta t)\big]^{2}\Big)-s_{2}^{2}\bigg]^{1/2}.
 \end{align}
 
