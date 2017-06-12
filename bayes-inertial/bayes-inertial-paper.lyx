@@ -82,14 +82,6 @@ Fast Bayesian inference of the multivariate Ornstein-Uhlenbeck process
 \end_layout
 
 \begin_layout Author
-Dipanjan Ghosh
-\end_layout
-
-\begin_layout Affiliation
-Dept of Chemical Engineering, Jadavpur University, Kolkata 700032, India
-\end_layout
-
-\begin_layout Author
 Rajesh Singh
 \end_layout
 
@@ -99,11 +91,20 @@ The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
 \end_layout
 
 \begin_layout Author
+Dipanjan Ghosh
+\end_layout
+
+\begin_layout Affiliation
+Dept of Chemical Engineering, Jadavpur University, Kolkata 700032, India
+\end_layout
+
+\begin_layout Author
 R.
  Adhikari
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -130,10 +131,9 @@ y mean.
 hlenbeck process, to jointly estimate its mass, damping and stiffness and
  to provide Bayesian estimates of the correlation functions and power spectral
  densities.
- A data-driven comparison between underdamped and overdamped oscillators
- is made by approximating the evidence as a product of the best fit likelihood
- and the Ockham factor, a problem relevant to the inertial motion of colloidal
- particles in optical traps.
+ A Bayesian model comparison procedure is outlined for the choosing parsimonious
+ly between the Kramers and Smoluchowski limits of the oscillator, a problem
+ relevant to the inertial motion of colloidal particles in optical traps.
  
 \end_layout
 
@@ -146,15 +146,15 @@ The multivariate Ornstein-Uhlenbeck process is widely used in many branches
  of science and engineering to describe the regression of a system to its
  stationary mean.
  Its importance arises from the fact that it is the only process that is
- simultaneously Markovian, Gaussian and stationary and, hence, is fully
- characterized by its stationary and conditional distribution, which are
- multivariate normals.
+ simultaneously Markovian, Gaussian and stationary.
+ The process, therefore, is fully characterized by its stationary and conditiona
+l distribution, each of which are multivariate normal distributions.
  This simplicity implies that the probabilities of discretely sampled paths
  can be calculated exactly and explicitly in terms of the process parameters,
  the drift and diffusion matrices.
- This, in turn, allows for exact Bayesian inference of the process parameters
- without the need for techniques of approximation inference such as variational
- or Monte Carlo methods.
+ In turn, this implies an exact expression for the likelihood of paths and
+ the possibility of exact Bayesian inference without the need for techniques
+ of approximation inference such as variational or Monte Carlo methods.
  
 \end_layout
 
@@ -1344,7 +1344,7 @@ To sample paths of the Brownian harmonic oscillator exactly, it is necessary
 
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{\Lambda=}e^{-\boldsymbol{\lambda}\Delta t}=\Lambda_{1}(\Delta t)\boldsymbol{1}+\Lambda_{2}(\Delta t)\boldsymbol{\lambda}
+\boldsymbol{\Lambda=}e^{-\boldsymbol{\lambda}\Delta t}=\Lambda_{1}\boldsymbol{1}+\Lambda_{2}\boldsymbol{\lambda}
 \end{equation}
 
 \end_inset
@@ -1352,8 +1352,8 @@ To sample paths of the Brownian harmonic oscillator exactly, it is necessary
 where 
 \begin_inset Formula 
 \begin{eqnarray}
-\Lambda_{1}(t) & = & \exp(\tfrac{-\Delta t}{2\tau})\left[\cos(\omega\Delta t)+\frac{1}{2\omega\tau}\sin(\omega\Delta t)\right]\nonumber \\
-\Lambda_{2}(t) & = & \exp(\tfrac{-\Delta t}{2\tau})\left[\frac{1}{\omega}\sin(\omega\Delta t)\right]
+\Lambda_{1} & = & \exp(\tfrac{-\Delta t}{2\tau})\left[\cos(\omega\Delta t)+\frac{1}{2\omega\tau}\sin(\omega\Delta t)\right]\nonumber \\
+\Lambda_{2} & = & \exp(\tfrac{-\Delta t}{2\tau})\left[\frac{1}{\omega}\sin(\omega\Delta t)\right]
 \end{eqnarray}
 
 \end_inset
@@ -2928,7 +2928,7 @@ At the maximum, we obtain the MAP estimate as
 \end_layout
 
 \begin_layout Subsection*
-Hessian at the MAP estimate
+Standard errors of the MAP estimates
 \end_layout
 
 \begin_layout Standard
