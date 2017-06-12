@@ -125,15 +125,17 @@ y mean.
  Here we present a fast Bayesian method to estimate the drift and diffusion
  matrices of the process from discretely observed sample paths.
  We use exact likelihoods, expressed in terms of four sufficient statistic
- matrices, to derive explicit maximum a posteriori estimates and their error
- bars.
+ matrices, to derive explicit maximum a posteriori parameter estimates and
+ their standard errors.
  We apply the method to the Brownian harmonic oscillator, a bivariate Ornstein-U
 hlenbeck process, to jointly estimate its mass, damping and stiffness and
  to provide Bayesian estimates of the correlation functions and power spectral
  densities.
- A Bayesian model comparison procedure is outlined for the choosing parsimonious
-ly between the Kramers and Smoluchowski limits of the oscillator, a problem
- relevant to the inertial motion of colloidal particles in optical traps.
+ We present a Bayesian model comparison procedure, embodying Ockham's razor,
+ to make a data-driven choice between the Kramers and Smoluchowski limits
+ of the oscillator.
+ These provide novel methods of analysing the inertial motion of colloidal
+ particles in optical traps.
  
 \end_layout
 
@@ -152,9 +154,8 @@ l distribution, each of which are multivariate normal distributions.
  This simplicity implies that the probabilities of discretely sampled paths
  can be calculated exactly and explicitly in terms of the process parameters,
  the drift and diffusion matrices.
- In turn, this implies an exact expression for the likelihood of paths and
- the possibility of exact Bayesian inference without the need for techniques
- of approximation inference such as variational or Monte Carlo methods.
+ In turn, this implies an exact expression for the likelihood of paths,
+ given the parameters, and the possibility of exact Bayesian inference.
  
 \end_layout
 
@@ -165,13 +166,12 @@ Here we present the details of such an exact Bayesian estimation method
 \end_inset
 
 -dimensional Ornstein-Uhlenbeck process.
- In addition to the problem of estimating the parameters of the 
-\begin_inset Formula $M\times M$
-\end_inset
-
- drift, diffusion and covariance matrices, we examine the problem of model
- selection, that is, of choosing the Ornstein-Uhlenbeck model with the least
- number of parameters that best explains the data.
+ From the exact likelihood of the discrete path, we identify four matrices
+ of sufficient statistics, in terms of which we derive MAP estimates and
+ the error bars of the process parameters.
+ In addition we examine the problem of model selection, that is, of choosing
+ the Ornstein-Uhlenbeck model with the least number of parameters that best
+ explains the data.
  Both these aspects are illustrated using the Brownian harmonic oscillator,
  a bivariate Ornstein-Uhlenbeck process, as an example.
  Inter alia, this provides a Bayesian method for estimating the mass, friction,
@@ -297,7 +297,8 @@ where
 \begin_inset Formula $\boldsymbol{\lambda}$
 \end_inset
 
-, with similar notation for other vectors and matrices, when convenient.
+, with similar bold-face notation for other vectors and matrices, when convenien
+t.
  
 \end_layout
 
@@ -408,8 +409,8 @@ Then,
 \begin_inset Formula $\boldsymbol{c}=\langle\boldsymbol{x}\boldsymbol{x}^{T}\rangle$
 \end_inset
 
- is identified as the matrix of covariances in the stationary state and
- 
+ can be identified as the matrix of covariances in the stationary state
+ and 
 \begin_inset Formula $\mathcal{L}P_{1}=0$
 \end_inset
 
@@ -514,7 +515,19 @@ decays exponentially and that its Fourier transform,
 \uwave off
 \noun off
 \color none
-the power spectral density 
+the power spectral density
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{C}(ω)=(\text{−}iω\boldsymbol{I}+\boldsymbol{\lambda})^{-1}\left(2\boldsymbol{D}\right)(iω\boldsymbol{I}+\boldsymbol{\lambda^{T}})^{-1},\label{eq:spectral-density}
+\end{equation}
+
+\end_inset
+
+is a multivariate Lorentzian in the angular frequency 
+\begin_inset Formula $\omega$
+\end_inset
+
+ 
 \family default
 \series default
 \shape default
@@ -545,34 +558,32 @@ key "van1992stochastic"
 \uwave off
 \noun off
 \color none
-,
-\begin_inset Formula 
-\begin{equation}
-\boldsymbol{C}(ω)=(\text{−}iω\boldsymbol{I}+\boldsymbol{\lambda})^{-1}\left(2\boldsymbol{D}\right)(iω\boldsymbol{I}+\boldsymbol{\lambda^{T}})^{-1},\label{eq:spectral-density}
-\end{equation}
-
-\end_inset
-
-is a multivariate Lorentzian in the angular frequency 
-\begin_inset Formula $\omega$
-\end_inset
-
 .
  
 \end_layout
 
 \begin_layout Standard
-In what follows, we shall assume that the independent parameters are contained
- in the matrix exponential 
+In what follows, we shall take 
 \begin_inset Formula $\boldsymbol{\Lambda}$
 \end_inset
 
- of the mean regressions rates and in the covariance matrix 
-\begin_inset Formula $\boldsymbol{c}.$
+, the matrix exponential of the mean regressions rates and 
+\begin_inset Formula $\boldsymbol{c}$
 \end_inset
 
- The stationarity condition will be used to estimate the diffusion matrix.
- For brevity, we collect all parameters to be estimated in the vector 
+, the covariance matrix, to be the independent parameters.
+ Estimates of the parameters in the diffusion matrix can then be obtained
+ from the estimates of 
+\begin_inset Formula $\boldsymbol{\Lambda}$
+\end_inset
+
+ and 
+\begin_inset Formula $\boldsymbol{c}$
+\end_inset
+
+ through the stationarity condition.
+ For notational brevity the set of all unknown parameters is collected in
+ 
 \begin_inset Formula $\boldsymbol{\theta}=(\boldsymbol{\Lambda},\boldsymbol{c})$
 \end_inset
 
@@ -628,7 +639,7 @@ Consider now the discrete time series
 e Ornstein-Uhlenbeck process.
  From the Markov property of the process, the probability of the path, given
  the parameters in 
-\begin_inset Formula $\boldsymbol{\theta}=(\boldsymbol{\Lambda},\boldsymbol{c})$
+\begin_inset Formula $\boldsymbol{\theta}$
 \end_inset
 
 , is
@@ -775,7 +786,7 @@ end{subequations}
 
 \end_inset
 
-The error bars are obtained from the Hessian matrix 
+The standard errors are obtained from the Hessian matrix 
 \begin_inset Formula $\bm{A}$
 \end_inset
 
@@ -788,6 +799,25 @@ key "jeffreys1998theory,jaynes2003probability,sivia2006data"
 
 .
  Its explicit form is provided in the Appendix.
+ The four 
+\begin_inset Formula $M\times M$
+\end_inset
+
+ sufficient statistic matrices 
+\begin_inset Formula $\boldsymbol{T}_{i}$
+\end_inset
+
+ rather than the considerably larger 
+\begin_inset Formula $M\times N$
+\end_inset
+
+ times series 
+\begin_inset Formula $\boldsymbol{X}$
+\end_inset
+
+ contains all the information relevant for inference.
+ Their use reduces both the storage and computational cost of the inference
+ algorithm.
  
 \end_layout
 
@@ -884,12 +914,12 @@ An alternative Bayesian procedure for directly estimating
  probability in this approach is given as
 \begin_inset Formula 
 \begin{align}
-\ln P\left(\boldsymbol{X}|\boldsymbol{c}\right) & =\dfrac{N}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}|\bm{c}|}-\dfrac{1}{2}\sum_{n=1}^{N}\boldsymbol{x}_{n}^{T}\boldsymbol{c}^{-1}\,\boldsymbol{x}_{n}.\label{eq:posteriorBayesII}
+\ln P\left(\boldsymbol{X}|\boldsymbol{c}\right) & =\dfrac{N}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}|\bm{c}|}-\dfrac{1}{2}\sum_{n=1}^{N}\boldsymbol{x}_{n}^{T}\boldsymbol{c}^{-1}\,\boldsymbol{x}_{n}\label{eq:posteriorBayesII}
 \end{align}
 
 \end_inset
 
-The MAP estimates are obtained straightforwardly from the posterior probability
+from which the MAP estimate
 \begin_inset Formula 
 \begin{align}
 \boldsymbol{c}^{\ast}=\frac{1}{N}\sum_{n=1}^{N}\boldsymbol{x}_{n}\boldsymbol{x}_{n}^{T}=\frac{1}{N}\boldsymbol{T}_{3} & .\label{eq:mapBayesII}
@@ -897,11 +927,12 @@ The MAP estimates are obtained straightforwardly from the posterior probability
 
 \end_inset
 
-The Bayesian inference method described above, using the stationary distribution
- of the time series, is referred as “Bayes II”.
- Numerical consistency between the above two methods of estimating the covarianc
-e matrix provides a stringent test of the appropriateness of the Ornstein-Uhlenb
-eck process as the data generating model.
+follows straightforwardly.
+ The Bayesian inference method described above, using the stationary distributio
+n of the Ornstein-Uhlenbeck process, is referred as “Bayes II”.
+ Consistency between the above two methods of estimating the covariance
+ matrix provides a stringent test of the appropriateness of the Ornstein-Uhlenbe
+ck process as the data generating model.
  The preceding equations (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1015,7 +1046,7 @@ principle of parsimony
 \end_inset
 
 ,  attributed to William of Ockham, that between two models that fit the
- data equally well, the simpler one is more plausible.
+ data equally well, the simpler one is to be preferred.
  Both the evidence and the Ockham factor can be obtained straightforwardly
  for the Ornstein-Uhlenbeck models and we shall make use of this below for
  model selection within a family of Ornstein-Uhlenbeck models.
@@ -1055,7 +1086,7 @@ exactly
 \begin_inset Formula $t$
 \end_inset
 
-, the condition distribution for a final state 
+ and final state 
 \begin_inset Formula $\boldsymbol{x}^{\prime}$
 \end_inset
 
@@ -1063,15 +1094,15 @@ exactly
 \begin_inset Formula $t^{\prime}$
 \end_inset
 
- is normally distributed with known mean 
-\begin_inset Formula $\boldsymbol{\mu}_{\Delta t}$
+ , the quantity 
+\begin_inset Formula $\boldsymbol{x}^{\prime}-\boldsymbol{\Lambda}\boldsymbol{x}$
 \end_inset
 
- and variance 
-\begin_inset Formula $\boldsymbol{\sigma}_{\Delta t}^{2}$
+ is normally distributed with mean zero and variance 
+\begin_inset Formula $\boldsymbol{\Sigma}$
 \end_inset
 
-.
+, a property that was clearly articulated by Uhlenbeck and Ornstein.
  Therefore, a sequence of states at times 
 \begin_inset Formula $t=n\Delta t$
 \end_inset
@@ -1093,7 +1124,7 @@ where
 \begin_inset Formula $\sqrt{\boldsymbol{\Sigma}}$
 \end_inset
 
- is a matrix square-root (usually the Cholesky factor) of 
+ is a matrix square-root of 
 \begin_inset Formula $\boldsymbol{\Sigma}$
 \end_inset
 
@@ -1106,8 +1137,8 @@ where
 \end_inset
 
 -dimensional uncorrelated normal variate with zero mean and unit variance.
- The exponential of the regression matrix and the Cholesky factor of the
- variance matrix are the two key quantities in the iteration.
+ The exponential of the regression matrix and the square-root of the variance
+ matrix are the two key quantities in the iteration.
  They can be obtained analytically in low dimensional problems but for high
  dimensional problems they will, in general, have to be obtained numerically.
  The sampling interval must satisfy 
@@ -2053,100 +2084,83 @@ name "tab:springconstant"
 \emph on
 Parameter estimation: 
 \emph default
-Bayesian inference of section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Bayesian-inference"
+We now take the time series 
+\begin_inset Formula $\boldsymbol{X}=(x_{1}v_{1},\ldots,x_{N}v_{N})$
+\end_inset
+
+ of discrete observations of the position and velocity and construct from
+ it the sufficient statistics
+\begin_inset Formula 
+\begin{alignat}{1}
+\boldsymbol{T}_{1} & =\sum_{n=1}^{N-1}\begin{pmatrix}x_{n+1}^{2} & x_{n+1}v_{n+1}\\
+v_{n+1}x_{n+1} & v_{n+1}^{2}
+\end{pmatrix},\nonumber \\
+\boldsymbol{T}_{2} & =\sum_{n=1}^{N-1}\begin{pmatrix}x_{n+1}x_{n} & x_{n+1}v_{n}\\
+v_{n+1}x_{n} & v_{n+1}v_{n}
+\end{pmatrix},\nonumber \\
+\boldsymbol{T}_{3} & =\sum_{n=1}^{N-1}\begin{pmatrix}x_{n}^{2} & x_{n}v_{n}\\
+v_{n}x_{n} & v_{n}^{2}
+\end{pmatrix}.
+\end{alignat}
 
 \end_inset
 
- provides a principled way of jointly estimating the parameters of the Brownian
- harmonic oscillators from discrete time series.
- The MAP estimates of the multivariate Ornstein-Uhlenbeck process using
- Bayes I are provided in Eq.(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:mapBayesI"
+From these, we compute the MAP estimate for the regression matrix 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{\lambda}^{\ast}=\frac{1}{\Delta t}\ln\boldsymbol{\Lambda}^{\ast}=\frac{1}{\Delta t}\ln(\bm{T}_{2}\boldsymbol{T}_{3}^{-1})
+\]
 
 \end_inset
 
-) and (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:covariance-OC"
-
-\end_inset
-
-).
- These equation can be used to obtain the MAP estimates of 
-\begin_inset Formula $\bm{\Sigma}$
-\end_inset
-
-, 
-\begin_inset Formula $\bm{\Lambda}$
-\end_inset
-
- and 
-\begin_inset Formula $\bm{c}$
-\end_inset
-
- by representing the position-velocity data of the underdamped oscillator
- as the vector time series 
-\begin_inset Formula $\bm{x_{n}=}\left[x\left(t=n\Delta t\right)\;\;v\left(t=n\Delta t\right)\right]^{T}$
-\end_inset
-
-.
- These estimates can be used to obtain the scalar MAP estimates, after algebraic
- manipulations detailed in the Appendix, for the parameters of interest:
- the mass of the particle, the trap stiffness and the particle friction
- coefficient 
+which yields the MAP estimates for the natural frequency and the relaxation
+ time scale
 \begin_inset Formula 
 \begin{equation}
-k^{*}=T_{{\scriptscriptstyle 11}}^{c},\qquad m^{*}=T_{{\scriptscriptstyle 22}}^{c},\qquad\gamma^{*}=T_{{\scriptscriptstyle 22}}^{c}T_{{\scriptscriptstyle 22}}^{\lambda},
+\left(\frac{k}{m}\right)^{\ast}=\lambda_{21}^{\ast}\quad\left(\frac{m}{\gamma}\right)^{\ast}=\lambda_{22}^{\ast}.
 \end{equation}
 
 \end_inset
 
-where the matrices 
-\begin_inset Formula $\boldsymbol{T}^{c}$
-\end_inset
-
- and 
-\begin_inset Formula $\boldsymbol{T}^{\lambda}$
-\end_inset
-
- are obtained in terms of the four sufficient statistics matrices as
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{subequations}
+The MAP estimate of the covariance matrix 
 \end_layout
 
-\end_inset
-
-
+\begin_layout Standard
 \begin_inset Formula 
-\begin{align}
-\bm{T}^{c} & =Nk_{B}T\Big(1-(\epsilon\,\boldsymbol{T}_{{\scriptscriptstyle \Lambda}}^{T})^{2}\Big)\left(\bm{T}_{1}-\boldsymbol{T}_{{\scriptscriptstyle \Lambda}}\boldsymbol{T}_{2}^{T}\right)^{-1},\\
-\bm{T}^{\lambda} & =-\dfrac{1}{\Delta t}\ln\boldsymbol{T}_{{\scriptscriptstyle \Lambda}},\qquad\boldsymbol{T}_{{\scriptscriptstyle \Lambda}}=\boldsymbol{T}_{2}\boldsymbol{T}_{3}^{-1}.
-\end{align}
+\[
+\boldsymbol{c}^{\ast}=\dfrac{1}{N}\left(\bm{T}_{1}-\boldsymbol{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{T}_{2}^{T}\right)\left[\boldsymbol{1}-(\bm{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{\epsilon})^{T}(\bm{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{\epsilon})^{T}\right]
+\]
 
 \end_inset
 
+yields the MAP estimate of the spring constant and the mass, in units of
+ 
+\begin_inset Formula $k_{B}T$
+\end_inset
 
-\begin_inset ERT
-status open
 
-\begin_layout Plain Layout
-
-
-\backslash
-end{subequations}
 \end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{k_{B}T}{k^{*}}=c_{11}^{\ast},\qquad\frac{k_{B}T}{m^{*}}=c_{22}^{\ast}
+\end{equation}
+
+\end_inset
+
+The friction constant is estimated by eliminating the mass between two of
+ the previous ratios
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\gamma^{\ast}=\frac{k_{B}Tc_{22}^{\ast}}{\lambda_{22}^{\ast}}
+\end{equation}
 
 \end_inset
 
