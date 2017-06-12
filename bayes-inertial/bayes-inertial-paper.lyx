@@ -2514,7 +2514,7 @@ We now compare the autocorrelation function and power spectral densities
  from Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:phase_space"
+reference "eq:autocorr"
 
 \end_inset
 
@@ -2523,12 +2523,12 @@ reference "eq:phase_space"
 \begin_inset Formula 
 \begin{align*}
 \langle x\left(t\right)x\left(0\right)\rangle= & \dfrac{k_{B}T}{k}\exp\left(\dfrac{-t}{2\tau}\right)\dfrac{(2\omega\tau\cos\omega t+\sin\omega t)}{2\omega\tau},\\
-\langle v\left(t\right)v\left(0\right)\rangle= & \dfrac{k_{B}T}{k}\exp\left(\dfrac{-t}{2\tau}\right)\dfrac{\omega_{0}^{2}(2\omega\tau\cos\omega t-\sin\omega t)}{2\omega\tau}.
+\langle v\left(t\right)v\left(0\right)\rangle= & \dfrac{k_{B}T}{m}\exp\left(\dfrac{-t}{2\tau}\right)\dfrac{(2\omega\tau\cos\omega t-\sin\omega t)}{2\omega\tau}.
 \end{align*}
 
 \end_inset
 
-The expression of power spectral densities follow from Eq.(
+The expressions of power spectral densities follow from Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:spectral-density"
