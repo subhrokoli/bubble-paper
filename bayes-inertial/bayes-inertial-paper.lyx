@@ -104,7 +104,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -2105,13 +2104,13 @@ v_{n}x_{n} & v_{n}^{2}
 
 \end_inset
 
-From these, we compute the MAP estimate for the regression matrix 
+From these, we compute the MAP estimate for the regression matrix
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\boldsymbol{\lambda}^{\ast}=\frac{1}{\Delta t}\ln\boldsymbol{\Lambda}^{\ast}=\frac{1}{\Delta t}\ln(\bm{T}_{2}\boldsymbol{T}_{3}^{-1})
+\boldsymbol{\lambda}^{\ast}=-\frac{1}{\Delta t}\ln\boldsymbol{\Lambda}^{\ast}=-\frac{1}{\Delta t}\ln(\bm{T}_{2}\boldsymbol{T}_{3}^{-1}),
 \]
 
 \end_inset
@@ -2120,18 +2119,15 @@ which yields the MAP estimates for the natural frequency and the relaxation
  time scale
 \begin_inset Formula 
 \begin{equation}
-\left(\frac{k}{m}\right)^{\ast}=\lambda_{21}^{\ast}\quad\left(\frac{m}{\gamma}\right)^{\ast}=\lambda_{22}^{\ast}.
+\left(\frac{k}{m}\right)^{\ast}=\lambda_{21}^{\ast},\quad\left(\frac{\gamma}{m}\right)^{\ast}=\lambda_{22}^{\ast}.
 \end{equation}
 
 \end_inset
 
-The MAP estimate of the covariance matrix 
-\end_layout
-
-\begin_layout Standard
+The MAP estimate of the covariance matrix
 \begin_inset Formula 
 \[
-\boldsymbol{c}^{\ast}=\dfrac{1}{N}\left(\bm{T}_{1}-\boldsymbol{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{T}_{2}^{T}\right)\left[\boldsymbol{1}-(\bm{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{\epsilon})^{T}(\bm{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{\epsilon})^{T}\right]
+\boldsymbol{c}^{\ast}=\dfrac{1}{N}\left(\bm{T}_{1}-\boldsymbol{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{T}_{2}^{T}\right)\left[\boldsymbol{1}-(\bm{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{\epsilon})^{T}(\bm{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{\epsilon})^{T}\right]^{-1}
 \]
 
 \end_inset
@@ -2142,24 +2138,18 @@ yields the MAP estimate of the spring constant and the mass, in units of
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\frac{k_{B}T}{k^{*}}=c_{11}^{\ast},\qquad\frac{k_{B}T}{m^{*}}=c_{22}^{\ast}
+\frac{k_{B}T}{k^{*}}=c_{11}^{\ast},\qquad\frac{k_{B}T}{m^{*}}=c_{22}^{\ast}.
 \end{equation}
 
 \end_inset
 
 The friction constant is estimated by eliminating the mass between two of
  the previous ratios
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\gamma^{\ast}=\frac{k_{B}Tc_{22}^{\ast}}{\lambda_{22}^{\ast}}
+\gamma^{\ast}=\frac{k_{B}T\lambda_{22}^{\ast}}{c_{22}^{\ast}}.
 \end{equation}
 
 \end_inset
@@ -2992,15 +2982,7 @@ At the maximum, we obtain the MAP estimate as
 \end_inset
 
  after algebraic manipulations.
- The resulting joint estimates of 
-\begin_inset Formula $m^{\ast},k^{\ast},$
-\end_inset
-
- and 
-\begin_inset Formula $\gamma^{\ast}$
-\end_inset
-
- are
+ 
 \end_layout
 
 \begin_layout Subsection*
@@ -3059,10 +3041,14 @@ The mixed partial derivative at the maximum is
 
 \end_inset
 
-The Hessian matrix at the maximum is then
+The Hessian matrix, 
+\begin_inset Formula $\boldsymbol{A}=-\nabla\nabla\ln P\left(\bm{\Lambda},\bm{\Sigma}\vert\bm{X}\right)$
+\end_inset
+
+, at the maximum is then
 \begin_inset Formula 
 \begin{align}
- & \mathbf{A}=\left(\begin{array}{ccc}
+ & \boldsymbol{A}=\left(\begin{array}{ccc}
 \tfrac{N}{2}(\bm{\Sigma}^{*})^{2} & \qquad & \frac{N}{2}(\bm{\Lambda}^{*}\boldsymbol{c}^{*}+\boldsymbol{c}^{*}\bm{\Lambda}^{*T})\\
  & \qquad\\
 \frac{N}{2}(\bm{\Lambda}^{*}\boldsymbol{c}^{*}+\boldsymbol{c}^{*}\bm{\Lambda}^{*T})\, & \qquad & \bm{\Sigma}^{*-1}(\bm{T_{3}}-N\boldsymbol{c}^{*})-\frac{N}{2}\bm{\Sigma}^{*-2}(\bm{\Lambda}^{*}\boldsymbol{c}^{*}+\boldsymbol{c}^{*}\bm{\Lambda}^{*T})^{2}
