@@ -1491,7 +1491,7 @@ reference "sec:Bayesian-inference"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -2252,7 +2252,7 @@ reference "fig:PositionsVelocity"
  The histograms of the positions and the velocities clearly show that their
  distributions are stationary and are very well-approximated by Gaussians.
  The time series data is then used to obtain MAP estimates and the error
- bars using our Bayesian methods described above.
+ bars using the Bayesian methods described above.
  
 \begin_inset Float figure
 wide false
@@ -2433,7 +2433,7 @@ reference "tab:springconstant"
 
 \end_inset
 
-, we show the MAP estimates and corresponding error bars for three different
+, we provide the MAP estimates and corresponding error bars for three different
  time series data obtained from the simulation of the underdamped Brownian
  harmonic oscillator.
  This clearly shows that the MAP estimates of the Bayesian methods and values
@@ -2461,8 +2461,8 @@ The joint Bayesian MAP estimates of the parameters - mass
 \begin_inset Formula $\gamma$
 \end_inset
 
- - along with the projections of the posterior distributions with filled
- contours representing the error bars are shown in in Fig.(
+ - along with the projections of the posterior distributions, with filled
+ contours representing the error bars, are shown in Fig.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:inference"
@@ -2536,10 +2536,10 @@ C_{vv}(\omega)= & \dfrac{2\gamma k_{B}T\omega^{2}}{m^{2}(\omega_{0}^{2}-\omega^{
 
 \color blue
 The above expression for autocorrelation and the spectral densities are
- then evaluated at the values of Bayesian MAP estimates.
- These expression are then compared with the autocorrelation functions and
- power spectral densities of positions and velocities obtained from the
- time series data in Fig.(
+ then evaluated at the Bayesian MAP estimates.
+ The resulting expressions are compared with the autocorrelation functions
+ and power spectral densities of positions and velocities obtained from
+ the time series data in Fig.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:autocorrelation"
@@ -2548,14 +2548,13 @@ reference "fig:autocorrelation"
 
 ).
  There is a remarkably good agreement between the analytical results in
- terms of the Bayesian MAP estimates with the one obtained directly from
- the times series data.
- 
+ terms of the Bayesian MAP estimates with those obtained directly from the
+ times series data.
 \end_layout
 
 \begin_layout Standard
-A fitting procedure for estimating mass, trap stiffness and particle friction
- in optical traps has been explored by 
+A fitting procedure for estimating the mass, spring constant, and friction
+ in optical traps has been explored in 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Bera:16"
@@ -2642,11 +2641,10 @@ name "fig:modelSelection"
 \emph on
 Model comparison: 
 \emph default
-In this section, we consider the problem of Bayesian model selection for
- a given time series data.
- For definiteness, we data from underdamped and overdamped Brownian motion.
- Bayesian inference of underdamped Brownian motion was considered in previous
- section.
+\color blue
+We now consider the problem of Bayesian model selection for a given time
+ series data, to choose between the underdamped and the overdamped limits
+ of the Brownian harmonic oscillator.
  The overdamped limit corresponds to the case of vanishing particle mass
  in Eq.(
 \begin_inset CommandInset ref
@@ -2655,7 +2653,7 @@ reference "eq:langevin"
 
 \end_inset
 
-), and this correspond to an univariate Ornstein-Uhlenbeck process.
+) and is an univariate Ornstein-Uhlenbeck process.
  The matrix sufficient statistics of Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2696,15 +2694,8 @@ key "bera2017fast"
 
 \end_inset
 
- are effectively the univariate special case of the inference depicted in
- section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Bayesian-inference"
-
-\end_inset
-
-.
+ are effectively the univariate special case of the Bayesian inference described
+ in this work.
  
 \end_layout
 
@@ -2725,20 +2716,19 @@ reference "eq:evidence"
 
 \end_inset
 
-), is obtained in terms of the best fit likelihood and the Ockham factor
- 
+), is obtained in terms of the best fit likelihood and the Ockham factor.
+ This expression generalizes for a model 
+\begin_inset Formula $\mathcal{M}_{\alpha}$
+\end_inset
+
+ with several parameters as 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "mackay1992bayesian"
 
 \end_inset
 
-.
- This expression generalizes for a model 
-\begin_inset Formula $\mathcal{M}_{\alpha}$
-\end_inset
 
- with several parameters as
 \begin_inset Formula 
 \begin{equation}
 P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta}^{\ast},\mathcal{M}_{\alpha})\,P(\boldsymbol{\theta}^{\ast}|\mathcal{M}_{\alpha})\,(\det(\bm{A}/2\pi))^{-1/2}.\label{eq:evidence-multivariate}
@@ -2749,8 +2739,8 @@ P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta
 Explicit forms of the Hessian matrix and the evidence have been provided
  in the Appendix.
  Thus, the problem of model selection is reduced to obtaining evidence at
- the maximum given the data of the position and velocity of the Brownian
- particle.
+ the maximum given the time series data of the positions and velocities
+ of the Brownian particle.
  A model with a relatively higher magnitude of the evidence is then more
  likely to be the model from which the time series is obtained.
 \end_layout
@@ -2781,9 +2771,12 @@ reference "fig:modelSelection"
 \end_layout
 
 \begin_layout Standard
-To summarize, we have shown that one can discern the model from a time series
- by estimating the Bayesian evidence.
- The method presented for a choice of model is valid for an arbitrary dimension
+
+\color blue
+Thus, one can discern the model from a time series by estimating the Bayesian
+ evidence, which is determined by an interplay of posterior distribution
+ and the Ockham factor.
+ The method presented for model selection is valid for an arbitrary dimension
  of the Ornstein-Uhlenbeck process, and not limited to the example of univariate
  and bivariate case pursued here.
  
@@ -2801,24 +2794,29 @@ name "sec:conclusion"
 \end_layout
 
 \begin_layout Standard
-In this work, we have provided exact Bayesian methods for estimating the
- parameters of a multivariate Ornstein-Uhlenbeck process from discreetly
- observed time series.
- The parameters - mass, friction, and stiffness of a Brownian harmonic oscillato
-r - are obtained jointly from the MAP estimates.
- The MAP estimates are obtained exactly, and thus the procedure does not
- require numerical minimization or Monte Carlo sampling, which makes the
- method accurate and efficient.
+
+\color blue
+In this work, we have obtained explicit MAP estimates and error bars for
+ a multivariate Ornstein-Uhlenbeck process from discretely observed paths.
+ We use exact likelihoods to derive the explicit expression for the MAP
+ estimates.
+ Thus the procedure does not require numerical minimization or Monte Carlo
+ sampling.
+ 
 \end_layout
 
 \begin_layout Standard
-We have provided two Bayesian methods for the estimation of parameters.
- The first method, Bayes I, uses an exact expression for the likelihood,
+
+\color blue
+The first method, Bayes I, uses an exact expression for the likelihood,
  which is valid for any 
 \begin_inset Formula $\Delta t$
 \end_inset
 
-, and is obtained in terms of four matrix sufficient statistics.
+, to obtain the posterior probability in terms of four sufficient statistics
+ matrices.
+
+\color inherit
  This method is then reliable for a low frequency of time series and provides
  large computational gains as we do not have to work with the entire time
  series but only with four matrices.
@@ -2831,22 +2829,14 @@ key "bera2017fast"
 \end_inset
 
 .
- The second method, Bayes II, uses the fact that, in equilibrium, only trap
- stiffness and mass can determine the fluctuations of position and velocity.
- Here, Gibbs and Maxwell-Boltzmann distributions are used to obtain the
- MAP estimates and the error bars.
- Bayes II is essentially a Bayesian inference applied to the conventional
- equipartition method.
+ The Bayes II method uses the fact that in equilibrium, only trap stiffness
+ and mass can determine the fluctuations of position and velocity.
+ This is essentially a Bayesian inference applied to the conventional equipartit
+ion method.
  We find excellent agreements of the two methods and the simulation of the
  Brownian harmonic oscillator.
  Finally, we present a Bayesian model selection method for choice of a model
  which best fits the data with the least number of parameters.
- The Bayesian model selection involves estimation of the evidence, which
- is obtained in terms of the best fit likelihood and the Ockham factor.
- The best fit likelihood favors a specialized model for the data, while
- the Ockham factor penalizes for more parameters.
- Thus the interplay of best fit likelihood and the Ockham factor determines
- the choice of the model.
 \end_layout
 
 \begin_layout Standard
