@@ -104,6 +104,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -2158,47 +2159,36 @@ The friction constant is estimated by eliminating the mass between two of
 \end_layout
 
 \begin_layout Standard
-Bayes II is applied to Brownian harmonic oscillator by using the bivariate
- analogue of Eq.(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:posteriorBayesII"
 
-\end_inset
-
-) for the logarithm of the posterior probability for stationary distributions.
- We also use the expression of diagonal covariance matrix of Eq.(
+\color blue
+We now use the Bayes II to obtain the MAP estimates of the mass and the
+ spring constant and their error bars.
+ To this end, we use Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:covarianceDiagonal"
 
 \end_inset
 
-).
- The posterior is obtained with uniform prior for 
-\begin_inset Formula $m$
-\end_inset
-
- and 
-\begin_inset Formula $k$
-\end_inset
-
-, which constrain them to take only positive values.
- The MAP estimates and error bars for Bayes II, then, follow from Eq.(
+) for the covariance matrix in the bivariate analogue of Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:posteriorBayesII"
 
 \end_inset
 
-) and (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:mapBayesII"
-
+) for the logarithm of the posterior probability.
+ The MAP estimates and the error bars for mass 
+\begin_inset Formula $m$
 \end_inset
 
-) as
+ and spring constant 
+\begin_inset Formula $k$
+\end_inset
+
+ are then
+\color inherit
+
 \begin_inset ERT
 status open
 
@@ -2245,45 +2235,33 @@ The error bars decrease as the number of points in the time series increase,
 \end_layout
 
 \begin_layout Standard
-We now use both the methods, Bayes I and Bayes II, to perform Bayesian inference
- of the time series data from the underdamped Brownian harmonic oscillator.
- In Fig.
- (
+
+\color blue
+We now present our results for the Bayesian inference of the time series
+ data from the simulation of underdamped Brownian harmonic oscillator.
+ In Fig.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:PositionsVelocity"
 
 \end_inset
 
-) we show a typical sample path of positions and velocities of one component
- of motion in the plane of an optical trap.
- The distribution of the positions and the velocities are also shown by
- histograms.
- From the histogram, it can be seen that the distributions of positions
- and velocities are well-approximated by the Gaussian distribution.
- This fact can be utilized to estimate the mass 
-\begin_inset Formula $m$
-\end_inset
-
- from the stationary velocity variance 
-\begin_inset Formula $\langle v^{2}\rangle$
-\end_inset
-
-, and spring constant 
-\begin_inset Formula $k$
-\end_inset
-
- from the stationary position variance 
-\begin_inset Formula $\langle x^{2}\rangle$
-\end_inset
-
- in the conventional equipartition method.
+) we show a typical sample path of the positions and velocities obtained
+ from the simulation and corresponding histogram for distribution of positions
+ and velocities.
+ The histograms of the positions and the velocities clearly show that their
+ distributions are stationary and are very well-approximated by Gaussians.
+ The time series data is then used to obtain MAP estimates and the error
+ bars using our Bayesian methods described above.
+ 
 \begin_inset Float figure
 wide false
 sideways false
 status collapsed
 
 \begin_layout Plain Layout
+
+\color blue
 \begin_inset Graphics
 	filename figure_3a.png
 	display false
@@ -2400,6 +2378,8 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+
+\color blue
 \begin_inset Graphics
 	filename figure_4.png
 	lyxscale 25
@@ -2412,6 +2392,8 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
+
+\color blue
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -2442,12 +2424,22 @@ name "fig:autocorrelation"
 \end_layout
 
 \begin_layout Standard
-The joint Bayesian MAP estimates of the parameters 
-\begin_inset Formula $\left(m,k,\gamma\right)$
+
+\color blue
+The joint Bayesian MAP estimates of the parameters - mass 
+\begin_inset Formula $m$
 \end_inset
 
- of the underdamped harmonic oscillator and the projections of posterior
- distribution are shown in in Fig.(
+, spring constant 
+\begin_inset Formula $k$
+\end_inset
+
+, and friction 
+\begin_inset Formula $\gamma$
+\end_inset
+
+- along with the projections of the posterior distribution with filled contours
+ representing the error bars are shown in in Fig.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:inference"
@@ -2455,55 +2447,37 @@ reference "fig:inference"
 \end_inset
 
 ).
- Panel (a) contains the results from Bayes I while panel (b) contains results
- from Bayes II method.
- The MAP estimates in panel (a) of Fig.(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:inference"
-
-\end_inset
-
-) are obtained from Eq.(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:mapBayesI"
-
-\end_inset
-
-), while MAP estimates of panel (b) are obtained from Eq.(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map_stationary"
-
-\end_inset
-
-).
- Projections of the posterior distribution are shown for each case with
- filled contours representing the error bars.
- There is a single maximum at 
+ The results in the panel (a) and (b) correspond to the Bayes I and the
+ Bayes II respectively.
+ There is a single maximum at the MAP estimates 
 \begin_inset Formula $\left(m^{\ast},k^{\ast},\gamma^{\ast}\right)$
 \end_inset
 
-, and the results of both the Bayesian methods are in excellent agreement
- with our simulation parameters, as shown in Table 
+ in the projections of posterior distribution, and the results of both the
+ Bayesian methods are in excellent agreement.
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+In Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:springconstant"
 
 \end_inset
 
-.
- The error bars have been calculated from the Hessian matrix, whose expression
- is provided in the appendix.
- The error bars of Bayes II follow trivially from Eq.(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:map_stationary"
-
+, we show the MAP estimates and corresponding error bars for three different
+ time series data obtained from the simulation of the underdamped Brownian
+ harmonic oscillator.
+ This clearly shows that the MAP estimates of the Bayesian methods and values
+ of the simulation parameters are in excellent agreement.
+ The error bars have been calculated from the Hessian matrix.
+ The Bayesian standard error in estimating the parameters is less than 
+\begin_inset Formula $1\%$
 \end_inset
 
-).
+ for each case.
 \end_layout
 
 \begin_layout Standard
