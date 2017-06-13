@@ -2375,7 +2375,7 @@ name "fig:stationary"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -2384,7 +2384,7 @@ status collapsed
 	filename figure_4.png
 	lyxscale 25
 	display false
-	width 40text%
+	width 46text%
 
 \end_inset
 
@@ -2492,20 +2492,17 @@ reference "fig:inference"
 \begin_layout Standard
 
 \emph on
-Correlation functions and spectral densities:
+Correlation functions and spectral densities: 
 \emph default
- 
 \color blue
-We now obtain the expression for the autocorrelation correlation function
- and the power spectral densities in terms of the Bayesian MAP estimate.
- The expressions of the autocorrelation functions can be obtained from Eq.(
+The expressions of the autocorrelation functions can be obtained from Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:autocorr"
 
 \end_inset
 
-) using the explicit forms of the covariance and regression matrices,
+) using the explicit forms of the covariance and the regression matrices,
 \color inherit
 
 \begin_inset Formula 
@@ -2518,14 +2515,14 @@ reference "eq:autocorr"
 
 
 \color blue
-The expressions of power spectral densities follow from Eq.(
+The expressions of the power spectral densities follow from Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:spectral-density"
 
 \end_inset
 
-) in term of regression and diffusion matrices as
+) in term of the regression and the diffusion matrices as
 \color inherit
 
 \begin_inset Formula 
@@ -2538,9 +2535,11 @@ C_{vv}(\omega)= & \dfrac{2\gamma k_{B}T\omega^{2}}{m^{2}(\omega_{0}^{2}-\omega^{
 
 
 \color blue
-These expression, obtained in terms of the Bayesian MAP estimates, are then
- compared with the autocorrelation functions and power spectral densities
- of positions and velocities obtained from the time series data in Fig.(
+The above expression for autocorrelation and the spectral densities are
+ then evaluated at the values of Bayesian MAP estimates.
+ These expression are then compared with the autocorrelation functions and
+ power spectral densities of positions and velocities obtained from the
+ time series data in Fig.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:autocorrelation"
@@ -2549,9 +2548,8 @@ reference "fig:autocorrelation"
 
 ).
  There is a remarkably good agreement between the analytical results in
- terms of the Bayesian MAP estimates with the corresponding forms of autocorrela
-tion functions and power spectral densities obtained fro the times series
- data.
+ terms of the Bayesian MAP estimates with the one obtained directly from
+ the times series data.
  
 \end_layout
 
