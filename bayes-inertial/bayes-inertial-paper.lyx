@@ -2808,7 +2808,8 @@ In this work, we have obtained explicit MAP estimates and error bars for
 \begin_layout Standard
 
 \color blue
-The first method, Bayes I, uses an exact expression for the likelihood,
+We have presented two Bayesian methods for the estimation of the parameters.
+ The first method, Bayes I, uses an exact expression for the likelihood,
  which is valid for any 
 \begin_inset Formula $\Delta t$
 \end_inset
@@ -2833,10 +2834,11 @@ key "bera2017fast"
  and mass can determine the fluctuations of position and velocity.
  This is essentially a Bayesian inference applied to the conventional equipartit
 ion method.
- We find excellent agreements of the two methods and the simulation of the
- Brownian harmonic oscillator.
- Finally, we present a Bayesian model selection method for choice of a model
- which best fits the data with the least number of parameters.
+ We find excellent agreements of the MAP estimates of the two methods with
+ each other, and with parameters used in the simulation to generate the
+ time series data.
+ Finally, we present a Bayesian model selection method for the choice of
+ a model which best fits the data.
 \end_layout
 
 \begin_layout Standard
@@ -2849,6 +2851,12 @@ The methods presented here depend on the exact expressions for the likelihood,
  to resort to approximations to obtain the likelihood.
  The Bayesian model selection, described here, can then be used to obtain
  the best possible model.
+ 
+\color blue
+The Bayesian inference of the non-Markovian trajectories is another exciting
+ angle for the extension of this work.
+
+\color inherit
  We will explore these directions in a future work.
 \begin_inset ERT
 status open
