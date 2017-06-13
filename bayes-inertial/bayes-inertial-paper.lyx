@@ -2497,8 +2497,8 @@ Correlation functions and spectral densities:
  
 \color blue
 We now obtain the expression for the autocorrelation correlation function
- and the power spectral densities in terms of the Bayesian MAP estimate.The
- expressions of the autocorrelation functions can be obtained from Eq.(
+ and the power spectral densities in terms of the Bayesian MAP estimate.
+ The expressions of the autocorrelation functions can be obtained from Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:autocorr"
@@ -2525,9 +2525,21 @@ reference "eq:spectral-density"
 
 \end_inset
 
-) in term of regression and diffusion matrices.
- These expression, obtained in terms of the Bayesian MAP estimates, are
- then compared with the autocorrelation functions and power spectral densities
+) in term of regression and diffusion matrices as
+\color inherit
+
+\begin_inset Formula 
+\begin{align*}
+C_{xx}(\omega)= & \dfrac{2\gamma k_{B}T}{m^{2}(\omega_{0}^{2}-\omega^{2})^{2}+\gamma^{2}\omega^{2}},\\
+C_{vv}(\omega)= & \dfrac{2\gamma k_{B}T\omega^{2}}{m^{2}(\omega_{0}^{2}-\omega^{2})^{2}+\gamma^{2}\omega^{2}}.
+\end{align*}
+
+\end_inset
+
+
+\color blue
+These expression, obtained in terms of the Bayesian MAP estimates, are then
+ compared with the autocorrelation functions and power spectral densities
  of positions and velocities obtained from the time series data in Fig.(
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2536,11 +2548,10 @@ reference "fig:autocorrelation"
 \end_inset
 
 ).
- The explicit Bayesian expression are drawn as black curves, while the autocorre
-lation and power spectra computed from the position and velocity data, are
- plotted in cyan and red respectively.
- There is a remarkably good agreement between the results of our Bayesian
- method with the traditional fitting based methods.
+ There is a remarkably good agreement between the analytical results in
+ terms of the Bayesian MAP estimates with the corresponding forms of autocorrela
+tion functions and power spectral densities obtained fro the times series
+ data.
  
 \end_layout
 
