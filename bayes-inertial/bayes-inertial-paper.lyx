@@ -104,7 +104,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -1365,14 +1364,7 @@ To sample paths of the Brownian harmonic oscillator exactly, it is necessary
 \end_inset
 
 .
- From the Cayley-Hamilton theorem the former is easily found to be 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $ $
-\end_inset
-
-
+ From the Cayley-Hamilton theorem the former is easily found to be
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{\Lambda=}e^{-\boldsymbol{\lambda}\Delta t}=\Lambda_{1}\boldsymbol{1}+\Lambda_{2}\boldsymbol{\lambda}
@@ -1419,7 +1411,7 @@ The latter is obtained from a Cholesky factorization of
 \begin_inset Formula $\boldsymbol{\Sigma}$
 \end_inset
 
- into a lower triangular matrix and its transpose, 
+ into a lower triangular matrix and its transpose,
 \begin_inset Formula 
 \begin{equation}
 \sqrt{\boldsymbol{\Sigma}}=\begin{pmatrix}s_{1} & 0\\
@@ -1443,9 +1435,6 @@ begin{subequations}
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \begin{align}
 s_{1} & =\bigg[\frac{k_{B}T}{k}-\frac{k_{B}T}{k}\exp(\tfrac{-\Delta t}{\tau})\Big(\frac{k}{m\omega^{2}}\sin^{2}(\omega\Delta t)\nonumber \\
@@ -2130,9 +2119,6 @@ v_{n}x_{n} & v_{n}^{2}
 \end_inset
 
 From these, we compute the MAP estimate for the regression matrix
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \[
 \boldsymbol{\lambda}^{\ast}=-\frac{1}{\Delta t}\ln\boldsymbol{\Lambda}^{\ast}=-\frac{1}{\Delta t}\ln(\bm{T}_{2}\boldsymbol{T}_{3}^{-1}),
@@ -2941,9 +2927,9 @@ reference "eq:sufficientStatistics"
  With this identification, the expression of the logarithm of the posterior
  probability in terms of sufficient statistics is
 \begin_inset Formula 
-\begin{align}
-\ln P\left(\bm{\Lambda},\bm{\Sigma}\vert\bm{X}\right)= & -\dfrac{1}{2}\bm{\Sigma}^{-1}:\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\bm{T_{3}}\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}+\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big]+\dfrac{N}{2}\ln\dfrac{|\bm{\Sigma^{-1}}|}{(2\pi)^{M}}.
-\end{align}
+\begin{align*}
+\ln P\left(\bm{\theta}\vert\bm{X}\right)= & -\tfrac{1}{2}\bm{\Sigma}^{-1}:\Big[\big(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\big)\bm{T_{3}}\big(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\big)^{T}+\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\Big]+\tfrac{N}{2}\ln\dfrac{|\bm{\Sigma^{-1}}|}{(2\pi)^{M}}-\dfrac{\bm{c}^{-1}:\boldsymbol{T}_{4}}{2}+\tfrac{1}{2}\ln\dfrac{|\bm{c^{-1}}|}{(2\pi)^{M}}.
+\end{align*}
 
 \end_inset
 
@@ -3062,10 +3048,10 @@ The Hessian matrix,
 
 \end_inset
 
-The second errors of the MAP estimates are obtained using the Hessian matrix.
- The expression of the Hessian matrix and the logarithm of the likelihood
- at the MAP estimates have been used to obtain the logarithm of the evidence
- for a 
+The standard errors of the MAP estimates are obtained using the Hessian
+ matrix at the MAP estimates.
+ The expression of the Hessian matrix at the MAP estimates have also been
+ used to obtain the logarithm of the evidence for a 
 \begin_inset Formula $M$
 \end_inset
 
