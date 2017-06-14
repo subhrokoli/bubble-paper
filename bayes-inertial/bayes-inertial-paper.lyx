@@ -2644,29 +2644,89 @@ name "fig:modelSelection"
 \emph on
 Model comparison: 
 \emph default
-\color blue
-We now consider the problem of Bayesian model selection for a given time
- series data, to choose between the underdamped and the overdamped limits
+To observe the inertial motion of a colloidal particle in an optical trap,
+ it is necessary to observe the motion at time intervals much smaller than
+ the momentum relaxation time, that is, to ensure 
+\begin_inset Formula $\Delta t\ll\tau$
+\end_inset
+
+.
+ In the opposite limit, of 
+\begin_inset Formula $\Delta t\gg\tau$
+\end_inset
+
+, the inertia of the colloid is no longer relevant and only purely diffusive
+ motion can be observed.
+ These correspond, respectively, to the Kramers and Smoluchowski limits
  of the Brownian harmonic oscillator.
- The overdamped limit corresponds to the case of vanishing particle mass
- in Eq.(
+ In experiment, it is often not a priori clear if the observational time
+ scale places the system in the Kramers, Smoluchowski or crossover regime.
+ Bayesian model comparison provides a principled way to answer this question,
+ as we show below.
+ 
+\end_layout
+
+\begin_layout Standard
+We consider two data generating models
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\mathcal{M}_{UD}:\longrightarrow & \quad m\dot{v+}\gamma v+\nabla U=\xi\\
+\mathcal{M}_{OD}:\longrightarrow & \quad\gamma\dot{x}+\nabla U=\xi
+\end{align*}
+
+\end_inset
+
+corresponding, respectively, to motion on the Kramers
+\series bold
+\emph on
+ 
+\series default
+\emph default
+(
+\series bold
+u
+\series default
+nder
+\series bold
+d
+\series default
+amped) and Smoluchoswki (
+\series bold
+o
+\series default
+ver
+\series bold
+d
+\series default
+amped) time scales.
+ The latter is the formal 
+\begin_inset Formula $m\rightarrow0$
+\end_inset
+
+ limit of 
+\color blue
+Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:langevin"
 
 \end_inset
 
-) and is an univariate Ornstein-Uhlenbeck process.
- The matrix sufficient statistics of Eq.(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:sufficientStatistics"
-
+) and can be obtained systematically by adiabatically eliminating the velocity
+ as a fast variable.
+ The overdamped oscillator is an univariate Ornstein-Uhlenbeck model with
+ only two parameters, 
+\begin_inset Formula $\gamma$
 \end_inset
 
-), then, reduce to scalars.
- Bayesian estimation of the parameters of an overdamped harmonic oscillator
- has been described in earlier work 
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+, and Bayesian parameter estimation for it was presented in 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "bera2017fast"
@@ -2674,31 +2734,10 @@ key "bera2017fast"
 \end_inset
 
 .
- The Bayesian MAP estimates of Eq.(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:mapBayesI"
-
-\end_inset
-
-), after elementary manipulations, can be shown to be exactly equivalent
- to the expressions in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "bera2017fast"
-
-\end_inset
-
-.
- Thus, the methods described in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "bera2017fast"
-
-\end_inset
-
- are effectively the univariate special case of the Bayesian inference described
- in this work.
+ The two-parameter overdamped model is simpler than the three-parameter
+ underdamped model.
+ The question we try to answer is which of the models provides the best
+ explanation of the data for the least number of parameters.
  
 \end_layout
 
