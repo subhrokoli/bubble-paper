@@ -104,7 +104,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -128,7 +127,7 @@ y mean.
  matrices, to derive explicit maximum a posteriori parameter estimates and
  their standard errors.
  We apply the method to the Brownian harmonic oscillator, a bivariate Ornstein-U
-hlenbeck process, to jointly estimate its mass, damping and stiffness and
+hlenbeck process, to jointly estimate its mass, damping, and stiffness and
  to provide Bayesian estimates of the correlation functions and power spectral
  densities.
  We present a Bayesian model comparison procedure, embodying Ockham's razor,
@@ -518,7 +517,7 @@ decays exponentially and that its Fourier transform,
 the power spectral density
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{C}(ω)=(\text{−}iω\boldsymbol{I}+\boldsymbol{\lambda})^{-1}\left(2\boldsymbol{D}\right)(iω\boldsymbol{I}+\boldsymbol{\lambda^{T}})^{-1},\label{eq:spectral-density}
+\boldsymbol{C}(ω)=(\text{−}iω\boldsymbol{1}+\boldsymbol{\lambda})^{-1}\left(2\boldsymbol{D}\right)(iω\boldsymbol{1}+\boldsymbol{\lambda^{T}})^{-1},\label{eq:spectral-density}
 \end{equation}
 
 \end_inset
@@ -1130,7 +1129,7 @@ where
 \end_inset
 
  and 
-\begin_inset Formula $\boldsymbol{\xi}_{n}\sim\mathcal{N}(\boldsymbol{0},\boldsymbol{I})$
+\begin_inset Formula $\boldsymbol{\xi}_{n}\sim\mathcal{N}(\boldsymbol{0},\boldsymbol{1})$
 \end_inset
 
  is an 
@@ -3008,7 +3007,7 @@ The expression of the Bayesian evidence of a model
 \end_inset
 
  with several parameters is given in terms of the likelihood and the Hessian
- matrix, at the maximum, as 
+ matrix as 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "mackay2003information"
@@ -3023,8 +3022,8 @@ P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta
 
 \end_inset
 
-The above expression has been used to obtain the logarithm of the evidence
- for a 
+This expression has been used to obtain the logarithm of the evidence for
+ a 
 \begin_inset Formula $M$
 \end_inset
 
@@ -3033,7 +3032,12 @@ The above expression has been used to obtain the logarithm of the evidence
 \end_inset
 
 .
- The explicit form of the logarithm of the evidence is given as
+ Using explicit forms of the likelihood and the Hessian matrix, at the maximum,
+ the expression of the logarithm of the evidence for a model 
+\begin_inset Formula $\mathcal{M}_{\alpha}$
+\end_inset
+
+ is given as
 \begin_inset Formula 
 \begin{align}
 \ln P\left(\bm{X}|\mathcal{M}_{\alpha}\right) & \simeq-\frac{N}{2}\left(\bm{\Sigma}^{*^{-1}}:\bm{\Sigma}^{*}+\ln((2\pi)^{M}\,|\bm{\Sigma}^{*}|)\right)-\frac{1}{2}\ln\Big(\det(\boldsymbol{A}_{22})\det(\boldsymbol{A}_{11}-\boldsymbol{A}_{12}\boldsymbol{A}_{22}^{-1}\boldsymbol{A}_{21})\Big)+\tfrac{M}{2}\ln2\pi.
