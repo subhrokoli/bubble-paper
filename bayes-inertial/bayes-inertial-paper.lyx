@@ -104,6 +104,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -971,7 +972,7 @@ Thus far we assumed that the data generating model was given and that only
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "jeffreys1998theory,kashyap1977bayesian,zellner1996introduction,mackay2003information,gregory2005bayesian"
+key "jeffreys1998theory,kashyap1977bayesian,mackay1992bayesian,zellner1996introduction,gregory2005bayesian"
 
 \end_inset
 
@@ -1476,14 +1477,10 @@ reference "eq:path-sampling"
 \end_inset
 
 ) to obtain exactly sampled trajectories of the Brownian harmonic oscillator.
-
-\color blue
  
 \end_layout
 
 \begin_layout Standard
-
-\color blue
 In Fig.(
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1495,8 +1492,6 @@ reference "fig:PositionsVelocity"
  corresponding histograms.
  The histograms of the positions and the velocities clearly show that the
  distributions are normal.
-
-\color inherit
  
 \begin_inset Float figure
 wide false
@@ -1505,7 +1500,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename figure_1.png
+	filename Fig1.png
 	display false
 	width 48text%
 
@@ -2204,23 +2199,16 @@ The friction constant is estimated by eliminating the mass between two of
 The three preceding equations provide the Bayes I map estimates of the oscillato
 r parameters.
  
-\end_layout
-
-\begin_layout Standard
-
-\color blue
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
-
-\color blue
 \begin_inset Graphics
-	filename figure_3a.png
+	filename Fig2.png
 	display false
-	width 46text%
+	width 45text%
 
 \end_inset
 
@@ -2282,8 +2270,6 @@ reference "eq:map_stationary"
 
  respectively.
  The MAP estimate is marked by a black dot, and the regions of 
-\color blue
-
 \begin_inset Formula $70\%$
 \end_inset
 
@@ -2295,9 +2281,7 @@ reference "eq:map_stationary"
 \begin_inset Formula $99\%$
 \end_inset
 
- posterior probability
-\color inherit
- have been shaded.
+ posterior probability have been shaded.
  
 \begin_inset CommandInset label
 LatexCommand label
@@ -2322,6 +2306,10 @@ name "fig:stationary"
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
 Next we use Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2346,8 +2334,6 @@ reference "eq:posteriorBayesII"
 \end_inset
 
  are then
-\color inherit
-
 \begin_inset ERT
 status open
 
@@ -2391,18 +2377,14 @@ end{subequations}
 
 These correspond to Bayes II estimates of the oscillator parameters.
  
-\color blue
-
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
-
-\color blue
 \begin_inset Graphics
-	filename figure_4.png
+	filename Fig3.png
 	lyxscale 25
 	display false
 	width 46text%
@@ -2413,8 +2395,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\color blue
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -2444,8 +2424,6 @@ name "fig:autocorrelation"
 \end_layout
 
 \begin_layout Standard
-
-\color blue
 In Table 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2467,8 +2445,6 @@ reference "tab:springconstant"
 \end_layout
 
 \begin_layout Standard
-
-\color blue
 In Fig.(
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2507,7 +2483,6 @@ key "foreman2016corner"
 \emph on
 Correlation functions and spectral densities: 
 \emph default
-\color blue
 The MAP estimates of the parameters provide a novel way of estimating the
  correlation functions and spectral densities.
  Their expressions can be obtained from Eq.(
@@ -2526,8 +2501,6 @@ reference "eq:spectral-density"
 
 ) using the explicit forms of the covariance and the regression matrices.
  The autocorrelations are 
-\color inherit
-
 \begin_inset Formula 
 \begin{align*}
 \langle x\left(t\right)x\left(0\right)\rangle= & \dfrac{k_{B}T}{k}\exp\left(\dfrac{-t}{2\tau}\right)\dfrac{(2\omega\tau\cos\omega t+\sin\omega t)}{2\omega\tau},\\
@@ -2536,11 +2509,7 @@ reference "eq:spectral-density"
 
 \end_inset
 
-
-\color blue
 and the spectral densities are
-\color inherit
-
 \begin_inset Formula 
 \begin{align*}
 C_{xx}(\omega)= & \dfrac{2\gamma k_{B}T}{m^{2}(\omega_{0}^{2}-\omega^{2})^{2}+\gamma^{2}\omega^{2}},\\
@@ -2549,8 +2518,6 @@ C_{vv}(\omega)= & \dfrac{2\gamma k_{B}T\omega^{2}}{m^{2}(\omega_{0}^{2}-\omega^{
 
 \end_inset
 
-
-\color blue
 These expressions are evaluated at the Bayesian MAP estimates for the parameters.
  In Fig.(
 \begin_inset CommandInset ref
@@ -2589,8 +2556,6 @@ key "berg2004power,tassieri2012microrheology"
 \end_inset
 
  that do not incorporate this prior information, such as the one in 
-\color inherit
-
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Bera:16"
@@ -2598,11 +2563,6 @@ key "Bera:16"
 \end_inset
 
 .
-
-\color blue
- 
-\color inherit
-
 \begin_inset Float figure
 placement t
 wide false
@@ -2611,7 +2571,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename modelSelection.jpg
+	filename Fig4.png
 	display false
 	width 46text%
 
@@ -2728,9 +2688,7 @@ amped) time scales.
 \begin_inset Formula $m\rightarrow0$
 \end_inset
 
- limit of 
-\color blue
-Eq.(
+ limit of Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:langevin"
@@ -2793,8 +2751,6 @@ T_{1} & =\sum_{n=1}^{N-1}x_{n+1}^{2},\,\,T_{2}=\sum_{n=1}^{N-1}x_{n+1}x_{n},\,\,
 \end_inset
 
 as was first pointed out in 
-\color blue
-
 \begin_inset CommandInset citation
 LatexCommand cite
 key "bera2017fast"
@@ -3042,25 +2998,20 @@ The Hessian matrix,
 
 \end_inset
 
-The above expression of the Hessian matrix and the logarithm of the posterior
- probability at the MAP estimates have been used to obtain the logarithm
- of the evidence for a 
-\begin_inset Formula $M$
-\end_inset
+The above expression of the Hessian matrix have been used to obtain the
+ standard errors of the MAP estimates and the evidence of a given model.
+\end_layout
 
--dimensional multivariate Ornstein-Uhlenbeck model 
+\begin_layout Standard
+The expression of the Bayesian evidence of a model 
 \begin_inset Formula $\mathcal{M}_{\alpha}$
 \end_inset
 
-.
- This expression generalizes for a model 
-\begin_inset Formula $\mathcal{M}_{\alpha}$
-\end_inset
-
- with several parameters as 
+ with several parameters is given in terms of the likelihood and the Hessian
+ matrix, at the maximum, as 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "mackay1992bayesian"
+key "mackay2003information"
 
 \end_inset
 
@@ -3072,10 +3023,20 @@ P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta
 
 \end_inset
 
-The explicit form of the logarithm of the evidence is then
+The above expression has been used to obtain the logarithm of the evidence
+ for a 
+\begin_inset Formula $M$
+\end_inset
+
+-dimensional multivariate Ornstein-Uhlenbeck model 
+\begin_inset Formula $\mathcal{M}_{\alpha}$
+\end_inset
+
+.
+ The explicit form of the logarithm of the evidence is given as
 \begin_inset Formula 
 \begin{align}
-\ln P\left(\bm{X}|\mathcal{M}_{\alpha}\right) & \simeq-\frac{N}{2}\left(\bm{\Sigma}^{*^{-1}}:\bm{\Sigma}^{*}+\ln((2\pi)^{M}\,|\bm{\Sigma}^{*}|)\right)+\ln\Bigg[\det(\boldsymbol{A}_{22})\det[\boldsymbol{A}_{11}-\boldsymbol{A}_{12}\boldsymbol{A}_{22}^{-1}\boldsymbol{A}_{21}\Bigg]^{-1/2}+\tfrac{M}{2}\ln2\pi.
+\ln P\left(\bm{X}|\mathcal{M}_{\alpha}\right) & \simeq-\frac{N}{2}\left(\bm{\Sigma}^{*^{-1}}:\bm{\Sigma}^{*}+\ln((2\pi)^{M}\,|\bm{\Sigma}^{*}|)\right)-\frac{1}{2}\ln\Big(\det(\boldsymbol{A}_{22})\det(\boldsymbol{A}_{11}-\boldsymbol{A}_{12}\boldsymbol{A}_{22}^{-1}\boldsymbol{A}_{21})\Big)+\tfrac{M}{2}\ln2\pi.
 \end{align}
 
 \end_inset
