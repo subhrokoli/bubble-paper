@@ -2679,8 +2679,24 @@ P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta
 
 \end_inset
 
-Explicit forms of the Hessian matrix and the evidence have been provided
- in the Appendix.
+The explicit expression of the logarithm of the evidence, for a 
+\begin_inset Formula $M$
+\end_inset
+
+-dimensional multivariate Ornstein-Uhlenbeck model 
+\begin_inset Formula $\mathcal{M}_{\alpha}$
+\end_inset
+
+, is then
+\begin_inset Formula 
+\begin{align}
+\ln P\left(\bm{X}|\mathcal{M}_{\alpha}\right) & \simeq-\frac{N}{2}\left(\bm{\Sigma}^{*^{-1}}:\bm{\Sigma}^{*}+\ln\left((2\pi)^{M}\,|\bm{\Sigma}^{*}|\right)\right)\nonumber \\
+ & -\tfrac{1}{2}\ln\left(\det\bm{A}\right)+\tfrac{M}{2}\ln2\pi.
+\end{align}
+
+\end_inset
+
+Explicit forms of the Hessian matrix is given in the Appendix.
  Thus, the problem of model selection is reduced to obtaining evidence at
  the maximum given the time series data of the positions and velocities
  of the Brownian particle.
@@ -3046,7 +3062,8 @@ The Hessian matrix,
 
 \end_inset
 
-The above expression of the Hessian matrix and the logarithm of the likelihood
+The second errors of the MAP estimates are obtained using the Hessian matrix.
+ The expression of the Hessian matrix and the logarithm of the likelihood
  at the MAP estimates have been used to obtain the logarithm of the evidence
  for a 
 \begin_inset Formula $M$
@@ -3064,19 +3081,6 @@ reference "eq:evidence-multivariate"
 \end_inset
 
 ).
- The explicit form of the logarithm of the evidence is
-\begin_inset Formula 
-\begin{align}
-\ln P\left(\bm{X}|\mathcal{M}_{\alpha}\right) & \simeq-\frac{N}{2}\left(\bm{\Sigma}^{*^{-1}}:\bm{\Sigma}^{*}+\ln[(2\pi)^{M}\,|\bm{\Sigma}^{*}|]\right)-\tfrac{1}{2}\ln\Big(\det\boldsymbol{A}_{22}\det[\boldsymbol{A}_{11}-\boldsymbol{A}_{12}\boldsymbol{A}_{22}^{-1}\boldsymbol{A}_{21}]\Big)+\tfrac{M}{2}\ln2\pi.
-\end{align}
-
-\end_inset
-
-Here 
-\begin_inset Formula $\boldsymbol{A}_{ij}$
-\end_inset
-
- are the elements of the Hessian matrix.
  
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
