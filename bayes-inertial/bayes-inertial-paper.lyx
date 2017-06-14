@@ -2100,18 +2100,51 @@ We now take the time series
 
  of discrete observations of positions and velocities obtained from the
  exact path sampling and construct from it the sufficient statistics
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "eq:bho-T-matrices"
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{alignat}{1}
 \boldsymbol{T}_{1} & =\sum_{n=1}^{N-1}\begin{pmatrix}x_{n+1}^{2} & x_{n+1}v_{n+1}\\
 v_{n+1}x_{n+1} & v_{n+1}^{2}
-\end{pmatrix},\nonumber \\
+\end{pmatrix},\\
 \boldsymbol{T}_{2} & =\sum_{n=1}^{N-1}\begin{pmatrix}x_{n+1}x_{n} & x_{n+1}v_{n}\\
 v_{n+1}x_{n} & v_{n+1}v_{n}
-\end{pmatrix},\nonumber \\
+\end{pmatrix},\\
 \boldsymbol{T}_{3} & =\sum_{n=1}^{N-1}\begin{pmatrix}x_{n}^{2} & x_{n}v_{n}\\
 v_{n}x_{n} & v_{n}^{2}
 \end{pmatrix}.
 \end{alignat}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
 
 \end_inset
 
@@ -2226,7 +2259,7 @@ reference "eq:map_stationary"
 
 ).
  The variables have been scaled by 
-\begin_inset Formula $x^{\prime}=\left(x-\mu_{x}\right)/\sigma_{xx}^{2}$
+\begin_inset Formula $x^{\prime}=\left(x-\mu_{x}\right)/\sigma_{xx}$
 \end_inset
 
 , where 
@@ -2700,15 +2733,48 @@ key "mackay1992bayesian"
 
 
 \begin_inset Formula 
-\begin{equation}
-P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta}^{\ast},\mathcal{M}_{\alpha})\,P(\boldsymbol{\theta}^{\ast}|\mathcal{M}_{\alpha})[\det(\bm{A}/2\pi)]^{-1/2}.\label{eq:evidence-multivariate}
-\end{equation}
+\begin{align}
+\ln P(\boldsymbol{X}|\mathcal{M}_{UD}) & \simeq-\frac{N}{2}\Big(\boldsymbol{T}_{\Sigma}:\boldsymbol{T}_{\Sigma}^{-1}+\ln\big[|2\pi\boldsymbol{T}_{\Sigma}|/N\big]\Big)\nonumber \\
+ & -\frac{1}{2}\ln(\det(\boldsymbol{A}/2\pi)).
+\end{align}
 
 \end_inset
 
-Explicit forms of the Hessian matrix and the evidence have been provided
- in the Appendix.
- Thus, the problem of model selection is reduced to obtaining evidence at
+where 
+\begin_inset Formula $\boldsymbol{T}_{\Sigma}=\left(\bm{T}_{1}-\boldsymbol{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{T}_{2}^{T}\right)$
+\end_inset
+
+ is computed using the sufficient statistics of Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:bho-T-matrices"
+
+\end_inset
+
+) and the Hessian matrix is also obtained in terms of sufficient statistics
+ using Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:mapBayesI"
+
+\end_inset
+
+) and the explicit expression derived in the appendix.
+ For the overdamped model, the same formula for the logarithm of the evidence
+ is used but now the the four matrix sufficient statistics reduce to scalars,
+ and are given as
+\begin_inset Formula 
+\begin{alignat}{1}
+T_{1} & =\sum_{n=1}^{N-1}x_{n+1}^{2},\,\,T_{2}=\sum_{n=1}^{N-1}x_{n+1}x_{n},\,\,T_{3}=\sum_{n=1}^{N-1}x_{n}^{2}.
+\end{alignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, the problem of model selection is reduced to obtaining evidence at
  the maximum given the time series data of the positions and velocities
  of the Brownian particle.
  A model with a relatively higher magnitude of the evidence is then more
@@ -3022,15 +3088,27 @@ The above expression of the Hessian matrix and the logarithm of the posterior
 \begin_inset Formula $\mathcal{M}_{\alpha}$
 \end_inset
 
- in Eq (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:evidence-multivariate"
+.
+ This expression generalizes for a model 
+\begin_inset Formula $\mathcal{M}_{\alpha}$
+\end_inset
+
+ with several parameters as 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "mackay1992bayesian"
 
 \end_inset
 
-).
- The explicit form of the logarithm of the evidence is then
+
+\begin_inset Formula 
+\begin{equation}
+P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta}^{\ast},\mathcal{M}_{\alpha})\,P(\boldsymbol{\theta}^{\ast}|\mathcal{M}_{\alpha})[\det(\bm{A}/2\pi)]^{-1/2}.\label{eq:evidence-multivariate-1}
+\end{equation}
+
+\end_inset
+
+The explicit form of the logarithm of the evidence is then
 \begin_inset Formula 
 \begin{align}
 \ln P\left(\bm{X}|\mathcal{M}_{\alpha}\right) & \simeq-\frac{N}{2}\left(\bm{\Sigma}^{*^{-1}}:\bm{\Sigma}^{*}+\ln((2\pi)^{M}\,|\bm{\Sigma}^{*}|)\right)+\ln\Bigg[\det(\boldsymbol{A}_{22})\det[\boldsymbol{A}_{11}-\boldsymbol{A}_{12}\boldsymbol{A}_{22}^{-1}\boldsymbol{A}_{21}\Bigg]^{-1/2}+\tfrac{M}{2}\ln2\pi.
