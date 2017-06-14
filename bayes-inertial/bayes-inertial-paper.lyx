@@ -104,6 +104,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -1186,7 +1187,7 @@ Here the pair
 \begin_inset Formula $(x,v)$
 \end_inset
 
- describes the location of the particle in its phase space of position and
+ describes the state of the particle in its phase space of position and
  velocity, while 
 \begin_inset Formula $m$
 \end_inset
@@ -1195,14 +1196,7 @@ Here the pair
 \begin_inset Formula $\gamma$
 \end_inset
 
- are the particle mass and friction coefficient respectively 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "chandrasekhar1943stochastic"
-
-\end_inset
-
-.
+ are the particle mass and friction coefficient respectively.
  The potential 
 \begin_inset Formula $U=\frac{1}{2}kx^{2}$
 \end_inset
@@ -1220,7 +1214,14 @@ is a zero-mean Gaussian white noise with variance
 \begin_inset Formula $\langle\xi\left(t\right)\xi\left(t'\right)\rangle=2k_{B}T\gamma\delta\left(t-t'\right)$
 \end_inset
 
- that satisfies the fluctuation-dissipation relation.
+ that satisfies the fluctuation-dissipation relation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "chandrasekhar1943stochastic"
+
+\end_inset
+
+.
  The inference problem is to jointly estimate the triplet of parameters
  
 \begin_inset Formula $(m,\gamma,k)$
@@ -1254,7 +1255,7 @@ dW_{v}
 
 \end_inset
 
-where the mean regression is
+where the mean regression matrix is
 \begin_inset Formula 
 \begin{equation}
 \bm{\lambda}=\begin{pmatrix}0 & -1\\
@@ -1471,30 +1472,25 @@ reference "eq:path-sampling"
 ) to obtain exactly sampled trajectories of the Brownian harmonic oscillator.
 
 \color blue
- In Fig.(
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+In Fig.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:PositionsVelocity"
 
 \end_inset
 
-) we show a typical sample path of the positions and velocities obtained
- from the simulation and corresponding histogram for distribution of positions
- and velocities.
- The histograms of the positions and the velocities clearly show that their
- distributions are stationary and are very well-approximated by Gaussians.
- The time series data is then used to obtain MAP estimates and the error
- bars using the Bayesian methods described above.
+) we show a typical sample path of the positions and velocities and their
+ corresponding histograms.
+ The histograms of the positions and the velocities clearly show that the
+ distributions are normal.
 
 \color inherit
- The results of section (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:Bayesian-inference"
-
-\end_inset
-
-) are then applied to these trajectories to compare.
  
 \begin_inset Float figure
 wide false
@@ -1575,7 +1571,7 @@ name "fig:PositionsVelocity"
 \begin_inset Float table
 wide true
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -2102,8 +2098,8 @@ We now take the time series
 \begin_inset Formula $\boldsymbol{X}=(x_{1}v_{1},\ldots,x_{N}v_{N})$
 \end_inset
 
- of discrete observations of the position and velocity and construct from
- it the sufficient statistics
+ of discrete observations of positions and velocities obtained from the
+ exact path sampling and construct from it the sufficient statistics
 \begin_inset Formula 
 \begin{alignat}{1}
 \boldsymbol{T}_{1} & =\sum_{n=1}^{N-1}\begin{pmatrix}x_{n+1}^{2} & x_{n+1}v_{n+1}\\
@@ -2166,7 +2162,9 @@ The friction constant is estimated by eliminating the mass between two of
 
 \end_inset
 
-
+The three preceding equations provide the Bayes I map estimates of the oscillato
+r parameters.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -2175,7 +2173,7 @@ The friction constant is estimated by eliminating the mass between two of
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -2289,9 +2287,7 @@ name "fig:stationary"
 
 \end_inset
 
-We now use the Bayes II to obtain the MAP estimates of the mass and the
- spring constant and their error bars.
- To this end, we use Eq.(
+Next we use Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:covarianceDiagonal"
@@ -2358,20 +2354,14 @@ end{subequations}
 
 \end_inset
 
-The error bars decrease as the number of points in the time series increase,
- as expected.
-\end_layout
-
-\begin_layout Standard
-
-\color blue
-We now present our results for the Bayesian inference of the time series
- data from the simulation of underdamped Brownian harmonic oscillator.
+These correspond to Bayes II estimates of the oscillator parameters.
  
+\color blue
+
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -2431,8 +2421,8 @@ reference "tab:springconstant"
 , we provide the MAP estimates and corresponding error bars for three different
  time series data obtained from the simulation of the underdamped Brownian
  harmonic oscillator.
- This clearly shows that the MAP estimates of the Bayesian methods and values
- of the simulation parameters are in excellent agreement.
+ This clearly shows that the MAP estimates of both Bayesian methods and
+ values of the simulation parameters are in excellent agreement.
  The error bars have been calculated from the Hessian matrix.
  The Bayesian standard error in estimating the parameters is less than 
 \begin_inset Formula $1\%$
@@ -2444,44 +2434,31 @@ reference "tab:springconstant"
 \begin_layout Standard
 
 \color blue
-The joint Bayesian MAP estimates of the parameters - mass 
-\begin_inset Formula $m$
-\end_inset
-
-, spring constant 
-\begin_inset Formula $k$
-\end_inset
-
-, and friction 
-\begin_inset Formula $\gamma$
-\end_inset
-
- - along with the projections of the posterior distributions, with filled
- contours representing the error bars, are shown in Fig.(
+In Fig.(
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:inference"
 
 \end_inset
 
-).
- The results in the panel (a) and (b) correspond to the Bayes I and the
- Bayes II respectively.
- There is a single maximum at the MAP estimates in the projections of posterior
- distributions, marked by a black dot, and the 
-\begin_inset Formula $1\sigma$
+) we show the posterior distribution of the parameters as corner plots,
+ with panel (a) corresponding to Bayes I and panel (b) to Bayes II.
+ The distributions have been shifted to the MAP estimates, which, therefore
+ are always at the origin marked by the black dot.
+ The Bayesian credible intervals corresponding to 
+\begin_inset Formula $70\%$
 \end_inset
 
 , 
-\begin_inset Formula $2\sigma$
+\begin_inset Formula $90\%$
 \end_inset
 
-, and 
-\begin_inset Formula $3\sigma$
+ and 
+\begin_inset Formula $99\%$
 \end_inset
 
- regions have been shaded.
- The results of the Bayesian methods agree with each other.
+ of the posterior probability are shown in shades of gray.
+ 
 \end_layout
 
 \begin_layout Standard
