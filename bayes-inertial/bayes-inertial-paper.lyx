@@ -914,7 +914,7 @@ An alternative Bayesian procedure for directly estimating
  probability in this approach is given as
 \begin_inset Formula 
 \begin{align}
-\ln P\left(\boldsymbol{X}|\boldsymbol{c}\right) & =\dfrac{N}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}|\bm{c}|}-\dfrac{1}{2}\sum_{n=1}^{N}\boldsymbol{x}_{n}^{T}\boldsymbol{c}^{-1}\,\boldsymbol{x}_{n},\label{eq:posteriorBayesII}
+\ln P\left(\boldsymbol{c}\,|\boldsymbol{X}\right) & =\dfrac{N}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}|\bm{c}|}-\dfrac{1}{2}\sum_{n=1}^{N}\boldsymbol{x}_{n}^{T}\boldsymbol{c}^{-1}\,\boldsymbol{x}_{n},\label{eq:posteriorBayesII}
 \end{align}
 
 \end_inset
@@ -2101,12 +2101,94 @@ name "tab:springconstant"
 \end_inset
 
 
-\color blue
+\end_layout
 
+\begin_layout Standard
+
+\emph on
+Parameter estimation: 
+\emph default
+We now take the time series 
+\begin_inset Formula $\boldsymbol{X}=(x_{1}v_{1},\ldots,x_{N}v_{N})$
+\end_inset
+
+ of discrete observations of the position and velocity and construct from
+ it the sufficient statistics
+\begin_inset Formula 
+\begin{alignat}{1}
+\boldsymbol{T}_{1} & =\sum_{n=1}^{N-1}\begin{pmatrix}x_{n+1}^{2} & x_{n+1}v_{n+1}\\
+v_{n+1}x_{n+1} & v_{n+1}^{2}
+\end{pmatrix},\nonumber \\
+\boldsymbol{T}_{2} & =\sum_{n=1}^{N-1}\begin{pmatrix}x_{n+1}x_{n} & x_{n+1}v_{n}\\
+v_{n+1}x_{n} & v_{n+1}v_{n}
+\end{pmatrix},\nonumber \\
+\boldsymbol{T}_{3} & =\sum_{n=1}^{N-1}\begin{pmatrix}x_{n}^{2} & x_{n}v_{n}\\
+v_{n}x_{n} & v_{n}^{2}
+\end{pmatrix}.
+\end{alignat}
+
+\end_inset
+
+From these, we compute the MAP estimate for the regression matrix
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boldsymbol{\lambda}^{\ast}=-\frac{1}{\Delta t}\ln\boldsymbol{\Lambda}^{\ast}=-\frac{1}{\Delta t}\ln(\bm{T}_{2}\boldsymbol{T}_{3}^{-1}),
+\]
+
+\end_inset
+
+which yields the MAP estimates for the natural frequency and the relaxation
+ time scale
+\begin_inset Formula 
+\begin{equation}
+\left(\frac{k}{m}\right)^{\ast}=\lambda_{21}^{\ast},\quad\left(\frac{\gamma}{m}\right)^{\ast}=\lambda_{22}^{\ast}.
+\end{equation}
+
+\end_inset
+
+The MAP estimate of the covariance matrix
+\begin_inset Formula 
+\[
+\boldsymbol{c}^{\ast}=\dfrac{1}{N}\left(\bm{T}_{1}-\boldsymbol{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{T}_{2}^{T}\right)\left[\boldsymbol{1}-(\bm{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{\epsilon})^{T}(\bm{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{\epsilon})^{T}\right]^{-1}
+\]
+
+\end_inset
+
+yields the MAP estimate of the spring constant and the mass, in units of
+ 
+\begin_inset Formula $k_{B}T$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\frac{k_{B}T}{k^{*}}=c_{11}^{\ast},\qquad\frac{k_{B}T}{m^{*}}=c_{22}^{\ast}.
+\end{equation}
+
+\end_inset
+
+The friction constant is estimated by eliminating the mass between two of
+ the previous ratios
+\begin_inset Formula 
+\begin{equation}
+\gamma^{\ast}=\frac{k_{B}T\lambda_{22}^{\ast}}{c_{22}^{\ast}}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color blue
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -2114,7 +2196,7 @@ status collapsed
 \begin_inset Graphics
 	filename figure_3a.png
 	display false
-	width 38text%
+	width 46text%
 
 \end_inset
 
@@ -2220,91 +2302,6 @@ name "fig:stationary"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-
-\emph on
-Parameter estimation: 
-\emph default
-We now take the time series 
-\begin_inset Formula $\boldsymbol{X}=(x_{1}v_{1},\ldots,x_{N}v_{N})$
-\end_inset
-
- of discrete observations of the position and velocity and construct from
- it the sufficient statistics
-\begin_inset Formula 
-\begin{alignat}{1}
-\boldsymbol{T}_{1} & =\sum_{n=1}^{N-1}\begin{pmatrix}x_{n+1}^{2} & x_{n+1}v_{n+1}\\
-v_{n+1}x_{n+1} & v_{n+1}^{2}
-\end{pmatrix},\nonumber \\
-\boldsymbol{T}_{2} & =\sum_{n=1}^{N-1}\begin{pmatrix}x_{n+1}x_{n} & x_{n+1}v_{n}\\
-v_{n+1}x_{n} & v_{n+1}v_{n}
-\end{pmatrix},\nonumber \\
-\boldsymbol{T}_{3} & =\sum_{n=1}^{N-1}\begin{pmatrix}x_{n}^{2} & x_{n}v_{n}\\
-v_{n}x_{n} & v_{n}^{2}
-\end{pmatrix}.
-\end{alignat}
-
-\end_inset
-
-From these, we compute the MAP estimate for the regression matrix
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\boldsymbol{\lambda}^{\ast}=-\frac{1}{\Delta t}\ln\boldsymbol{\Lambda}^{\ast}=-\frac{1}{\Delta t}\ln(\bm{T}_{2}\boldsymbol{T}_{3}^{-1}),
-\]
-
-\end_inset
-
-which yields the MAP estimates for the natural frequency and the relaxation
- time scale
-\begin_inset Formula 
-\begin{equation}
-\left(\frac{k}{m}\right)^{\ast}=\lambda_{21}^{\ast},\quad\left(\frac{\gamma}{m}\right)^{\ast}=\lambda_{22}^{\ast}.
-\end{equation}
-
-\end_inset
-
-The MAP estimate of the covariance matrix
-\begin_inset Formula 
-\[
-\boldsymbol{c}^{\ast}=\dfrac{1}{N}\left(\bm{T}_{1}-\boldsymbol{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{T}_{2}^{T}\right)\left[\boldsymbol{1}-(\bm{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{\epsilon})^{T}(\bm{T}_{2}\boldsymbol{T}_{3}^{-1}\boldsymbol{\epsilon})^{T}\right]^{-1}
-\]
-
-\end_inset
-
-yields the MAP estimate of the spring constant and the mass, in units of
- 
-\begin_inset Formula $k_{B}T$
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-\frac{k_{B}T}{k^{*}}=c_{11}^{\ast},\qquad\frac{k_{B}T}{m^{*}}=c_{22}^{\ast}.
-\end{equation}
-
-\end_inset
-
-The friction constant is estimated by eliminating the mass between two of
- the previous ratios
-\begin_inset Formula 
-\begin{equation}
-\gamma^{\ast}=\frac{k_{B}T\lambda_{22}^{\ast}}{c_{22}^{\ast}}.
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\color blue
 We now use the Bayes II to obtain the MAP estimates of the mass and the
  spring constant and their error bars.
  To this end, we use Eq.(
@@ -2677,7 +2674,7 @@ key "mackay1992bayesian"
 
 \begin_inset Formula 
 \begin{equation}
-P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta}^{\ast},\mathcal{M}_{\alpha})\,P(\boldsymbol{\theta}^{\ast}|\mathcal{M}_{\alpha})\,(\det(\bm{A}/2\pi))^{-1/2}.\label{eq:evidence-multivariate}
+P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta}^{\ast},\mathcal{M}_{\alpha})\,P(\boldsymbol{\theta}^{\ast}|\mathcal{M}_{\alpha})[\det(\bm{A}/2\pi)]^{-1/2}.\label{eq:evidence-multivariate}
 \end{equation}
 
 \end_inset
@@ -2720,8 +2717,7 @@ reference "fig:modelSelection"
 
 \color blue
 Thus, one can discern the model from a time series by estimating the Bayesian
- evidence, which is determined by an interplay of posterior distribution
- and the Ockham factor.
+ evidence.
  The method presented for model selection is valid for an arbitrary dimension
  of the Ornstein-Uhlenbeck process, and not limited to the example of univariate
  and bivariate case pursued here.
@@ -3050,9 +3046,9 @@ The Hessian matrix,
 
 \end_inset
 
-The above expression of the Hessian matrix and the logarithm of the posterior
- probability at the MAP estimates have been used to obtain the logarithm
- of the evidence for a 
+The above expression of the Hessian matrix and the logarithm of the likelihood
+ at the MAP estimates have been used to obtain the logarithm of the evidence
+ for a 
 \begin_inset Formula $M$
 \end_inset
 
@@ -3068,10 +3064,10 @@ reference "eq:evidence-multivariate"
 \end_inset
 
 ).
- The explicit form of the logarithm of the evidence is then
+ The explicit form of the logarithm of the evidence is
 \begin_inset Formula 
 \begin{align}
-\ln P\left(\bm{X}|\mathcal{M}_{\alpha}\right) & \simeq-\frac{N}{2}\left(\bm{\Sigma}^{*^{-1}}:\bm{\Sigma}^{*}+\ln((2\pi)^{M}\,|\bm{\Sigma}^{*}|)\right)+\ln\Bigg[\det(\boldsymbol{A}_{22})\det[\boldsymbol{A}_{11}-\boldsymbol{A}_{12}\boldsymbol{A}_{22}^{-1}\boldsymbol{A}_{21}\Bigg]^{-1/2}+\tfrac{M}{2}\ln2\pi.
+\ln P\left(\bm{X}|\mathcal{M}_{\alpha}\right) & \simeq-\frac{N}{2}\left(\bm{\Sigma}^{*^{-1}}:\bm{\Sigma}^{*}+\ln[(2\pi)^{M}\,|\bm{\Sigma}^{*}|]\right)-\tfrac{1}{2}\ln\Big(\det\boldsymbol{A}_{22}\det[\boldsymbol{A}_{11}-\boldsymbol{A}_{12}\boldsymbol{A}_{22}^{-1}\boldsymbol{A}_{21}]\Big)+\tfrac{M}{2}\ln2\pi.
 \end{align}
 
 \end_inset
