@@ -2264,20 +2264,20 @@ reference "eq:map_stationary"
 \end_inset
 
 ).
- The variables have been scaled by 
-\begin_inset Formula $x^{\prime}=\left(x-\mu_{x}\right)/\sigma_{xx}$
+ The variables have been scaled as 
+\begin_inset Formula $\left(x_{i}-\mu_{_{i}}\right)/\sigma_{_{ii}}$
 \end_inset
 
 , where 
-\begin_inset Formula $\mu_{x}$
+\begin_inset Formula $\mu_{i}$
 \end_inset
 
  and 
-\begin_inset Formula $\sigma_{xx}^{2}$
+\begin_inset Formula $\sigma_{ii}^{2}$
 \end_inset
 
  are the MAP estimate and variance of 
-\begin_inset Formula $x$
+\begin_inset Formula $x_{i}$
 \end_inset
 
  respectively.
@@ -2485,7 +2485,7 @@ key "foreman2016corner"
 
 , with panel (a) corresponding to Bayes I and panel (b) to Bayes II.
  The distributions have been shifted to the MAP estimates, which, therefore
- are always at the origin marked by the black dot.
+ are always at the origin marked by the black dot, and scaled by the variances.
  The Bayesian credible intervals corresponding to 
 \begin_inset Formula $70\%$
 \end_inset
@@ -2692,10 +2692,10 @@ To observe the inertial motion of a colloidal particle in an optical trap,
 \end_layout
 
 \begin_layout Standard
-We consider two data generating models
+We consider two Ornstein-Uhlenbeck data generating models
 \begin_inset Formula 
 \begin{align}
-\mathcal{M}_{UD}:\longrightarrow & \quad m\dot{v+}\gamma v+\nabla U=\xi\nonumber \\
+\mathcal{M}_{UD}:\longrightarrow & \quad m\dot{v}+\gamma v+\nabla U=\xi\nonumber \\
 \mathcal{M}_{OD}:\longrightarrow & \quad\gamma\dot{x}+\nabla U=\xi
 \end{align}
 
@@ -2747,7 +2747,7 @@ key "gardiner1984adiabatic"
 
 .
  The overdamped oscillator is an univariate Ornstein-Uhlenbeck model with
- only two parameters, 
+ two parameters, 
 \begin_inset Formula $\gamma$
 \end_inset
 
@@ -2831,7 +2831,7 @@ reference "fig:modelSelection"
 \end_layout
 
 \begin_layout Section
-Discussions and summary
+Summary
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:conclusion"
@@ -2839,6 +2839,20 @@ name "sec:conclusion"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+In summary, we have presented two Bayesian methods for inferring the parameters
+ of a multivariate Ornstein-Uhlenbeck process, given discrete observations
+ of the sample paths.
+ An exact path sampling procedure has been presented and utilized to validate
+ the Bayesian methods for the Brownian harmonic oscillator.
+ The problem of Bayesian model comparison has been addressed and applied
+ to select between Kramers and Smoluchowski limits of the Brownian harmonic
+ oscillator.
+ Future work will address the problem of parameter inference and model selection
+ when either or both of the Markov and Gaussian properties of the process
+ are relaxed.
 \end_layout
 
 \begin_layout Standard
