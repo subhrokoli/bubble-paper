@@ -104,6 +104,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -2666,24 +2667,8 @@ P(\boldsymbol{X}|\mathcal{M}_{\alpha})\simeq P(\boldsymbol{X}|\boldsymbol{\theta
 
 \end_inset
 
-The explicit expression of the logarithm of the evidence, for a 
-\begin_inset Formula $M$
-\end_inset
-
--dimensional multivariate Ornstein-Uhlenbeck model 
-\begin_inset Formula $\mathcal{M}_{\alpha}$
-\end_inset
-
-, is then
-\begin_inset Formula 
-\begin{align}
-\ln P\left(\bm{X}|\mathcal{M}_{\alpha}\right) & \simeq-\frac{N}{2}\left(\bm{\Sigma}^{*^{-1}}:\bm{\Sigma}^{*}+\ln\left((2\pi)^{M}\,|\bm{\Sigma}^{*}|\right)\right)\nonumber \\
- & -\tfrac{1}{2}\ln\left(\det\bm{A}\right)+\tfrac{M}{2}\ln2\pi.
-\end{align}
-
-\end_inset
-
-Explicit forms of the Hessian matrix is given in the Appendix.
+Explicit forms of the Hessian matrix and the evidence have been provided
+ in the Appendix.
  Thus, the problem of model selection is reduced to obtaining evidence at
  the maximum given the time series data of the positions and velocities
  of the Brownian particle.
@@ -2911,7 +2896,7 @@ reference "eq:posteriorBayesI"
  Expanding terms and completing the summation we have the following identity
 \begin_inset Formula 
 \begin{align}
- & \bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}=-\dfrac{1}{2}\bm{\Sigma}^{-1}:\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}+\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big].\label{eq:lp}
+ & -\frac{1}{2}\sum_{n=1}^{N-1}\bm{\Delta_{n}^{T}\Sigma^{-1}\Delta_{n}}=-\dfrac{1}{2}\bm{\Sigma}^{-1}:\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}+\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big].\label{eq:lp}
 \end{align}
 
 \end_inset
@@ -2926,11 +2911,11 @@ reference "eq:sufficientStatistics"
 
 ).
  With this identification, the expression of the logarithm of the posterior
- probability in terms of sufficient statistics is
+ probability in terms of the sufficient statistics is
 \begin_inset Formula 
-\begin{align*}
-\ln P\left(\bm{\theta}\vert\bm{X}\right)= & -\tfrac{1}{2}\bm{\Sigma}^{-1}:\Big[\big(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\big)\bm{T_{3}}\big(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\big)^{T}+\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\Big]+\tfrac{N}{2}\ln\dfrac{|\bm{\Sigma^{-1}}|}{(2\pi)^{M}}-\dfrac{\bm{c}^{-1}:\boldsymbol{T}_{4}}{2}+\tfrac{1}{2}\ln\dfrac{|\bm{c^{-1}}|}{(2\pi)^{M}}.
-\end{align*}
+\begin{align}
+\ln P\left(\bm{\theta}\vert\bm{X}\right)= & -\dfrac{1}{2}\bm{\Sigma}^{-1}:\Big[\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)\left(\bm{T_{3}}\right)\left(\bm{\Lambda}-\bm{T_{2}T_{3}^{-1}}\right)^{\bm{T}}+\left(\bm{T_{1}}-\bm{T_{2}T_{3}^{-1}T_{2}^{T}}\right)\Big]+\frac{N}{2}\ln\dfrac{|\bm{\Sigma^{-1}}|}{(2\pi)^{M}}.
+\end{align}
 
 \end_inset
 
@@ -3050,10 +3035,9 @@ The Hessian matrix,
 
 \end_inset
 
-The standard errors of the MAP estimates are obtained using the Hessian
- matrix at the MAP estimates.
- The expression of the Hessian matrix at the MAP estimates have also been
- used to obtain the logarithm of the evidence for a 
+The above expression of the Hessian matrix and the logarithm of the posterior
+ probability at the MAP estimates have been used to obtain the logarithm
+ of the evidence for a 
 \begin_inset Formula $M$
 \end_inset
 
@@ -3069,6 +3053,19 @@ reference "eq:evidence-multivariate"
 \end_inset
 
 ).
+ The explicit form of the logarithm of the evidence is then
+\begin_inset Formula 
+\begin{align}
+\ln P\left(\bm{X}|\mathcal{M}_{\alpha}\right) & \simeq-\frac{N}{2}\left(\bm{\Sigma}^{*^{-1}}:\bm{\Sigma}^{*}+\ln((2\pi)^{M}\,|\bm{\Sigma}^{*}|)\right)+\ln\Bigg[\det(\boldsymbol{A}_{22})\det[\boldsymbol{A}_{11}-\boldsymbol{A}_{12}\boldsymbol{A}_{22}^{-1}\boldsymbol{A}_{21}\Bigg]^{-1/2}+\tfrac{M}{2}\ln2\pi.
+\end{align}
+
+\end_inset
+
+Here 
+\begin_inset Formula $\boldsymbol{A}_{ij}$
+\end_inset
+
+ are the elements of the Hessian matrix.
  
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
