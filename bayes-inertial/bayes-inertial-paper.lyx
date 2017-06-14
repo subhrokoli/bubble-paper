@@ -961,14 +961,14 @@ reference "eq:mapBayesII"
 \emph on
 Model comparison: 
 \emph default
-Thus far we assumed that the data generating model was given, and only the
- parameters of the model need to be estimated.
+Thus far we assumed that the data generating model was given and that only
+ the parameters of the model needed to be estimated.
  In certain circumstances, though, the model itself may be uncertain and
  it becomes necessary to estimate the probability of different models 
 \begin_inset Formula $\mathcal{M}_{\alpha}$
 \end_inset
 
-, given the data 
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "jeffreys1998theory,mackay2003information,gregory2005bayesian"
@@ -993,6 +993,7 @@ evidence
 \end_inset
 
  of the model and the second term is the prior probability of the model.
+ We shall assume all models to be, a priori, equally likely.
  The evidence is the normalizing constant in Eq.(
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1101,7 +1102,7 @@ exactly
 \begin_inset Formula $\boldsymbol{\Sigma}$
 \end_inset
 
-, a property that was clearly articulated by Uhlenbeck and Ornstein.
+, a property that was first recognized by Uhlenbeck and Ornstein.
  Therefore, a sequence of states at times 
 \begin_inset Formula $t=n\Delta t$
 \end_inset
