@@ -1397,7 +1397,7 @@ begin{subequations}
 \begin_inset Formula 
 \begin{eqnarray}
 \Lambda_{1} & = & \exp(\tfrac{-\Delta t}{2\tau})\left[\cos(\omega\Delta t)+\frac{1}{2\omega\tau}\sin(\omega\Delta t)\right],\\
-\Lambda_{2} & = & \exp(\tfrac{-\Delta t}{2\tau})\left[\frac{1}{\omega}\sin(\omega\Delta t)\right].
+\Lambda_{2} & = & \exp(\tfrac{-\Delta t}{2\tau})\left[-\frac{1}{\omega}\sin(\omega\Delta t)\right].
 \end{eqnarray}
 
 \end_inset
