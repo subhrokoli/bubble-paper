@@ -104,7 +104,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -1120,7 +1119,14 @@ exactly
 \end_inset
 
  is a positive integer, forming a discrete sampling of a path can be obtained
- from the following iteration
+ from the following iteration 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "uhlenbeck1930theory"
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{x}_{n+1}=\boldsymbol{\Lambda}\boldsymbol{x}_{n}+\sqrt{\boldsymbol{\Sigma}}\,\boldsymbol{\xi}_{n},\label{eq:path-sampling}

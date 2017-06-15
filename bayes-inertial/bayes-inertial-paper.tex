@@ -1,4 +1,4 @@
-%% LyX 2.2.2 created this file.  For more info, see http://www.lyx.org/.
+%% LyX 2.2.0 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
 \documentclass[english,aps, twocolumn, pre,superscriptaddress, notitlepage]{revtex4-1}
 \usepackage[T1]{fontenc}
@@ -235,9 +235,10 @@ and computational cost of the inference algorithm.
 
 The estimate for the mean regression rate is easily recognized to
 be the multivariate generalization of our earlier result for the univariate
-Ornstein-Uhlenbeck process. An explicit estimate for $\boldsymbol{c}$
-can be obtained from that of $\boldsymbol{\Sigma}$ when the Fokker-Planck
-operator obeys detailed balance. Then Onsager-Casimir symmetry $\boldsymbol{\epsilon}(\boldsymbol{\lambda c})=(\boldsymbol{\lambda c})^{T}\boldsymbol{\epsilon}$
+Ornstein-Uhlenbeck process \cite{bera2017fast}. An explicit estimate
+for $\boldsymbol{c}$ can be obtained from that of $\boldsymbol{\Sigma}$
+when the Fokker-Planck operator obeys detailed balance. Then Onsager-Casimir
+symmetry $\boldsymbol{\epsilon}(\boldsymbol{\lambda c})=(\boldsymbol{\lambda c})^{T}\boldsymbol{\epsilon}$
 implies $\boldsymbol{\Lambda}\boldsymbol{c}=\boldsymbol{c}\boldsymbol{\epsilon}\boldsymbol{\Lambda}^{T}\boldsymbol{\epsilon}$
 and, from the definition of $\boldsymbol{\Sigma}$, it follows that
 the MAP estimate for $\boldsymbol{c}$ is
@@ -259,8 +260,8 @@ shall pursue this elsewhere.
 An alternative Bayesian procedure for directly estimating $\boldsymbol{c}$
 is arrived at by interpreting the time series $\boldsymbol{X}$ as
 independent repeated samples from the stationary distribution $\mathcal{N}\left(\boldsymbol{0},\boldsymbol{c}\right)$.
-Using non-informative priors, the expression of the logarithms of
-the posterior probability in this approach is given as
+Using non-informative priors, the expression of the logarithm of the
+posterior probability in this approach is given as
 \begin{align}
 \ln P\left(\boldsymbol{c}\,|\boldsymbol{X}\right) & =\dfrac{N}{2}\ln\dfrac{1}{\left(2\pi\right)^{M}|\bm{c}|}-\dfrac{1}{2}\sum_{n=1}^{N}\boldsymbol{x}_{n}^{T}\boldsymbol{c}^{-1}\,\boldsymbol{x}_{n},\label{eq:posteriorBayesII}
 \end{align}
@@ -270,7 +271,7 @@ from which the MAP estimate
 \end{align}
 follows straightforwardly. The Bayesian inference method described
 above, using the stationary distribution of the Ornstein-Uhlenbeck
-process, is referred as \textquotedblleft Bayes II\textquotedblright .
+process, is referred to as \textquotedblleft Bayes II\textquotedblright .
 Consistency between the above two methods of estimating the covariance
 matrix provides a stringent test of the appropriateness of the Ornstein-Uhlenbeck
 process as the data generating model. The preceding equations (\ref{eq:mapBayesI}),
@@ -326,7 +327,7 @@ is normally distributed with mean zero and variance $\boldsymbol{\Sigma}$,
 a property that was first recognized by Uhlenbeck and Ornstein. Therefore,
 a sequence of states at times $t=n\Delta t$, where $n$ is a positive
 integer, forming a discrete sampling of a path can be obtained from
-the following iteration
+the following iteration \cite{uhlenbeck1930theory}
 \begin{equation}
 \boldsymbol{x}_{n+1}=\boldsymbol{\Lambda}\boldsymbol{x}_{n}+\sqrt{\boldsymbol{\Sigma}}\,\boldsymbol{\xi}_{n},\label{eq:path-sampling}
 \end{equation}
@@ -415,7 +416,7 @@ where $\lambda_{ij}^{\mathrm{ir}}=\frac{1}{2}(\lambda_{ij}+\epsilon_{i}\epsilon_
 is the irreversible part of the drift coefficient with $\epsilon_{i}=\pm1$
 for variables that are, respectively, even or odd under time reversal.
 Then, the only non-zero entry of $\boldsymbol{\lambda}^{\mathrm{ir}}$
-is $\lambda_{22}^{\mathrm{ir}}=\tau^{-1}$ and it trivial to verify
+is $\lambda_{22}^{\mathrm{ir}}=\tau^{-1}$ and it is trivial to verify
 the Onsager-Casimir symmetry.
 
 \emph{Path sampling: }To sample paths of the Brownian harmonic oscillator
@@ -607,11 +608,11 @@ transform of the time series. There is excellent agreement between
 the two autocorrelations. We emphasize that no numerical function
 fitting is required to obtain this estimate. The spectral density
 is, arguably, even more impressive as it interpolates through the
-noisy discrete Fourier transform in a sensible manner. Our method
-of estimating the spectral density shares a methodological similarity
-with Burg's classic maximum entropy method \cite{burg1967maximum}.
-The principle differences are (i) that we choose the Ornstein-Uhlenbeck
-process as the data generating model, rather than the discrete autoregressive
+noisy discrete Fourier transform in a sensible manner. Our estimation
+of the spectral density shares a methodological similarity with Burg's
+classic maximum entropy method \cite{burg1967maximum}. The principle
+differences are (i) that we choose the Ornstein-Uhlenbeck process
+as the data generating model, rather than the discrete autoregressive
 process assumed by Burg and (ii) that we work directly on the space
 of trajectories rather than in the space of correlations. From a Bayesian
 perspective, our estimation procedure encodes the prior information
@@ -748,7 +749,7 @@ at the maximum is then
 \frac{N}{2}(\bm{\Lambda}^{*}\boldsymbol{c}^{*}+\boldsymbol{c}^{*}\bm{\Lambda}^{*T})\, & \qquad & \bm{\Sigma}^{*-1}(\bm{T_{3}}-N\boldsymbol{c}^{*})-\frac{N}{2}\bm{\Sigma}^{*-2}(\bm{\Lambda}^{*}\boldsymbol{c}^{*}+\boldsymbol{c}^{*}\bm{\Lambda}^{*T})^{2}
 \end{array}\right).
 \end{align}
-The above expression of the Hessian matrix has been used to obtain
+The above expression of the Hessian matrix have been used to obtain
 the standard errors of the MAP estimates and the evidence of a given
 model.
 
@@ -767,7 +768,8 @@ model $\mathcal{M}_{\alpha}$ is given as
 \ln P\left(\bm{X}|\mathcal{M}_{\alpha}\right) & \simeq-\frac{N}{2}\left(\bm{\Sigma}^{*^{-1}}:\bm{\Sigma}^{*}+\ln((2\pi)^{M}\,|\bm{\Sigma}^{*}|)\right)-\frac{1}{2}\ln\Big(\det(\boldsymbol{A}_{22})\det(\boldsymbol{A}_{11}-\boldsymbol{A}_{12}\boldsymbol{A}_{22}^{-1}\boldsymbol{A}_{21})\Big)+\tfrac{M}{2}\ln2\pi.
 \end{align}
 Here $\boldsymbol{A}_{ij}$ are the elements of the Hessian matrix.
-
+%
+%
 \begin{thebibliography}{10}
 
 \bibitem{gardiner1985handbook}
@@ -802,7 +804,7 @@ S.~Bera, S.~Paul, R.~Singh, D.~Ghosh, A.~Kundu, A.~Banerjee, and R.~Adhikari.
 \newblock {\em Sci. Rep.}, 7:41638, 2017.
 
 \bibitem{kashyap1977bayesian}
-R~Kashyap.
+R.~Kashyap.
 \newblock A bayesian comparison of different classes of dynamic models using
   empirical data.
 \newblock {\em IEEE Trans. Automat. Cont.}, 22(5):715--727, 1977.
@@ -821,6 +823,11 @@ A.~Zellner.
 P.~Gregory.
 \newblock {\em Bayesian Logical Data Analysis for the Physical Sciences}.
 \newblock Cambridge University Press, 2005.
+
+\bibitem{uhlenbeck1930theory}
+George~E Uhlenbeck and Leonard~S Ornstein.
+\newblock On the theory of the brownian motion.
+\newblock {\em Physical review}, 36(5):823, 1930.
 
 \bibitem{chandrasekhar1943stochastic}
 S.~Chandrasekhar.
@@ -875,5 +882,4 @@ D.~J.~C. MacKay.
 \newblock Cambridge University Press, 2003.
 
 \end{thebibliography}
-
 \end{document}
