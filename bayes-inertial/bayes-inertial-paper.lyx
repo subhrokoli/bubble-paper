@@ -517,7 +517,7 @@ decays exponentially and that its Fourier transform,
 the power spectral density
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{C}(ω)=(\text{−}iω\boldsymbol{1}+\boldsymbol{\lambda})^{-1}\left(2\boldsymbol{D}\right)(iω\boldsymbol{1}+\boldsymbol{\lambda^{T}})^{-1},\label{eq:spectral-density}
+\boldsymbol{C}(\Omega)=(\text{−}i\Omega\boldsymbol{1}+\boldsymbol{\lambda})^{-1}\left(2\boldsymbol{D}\right)(i\Omega\boldsymbol{1}+\boldsymbol{\lambda^{T}})^{-1},\label{eq:spectral-density}
 \end{equation}
 
 \end_inset
@@ -2525,8 +2525,8 @@ reference "eq:spectral-density"
 and the spectral densities are
 \begin_inset Formula 
 \begin{align*}
-C_{xx}(\omega)= & \dfrac{2\gamma k_{B}T}{m^{2}(\omega_{0}^{2}-\omega^{2})^{2}+\gamma^{2}\omega^{2}},\\
-C_{vv}(\omega)= & \dfrac{2\gamma k_{B}T\omega^{2}}{m^{2}(\omega_{0}^{2}-\omega^{2})^{2}+\gamma^{2}\omega^{2}}.
+C_{xx}(\Omega)= & \dfrac{2\gamma k_{B}T}{m^{2}(\omega_{0}^{2}-\Omega^{2})^{2}+\gamma^{2}\Omega^{2}},\\
+C_{vv}(\Omega)= & \dfrac{2\gamma k_{B}T\Omega^{2}}{m^{2}(\omega_{0}^{2}-\Omega^{2})^{2}+\gamma^{2}\Omega^{2}}.
 \end{align*}
 
 \end_inset
