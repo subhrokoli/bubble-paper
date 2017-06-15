@@ -104,6 +104,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -823,7 +824,14 @@ key "jeffreys1998theory,jaynes2003probability,sivia2006data"
 \begin_layout Standard
 The estimate for the mean regression rate is easily recognized to be the
  multivariate generalization of our earlier result for the univariate Ornstein-U
-hlenbeck process.
+hlenbeck process 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bera2017fast"
+
+\end_inset
+
+.
  An explicit estimate for 
 \begin_inset Formula $\boldsymbol{c}$
 \end_inset
@@ -909,7 +917,7 @@ An alternative Bayesian procedure for directly estimating
 \end_inset
 
 .
- Using non-informative priors, the expression of the logarithms of the posterior
+ Using non-informative priors, the expression of the logarithm of the posterior
  probability in this approach is given as
 \begin_inset Formula 
 \begin{align}
@@ -928,7 +936,7 @@ from which the MAP estimate
 
 follows straightforwardly.
  The Bayesian inference method described above, using the stationary distributio
-n of the Ornstein-Uhlenbeck process, is referred as “Bayes II”.
+n of the Ornstein-Uhlenbeck process, is referred to as “Bayes II”.
  Consistency between the above two methods of estimating the covariance
  matrix provides a stringent test of the appropriateness of the Ornstein-Uhlenbe
 ck process as the data generating model.
@@ -1354,7 +1362,7 @@ reference "eq:stationarity"
 \begin_inset Formula $\lambda_{22}^{\mathrm{ir}}=\tau^{-1}$
 \end_inset
 
- and it trivial to verify the Onsager-Casimir symmetry.
+ and it is trivial to verify the Onsager-Casimir symmetry.
 \end_layout
 
 \begin_layout Standard
@@ -2532,8 +2540,8 @@ reference "fig:autocorrelation"
  estimate.
  The spectral density is, arguably, even more impressive as it interpolates
  through the noisy discrete Fourier transform in a sensible manner.
- Our method of estimating the spectral density shares a methodological similarit
-y with Burg's classic maximum entropy method 
+ Our estimation of the spectral density shares a methodological similarity
+ with Burg's classic maximum entropy method 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "burg1967maximum"
