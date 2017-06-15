@@ -523,7 +523,7 @@ the power spectral density
 \end_inset
 
 is a multivariate Lorentzian in the angular frequency 
-\begin_inset Formula $\omega$
+\begin_inset Formula $\Omega$
 \end_inset
 
  
@@ -978,7 +978,7 @@ Thus far we assumed that the data generating model was given and that only
  
 \begin_inset CommandInset citation
 LatexCommand cite
-key "jeffreys1998theory,kashyap1977bayesian,mackay1992bayesian,zellner1996introduction,gregory2005bayesian"
+key "jeffreys1998theory,kashyap1977bayesian,mackay1992bayesian,zellner1984,gregory2005bayesian"
 
 \end_inset
 
