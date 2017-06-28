@@ -160,7 +160,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -179,7 +178,6 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -204,9 +202,9 @@ today
 \end_layout
 
 \begin_layout Abstract
-The fluctuation-response relation, a central result in non-equilibrium statistic
-al mechanics, relates equilibrium fluctuations in a system to its linear
- response to external forces.
+The fluctuation-dissipation relation, a central result in non-equilibrium
+ statistical mechanics, relates equilibrium fluctuations in a system to
+ its linear response to external forces.
  Here we provide a direct experimental verification of this relation for
  viscously coupled oscillators, as realized by a pair of optically trapped
  colloidal particles.
@@ -215,8 +213,8 @@ al mechanics, relates equilibrium fluctuations in a system to its linear
  results and reveals a frequency maximum in the amplitude of the mutual
  response which is a sensitive function of the trap stiffnesses and the
  friction tensors.
- This allows for its location and width to be tuned independently and suggests
- the utility of the trap setup for accurate two-point microrheology.
+ This allows for its location and width to be tuned and suggests the utility
+ of the trap setup for accurate two-point microrheology.
 \end_layout
 
 \begin_layout PACS
