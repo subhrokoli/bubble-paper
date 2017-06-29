@@ -216,121 +216,10 @@ Experiment
 \end_layout
 
 \begin_layout Standard
-We set up a dual-beam optical tweezers (Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "Setup"
-
-\end_inset
-
-) by focusing two orthogonally polarized beams of wavelength 
-\begin_inset Formula $\lambda=1064$
-\end_inset
-
- nm generated independently from two diode lasers using a high NA immersion-oil
- microscope objective (Zeiss PlanApo,
-\begin_inset Formula $100\times1.4$
-\end_inset
-
-).
- An AOM, located conjugate to the back-focal plane of the objective using
- the telescopic lens pair L1-L2 (see Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "Setup"
-
-\end_inset
-
-), is used for modulating one of the traps.
- A long optical path after the AOM ensures that a minimal beam deflection
- is enough to modulate one of the trapped beams, so that the intensity in
- the first order remains constant to around 2%.
- The modulated and unmodulated beams are independently steered using mirror
- pairs M1, M2 and M3, M4, respectively, and coupled into a polarizing beam
- splitter (PBS1).
- For detection, we use a separate laser of wavelength 
-\begin_inset Formula $\lambda=671$
-\end_inset
-
- nm, that is again divided into two beams of orthogonal polarization by
- PBS2 and coupled into PBS3.
- We then use a dichroic (DC1) to overlap the two pairs of trapping and detection
- beams into the optical tweezers microscope (Zeiss Axiovert.A1).
- The two trapped beads are imaged and their displacements measured by back-focal
-- plane-interferometry, while the white light for imaging and the detection
- laser beams are separated by dichroics DC2 and DC3, respectively.
- A very low volume fraction sample (
-\begin_inset Formula $\phi\approx0.01$
-\end_inset
-
-) is prepared with 3 
-\begin_inset Formula $\mu$
-\end_inset
-
-m diameter polystyrene latex beads in 1 M NaCl-water solution for avoiding
- surface charges.
- A single droplet of about 20 
-\begin_inset Formula $\mu$
-\end_inset
-
-l volume of the sample is introduced on a standard 10 mm square cover slip
- so that the droplet radius is around 200 
-\begin_inset Formula $\mu$
-\end_inset
-
-m.
- We trap two spherical polystyrene beads (Sigma LB-30) of mean size 3 
-\begin_inset Formula $\mu$
-\end_inset
-
-m each, in two calibrated optical traps which are separated by a distance
- 
-\begin_inset Formula $4\pm0.1\:\mu$
-\end_inset
-
-m, so that the surface-surface distance of the trapped beads is 
-\begin_inset Formula $1\pm0.2\:\mu$
-\end_inset
-
-m, and the distance from the cover slip surface is 30 
-\begin_inset Formula $\mu$
-\end_inset
-
-m.
- From the literature 
-\backslash
-cite{
-\series bold
-PRL 107, 248101 (2011)
-\series default
-}, this distance is still large enough to avoid optical cross talk and effects
- due to surface charges.
- In order to ensure that the trapping beams do not influence each other,
- we measure the Brownian motion of one when the other is switched on (in
- the absence of a particle), and check that there are no changes in the
- Brownian motion.
- One of the traps is sinusoidally modulated and the phase and amplitude
- response of both the driving and driven particles with reference to the
- sinusoidal drive are measured by lock-in detection (Stanford Research,
- SR830).
- To get large signal to noise, we use balanced detection using photodiode
- pairs PA1, PB1 and PA2, PB2, for the driving and driven particles, respectively.
- The two beams for balanced detection are prepared by edge mirrors E1, E3
- (E2, E4) for the driving (driven) particle, respectively.
- Polarizers P1 (P2) are aligned in such a way so as select the desired polarizat
-ion component of the detection beams that are prepared, as mentioned above,
- in orthogonal polarization states for the driving (driven) particle.
- The voltage-amplitude calibration of our detection system reveals that
- we can resolve motion of around 12 nm with an SNR of 2.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -347,7 +236,7 @@ centering
 
  
 \begin_inset Graphics
-	filename fig1si.pdf
+	filename ../../../2016/twobeadhydro/fig1si.pdf
 	width 45text%
 
 \end_inset
@@ -391,6 +280,118 @@ name "Setup"
 \end_layout
 
 \begin_layout Standard
+We set up a dual-beam optical tweezers (Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Setup"
+
+\end_inset
+
+) by focusing two orthogonally polarized beams of wavelength 
+\begin_inset Formula $\lambda=1064$
+\end_inset
+
+ nm generated independently from two diode lasers using a high NA immersion-oil
+ microscope objective (Zeiss PlanApo,
+\begin_inset Formula $100\times1.4$
+\end_inset
+
+).
+ An AOM, located conjugate to the back-focal plane of the objective using
+ the telescopic lens pair L1-L2 (see Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Setup"
+
+\end_inset
+
+), is used for modulating one of the traps.
+ A long optical path after the AOM ensures that a minimal beam deflection
+ is enough to modulate one of the trapped beams, so that the intensity in
+ the first order remains constant to around 2%.
+ The modulated and unmodulated beams are independently steered using mirror
+ pairs M1, M2 and M3, M4, respectively, and coupled into a polarizing beam
+ splitter (PBS1).
+ For detection, we use a separate laser of wavelength 
+\begin_inset Formula $\lambda=671$
+\end_inset
+
+ nm, that is again divided into two beams of orthogonal polarization by
+ PBS2 and coupled into PBS3.
+ We then use a dichroic (DC1) to overlap the two pairs of trapping and detection
+ beams into the optical tweezers microscope (Zeiss Axiovert.A1).
+ two trapped beads are imaged and their displacements measured by back-focal-
+ plane-interferometry, while the white light for imaging and the detection
+ laser beams are separated by dichroics DC2 and DC3, respectively.
+ A very low volume fraction sample (
+\begin_inset Formula $\phi\approx0.01$
+\end_inset
+
+) is prepared with 3 
+\begin_inset Formula $\mu$
+\end_inset
+
+m diameter polystyrene latex beads in 1 M NaCl-water solution for avoiding
+ surface charges.
+ A single droplet of about 20 
+\begin_inset Formula $\mu$
+\end_inset
+
+l volume of the sample is introduced in a sample chamber made out of a standard
+ 10 mm square cover slip attached by double-sided sticky tape to a microscope
+ slide.
+ We trap two spherical polystyrene beads (Sigma LB-30) of mean size 3 
+\begin_inset Formula $\mu$
+\end_inset
+
+m each, in two calibrated optical traps which are separated by a distance
+ 
+\begin_inset Formula $4\pm0.1\:\mu$
+\end_inset
+
+m, so that the surface-surface distance of the trapped beads is 
+\begin_inset Formula $1\pm0.2\:\mu$
+\end_inset
+
+m, and the distance from the cover slip surface is 30 
+\begin_inset Formula $\mu$
+\end_inset
+
+m.
+ From the literature, this distance is still large enough to avoid optical
+ cross talk and effects due to surface charges 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Stilgoe11"
+
+\end_inset
+
+.
+ In order to ensure that the trapping beams do not influence each other,
+ we measure the Brownian motion of one when the other is switched on (in
+ the absence of a particle), and check that there are no changes in the
+ Brownian motion.
+ One of the traps is sinusoidally modulated and the phase and amplitude
+ response of both the driving and driven particles with reference to the
+ sinusoidal drive are measured by lock-in detection (Stanford Research,
+ SR830).
+ To get large signal to noise, we use balanced detection using photodiode
+ pairs PA1, PB1 and PA2, PB2, for the driving and driven particles, respectively.
+ The two beams for balanced detection are prepared by edge mirrors E1, E3
+ (E2, E4) for the driving (driven) particle, respectively.
+ Polarizers P1 (P2) are aligned in such a way so as select the desired polarizat
+ion component of the detection beams that are prepared, as mentioned above,
+ in orthogonal polarization states for the driving (driven) particle.
+ Thus, we use a combination of orthogonal polarization and dichroic beam
+ splitters to separate out the detection beams for the driving and driven
+ particles, respectively.
+ The voltage-amplitude calibration of our detection system reveals that
+ we can resolve motion of around 5 nm with an SNR of 2.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -411,7 +412,7 @@ centering
 
  
 \begin_inset Graphics
-	filename fig2si.pdf
+	filename ../../../2016/twobeadhydro/fig2si.pdf
 	width 45text%
 
 \end_inset
@@ -450,7 +451,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename fig3si.pdf
+	filename ../../../2016/twobeadhydro/fig3si.pdf
 	scale 40
 
 \end_inset
@@ -510,7 +511,8 @@ reference "hist"
 \end_inset
 
  (a) and (b) shows the histogram of position coordinate data that we acquire
- for the Brownian motion of B1 and B2, respectively.
+ for the Brownian motion of driving particle B1 and driven particle B2,
+ respectively.
  As is clear, the data are normally distributed in both traps and fit very
  well to Gaussians (shown in bold lines).
  To calibrate the traps and determine the trap stiffnesses, we measure the
@@ -551,11 +553,119 @@ cite{flyvbjerg}.
  For the two particle correlation experiments, as a consistency check, we
  determine the position cross-correlation function in time domain for B1
  and B2 as shown in Fig.
- The data fits well to Eq.xx in Sec 1, with the constant parameters appropriately
- calculated for our case.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig4si"
+
+\end_inset
+
+.
+ The data fits well to Eq.5 in Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Meiners99"
+
+\end_inset
+
+, with the constant parameters appropriately calculated for our case.
+ Finally, we demonstrate the amplitude and phase response of the driving
+ particle B1 as a function of the driving frequency in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig5si"
+
+\end_inset
+
+(a) and (b), respectively.
+ As expected, the amplitude decays with increasing frequency, while the
+ phase is in sync with the drive at low frequencies and gradually lags behind
+ as the frequency is increased.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../../../2016/twobeadhydro/fig4si.pdf
+	scale 30
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig4si"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Position cross-correlation in time domain.
+ The filled red squares are experimentally measured points, while the solid
+ line is the theoretically calculated cross-correlation.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../../../2016/twobeadhydro/fig5si.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig5si"
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Amplitude (a) and phase (b) response of driving particle B1 as a function
+ of drive frequency.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \begin_inset Float figure
 wide false
 sideways false
@@ -1135,7 +1245,7 @@ key "kubo1966fluctuation"
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "2bead-fdt"
-options "plain"
+options "apsrev4-1"
 
 \end_inset
 

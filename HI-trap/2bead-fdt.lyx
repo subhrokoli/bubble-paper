@@ -160,6 +160,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -178,6 +179,7 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -222,32 +224,68 @@ Valid PACS appear here
 \end_layout
 
 \begin_layout Standard
-The classical dynamics of a pair of coupled harmonic oscillators under a
- variety of boundary conditions and in different environments offers interesting
- study, and is often used to model systems encompassing diverse areas in
- physics.
- The environment dictates the dynamics, and thus, a careful analysis of
- the dynamics leads to a precise calibration of the environment.
- In this context, the coupled-oscillator problem in a fluid has interesting
- connotations, especially when the oscillators in question are of mesoscopic
- dimensions, since they would then be responsive to fluid properties at
- the microscopic level.
- Thus, while a preliminary perception would demarcate the problem to be
- a typical coupled oscillator that is in the over-damped regime - the fact
- that the particles are Brownian, and thus undergo position fluctuations
- influenced by stochastic forces - renders interesting possibilities.
- Moreover, the microscopic flow environment that the oscillators would sample
- could also lead to non-trivial effects, and even produce phenomenon that
- would otherwise be considered unlikely due to the boundary conditions governing
- the over-damped regime.
+The fluctuation-response theorem is of fundamental importance in studying
+ the statistical mechanics of non-equilibrium systems, and indeed of irreversibl
+e processes in general 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "kubo1966fluctuation"
+
+\end_inset
+
+.
+ In a nutshell, the theorem relates the random motion or intrinsic fluctuations
+ of colloidal particles in thermodynamic equilibrium to their more systematic
+ (linear) response to forces applied externally.
+ Thus, the theorem can be both used to determine the intrinsic correlation
+ spectra of Brownian particles given their response to external forces,
+ and vice versa - and by a judicious choice of the measurement scheme has
+ been widely used in microrheology applications to determine the characteristics
+ of simple as well as complex, viscoelastic fluids 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "mason95,levine2000"
+
+\end_inset
+
+.
+ However, most research conducted in non-equilibrium statistical mechanics
+ tacitly assume the validity of the fluctuation-response theorem, and there
+ exist few direct experimental verifications of the theorem, especially
+ in systems composed of multiple Brownian particles that, additionally,
+ are coupled hydrodynamically.
 \end_layout
 
 \begin_layout Standard
-In this paper, we probe the coupled dynamics of a pair of colloidal particles
- trapped in close proximity in water using optical tweezers.The simple system
- of two colloidal spheres trapped in separate optical traps has earlier
- been used to study the effects on one of the spheres when the other is
- modulated sinusoidally 
+Optical tweezers enable the careful study of single Brownian particles in
+ a well-characterized environment.
+ Thus, a trapped particle under optical tweezers in a viscous fluid such
+ as water undergoes Brownian motion, which is a Markovian process and thus
+ obeys detailed balance, so that the fluctuation-response relation is almost
+ trivially satisfied.
+ However, the situation becomes more complicated when two particles are
+ trapped in separate optical tweezers that are coupled by near-field hydrodynami
+c interactions with the entrained fluid.
+ This system forms an interesting test bed for probing the validity of the
+ fluctuation response theorem, since even though we have independent Brownian
+ particles having linear responses individually, the hydrodynamic coupling
+ will disturb the thermodynamic equilibrium of each particle, and essentially
+ result in a departure from the single particle fluctuation-response result.
+ It is therefore a worthwhile exercise to perform controlled experiments
+ on such a viscously coupled system so as to determine whether fluctuation-respo
+nse is stringently satisfied for the coupled system treated as a whole,
+ which is in thermodynamic equilibrium.
+ In addition, the dynamics of this system under varying experimental conditions
+ may also lead to unexpected and interesting phenomena.
+\end_layout
+
+\begin_layout Standard
+This is what we demonstrate in this paper, where we probe the coupled dynamics
+ of a pair of colloidal particles trapped in close proximity in water using
+ optical tweezers.
+ The simple system of two colloidal spheres trapped in separate optical
+ traps has earlier been used to study the effects on one of the spheres
+ when the other is modulated sinusoidally 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Hough02,Atakh06"
@@ -257,51 +295,43 @@ key "Hough02,Atakh06"
 .
  The results seemed to match the theory well - however, there seemed to
  be limited interest in the consequences of the results and the possibilities
- offered by this system as a whole to study interesting aspects of basic
- physics.
- For example, a trapped particle under optical tweezers undergoes Brownian
- motion, which is a Markovian process and thus obeys detailed balance, so
- that the fluctuation dissipation relation is almost trivially satisfied
- in this case 
+ offered by this system as a whole to study interesting aspects of non-equilibri
+um statistical physics.
+ Thus, in this paper, we use this system in order to carry out a model-free
+ test of the fluctuation response theorem, where we check experimentally
+ whether the response of the hydrodynamically coupled system under a sinusoidal
+ excitation matches the cross-correlation function of the Brownian fluctuations.
+ This is performed on two polystyrene microspheres trapped in very close
+ proximity of each other (surface to surface separation lesser than the
+ particle radius - a regime unexplored in Refs.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "kubo1966fluctuation"
+key "Hough02,Atakh06"
 
 \end_inset
 
-.
- However, the situation becomes more complicated when two particles are
- trapped in separate optical tweezers that are coupled by near-field hydrodynami
-c interactions with the entrained fluid.
- The particles undergo Brownian motion apparently independent of each other,
- and while both systems have linear responses individually - so that their
- relaxations are exponential, it would be interesting to probe whether fluctuati
-on dissipation is stringently satisfied for the coupled system.
- This is what we achieve in this paper, where we first develop a theory
- to verify the fluctuation response relationship for two spheres trapped
- in optical tweezers and coupled by hydrodynamic interactions.
- Using appropriate fluid-mediated interactions represented by the mobility
- tensors, we check whether the response of one of the particles when the
- other is driven sinusoidally can indeed by equated with the cross-correlations
- of the Brownian fluctuations of the individual particles.
- We then verify this experimentally on two polystyrene microspheres trapped
- in very close proximity of each other (surface to surface separation lesser
- than the particle radius), and perform measurements to check whether the
- fluctuation-response theorem is indeed validated.
- In addition, we observe that when one of the microspheres is modulated
- sinusoidally, the response of the other is dependent on the driving frequency
- of the former, so that it displays an amplitude resonance.
+).
+ In our experiments, we additionally observe that when one of the microspheres
+ is modulated sinusoidally, the response of the other is dependent on the
+ driving frequency of the former, so that it displays an amplitude resonance.
  This is typically not feasible in a highly overdamped system such as optical
- tweezers where the liquid entirely damps out the inertial response of the
- trapped object.
- The resonance response is a critical function of the viscosity of the liquid
- and can, in principle, be used to perform two point micro-rheology measurements
- with high accuracy.
+ tweezers where the viscous liquid entirely damps out the inertial response
+ of the trapped object.
+ We then develop a theoretical model of the system using appropriate fluid-media
+ted interactions represented by the mobility tensors, and validate our experimen
+tal observations.
+ Finally, we note that the resonance response of the driven microsphere
+ is a critical function of the viscosity of the liquid and can, in principle,
+ be used to perform two point micro-rheology measurements with high accuracy.
  
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -319,7 +349,7 @@ centering
  
 \begin_inset Graphics
 	filename fig1.pdf
-	width 45text%
+	width 35text%
 
 \end_inset
 
@@ -394,7 +424,9 @@ reference "Setup"
  trapping beams using dichroic beam splitters.
  The two trapped beads are imaged and their displacements measured by back-focal
 - plane-interferometry, with the imaging white light and detection beams
- also separated at the output by dichroic beam splitters.
+ also separated at the output by dichroic beam splitters, which along with
+ the orthogonal polarization scheme ensures that cross-talk in the detection
+ beams is absent.
  A very low volume fraction sample (
 \begin_inset Formula $\phi\approx0.01$
 \end_inset
@@ -405,16 +437,6 @@ reference "Setup"
 
 m diameter polystyrene latex beads in 1 M NaCl-water solution for avoiding
  surface charges.
- A single droplet of about 20 
-\begin_inset Formula $\mu$
-\end_inset
-
-l volume of the sample is introduced on a standard 10 mm square cover slip
- so that the droplet radius is around 200 
-\begin_inset Formula $\mu$
-\end_inset
-
-m.
  We trap two spherical polystyrene beads (Sigma LB-30) of mean size 3 
 \begin_inset Formula $\mu$
 \end_inset
@@ -428,11 +450,24 @@ m, so that the surface-surface distance of the trapped beads is
 \begin_inset Formula $1\pm0.2\:\mu$
 \end_inset
 
-m, and the distance from the cover slip surface is 30 
+m (
+\begin_inset Formula $0.67a$
+\end_inset
+
+, 
+\begin_inset Formula $a$
+\end_inset
+
+ being the particle radius) and the distance from the cover slip surface
+ is 30 
 \begin_inset Formula $\mu$
 \end_inset
 
-m.
+m (
+\begin_inset Formula $20a$
+\end_inset
+
+, so as to overrule wall effects).
  From the literature 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -440,24 +475,28 @@ key "Stilgoe11"
 
 \end_inset
 
-, this distance is still large enough to avoid optical cross talk and effects
- due to surface charges.
- In order to ensure that the trapping beams do not influence each other,
- we measure the Brownian motion of one when the other is switched on (in
- the absence of a particle), and check that there are no changes in the
- Brownian motion.
- One of the traps is sinusoidally modulated and the phase and amplitude
- response of both the driving and driven particles with reference to the
- sinusoidal drive are measured by lock-in detection (Stanford Research,
- SR830).
- To get large signal to noise, we use balanced detection using photodiode
- pairs PA1, PB1 and PA2, PB2, for the driving and driven particles, respectively.
+, the particle separation is still large enough to avoid effects due to
+ optical binding and surface charges.
+ In order to ensure that the trapping and detection beams are not influencing
+ each other, we measure the Brownian motion of a trapped particle when the
+ trapping and detection beams for the other trap is switched on (in the
+ absence of a particle), and check that there are no changes in the measured
+ trap stiffness.
+ One of the traps is sinusoidally modulated (amplitude around 
+\begin_inset Formula $0.2a$
+\end_inset
+
+) and the phase and amplitude response of both the driving and driven particles
+ with reference to the sinusoidal drive are measured by lock-in detection
+ (Stanford Research, SR830).
+ To get large signal to noise, we use balanced detection systems BD1 and
+ BD2, for the driving and driven particles, respectively.
  The voltage-amplitude calibration of our detection system reveals that
- we can resolve motion of around 12 nm with an SNR of 2.
+ we can resolve motion of around 5 nm with an SNR of 2.
 \begin_inset Float figure
 wide true
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -475,7 +514,7 @@ centering
  
 \begin_inset Graphics
 	filename fig2.pdf
-	scale 60
+	scale 50
 
 \end_inset
 
@@ -520,7 +559,7 @@ Each of the optical traps are calibrated using equipartition and power spectrum
  temperature.
  We verify that each of the potentials is harmonic in nature from the histogram
  of the Brownian motion which is satisfactorily Gaussian (Fig.
- 1 in Supplementary Information).
+ 1 in Supplementary Information), even when both trapping beams are on.
  The sampling frequency is 2 kHz, while we performed data blocking at the
  level of 100 points in order to ensure good Lorentzian fits 
 \begin_inset CommandInset citation
@@ -557,7 +596,8 @@ reference "fdt"
  .
  It is understandable that while the fluctuation-response theorem is in
  the form a simple equation for a single particle, for two particles the
- equations would be represented in the form of a matrix.
+ equations would be represented in the form of a matrix, which we discuss
+ in more detail later.
  This is what we demonstrate in Fig.
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -620,7 +660,7 @@ which is the response of B1 when B2 is driven since the much larger stiffness
  for a pair of colloidal particles coupled by hydrodynamic interactions.
  Note that for consistency check, we also plot the cross-correlation function
  in the time domain (Fig.
- 2 in Supplementary Information) and obtain qualitatively similar data as
+ 4 in Supplementary Information) and obtain qualitatively similar data as
  reported in Ref.
  
 \begin_inset CommandInset citation
@@ -877,14 +917,28 @@ resonance
 
 \end_inset
 
+A simple analysis of the system with the two particles executing Brownian
+ motion in the absence of the external drive leads us to write down the
+ auto and cross-correlation functions (
+\begin_inset Formula $C_{ij}$
+\end_inset
 
+), so that by comparing with the response functions 
+\begin_inset Formula $\chi_{ij}^{\prime\prime}$
+\end_inset
+
+-, we have 
+\begin_inset Formula $C_{ij}=(k_{B}T/\pi f)\chi_{ij}^{\prime\prime}$
+\end_inset
+
+- which is the well known fluctuation-response relationship.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -910,31 +964,20 @@ centering
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Amplitude and phase response for driving (B1) and driven (B2) beads for
- different trap stiffness ratios.
+Amplitude and phase response for driven (B2) bead for different trap stiffness
+ ratios with the inter-particle separation 
+\begin_inset Formula $0.67a$
+\end_inset
+
+.
  (a) and (b) demonstrate amplitude and phase responses (with respect to
- driving frequency) of B1, while (c), (d), and (e) demonstrate that of B2
- as functions of driving frequency, for trap stiffness ratios of 2.5:1 (black),
- 5.7:1 (red), and 14.5:1 (blue) for (c) and (e).
+ driving frequency) of B2, for trap stiffness ratios of 2.5:1 (black), 5.7:1
+ (red), and 14.5:1 (blue) for (c) and (e).
  The resonance frequency in (c) is 20 Hz (black), 35 Hz (red), and 111 Hz
  (blue).
  The solid spheres denote experimental data points while the solid lines
  are corresponding theoretical fits.
- In (d), we demonstrate the independent tuning of the resonance in terms
- of 
-\begin_inset Formula $\mathit{Q}$
-\end_inset
-
--factor and center frequency.
- The red, black and blue colors represent calculated amplitude responses
- for trap stiffness ratios of 1, 4, and 9, with corresponding 
-\begin_inset Formula $\mathit{Q}$
-\end_inset
-
--factors of 0.453, 0.362, and 0.27, respectively.
- The solid lines, dashed-dotted, and dashed lines have resonance frequencies
- of 5, 25, and 50 Hz, respectively.
- (e) shows the phase response of B2.
+ 
 \end_layout
 
 \end_inset
@@ -962,8 +1005,8 @@ reference "response"
  We now focus on a particularly interesting facet of our problem, namely
  the amplitude and phase response of B2 under the influence of the driven
  particle B1.
- We study this for three different trap stiffness ratios of B1 and B2, the
- results of which are shown in Fig.
+ We study this experimentally for three different trap stiffness ratios
+ of B1 and B2, the results of which are shown in Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -971,13 +1014,15 @@ reference "response"
 
 \end_inset
 
-(a) - (d).
- The amplitude and phase response of B1 to the drive frequency is expected,
- with the amplitude decaying with increasing frequency, and the phase being
- in sync with the drive at low frequencies and gradually lagging behind
- as the frequency is increased.
+(a) and (b).
+ Note that we fit each graph with the calculated values of the responses
+ for the experimental parameters used, and obtain very good fits.
+ The amplitude and phase response of B1 (Supplementary information) to the
+ drive frequency is expected, with the amplitude decaying with increasing
+ frequency, and the phase being in sync with the drive at low frequencies
+ and gradually lagging behind as the frequency is increased.
  However, the amplitude response of B2 is rather interesting, and shows
- a clear resonance response at a certain frequency, the value of which changes
+ a clear resonance response at a certain frequency, the value of which increases
  as the stiffness ratio of the traps is increased.
  Thus, we have a resonance frequency of around 111 Hz (blue solid spheres
  in Fig.
@@ -993,48 +1038,28 @@ reference "response"
 
 14.5, a frequency of around 33 Hz with a ratio of 5.7:1 (red solid spheres),
  and a frequency of around 20 Hz with a ratio of 2.5:1 (black solid spheres).
- Thus, it is as if the entrained fluid has minimum impedance around this
+ In fact, it is as if the entrained fluid has minimum impedance around this
  frequency, so that there is maximum energy transfer between the driving
  and the driven beads.
- In addition, the width of the resonance (
+ The amplitude of the resonance is also linearly dependent on the particle
+ separation, and falls off as the latter is increased, so that in our current
+ detection sensitivity, we do not observe the resonance effects beyond a
+ surface-surface separation greater than 
+\begin_inset Formula $3a$
+\end_inset
+
+ - this increased distance also being smaller than that used in earlier
+ experiments, which possibly explains the fact that this phenomenon has
+ not been reported earlier.
+ The width of the resonance (
 \begin_inset Formula $\mathit{Q}$
 \end_inset
 
- factor) is also dependent on this ratio, and increases as the stiffness
- ratio is lowered.
- We also demonstrate that the resonance is independently tunable in terms
- of center frequency and 
-\begin_inset Formula $\mathit{Q}$
-\end_inset
-
--factor, as is demonstrated in Fig.
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "response"
-
-\end_inset
-
-(e).
- Here we plot the amplitude response for three different trap stiffness
- ratios of 1 (blue), 4 (black), and 9 (red), respectively.
- The 
-\begin_inset Formula $\mathit{Q}$
-\end_inset
-
--factor is dependent on this ratio, and is the lowest when the stiffness
- ratio is 1 (
-\begin_inset Formula $\mathit{Q}$
-\end_inset
-
- = 0.453), and lowest when it is 9 (
-\begin_inset Formula $\mathit{Q}$
-\end_inset
-
- = 0.27).
- The resonance frequency is determined by the absolute values of the trap
- stiffnesses - here we choose values so that the frequency is 5 (solid line),
- 25 (dashed-dotted line), and 50 (dashed line) Hz.
- The value of the 
+ factor) is dependent on the stiffness ratio, and increases as the latter
+ is reduced.
+ For a given medium, the resonance can thus be tuned by changing the stiffness
+ ratios.
+ Interestingly, it is obvious that the value of the 
 \begin_inset Formula $\mathit{Q}$
 \end_inset
 
@@ -1053,51 +1078,56 @@ reference "response"
  drive at very low frequencies with the lag reducing until the drive and
  driven are in phase at resonance, after which the driven bead leads in
  phase, and asymptotically approaches 90 degrees at high frequencies.
- As mentioned earlier, this is exactly similar to the relationship between
- velocity and driving force for a forced damped harmonic oscillator.
- Note that we fit each graph with the calculated values of the responses
- for the experimental parameters used, and obtain very good fits.
+ The rate of approach is also determined by the stiffness ratio, and is
+ rather slow at large stiffness ratios.
+ Indeed, this is exactly similar to the relationship between velocity and
+ driving force for a forced damped harmonic oscillator, and arises due to
+ the fact that the oscillators are dissipatively coupled.
  
 \end_layout
 
 \begin_layout Standard
-In conclusion, we study the coupled dynamics of two colloidal particles
- under near-field hydrodynamic interactions using optical tweezers.
- We verify the fluctuation-response directly in a model-free approach initially
- by measuring independently the auto and cross-correlations of the trapped
- particles, and comparing those with the measured amplitude and phase response
- when the particles are driven sinusoidally.
- The experiment is carried out on two polystyrene beads of diameter 3 um
- which are trapped in adjacent traps such that the surface-surface separation
- of the beads is 1 micron.
- The stiffness of the modulated bead is kept around 15 times higher than
- the driven bead to eliminate back-flows on the former and to ensure maximum
- amplitude response of the latter.
- To understand the dynamics of the problem more quantitatively, we develop
- a theoretical model where we solve the force balance equation invoking
- the mobility tensors for the system when both particles are at rest, as
- well as when is one of them is sinusoidally modulated.
- We generate amplitude and phase relationships between the response of the
- driving and driven particles with respect to the modulation frequency,
- and obtain the exact statement of the fluctuation-response theorem, which
- is rather non-trivial for a two particle system.
- In the process, we observe that the phase response of the driven bead resembles
- the current in an LCR circuit, and the amplitude actually undergoes a resonance
- at a particular driving frequency where the transfer of energy is maximum
- between drive and driven.
- We note that the resonance position and width are completely tunable by
- changing the ratio of the trap stiffnesses, so that a judicious choice
- of stiffness is required to observe effects with good SNR.
+In conclusion, we perform a direct experimental verification of the fluctuation-
+response relationship in a system consisting of two Brownian particles confined
+ in a viscous medium (water) in very close proximity (surface-surface separation
+ less than the particle radius) using separate optical tweezers.
+ The hydrodynamic coupling causes a departure from the single particle fluctuati
+on-response result for the individual particles, so it is interesting to
+ probe the validity of the theorem for the coupled system.
+ Thus, we compare the response of the system towards a sinsuoidal external
+ drive to the the cross-correlation function of the fluctuations, and obtain
+ a very good experimental match, which conclusively validates the fluctuation-re
+sponse relation.
+ The proximity of the particles, which is unprecedented and thus renders
+ the experiment rather challenging, also reveals a clear amplitude resonance
+ in the motion of the driven particle as a function of the drive frequency,
+ which makes this the first report of the experimental observation of motional
+ resonances in optical tweezers - where such resonances are typically ruled
+ out since the viscosity of the medium damps out all inertial effects in
+ trapped particles.
+ All experimental results are validated by a theoretical treatment of the
+ problem where we represent the fluid-mediated interactions by appropriate
+ mobility tensors.
+ We note that the resonance position and width are tunable by changing the
+ ratio of the trap stiffnesses, so that a judicious choice of stiffness
+ is required to observe effects with good SNR.
  Finally, the amplitude resonance frequency and width also depend on the
  fluid viscosity, which promises a direct application of this technique
- as a sensitive two-point microrheology probe of local viscosity.
+ as a sensitive two-point microrheology probe of local viscosity of fluids.
+\end_layout
+
+\begin_layout Standard
+This work was supported by the Indian Institute of Science Education and
+ Research,Kolkata, an autonomous research and teaching institute funded
+ by the Ministry of Human Resource Development, Govt.
+ of India.
 \end_layout
 
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "2bead-fdt"
-options "plain"
+options "apsrev4-1"
 
 \end_inset
 
