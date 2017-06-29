@@ -1,0 +1,179 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass letter
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 0
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Send To Address
+To 
+\begin_inset Newline newline
+\end_inset
+
+The Associate Editor 
+\begin_inset Newline newline
+\end_inset
+
+PRL
+\end_layout
+
+\begin_layout Opening
+Dear Editor
+\end_layout
+
+\begin_layout Standard
+We would like to submit our paper 
+\begin_inset Quotes eld
+\end_inset
+
+Direct verification of the fluctuation-response relation in viscously coupled
+ oscillators
+\begin_inset Quotes erd
+\end_inset
+
+ for consideration towards publication in your journal.
+ In this paper, we provide a direct experimental verification of the fluctuation
+-response relation in a system of two hydrodynamically coupled colloidal
+ particles trapped in separate optical tweezers in a viscous medium (water).
+ In addition, the dynamics of this system under varying experimental conditions
+ also reveals an interesting and somewhat unexpected phenomena in the context
+ of optical tweezers - the observation of a motional resonance in a trapped
+ particle under the influence of an external drive.
+\end_layout
+
+\begin_layout Standard
+The fluctuation-response relation is a pillar in non-equilibrium statistical
+ mechanics which essentially relates the random motion or intrinsic fluctuations
+ of colloidal particles in thermodynamic equilibrium to their more systematic
+ (linear) response to forces applied externally.
+ The theorem has been widely used in microrheology applications to determine
+ the characteristics of simple as well as complex, viscoelastic fluids.
+ However, most research conducted in non-equilibrium statistical mechanics
+ tacitly assume the validity of the fluctuation-response theorem, and there
+ exist few direct experimental verifications of the theorem, especially
+ in systems composed of multiple Brownian particles that, additionally,
+ are coupled hydrodynamically.
+ In this work, we use optical tweezers to trap two colloidal particles in
+ separate traps in a viscous medium, and experimentally demonstrate that
+ fluctuation-response holds in this system.
+ Note that since the particles are now hydrodynamically coupled, the thermodynam
+ic equilibrium of the individual particles are disturbed, which essentially
+ results in a departure from the single particle fluctuation-response result.
+ However, the coupled system treated as a whole is in thermodynamic equilibrium,
+ and we explicitly demonstrate by careful experiments that fluctuation-response
+ is valid in this system.
+ In addition, we observe that when one of the trapped particles is driven
+ sinusoidally, the other displays an amplitude resonance at a particular
+ drive frequency.
+ This observation is facilitated by the fact that the particles are trapped
+ extremely close to each other, with a surface-surface separation that is
+ less than the particle radius.
+ This necessarily complicates the experiment since we need to ensure that
+ there is no cross-talk in both the trapping and detection schemes, so that
+ the response of one particle does not spill into that of the other.
+ We check all such systematics carefully, and finally demonstrate a clear
+ amplitude resonance in the motion of the driven bead - the first result
+ of this kind in optical tweezers, where the viscous nature of the trapping
+ medium damps out all inertial effects, thus precluding the observation
+ of motional resonances.
+ The width and center frequency of the resonance can be tuned, so that it
+ can be used as a useful tool for accurate two-point microrheology.
+ We specifically envisage this approach for measuring the viscosity of liquids
+ using the trapped colloidal particles as probes.
+ All our experimental results are also validated by a theoretical model
+ of the system using appropriate fluid-mediated interactions represented
+ by the mobility tensors.
+\end_layout
+
+\begin_layout Standard
+Finally, we believe that the content of this work - a study of basic physics
+ which leads to a useful application - is quite well-tuned to the demands
+ and standards of work reported in PRL.
+ The fluctuation-response relation is a fundamental result in physics -
+ yet direct experimental verifications of the theorem are rare if not virtually
+ absent, as is the observation of a motional resonance in an overdamped
+ system.
+ The application of the resonance in microrheology may also lead to further
+ research in this area by increasing number of particles or extending the
+ problem to viscoelastic media.
+ The content of this work should thus be interesting to a wide range of
+ physicists, so that we hope that you would consider the paper suitable
+ for consideration in PRL, and commence the review process shortly.
+\end_layout
+
+\begin_layout Standard
+Yours sincerely,
+\end_layout
+
+\begin_layout Standard
+Ronojoy Adhikari and Ayan Banerjee
+\end_layout
+
+\end_body
+\end_document
