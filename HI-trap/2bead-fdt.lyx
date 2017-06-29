@@ -224,7 +224,7 @@ Valid PACS appear here
 \end_layout
 
 \begin_layout Standard
-The relation between the generalized resistance and equilibrium fluctuations
+The relation between the generalized susceptibility and equilibrium fluctuations
  of the generalized forces, first obtained for a linear resistive circuit
  by Nyquist and then proved for any general linear dissipative system by
  Callen and Welton, is a central result in non-equilibrium statistical physics.
@@ -273,61 +273,34 @@ thermal agitation of electricity in conductors
  Colloidal particles in a viscous fluid interact through velocity-dependent
  many-body hydrodynamic forces whose strength, away from boundaries, is
  inversely proportional to the distance between the particles.
- The range of such dissipative forces can be made much greater than that
+ The range of these dissipative forces can be made much greater than that
  of conservative forces such as the DLVO interaction.
  Therefore, it is possible to engineer a situation where the dominant coupling
  between colloidal particles is the viscous hydrodynamic force and all other
  interactions are negligibly small.
- Such systems, then, can be used to test the fluctuation-dissipation relation
- for dissipative couplings.
+ Such systems, then, are ideal for testing the fluctuation-dissipation relation
+ when couplings are purely dissipative.
  
 \end_layout
 
 \begin_layout Standard
-In this Letter, we probe the coupled dynamics of a pair of colloidal particles
- trapped in close proximity in water using optical tweezers.
- The simple system of two colloidal spheres trapped in separate optical
- traps has earlier been used to study the effects on one of the spheres
- when the other is modulated sinusoidally 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Hough02,Atakh06"
-
-\end_inset
-
-.
- The results seemed to match the theory well - however, there seemed to
- be limited interest in the consequences of the results and the possibilities
- offered by this system as a whole to study interesting aspects of non-equilibri
-um statistical physics.
- Thus, in this paper, we use this system in order to carry out a model-free
- test of the fluctuation response theorem, where we check experimentally
- whether the response of the hydrodynamically coupled system under a sinusoidal
- excitation matches the cross-correlation function of the Brownian fluctuations.
- This is performed on two polystyrene microspheres trapped in very close
- proximity of each other (surface to surface separation lesser than the
- particle radius - a regime unexplored in Refs.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Hough02,Atakh06"
-
-\end_inset
-
-).
- In our experiments, we additionally observe that when one of the microspheres
- is modulated sinusoidally, the response of the other is dependent on the
- driving frequency of the former, so that it displays an amplitude resonance.
- This is typically not feasible in a highly overdamped system such as optical
- tweezers where the viscous liquid entirely damps out the inertial response
- of the trapped object.
- We then develop a theoretical model of the system using appropriate fluid-media
-ted interactions represented by the mobility tensors, and validate our experimen
-tal observations.
- Finally, we note that the resonance response of the driven microsphere
- is a critical function of the viscosity of the liquid and can, in principle,
- be used to perform two point micro-rheology measurements with high accuracy.
- 
+In this Letter, we present a direct verification of the fluctuation-dissipation
+ relation for a pair of optically trapped colloidal particles in water.
+ We measure the equilibrium fluctuations of the distance between the particles
+ and the response of one particle to the sinusoidal motion of another particle.
+ Transforming both correlations and responses to the frequency domain, we
+ verify the fluctuation-dissipation relation over a range of frequencies
+ spanning two orders of magnitude.
+ Remarkably, the response function has a peak in frequency, reminiscent
+ of a resonance, though the system of oscillators is entirely overdamped.
+ A theoretical analysis, assuming slow viscous flow of the ambient water,
+ is in excellent agreement with the experiments.
+ The analysis reveals that the location and width of the resonant peak can
+ be tuned by altering the viscosity, the separation between the particles,
+ the trap stiffnesses, and the colloidal diameters.
+ It provides the inverse relations necessary for using the trap setup for
+ accurate two-point microrheology.
+ We now present details of our experiment and its analysis.
 \end_layout
 
 \begin_layout Standard
