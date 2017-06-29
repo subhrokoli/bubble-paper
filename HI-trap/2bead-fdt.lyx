@@ -111,8 +111,8 @@
 \begin_body
 
 \begin_layout Title
-Direct verification of the fluctuation-response relation in viscously coupled
- oscillators
+Direct verification of the fluctuation-dissipation relation in viscously
+ coupled oscillators
 \end_layout
 
 \begin_layout Author
@@ -205,8 +205,8 @@ today
 
 \begin_layout Abstract
 The fluctuation-dissipation relation, a central result in non-equilibrium
- statistical mechanics, relates equilibrium fluctuations in a system to
- its linear response to external forces.
+ statistical physics, relates equilibrium fluctuations in a system to its
+ linear response to external forces.
  Here we provide a direct experimental verification of this relation for
  viscously coupled oscillators, as realized by a pair of optically trapped
  colloidal particles.
@@ -224,9 +224,14 @@ Valid PACS appear here
 \end_layout
 
 \begin_layout Standard
-The fluctuation-response theorem is of fundamental importance in studying
- the statistical mechanics of non-equilibrium systems, and indeed of irreversibl
-e processes in general 
+The relation between the generalized resistance and equilibrium fluctuations
+ of the generalized forces, first obtained for a linear resistive circuit
+ by Nyquist and then proved for any general linear dissipative system by
+ Callen and Welton, is a central result in non-equilibrium statistical physics.
+ The relation can be used to infer the intrinsic fluctuations of a system
+ from measurements of its response to external perturbations or, perhaps
+ more startingly, to predict its response to external perturbations from
+ the character of its intrinsic fluctuations 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "kubo1966fluctuation"
@@ -234,14 +239,9 @@ key "kubo1966fluctuation"
 \end_inset
 
 .
- In a nutshell, the theorem relates the random motion or intrinsic fluctuations
- of colloidal particles in thermodynamic equilibrium to their more systematic
- (linear) response to forces applied externally.
- Thus, the theorem can be both used to determine the intrinsic correlation
- spectra of Brownian particles given their response to external forces,
- and vice versa - and by a judicious choice of the measurement scheme has
- been widely used in microrheology applications to determine the characteristics
- of simple as well as complex, viscoelastic fluids 
+ The fluctuation-dissipation relation is the point of departure for several
+ areas of current research including fluctuation relations, relaxation in
+ glasses, and response and correlations in active and driven systems 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "mason95,levine2000"
@@ -249,40 +249,43 @@ key "mason95,levine2000"
 \end_inset
 
 .
- However, most research conducted in non-equilibrium statistical mechanics
- tacitly assume the validity of the fluctuation-response theorem, and there
- exist few direct experimental verifications of the theorem, especially
- in systems composed of multiple Brownian particles that, additionally,
- are coupled hydrodynamically.
+ 
 \end_layout
 
 \begin_layout Standard
-Optical tweezers enable the careful study of single Brownian particles in
- a well-characterized environment.
- Thus, a trapped particle under optical tweezers in a viscous fluid such
- as water undergoes Brownian motion, which is a Markovian process and thus
- obeys detailed balance, so that the fluctuation-response relation is almost
- trivially satisfied.
- However, the situation becomes more complicated when two particles are
- trapped in separate optical tweezers that are coupled by near-field hydrodynami
-c interactions with the entrained fluid.
- This system forms an interesting test bed for probing the validity of the
- fluctuation response theorem, since even though we have independent Brownian
- particles having linear responses individually, the hydrodynamic coupling
- will disturb the thermodynamic equilibrium of each particle, and essentially
- result in a departure from the single particle fluctuation-response result.
- It is therefore a worthwhile exercise to perform controlled experiments
- on such a viscously coupled system so as to determine whether fluctuation-respo
-nse is stringently satisfied for the coupled system treated as a whole,
- which is in thermodynamic equilibrium.
- In addition, the dynamics of this system under varying experimental conditions
- may also lead to unexpected and interesting phenomena.
+The first experimental
+\emph on
+ 
+\emph default
+verification of the relation between fluctuation and dissipation was due
+ to Johnson, whose investigation of the 
+\begin_inset Quotes eld
+\end_inset
+
+thermal agitation of electricity in conductors
+\begin_inset Quotes erd
+\end_inset
+
+ provided the motivation for Nyquist's theoretical work.
+ Though the relation has been verified since in systems with conservative
+ couplings, a direct verification in a system where the coupling is entirely
+ dissipative is, to the best of our knowledge, not available.
+ Colloidal particles in a viscous fluid interact through velocity-dependent
+ many-body hydrodynamic forces whose strength, away from boundaries, is
+ inversely proportional to the distance between the particles.
+ The range of such dissipative forces can be made much greater than that
+ of conservative forces such as the DLVO interaction.
+ Therefore, it is possible to engineer a situation where the dominant coupling
+ between colloidal particles is the viscous hydrodynamic force and all other
+ interactions are negligibly small.
+ Such systems, then, can be used to test the fluctuation-dissipation relation
+ for dissipative couplings.
+ 
 \end_layout
 
 \begin_layout Standard
-This is what we demonstrate in this paper, where we probe the coupled dynamics
- of a pair of colloidal particles trapped in close proximity in water using
- optical tweezers.
+In this Letter, we probe the coupled dynamics of a pair of colloidal particles
+ trapped in close proximity in water using optical tweezers.
  The simple system of two colloidal spheres trapped in separate optical
  traps has earlier been used to study the effects on one of the spheres
  when the other is modulated sinusoidally 
@@ -1121,31 +1124,6 @@ This work was supported by the Indian Institute of Science Education and
  Research,Kolkata, an autonomous research and teaching institute funded
  by the Ministry of Human Resource Development, Govt.
  of India.
-\end_layout
-
-\begin_layout Standard
-The relation between the generalized resistance and the equilibrium fluctuations
- of the generalized forces, first obtained for any linear resistive circuit
- by Nyquist and then proved for a general linear dissipative system by Callen
- and Welton, is a central result in non-equilibrium statistical physics.
- The relation can be used to infer the intrinsic fluctuations of a system
- from measurements of its response to external perturbations or, perhaps
- more startingly, to predict its response to external perturbations from
- the character of its intrinsic fluctuations.
- The fluctuation-dissipation relation is the point of departure for several
- areas of current research including fluctuation relations, relaxation in
- glasses, and response and correlations in active systems.
- 
-\end_layout
-
-\begin_layout Standard
-The first experimental measurement of the relation between fluctuation and
- dissipation was by Johnson in 1927.
- (
-\series bold
-Gambit - why was this not enough
-\series default
- ?)
 \end_layout
 
 \begin_layout Standard
