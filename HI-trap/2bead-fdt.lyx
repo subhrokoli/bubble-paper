@@ -160,7 +160,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -179,7 +178,6 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -1064,32 +1062,21 @@ reference "response"
 
 \begin_layout Standard
 In conclusion, we perform a direct experimental verification of the fluctuation-
-response relationship in a system consisting of two Brownian particles confined
+dissipation relation in a system consisting of two colloidal particles confined
  in a viscous medium (water) in very close proximity (surface-surface separation
  less than the particle radius) using separate optical tweezers.
- The hydrodynamic coupling causes a departure from the single particle fluctuati
-on-response result for the individual particles, so it is interesting to
- probe the validity of the theorem for the coupled system.
- Thus, we compare the response of the system towards a sinsuoidal external
- drive to the the cross-correlation function of the fluctuations, and obtain
- a very good experimental match, which conclusively validates the fluctuation-re
-sponse relation.
- The proximity of the particles, which is unprecedented and thus renders
- the experiment rather challenging, also reveals a clear amplitude resonance
- in the motion of the driven particle as a function of the drive frequency,
- which makes this the first report of the experimental observation of motional
- resonances in optical tweezers - where such resonances are typically ruled
- out since the viscosity of the medium damps out all inertial effects in
- trapped particles.
- All experimental results are validated by a theoretical treatment of the
- problem where we represent the fluid-mediated interactions by appropriate
- mobility tensors.
- We note that the resonance position and width are tunable by changing the
- ratio of the trap stiffnesses, so that a judicious choice of stiffness
- is required to observe effects with good SNR.
- Finally, the amplitude resonance frequency and width also depend on the
- fluid viscosity, which promises a direct application of this technique
- as a sensitive two-point microrheology probe of local viscosity of fluids.
+ Our results provide a confirmation of the validity of the fluctuation-dissipati
+on relation in the presence of long-ranged dissipative forces that are the
+ only source of coupling of, otherwise, independent degrees of freedom.
+ Surprisingly, we identify a resonance in the response in system which is
+ overdamped and suggest its use in accurate two-point microrheology.
+ The present experiment can be extended in several directions: holographic
+ traps can be used to test the fluctuation-dissipation relation in the presence
+ of many-body hydrodynamic interactions, measurements at higher frequencies
+ can be uncover the effects of retarded hydrodynamic interactions and the
+ role of particle inertia.
+ Some of these will be presented in forthcoming work.
+ 
 \end_layout
 
 \begin_layout Standard
