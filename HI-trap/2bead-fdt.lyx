@@ -331,7 +331,7 @@ tal observations.
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -1121,6 +1121,31 @@ This work was supported by the Indian Institute of Science Education and
  Research,Kolkata, an autonomous research and teaching institute funded
  by the Ministry of Human Resource Development, Govt.
  of India.
+\end_layout
+
+\begin_layout Standard
+The relation between the generalized resistance and the equilibrium fluctuations
+ of the generalized forces, first obtained for any linear resistive circuit
+ by Nyquist and then proved for a general linear dissipative system by Callen
+ and Welton, is a central result in non-equilibrium statistical physics.
+ The relation can be used to infer the intrinsic fluctuations of a system
+ from measurements of its response to external perturbations or, perhaps
+ more startingly, to predict its response to external perturbations from
+ the character of its intrinsic fluctuations.
+ The fluctuation-dissipation relation is the point of departure for several
+ areas of current research including fluctuation relations, relaxation in
+ glasses, and response and correlations in active systems.
+ 
+\end_layout
+
+\begin_layout Standard
+The first experimental measurement of the relation between fluctuation and
+ dissipation was by Johnson in 1927.
+ (
+\series bold
+Gambit - why was this not enough
+\series default
+ ?)
 \end_layout
 
 \begin_layout Standard
