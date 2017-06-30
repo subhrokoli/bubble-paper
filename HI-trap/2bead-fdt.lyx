@@ -860,11 +860,11 @@ key "gardiner1984adiabatic"
 
 .
  The multiplicative noises in the resulting equations have clear interpretations
- within the adiabatic elimination procedure; there is no Ito-Stratonovich
+ within the adiabatic elimination procedure; there is no Itô-Stratonovich
  dilemma 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "van1981ito,van1992stochastic"
+key "van1981ito,gardiner1985handbook,van1992stochastic,klimontovich1990ito,klimontovich1994nonlinear"
 
 \end_inset
 
@@ -949,7 +949,14 @@ A simple analysis of the system with the two particles executing Brownian
 \begin_inset Formula $C_{ij}=(k_{B}T/\pi f)\chi_{ij}^{\prime\prime}$
 \end_inset
 
-- which is the well known fluctuation-response relationship.
+- which is the well known fluctuation-response relationship 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "chaikin2000principles"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1125,7 +1132,7 @@ on relation in the presence of long-ranged dissipative forces that are the
 
 \begin_layout Standard
 This work was supported by the Indian Institute of Science Education and
- Research,Kolkata, an autonomous research and teaching institute funded
+ Research, Kolkata, an autonomous research and teaching institute funded
  by the Ministry of Human Resource Development, Govt.
  of India.
 \end_layout
