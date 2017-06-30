@@ -160,7 +160,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -179,7 +178,6 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -253,7 +251,7 @@ key "kubo1966fluctuation"
 \end_inset
 
 .
- TThe fluctuation-dissipation relation is the point of departure for several
+ The fluctuation-dissipation relation is the point of departure for several
  areas of current research including fluctuation relations 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1141,7 +1139,7 @@ on relation in the presence of long-ranged dissipative forces that are the
  only source of coupling of, otherwise, independent degrees of freedom.
  Surprisingly, we identify a resonance in the response in a system which
  is overdamped and suggest its use in accurate two-point microrheology.
- The present experiment can be extended in several directions:measurements
+ The present experiment can be extended in several directions: measurements
  at higher frequencies can uncover the effects of retarded hydrodynamic
  interactions and the role of particle inertia while holographic traps can
  be used to test the fluctuation-dissipation relation in the presence of
