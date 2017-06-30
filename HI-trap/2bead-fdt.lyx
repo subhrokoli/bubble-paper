@@ -253,9 +253,29 @@ key "kubo1966fluctuation"
 \end_inset
 
 .
- The fluctuation-dissipation relation is the point of departure for several
- areas of current research including fluctuation relations, relaxation in
- glasses, and response and correlations in active and driven systems 
+ TThe fluctuation-dissipation relation is the point of departure for several
+ areas of current research including fluctuation relations 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "seifert2012stochastic"
+
+\end_inset
+
+, relaxation in glasses 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "berthier2011theoretical"
+
+\end_inset
+
+, and response and correlations in active 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "fodor2016far"
+
+\end_inset
+
+ and driven systems 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "mason95,levine2000"

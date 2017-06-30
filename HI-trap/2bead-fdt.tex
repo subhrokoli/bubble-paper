@@ -1,4 +1,4 @@
-%% LyX 2.2.2 created this file.  For more info, see http://www.lyx.org/.
+%% LyX 2.2.0 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
 \documentclass[twocolumn,english,prl, amsmath,amssymb,aps,superscriptaddress]{revtex4-1}
 \usepackage[latin9]{inputenc}
@@ -75,6 +75,7 @@ Chennai 600113, India}
 \author{R. Adhikari}
 \email{rjoy@imsc.res.in}
 
+\selectlanguage{english}%
 
 \affiliation{The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani,
 Chennai 600113, India}
@@ -85,6 +86,7 @@ Wilberforce Road, Cambridge CB3 0WA, UK}
 \author{Ayan Banerjee}
 \email{ayan@iiserkol.ac.in}
 
+\selectlanguage{english}%
 
 \affiliation{Indian Institute of Science Education and Research, Kolkata}
 
@@ -115,10 +117,11 @@ is a central result in non-equilibrium statistical physics. The relation
 can be used to infer the intrinsic fluctuations of a system from measurements
 of its response to external perturbations or, perhaps more startlingly,
 to predict its response to external perturbations from the character
-of its intrinsic fluctuations \cite{kubo1966fluctuation}. The fluctuation-dissipation
+of its intrinsic fluctuations \cite{kubo1966fluctuation}. TThe fluctuation-dissipation
 relation is the point of departure for several areas of current research
-including fluctuation relations, relaxation in glasses, and response
-and correlations in active and driven systems \cite{mason95,levine2000}. 
+including fluctuation relations \cite{seifert2012stochastic}, relaxation
+in glasses \cite{berthier2011theoretical}, and response and correlations
+in active \cite{fodor2016far} and driven systems \cite{mason95,levine2000}. 
 
 The first experimental\emph{ }verification of the relation between
 fluctuation and dissipation was due to Johnson \cite{johnson1928thermal},
@@ -415,20 +418,259 @@ optical tweezers. Our results provide a confirmation of the validity
 of the fluctuation-dissipation relation in the presence of long-ranged
 dissipative forces that are the only source of coupling of, otherwise,
 independent degrees of freedom. Surprisingly, we identify a resonance
-in the response in system which is overdamped and suggest its use
+in the response in a system which is overdamped and suggest its use
 in accurate two-point microrheology. The present experiment can be
-extended in several directions: holographic traps can be used to test
-the fluctuation-dissipation relation in the presence of many-body
-hydrodynamic interactions, measurements at higher frequencies can
-uncover the effects of retarded hydrodynamic interactions and the
-role of particle inertia. Some of these will be presented in forthcoming
+extended in several directions:measurements at higher frequencies
+can uncover the effects of retarded hydrodynamic interactions and
+the role of particle inertia while holographic traps can be used to
+test the fluctuation-dissipation relation in the presence of many-body
+hydrodynamic interactions.  Some of these will be presented in forthcoming
 work. 
 
 This work was supported by the Indian Institute of Science Education
 and Research, Kolkata, an autonomous research and teaching institute
 funded by the Ministry of Human Resource Development, Govt. of India.
+We acknowledge computing resources on the Annapurna cluster provided
+by The Institute of Mathematical Sciences. 
 
-\bibliographystyle{apsrev4-1}
-\bibliography{2bead-fdt}
+\begin{thebibliography}{25}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{http://dx.doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Nyquist}(1928)}]{nyquist1928thermal}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Nyquist}},\ }\href {\doibase 10.1103/PhysRev.32.110} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev.}\ }\textbf {\bibinfo {volume} {32}},\
+  \bibinfo {pages} {110} (\bibinfo {year} {1928})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Callen}\ and\ \citenamefont
+  {Welton}(1951)}]{callen1951}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.~B.}\ \bibnamefont
+  {Callen}}\ and\ \bibinfo {author} {\bibfnamefont {T.~A.}\ \bibnamefont
+  {Welton}},\ }\href {\doibase 10.1103/PhysRev.83.34} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev.}\ }\textbf {\bibinfo {volume} {83}},\
+  \bibinfo {pages} {34} (\bibinfo {year} {1951})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kubo}(1966)}]{kubo1966fluctuation}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Kubo}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Rep.
+  Prog. Phys.}\ }\textbf {\bibinfo {volume} {29}},\ \bibinfo {pages} {255}
+  (\bibinfo {year} {1966})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mason}\ and\ \citenamefont {Weitz}(1995)}]{mason95}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.~G.}\ \bibnamefont
+  {Mason}}\ and\ \bibinfo {author} {\bibfnamefont {D.~A.}\ \bibnamefont
+  {Weitz}},\ }\href {\doibase 10.1103/PhysRevLett.74.1250} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo
+  {volume} {74}},\ \bibinfo {pages} {1250} (\bibinfo {year}
+  {1995})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Levine}\ and\ \citenamefont
+  {Lubensky}(2000)}]{levine2000}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~J.}\ \bibnamefont
+  {Levine}}\ and\ \bibinfo {author} {\bibfnamefont {T.~C.}\ \bibnamefont
+  {Lubensky}},\ }\href {\doibase 10.1103/PhysRevLett.85.1774} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo
+  {volume} {85}},\ \bibinfo {pages} {1774} (\bibinfo {year}
+  {2000})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Johnson}(1928)}]{johnson1928thermal}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~B.}\ \bibnamefont
+  {Johnson}},\ }\href {\doibase 10.1103/PhysRev.32.97} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev.}\ }\textbf {\bibinfo {volume} {32}},\
+  \bibinfo {pages} {97} (\bibinfo {year} {1928})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Derjaguin}\ and\ \citenamefont
+  {Landau}(1941)}]{derjaguin1941theory}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.~V.}\ \bibnamefont
+  {Derjaguin}}\ and\ \bibinfo {author} {\bibfnamefont {L.~D.}\ \bibnamefont
+  {Landau}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Acta
+  Physicochim. USSR}\ }\textbf {\bibinfo {volume} {14}},\ \bibinfo {pages}
+  {633} (\bibinfo {year} {1941})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Verwey}\ and\ \citenamefont
+  {Overbeek}(1948)}]{verwey1948}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.~J.~W.}\
+  \bibnamefont {Verwey}}\ and\ \bibinfo {author} {\bibfnamefont {J.~T.~G.}\
+  \bibnamefont {Overbeek}},\ }\href@noop {} {\emph {\bibinfo {title} {Theory of
+  the stability of lyophobic colloids}}}\ (\bibinfo  {publisher} {Elsevier,
+  Amsterdam},\ \bibinfo {year} {1948})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Stilgoe}\ \emph {et~al.}(2011)\citenamefont
+  {Stilgoe}, \citenamefont {Heckenberg}, \citenamefont {Nieminen},\ and\
+  \citenamefont {Rubinsztein-Dunlop}}]{Stilgoe11}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~B.}\ \bibnamefont
+  {Stilgoe}}, \bibinfo {author} {\bibfnamefont {N.~R.}\ \bibnamefont
+  {Heckenberg}}, \bibinfo {author} {\bibfnamefont {T.~A.}\ \bibnamefont
+  {Nieminen}}, \ and\ \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Rubinsztein-Dunlop}},\ }\href {\doibase 10.1103/PhysRevLett.107.248101}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf
+  {\bibinfo {volume} {107}},\ \bibinfo {pages} {248101} (\bibinfo {year}
+  {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Berg-S{\o}rensen}\ and\ \citenamefont
+  {Flyvbjerg}(2004)}]{berg2004power}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Berg-S{\o}rensen}}\ and\ \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Flyvbjerg}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Review of Scientific Instruments}\ }\textbf {\bibinfo {volume} {75}},\
+  \bibinfo {pages} {594} (\bibinfo {year} {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Meiners}\ and\ \citenamefont
+  {Quake}(1999)}]{Meiners99}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.-C.}\ \bibnamefont
+  {Meiners}}\ and\ \bibinfo {author} {\bibfnamefont {S.~R.}\ \bibnamefont
+  {Quake}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Physical Review Letters}\ }\textbf {\bibinfo {volume} {82}},\ \bibinfo
+  {pages} {2211} (\bibinfo {year} {1999})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gardiner}(1985)}]{gardiner1985handbook}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~W.}\ \bibnamefont
+  {Gardiner}},\ }\href@noop {} {\emph {\bibinfo {title} {Handbook of stochastic
+  methods}}},\ Vol.~\bibinfo {volume} {3}\ (\bibinfo  {publisher} {Springer
+  Berlin},\ \bibinfo {year} {1985})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ladd}(1988)}]{ladd1988}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~J.~C.}\
+  \bibnamefont {Ladd}},\ }\href {\doibase 10.1063/1.454658} {\bibfield
+  {journal} {\bibinfo  {journal} {J. Chem. Phys.}\ }\textbf {\bibinfo {volume}
+  {88}},\ \bibinfo {pages} {5051} (\bibinfo {year} {1988})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Mazur}\ and\ \citenamefont
+  {Saarloos}(1982)}]{mazur1982}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Mazur}}\ and\ \bibinfo {author} {\bibfnamefont {W.~v.}\ \bibnamefont
+  {Saarloos}},\ }\href {\doibase 10.1016/0378-4371(82)90127-3} {\bibfield
+  {journal} {\bibinfo  {journal} {Physica A: Stat. Mech. Appl.}\ }\textbf
+  {\bibinfo {volume} {115}},\ \bibinfo {pages} {21} (\bibinfo {year}
+  {1982})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Cichocki}\ \emph {et~al.}(1994)\citenamefont
+  {Cichocki}, \citenamefont {Felderhof}, \citenamefont {Hinsen}, \citenamefont
+  {Wajnryb},\ and\ \citenamefont {Blawzdziewicz}}]{cichocki1994friction}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Cichocki}}, \bibinfo {author} {\bibfnamefont {B.~U.}\ \bibnamefont
+  {Felderhof}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Hinsen}},
+  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Wajnryb}}, \ and\
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Blawzdziewicz}},\ }\href
+  {\doibase 10.1063/1.466366} {\bibfield  {journal} {\bibinfo  {journal} {J.
+  Chem. Phys.}\ }\textbf {\bibinfo {volume} {100}},\ \bibinfo {pages} {3780}
+  (\bibinfo {year} {1994})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Singh}\ and\ \citenamefont
+  {Adhikari}(2016{\natexlab{a}})}]{singh2016crystallization}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Singh}}\ and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Adhikari}},\ }\href {\doibase 10.1103/PhysRevLett.117.228002} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo
+  {volume} {117}},\ \bibinfo {pages} {228002} (\bibinfo {year}
+  {2016}{\natexlab{a}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Singh}\ and\ \citenamefont
+  {Adhikari}(2016{\natexlab{b}})}]{singh2016traction}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Singh}}\ and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Adhikari}},\ }\href {http://arxiv.org/abs/1603.05735} {\bibfield  {journal}
+  {\bibinfo  {journal} {arXiv:1603.05735}\ } (\bibinfo {year}
+  {2016}{\natexlab{b}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Pozrikidis}(1992)}]{pozrikidis1992}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Pozrikidis}},\ }\href@noop {} {\emph {\bibinfo {title} {Boundary Integral
+  and Singularity Methods for Linearized Viscous Flow}}}\ (\bibinfo
+  {publisher} {Cambridge University Press},\ \bibinfo {year}
+  {1992})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kim}\ and\ \citenamefont {Karrila}(1992)}]{kim2005}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Kim}}\ and\ \bibinfo {author} {\bibfnamefont {S.~J.}\ \bibnamefont
+  {Karrila}},\ }\href@noop {} {\emph {\bibinfo {title} {Microhydrodynamics:
+  Principles and Selected Applications}}}\ (\bibinfo  {publisher}
+  {Butterworth-Heinemann},\ \bibinfo {year} {1992})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gardiner}(1984)}]{gardiner1984adiabatic}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~W.}\ \bibnamefont
+  {Gardiner}},\ }\href {\doibase 10.1103/PhysRevA.29.2814} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume}
+  {29}},\ \bibinfo {pages} {2814} (\bibinfo {year} {1984})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {van Kampen}(1981)}]{van1981ito}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.~G.}\ \bibnamefont
+  {van Kampen}},\ }\href {\doibase 10.1007/BF01007642} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Stat. Phys.}\ }\textbf {\bibinfo {volume} {24}},\
+  \bibinfo {pages} {175} (\bibinfo {year} {1981})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {van Kampen}(1992)}]{van1992stochastic}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.~G.}\ \bibnamefont
+  {van Kampen}},\ }\href@noop {} {\emph {\bibinfo {title} {Stochastic processes
+  in physics and chemistry}}},\ Vol.~\bibinfo {volume} {1}\ (\bibinfo
+  {publisher} {Elsevier},\ \bibinfo {year} {1992})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Klimontovich}(1990)}]{klimontovich1990ito}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.~L.}\ \bibnamefont
+  {Klimontovich}},\ }\href {\doibase 10.1016/0378-4371(90)90142-F} {\bibfield
+  {journal} {\bibinfo  {journal} {Physica A: Stat. Mech. Appl.}\ }\textbf
+  {\bibinfo {volume} {163}},\ \bibinfo {pages} {515} (\bibinfo {year}
+  {1990})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Klimontovich}(1994)}]{klimontovich1994nonlinear}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.~L.}\ \bibnamefont
+  {Klimontovich}},\ }\href {\doibase 10.1070/PU1994v037n08ABEH000038}
+  {\bibfield  {journal} {\bibinfo  {journal} {Physics-Uspekhi}\ }\textbf
+  {\bibinfo {volume} {37}},\ \bibinfo {pages} {737} (\bibinfo {year}
+  {1994})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Chaikin}\ and\ \citenamefont
+  {Lubensky}(2000)}]{chaikin2000principles}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~M.}\ \bibnamefont
+  {Chaikin}}\ and\ \bibinfo {author} {\bibfnamefont {T.~C.}\ \bibnamefont
+  {Lubensky}},\ }\href@noop {} {\emph {\bibinfo {title} {Principles of
+  condensed matter physics}}},\ Vol.~\bibinfo {volume} {1}\ (\bibinfo
+  {publisher} {Cambridge Univ Press},\ \bibinfo {year} {2000})\BibitemShut
+  {NoStop}%
+\end{thebibliography}%
 
 \end{document}
