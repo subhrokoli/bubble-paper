@@ -132,7 +132,7 @@ Abhrajit Laskar
 \end_layout
 
 \begin_layout Affiliation
-The Institute of Mathematical Sciences-HBNI, CIT Campus, Tarmani, Chennai
+The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
  600113, India
 \end_layout
 
@@ -141,7 +141,7 @@ Rajesh Singh
 \end_layout
 
 \begin_layout Affiliation
-The Institute of Mathematical Sciences-HBNI, CIT Campus, Tarmani, Chennai
+The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
  600113, India
 \end_layout
 
@@ -160,11 +160,12 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
 \begin_layout Affiliation
-The Institute of Mathematical Sciences-HBNI, CIT Campus, Tarmani, Chennai
+The Institute of Mathematical Sciences-HBNI, CIT Campus, Taramani, Chennai
  600113, India
 \end_layout
 
@@ -178,6 +179,7 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -224,8 +226,22 @@ Valid PACS appear here
 \begin_layout Standard
 The relation between the generalized susceptibility and equilibrium fluctuations
  of the generalized forces, first obtained for a linear resistive circuit
- by Nyquist and then proved for any general linear dissipative system by
- Callen and Welton, is a central result in non-equilibrium statistical physics.
+ by Nyquist 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "nyquist1928thermal"
+
+\end_inset
+
+ and then proved for any general linear dissipative system by Callen and
+ Welton 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "callen1951"
+
+\end_inset
+
+, is a central result in non-equilibrium statistical physics.
  The relation can be used to infer the intrinsic fluctuations of a system
  from measurements of its response to external perturbations or, perhaps
  more startlingly, to predict its response to external perturbations from
@@ -256,7 +272,14 @@ The first experimental
  
 \emph default
 verification of the relation between fluctuation and dissipation was due
- to Johnson, whose investigation of the 
+ to Johnson 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "johnson1928thermal"
+
+\end_inset
+
+, whose investigation of the 
 \begin_inset Quotes eld
 \end_inset
 
@@ -264,7 +287,14 @@ thermal agitation of electricity in conductors
 \begin_inset Quotes erd
 \end_inset
 
- provided the motivation for Nyquist's theoretical work.
+ provided the motivation for Nyquist's theoretical work 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "nyquist1928thermal"
+
+\end_inset
+
+.
  Though the relation has been verified since in systems with conservative
  couplings, a direct verification in a system where the coupling is entirely
  dissipative is, to the best of our knowledge, not available.
@@ -272,7 +302,14 @@ thermal agitation of electricity in conductors
  many-body hydrodynamic forces whose strength, away from boundaries, is
  inversely proportional to the distance between the particles.
  The range of these dissipative forces can be made much greater than that
- of conservative forces such as the DLVO interaction.
+ of conservative forces such as the DLVO interaction 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "derjaguin1941theory,verwey1948"
+
+\end_inset
+
+.
  Therefore, it is possible to engineer a situation where the dominant coupling
  between colloidal particles is the viscous hydrodynamic force and all other
  interactions are negligibly small.
@@ -704,15 +741,15 @@ e forces mediated by the fluid,
 
 \begin_layout Standard
 In the limit of slow viscous flow in the fluid, the friction tensors can
- be calculated from the Stokes equation using a variety of methods.
- To leading order the result is 
+ be calculated from the Stokes equation using a variety of methods 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "brenner1964stokes,singh2016crystallization,singh2016traction"
+key "ladd1988,mazur1982,cichocki1994friction,singh2016crystallization,singh2016traction"
 
 \end_inset
 
-
+.
+ To leading order the result is 
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{\gamma}_{ij}=\delta_{ij}\boldsymbol{I}\gamma_{i}-(1-\delta_{ij})\gamma_{i}\gamma_{j}\mathcal{F}_{i}\mathcal{F}_{j}\boldsymbol{G}(\boldsymbol{r}_{i},\boldsymbol{r}_{j})
@@ -743,7 +780,7 @@ key "pozrikidis1992"
 \begin_inset Formula $\mathcal{F}_{i}=1+\frac{a_{i}^{2}}{6}\nabla_{i}^{2}$
 \end_inset
 
- are the Faxen corrections that account for the finite radius, 
+ are the Faxén corrections that account for the finite radius, 
 \begin_inset Formula $a_{i}$
 \end_inset
 
@@ -772,7 +809,14 @@ key "singh2016crystallization,singh2016traction"
 \begin_inset Formula $\tau_{\nu}=\rho L^{2}/\eta$
 \end_inset
 
- is the vorticity diffusion time scale.
+ is the vorticity diffusion time scale 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "kim2005"
+
+\end_inset
+
+.
  
 \end_layout
 
