@@ -92,42 +92,38 @@ We would like to submit our paper
 \begin_inset Quotes eld
 \end_inset
 
-Direct verification of the fluctuation-response relation in viscously coupled
- oscillators
+Direct verification of the fluctuation-dissipation relation in viscously
+ coupled oscillators
 \begin_inset Quotes erd
 \end_inset
 
- for consideration towards publication in your journal.
+ for publication in Physical Review Letters.
  In this paper, we provide a direct experimental verification of the fluctuation
--response relation in a system of two hydrodynamically coupled colloidal
+-dissipation relation in a system of two hydrodynamically coupled colloidal
  particles trapped in separate optical tweezers in a viscous medium (water).
- In addition, the dynamics of this system under varying experimental conditions
- also reveals an interesting and somewhat unexpected phenomena in the context
- of optical tweezers - the observation of a motional resonance in a trapped
- particle under the influence of an external drive.
+ In addition, we identify a resonance in the response function, which is
+ a surprise given the overdamped nature of the dynamics.
+ 
 \end_layout
 
 \begin_layout Standard
-The fluctuation-response relation is a pillar in non-equilibrium statistical
- mechanics which essentially relates the random motion or intrinsic fluctuations
- of colloidal particles in thermodynamic equilibrium to their more systematic
- (linear) response to forces applied externally.
+The fluctuation-response relation is a pillar iof non-equilibrium statistical
+ physics, relating the intrinsic fluctuations in thermal equilibrium to
+ the systematic (linear) response to forces applied externally.
  The theorem has been widely used in microrheology applications to determine
  the characteristics of simple as well as complex, viscoelastic fluids.
- However, most research conducted in non-equilibrium statistical mechanics
- tacitly assume the validity of the fluctuation-response theorem, and there
- exist few direct experimental verifications of the theorem, especially
+ However, most research conducted in non-equilibrium statistical physics
+ tacitly assumes the validity of the fluctuation-dissipation relation, and
+ there exist few direct experimental verifications of the result, especially
  in systems composed of multiple Brownian particles that, additionally,
  are coupled hydrodynamically.
- In this work, we use optical tweezers to trap two colloidal particles in
+ 
+\end_layout
+
+\begin_layout Standard
+In this work, we use optical tweezers to trap two colloidal particles in
  separate traps in a viscous medium, and experimentally demonstrate that
- fluctuation-response holds in this system.
- Note that since the particles are now hydrodynamically coupled, the thermodynam
-ic equilibrium of the individual particles are disturbed, which essentially
- results in a departure from the single particle fluctuation-response result.
- However, the coupled system treated as a whole is in thermodynamic equilibrium,
- and we explicitly demonstrate by careful experiments that fluctuation-response
- is valid in this system.
+ fluctuation-dissipation relation holds.
  In addition, we observe that when one of the trapped particles is driven
  sinusoidally, the other displays an amplitude resonance at a particular
  drive frequency.
@@ -152,19 +148,14 @@ ic equilibrium of the individual particles are disturbed, which essentially
 \end_layout
 
 \begin_layout Standard
-Finally, we believe that the content of this work - a study of basic physics
- which leads to a useful application - is quite well-tuned to the demands
- and standards of work reported in PRL.
- The fluctuation-response relation is a fundamental result in physics -
- yet direct experimental verifications of the theorem are rare if not virtually
- absent, as is the observation of a motional resonance in an overdamped
- system.
- The application of the resonance in microrheology may also lead to further
- research in this area by increasing number of particles or extending the
- problem to viscoelastic media.
- The content of this work should thus be interesting to a wide range of
- physicists, so that we hope that you would consider the paper suitable
- for consideration in PRL, and commence the review process shortly.
+We believe that this direct verification of the fluctuation-dissipation
+ relation will be of interest to the entire readership of the journal, while
+ the more specific aspects of the resonance and its use in microrheology
+ will attract the attention of readers working in soft matter physics and
+ fluid mechanics.
+ We hope you will seek a peer review to determine the suitability of this
+ manuscript for publication in Physical Review Letters.
+ 
 \end_layout
 
 \begin_layout Standard
