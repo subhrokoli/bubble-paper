@@ -160,7 +160,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -179,7 +178,6 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -749,7 +747,7 @@ key "ladd1988,mazur1982,cichocki1994friction,singh2016crystallization,singh2016t
 \end_inset
 
 .
- To leading order the result is 
+ To leading order the result is
 \begin_inset Formula 
 \begin{equation}
 \boldsymbol{\gamma}_{ij}=\delta_{ij}\boldsymbol{I}\gamma_{i}-(1-\delta_{ij})\gamma_{i}\gamma_{j}\mathcal{F}_{i}\mathcal{F}_{j}\boldsymbol{G}(\boldsymbol{r}_{i},\boldsymbol{r}_{j})
@@ -945,11 +943,11 @@ A simple analysis of the system with the two particles executing Brownian
 \begin_inset Formula $\chi_{ij}^{\prime\prime}$
 \end_inset
 
--, we have 
+, we have 
 \begin_inset Formula $C_{ij}=(k_{B}T/\pi f)\chi_{ij}^{\prime\prime}$
 \end_inset
 
-- which is the well known fluctuation-response relationship 
+ which is the well known fluctuation-response relationship 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "chaikin2000principles"
