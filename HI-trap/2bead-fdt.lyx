@@ -360,7 +360,7 @@ In this Letter, we present a direct verification of the fluctuation-dissipation
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -378,7 +378,7 @@ centering
  
 \begin_inset Graphics
 	filename fig1.pdf
-	width 35text%
+	width 45text%
 
 \end_inset
 
@@ -543,7 +543,7 @@ centering
  
 \begin_inset Graphics
 	filename fig2.pdf
-	scale 50
+	scale 60
 
 \end_inset
 
@@ -1085,9 +1085,9 @@ reference "response"
  frequency, so that there is maximum energy transfer between the driving
  and the driven beads.
  The amplitude of the resonance is also linearly dependent on the particle
- separation, and falls off as the latter is increased, so that in our current
- detection sensitivity, we do not observe the resonance effects beyond a
- surface-surface separation greater than 
+ separation, and falls off as the latter is increased, so that with our
+ current detection sensitivity, we do not observe the resonance effects
+ beyond a surface-surface separation greater than 
 \begin_inset Formula $3a$
 \end_inset
 
@@ -1098,10 +1098,10 @@ reference "response"
 \begin_inset Formula $\mathit{Q}$
 \end_inset
 
- factor) is dependent on the stiffness ratio, and increases as the latter
- is reduced.
+ factor) is also dependent on the stiffness ratio, and increases as the
+ latter is reduced.
  For a given medium, the resonance can thus be tuned by changing the stiffness
- ratios.
+ ratios (as well as the inter-particle separation and particle diameters).
  Interestingly, it is obvious that the value of the 
 \begin_inset Formula $\mathit{Q}$
 \end_inset
