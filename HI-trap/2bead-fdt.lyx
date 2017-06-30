@@ -228,7 +228,7 @@ The relation between the generalized susceptibility and equilibrium fluctuations
  Callen and Welton, is a central result in non-equilibrium statistical physics.
  The relation can be used to infer the intrinsic fluctuations of a system
  from measurements of its response to external perturbations or, perhaps
- more startingly, to predict its response to external perturbations from
+ more startlingly, to predict its response to external perturbations from
  the character of its intrinsic fluctuations 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1073,8 +1073,8 @@ on relation in the presence of long-ranged dissipative forces that are the
  The present experiment can be extended in several directions: holographic
  traps can be used to test the fluctuation-dissipation relation in the presence
  of many-body hydrodynamic interactions, measurements at higher frequencies
- can be uncover the effects of retarded hydrodynamic interactions and the
- role of particle inertia.
+ can uncover the effects of retarded hydrodynamic interactions and the role
+ of particle inertia.
  Some of these will be presented in forthcoming work.
  
 \end_layout
