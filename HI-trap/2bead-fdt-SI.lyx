@@ -160,6 +160,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -178,6 +179,7 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -205,76 +207,8 @@ today
 Supplementary information
 \end_layout
 
-\begin_layout Standard
- 
-\end_layout
-
-\begin_layout Subsection
+\begin_layout Section
 Experiment
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Graphics
-	filename fig1si.pdf
-	width 45text%
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-A detailed schematic of the setup is shown.
- Key:
-\begin_inset Formula $\frac{\lambda}{2}$
-\end_inset
-
-: half-wave plate, L: lens, M: mirror, AOM: accousto optical modulator,
- PBS: polarising beam splitter, DC: dicroic mirror respectively, E: edge
- mirror, P: polariser, PA, PB: photodiodes.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "Setup"
-
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -320,8 +254,8 @@ reference "Setup"
  PBS2 and coupled into PBS3.
  We then use a dichroic (DC1) to overlap the two pairs of trapping and detection
  beams into the optical tweezers microscope (Zeiss Axiovert.A1).
- two trapped beads are imaged and their displacements measured by back-focal-
- plane-interferometry, while the white light for imaging and the detection
+ The two trapped beads are imaged and their displacements measured by back-focal
+- plane-interferometry, while the white light for imaging and the detection
  laser beams are separated by dichroics DC2 and DC3, respectively.
  A very low volume fraction sample (
 \begin_inset Formula $\phi\approx0.01$
@@ -410,6 +344,70 @@ centering
 
  
 \begin_inset Graphics
+	filename fig1si.pdf
+	width 45text%
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A detailed schematic of the setup is shown.
+ Key:
+\begin_inset Formula $\frac{\lambda}{2}$
+\end_inset
+
+: half-wave plate, L: lens, M: mirror, AOM: accousto optical modulator,
+ PBS: polarising beam splitter, DC: dicroic mirror respectively, E: edge
+ mirror, P: polariser, PA, PB: photodiodes.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "Setup"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
 	filename fig2si.pdf
 	width 45text%
 
@@ -445,7 +443,7 @@ name "hist"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -528,8 +526,13 @@ reference "psd"
  Each PSD is obtained by data blocking 100 points in the manner described
  in Ref.
  
-\backslash
-cite{flyvbjerg}.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "berg2004power"
+
+\end_inset
+
+.
  The Lorentzian fits to the data are good, and we obtain corner frequencies
  
 \begin_inset Formula $\mathit{f_{c1}}=$
@@ -543,11 +546,19 @@ cite{flyvbjerg}.
 \begin_inset Formula $\mathit{k_{1}=}$
 \end_inset
 
-69.2 Hz and 
+69.2 
+\begin_inset Formula $\mu N/m$
+\end_inset
+
+ and 
 \begin_inset Formula $\mathit{k_{2}}$
 \end_inset
 
-= 4.8 Hz, respectively.
+= 4.8 
+\begin_inset Formula $\mu N/m$
+\end_inset
+
+, respectively.
  For the two particle correlation experiments, as a consistency check, we
  determine the position cross-correlation function in time domain for B1
  and B2 as shown in Fig.
@@ -654,38 +665,6 @@ name "fig5si"
 \begin_layout Plain Layout
 Amplitude (a) and phase (b) response of driving particle B1 as a function
  of drive frequency.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename fig4si.pdf
-	scale 30
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Position cross-correlation in time domain.
- The filled red squares are experimentally measured points, while the solid
- line is the theoretically calculated cross-correlation.
 \end_layout
 
 \end_inset

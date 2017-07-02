@@ -160,6 +160,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -178,6 +179,7 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -218,7 +220,7 @@ The fluctuation-dissipation relation, a central result in non-equilibrium
 \end_layout
 
 \begin_layout PACS
-Valid PACS appear here
+83.10.Mj, 87.80.Cc, 83.10.Pp, 83.85.Vb
 \end_layout
 
 \begin_layout Standard
@@ -948,7 +950,7 @@ resonance
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\omega_{res}=\sqrt{\text{det}A}=\sqrt{\mu_{11}^{\parallel}\mu_{22}^{\parallel}k_{1}k_{2}\left(1-\frac{\mu_{12}^{\parallel}\mu_{21}^{\parallel}}{\mu_{11}^{\parallel}\mu_{22}^{\parallel}}\right)}.
+\omega_{res}=\sqrt{\text{det}A}=\sqrt{\mu_{11}^{\parallel}\mu_{22}^{\parallel}k_{1}k_{2}\left(1-\frac{\mu_{12}^{\parallel}\mu_{21}^{\parallel}}{\mu_{11}^{\parallel}\mu_{22}^{\parallel}}\right)}.\label{eq4}
 \end{equation}
 
 \end_inset
@@ -1066,7 +1068,16 @@ reference "response"
  and gradually lagging behind as the frequency is increased.
  However, the amplitude response of B2 is rather interesting, and shows
  a clear resonance response at a certain frequency, the value of which increases
- as the stiffness ratio of the traps is increased.
+ as the stiffness ratio of the traps is increased - it being dependent on
+ the product of the stiffnesses as is clear from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq4"
+
+\end_inset
+
+ .
  Thus, we have a resonance frequency of around 111 Hz (blue solid spheres
  in Fig.
 \begin_inset CommandInset ref
@@ -1079,21 +1090,22 @@ reference "response"
 \begin_inset Formula $\mathit{k_{1}:k_{2}}=$
 \end_inset
 
-14.5, a frequency of around 33 Hz with a ratio of 5.7:1 (red solid spheres),
+14.5:1, a frequency of around 33 Hz with a ratio of 5.7:1 (red solid spheres),
  and a frequency of around 20 Hz with a ratio of 2.5:1 (black solid spheres).
  In fact, it is as if the entrained fluid has minimum impedance around this
  frequency, so that there is maximum energy transfer between the driving
  and the driven beads.
- The amplitude of the resonance is also linearly dependent on the particle
- separation, and falls off as the latter is increased, so that with our
- current detection sensitivity, we do not observe the resonance effects
- beyond a surface-surface separation greater than 
+ The amplitude of the resonance has an inverse dependence on the particle
+ separation, so that with our current detection sensitivity, we do not observe
+ the resonance effects beyond a surface-surface separation greater than
+ 
 \begin_inset Formula $3a$
 \end_inset
 
- - this increased distance also being smaller than that used in earlier
- experiments, which possibly explains the fact that this phenomenon has
- not been reported earlier.
+ .
+ However, even this increased distance is also smaller than that used in
+ earlier experiments, which possibly explains the fact that this phenomenon
+ has not been reported earlier.
  The width of the resonance (
 \begin_inset Formula $\mathit{Q}$
 \end_inset
