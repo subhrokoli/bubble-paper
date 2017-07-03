@@ -160,7 +160,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -179,7 +178,6 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -972,7 +970,7 @@ A simple analysis of the system with the two particles executing Brownian
  which is the well known fluctuation-response relationship 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "chaikin2000principles"
+key "kubo1966fluctuation"
 
 \end_inset
 
@@ -983,7 +981,7 @@ key "chaikin2000principles"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -1086,7 +1084,7 @@ reference "response"
 
 \end_inset
 
-(c)) with 
+(a)) with 
 \begin_inset Formula $\mathit{k_{1}:k_{2}}=$
 \end_inset
 
@@ -1129,7 +1127,7 @@ reference "response"
 
 \end_inset
 
-(e) is easily explained: B2 lags 90 degrees in phase with respect to the
+(b) is easily explained: B2 lags 90 degrees in phase with respect to the
  drive at very low frequencies with the lag reducing until the drive and
  driven are in phase at resonance, after which the driven bead leads in
  phase, and asymptotically approaches 90 degrees at high frequencies.

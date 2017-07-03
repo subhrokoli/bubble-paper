@@ -131,7 +131,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -150,7 +149,6 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -494,7 +492,7 @@ key "Stilgoe11"
 \begin_inset Float figure
 wide true
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -512,7 +510,7 @@ centering
  
 \begin_inset Graphics
 	filename fig2.pdf
-	width 99text%
+	width 96text%
 
 \end_inset
 
@@ -521,7 +519,7 @@ centering
 
 \begin_layout Plain Layout
 Verification of the fluctuation-response relation 
-\begin_inset Formula $C_{ij}=(k_{B}T/\pi f)\chi_{ij}^{\prime\prime}$
+\begin_inset Formula $C_{ij}=(k_{B}T/\pi f)\,\text{Im}(\chi_{ij}^{\parallel})$
 \end_inset
 
  for a pair of viscously coupled colloidal particles in optical traps.
@@ -931,11 +929,11 @@ A simple analysis of the system with the two particles executing Brownian
 \end_inset
 
 ), so that by comparing with the response functions 
-\begin_inset Formula $\chi_{ij}^{\prime\prime}$
+\begin_inset Formula $\text{Im}(\chi_{ij}^{\parallel})$
 \end_inset
 
 , we have 
-\begin_inset Formula $C_{ij}=(k_{B}T/\pi f)\chi_{ij}^{\prime\prime}$
+\begin_inset Formula $C_{ij}=(k_{B}T/\pi f)\,\text{Im}(\chi_{ij}^{\parallel})$
 \end_inset
 
  which is the well known fluctuation-response relationship 
@@ -967,7 +965,7 @@ centering
  
 \begin_inset Graphics
 	filename fig3.pdf
-	width 45text%
+	width 48text%
 
 \end_inset
 
@@ -983,8 +981,8 @@ Amplitude and phase response for driven (B2) bead for different trap stiffness
 .
  (a) and (b) demonstrate amplitude and phase responses (with respect to
  driving frequency) of B2, for trap stiffness ratios of 2.5:1 (black), 5.7:1
- (red), and 14.5:1 (blue) for (c) and (e).
- The resonance frequency in (c) is 20 Hz (black), 35 Hz (red), and 111 Hz
+ (red), and 14.5:1 (blue).
+ The resonance frequency in (a) is 20 Hz (black), 35 Hz (red), and 111 Hz
  (blue).
  The solid spheres denote experimental data points while the solid lines
  are corresponding theoretical fits.
@@ -1005,19 +1003,19 @@ name "response"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-This is indeed what we validate in Fig.
+ This is indeed what we validate in Fig.
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "response"
+reference "fdt"
 
 \end_inset
 
 (a)-(c).
- We now focus on a particularly interesting facet of our problem, namely
+ 
+\end_layout
+
+\begin_layout Standard
+We now focus on a particularly interesting facet of our problem, namely
  the amplitude and phase response of B2 under the influence of the driven
  particle B1.
  We study this experimentally for three different trap stiffness ratios
@@ -1054,7 +1052,7 @@ reference "response"
 
 \end_inset
 
-(c)) with 
+(a)) with 
 \begin_inset Formula $\mathit{k_{1}:k_{2}}=$
 \end_inset
 
@@ -1097,7 +1095,7 @@ reference "response"
 
 \end_inset
 
-(e) is easily explained: B2 lags 90 degrees in phase with respect to the
+(b) is easily explained: B2 lags 90 degrees in phase with respect to the
  drive at very low frequencies with the lag reducing until the drive and
  driven are in phase at resonance, after which the driven bead leads in
  phase, and asymptotically approaches 90 degrees at high frequencies.
