@@ -595,7 +595,7 @@ reference "fdt"
 
 \end_inset
 
- .
+.
  It is understandable that while the fluctuation-response theorem is in
  the form a simple equation for a single particle, for two particles the
  equations would be represented in the form of a matrix, which we discuss
@@ -1043,7 +1043,7 @@ reference "eq4"
 
 \end_inset
 
- .
+.
  Thus, we have a resonance frequency of around 111 Hz (blue solid spheres
  in Fig.
 \begin_inset CommandInset ref
