@@ -131,7 +131,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -150,7 +149,6 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
-
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -1506,7 +1504,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename fig3si.pdf
-	scale 40
+	width 46text%
 
 \end_inset
 
@@ -1555,12 +1553,12 @@ name "fig:SI-3"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename fig4si.pdf
-	scale 30
+	width 30text%
 
 \end_inset
 
@@ -1594,12 +1592,12 @@ name "fig:SI-4"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename fig5si.pdf
-	scale 40
+	width 46text%
 
 \end_inset
 
