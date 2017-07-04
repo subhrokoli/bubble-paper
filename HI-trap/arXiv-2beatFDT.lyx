@@ -385,8 +385,8 @@ name "Setup"
 \shape italic
 Experiment:
 \shape default
- The details of the experimental setup towards validation of the fluctuation
- response theorem are provided in Supplementary Information - here we provide
+ The details of the experimental setup towards validation of the fluctuation-dis
+sipation theorem are provided in Supplementary Information - here we provide
  a brief description.
  Thus, we set up a dual-beam optical tweezers (Fig.
 \begin_inset CommandInset ref
@@ -571,7 +571,7 @@ key "berg2004power"
  trap so that it is not affected by the back-flow due to the driven particle.
  The low stiffness of the driven trap ensures that it has a maximal response
  to the drive.
- Thus, for validation of the fluctuation response theorem, the stiffness
+ Thus, for validation of the fluctuation-dissipation theorem, the stiffness
  of the modulated bead (B1) was 69.6 
 \begin_inset Formula $\mu N/m$
 \end_inset
