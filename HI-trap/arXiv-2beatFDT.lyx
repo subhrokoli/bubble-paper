@@ -489,7 +489,7 @@ key "Stilgoe11"
 \begin_inset Float figure
 wide true
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -507,7 +507,7 @@ centering
  
 \begin_inset Graphics
 	filename fig2.pdf
-	width 96text%
+	width 98text%
 
 \end_inset
 
@@ -583,8 +583,7 @@ key "berg2004power"
 .
  Note that, to observe a clear amplitude resonance, a lower ratio of trap
  stiffness is required, as we demonstrate later.
- The verification of the fluctuation-dissipation theorem is shown in Figs.
- 
+ The verification of the fluctuation-dissipation theorem is shown in Fig.
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fdt"
@@ -1119,7 +1118,7 @@ on relation in the presence of long-ranged dissipative forces that are the
  interactions and the role of particle inertia while holographic traps can
  be used to test the fluctuation-dissipation relation in the presence of
  many-body hydrodynamic interactions.
-  Some of these will be presented in forthcoming work.
+ Some of these will be presented in forthcoming work.
  
 \end_layout
 
