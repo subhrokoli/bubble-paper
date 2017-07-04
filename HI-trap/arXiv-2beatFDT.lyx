@@ -131,6 +131,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -149,6 +150,7 @@ Ayan Banerjee
 \end_layout
 
 \begin_layout Author Email
+
 ayan@iiserkol.ac.in
 \end_layout
 
@@ -321,9 +323,6 @@ In this Letter, we present a direct verification of the fluctuation-dissipation
  It provides the inverse relations necessary for using the trap setup for
  accurate two-point microrheology.
  We now present details of our experiment and its analysis.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -346,7 +345,7 @@ centering
 \begin_inset Graphics
 	filename fig1.pdf
 	display false
-	width 49text%
+	width 48.5text%
 
 \end_inset
 
@@ -518,7 +517,7 @@ centering
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Verification of the fluctuation-response relation 
+Verification of the fluctuation-dissipation relation 
 \begin_inset Formula $C_{ij}=(k_{B}T/\pi f)\,\text{Im}(\chi_{ij}^{\parallel})$
 \end_inset
 
@@ -551,8 +550,7 @@ name "fdt"
 
 \begin_layout Standard
 Each of the optical traps are calibrated using equipartition and power spectrum
- methods considering the the particle temperature to be same as the room
- temperature.
+ methods considering the particle temperature to be same as the room temperature.
  We verify that each of the potentials is harmonic in nature from the histogram
  of the Brownian motion which is satisfactorily Gaussian (Fig.
 \begin_inset CommandInset ref
@@ -587,7 +585,7 @@ key "berg2004power"
 .
  Note that, to observe a clear amplitude resonance, a lower ratio of trap
  stiffness is required, as we demonstrate later.
- The verification of the fluctuation-response theorem is shown in Figs.
+ The verification of the fluctuation-dissipation theorem is shown in Figs.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -596,9 +594,9 @@ reference "fdt"
 \end_inset
 
 .
- It is understandable that while the fluctuation-response theorem is in
- the form a simple equation for a single particle, for two particles the
- equations would be represented in the form of a matrix, which we discuss
+ It is understandable that while the fluctuation-dissipation theorem is
+ in the form a simple equation for a single particle, for two particles
+ the equations would be represented in the form of a matrix, which we discuss
  in more detail later.
  This is what we demonstrate in Fig.
 \begin_inset CommandInset ref
@@ -655,8 +653,9 @@ which is the response of B1 when B2 is driven since the much larger stiffness
  For the response measurements, each data point is the average of ten separate
  measurements at each frequency.
  It is clear from the figures that we obtain a good match between fluctuation
- and response - which essentially validates the fluctuation-response relations
- for a pair of colloidal particles coupled by hydrodynamic interactions.
+ and response - which essentially validates the fluctuation-dissipation
+ relations for a pair of colloidal particles coupled by hydrodynamic interaction
+s.
  Note that for consistency check, we also plot the cross-correlation function
  in the time domain (Fig.
 \begin_inset CommandInset ref
@@ -936,7 +935,7 @@ A simple analysis of the system with the two particles executing Brownian
 \begin_inset Formula $C_{ij}=(k_{B}T/\pi f)\,\text{Im}(\chi_{ij}^{\parallel})$
 \end_inset
 
- which is the well known fluctuation-response relationship 
+ which is the well known fluctuation-dissipation relationship 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "kubo1966fluctuation"
@@ -1068,7 +1067,7 @@ reference "response"
 \begin_inset Formula $3a$
 \end_inset
 
- .
+.
  However, even this increased distance is also smaller than that used in
  earlier experiments, which possibly explains the fact that this phenomenon
  has not been reported earlier.
@@ -1134,7 +1133,7 @@ This work was supported by the Indian Institute of Science Education and
  We acknowledge computing resources on the Annapurna cluster provided by
  The Institute of Mathematical Sciences.
  
-\begin_inset VSpace 0.2cm*
+\begin_inset VSpace 0.16cm*
 \end_inset
 
 
@@ -1299,7 +1298,7 @@ ion component of the detection beams that are prepared, as mentioned above,
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -1317,7 +1316,7 @@ centering
  
 \begin_inset Graphics
 	filename fig1si.pdf
-	width 48text%
+	width 49text%
 
 \end_inset
 
@@ -2071,7 +2070,14 @@ ent fluctuations
 
 \begin_inset Formula 
 \begin{gather}
-\boldsymbol{\gamma}_{ij}^{\parallel}\dot{u}_{j}^{\parallel}(t)+k_{i}u_{i}^{\parallel}(t)=\xi_{i}^{\parallel}(t),\label{eq:overdamped-1}\\
+\boldsymbol{\gamma}_{ij}^{\parallel}\dot{u}_{j}^{\parallel}(t)+k_{i}u_{i}^{\parallel}(t)=\xi_{i}^{\parallel}(t),\label{eq:overdamped-1}
+\end{gather}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{gather}
 \langle\xi_{i}^{\parallel}(t)\xi_{j}^{\parallel}(t')\rangle=2k_{B}T\gamma_{ij}^{\parallel}\delta(t-t').
 \end{gather}
 
@@ -2106,7 +2112,7 @@ C_{ij}(\omega)=\langle u_{i}^{\parallel}(\omega)u_{j}^{^{\dagger}\parallel}(\ome
 
 \end_inset
 
-Inserting the variance of the the noise, the correlation function is
+Inserting the variance of the noise, the correlation function is
 \begin_inset ERT
 status open
 
@@ -2161,7 +2167,7 @@ C_{ij}(\omega)= & \frac{2k_{B}T}{\omega}\text{Im}\left[\chi_{ij}^{||}(\omega)\ri
 
 \end_inset
 
-This provides an explicit verification of the fluctuation-response relation
+This provides an explicit verification of the fluctuation-dissipation relation
  for a pair of viscously coupled oscillators 
 \begin_inset CommandInset citation
 LatexCommand cite
