@@ -5,7 +5,7 @@
 \save_transient_properties true
 \origin unavailable
 \textclass revtex4
-\options aps,pre, reprint, onecolumn, draft
+\options aps,prl, reprint, twocolumn, draft
 \use_default_options false
 \maintain_unincluded_children false
 \language english
@@ -159,7 +159,11 @@ n function for the Brownian motion of each particle which is in clear violation
 \end_layout
 
 \begin_layout Standard
-To calculate the correlation function we write the Langevin equation for
+
+\shape italic
+Correlation function:
+\shape default
+ To calculate the correlation function we write the Langevin equation for
  parallel displacement fluctuations 
 \family roman
 \series medium
@@ -193,22 +197,6 @@ To calculate the correlation function we write the Langevin equation for
 \uwave default
 \noun default
 \color inherit
-Here the friction and the trap stiffness are given by the following matrices
-\begin_inset Formula 
-\begin{equation}
-\boldsymbol{\gamma}=\left(\begin{array}{cc}
-\gamma_{11}^{\parallel} & \gamma_{12}^{\parallel}\\
-\\
-\gamma_{21}^{\parallel} & \gamma_{22}^{\parallel}
-\end{array}\right),\qquad\boldsymbol{k}=\left(\begin{array}{cc}
-k_{1} & 0\\
-\\
-0 & k_{2}
-\end{array}\right).
-\end{equation}
-
-\end_inset
-
 It should be noted that matrices 
 \begin_inset Formula $\boldsymbol{\gamma}$
 \end_inset
@@ -238,13 +226,12 @@ It should be noted that matrices
 
 \begin_inset Formula 
 \begin{align}
-u_{i}(t) & =\exp(-\boldsymbol{\gamma}^{-1}\boldsymbol{k})_{ij}u_{j}(0)+\int_{0}^{t}dt'\exp(-\boldsymbol{\gamma}^{-1}\boldsymbol{k})_{ij}(\boldsymbol{\gamma}_{jk}^{-1}\xi_{k}),\label{eq:fourier-modes}
+u_{i}(t) & =(e^{-\boldsymbol{A}t})_{ij}u_{j}(0)+\int_{0}^{t}dt'(e^{-\boldsymbol{A}(t-t')})_{ij}(\boldsymbol{\gamma}_{jk}^{-1}\xi_{k}).\label{eq:fourier-modes}
 \end{align}
 
 \end_inset
 
-Here, we have dropped the superscript for convenience.
- 
+
 \family default
 \series default
 \shape default
@@ -256,7 +243,11 @@ Here, we have dropped the superscript for convenience.
 \uwave default
 \noun default
 \color inherit
-We now use the variance of the noise
+Here 
+\begin_inset Formula $\boldsymbol{A}=\boldsymbol{\gamma}^{-1}\boldsymbol{k}=\boldsymbol{\mu}\boldsymbol{k}$
+\end_inset
+
+
 \family roman
 \series medium
 \shape up
@@ -268,7 +259,11 @@ We now use the variance of the noise
 \uwave off
 \noun off
 \color none
- to complete the integration in the second term of the above equation.
+ and we have dropped the superscript 
+\begin_inset Formula $\parallel$
+\end_inset
+
+ for convenience.
  The correlation function, in the long time limit, 
 \family default
 \series default
@@ -284,25 +279,8 @@ We now use the variance of the noise
 is then
 \begin_inset Formula 
 \begin{gather}
-C_{ij}(t)=\langle u_{i}(t)u_{j}^{^{\dagger}\parallel}(0)\rangle=k_{B}T\,\exp(-\boldsymbol{A}t)_{ik}(\boldsymbol{k}^{-1})_{kj}.
+C_{ij}(t)=\langle u_{i}(t)u_{j}^{^{\dagger}\parallel}(0)\rangle=k_{B}T\,(e^{-\boldsymbol{A}t})_{ik}(\boldsymbol{k}^{-1})_{kj}.
 \end{gather}
-
-\end_inset
-
-Here 
-\begin_inset Formula $\boldsymbol{A}=\boldsymbol{\gamma}^{-1}\boldsymbol{k}=\boldsymbol{\mu}\boldsymbol{k}$
-\end_inset
-
-.
- Its explicit form is
-\begin_inset Formula 
-\begin{eqnarray}
-\boldsymbol{A}=\left(\begin{array}{ccc}
-\mu_{11}k_{1} &  & \mu_{12}k_{2}\\
-\\
-\mu_{22}k_{1} &  & \mu_{22}k_{2}
-\end{array}\right).
-\end{eqnarray}
 
 \end_inset
 
@@ -321,10 +299,11 @@ Considering a special case: colloids of same size,
 \end_inset
 
 .
- The matrix of correlation function is then given as
+ The matrix of correlation function is
 \begin_inset Formula 
 \begin{align}
-\boldsymbol{C}(t)= & \frac{k_{B}T}{k}\exp(-\boldsymbol{A}t)=\frac{k_{B}T}{2k}\left(\begin{array}{ccc}
+\boldsymbol{C}(t)= & \frac{k_{B}T}{k}e^{-\boldsymbol{A}t}\nonumber \\
+= & \frac{k_{B}T}{2k}\left(\begin{array}{ccc}
 e^{-t/\tau_{1}}+e^{-t/\tau_{2}} &  & e^{-t/\tau_{1}}-e^{-t/\tau_{2}}\\
 \\
 e^{-t/\tau_{1}}-e^{-t/\tau_{2}} &  & e^{-t/\tau_{1}}+e^{-t/\tau_{2}}
@@ -334,29 +313,32 @@ e^{-t/\tau_{1}}-e^{-t/\tau_{2}} &  & e^{-t/\tau_{1}}+e^{-t/\tau_{2}}
 \end_inset
 
 Here 
-\begin_inset Formula $\tau_{1}=k(\mu_{11}+\mu_{12})$
+\begin_inset Formula $\tau_{1}=k\,(\mu_{11}+\mu_{12})$
 \end_inset
 
  and 
-\begin_inset Formula $\tau_{2}=k(\mu_{11}-\mu_{12})$
+\begin_inset Formula $\tau_{2}=k\,(\mu_{11}-\mu_{12})$
 \end_inset
 
-.
+ are the two time-scales of the system.
  This can then be used to write
 \begin_inset Formula 
-\begin{equation}
-C_{11}(t)=\langle u_{1}(t)u_{1}^{^{\dagger}}(0)\rangle=\frac{k_{B}T}{2k}\left(\begin{array}{ccc}
+\begin{alignat}{1}
+C_{11}(t) & =\frac{k_{B}T}{2k}\left(\begin{array}{ccc}
 e^{-k(\mu_{11}+\mu_{12})t}+e^{-k(\mu_{11}-\mu_{12})t}\end{array}\right),
-\end{equation}
+\end{alignat}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
-C_{12}(t)=\langle u_{1}(t)u_{2}^{^{\dagger}}(0)\rangle=\frac{k_{B}T}{2k}\left(\begin{array}{ccc}
+\begin{alignat}{1}
+C_{12}(t) & =\frac{k_{B}T}{2k}\left(\begin{array}{ccc}
 e^{-k(\mu_{11}+\mu_{12})t}-e^{-k(\mu_{11}-\mu_{12})t}\end{array}\right).
-\end{equation}
+\end{alignat}
 
 \end_inset
 
