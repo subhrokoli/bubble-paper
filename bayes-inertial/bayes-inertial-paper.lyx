@@ -104,6 +104,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -166,8 +167,11 @@ Here we present the details of such an exact Bayesian estimation method
 
 -dimensional Ornstein-Uhlenbeck process.
  From the exact likelihood of the discrete path, we identify four matrices
- of sufficient statistics, in terms of which we derive MAP estimates and
- the error bars of the process parameters.
+ of sufficient statistics, in terms of which we derive 
+\color blue
+maximum a posteriori (MAP)
+\color inherit
+ estimates and the error bars of the process parameters.
  In addition we examine the problem of model selection, that is, of choosing
  the Ornstein-Uhlenbeck model with the least number of parameters that best
  explains the data.
@@ -272,7 +276,11 @@ where
 \begin_inset Formula $W_{i}(t)$
 \end_inset
 
- are Wiener process and 
+ are Wiener 
+\color blue
+processes
+\color inherit
+ and 
 \begin_inset Formula $i,j=1,\ldots,M$
 \end_inset
 

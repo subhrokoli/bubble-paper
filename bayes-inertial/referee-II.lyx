@@ -101,6 +101,26 @@ This work shows a Bayesian inference method for determining the parameters
 I like the style of the presentation, in particular the synthesis in the
  formulas.
  It is scientifically sound and suitable for publication in PRE.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\color black
+We thank the referee for clear summary and positive evaluation of the manuscript.
+ In our revised submission, we have accounted for the minor comments of
+ the referee.
+ A pointwise summary of the changes is provided below.
 \end_layout
 
 \begin_layout Standard
@@ -120,6 +140,23 @@ The introduction contains no citations.
 
 \color blue
 “MAP” should be defined in the introduction.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\color black
+MAP has now been defined in the introduction.
 \end_layout
 
 \begin_layout Enumerate
@@ -134,6 +171,23 @@ the 3rd case of table 1, estimated values and their errors seem incompatible
 
 \color blue
 Typo: a few lines after (1): “Wiener process” should be plural
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\color black
+We have now corrected this.
 \end_layout
 
 \end_body
