@@ -1,0 +1,174 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass revtex4-1
+\begin_preamble
+\usepackage{amsmath}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\def\rcurs{{\mbox{$\resizebox{.08in}{.08in}{\includegraphics{ScriptR}}$}}}
+\def\brcurs{{\mbox{$\resizebox{.08in}{.08in}{\includegraphics{BoldR}}$}}}
+\def\hrcurs{{\mbox{$\hat \brcurs$}}}
+\usepackage[linktocpage,colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+\end_preamble
+\options prl, onecolumn, notitlepage
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\output_sync_macro "\usepackage[active]{srcltx}"
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+EF11804: Reply to Referee I
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+The article describes parameter estimation in an Ornstein-Uhlenbeck process
+ within the established Bayesian framework.
+ The article is neatly written and understandable in an almost tutorial-style
+ fashion.
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+However, as the article describes an application of the well understood
+ Bayesian frame work for Gaussian process regression the amount of novelty
+ is limited.
+ The calculations in the appendix seem not to go beyond books such as (Rasmussen
+ and Williams 2006).
+ In particular compared to the previous article (Bera et al.
+ 2017), the equations are just a straight forward generalization to M dimensions.
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+It is suggested that this articles should be submitted to a machine-learning
+ journal which deals with applications.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+DETAILED FEEDBACK 
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+before Eq (2): Maybe notationally separate x and t by a comma P1|1(x′t′|xt)
+ → P1|1(x′,t′|x, t).
+ Also in Eq (3)..
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+It is not clear why "consistency between the above two methods of estimating
+ the covariance matrix" should provide a stringent test of the appropriateness
+ of the Ornstein-Uhlenbeck process as the data generating model.
+ In fact, "Bayes I" and "Bayes II" can both be fitted to data generated
+ by even non-Markovian processes.
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+REFERENCES
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+Bera, Sudipta, Shuvojit Paul, Rajesh Singh, Dipanjan Ghosh, Avijit Kundu,
+ Ayan Banerjee, and R.
+ Adhikari.
+ 2017.
+ “Fast Bayesian Inference of Optical Trap Stiffness and Particle Diffusion.”
+ _Scientific Reports_ 7 (January): 41638.
+ doi:10.1038/srep41638.
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+Rasmussen, Carl Edward, and Christopher K.
+ I.
+ Williams.
+ 2006.
+ _Gaussian Processes for Machine Learning_.
+ Adaptive Computation and Machine Learning.
+ Cambridge, Mass: MIT Press.
+\end_layout
+
+\end_body
+\end_document

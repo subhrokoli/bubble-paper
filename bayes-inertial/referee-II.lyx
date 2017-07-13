@@ -1,0 +1,140 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass revtex4-1
+\begin_preamble
+\usepackage{amsmath}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\def\rcurs{{\mbox{$\resizebox{.08in}{.08in}{\includegraphics{ScriptR}}$}}}
+\def\brcurs{{\mbox{$\resizebox{.08in}{.08in}{\includegraphics{BoldR}}$}}}
+\def\hrcurs{{\mbox{$\hat \brcurs$}}}
+\usepackage[linktocpage,colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+\end_preamble
+\options prl, onecolumn, notitlepage
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\output_sync_macro "\usepackage[active]{srcltx}"
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+EF11804: Reply to Referee II
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+This work shows a Bayesian inference method for determining the parameters
+ of Ornstein-Uhlenbeck processes.
+ The proposed method should be useful for many scientists who deal with
+ processes having Gaussian statistics.
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+I like the style of the presentation, in particular the synthesis in the
+ formulas.
+ It is scientifically sound and suitable for publication in PRE.
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+I only got minor notes: 
+\end_layout
+
+\begin_layout Enumerate
+
+\color blue
+The introduction contains no citations.
+ It looks unusual.
+\end_layout
+
+\begin_layout Enumerate
+
+\color blue
+“MAP” should be defined in the introduction.
+\end_layout
+
+\begin_layout Enumerate
+
+\color blue
+the 3rd case of table 1, estimated values and their errors seem incompatible
+ with the original parameters.
+ Please comment on that.
+\end_layout
+
+\begin_layout Enumerate
+
+\color blue
+Typo: a few lines after (1): “Wiener process” should be plural
+\end_layout
+
+\end_body
+\end_document
