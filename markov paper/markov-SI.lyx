@@ -5,7 +5,7 @@
 \save_transient_properties true
 \origin unavailable
 \textclass revtex4
-\options aps,pre, reprint, twocolumn, draft
+\options aps,pre, reprint, onecolumn, draft
 \use_default_options false
 \maintain_unincluded_children false
 \language english
@@ -159,19 +159,8 @@ n function for the Brownian motion of each particle which is in clear violation
 \end_layout
 
 \begin_layout Standard
-To calculate the correlation function we set the modulation, 
-\begin_inset Formula $\boldsymbol{u}_{i}^{0}(t)$
-\end_inset
-
-, of the traps to zero in Eq.(
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:linearized-LE"
-
-\end_inset
-
-) and project, as before, to obtain the Langevin equation for parallel displacem
-ent fluctuations 
+To calculate the correlation function we write the Langevin equation for
+ parallel displacement fluctuations 
 \family roman
 \series medium
 \shape up
@@ -192,15 +181,70 @@ ent fluctuations
 
 \end_inset
 
-The Fourier amplitudes of the displacements are
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+Here the friction and the trap stiffness are given by the following matrices
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{\gamma}=\left(\begin{array}{cc}
+\gamma_{11}^{\parallel} & \gamma_{12}^{\parallel}\\
+\\
+\gamma_{21}^{\parallel} & \gamma_{22}^{\parallel}
+\end{array}\right),\qquad\boldsymbol{k}=\left(\begin{array}{cc}
+k_{1} & 0\\
+\\
+0 & k_{2}
+\end{array}\right).
+\end{equation}
+
+\end_inset
+
+It should be noted that matrices 
+\begin_inset Formula $\boldsymbol{\gamma}$
+\end_inset
+
+ and 
+\begin_inset Formula $\boldsymbol{k}$
+\end_inset
+
+ do not commute if 
+\begin_inset Formula $k_{1}\ne k_{2}$
+\end_inset
+
+.
+ So a solution by diagonalization is not possible.
+ The general solution of the Eq.(1) is
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
 \begin_inset Formula 
 \begin{align}
-u_{i}^{\parallel}(\omega) & =(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega),\label{eq:fourier-modes}
+u_{i}(t) & =\exp(-\boldsymbol{\gamma}^{-1}\boldsymbol{k})_{ij}u_{j}(0)+\int_{0}^{t}dt'\exp(-\boldsymbol{\gamma}^{-1}\boldsymbol{k})_{ij}(\boldsymbol{\gamma}_{jk}^{-1}\xi_{k}),\label{eq:fourier-modes}
 \end{align}
 
 \end_inset
 
-
+Here, we have dropped the superscript for convenience.
+ 
 \family default
 \series default
 \shape default
@@ -212,36 +256,7 @@ u_{i}^{\parallel}(\omega) & =(-i\omega\delta_{il}+A_{il})^{-1}\mu_{lk}^{||}\xi_{
 \uwave default
 \noun default
 \color inherit
-We now convert Eq.
- (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:fourier-modes"
-
-\end_inset
-
-) to centre of mass (
-\begin_inset Formula $w_{1}=u_{1}^{\parallel}+u_{2}^{\parallel}$
-\end_inset
-
-) and relative coordinates (
-\begin_inset Formula $w_{2}=u_{1}^{\parallel}-u_{2}^{\parallel}$
-\end_inset
-
-) such that
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{subequations}
-\end_layout
-
-\end_inset
-
-
+We now use the variance of the noise
 \family roman
 \series medium
 \shape up
@@ -253,53 +268,99 @@ begin{subequations}
 \uwave off
 \noun off
 \color none
+ to complete the integration in the second term of the above equation.
+ The correlation function, in the long time limit, 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+is then
+\begin_inset Formula 
+\begin{gather}
+C_{ij}(t)=\langle u_{i}(t)u_{j}^{^{\dagger}\parallel}(0)\rangle=k_{B}T\,\exp(-\boldsymbol{A}t)_{ik}(\boldsymbol{k}^{-1})_{kj}.
+\end{gather}
+
+\end_inset
+
+Here 
+\begin_inset Formula $\boldsymbol{A}=\boldsymbol{\gamma}^{-1}\boldsymbol{k}=\boldsymbol{\mu}\boldsymbol{k}$
+\end_inset
+
+.
+ Its explicit form is
+\begin_inset Formula 
+\begin{eqnarray}
+\boldsymbol{A}=\left(\begin{array}{ccc}
+\mu_{11}k_{1} &  & \mu_{12}k_{2}\\
+\\
+\mu_{22}k_{1} &  & \mu_{22}k_{2}
+\end{array}\right).
+\end{eqnarray}
+
+\end_inset
+
+Thus the matrix of correlation function can be compute by completing the
+ matrix multiplication and then exponentiating it.
+ This clearly corresponds to more than one time scale.
+\end_layout
+
+\begin_layout Standard
+Considering a special case: colloids of same size, 
+\begin_inset Formula $\mu_{11}=\mu_{22}$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{1}=k_{2}$
+\end_inset
+
+.
+ The matrix of correlation function is then given as
+\begin_inset Formula 
+\begin{align}
+\boldsymbol{C}(t)= & \frac{k_{B}T}{k}\exp(-\boldsymbol{A}t)=\frac{k_{B}T}{2k}\left(\begin{array}{ccc}
+e^{-t/\tau_{1}}+e^{-t/\tau_{2}} &  & e^{-t/\tau_{1}}-e^{-t/\tau_{2}}\\
+\\
+e^{-t/\tau_{1}}-e^{-t/\tau_{2}} &  & e^{-t/\tau_{1}}+e^{-t/\tau_{2}}
+\end{array}\right).
+\end{align}
+
+\end_inset
+
+Here 
+\begin_inset Formula $\tau_{1}=k(\mu_{11}+\mu_{12})$
+\end_inset
+
+ and 
+\begin_inset Formula $\tau_{2}=k(\mu_{11}-\mu_{12})$
+\end_inset
+
+.
+ This can then be used to write
+\begin_inset Formula 
+\begin{equation}
+C_{11}(t)=\langle u_{1}(t)u_{1}^{^{\dagger}}(0)\rangle=\frac{k_{B}T}{2k}\left(\begin{array}{ccc}
+e^{-k(\mu_{11}+\mu_{12})t}+e^{-k(\mu_{11}-\mu_{12})t}\end{array}\right),
+\end{equation}
+
+\end_inset
+
 
 \begin_inset Formula 
-\begin{alignat}{1}
-w_{1}^{\parallel}(\omega) & =B_{1l}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega)+B_{2l}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega),\\
-w_{2}^{\parallel}(\omega) & =B_{1l}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega)-B_{2l}\mu_{lk}^{||}\xi_{k}^{\parallel}(\omega).
-\end{alignat}
+\begin{equation}
+C_{12}(t)=\langle u_{1}(t)u_{2}^{^{\dagger}}(0)\rangle=\frac{k_{B}T}{2k}\left(\begin{array}{ccc}
+e^{-k(\mu_{11}+\mu_{12})t}-e^{-k(\mu_{11}-\mu_{12})t}\end{array}\right).
+\end{equation}
 
 \end_inset
 
 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{subequations}
-\end_layout
-
-\end_inset
-
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-These equations can then used to show memory effects as we describe below.
 \end_layout
 
 \end_body
