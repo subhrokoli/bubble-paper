@@ -165,6 +165,26 @@ MAP has now been defined in the introduction.
 the 3rd case of table 1, estimated values and their errors seem incompatible
  with the original parameters.
  Please comment on that.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\color black
+We thank the referee for spotting this typographical error in copying the
+ MAP estimates to the table.
+ We have now fixed the values in the third row of the table and it is consistent
+ with the original parameters.
 \end_layout
 
 \begin_layout Enumerate

@@ -104,7 +104,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -747,8 +746,8 @@ end{subequations}
 
 \end_inset
 
-and the maximum a posteriori (MAP) estimates for mean regression rates and
- the covariances come out to be
+and the MAP estimates for mean regression rates and the covariances come
+ out to be
 \begin_inset ERT
 status open
 
@@ -1590,7 +1589,7 @@ name "fig:PositionsVelocity"
 \begin_inset Float table
 wide true
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -2028,7 +2027,7 @@ Bayes I
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $316.41\pm2.37$
+\begin_inset Formula $296.51\pm2.37$
 \end_inset
 
 
@@ -2040,7 +2039,7 @@ Bayes I
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $314.88\pm2.46$
+\begin_inset Formula $298.44\pm2.46$
 \end_inset
 
 
@@ -2064,7 +2063,7 @@ Bayes I
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $1.788\pm0.015$
+\begin_inset Formula $1.588\pm0.015$
 \end_inset
 
 
