@@ -104,6 +104,7 @@ R.
 \end_layout
 
 \begin_layout Author Email
+
 rjoy@imsc.res.in
 \end_layout
 
@@ -179,6 +180,46 @@ maximum a posteriori (MAP)
  Inter alia, this provides a Bayesian method for estimating the mass, friction,
  spring constant, correlation functions and power spectral densities of
  colloidal particles in optical traps.
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+Bayesian inference of Gaussian processes has been a area of extensive research
+ in the last few decades 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "rasmussen2006gaussian"
+
+\end_inset
+
+.
+ The main bottleneck in such methods is the complexity 
+\begin_inset Formula $O(N^{3})$
+\end_inset
+
+ for inverting 
+\begin_inset Formula $N\times N$
+\end_inset
+
+ covariance matrices 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lindgren2011explicit,rasmussen2006gaussian"
+
+\end_inset
+
+.
+ The computational cost makes the method very expensive and thus approximate
+ procedures are used.
+ The Markovian property of Ornstein-Uhlenbeck processes, on the other hand,
+ ensures that the parameters are obtained in terms of 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ sufficient statistic matrices.
+
+\color inherit
  
 \end_layout
 
@@ -1589,7 +1630,7 @@ name "fig:PositionsVelocity"
 \begin_inset Float table
 wide true
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Tabular
@@ -2063,7 +2104,7 @@ Bayes I
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $1.588\pm0.015$
+\begin_inset Formula $1.589\pm0.015$
 \end_inset
 
 

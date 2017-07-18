@@ -83,150 +83,47 @@
 \begin_body
 
 \begin_layout Title
-EF11804: Reply to Referee II
+EF11804: Reply to the Editor
+\end_layout
+
+\begin_layout Standard
+Dear Dr.
+ Barade,
+\end_layout
+
+\begin_layout Standard
+Thank you for communicating the reports of our manuscript 
+\begin_inset Quotes eld
+\end_inset
+
+Fast Bayesian inference of the multivariate Ornstein-Uhlenbeck process
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
 
-\color blue
-This work shows a Bayesian inference method for determining the parameters
- of Ornstein-Uhlenbeck processes.
- The proposed method should be useful for many scientists who deal with
- processes having Gaussian statistics.
+\color black
+We have now carefully revised our manuscript and incorporated the changes
+ suggested by the referees.
+ With our resubmission, we have
+\color inherit
+ also included responses to the comments of the referees in separate files.
 \end_layout
 
 \begin_layout Standard
-
-\color blue
-I like the style of the presentation, in particular the synthesis in the
- formulas.
- It is scientifically sound and suitable for publication in PRE.
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\backslash
-
-\end_layout
-
-\end_inset
-
-
-\color black
-We thank the referee for a clear summary and positive evaluation of the
- manuscript.
- In our revised submission, we have accounted for the minor comments of
- the referee.
- We provide brief responses to the comments below.
+Kind Regards,
 \end_layout
 
 \begin_layout Standard
-
-\color blue
-I only got minor notes: 
+Ronojoy Adhikari
 \end_layout
 
-\begin_layout Enumerate
-
-\color blue
-The introduction contains no citations.
- It looks unusual.
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\backslash
-
-\end_layout
-
-\end_inset
-
-
-\color black
-We have now added citations and a brief summary of previous work in the
- introduction.
-\end_layout
-
-\begin_layout Enumerate
-
-\color blue
-“MAP” should be defined in the introduction.
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\backslash
-
-\end_layout
-
-\end_inset
-
-
-\color black
-MAP has now been defined in the introduction.
-\end_layout
-
-\begin_layout Enumerate
-
-\color blue
-the 3rd case of table 1, estimated values and their errors seem incompatible
- with the original parameters.
- Please comment on that.
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\backslash
-
-\end_layout
-
-\end_inset
-
-
-\color black
-We thank the referee for spotting this typographical error in copying the
- MAP estimates to the table.
- We have now fixed the values in the third row of the table and it is consistent
- with the original parameters.
-\end_layout
-
-\begin_layout Enumerate
-
-\color blue
-Typo: a few lines after (1): “Wiener process” should be plural
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\backslash
-
-\end_layout
-
-\end_inset
-
-
-\color black
-We have now fixed this typo.
+\begin_layout Standard
+(for authors)
 \end_layout
 
 \end_body
