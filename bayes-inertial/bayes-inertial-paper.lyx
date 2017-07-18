@@ -148,7 +148,14 @@ The multivariate Ornstein-Uhlenbeck process is widely used in many branches
  of science and engineering to describe the regression of a system to its
  stationary mean.
  Its importance arises from the fact that it is the only process that is
- simultaneously Markovian, Gaussian and stationary.
+ simultaneously Markovian, Gaussian and stationary 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gardiner1985handbook"
+
+\end_inset
+
+.
  The process, therefore, is fully characterized by its stationary and conditiona
 l distribution, each of which are multivariate normal distributions.
  This simplicity implies that the probabilities of discretely sampled paths
@@ -185,8 +192,8 @@ maximum a posteriori (MAP)
 \begin_layout Standard
 
 \color blue
-Bayesian inference of Gaussian processes has been a area of extensive research
- in the last few decades 
+Bayesian framework for Gaussian processes to describe regression has been
+ an area of extensive research in the last few decades.
 \begin_inset CommandInset citation
 LatexCommand cite
 key "rasmussen2006gaussian"
@@ -194,7 +201,11 @@ key "rasmussen2006gaussian"
 \end_inset
 
 .
- The main bottleneck in such methods is the complexity 
+ The main bottleneck in such methods, with 
+\begin_inset Formula $N$
+\end_inset
+
+ data points, is the complexity 
 \begin_inset Formula $O(N^{3})$
 \end_inset
 
@@ -202,7 +213,7 @@ key "rasmussen2006gaussian"
 \begin_inset Formula $N\times N$
 \end_inset
 
- covariance matrices 
+ matrix of covariances 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "lindgren2011explicit,rasmussen2006gaussian"
@@ -210,16 +221,21 @@ key "lindgren2011explicit,rasmussen2006gaussian"
 \end_inset
 
 .
- The computational cost makes the method very expensive and thus approximate
- procedures are used.
- The Markovian property of Ornstein-Uhlenbeck processes, on the other hand,
- ensures that the parameters are obtained in terms of 
-\begin_inset Formula $2\times2$
+ The Markovian property of the 
+\begin_inset Formula $M$
 \end_inset
 
- sufficient statistic matrices.
+-dimensional Ornstein-Uhlenbeck processes, on the other hand, ensures that
+ the parameters are obtained 
+\shape italic
+exactly
+\shape default
+ in terms of 
+\begin_inset Formula $M\times M$
+\end_inset
 
-\color inherit
+ sufficient statistic matrices alone and one does not need to work with
+ the entire data set.
  
 \end_layout
 
