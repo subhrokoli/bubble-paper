@@ -193,10 +193,10 @@ maximum a posteriori (MAP)
 
 \color blue
 Bayesian framework for Gaussian processes to describe regression has been
- an area of extensive research in the last few decades.
+ an area of extensive research in the last few decades 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "rasmussen2006gaussian"
+key "lindgren2011explicit,rasmussen2006gaussian"
 
 \end_inset
 
@@ -213,10 +213,12 @@ key "rasmussen2006gaussian"
 \begin_inset Formula $N\times N$
 \end_inset
 
- matrix of covariances 
+ matrix of covariances.
+ This makes the procedure computationally expensive for large matrices and
+ thus approximate methods are used 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "lindgren2011explicit,rasmussen2006gaussian"
+key "smola2000sparse,williams2001using,csato2002sparse,quinonero2005unifying"
 
 \end_inset
 
@@ -225,18 +227,14 @@ key "lindgren2011explicit,rasmussen2006gaussian"
 \begin_inset Formula $M$
 \end_inset
 
--dimensional Ornstein-Uhlenbeck processes, on the other hand, ensures that
- the parameters are obtained 
-\shape italic
-exactly
-\shape default
- in terms of 
+-dimensional Ornstein-Uhlenbeck process, on the other hand, ensures that
+ the information of the entire data set is contained in 
 \begin_inset Formula $M\times M$
 \end_inset
 
- sufficient statistic matrices alone and one does not need to work with
- the entire data set.
- 
+ sufficient statistic matrices.
+ Thus in this method, which does not require the use of large matrices,
+ the parameter estimation is both fast and accurate.
 \end_layout
 
 \begin_layout Standard
