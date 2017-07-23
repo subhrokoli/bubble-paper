@@ -101,6 +101,9 @@ The article describes parameter estimation in an Ornstein-Uhlenbeck process
 However, as the article describes an application of the well understood
  Bayesian frame work for Gaussian process regression the amount of novelty
  is limited.
+ The calculations in the appendix seem not to go beyond books such as (Rasmussen
+ and Williams 2006).
+ 
 \begin_inset ERT
 status open
 
@@ -121,48 +124,32 @@ status open
 We thank the referee for a careful and critical reading of our manuscript.
  We agree with the referee that Bayesian inference of the Gaussian processes
  has been studied in detail in the literature.
- We have now provided a brief summary of previous literature in the introduction.
- A comparison of previous work and our contribution to the field is also
- made.
+ We have now provided a brief summary of previous work and our contribution
+ to the field in the introduction.
  
 \end_layout
 
 \begin_layout Standard
-
-\color blue
-The calculations in the appendix seem not to go beyond books such as (Rasmussen
- and Williams 2006).
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\color blue
-
-\backslash
-
-\backslash
-
-\end_layout
-
+In particular, we note that the main bottleneck in Gaussian process methods
+ is the complexity 
+\begin_inset Formula $O(N^{3})$
 \end_inset
 
+ for inverting 
+\begin_inset Formula $N×N$
+\end_inset
 
-\color inherit
-but the main bottleneck in these models is the complexity O(N^3) for inverting
- N × N matrix of covariances.
+ matrix of covariances.
  Thus approximate methods are used as described in [2].
- 
-\end_layout
+ On the other hand, we use exact expression for likelihood using the Gauss-Marko
+v property of the Ornstein-Uhlenbeck process.
+ This leads to exact expression for the parameters in terms of 
+\begin_inset Formula $MxM$
+\end_inset
 
-\begin_layout Standard
-We use exact expression for likelihood using the Gauss-Markov property of
- the Ornstein-Uhlenbeck process.
- This leads to exact expression for the parameters in terms of M x M sufficient
- statistics matrices.
- This our method is orders of magnitude faster than Monte Carlo sampling
- methods etc.
+ sufficient statistics matrices.
+ This our method is orders of magnitude faster than than the usual approximate
+ methods in the literature.
  
 \end_layout
 
@@ -190,11 +177,30 @@ status open
 \color inherit
 We agree that our method is a generalization of the 1-D case in our previous
  paper [1] to a M-dimensional Ornstein.
- Here is a list of new developmen in this paper 1.
- The derivation in this paper is new 2.
- We have also outlined path sampling of multivariate Ornstein-Uhlenbeck
- process 3.
- A model comparison section is added to the paper.
+ But, at the same time, we would like to point that the present manuscipt
+ has many crucial conributions.
+ Here is a list of new developments in this paper
+\end_layout
+
+\begin_layout Itemize
+The derivation of the parameters in this paper is sufficiently general and
+ a specific use of the Gaussian property of the Ornstein-Uhlenbeck process
+ has been utilized.
+ 
+\end_layout
+
+\begin_layout Itemize
+In this article, we have also provided a general method for path sampling
+ of multivariate Ornstein-Uhlenbeck process.
+ This is then used to generate the data for the Bayesian inference.
+ 
+\end_layout
+
+\begin_layout Itemize
+A model selection method is added to this paper, and its application to
+ choose between the underdamped and overdamped limit of harmonic oscialltor
+ is demonstrated.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -256,7 +262,7 @@ It is not clear why "consistency between the above two methods of estimating
 REFERENCES
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 
 \color blue
 Bera, Sudipta, Shuvojit Paul, Rajesh Singh, Dipanjan Ghosh, Avijit Kundu,
@@ -268,7 +274,7 @@ Bera, Sudipta, Shuvojit Paul, Rajesh Singh, Dipanjan Ghosh, Avijit Kundu,
  doi:10.1038/srep41638.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 
 \color blue
 Rasmussen, Carl Edward, and Christopher K.
