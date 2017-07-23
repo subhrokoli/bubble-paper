@@ -114,12 +114,22 @@ status open
 
 
 \color black
-We thank the referee for careful reading of our manuscript and for suggesting
- references to make a connection with previous work.
- In our revised submission, we have added citations to previous work on
- Bayesian inference of Gaussian processes.
- We have also updated the introduction of the paper where a brief summary
- of previous work is outlined.
+We thank the referee for a positive evaluaton of our manuscript and for
+ suggesting references to make a connection with literature on Gaussian
+ processes.
+ In our revised submission, we have added a brief summary of previous work
+ on the Gaussian process models in the introduction.
+ In particular, we have described that the main bottleneck in using Gaussian
+ process models is the 
+\begin_inset Formula $O(N^{3})$
+\end_inset
+
+ complexity in inverting the matrix of covariances.
+ Thus approximate methods are used to estimate the parameters.
+ Our method, using the Gauss-Markov property of the Ornstein-Uhlencbeck
+ process, exact expression for the parameters are derived in terms of matrix
+ sufficient statistics.
+ 
 \end_layout
 
 \begin_layout Itemize
