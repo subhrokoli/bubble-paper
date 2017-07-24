@@ -114,7 +114,7 @@ status open
 
 
 \color black
-We thank the referee for a positive evaluaton of our manuscript and for
+We thank the referee for a positive evaluation of our manuscript and for
  suggesting references to make a connection with literature on Gaussian
  processes.
  In our revised submission, we have added a brief summary of previous work
@@ -124,15 +124,20 @@ We thank the referee for a positive evaluaton of our manuscript and for
 \begin_inset Formula $O(N^{3})$
 \end_inset
 
- complexity in inverting the matrix of covariances.
- Thus approximate methods are used to estimate the parameters.
- Our method, using the Gauss-Markov property of the Ornstein-Uhlencbeck
- process, exact expression for the parameters are derived in terms of matrix
- sufficient statistics.
+ complexity in inverting the matrix of covariances [1,2].
+ This makes the method very expensive for numerical computations and, thus,
+ approximate methods are used to estimate parameters.
+ In our method exact expression for the parameters are derived in terms
+ of matrix sufficient statistics using the Gauss-Markov property of the
+ 
+\color inherit
+Ornstein-Uhlenbeck
+\color black
+ process.
  
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 
 \color blue
 Bayesian literature on GP's: Rasmussen, C.
@@ -144,7 +149,7 @@ Bayesian literature on GP's: Rasmussen, C.
  Cambridge: MIT press.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 
 \color blue
 SPDE's and GPs: Lindgren, F., Lindström, J., & Rue, H.

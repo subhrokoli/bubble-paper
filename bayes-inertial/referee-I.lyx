@@ -109,7 +109,6 @@ status open
 
 \begin_layout Plain Layout
 
-\color blue
 
 \backslash
 
@@ -136,7 +135,7 @@ In particular, we note that the main bottleneck in Gaussian process methods
 \end_inset
 
  for inverting 
-\begin_inset Formula $N×N$
+\begin_inset Formula $N\times N$
 \end_inset
 
  matrix of covariances.
@@ -144,13 +143,11 @@ In particular, we note that the main bottleneck in Gaussian process methods
  On the other hand, we use exact expression for likelihood using the Gauss-Marko
 v property of the Ornstein-Uhlenbeck process.
  This leads to exact expression for the parameters in terms of 
-\begin_inset Formula $MxM$
+\begin_inset Formula $M\times M$
 \end_inset
 
  sufficient statistics matrices.
- This our method is orders of magnitude faster than than the usual approximate
- methods in the literature.
- 
+ Thus parameter estimation in our method is both fast and accurate.
 \end_layout
 
 \begin_layout Standard
@@ -163,7 +160,6 @@ status open
 
 \begin_layout Plain Layout
 
-\color blue
 
 \backslash
 
@@ -177,9 +173,9 @@ status open
 \color inherit
 We agree that our method is a generalization of the 1-D case in our previous
  paper [1] to a M-dimensional Ornstein.
- But, at the same time, we would like to point that the present manuscipt
- has many crucial conributions.
- Here is a list of new developments in this paper
+ But, at the same time, we would like to point that the present manuscript
+ has many important contributions.
+ A list of new developments in this paper is provided below
 \end_layout
 
 \begin_layout Itemize
@@ -213,7 +209,6 @@ status open
 
 \begin_layout Plain Layout
 
-\color blue
 
 \backslash
 
