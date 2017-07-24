@@ -4,11 +4,11 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass revtex4
+\textclass revtex4-1
 \begin_preamble
 \usepackage{babel}
 \end_preamble
-\options aps,pre,reprint
+\options prl, twocolumn
 \use_default_options false
 \maintain_unincluded_children false
 \language english
@@ -1227,31 +1227,337 @@ In these set of experiments, we created two adjacent bubbles on neighbouring
 Conclusions
 \end_layout
 
-\begin_layout Acknowledgments
-Thank you so much! 
+\begin_layout Standard
+\start_of_appendix
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+clearpage
 \end_layout
 
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "mycitation"
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Force per unit area on the bubbles
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:traction"
 
 \end_inset
 
-Author, 
-\begin_inset Quotes eld
+
+\end_layout
+
+\begin_layout Standard
+We derive, in this section, the expressions for the force per unit area
+ given the temperature distribution on the bubbles.
+ It is instructive to note that there are two kinds on systems in our experiment
+\end_layout
+
+\begin_layout Enumerate
+Two bubbles on two trails
+\end_layout
+
+\begin_layout Enumerate
+Two bubbles on one trail
+\end_layout
+
+\begin_layout Standard
+A schematic representation of the same is given in Fig.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:schematic"
+
 \end_inset
 
-Title
-\begin_inset Quotes erd
+).
+ It is immediately clear that, the temperature profile of bubbles on same
+ trail has a non-trivial form in the plane of the wall.
+ Thus, we need to obtain the dependence of temperature on 
+\begin_inset Formula $\hat{\boldsymbol{\phi}}$
 \end_inset
 
-, Journal 
-\series bold
-Volume
-\series default
-, page–numbers (year).
+ in the spherical polar coordinates 
+\begin_inset Formula $(\boldsymbol{\hat{\rho}},\,\boldsymbol{\hat{\theta}},\,\boldsymbol{\boldsymbol{\hat{\varphi}}})$
+\end_inset
+
+.
+ The asymmetry (see Fig.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:schematic"
+
+\end_inset
+
+)) in the temperature distribution will be able to predict the vorticity
+ of the flow seen in the experiment.
+ Once we have an asymmetric term in the temperature distribution, we get
+ an antisymmetric term in the force per unit area and thus a vorticity (or
+ torque) in the flow.
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/schema.jpg
+	display false
+	width 33text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Schematic diagram of the experiment.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:schematic"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Bubbles on different trails
+\end_layout
+
+\begin_layout Standard
+We first consider the case of bubbles on different trails.
+ In this case, the temperature distribution on the surface of the bubble
+ is obtained by truncating the expansion to the first term
+\begin_inset Formula 
+\begin{equation}
+g(T)=B_{1}\cos\theta
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The force per unit area on the surface is then
+\begin_inset Formula 
+\begin{equation}
+f_{\theta}=\nabla_{\theta}g(T)=-B'_{1}\sin\theta
+\end{equation}
+
+\end_inset
+
+Here 
+\begin_inset Formula $B_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $B_{2}$
+\end_inset
+
+ are constants.
+ The force per unit area, up to leading order, is then 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{f}=\underbrace{\frac{B_{1}}{3}\mathbf{Y}^{(1)}(\mathbf{p})\cdot\mathbf{Y}^{(2)}(\hat{\bm{\rho}})}_{\text{vector quadrupole}}.
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathbf{p}$
+\end_inset
+
+ is the orientation of the bubble and we have written the force per unit
+ area in terms of tensorial spherical harmonics 
+\begin_inset Formula 
+\[
+\mathbf{Y}^{(l)}(\bm{\hat{\rho}})=(-1)^{l}\rho^{l+1}\bm{\nabla}^{(l)}\rho^{-1},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\bm{\nabla}^{(l)}=\bm{\nabla}_{\alpha_{1}}\dots\bm{\nabla}_{\alpha_{l}}$
+\end_inset
+
+.
  
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+The first four 
+\begin_inset Formula $\mathbf{Y}^{(l)}(\bm{\hat{\rho}}_{i})$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ are
+\begin_inset Formula 
+\begin{align}
+Y^{(0)}= & 1,\qquad Y_{\alpha}^{(1)}=\hat{\rho}_{\alpha},\qquad Y_{\alpha\beta}^{(2)}=\left(\hat{\rho}_{\alpha}\hat{\rho}_{\beta}-\tfrac{\delta_{\alpha\beta}}{3}\right),\\
+Y_{\alpha\beta\gamma}^{(3)} & =\left(\hat{\rho}_{\alpha}\hat{\rho}_{\beta}\hat{\rho}_{\gamma}-\tfrac{1}{5}[\hat{\rho}_{\alpha}\delta_{\beta\gamma}+\hat{\rho}_{\beta}\delta_{\alpha\gamma}+\hat{\rho}_{\gamma}\delta_{\alpha\beta}]\right).
+\end{align}
+
+\end_inset
+
+We thus see that leading contribution to force comes from symmetric irreducible
+ dipole and vector quadrupole.
+ Because the forces and velocity are related linearly.
+ So at one-particle level, only the quadrupole will contribute to the slip
+ velocity.
+ The expression for slip velocity is then 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{v}^{s}=\underbrace{c_{2}\mathbf{Y}^{(1)}(\mathbf{p})\cdot\mathbf{Y}^{(2)}(\hat{\bm{\rho}})}_{\text{vector quadrupole}}.
+\end{equation}
+
+\end_inset
+
+Here 
+\begin_inset Formula $c_{2}$
+\end_inset
+
+ is a constants determined from the experimental data.
+ The flow around the bubbles in this case has been plotted in Fig.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:diffTrails"
+
+\end_inset
+
+).
+ 
+\begin_inset Float figure
+placement t
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figures/one-lane-one-bubble.jpg
+	display false
+	width 94text%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fluid flow around a bubbles on different trails.
+ The streamlines of the fluid flow have been overlaid on the pseudo-color
+ plot of the normalized logarithmic flow speed.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:diffTrails"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Bubbles on the same trail
+\end_layout
+
+\begin_layout Standard
+We now consider the case of two bubbles on the same trail.
+ The temperature distribution on the two bubbles in this case is
+\begin_inset Formula 
+\begin{align}
+g_{1}(T) & =B_{1}\cos\theta+B_{2}\sin\theta\cos\phi\\
+g_{2}(T) & =B_{1}\cos\theta-B_{2}\sin\theta\cos\phi
+\end{align}
+
+\end_inset
+
+The force per unit area on the two bubbles is then
+\begin_inset Formula 
+\begin{align}
+f_{\theta}^{1}(T) & =-B_{1}\sin\theta+B_{2}\cos\theta\cos\phi,\\
+ & f_{\phi}^{1}(T)=-B_{2}\cos\theta\sin\phi\\
+f_{\theta}^{2}(T) & =-B_{1}\sin\theta-B_{2}\cos\theta\cos\phi\\
+ & f_{\phi}^{2}(T)=B_{2}\cos\theta\sin\phi
+\end{align}
+
+\end_inset
+
+
 \end_layout
 
 \end_body
