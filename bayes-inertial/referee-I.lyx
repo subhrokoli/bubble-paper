@@ -194,7 +194,7 @@ In this article, we have also provided a general method for path sampling
 
 \begin_layout Itemize
 A model selection method is added to this paper, and its application to
- choose between the underdamped and overdamped limit of harmonic oscialltor
+ choose between the underdamped and overdamped limit of harmonic oscillator
  is demonstrated.
  
 \end_layout
@@ -238,7 +238,23 @@ DETAILED FEEDBACK
 before Eq (2): Maybe notationally separate x and t by a comma P1|1(x′t′|xt)
  → P1|1(x′,t′|x, t).
  Also in Eq (3)..
- 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\color inherit
+We have now updated the notation as suggested.
 \end_layout
 
 \begin_layout Itemize
@@ -249,6 +265,28 @@ It is not clear why "consistency between the above two methods of estimating
  of the Ornstein-Uhlenbeck process as the data generating model.
  In fact, "Bayes I" and "Bayes II" can both be fitted to data generated
  by even non-Markovian processes.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\color inherit
+The Bayes I method is applied based on the Gaussian and Markovian property
+ of the Ornstein-Uhlenbeck process while the stationarity of the Ornstein-Uhlenb
+eck process has been used in deriving results from Bayes II.
+ Thus, a consistency between the two methods ensures that Ornstein-Uhlenbeck
+ process is indeed the data generating model.
+ 
 \end_layout
 
 \begin_layout Standard

@@ -104,7 +104,6 @@ R.
 \end_layout
 
 \begin_layout Author Email
-
 rjoy@imsc.res.in
 \end_layout
 
@@ -382,7 +381,7 @@ The probability density of a displacement from
 \end_inset
 
 
-\begin_inset Formula $(\boldsymbol{x}^{\prime}t^{\prime}|\boldsymbol{x}\thinspace t$
+\begin_inset Formula $(\boldsymbol{x}^{\prime},t^{\prime}|\boldsymbol{x},t$
 \end_inset
 
 
@@ -424,7 +423,7 @@ The probability density of a displacement from
 The solution is a multivariate normal distribution
 \begin_inset Formula 
 \begin{equation}
-\mathbf{\boldsymbol{x}}^{\prime}t^{\prime}|\boldsymbol{x}\thinspace t\sim\mathcal{N}\left(\boldsymbol{\mu}\,,\boldsymbol{\Sigma}\right),\label{eq:conditional-probability}
+\mathbf{\boldsymbol{x}}^{\prime},t^{\prime}|\boldsymbol{x},\thinspace t\sim\mathcal{N}\left(\boldsymbol{\mu}\,,\boldsymbol{\Sigma}\right),\label{eq:conditional-probability}
 \end{equation}
 
 \end_inset
